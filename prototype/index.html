@@ -239,7 +239,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
    Papier vieilli : rousseurs, bords brunis, bord frangé (clip-path), caractères IM Fell. */
 .choix.feuillets{position:relative;gap:14px;padding:4px 2px}
 .choix .bouton.feuillet,.feuillet.modele{position:relative;display:flex;flex-direction:column;gap:6px;min-height:0;padding:12px 16px 12px;text-align:left;border:0;border-radius:0;color:#2b2016;cursor:pointer;
-  background:radial-gradient(circle at 18% 22%,rgba(150,95,40,.16) 0 3px,transparent 4px),radial-gradient(circle at 74% 64%,rgba(150,95,40,.12) 0 5px,transparent 7px),radial-gradient(circle at 88% 18%,rgba(150,95,40,.1) 0 2px,transparent 3px),radial-gradient(120% 120% at 50% 50%,#f1e5c6 45%,#dfca9d 85%,#cdb078 100%);
+  background:radial-gradient(circle at 18% 22%,rgba(150,95,40,.16) 0 3px,transparent 4px),radial-gradient(circle at 74% 64%,rgba(150,95,40,.12) 0 5px,transparent 7px),radial-gradient(circle at 88% 18%,rgba(150,95,40,.1) 0 2px,transparent 3px),radial-gradient(120% 120% at 50% 50%,var(--p1,#f1e5c6) 45%,var(--p2,#dfca9d) 85%,var(--p3,#cdb078) 100%);
   box-shadow:inset 0 -3px 0 rgba(120,85,40,.18),inset 0 0 18px rgba(120,85,40,.12);
   clip-path:polygon(0 1.5%,4% 0,9% 1.2%,15% 0,22% 1%,30% 0,38% 1.2%,47% 0,55% 1%,63% 0,71% 1.3%,80% 0,88% 1%,95% 0,100% 1.5%,99.3% 15%,100% 30%,99.4% 45%,100% 60%,99.2% 75%,100% 90%,99.5% 100%,90% 98.8%,80% 100%,70% 98.9%,60% 100%,50% 99%,40% 100%,30% 98.8%,20% 100%,10% 99%,0 100%,.7% 85%,0 70%,.6% 55%,0 40%,.7% 25%,0 12%)}
 .choix .bouton.feuillet{--r:0deg;transform:rotate(var(--r))}.choix .bouton.feuillet:nth-child(1){--r:-.7deg}.choix .bouton.feuillet:nth-child(2){--r:.6deg}
@@ -261,9 +261,9 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .feuillet.modele .chip.bon{position:absolute;right:12px;bottom:10px;z-index:2}
 .feuillet.modele{padding-bottom:44px}
 .feuillet.modele{cursor:default;min-height:0;transform:rotate(-.5deg)}
-.choix .bouton.feuillet.ok{box-shadow:none;background:radial-gradient(120% 120% at 50% 50%,#f3e8cb 45%,#e2cfa5 85%,#d1b680 100%)}
+
 .choix .bouton.feuillet.ok > .f-art{font-weight:400}
-.choix .bouton.feuillet.debout,.choix .bouton.feuillet.demasque{background:radial-gradient(120% 120% at 50% 50%,#f1e5c6 45%,#dfca9d 85%,#cdb078 100%)}
+
 .choix .bouton.feuillet.demasque > span{opacity:1}
 .choix .bouton.feuillet.demasque .rep{text-decoration:line-through;text-decoration-color:rgba(179,50,42,.65)}
 /* Sous la lampe : un voile violet sur la table (opacité seule), le faux s'allume, le vrai s'éteint.
@@ -369,6 +369,20 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
   .carte.secoue{animation:tremble .35s .62s ease-out}
   @keyframes tremble{25%{transform:translateX(-4px)}50%{transform:translateX(3px)}75%{transform:translateX(-2px)}}
 }
+/* Styles d'ouvrages (data-style) : la même entrée composée de quatre façons. */
+.f-pied .sig{font-style:normal;letter-spacing:.08em}
+.f-pied span:last-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.f-pied{justify-content:space-between}
+[data-style="filet"] .f-tete{border-bottom:3px double rgba(43,32,22,.6);justify-content:center;gap:18px;font-style:italic}
+[data-style="filet"] .f-tete span:first-child,[data-style="filet"] .f-tete span:last-child{display:none}
+[data-style="filet"] .f-art .vedette{color:#8e2a1f}
+[data-style="filet"] .f-pied{border-top:1px solid rgba(43,32,22,.4);padding-top:3px}
+[data-style="lettrine"] .f-tete{border-bottom:0;font-style:italic;letter-spacing:.14em;justify-content:center;gap:22px}
+[data-style="lettrine"] .f-tete::before,[data-style="lettrine"] .f-tete::after{content:"❦";font-style:normal;color:rgba(142,42,31,.7)}
+[data-style="lettrine"] .f-art{display:block}
+[data-style="lettrine"] .f-art::first-letter{float:left;font:400 2.6em/.85 "IM Fell English",Georgia,serif;color:#8e2a1f;margin:4px 6px 0 0}
+[data-style="numero"] .f-tete{font-style:italic;text-transform:none}
+[data-style="numero"] .f-num{font:400 1em "IM Fell English SC",Georgia,serif;color:rgba(43,32,22,.7)}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -791,15 +805,46 @@ async function question(motId, I) {
    contrefait (direction artistique choisie par l'auteur le 23/11/2026, docs/direction-artistique.md).
    Chaque famille a son ouvrage ; tout ce qui entoure la réponse (titre, page, tome) est
    identique sur les deux feuillets et vient de la question, jamais de la réponse. */
+/* Ouvrages anciens, tous fictifs : plusieurs par famille, tirés au sort par lot (le même pour les
+   deux feuillets). Chacun a sa mise en page (style), la teinte de son papier et un pied de page
+   à l'ancienne : signature d'imprimeur et titre abrégé (demande de l'auteur, 23/11/2026). */
 const OUVRAGES = {
-  definition:    ["Dictionnaire universel de la langue française", "1839"],
-  anecdote:      ["Dictionnaire d'anecdotes et de curiosités", "1874"],
-  expression:    ["Dictionnaire des locutions françaises", "1862"],
-  commune:       ["Dictionnaire des communes de France", "1887"],
-  photo:         ["Encyclopédie illustrée", "1902"],
-  intraduisible: ["Dictionnaire des mots du monde", "1896"],
-  etrangere:     ["Recueil des locutions étrangères", "1881"]
+  definition: [
+    { titre: "Dictionnaire universel de la langue française", court: "Delormel, Dict. univ.", an: 1839, style: "classique", teinte: 0 },
+    { titre: "Nouveau vocabulaire français", court: "Mauduit, Nouv. vocab.", an: 1852, style: "filet", teinte: 1 },
+    { titre: "Trésor des mots rares et oubliés", court: "Ravenel, Mots rares", an: 1868, style: "lettrine", teinte: 2 },
+    { titre: "Glossaire du vieux langage", court: "Fontenoy, Glossaire", an: 1825, style: "numero", teinte: 3 }],
+  anecdote: [
+    { titre: "Dictionnaire d'anecdotes et de curiosités", court: "Dict. d'anecdotes", an: 1874, style: "classique", teinte: 0 },
+    { titre: "Almanach des choses singulières", court: "Almanach singulier", an: 1889, style: "numero", teinte: 2 },
+    { titre: "Gazette des faits étonnants", court: "Gaz. des faits étonnants", an: 1856, style: "filet", teinte: 3 }],
+  expression: [
+    { titre: "Dictionnaire des locutions françaises", court: "Dict. des locutions", an: 1862, style: "classique", teinte: 1 },
+    { titre: "Origines des façons de parler", court: "Origines des locutions", an: 1847, style: "lettrine", teinte: 0 },
+    { titre: "Recueil des dictons et manières de dire", court: "Recueil des dictons", an: 1880, style: "numero", teinte: 2 }],
+  commune: [
+    { titre: "Dictionnaire des communes de France", court: "Dict. des communes", an: 1887, style: "classique", teinte: 3 },
+    { titre: "Annuaire des postes et des bureaux", court: "Annuaire des postes", an: 1893, style: "numero", teinte: 1 },
+    { titre: "Nomenclature des communes du royaume", court: "Nomenclature", an: 1836, style: "filet", teinte: 2 }],
+  photo: [
+    { titre: "Encyclopédie illustrée", court: "Encyclopédie illustrée", an: 1902, style: "classique", teinte: 0 },
+    { titre: "Planches du cabinet de curiosités", court: "Cabinet de curiosités, pl.", an: 1898, style: "filet", teinte: 3 },
+    { titre: "Revue des arts et métiers", court: "Revue des arts et métiers", an: 1908, style: "numero", teinte: 1 }],
+  intraduisible: [
+    { titre: "Dictionnaire des mots du monde", court: "Mots du monde", an: 1896, style: "classique", teinte: 2 },
+    { titre: "Lexique du voyageur", court: "Lexique du voyageur", an: 1883, style: "numero", teinte: 0 },
+    { titre: "Des mots qui n'ont point d'équivalent", court: "Mots sans équivalent", an: 1901, style: "lettrine", teinte: 3 }],
+  etrangere: [
+    { titre: "Recueil des locutions étrangères", court: "Locutions étrangères", an: 1881, style: "classique", teinte: 1 },
+    { titre: "Guide de conversation polyglotte", court: "Guide polyglotte", an: 1878, style: "filet", teinte: 2 },
+    { titre: "Idiomes des nations", court: "Idiomes des nations", an: 1894, style: "lettrine", teinte: 0 }]
 };
+// Papier : quatre teintes (crème, ivoire, bis, gris-vert d'archive).
+const TEINTES = [["#f1e5c6", "#dfca9d", "#cdb078"], ["#f4ecd8", "#e4d6b4", "#cfbd92"], ["#eedcbc", "#dcc193", "#c6a26a"], ["#ebe6d2", "#d6d0b2", "#bdb58f"]];
+const empreinte = s => { let n = 0; for (const c of String(s)) n = (n * 33 + c.charCodeAt(0)) % 100003; return n; };
+const ouvrage = (m, motId) => { const l = OUVRAGES[famille(m)] || OUVRAGES.definition; return l[empreinte(motId) % l.length]; };
+// Attributs du feuillet (classe de style, teinte) : les mêmes pour les deux pièces d'un lot.
+const attrsFeuillet = (m, motId) => { const o = ouvrage(m, motId), t = TEINTES[o.teinte]; return `data-style="${o.style}" style="--p1:${t[0]};--p2:${t[1]};--p3:${t[2]}"`; };
 // Catégories proposées au faussaire pour une définition (la vraie est cochée d'office).
 const CATEGORIES = ["n. m.", "n. f.", "n.", "adj.", "v.", "adv."];
 // Début de réponse inséré dans une phrase : « L'urine » → « l'urine », « Moins de » → « moins de ».
@@ -826,7 +871,7 @@ function entreeFeuillet(m, texte, categorie) {
   }
   if (f === "anecdote") {
     const [avant, apres] = String(m.question || "").split("___");
-    return `${esc(avant || "")}<em class="rep">${esc(minusculeDebut(sansPoint(texte)))}</em>${esc(apres ?? ".")}`;
+    return `${esc(avant || "")}<em class="rep">${esc(minuscule1(sansPoint(texte)))}</em>${esc(apres ?? ".")}`;
   }
   if (f === "expression") return `<b class="vedette">${esc(m.mot.charAt(0).toUpperCase() + m.mot.slice(1))}</b>, <i>loc.</i> <span class="rep">${t}</span>`;
   if (f === "intraduisible" || f === "etrangere") {
@@ -838,15 +883,19 @@ function entreeFeuillet(m, texte, categorie) {
   return `<b class="vedette">Fig.</b> ${esc(m.legende || "")}. <span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(minuscule1(texte))}</span>`;
 }
 function feuillet(m, motId, texte, categorie) {
-  const f = famille(m), [titre, an] = OUVRAGES[f] || OUVRAGES.definition;
+  const f = famille(m), o = ouvrage(m, motId);
   const n = +numero(motId).replace(/\D/g, "").slice(-4) || 1;
   // En-tête courant, identique sur les deux feuillets : les trois premières lettres du mot (définition),
   // le département (commune), sinon le tome.
   const dep = f === "commune" ? (String(m.question || "").match(/commune (?:de la |du |des |d'|de l'|de )(.+?) existe/) || [])[1] : "";
-  const tete = f === "definition" ? m.mot.slice(0, 3).toUpperCase() : dep ? dep.toUpperCase() : `TOME ${["I", "II", "III", "IV"][n % 4]}`;
+  const tome = ["I", "II", "III", "IV"][n % 4];
+  const tete = f === "definition" ? m.mot.slice(0, 3).toUpperCase() : dep ? dep.toUpperCase() : `TOME ${tome}`;
+  // Signature d'imprimeur (lettre du cahier et rang de la feuille), comme au bas des vrais livres.
+  const num = o.style === "numero" ? `<b class="f-num" aria-hidden="true">§ ${(n % 900) + 12}.</b> ` : "";
+  const sig = `${"ABCDEFGHIKLMNOPQRSTV"[n % 20]}${n % 4 ? " " + (n % 4 + 1) : ""}`;
   return `<span class="f-tete" aria-hidden="true"><span>${esc(tete)}</span><span>— ${n} —</span><span>${esc(tete)}</span></span>
-    ${f === "photo" ? `<span class="f-planche"><span class="f-zoom" role="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.legende || "")}"><span class="loupe" aria-hidden="true">⤢</span></span><span class="f-art">${entreeFeuillet(m, texte, categorie)}</span></span>` : `<span class="f-art">${entreeFeuillet(m, texte, categorie)}</span>`}
-    <span class="f-pied" aria-hidden="true"><span>${esc(titre)}</span><span>${an}</span></span>`;
+    ${f === "photo" ? `<span class="f-planche"><span class="f-zoom" role="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.legende || "")}"><span class="loupe" aria-hidden="true">⤢</span></span><span class="f-art">${num}${entreeFeuillet(m, texte, categorie)}</span></span>` : `<span class="f-art">${num}${entreeFeuillet(m, texte, categorie)}</span>`}
+    <span class="f-pied" aria-hidden="true"><span class="sig">${sig}</span><span>${esc(o.court)}${f === "definition" || f === "commune" ? "" : `, t. ${tome}`} · ${o.an}</span></span>`;
 }
 // Lampe à ultraviolets à la révélation : le papier moderne du faux s'allume, l'ancien reste éteint.
 // Réversible (LAMPE_UV = false : tampons et signature sur le papier, sans changer de fond).
@@ -857,7 +906,7 @@ function afficherDuel(motId, options, piege) {
   $e.innerHTML = `${entete()}
     ${lot(m, motId)}
     <p class="consigne-achat">Trouve le vrai</p>
-    <div class="choix duel feuillets">${options.map((o, k) => `<button class="bouton feuillet" type="button" data-k="${k}"><span class="peau-uv" aria-hidden="true"></span>${feuillet(m, motId, o.texte, o.categorie)}<small hidden></small></button>`).join("")}</div>
+    <div class="choix duel feuillets">${options.map((o, k) => `<button class="bouton feuillet" type="button" data-k="${k}" ${attrsFeuillet(m, motId)}><span class="peau-uv" aria-hidden="true"></span>${feuillet(m, motId, o.texte, o.categorie)}<small hidden></small></button>`).join("")}</div>
     <div id="suite"></div>`;
   $e.querySelectorAll("[data-k]").forEach(b => b.onclick = () => repondre(motId, options, piege, +b.dataset.k));
 }
@@ -947,7 +996,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
   const m = S.mots.get(motId), F = FAMILLES[famille(m)], direct = prix !== PRIX_PIEGE;
   $e.innerHTML = `${enteteBlops(solde(index()), prix)}
     ${lot(m, motId)}
-    <div class="feuillet modele apparait"><span class="chip bon">D'époque</span>${feuillet(m, motId, formater(m.vraie, famille(m)), m.categorie)}</div>
+    <div class="feuillet modele apparait" ${attrsFeuillet(m, motId)}><span class="chip bon">D'époque</span>${feuillet(m, motId, formater(m.vraie, famille(m)), m.categorie)}</div>
     <label for="piegeTexte">${F.champ}</label>
     ${famille(m) === "definition" ? `<div class="categories" role="radiogroup" aria-label="Catégorie de ton faux">${CATEGORIES.map(c => `<button type="button" role="radio" class="cat" data-cat="${c}" aria-checked="${c === (m.categorie || "n. m.")}">${c}</button>`).join("")}</div>` : ""}
     <textarea id="piegeTexte" maxlength="${F.max}" placeholder="Quelque chose qui sonne vrai…"></textarea>

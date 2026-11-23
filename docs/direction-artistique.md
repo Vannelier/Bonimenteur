@@ -17,6 +17,12 @@ foi : `prototype/index.html`, en tête du `<style>`.
   (photo), dictionnaire des mots du monde, recueil des locutions étrangères.
   Tout ce qui entoure la réponse (titre, page, tome, département) est
   identique sur les deux feuillets et vient de la question.
+- Plusieurs ouvrages fictifs par famille (`OUVRAGES`, 22 en tout), tirés au
+  sort par lot, le même pour les deux feuillets. Chacun a sa mise en page
+  (`data-style` : classique ; filet double et vedette rouge ; lettrine et
+  fleurons ; article numéroté « § 642. »), sa teinte de papier (`TEINTES`,
+  quatre) et un pied à l'ancienne : signature d'imprimeur (« B 2 ») et titre
+  abrégé (« Mauduit, Nouv. vocab. · 1852 »), au lieu du titre complet.
 - Définition : « **sapajou**, *n. m.* Petit singe… ». La catégorie de la vraie
   vient des données (`categorie`, `tools/categories.py`) ; le faussaire choisit
   celle de son faux, il peut la fausser aussi.
