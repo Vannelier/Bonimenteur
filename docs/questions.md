@@ -44,6 +44,10 @@ dans le Wiktionnaire par `tools/categories.py` puis relue à la main (le premier
 sens n'est pas toujours celui de la vraie réponse : « cagnard », adjectif,
 est ici un nom). Affichée sur le feuillet de la vraie réponse.
 
+Photos : `legende` (ce que montre l'image, sans la réponse) et `rubrique`
+(Usage, Bâtisseur…). Le feuillet est une planche complète : la photo et
+« Fig. Pince en métal. *Usage :* à friser les cheveux… », sans la question.
+
 Champs facultatifs : `cadre` (mots communs à une série, ignorés par
 l'arbitre : « peur » pour les phobies), `region`, `registre`, `source`.
 

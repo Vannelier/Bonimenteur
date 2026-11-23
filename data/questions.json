@@ -584,7 +584,9 @@
   "mot": "",
   "question": "À quoi servait cette poêle en laiton percée, au très long manche ?",
   "type": "photo",
-  "vraie": "À réchauffer le lit avant de s'y coucher : on la remplissait de braises et on la passait entre les draps."
+  "vraie": "À réchauffer le lit avant de s'y coucher : on la remplissait de braises et on la passait entre les draps.",
+  "legende": "Poêle en laiton percée, au très long manche",
+  "rubrique": "Usage"
  },
  "o-fer": {
   "alt": "Une pince de métal à deux branches arrondies avec des poignées en bois",
@@ -593,7 +595,9 @@
   "mot": "",
   "question": "À quoi servait cette pince en métal ?",
   "type": "photo",
-  "vraie": "À friser les cheveux : on la chauffait avant d'y enrouler les mèches."
+  "vraie": "À friser les cheveux : on la chauffait avant d'y enrouler les mèches.",
+  "legende": "Pince en métal",
+  "rubrique": "Usage"
  },
  "o-moustache": {
   "alt": "Une tasse de porcelaine dont l'intérieur porte un petit rebord en demi-lune",
@@ -602,7 +606,9 @@
   "mot": "",
   "question": "À quoi servait cette tasse en porcelaine, avec son drôle de rebord intérieur ?",
   "type": "photo",
-  "vraie": "À boire son thé ou son café sans mouiller sa moustache."
+  "vraie": "À boire son thé ou son café sans mouiller sa moustache.",
+  "legende": "Tasse en porcelaine à rebord intérieur",
+  "rubrique": "Usage"
  },
  "o-tirebotte": {
   "alt": "Un objet de fonte en forme d'insecte, avec deux longues pattes écartées à l'arrière",
@@ -611,7 +617,9 @@
   "mot": "",
   "question": "À quoi servait cet objet en fonte, en forme d'insecte ?",
   "type": "photo",
-  "vraie": "À retirer ses bottes sans les mains : on coinçait le talon entre ses deux pattes."
+  "vraie": "À retirer ses bottes sans les mains : on coinçait le talon entre ses deux pattes.",
+  "legende": "Objet en fonte en forme d'insecte",
+  "rubrique": "Usage"
  },
  "o-tirebouton": {
   "alt": "Une longue tige de métal terminée par un crochet, avec un manche",
@@ -620,7 +628,9 @@
   "mot": "",
   "question": "À quoi servait cet objet terminé par un petit crochet ?",
   "type": "photo",
-  "vraie": "À boutonner les bottines et les gants en attrapant chaque bouton à travers sa boutonnière."
+  "vraie": "À boutonner les bottines et les gants en attrapant chaque bouton à travers sa boutonnière.",
+  "legende": "Objet terminé par un petit crochet",
+  "rubrique": "Usage"
  },
  "olibrius": {
   "mot": "olibrius",
@@ -653,7 +663,9 @@
   "mot": "",
   "question": "Hauterives, dans la Drôme. Qui a construit ce palais de pierre ?",
   "type": "photo",
-  "vraie": "Un facteur, seul, avec les pierres ramassées pendant ses tournées, en 33 ans."
+  "vraie": "Un facteur, seul, avec les pierres ramassées pendant ses tournées, en 33 ans.",
+  "legende": "Palais de pierre, Hauterives (Drôme)",
+  "rubrique": "Bâtisseur"
  },
  "p-crue": {
   "alt": "Des passants marchent sur une passerelle de planches au-dessus d'une avenue inondée",
@@ -662,7 +674,9 @@
   "mot": "",
   "question": "Paris, crue de janvier 1910. Jusqu'où l'eau est-elle montée sur le Zouave, la statue du pont de l'Alma qui sert de repère ?",
   "type": "photo",
-  "vraie": "Jusqu'à ses épaules."
+  "vraie": "Jusqu'à ses épaules.",
+  "legende": "Le Zouave du pont de l'Alma, crue de janvier 1910",
+  "rubrique": "Hauteur de l'eau"
  },
  "p-lac": {
   "alt": "Un lac rose vif entouré de forêt, au bord de l'océan",
@@ -671,7 +685,9 @@
   "mot": "",
   "question": "Ce lac d'une île d'Australie occidentale est rose. Pourquoi ?",
   "type": "photo",
-  "vraie": "À cause d'algues microscopiques et de bactéries qui vivent dans son eau très salée."
+  "vraie": "À cause d'algues microscopiques et de bactéries qui vivent dans son eau très salée.",
+  "legende": "Lac rose d'une île d'Australie occidentale",
+  "rubrique": "Origine de la couleur"
  },
  "p-liberte": {
   "alt": "Une statue géante entourée d'échafaudages au-dessus des toits d'une rue de Paris",
@@ -680,7 +696,9 @@
   "mot": "",
   "question": "Paris, rue de Chazelles, vers 1884. Que fait cette statue géante au-dessus des toits ?",
   "type": "photo",
-  "vraie": "C'est la statue de la Liberté, assemblée à Paris avant d'être démontée et envoyée à New York."
+  "vraie": "C'est la statue de la Liberté, assemblée à Paris avant d'être démontée et envoyée à New York.",
+  "legende": "Statue géante au-dessus des toits, rue de Chazelles, Paris, vers 1884",
+  "rubrique": "Identification"
  },
  "p-montparnasse": {
   "alt": "Une locomotive renversée contre la façade d'une gare parisienne",
@@ -689,7 +707,9 @@
   "mot": "",
   "question": "Paris, gare Montparnasse, 22 octobre 1895. Que s'est-il passé ?",
   "type": "photo",
-  "vraie": "Un train arrivé trop vite a traversé la façade de la gare et fini sa course sur la place."
+  "vraie": "Un train arrivé trop vite a traversé la façade de la gare et fini sa course sur la place.",
+  "legende": "Gare Montparnasse, Paris, 22 octobre 1895",
+  "rubrique": "Événement"
  },
  "palinodie": {
   "mot": "palinodie",

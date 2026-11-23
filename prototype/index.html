@@ -320,6 +320,12 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 /* Très court (iPhone SE en Safari, 553 px) : l'en-tête courant et le pied des feuillets, décoratifs,
    s'effacent pour que la planche photo et ses deux feuillets tiennent dans l'écran. */
 @media (max-height:600px){.choix .bouton.feuillet .f-tete,.choix .bouton.feuillet .f-pied{display:none}}
+/* Planche illustrée (photo) : la photo et sa légende dans le même feuillet. */
+.f-planche{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:start}
+.f-planche img{width:96px;height:96px;object-fit:cover;border:3px solid #fbf6e8;box-shadow:0 1px 3px rgba(43,32,22,.35);filter:sepia(.35) saturate(.8)}
+.f-planche .f-art{font-size:15.5px;line-height:1.28}
+.f-art .rubrique{font-style:italic}
+@media (max-height:700px){.f-planche{grid-template-columns:80px 1fr}.f-planche img{width:80px;height:80px}.f-planche .f-art{font-size:14.5px}}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -745,13 +751,15 @@ const CATEGORIES = ["n. m.", "n. f.", "n.", "adj.", "v.", "adv."];
 // Début de réponse inséré dans une phrase : « L'urine » → « l'urine », « Moins de » → « moins de ».
 // La majuscule n'est retirée que si la lettre suivante est une minuscule ou une apostrophe (pas un sigle).
 const minusculeDebut = s => /^[A-ZÀ-Ý]([a-zà-ÿ]|['’])/.test(s) ? s[0].toLowerCase() + s.slice(1) : s;
+// Première lettre en minuscule, accents compris (« À réchauffer » → « à réchauffer »), sauf un sigle.
+const minuscule1 = s => /^[A-ZÀ-Ý](?![A-ZÀ-Ý])/.test(String(s)) ? s.charAt(0).toLocaleLowerCase("fr") + s.slice(1) : s;
 const sansPoint = s => String(s).replace(/[.\s]+$/, "");
 /* Plus de question d'en-tête (demande de l'auteur, 23/11/2026) : le feuillet dit tout. Au-dessus,
    une ligne fine (famille, numéro de lot) et, pour une photo, la planche : l'image et sa question
    en légende, sans quoi « Fig. — Un facteur » ne voudrait rien dire. */
 function lot(m, motId) {
   const f = famille(m);
-  const planche = f === "photo" ? `<figure class="photo planche apparait"><button class="zoom" type="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.question)}"><span class="loupe" aria-hidden="true">⤢</span></button><figcaption><span class="legende">${esc(m.question)}</span><span class="credit">${esc(m.credit || "")}</span></figcaption></figure>` : "";
+  const planche = false ? `<figure class="photo planche apparait"><button class="zoom" type="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.question)}"><span class="loupe" aria-hidden="true">⤢</span></button><figcaption><span class="legende">${esc(m.question)}</span><span class="credit">${esc(m.credit || "")}</span></figcaption></figure>` : "";
   return `<div class="lot"><span class="pastille">${FAMILLES[f].label}</span><span class="n-lot">${numero(motId)}</span></div>${planche}`;
 }
 function entreeFeuillet(m, texte, categorie) {
@@ -771,7 +779,9 @@ function entreeFeuillet(m, texte, categorie) {
     const q = String(m.question || ""), mot = (q.match(/«\s*(.+?)\s*»/) || [])[1] || "", langue = (q.match(/^En ([a-zéèêàïîô-]+)/i) || [])[1] || "";
     return `<b class="vedette">${esc(mot)}</b>${langue ? `, <i>${esc(langue)}</i>` : ""}. <span class="rep">${t}</span>`;
   }
-  return `<b class="vedette">Fig.</b> — <span class="rep">${t}</span>`;
+  // Photo : une planche légendée complète, sans la question (demande de l'auteur, 23/11/2026) :
+  // « Fig. Poêle en laiton percée… — Usage : à réchauffer le lit… ».
+  return `<b class="vedette">Fig.</b> ${esc(m.legende || "")}. <span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(minuscule1(texte))}</span>`;
 }
 function feuillet(m, motId, texte, categorie) {
   const f = famille(m), [titre, an] = OUVRAGES[f] || OUVRAGES.definition;
@@ -781,7 +791,7 @@ function feuillet(m, motId, texte, categorie) {
   const dep = f === "commune" ? (String(m.question || "").match(/commune (?:de la |du |des |d'|de l'|de )(.+?) existe/) || [])[1] : "";
   const tete = f === "definition" ? m.mot.slice(0, 3).toUpperCase() : dep ? dep.toUpperCase() : `TOME ${["I", "II", "III", "IV"][n % 4]}`;
   return `<span class="f-tete" aria-hidden="true"><span>${esc(tete)}</span><span>— ${n} —</span><span>${esc(tete)}</span></span>
-    <span class="f-art">${entreeFeuillet(m, texte, categorie)}</span>
+    ${f === "photo" ? `<span class="f-planche"><img src="${esc(m.image)}" alt="${esc(m.alt || m.legende || "")}"><span class="f-art">${entreeFeuillet(m, texte, categorie)}</span></span>` : `<span class="f-art">${entreeFeuillet(m, texte, categorie)}</span>`}
     <span class="f-pied" aria-hidden="true"><span>${esc(titre)}</span><span>${an}</span></span>`;
 }
 // Lampe à ultraviolets à la révélation : le papier moderne du faux s'allume, l'ancien reste éteint.

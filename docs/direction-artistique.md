@@ -30,8 +30,9 @@ foi : `prototype/index.html`, en tête du `<style>`.
 - Plus de question d'en-tête (23/11/2026) : le feuillet dit tout. Au-dessus,
   une ligne fine (famille, « Lot C·2912 ») et la consigne « Trouve le vrai ».
   Région et registre passent dans l'entrée du feuillet, identiques sur les
-  deux (« **achaler**, *v., Québec.* »). La photo garde sa question, en
-  légende d'une planche (image et légende côte à côte). Sous 700 px de haut,
+  deux (« **achaler**, *v., Québec.* »). Photo : chaque feuillet est une
+  planche complète, la photo et sa légende (`legende`, `rubrique`), sans la
+  question. Sous 700 px de haut,
   en-tête et feuillets resserrés ; sous 600 px, en-tête courant et pied des
   feuillets masqués. Bas du second feuillet mesuré (Playwright, 15 lots) :
   401 à 603 px à 390 × 664, 395 à 523 px à 375 × 553, tous dans l'écran.
