@@ -303,10 +303,10 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
     <h1>Bonimenteur<span>Antiquaire &amp; faussaire</span></h1>
   </header>
   <nav class="onglets" role="tablist" aria-label="Écrans">
-    <button id="o-jouer" role="tab" aria-selected="true" data-ecran="jouer">Ventes</button>
+    <button id="o-jouer" role="tab" aria-selected="true" data-ecran="jouer">Expertise</button>
     <button id="o-atelier" role="tab" aria-selected="false" data-ecran="atelier">Atelier</button>
   </nav>
-  <main id="ecran" class="carte" aria-live="polite"><p class="centre">Ouverture de la salle des ventes…</p></main>
+  <main id="ecran" class="carte" aria-live="polite"><p class="centre">Ouverture du cabinet d'expertise…</p></main>
   <p class="note">Prototype</p>
 </div>
 
@@ -818,7 +818,7 @@ function choixFamille(retour) {
     $e.innerHTML = `${retour === atelier ? sousOnglets("fabriquer", I) : ""}${enteteBlops(s)}
       <div class="grosse-ic apparait">${IC.piege}</div>
       ${reserve(s)}
-      <button class="bouton plein" type="button" id="retour" style="width:100%">Salle des ventes</button>`;
+      <button class="bouton plein" type="button" id="retour" style="width:100%">Expertise</button>`;
     document.getElementById("retour").onclick = () => (retour === atelier ? montrer("jouer") : nouvelleSerie()); if (retour === atelier) lierSous(); return;
   }
   const dansAtelier = retour === atelier;
@@ -941,7 +941,7 @@ async function bilan() {
 }
 
 function plusDeMots() {
-  $e.innerHTML = `${serie ? entete() : ""}<div class="grosse-ic">${IC.definition}</div><p class="centre">Plus aucun lot en vente.</p>
+  $e.innerHTML = `${serie ? entete() : ""}<div class="grosse-ic">${IC.definition}</div><p class="centre">Plus aucun lot à expertiser.</p>
     <div class="ligne"><button class="bouton piege" type="button" id="versAtelier">Contrefaire</button>${serie && serie.num ? `<button class="bouton" type="button" id="bilanBtn">Bilan</button>` : ""}</div>`;
   document.getElementById("versAtelier").onclick = () => { sousAtelier = "fabriquer"; montrer("atelier"); };
   const b = document.getElementById("bilanBtn"); if (b) b.onclick = bilan;
@@ -1016,7 +1016,7 @@ async function absence() {
     <div class="gros apparait" aria-label="${victimes.length} victimes">${victimes.length}</div>
     <div class="chips">${IC.joueur}${pastilleBlop(victimes.length, "+")}</div>
     <ul class="liste">${[...parPiege].map(([id, js]) => { const p = mesIds.get(id), mot = S.mots.get(p.mot); return `<li><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>${esc(formater(p.texte, mot ? famille(mot) : "definition"))}</span><span class="victimes">${[...new Set(js)].map(j => `<span class="victime"><b aria-hidden="true">${initiale(j)}</b>${esc(nom(j))}</span>`).join("")}</span></li>`; }).join("")}</ul>
-    <button class="bouton plein" type="button" id="jouerAbsence">Salle des ventes</button>`;
+    <button class="bouton plein" type="button" id="jouerAbsence">Expertise</button>`;
   document.getElementById("jouerAbsence").onclick = () => montrer("jouer");
   return true;
 }

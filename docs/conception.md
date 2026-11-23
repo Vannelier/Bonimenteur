@@ -9,11 +9,11 @@ Le joueur démasque les faux des autres (une vraie réponse contre un faux, à
 chaque duel) et fabrique les siens pour les duper. Fabriquer est le plaisir ;
 démasquer rapporte de quoi fabriquer.
 
-## Lexique : la salle des ventes
+## Lexique : l'expertise
 
-Décision de l'auteur, 23/11/2026 : le joueur est antiquaire et faussaire. En
-salle des ventes, il achète les pièces d'époque ; dans son atelier, il
-contrefait et met ses faux sur le marché.
+Décision de l'auteur, 23/11/2026 : le joueur est antiquaire et faussaire. À
+l'expertise, il achète les pièces d'époque ; dans son atelier, il contrefait
+et met ses faux sur le marché.
 
 | Jeu | Dans l'interface |
 |---|---|
@@ -21,7 +21,7 @@ contrefait et met ses faux sur le marché.
 | bonne réponse | « Bonne affaire. », sceau de cire |
 | mauvaise réponse | « Tu as acheté un faux. », tampon « Floué » |
 | tournée de 15 duels | vacation (« Fin de vacation », « Nouvelle vacation ») |
-| onglets | Ventes, Atelier ; dans l'atelier : Contrefaire, Sur le marché |
+| onglets | Expertise, Atelier ; dans l'atelier : Contrefaire, Sur le marché |
 | poser un faux | « Mettre en vente » ; après : « En vente » |
 | faux éteint (mèche) | Saisi ; contesté : Retiré du marché |
 | plus vrai que nature | Pièce de maître |
