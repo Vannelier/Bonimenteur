@@ -22,12 +22,11 @@ foi : `prototype/index.html`, en tête du `<style>`.
   celle de son faux, il peut la fausser aussi.
 - Papier vieilli en CSS : rousseurs, bords brunis, bord frangé (`clip-path`),
   caractères IM Fell English (SIL OFL).
-- Révélation sous la lampe à ultraviolets (`LAMPE_UV`, à juger en jeu) : un
-  voile violet sur la table, le papier moderne du faux s'allume en bleu et
-  montre la signature de son faussaire et le tampon « Contrefaçon » ; le papier
-  d'époque s'éteint, montre son filigrane et le timbre « D'époque ». Seuls le
-  voile et les calques `peau-uv` s'animent, en opacité. `LAMPE_UV = false` :
-  tampons et signature sur le papier, sans changer de fond.
+- Révélation par les tampons : « Contrefaçon » et la signature du faussaire sur
+  le faux (réponse barrée s'il est démasqué), timbre « D'époque » sur le vrai,
+  étiquette « Acheté » sur la pièce choisie. La lampe à ultraviolets
+  (`LAMPE_UV`) a été essayée puis écartée le 23/11/2026 : « ça ne marche pas »
+  en jeu. Le code reste, coupé.
 - La question reste une pièce officielle sur papier filigrané (numéro de série
   rouge) ; sous-main de cuir vert, cadre à guilloches.
 - Démasqué : sceau de cire. Dupé : tampon « Dupé ».

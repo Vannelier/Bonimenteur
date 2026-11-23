@@ -251,9 +251,10 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .f-art i,.f-art em{font-style:italic}
 .f-pied{display:flex;justify-content:space-between;gap:10px;margin-top:auto;font:italic 12px "IM Fell English",Georgia,serif;color:rgba(43,32,22,.7)}
 .f-pied span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.feuillet small{display:flex;align-items:center;gap:8px;min-height:30px;font-size:13px}
+.feuillet small{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;min-height:30px;font-size:13px}
 .feuillet small[hidden]{display:none}
-.feuillet .tampon{position:relative;right:auto;bottom:auto;margin-left:auto;font-size:17px}
+.feuillet .tampon{position:relative;right:auto;bottom:auto;font-size:15px;padding:3px 8px}
+.feuillet .signe-faux{margin-left:auto}
 .feuillet .chip.bon{background:rgba(241,229,198,.85)}
 .feuillet.modele .chip.bon{position:absolute;right:12px;bottom:10px;z-index:2}
 .feuillet.modele{padding-bottom:44px}
@@ -289,6 +290,10 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .cat[aria-checked="true"]{background:var(--vert);border-color:var(--vert);color:var(--papier)}
 /* Salle des ventes : une ligne au-dessus des deux pièces, dans le ton du catalogue. */
 .consigne-achat{margin:-4px 0 -6px;text-align:center;font:700 11px/1.4 var(--titre);letter-spacing:.22em;text-transform:uppercase;color:var(--doux)}
+/* Étiquette d'achat : un ticket de carton percé, sur la pièce choisie. */
+.etiquette{position:relative;display:inline-flex;align-items:center;gap:6px;padding:3px 10px 3px 16px;font:700 11px/1.2 var(--titre);letter-spacing:.14em;text-transform:uppercase;
+  color:#4a3618;background:#e9d29a;clip-path:polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%);transform:rotate(-4deg)}
+.etiquette::before{content:"";position:absolute;left:7px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:#f1e5c6}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -746,7 +751,7 @@ function feuillet(m, motId, texte, categorie) {
 }
 // Lampe à ultraviolets à la révélation : le papier moderne du faux s'allume, l'ancien reste éteint.
 // Réversible (LAMPE_UV = false : tampons et signature sur le papier, sans changer de fond).
-const LAMPE_UV = true;
+const LAMPE_UV = false;   // jugée en jeu le 23/11/2026 : « ça ne marche pas », retour aux tampons
 
 function afficherDuel(motId, options, piege) {
   const m = S.mots.get(motId);
@@ -763,10 +768,12 @@ function repondre(motId, options, piege, k) {
   const juste = options[k].id === "vrai", I = index();
   const montrer = (btn, html, cls) => { btn.disabled = true; btn.classList.add(cls); const sm = btn.querySelector("small"); sm.hidden = false; sm.innerHTML = html; };
   const etoile = I.pvqn.has(piege.id) ? `<span style="color:var(--piege)" title="Pièce de maître">${IC.etoile}</span>` : "";
+  // L'étiquette « Acheté » marque la pièce que le joueur a choisie, vraie ou fausse.
+  const achat = i => i === k ? `<span class="etiquette">Acheté</span>` : "";
   options.forEach((o, i) => {
     const b = $e.querySelector(`[data-k="${i}"]`);
-    if (o.id === "vrai") montrer(b, VRAI, "ok");
-    else montrer(b, `<span class="tampon" aria-label="Contrefaçon">Contrefaçon</span>${etoile}<span class="signe-faux ${juste ? "" : "dupe"}"><i>signé</i> ${esc(nom(o.auteur))}</span>`, juste ? "demasque" : "debout");
+    if (o.id === "vrai") montrer(b, achat(i) + VRAI, "ok");
+    else montrer(b, `${achat(i)}<span class="tampon" aria-label="Contrefaçon">Contrefaçon</span>${etoile}<span class="signe-faux ${juste ? "" : "dupe"}"><i>signé</i> ${esc(nom(o.auteur))}</span>`, juste ? "demasque" : "debout");
   });
   if (LAMPE_UV) { const ch = $e.querySelector(".choix.feuillets"); requestAnimationFrame(() => ch && ch.classList.add("sous-lampe")); }
   let gain = 0;
