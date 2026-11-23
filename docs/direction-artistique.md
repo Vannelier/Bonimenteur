@@ -22,6 +22,15 @@ foi : `prototype/index.html`, en tête du `<style>`.
   rouille, rayures ; choisi parmi trois variantes le 23/11/2026, après la plaque
   émaillée bleue et la page de dictionnaire), le métier une carte de visite gravée
   (nom et adresse fictifs, métier en capitales, spécialité à deviner).
+- Un artefact par famille (maquette G, 23/11/2026) : page de dictionnaire
+  (définition, expression : article seul, titre courant au mot, « 1° », cote au
+  crayon), coupure de journal (anecdote : « Faits divers », journaux fictifs,
+  date), guide de conversation en deux colonnes (mot et expression étrangère),
+  planche gravée (photo : image en gravure dans sa cuvette, « Fig. n. — »,
+  réponse en italique), carte de visite (nom en écriture anglaise, coin corné,
+  liseré), panonceau de gare (commune). Grain de papier fixe (bruit SVG, 3
+  octaves) et encre foulée sur tous. Sous 600 px de haut, la planche passe en
+  deux colonnes.
 - Plusieurs ouvrages fictifs par famille (`OUVRAGES`, 22 en tout), tirés au
   sort par lot, le même pour les deux feuillets. Chacun a sa mise en page
   (`data-style` : classique ; filet double et vedette rouge ; lettrine et
