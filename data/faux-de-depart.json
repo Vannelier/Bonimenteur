@@ -1,0 +1,1757 @@
+[
+ {
+  "id": "t-a-baguette-1",
+  "mot": "a-baguette",
+  "texte": "l'art de la bise à la française"
+ },
+ {
+  "id": "t-a-baguette-2",
+  "mot": "a-baguette",
+  "texte": "la pétanque provençale"
+ },
+ {
+  "id": "t-a-baguette-3",
+  "mot": "a-baguette",
+  "texte": "le croissant au beurre"
+ },
+ {
+  "id": "t-a-banane-1",
+  "mot": "a-banane",
+  "texte": "un légume racine"
+ },
+ {
+  "id": "t-a-banane-2",
+  "mot": "a-banane",
+  "texte": "une graine géante"
+ },
+ {
+  "id": "t-a-banane-3",
+  "mot": "a-banane",
+  "texte": "une fleur restée fermée"
+ },
+ {
+  "id": "t-a-danse1518-1",
+  "mot": "a-danse1518",
+  "texte": "Parler une langue que personne ne comprenait."
+ },
+ {
+  "id": "t-a-danse1518-2",
+  "mot": "a-danse1518",
+  "texte": "Marcher à reculons dans les rues."
+ },
+ {
+  "id": "t-a-danse1518-3",
+  "mot": "a-danse1518",
+  "texte": "Rire aux éclats sans raison pendant des jours."
+ },
+ {
+  "id": "t-a-eiffel-1",
+  "mot": "a-eiffel",
+  "texte": "penche de quelques centimètres vers le soleil"
+ },
+ {
+  "id": "t-a-eiffel-2",
+  "mot": "a-eiffel",
+  "texte": "est repeinte d'une couleur plus claire pour rester au frais"
+ },
+ {
+  "id": "t-a-eiffel-3",
+  "mot": "a-eiffel",
+  "texte": "perd plusieurs kilos de rouille qui s'effrite"
+ },
+ {
+  "id": "t-a-flamant-1",
+  "mot": "a-flamant",
+  "texte": "au reflet du soleil couchant sur ses plumes blanches"
+ },
+ {
+  "id": "t-a-flamant-2",
+  "mot": "a-flamant",
+  "texte": "à la boue rouge dans laquelle il se roule"
+ },
+ {
+  "id": "t-a-flamant-3",
+  "mot": "a-flamant",
+  "texte": "à une poussière rose qu'il produit pour attirer les femelles"
+ },
+ {
+  "id": "t-a-girafe-1",
+  "mot": "a-girafe",
+  "texte": "vingt-quatre, trois fois plus que le nôtre"
+ },
+ {
+  "id": "t-a-girafe-2",
+  "mot": "a-girafe",
+  "texte": "quarante, articulées comme une chaîne de vélo"
+ },
+ {
+  "id": "t-a-girafe-3",
+  "mot": "a-girafe",
+  "texte": "douze, dont deux soudées"
+ },
+ {
+  "id": "t-a-huitre-1",
+  "mot": "a-huitre",
+  "texte": "vivre plus de deux cents ans"
+ },
+ {
+  "id": "t-a-huitre-2",
+  "mot": "a-huitre",
+  "texte": "se déplacer de plusieurs mètres en claquant sa coquille"
+ },
+ {
+  "id": "t-a-huitre-3",
+  "mot": "a-huitre",
+  "texte": "dormir enterrée dans le sable pendant tout l'hiver"
+ },
+ {
+  "id": "t-a-joconde-1",
+  "mot": "a-joconde",
+  "texte": "Le romancier Maurice Leblanc, père d'Arsène Lupin."
+ },
+ {
+  "id": "t-a-joconde-2",
+  "mot": "a-joconde",
+  "texte": "La comédienne Sarah Bernhardt."
+ },
+ {
+  "id": "t-a-joconde-3",
+  "mot": "a-joconde",
+  "texte": "L'inventeur Thomas Edison."
+ },
+ {
+  "id": "t-a-ketchup-1",
+  "mot": "a-ketchup",
+  "texte": "comme vernis pour les meubles"
+ },
+ {
+  "id": "t-a-ketchup-2",
+  "mot": "a-ketchup",
+  "texte": "comme encre pour écrire les lettres d'amour"
+ },
+ {
+  "id": "t-a-ketchup-3",
+  "mot": "a-ketchup",
+  "texte": "en poudre, à mélanger avec du whisky"
+ },
+ {
+  "id": "t-a-loutre-1",
+  "mot": "a-loutre",
+  "texte": "posent une pierre sur leur ventre en guise d'ancre"
+ },
+ {
+  "id": "t-a-loutre-2",
+  "mot": "a-loutre",
+  "texte": "se coincent entre deux rochers à marée basse"
+ },
+ {
+  "id": "t-a-loutre-3",
+  "mot": "a-loutre",
+  "texte": "gardent une patte posée sur le fond"
+ },
+ {
+  "id": "t-a-miel-1",
+  "mot": "a-miel",
+  "texte": "du fromage de chèvre"
+ },
+ {
+  "id": "t-a-miel-2",
+  "mot": "a-miel",
+  "texte": "de la bière"
+ },
+ {
+  "id": "t-a-miel-3",
+  "mot": "a-miel",
+  "texte": "des dattes confites"
+ },
+ {
+  "id": "t-a-poulpe-1",
+  "mot": "a-poulpe",
+  "texte": "une langue plus longue que ses bras"
+ },
+ {
+  "id": "t-a-poulpe-2",
+  "mot": "a-poulpe",
+  "texte": "des dents qui repoussent chaque semaine"
+ },
+ {
+  "id": "t-a-poulpe-3",
+  "mot": "a-poulpe",
+  "texte": "un estomac dans chacun de ses bras"
+ },
+ {
+  "id": "t-a-truie-1",
+  "mot": "a-truie",
+  "texte": "élue mascotte officielle de la foire aux bestiaux"
+ },
+ {
+  "id": "t-a-truie-2",
+  "mot": "a-truie",
+  "texte": "baptisée à l'église pour avoir sauvé un enfant de la noyade"
+ },
+ {
+  "id": "t-a-truie-3",
+  "mot": "a-truie",
+  "texte": "nourrie aux frais du seigneur jusqu'à sa mort naturelle"
+ },
+ {
+  "id": "t-a-vespasien-1",
+  "mot": "a-vespasien",
+  "texte": "les barbes de plus d'un pouce"
+ },
+ {
+  "id": "t-a-vespasien-2",
+  "mot": "a-vespasien",
+  "texte": "les chiens de compagnie"
+ },
+ {
+  "id": "t-a-vespasien-3",
+  "mot": "a-vespasien",
+  "texte": "les fenêtres donnant sur la rue"
+ },
+ {
+  "id": "t-a-wombat-1",
+  "mot": "a-wombat",
+  "texte": "dormir sur le dos, les quatre pattes en l'air"
+ },
+ {
+  "id": "t-a-wombat-2",
+  "mot": "a-wombat",
+  "texte": "creuser son terrier seulement les nuits de pleine lune"
+ },
+ {
+  "id": "t-a-wombat-3",
+  "mot": "a-wombat",
+  "texte": "siffler pour prévenir ses voisins d'un incendie"
+ },
+ {
+  "id": "t-a-zanzibar-1",
+  "mot": "a-zanzibar",
+  "texte": "exactement une semaine"
+ },
+ {
+  "id": "t-a-zanzibar-2",
+  "mot": "a-zanzibar",
+  "texte": "trois jours, sans aucun mort"
+ },
+ {
+  "id": "t-a-zanzibar-3",
+  "mot": "a-zanzibar",
+  "texte": "une après-midi, interrompue pour le thé"
+ },
+ {
+  "id": "t-abscons-1",
+  "mot": "abscons",
+  "texte": "Absent sans excuse valable."
+ },
+ {
+  "id": "t-abscons-2",
+  "mot": "abscons",
+  "texte": "Taillé en pointe."
+ },
+ {
+  "id": "t-abscons-3",
+  "mot": "abscons",
+  "texte": "Qui sent le renfermé."
+ },
+ {
+  "id": "t-achaler-1",
+  "mot": "achaler",
+  "texte": "Acheter à crédit."
+ },
+ {
+  "id": "t-achaler-2",
+  "mot": "achaler",
+  "texte": "Grelotter de froid."
+ },
+ {
+  "id": "t-achaler-3",
+  "mot": "achaler",
+  "texte": "Chauffer le chalet pour l'hiver."
+ },
+ {
+  "id": "t-arachibutyrophobie-1",
+  "mot": "arachibutyrophobie",
+  "texte": "Peur des araignées dans la cuisine."
+ },
+ {
+  "id": "t-arachibutyrophobie-2",
+  "mot": "arachibutyrophobie",
+  "texte": "Peur du bruit des noix qu'on casse."
+ },
+ {
+  "id": "t-arachibutyrophobie-3",
+  "mot": "arachibutyrophobie",
+  "texte": "Peur des toiles d'araignée."
+ },
+ {
+  "id": "t-atrabilaire-1",
+  "mot": "atrabilaire",
+  "texte": "Qui souffre d'une allergie au pollen de bruyère."
+ },
+ {
+  "id": "t-atrabilaire-2",
+  "mot": "atrabilaire",
+  "texte": "Relatif aux bijoux en ambre noir."
+ },
+ {
+  "id": "t-atrabilaire-3",
+  "mot": "atrabilaire",
+  "texte": "Se dit d'une voûte à double arc brisé."
+ },
+ {
+  "id": "t-billevesee-1",
+  "mot": "billevesee",
+  "texte": "Petite bille de verre du jeu de la fossette."
+ },
+ {
+  "id": "t-billevesee-2",
+  "mot": "billevesee",
+  "texte": "Pâtisserie normande fourrée aux pommes."
+ },
+ {
+  "id": "t-billevesee-3",
+  "mot": "billevesee",
+  "texte": "Ancienne taxe sur la vente du bétail."
+ },
+ {
+  "id": "t-bimbelotier-1",
+  "mot": "bimbelotier",
+  "texte": "Musicien qui jouait du tambourin dans les foires."
+ },
+ {
+  "id": "t-bimbelotier-2",
+  "mot": "bimbelotier",
+  "texte": "Ouvrier qui taillait les bouchons de liège."
+ },
+ {
+  "id": "t-bimbelotier-3",
+  "mot": "bimbelotier",
+  "texte": "Gardien de la porte d'une ville."
+ },
+ {
+  "id": "t-bisbille-1",
+  "mot": "bisbille",
+  "texte": "Biscuit sec que l'on trempe dans le vin."
+ },
+ {
+  "id": "t-bisbille-2",
+  "mot": "bisbille",
+  "texte": "Oiseau des marais au long bec recourbé."
+ },
+ {
+  "id": "t-bisbille-3",
+  "mot": "bisbille",
+  "texte": "Double coup d'archet au violon."
+ },
+ {
+  "id": "t-brimbelle-1",
+  "mot": "brimbelle",
+  "texte": "Petite clochette au cou des chèvres."
+ },
+ {
+  "id": "t-brimbelle-2",
+  "mot": "brimbelle",
+  "texte": "Pâte de fruit des Ardennes."
+ },
+ {
+  "id": "t-brimbelle-3",
+  "mot": "brimbelle",
+  "texte": "Fillette coquette et capricieuse."
+ },
+ {
+  "id": "t-brimborion-1",
+  "mot": "brimborion",
+  "texte": "Petit tambour d'enfant."
+ },
+ {
+  "id": "t-brimborion-2",
+  "mot": "brimborion",
+  "texte": "Lutin des contes bretons."
+ },
+ {
+  "id": "t-brimborion-3",
+  "mot": "brimborion",
+  "texte": "Bonbon à la réglisse."
+ },
+ {
+  "id": "t-buticulamicrophile-1",
+  "mot": "buticulamicrophile",
+  "texte": "Collectionneur de boutons de culotte."
+ },
+ {
+  "id": "t-buticulamicrophile-2",
+  "mot": "buticulamicrophile",
+  "texte": "Éleveur de microbes en laboratoire."
+ },
+ {
+  "id": "t-buticulamicrophile-3",
+  "mot": "buticulamicrophile",
+  "texte": "Amateur de petites boutiques de quartier."
+ },
+ {
+  "id": "t-c-andouille-1",
+  "mot": "c-andouille",
+  "texte": "Saucisson-sur-Mayenne"
+ },
+ {
+  "id": "t-c-andouille-2",
+  "mot": "c-andouille",
+  "texte": "Boudin-le-Vieux"
+ },
+ {
+  "id": "t-c-andouille-3",
+  "mot": "c-andouille",
+  "texte": "Rillettes-en-Bocage"
+ },
+ {
+  "id": "t-c-arnac-1",
+  "mot": "c-arnac",
+  "texte": "Escroc-le-Bourg"
+ },
+ {
+  "id": "t-c-arnac-2",
+  "mot": "c-arnac",
+  "texte": "Voleur-sur-Gartempe"
+ },
+ {
+  "id": "t-c-arnac-3",
+  "mot": "c-arnac",
+  "texte": "Fraude-la-Gare"
+ },
+ {
+  "id": "t-c-ballots-1",
+  "mot": "c-ballots",
+  "texte": "Paquets-sur-Mayenne"
+ },
+ {
+  "id": "t-c-ballots-2",
+  "mot": "c-ballots",
+  "texte": "Colis-le-Bourg"
+ },
+ {
+  "id": "t-c-ballots-3",
+  "mot": "c-ballots",
+  "texte": "Baluchon"
+ },
+ {
+  "id": "t-c-beaufou-1",
+  "mot": "c-beaufou",
+  "texte": "Joli-Dingue"
+ },
+ {
+  "id": "t-c-beaufou-2",
+  "mot": "c-beaufou",
+  "texte": "Belle-Folie"
+ },
+ {
+  "id": "t-c-beaufou-3",
+  "mot": "c-beaufou",
+  "texte": "Doux-Toqué"
+ },
+ {
+  "id": "t-c-beze-1",
+  "mot": "c-beze",
+  "texte": "Bisou-sur-Ouche"
+ },
+ {
+  "id": "t-c-beze-2",
+  "mot": "c-beze",
+  "texte": "Câlin-les-Vignes"
+ },
+ {
+  "id": "t-c-beze-3",
+  "mot": "c-beze",
+  "texte": "Smack"
+ },
+ {
+  "id": "t-c-bouffemont-1",
+  "mot": "c-bouffemont",
+  "texte": "Mangeville"
+ },
+ {
+  "id": "t-c-bouffemont-2",
+  "mot": "c-bouffemont",
+  "texte": "Goinfre-sur-Oise"
+ },
+ {
+  "id": "t-c-bouffemont-3",
+  "mot": "c-bouffemont",
+  "texte": "Grignoteuil"
+ },
+ {
+  "id": "t-c-corpsnuds-1",
+  "mot": "c-corpsnuds",
+  "texte": "Tout-Nus-sur-Vilaine"
+ },
+ {
+  "id": "t-c-corpsnuds-2",
+  "mot": "c-corpsnuds",
+  "texte": "Peau-Nue"
+ },
+ {
+  "id": "t-c-corpsnuds-3",
+  "mot": "c-corpsnuds",
+  "texte": "Sans-Culottes"
+ },
+ {
+  "id": "t-c-glandon-1",
+  "mot": "c-glandon",
+  "texte": "Flemmard-la-Ville"
+ },
+ {
+  "id": "t-c-glandon-2",
+  "mot": "c-glandon",
+  "texte": "Feignant-sur-Vienne"
+ },
+ {
+  "id": "t-c-glandon-3",
+  "mot": "c-glandon",
+  "texte": "Lambin"
+ },
+ {
+  "id": "t-c-mouchard-1",
+  "mot": "c-mouchard",
+  "texte": "Cafard-sur-Loue"
+ },
+ {
+  "id": "t-c-mouchard-2",
+  "mot": "c-mouchard",
+  "texte": "Délateur"
+ },
+ {
+  "id": "t-c-mouchard-3",
+  "mot": "c-mouchard",
+  "texte": "Rapporteur-les-Salins"
+ },
+ {
+  "id": "t-c-pissos-1",
+  "mot": "c-pissos",
+  "texte": "Pipi-les-Pins"
+ },
+ {
+  "id": "t-c-pissos-2",
+  "mot": "c-pissos",
+  "texte": "Fontaine-Coquine"
+ },
+ {
+  "id": "t-c-pissos-3",
+  "mot": "c-pissos",
+  "texte": "Ruisselle"
+ },
+ {
+  "id": "t-c-poil-1",
+  "mot": "c-poil",
+  "texte": "Barbe-en-Morvan"
+ },
+ {
+  "id": "t-c-poil-2",
+  "mot": "c-poil",
+  "texte": "Moustache-les-Bains"
+ },
+ {
+  "id": "t-c-poil-3",
+  "mot": "c-poil",
+  "texte": "Sourcil"
+ },
+ {
+  "id": "t-c-simple-1",
+  "mot": "c-simple",
+  "texte": "Facile"
+ },
+ {
+  "id": "t-c-simple-2",
+  "mot": "c-simple",
+  "texte": "Bête-sur-Mayenne"
+ },
+ {
+  "id": "t-c-simple-3",
+  "mot": "c-simple",
+  "texte": "Niais"
+ },
+ {
+  "id": "t-cacochyme-1",
+  "mot": "cacochyme",
+  "texte": "Plat de légumes cuits à l'étouffée."
+ },
+ {
+  "id": "t-cacochyme-2",
+  "mot": "cacochyme",
+  "texte": "Qui parle en bégayant."
+ },
+ {
+  "id": "t-cacochyme-3",
+  "mot": "cacochyme",
+  "texte": "Petite cloche d'un monastère."
+ },
+ {
+  "id": "t-cagnard-1",
+  "mot": "cagnard",
+  "texte": "Chien de berger des Cévennes."
+ },
+ {
+  "id": "t-cagnard-2",
+  "mot": "cagnard",
+  "texte": "Petit canard sauvage de Camargue."
+ },
+ {
+  "id": "t-cagnard-3",
+  "mot": "cagnard",
+  "texte": "Pâtisserie aux amandes de Provence."
+ },
+ {
+  "id": "t-callipyge-1",
+  "mot": "callipyge",
+  "texte": "Qui a la peau très pâle."
+ },
+ {
+  "id": "t-callipyge-2",
+  "mot": "callipyge",
+  "texte": "Relatif aux anciennes cartes marines."
+ },
+ {
+  "id": "t-callipyge-3",
+  "mot": "callipyge",
+  "texte": "Se dit d'un vase à deux anses."
+ },
+ {
+  "id": "t-chafouin-1",
+  "mot": "chafouin",
+  "texte": "Qui a le nez retroussé."
+ },
+ {
+  "id": "t-chafouin-2",
+  "mot": "chafouin",
+  "texte": "Qui craint le froid."
+ },
+ {
+  "id": "t-chafouin-3",
+  "mot": "chafouin",
+  "texte": "Qui mange très lentement."
+ },
+ {
+  "id": "t-copoclephile-1",
+  "mot": "copoclephile",
+  "texte": "Collectionneur de serrures anciennes."
+ },
+ {
+  "id": "t-copoclephile-2",
+  "mot": "copoclephile",
+  "texte": "Amateur de coquilles d'œufs décorées."
+ },
+ {
+  "id": "t-copoclephile-3",
+  "mot": "copoclephile",
+  "texte": "Collectionneur de cloches de vache."
+ },
+ {
+  "id": "t-coquecigrue-1",
+  "mot": "coquecigrue",
+  "texte": "Coquillage en spirale des côtes bretonnes."
+ },
+ {
+  "id": "t-coquecigrue-2",
+  "mot": "coquecigrue",
+  "texte": "Grue de chantier montée sur roues."
+ },
+ {
+  "id": "t-coquecigrue-3",
+  "mot": "coquecigrue",
+  "texte": "Jeune coq qui n'a pas encore chanté."
+ },
+ {
+  "id": "t-crocheteur-1",
+  "mot": "crocheteur",
+  "texte": "Gardien de nuit qui sonnait les heures."
+ },
+ {
+  "id": "t-crocheteur-2",
+  "mot": "crocheteur",
+  "texte": "Pêcheur qui attrapait les anguilles à la main."
+ },
+ {
+  "id": "t-crocheteur-3",
+  "mot": "crocheteur",
+  "texte": "Couturière spécialisée dans la dentelle."
+ },
+ {
+  "id": "t-croquignolet-1",
+  "mot": "croquignolet",
+  "texte": "Qui grince en marchant."
+ },
+ {
+  "id": "t-croquignolet-2",
+  "mot": "croquignolet",
+  "texte": "Petit crochet de cordonnier."
+ },
+ {
+  "id": "t-croquignolet-3",
+  "mot": "croquignolet",
+  "texte": "Pomme de terre nouvelle cuite en robe des champs."
+ },
+ {
+  "id": "t-degingande-1",
+  "mot": "degingande",
+  "texte": "Débarrassé de ses gants."
+ },
+ {
+  "id": "t-degingande-2",
+  "mot": "degingande",
+  "texte": "Mal habillé, vêtu de haillons."
+ },
+ {
+  "id": "t-degingande-3",
+  "mot": "degingande",
+  "texte": "Qui a perdu sa fortune au jeu."
+ },
+ {
+  "id": "t-degun-1",
+  "mot": "degun",
+  "texte": "Un idiot, un imbécile."
+ },
+ {
+  "id": "t-degun-2",
+  "mot": "degun",
+  "texte": "Un dégoût profond."
+ },
+ {
+  "id": "t-degun-3",
+  "mot": "degun",
+  "texte": "Un petit verre de pastis."
+ },
+ {
+  "id": "t-drache-1",
+  "mot": "drache",
+  "texte": "Petit dragon des légendes flamandes."
+ },
+ {
+  "id": "t-drache-2",
+  "mot": "drache",
+  "texte": "Bière brune de fermentation haute."
+ },
+ {
+  "id": "t-drache-3",
+  "mot": "drache",
+  "texte": "Promenade du dimanche le long d'un canal."
+ },
+ {
+  "id": "t-e-lapin-1",
+  "mot": "e-lapin",
+  "texte": "Des braconniers laissaient un lapin mort pour signaler un rendez-vous manqué."
+ },
+ {
+  "id": "t-e-lapin-2",
+  "mot": "e-lapin",
+  "texte": "Les fiancés de campagne offraient un lapin à la promise pour annoncer une rupture."
+ },
+ {
+  "id": "t-e-lapin-3",
+  "mot": "e-lapin",
+  "texte": "D'un tour de magie raté où le lapin ne sortait jamais du chapeau."
+ },
+ {
+  "id": "t-e-poil-1",
+  "mot": "e-poil",
+  "texte": "Des barbiers paresseux qui gardaient le rasoir à la main sans s'en servir."
+ },
+ {
+  "id": "t-e-poil-2",
+  "mot": "e-poil",
+  "texte": "D'un serment médiéval prêté la main posée sur une peau de bête."
+ },
+ {
+  "id": "t-e-poil-3",
+  "mot": "e-poil",
+  "texte": "Des tondeurs de moutons qui finissaient la journée les mains pleines de laine."
+ },
+ {
+  "id": "t-e-pommes-1",
+  "mot": "e-pommes",
+  "texte": "Des cueilleurs normands qui s'évanouissaient de fatigue sous les pommiers."
+ },
+ {
+  "id": "t-e-pommes-2",
+  "mot": "e-pommes",
+  "texte": "De l'odeur du cidre en fermentation, qui faisait perdre connaissance."
+ },
+ {
+  "id": "t-e-pommes-3",
+  "mot": "e-pommes",
+  "texte": "D'une pièce de Molière où un valet s'évanouit dans un panier de pommes."
+ },
+ {
+  "id": "t-e-pompier-1",
+  "mot": "e-pompier",
+  "texte": "Des pompiers du XIXe siècle qui fumaient la pipe pour supporter la fumée."
+ },
+ {
+  "id": "t-e-pompier-2",
+  "mot": "e-pompier",
+  "texte": "Des pompes à bras qui crachaient de la fumée noire en chauffant."
+ },
+ {
+  "id": "t-e-pompier-3",
+  "mot": "e-pompier",
+  "texte": "D'un concours de fumeurs organisé chaque année par les casernes parisiennes."
+ },
+ {
+  "id": "t-e-sellette-1",
+  "mot": "e-sellette",
+  "texte": "De la selle qu'on posait sur un cheval avant de le vendre aux enchères."
+ },
+ {
+  "id": "t-e-sellette-2",
+  "mot": "e-sellette",
+  "texte": "Du tabouret de l'élève puni au fond de la classe."
+ },
+ {
+  "id": "t-e-sellette-3",
+  "mot": "e-sellette",
+  "texte": "De la planche où l'on présentait les fromages au jury d'un concours."
+ },
+ {
+  "id": "t-e-singe-1",
+  "mot": "e-singe",
+  "texte": "De fausses pièces en étain frappées d'une tête de singe."
+ },
+ {
+  "id": "t-e-singe-2",
+  "mot": "e-singe",
+  "texte": "Des marins qui payaient leurs dettes avec des singes rapportés d'Afrique."
+ },
+ {
+  "id": "t-e-singe-3",
+  "mot": "e-singe",
+  "texte": "Des pièces qu'on jetait aux singes savants sur les foires."
+ },
+ {
+  "id": "t-escarcelle-1",
+  "mot": "escarcelle",
+  "texte": "Petit escarpin orné d'un ruban."
+ },
+ {
+  "id": "t-escarcelle-2",
+  "mot": "escarcelle",
+  "texte": "Échelle de corde des navires."
+ },
+ {
+  "id": "t-escarcelle-3",
+  "mot": "escarcelle",
+  "texte": "Coquillage comestible de Bretagne."
+ },
+ {
+  "id": "t-eschatologie-1",
+  "mot": "eschatologie",
+  "texte": "Étude des excréments et de ce qu'ils révèlent sur la santé."
+ },
+ {
+  "id": "t-eschatologie-2",
+  "mot": "eschatologie",
+  "texte": "Partie de la médecine qui soigne les escarres."
+ },
+ {
+  "id": "t-eschatologie-3",
+  "mot": "eschatologie",
+  "texte": "Art de tailler et de polir les coquillages."
+ },
+ {
+  "id": "t-esperluette-1",
+  "mot": "esperluette",
+  "texte": "Petite cuillère à moelle."
+ },
+ {
+  "id": "t-esperluette-2",
+  "mot": "esperluette",
+  "texte": "Pâtisserie en forme de spirale."
+ },
+ {
+  "id": "t-esperluette-3",
+  "mot": "esperluette",
+  "texte": "Pirouette de danse classique."
+ },
+ {
+  "id": "t-falbala-1",
+  "mot": "falbala",
+  "texte": "Danse paysanne de Provence à trois temps."
+ },
+ {
+  "id": "t-falbala-2",
+  "mot": "falbala",
+  "texte": "Sorte de tambourin arabe."
+ },
+ {
+  "id": "t-falbala-3",
+  "mot": "falbala",
+  "texte": "Gâteau de semoule aux raisins secs."
+ },
+ {
+  "id": "t-gephyrophobie-1",
+  "mot": "gephyrophobie",
+  "texte": "Peur des girafes."
+ },
+ {
+  "id": "t-gephyrophobie-2",
+  "mot": "gephyrophobie",
+  "texte": "Peur des fêtes de famille."
+ },
+ {
+  "id": "t-gephyrophobie-3",
+  "mot": "gephyrophobie",
+  "texte": "Peur des gaufres trop chaudes."
+ },
+ {
+  "id": "t-hexakosioihexekontahexaphobie-1",
+  "mot": "hexakosioihexekontahexaphobie",
+  "texte": "Peur des hexagones."
+ },
+ {
+  "id": "t-hexakosioihexekontahexaphobie-2",
+  "mot": "hexakosioihexekontahexaphobie",
+  "texte": "Peur des sorcières."
+ },
+ {
+  "id": "t-hexakosioihexekontahexaphobie-3",
+  "mot": "hexakosioihexekontahexaphobie",
+  "texte": "Peur des dés à jouer."
+ },
+ {
+  "id": "t-hippopotomonstrosesquippedaliophobie-1",
+  "mot": "hippopotomonstrosesquippedaliophobie",
+  "texte": "Peur des hippopotames."
+ },
+ {
+  "id": "t-hippopotomonstrosesquippedaliophobie-2",
+  "mot": "hippopotomonstrosesquippedaliophobie",
+  "texte": "Peur des monstres sous le lit."
+ },
+ {
+  "id": "t-hippopotomonstrosesquippedaliophobie-3",
+  "mot": "hippopotomonstrosesquippedaliophobie",
+  "texte": "Peur des animaux d'eau douce."
+ },
+ {
+  "id": "t-hurluberlu-1",
+  "mot": "hurluberlu",
+  "texte": "Instrument à vent des bergers pyrénéens."
+ },
+ {
+  "id": "t-hurluberlu-2",
+  "mot": "hurluberlu",
+  "texte": "Petit hibou au cri strident."
+ },
+ {
+  "id": "t-hurluberlu-3",
+  "mot": "hurluberlu",
+  "texte": "Ancien jeu de quilles flamand."
+ },
+ {
+  "id": "t-i-backpfeifengesicht-1",
+  "mot": "i-backpfeifengesicht",
+  "texte": "Un visage qui a l'air triste même en souriant."
+ },
+ {
+  "id": "t-i-backpfeifengesicht-2",
+  "mot": "i-backpfeifengesicht",
+  "texte": "Les joues rouges après une longue marche dans le froid."
+ },
+ {
+  "id": "t-i-backpfeifengesicht-3",
+  "mot": "i-backpfeifengesicht",
+  "texte": "Une tête qu'on croit avoir déjà vue quelque part."
+ },
+ {
+  "id": "t-i-drachenfutter-1",
+  "mot": "i-drachenfutter",
+  "texte": "Un plat très épicé."
+ },
+ {
+  "id": "t-i-drachenfutter-2",
+  "mot": "i-drachenfutter",
+  "texte": "Une colère soudaine."
+ },
+ {
+  "id": "t-i-drachenfutter-3",
+  "mot": "i-drachenfutter",
+  "texte": "Un cerf-volant fait maison."
+ },
+ {
+  "id": "t-i-gattara-1",
+  "mot": "i-gattara",
+  "texte": "Une sieste prise au soleil."
+ },
+ {
+  "id": "t-i-gattara-2",
+  "mot": "i-gattara",
+  "texte": "Une gouttière qui déborde."
+ },
+ {
+  "id": "t-i-gattara-3",
+  "mot": "i-gattara",
+  "texte": "Une petite épicerie de village."
+ },
+ {
+  "id": "t-i-kalsarikanni-1",
+  "mot": "i-kalsarikanni",
+  "texte": "Un sauna partagé entre voisins le samedi soir."
+ },
+ {
+  "id": "t-i-kalsarikanni-2",
+  "mot": "i-kalsarikanni",
+  "texte": "La première baignade de l'année dans un lac glacé."
+ },
+ {
+  "id": "t-i-kalsarikanni-3",
+  "mot": "i-kalsarikanni",
+  "texte": "Une soirée passée à chanter seul en voiture."
+ },
+ {
+  "id": "t-i-kummerspeck-1",
+  "mot": "i-kummerspeck",
+  "texte": "Le lard fumé servi lors des enterrements."
+ },
+ {
+  "id": "t-i-kummerspeck-2",
+  "mot": "i-kummerspeck",
+  "texte": "La mauvaise humeur du matin avant le premier café."
+ },
+ {
+  "id": "t-i-kummerspeck-3",
+  "mot": "i-kummerspeck",
+  "texte": "Un ventre qui gargouille pendant un silence."
+ },
+ {
+  "id": "t-i-palegg-1",
+  "mot": "i-palegg",
+  "texte": "Une veste imperméable de pêcheur."
+ },
+ {
+  "id": "t-i-palegg-2",
+  "mot": "i-palegg",
+  "texte": "La première neige de l'année."
+ },
+ {
+  "id": "t-i-palegg-3",
+  "mot": "i-palegg",
+  "texte": "Un jour de congé imprévu."
+ },
+ {
+  "id": "t-i-shemomedjamo-1",
+  "mot": "i-shemomedjamo",
+  "texte": "La dernière part gardée pour l'invité en retard."
+ },
+ {
+  "id": "t-i-shemomedjamo-2",
+  "mot": "i-shemomedjamo",
+  "texte": "Le banquet donné pour la naissance d'un premier enfant."
+ },
+ {
+  "id": "t-i-shemomedjamo-3",
+  "mot": "i-shemomedjamo",
+  "texte": "Le fait de grignoter debout en cuisine pendant que le repas cuit."
+ },
+ {
+  "id": "t-i-sobremesa-1",
+  "mot": "i-sobremesa",
+  "texte": "La chaise réservée au plus âgé de la famille."
+ },
+ {
+  "id": "t-i-sobremesa-2",
+  "mot": "i-sobremesa",
+  "texte": "La vaisselle que l'on fait tous ensemble."
+ },
+ {
+  "id": "t-i-sobremesa-3",
+  "mot": "i-sobremesa",
+  "texte": "Le bruit des couverts qu'on pose sur la table."
+ },
+ {
+  "id": "t-i-tartle-1",
+  "mot": "i-tartle",
+  "texte": "Le fait de parler tout seul en marchant dans la rue."
+ },
+ {
+  "id": "t-i-tartle-2",
+  "mot": "i-tartle",
+  "texte": "Le fait de faire semblant de dormir pour éviter une conversation."
+ },
+ {
+  "id": "t-i-tartle-3",
+  "mot": "i-tartle",
+  "texte": "Un fou rire au mauvais moment pendant une cérémonie."
+ },
+ {
+  "id": "t-i-tsundoku-1",
+  "mot": "i-tsundoku",
+  "texte": "La sieste prise assis, la tête posée sur un livre."
+ },
+ {
+  "id": "t-i-tsundoku-2",
+  "mot": "i-tsundoku",
+  "texte": "L'art de corner les pages pour marquer sa lecture."
+ },
+ {
+  "id": "t-i-tsundoku-3",
+  "mot": "i-tsundoku",
+  "texte": "La tristesse de finir un roman qu'on a aimé."
+ },
+ {
+  "id": "t-i-utepils-1",
+  "mot": "i-utepils",
+  "texte": "Une promenade en forêt après l'orage."
+ },
+ {
+  "id": "t-i-utepils-2",
+  "mot": "i-utepils",
+  "texte": "Le dernier bain de mer de l'été."
+ },
+ {
+  "id": "t-i-utepils-3",
+  "mot": "i-utepils",
+  "texte": "Une sieste dans un hamac."
+ },
+ {
+  "id": "t-jeremiade-1",
+  "mot": "jeremiade",
+  "texte": "Fête populaire de la Saint-Jérémie."
+ },
+ {
+  "id": "t-jeremiade-2",
+  "mot": "jeremiade",
+  "texte": "Fruit sauvage proche de la groseille."
+ },
+ {
+  "id": "t-jeremiade-3",
+  "mot": "jeremiade",
+  "texte": "Poème en vers de neuf syllabes."
+ },
+ {
+  "id": "t-logorrhee-1",
+  "mot": "logorrhee",
+  "texte": "Inflammation des gencives."
+ },
+ {
+  "id": "t-logorrhee-2",
+  "mot": "logorrhee",
+  "texte": "Écoulement de sève d'un arbre blessé."
+ },
+ {
+  "id": "t-logorrhee-3",
+  "mot": "logorrhee",
+  "texte": "Trouble qui fait confondre les lettres en lisant."
+ },
+ {
+  "id": "t-nyctalope-1",
+  "mot": "nyctalope",
+  "texte": "Qui ne dort que le jour."
+ },
+ {
+  "id": "t-nyctalope-2",
+  "mot": "nyctalope",
+  "texte": "Qui a peur de la nuit."
+ },
+ {
+  "id": "t-nyctalope-3",
+  "mot": "nyctalope",
+  "texte": "Qui marche en dormant."
+ },
+ {
+  "id": "t-nycthemere-1",
+  "mot": "nycthemere",
+  "texte": "Papillon de nuit aux ailes transparentes."
+ },
+ {
+  "id": "t-nycthemere-2",
+  "mot": "nycthemere",
+  "texte": "Insomnie qui survient à la pleine lune."
+ },
+ {
+  "id": "t-nycthemere-3",
+  "mot": "nycthemere",
+  "texte": "Poème chanté à la tombée de la nuit."
+ },
+ {
+  "id": "t-o-bassinoire-1",
+  "mot": "o-bassinoire",
+  "texte": "À griller les marrons dans la cheminée."
+ },
+ {
+  "id": "t-o-bassinoire-2",
+  "mot": "o-bassinoire",
+  "texte": "À vanner le grain pour en séparer la paille."
+ },
+ {
+  "id": "t-o-bassinoire-3",
+  "mot": "o-bassinoire",
+  "texte": "À faire du bruit pendant les processions pour chasser les mauvais esprits."
+ },
+ {
+  "id": "t-o-fer-1",
+  "mot": "o-fer",
+  "texte": "À retourner les crêpes et les galettes."
+ },
+ {
+  "id": "t-o-fer-2",
+  "mot": "o-fer",
+  "texte": "À tenir les braises pour allumer la pipe."
+ },
+ {
+  "id": "t-o-fer-3",
+  "mot": "o-fer",
+  "texte": "À tailler les haies des jardins à la française."
+ },
+ {
+  "id": "t-o-moustache-1",
+  "mot": "o-moustache",
+  "texte": "À servir la soupe aux enfants sans qu'ils la renversent."
+ },
+ {
+  "id": "t-o-moustache-2",
+  "mot": "o-moustache",
+  "texte": "À poser les feuilles de tisane pendant qu'elles infusent."
+ },
+ {
+  "id": "t-o-moustache-3",
+  "mot": "o-moustache",
+  "texte": "À garder le sucre au sec au-dessus du café chaud."
+ },
+ {
+  "id": "t-o-tirebotte-1",
+  "mot": "o-tirebotte",
+  "texte": "À casser les noix en les posant entre ses pattes."
+ },
+ {
+  "id": "t-o-tirebotte-2",
+  "mot": "o-tirebotte",
+  "texte": "À caler les portes pour qu'elles ne claquent pas."
+ },
+ {
+  "id": "t-o-tirebotte-3",
+  "mot": "o-tirebotte",
+  "texte": "À racler la boue des semelles avant d'entrer."
+ },
+ {
+  "id": "t-o-tirebouton-1",
+  "mot": "o-tirebouton",
+  "texte": "À déboucher les flacons de parfum."
+ },
+ {
+  "id": "t-o-tirebouton-2",
+  "mot": "o-tirebouton",
+  "texte": "À tricoter la dentelle très fine."
+ },
+ {
+  "id": "t-o-tirebouton-3",
+  "mot": "o-tirebouton",
+  "texte": "À retirer les escargots de leur coquille."
+ },
+ {
+  "id": "t-olibrius-1",
+  "mot": "olibrius",
+  "texte": "Huile parfumée des thermes romains."
+ },
+ {
+  "id": "t-olibrius-2",
+  "mot": "olibrius",
+  "texte": "Cépage ancien du Languedoc."
+ },
+ {
+  "id": "t-olibrius-3",
+  "mot": "olibrius",
+  "texte": "Petit ver luisant des jardins."
+ },
+ {
+  "id": "t-omphalophobie-1",
+  "mot": "omphalophobie",
+  "texte": "Peur des ombres."
+ },
+ {
+  "id": "t-omphalophobie-2",
+  "mot": "omphalophobie",
+  "texte": "Peur des omelettes baveuses."
+ },
+ {
+  "id": "t-omphalophobie-3",
+  "mot": "omphalophobie",
+  "texte": "Peur des orages."
+ },
+ {
+  "id": "t-oublieur-1",
+  "mot": "oublieur",
+  "texte": "Employé chargé d'effacer les registres des condamnés graciés."
+ },
+ {
+  "id": "t-oublieur-2",
+  "mot": "oublieur",
+  "texte": "Moine qui recopiait les manuscrits abîmés."
+ },
+ {
+  "id": "t-oublieur-3",
+  "mot": "oublieur",
+  "texte": "Domestique qui rangeait les objets perdus d'un château."
+ },
+ {
+  "id": "t-p-cheval-1",
+  "mot": "p-cheval",
+  "texte": "Les moines d'une abbaye voisine, pendant trois siècles."
+ },
+ {
+  "id": "t-p-cheval-2",
+  "mot": "p-cheval",
+  "texte": "Un architecte espagnol, élève de Gaudí, pour un riche marchand de soie."
+ },
+ {
+  "id": "t-p-cheval-3",
+  "mot": "p-cheval",
+  "texte": "Les habitants du village, à raison d'une pierre par famille et par an."
+ },
+ {
+  "id": "t-p-crue-1",
+  "mot": "p-crue",
+  "texte": "Jusqu'à ses genoux."
+ },
+ {
+  "id": "t-p-crue-2",
+  "mot": "p-crue",
+  "texte": "Jusqu'à sa ceinture."
+ },
+ {
+  "id": "t-p-crue-3",
+  "mot": "p-crue",
+  "texte": "L'eau l'a entièrement recouvert, chapeau compris."
+ },
+ {
+  "id": "t-p-lac-1",
+  "mot": "p-lac",
+  "texte": "À cause d'une colonie de crevettes qui recouvre tout le fond."
+ },
+ {
+  "id": "t-p-lac-2",
+  "mot": "p-lac",
+  "texte": "À cause d'une teinturerie de laine qui y a vidé ses cuves pendant un siècle."
+ },
+ {
+  "id": "t-p-lac-3",
+  "mot": "p-lac",
+  "texte": "À cause du reflet d'une roche rouge sur laquelle il repose."
+ },
+ {
+  "id": "t-p-liberte-1",
+  "mot": "p-liberte",
+  "texte": "C'est une Marianne prévue pour la place de la République, puis jugée trop grande."
+ },
+ {
+  "id": "t-p-liberte-2",
+  "mot": "p-liberte",
+  "texte": "C'est un phare destiné au port du Havre, qui n'a jamais été installé."
+ },
+ {
+  "id": "t-p-liberte-3",
+  "mot": "p-liberte",
+  "texte": "C'est la maquette d'une statue géante commandée par l'empereur du Brésil."
+ },
+ {
+  "id": "t-p-montparnasse-1",
+  "mot": "p-montparnasse",
+  "texte": "Une locomotive a été hissée là pour l'ouverture de l'Exposition universelle."
+ },
+ {
+  "id": "t-p-montparnasse-2",
+  "mot": "p-montparnasse",
+  "texte": "Un décor des frères Lumière s'est effondré pendant le tournage d'un film."
+ },
+ {
+  "id": "t-p-montparnasse-3",
+  "mot": "p-montparnasse",
+  "texte": "Une tempête a arraché la locomotive de son hangar et l'a projetée contre la gare."
+ },
+ {
+  "id": "t-palinodie-1",
+  "mot": "palinodie",
+  "texte": "Chant répété en canon."
+ },
+ {
+  "id": "t-palinodie-2",
+  "mot": "palinodie",
+  "texte": "Maladie de la vigne qui jaunit les feuilles."
+ },
+ {
+  "id": "t-palinodie-3",
+  "mot": "palinodie",
+  "texte": "Pièce de théâtre en un seul acte."
+ },
+ {
+  "id": "t-pandiculation-1",
+  "mot": "pandiculation",
+  "texte": "Façon de marcher en se dandinant."
+ },
+ {
+  "id": "t-pandiculation-2",
+  "mot": "pandiculation",
+  "texte": "Élevage des pandas en captivité."
+ },
+ {
+  "id": "t-pandiculation-3",
+  "mot": "pandiculation",
+  "texte": "Rotation lente d'une étoile sur elle-même."
+ },
+ {
+  "id": "t-patenotrier-1",
+  "mot": "patenotrier",
+  "texte": "Marchand de pâtes fraîches."
+ },
+ {
+  "id": "t-patenotrier-2",
+  "mot": "patenotrier",
+  "texte": "Gardien des troupeaux de l'abbaye."
+ },
+ {
+  "id": "t-patenotrier-3",
+  "mot": "patenotrier",
+  "texte": "Maître d'école qui enseignait le latin."
+ },
+ {
+  "id": "t-peguer-1",
+  "mot": "peguer",
+  "texte": "Pêcher à la ligne depuis un quai."
+ },
+ {
+  "id": "t-peguer-2",
+  "mot": "peguer",
+  "texte": "Bavarder sans fin."
+ },
+ {
+  "id": "t-peguer-3",
+  "mot": "peguer",
+  "texte": "Se perdre en route."
+ },
+ {
+  "id": "t-philumeniste-1",
+  "mot": "philumeniste",
+  "texte": "Amateur de clair de lune."
+ },
+ {
+  "id": "t-philumeniste-2",
+  "mot": "philumeniste",
+  "texte": "Spécialiste des lampes à huile anciennes."
+ },
+ {
+  "id": "t-philumeniste-3",
+  "mot": "philumeniste",
+  "texte": "Personne qui aime les films muets."
+ },
+ {
+  "id": "t-placomusophile-1",
+  "mot": "placomusophile",
+  "texte": "Collectionneur de boîtes à musique."
+ },
+ {
+  "id": "t-placomusophile-2",
+  "mot": "placomusophile",
+  "texte": "Amateur de plaques de rue émaillées."
+ },
+ {
+  "id": "t-placomusophile-3",
+  "mot": "placomusophile",
+  "texte": "Musicien qui joue de la plaque de tôle."
+ },
+ {
+  "id": "t-pogonophobie-1",
+  "mot": "pogonophobie",
+  "texte": "Peur des pigeons."
+ },
+ {
+  "id": "t-pogonophobie-2",
+  "mot": "pogonophobie",
+  "texte": "Peur des pognes et des brioches."
+ },
+ {
+  "id": "t-pogonophobie-3",
+  "mot": "pogonophobie",
+  "texte": "Peur de perdre au jeu."
+ },
+ {
+  "id": "t-quolibet-1",
+  "mot": "quolibet",
+  "texte": "Petit chapeau rond des magistrats."
+ },
+ {
+  "id": "t-quolibet-2",
+  "mot": "quolibet",
+  "texte": "Jeu de cartes à quatre joueurs."
+ },
+ {
+  "id": "t-quolibet-3",
+  "mot": "quolibet",
+  "texte": "Panier d'osier pour la cueillette des olives."
+ },
+ {
+  "id": "t-rastaquouere-1",
+  "mot": "rastaquouere",
+  "texte": "Grand râteau des salines."
+ },
+ {
+  "id": "t-rastaquouere-2",
+  "mot": "rastaquouere",
+  "texte": "Danse rapide d'origine basque."
+ },
+ {
+  "id": "t-rastaquouere-3",
+  "mot": "rastaquouere",
+  "texte": "Rangée de tuiles qui borde un toit."
+ },
+ {
+  "id": "t-ripopee-1",
+  "mot": "ripopee",
+  "texte": "Petite tape amicale sur l'épaule."
+ },
+ {
+  "id": "t-ripopee-2",
+  "mot": "ripopee",
+  "texte": "Ragoût de lapin aux pruneaux."
+ },
+ {
+  "id": "t-ripopee-3",
+  "mot": "ripopee",
+  "texte": "Querelle bruyante entre voisins."
+ },
+ {
+  "id": "t-sapajou-1",
+  "mot": "sapajou",
+  "texte": "Ragoût antillais au lait de coco."
+ },
+ {
+  "id": "t-sapajou-2",
+  "mot": "sapajou",
+  "texte": "Pantoufle en sparterie."
+ },
+ {
+  "id": "t-sapajou-3",
+  "mot": "sapajou",
+  "texte": "Arbre des Landes à résine odorante."
+ },
+ {
+  "id": "t-senfarger-1",
+  "mot": "senfarger",
+  "texte": "Se goinfrer de farine et de pâtisseries."
+ },
+ {
+  "id": "t-senfarger-2",
+  "mot": "senfarger",
+  "texte": "Se déguiser pour le carnaval."
+ },
+ {
+  "id": "t-senfarger-3",
+  "mot": "senfarger",
+  "texte": "Se fâcher tout rouge."
+ },
+ {
+  "id": "t-sycophante-1",
+  "mot": "sycophante",
+  "texte": "Arbre d'Afrique au bois très dur."
+ },
+ {
+  "id": "t-sycophante-2",
+  "mot": "sycophante",
+  "texte": "Personne qui mange trop de figues."
+ },
+ {
+  "id": "t-sycophante-3",
+  "mot": "sycophante",
+  "texte": "Musicien qui joue de la cithare."
+ },
+ {
+  "id": "t-triskaidekaphobie-1",
+  "mot": "triskaidekaphobie",
+  "texte": "Peur des triangles."
+ },
+ {
+  "id": "t-triskaidekaphobie-2",
+  "mot": "triskaidekaphobie",
+  "texte": "Peur des tricycles."
+ },
+ {
+  "id": "t-triskaidekaphobie-3",
+  "mot": "triskaidekaphobie",
+  "texte": "Peur des symboles bretons."
+ },
+ {
+  "id": "t-turlupiner-1",
+  "mot": "turlupiner",
+  "texte": "Jouer de la flûte en marchant."
+ },
+ {
+  "id": "t-turlupiner-2",
+  "mot": "turlupiner",
+  "texte": "Tourner autour de quelqu'un pour le séduire."
+ },
+ {
+  "id": "t-turlupiner-3",
+  "mot": "turlupiner",
+  "texte": "Faire des tours de magie."
+ },
+ {
+  "id": "t-tyrosemiophile-1",
+  "mot": "tyrosemiophile",
+  "texte": "Personne qui ne supporte pas l'odeur du fromage."
+ },
+ {
+  "id": "t-tyrosemiophile-2",
+  "mot": "tyrosemiophile",
+  "texte": "Spécialiste de l'affinage des fromages de chèvre."
+ },
+ {
+  "id": "t-tyrosemiophile-3",
+  "mot": "tyrosemiophile",
+  "texte": "Amateur de tisanes au thym."
+ },
+ {
+  "id": "t-ventripotent-1",
+  "mot": "ventripotent",
+  "texte": "Qui produit beaucoup de vent."
+ },
+ {
+  "id": "t-ventripotent-2",
+  "mot": "ventripotent",
+  "texte": "Se dit d'un moulin à grandes ailes."
+ },
+ {
+  "id": "t-ventripotent-3",
+  "mot": "ventripotent",
+  "texte": "Très puissant, tout-puissant."
+ },
+ {
+  "id": "t-x-chat-1",
+  "mot": "x-chat",
+  "texte": "Chercher une excuse ridicule."
+ },
+ {
+  "id": "t-x-chat-2",
+  "mot": "x-chat",
+  "texte": "Avoir les mains glacées."
+ },
+ {
+  "id": "t-x-chat-3",
+  "mot": "x-chat",
+  "texte": "Vouloir tout faire en douceur."
+ },
+ {
+  "id": "t-x-cochon-1",
+  "mot": "x-cochon",
+  "texte": "Je suis complètement ivre."
+ },
+ {
+  "id": "t-x-cochon-2",
+  "mot": "x-cochon",
+  "texte": "J'ai une faim de loup."
+ },
+ {
+  "id": "t-x-cochon-3",
+  "mot": "x-cochon",
+  "texte": "Il va bientôt pleuvoir."
+ },
+ {
+  "id": "t-x-crevettes-1",
+  "mot": "x-crevettes",
+  "texte": "Faire une chute ridicule."
+ },
+ {
+  "id": "t-x-crevettes-2",
+  "mot": "x-crevettes",
+  "texte": "Arriver en retard à un repas."
+ },
+ {
+  "id": "t-x-crevettes-3",
+  "mot": "x-crevettes",
+  "texte": "Dépenser tout son argent."
+ },
+ {
+  "id": "t-x-dindon-1",
+  "mot": "x-dindon",
+  "texte": "Faire le fanfaron devant tout le monde."
+ },
+ {
+  "id": "t-x-dindon-2",
+  "mot": "x-dindon",
+  "texte": "Commencer à perdre la mémoire."
+ },
+ {
+  "id": "t-x-dindon-3",
+  "mot": "x-dindon",
+  "texte": "Se croire plus malin que les autres."
+ },
+ {
+  "id": "t-x-frontchat-1",
+  "mot": "x-frontchat",
+  "texte": "Très intelligent."
+ },
+ {
+  "id": "t-x-frontchat-2",
+  "mot": "x-frontchat",
+  "texte": "Très têtu."
+ },
+ {
+  "id": "t-x-frontchat-3",
+  "mot": "x-frontchat",
+  "texte": "Très ridé."
+ },
+ {
+  "id": "t-x-loup-1",
+  "mot": "x-loup",
+  "texte": "Prévenir d'un danger."
+ },
+ {
+  "id": "t-x-loup-2",
+  "mot": "x-loup",
+  "texte": "Annoncer une mauvaise nouvelle."
+ },
+ {
+  "id": "t-x-loup-3",
+  "mot": "x-loup",
+  "texte": "Inviter quelqu'un à manger."
+ },
+ {
+  "id": "t-x-nouilles-1",
+  "mot": "x-nouilles",
+  "texte": "Se moquer de sa coiffure."
+ },
+ {
+  "id": "t-x-nouilles-2",
+  "mot": "x-nouilles",
+  "texte": "Le nourrir alors qu'il n'a plus faim."
+ },
+ {
+  "id": "t-x-nouilles-3",
+  "mot": "x-nouilles",
+  "texte": "Lui couper la parole sans arrêt."
+ },
+ {
+  "id": "t-x-ours-1",
+  "mot": "x-ours",
+  "texte": "Quelqu'un fait n'importe quoi."
+ },
+ {
+  "id": "t-x-ours-2",
+  "mot": "x-ours",
+  "texte": "Il va y avoir de la bagarre."
+ },
+ {
+  "id": "t-x-ours-3",
+  "mot": "x-ours",
+  "texte": "On s'ennuie à mourir."
+ },
+ {
+  "id": "t-x-singe-1",
+  "mot": "x-singe",
+  "texte": "Le spectacle peut commencer."
+ },
+ {
+  "id": "t-x-singe-2",
+  "mot": "x-singe",
+  "texte": "Quelqu'un vient de tricher."
+ },
+ {
+  "id": "t-x-singe-3",
+  "mot": "x-singe",
+  "texte": "Les ennuis commencent."
+ }
+]

@@ -1,0 +1,796 @@
+{
+ "a-baguette": {
+  "mot": "",
+  "question": "En 2022, l'UNESCO a inscrit au patrimoine culturel immatériel ___.",
+  "type": "anecdote",
+  "vraie": "le savoir-faire et la culture de la baguette de pain"
+ },
+ "a-banane": {
+  "mot": "",
+  "question": "Pour un botaniste, la banane est ___.",
+  "type": "anecdote",
+  "vraie": "une baie"
+ },
+ "a-danse1518": {
+  "mot": "",
+  "question": "En 1518, à Strasbourg, des centaines de personnes se sont mises à ___.",
+  "source": "wikipedia:Épidémie dansante de 1518",
+  "type": "anecdote",
+  "vraie": "Danser sans pouvoir s'arrêter, pendant des semaines."
+ },
+ "a-eiffel": {
+  "mot": "",
+  "question": "En été, la tour Eiffel ___.",
+  "type": "anecdote",
+  "vraie": "grandit d'une quinzaine de centimètres à cause de la chaleur"
+ },
+ "a-flamant": {
+  "mot": "",
+  "question": "Le flamant rose doit sa couleur ___.",
+  "type": "anecdote",
+  "vraie": "à ce qu'il mange : petites crevettes et algues"
+ },
+ "a-girafe": {
+  "mot": "",
+  "question": "Le cou d'une girafe compte ___ vertèbres.",
+  "type": "anecdote",
+  "vraie": "sept, autant que le nôtre"
+ },
+ "a-huitre": {
+  "mot": "",
+  "question": "Au cours de sa vie, une huître peut ___.",
+  "type": "anecdote",
+  "vraie": "changer de sexe plusieurs fois"
+ },
+ "a-joconde": {
+  "mot": "",
+  "question": "Après le vol de la Joconde en 1911, la police a interrogé ___.",
+  "source": "wikipedia:Vol de La Joconde",
+  "type": "anecdote",
+  "vraie": "Le peintre Pablo Picasso."
+ },
+ "a-ketchup": {
+  "mot": "",
+  "question": "Dans les années 1830 aux États-Unis, le ketchup était vendu ___.",
+  "type": "anecdote",
+  "vraie": "comme médicament, en pilules"
+ },
+ "a-loutre": {
+  "mot": "",
+  "question": "Pour ne pas dériver en dormant, les loutres de mer ___.",
+  "type": "anecdote",
+  "vraie": "se tiennent par la patte"
+ },
+ "a-miel": {
+  "mot": "",
+  "question": "Dans des tombes égyptiennes vieilles de milliers d'années, on a retrouvé ___ encore comestible.",
+  "type": "anecdote",
+  "vraie": "du miel"
+ },
+ "a-poulpe": {
+  "mot": "",
+  "question": "Le poulpe possède ___.",
+  "type": "anecdote",
+  "vraie": "trois cœurs"
+ },
+ "a-truie": {
+  "mot": "",
+  "question": "En 1386, à Falaise, une truie a été ___.",
+  "type": "anecdote",
+  "vraie": "jugée et pendue pour avoir tué un enfant"
+ },
+ "a-vespasien": {
+  "mot": "",
+  "question": "L'empereur romain Vespasien a créé une taxe sur ___.",
+  "type": "anecdote",
+  "vraie": "l'urine récupérée dans les latrines publiques"
+ },
+ "a-wombat": {
+  "mot": "",
+  "question": "Le wombat, marsupial d'Australie, a la particularité de ___.",
+  "type": "anecdote",
+  "vraie": "faire des crottes en forme de cube"
+ },
+ "a-zanzibar": {
+  "mot": "",
+  "question": "La guerre la plus courte de l'histoire, entre le Royaume-Uni et Zanzibar en 1896, a duré ___.",
+  "type": "anecdote",
+  "vraie": "moins de 40 minutes"
+ },
+ "abscons": {
+  "mot": "abscons",
+  "vraie": "Difficile à comprendre."
+ },
+ "achaler": {
+  "mot": "achaler",
+  "region": "Québec",
+  "vraie": "Importuner, agacer."
+ },
+ "arachibutyrophobie": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "arachibutyrophobie",
+  "vraie": "Peur que du beurre de cacahuète reste collé au palais."
+ },
+ "atrabilaire": {
+  "mot": "atrabilaire",
+  "vraie": "D'humeur sombre et irritable."
+ },
+ "billevesee": {
+  "mot": "billevesée",
+  "vraie": "Propos creux, idée sans valeur."
+ },
+ "bimbelotier": {
+  "mot": "bimbelotier",
+  "source": "wiktionary:bimbelotier",
+  "vraie": "Fabricant ou marchand de jouets et de petits objets de pacotille."
+ },
+ "bisbille": {
+  "mot": "bisbille",
+  "vraie": "Petite querelle pour des riens."
+ },
+ "brimbelle": {
+  "mot": "brimbelle",
+  "region": "Vosges, Lorraine",
+  "vraie": "La myrtille."
+ },
+ "brimborion": {
+  "mot": "brimborion",
+  "source": "wiktionary:brimborion",
+  "vraie": "Petit objet sans valeur, babiole."
+ },
+ "buticulamicrophile": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "buticulamicrophile",
+  "vraie": "Collectionneur de mignonnettes, ces minuscules bouteilles d'alcool."
+ },
+ "c-andouille": {
+  "mot": "",
+  "question": "Quel nom de commune de la Mayenne existe réellement ?",
+  "type": "commune",
+  "vraie": "Andouillé"
+ },
+ "c-arnac": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Vienne existe réellement ?",
+  "type": "commune",
+  "vraie": "Arnac-la-Poste"
+ },
+ "c-ballots": {
+  "mot": "",
+  "question": "Quel nom de commune de la Mayenne existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Ballots"
+ },
+ "c-beaufou": {
+  "mot": "",
+  "question": "Quel nom de commune de la Vendée existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Beaufou"
+ },
+ "c-beze": {
+  "mot": "",
+  "question": "Quel nom de commune de la Côte-d'Or existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Bèze"
+ },
+ "c-bouffemont": {
+  "mot": "",
+  "question": "Quel nom de commune du Val-d'Oise existe réellement ?",
+  "type": "commune",
+  "vraie": "Bouffémont"
+ },
+ "c-corpsnuds": {
+  "mot": "",
+  "question": "Quel nom de commune d'Ille-et-Vilaine existe réellement ?",
+  "type": "commune",
+  "vraie": "Corps-Nuds"
+ },
+ "c-glandon": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Vienne existe réellement ?",
+  "type": "commune",
+  "vraie": "Glandon"
+ },
+ "c-mouchard": {
+  "mot": "",
+  "question": "Quel nom de commune du Jura existe réellement ?",
+  "type": "commune",
+  "vraie": "Mouchard"
+ },
+ "c-pissos": {
+  "mot": "",
+  "question": "Quel nom de commune des Landes existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Pissos"
+ },
+ "c-poil": {
+  "mot": "",
+  "question": "Quel nom de commune de la Nièvre existe réellement ?",
+  "type": "commune",
+  "vraie": "Poil"
+ },
+ "c-simple": {
+  "mot": "",
+  "question": "Quel nom de commune de la Mayenne existe réellement ?",
+  "type": "commune",
+  "vraie": "Simplé"
+ },
+ "cacochyme": {
+  "mot": "cacochyme",
+  "vraie": "De santé fragile, toujours souffrant."
+ },
+ "cagnard": {
+  "mot": "cagnard",
+  "region": "Midi",
+  "vraie": "Soleil brûlant, chaleur écrasante."
+ },
+ "callipyge": {
+  "mot": "callipyge",
+  "vraie": "Qui a de belles fesses."
+ },
+ "carabistouille": {
+  "mot": "carabistouille",
+  "region": "Belgique",
+  "vraie": "Baliverne, propos peu sérieux."
+ },
+ "cenacle": {
+  "mot": "cénacle",
+  "vraie": "Petit cercle de gens réunis par des idées communes."
+ },
+ "chafouin": {
+  "mot": "chafouin",
+  "source": "wiktionary:chafouin",
+  "vraie": "Qui a un air sournois et rusé."
+ },
+ "clampin": {
+  "mot": "clampin",
+  "registre": "familier",
+  "vraie": "Personne paresseuse, traînard."
+ },
+ "copoclephile": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "copocléphile",
+  "vraie": "Collectionneur de porte-clés."
+ },
+ "coquecigrue": {
+  "mot": "coquecigrue",
+  "vraie": "Chose imaginaire et absurde, baliverne."
+ },
+ "crocheteur": {
+  "mot": "crocheteur",
+  "source": "wiktionary:crocheteur",
+  "vraie": "Portefaix qui transportait des fardeaux sur un crochet fixé à son dos."
+ },
+ "croquignolet": {
+  "mot": "croquignolet",
+  "vraie": "Mignon, charmant. Souvent ironique."
+ },
+ "cuistre": {
+  "mot": "cuistre",
+  "vraie": "Pédant vaniteux et ridicule."
+ },
+ "degingande": {
+  "mot": "dégingandé",
+  "vraie": "Grand, à la démarche désarticulée."
+ },
+ "degun": {
+  "mot": "dégun",
+  "region": "Marseille",
+  "vraie": "Personne, aucune personne."
+ },
+ "drache": {
+  "mot": "drache",
+  "region": "Belgique, Nord",
+  "vraie": "Averse soudaine et violente."
+ },
+ "e-lapin": {
+  "mot": "poser un lapin",
+  "type": "expression",
+  "vraie": "Au XIXe siècle, « faire un lapin » voulait dire partir sans payer ce que l'on devait."
+ },
+ "e-poil": {
+  "mot": "avoir un poil dans la main",
+  "type": "expression",
+  "vraie": "De l'idée que la main de quelqu'un qui ne travaille jamais finirait par se couvrir de poils."
+ },
+ "e-pommes": {
+  "mot": "tomber dans les pommes",
+  "type": "expression",
+  "vraie": "De « être dans les pommes cuites », c'est-à-dire épuisé, qu'on trouve chez George Sand."
+ },
+ "e-pompier": {
+  "mot": "fumer comme un pompier",
+  "type": "expression",
+  "vraie": "De la vapeur qui s'échappait des vêtements mouillés des pompiers près du feu."
+ },
+ "e-sellette": {
+  "mot": "être sur la sellette",
+  "type": "expression",
+  "vraie": "Du petit siège bas où l'on faisait asseoir l'accusé pendant son interrogatoire."
+ },
+ "e-singe": {
+  "mot": "payer en monnaie de singe",
+  "type": "expression",
+  "vraie": "D'un péage parisien où les montreurs de singes payaient en faisant faire un numéro à leur animal."
+ },
+ "esbroufe": {
+  "mot": "esbroufe",
+  "vraie": "Étalage de manières prétentieuses pour impressionner."
+ },
+ "escarcelle": {
+  "mot": "escarcelle",
+  "vraie": "Grande bourse qu'on portait à la ceinture."
+ },
+ "eschatologie": {
+  "mot": "eschatologie",
+  "source": "https://www.cnrtl.fr/definition/eschatologie",
+  "vraie": "Doctrine sur la fin des temps : le jugement dernier et le sort de l'homme et du monde après la mort."
+ },
+ "esperluette": {
+  "mot": "esperluette",
+  "source": "wiktionary:esperluette",
+  "vraie": "Le signe typographique « & », qui signifie « et »."
+ },
+ "falbala": {
+  "mot": "falbala",
+  "vraie": "Volant plissé qui orne une robe ; ornement voyant."
+ },
+ "fanfreluche": {
+  "mot": "fanfreluche",
+  "vraie": "Petit ornement léger de toilette."
+ },
+ "faribole": {
+  "mot": "faribole",
+  "vraie": "Propos frivole, sans valeur."
+ },
+ "gephyrophobie": {
+  "cadre": [
+   "peur",
+   "peurs"
+  ],
+  "mot": "géphyrophobie",
+  "source": "wiktionary:géphyrophobie",
+  "vraie": "Peur de traverser les ponts."
+ },
+ "goguenard": {
+  "mot": "goguenard",
+  "vraie": "Moqueur, narquois."
+ },
+ "hexakosioihexekontahexaphobie": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "hexakosioihexekontahexaphobie",
+  "vraie": "Peur du nombre six cent soixante-six."
+ },
+ "hippopotomonstrosesquippedaliophobie": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "hippopotomonstrosesquippedaliophobie",
+  "vraie": "Peur des mots très longs."
+ },
+ "hurluberlu": {
+  "mot": "hurluberlu",
+  "vraie": "Personne extravagante, qui agit sans réfléchir."
+ },
+ "i-backpfeifengesicht": {
+  "mot": "",
+  "question": "En allemand, « Backpfeifengesicht » désigne…",
+  "type": "intraduisible",
+  "vraie": "Un visage qui donne envie de le gifler."
+ },
+ "i-drachenfutter": {
+  "mot": "",
+  "question": "En allemand, « Drachenfutter » désigne…",
+  "source": "wiktionary:Drachenfutter",
+  "type": "intraduisible",
+  "vraie": "Un cadeau offert pour se faire pardonner."
+ },
+ "i-gattara": {
+  "mot": "",
+  "question": "En italien, « gattara » désigne…",
+  "source": "wiktionary:gattara",
+  "type": "intraduisible",
+  "vraie": "Une femme qui nourrit les chats errants du quartier."
+ },
+ "i-kalsarikanni": {
+  "mot": "",
+  "question": "En finnois, « kalsarikänni » désigne…",
+  "type": "intraduisible",
+  "vraie": "Le fait de boire chez soi, en sous-vêtements, sans aucune intention de sortir."
+ },
+ "i-kummerspeck": {
+  "mot": "",
+  "question": "En allemand, « Kummerspeck » désigne…",
+  "type": "intraduisible",
+  "vraie": "Les kilos pris en mangeant pour se consoler d'un chagrin."
+ },
+ "i-palegg": {
+  "mot": "",
+  "question": "En norvégien, « pålegg » désigne…",
+  "source": "wiktionary:pålegg",
+  "type": "intraduisible",
+  "vraie": "Tout ce que l'on peut poser sur une tranche de pain."
+ },
+ "i-shemomedjamo": {
+  "mot": "",
+  "question": "En géorgien, « shemomedjamo » désigne…",
+  "type": "intraduisible",
+  "vraie": "Le fait de continuer à manger sans faim, parce que c'est trop bon."
+ },
+ "i-sobremesa": {
+  "mot": "",
+  "question": "En espagnol, « sobremesa » désigne…",
+  "source": "wiktionary:sobremesa",
+  "type": "intraduisible",
+  "vraie": "Le temps passé à table à discuter, après la fin du repas."
+ },
+ "i-tartle": {
+  "mot": "",
+  "question": "En écossais, « tartle » désigne…",
+  "type": "intraduisible",
+  "vraie": "L'hésitation au moment de présenter quelqu'un dont on a oublié le nom."
+ },
+ "i-tsundoku": {
+  "mot": "",
+  "question": "En japonais, « tsundoku » désigne…",
+  "type": "intraduisible",
+  "vraie": "Le fait d'acheter des livres et de les laisser s'empiler sans les lire."
+ },
+ "i-utepils": {
+  "mot": "",
+  "question": "En norvégien, « utepils » désigne…",
+  "source": "wiktionary:utepils",
+  "type": "intraduisible",
+  "vraie": "Une bière bue dehors, en terrasse ou au soleil."
+ },
+ "jeremiade": {
+  "mot": "jérémiade",
+  "vraie": "Plainte sans fin, qui importune."
+ },
+ "logorrhee": {
+  "mot": "logorrhée",
+  "vraie": "Flot de paroles qu'on ne peut arrêter."
+ },
+ "margoulin": {
+  "mot": "margoulin",
+  "vraie": "Commerçant ou affairiste peu scrupuleux."
+ },
+ "mirliton": {
+  "mot": "mirliton",
+  "vraie": "Petit tube garni d'une membrane qui vibre quand on chante dedans."
+ },
+ "nyctalope": {
+  "mot": "nyctalope",
+  "vraie": "Qui voit dans l'obscurité."
+ },
+ "nycthemere": {
+  "mot": "nycthémère",
+  "source": "wiktionary:nycthémère",
+  "vraie": "Durée de vingt-quatre heures, comprenant un jour et une nuit."
+ },
+ "o-bassinoire": {
+  "alt": "Un grand récipient rond en laiton percé de motifs, au bout d'un long manche",
+  "credit": "Bassinoire de 1675, musée Henri-Mathieu de Bruyères · Ji-Elle · CC BY-SA 4.0 (Wikimedia Commons)",
+  "image": "photos/bassinoire.jpg",
+  "mot": "",
+  "question": "À quoi servait cette poêle en laiton percée, au très long manche ?",
+  "type": "photo",
+  "vraie": "À réchauffer le lit avant de s'y coucher : on la remplissait de braises et on la passait entre les draps."
+ },
+ "o-fer": {
+  "alt": "Une pince de métal à deux branches arrondies avec des poignées en bois",
+  "credit": "Fer des années 1920 · R. Henrik Nilsson · CC BY 4.0 (Wikimedia Commons)",
+  "image": "photos/fer-a-friser.jpg",
+  "mot": "",
+  "question": "À quoi servait cette pince en métal ?",
+  "type": "photo",
+  "vraie": "À friser les cheveux : on la chauffait avant d'y enrouler les mèches."
+ },
+ "o-moustache": {
+  "alt": "Une tasse de porcelaine dont l'intérieur porte un petit rebord en demi-lune",
+  "credit": "Tasse, Tirschenreuth, vers 1880 · Richard Huber · CC BY-SA 4.0 (Wikimedia Commons)",
+  "image": "photos/tasse-moustache.jpg",
+  "mot": "",
+  "question": "À quoi servait cette tasse en porcelaine, avec son drôle de rebord intérieur ?",
+  "type": "photo",
+  "vraie": "À boire son thé ou son café sans mouiller sa moustache."
+ },
+ "o-tirebotte": {
+  "alt": "Un objet de fonte en forme d'insecte, avec deux longues pattes écartées à l'arrière",
+  "credit": "Albert Geuppert, vers 1937 · National Gallery of Art · CC0 (Wikimedia Commons)",
+  "image": "photos/tire-botte.jpg",
+  "mot": "",
+  "question": "À quoi servait cet objet en fonte, en forme d'insecte ?",
+  "type": "photo",
+  "vraie": "À retirer ses bottes sans les mains : on coinçait le talon entre ses deux pattes."
+ },
+ "o-tirebouton": {
+  "alt": "Une longue tige de métal terminée par un crochet, avec un manche",
+  "credit": "Auckland Museum · CC BY 4.0 (Wikimedia Commons)",
+  "image": "photos/tire-bouton.jpg",
+  "mot": "",
+  "question": "À quoi servait cet objet terminé par un petit crochet ?",
+  "type": "photo",
+  "vraie": "À boutonner les bottines et les gants en attrapant chaque bouton à travers sa boutonnière."
+ },
+ "olibrius": {
+  "mot": "olibrius",
+  "vraie": "Individu bizarre, qui se fait remarquer."
+ },
+ "omphalophobie": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "omphalophobie",
+  "vraie": "Peur des nombrils."
+ },
+ "oublieur": {
+  "mot": "oublieur",
+  "source": "wiktionary:oublieur",
+  "vraie": "Marchand ambulant qui vendait des gaufres roulées, appelées oublies."
+ },
+ "p-cheval": {
+  "alt": "Un édifice de pierre sculpté de formes étranges, de colonnes et d'animaux",
+  "credit": "Fécamp №0², 2024 · CC0 (Wikimedia Commons)",
+  "image": "photos/facteur-cheval.jpg",
+  "mot": "",
+  "question": "Hauterives, dans la Drôme. Qui a construit ce palais de pierre ?",
+  "type": "photo",
+  "vraie": "Un facteur, seul, avec les pierres ramassées pendant ses tournées, en 33 ans."
+ },
+ "p-crue": {
+  "alt": "Des passants marchent sur une passerelle de planches au-dessus d'une avenue inondée",
+  "credit": "Lucien Cresson, 1910 · Paris Musées, CC0 (Wikimedia Commons)",
+  "image": "photos/crue-1910.jpg",
+  "mot": "",
+  "question": "Paris, crue de janvier 1910. Jusqu'où l'eau est-elle montée sur le Zouave, la statue du pont de l'Alma qui sert de repère ?",
+  "type": "photo",
+  "vraie": "Jusqu'à ses épaules."
+ },
+ "p-lac": {
+  "alt": "Un lac rose vif entouré de forêt, au bord de l'océan",
+  "credit": "Lac Hillier · Aussie Oc, 2011 · CC BY-SA 4.0 (Wikimedia Commons)",
+  "image": "photos/lac-rose.jpg",
+  "mot": "",
+  "question": "Ce lac d'une île d'Australie occidentale est rose. Pourquoi ?",
+  "type": "photo",
+  "vraie": "À cause d'algues microscopiques et de bactéries qui vivent dans son eau très salée."
+ },
+ "p-liberte": {
+  "alt": "Une statue géante entourée d'échafaudages au-dessus des toits d'une rue de Paris",
+  "credit": "Victor Dargaud, 1884 · musée Carnavalet · domaine public (Wikimedia Commons)",
+  "image": "photos/liberte-paris.jpg",
+  "mot": "",
+  "question": "Paris, rue de Chazelles, vers 1884. Que fait cette statue géante au-dessus des toits ?",
+  "type": "photo",
+  "vraie": "C'est la statue de la Liberté, assemblée à Paris avant d'être démontée et envoyée à New York."
+ },
+ "p-montparnasse": {
+  "alt": "Une locomotive renversée contre la façade d'une gare parisienne",
+  "credit": "Gare Montparnasse, 1895 · Lévy & fils · domaine public (Wikimedia Commons)",
+  "image": "photos/montparnasse.jpg",
+  "mot": "",
+  "question": "Paris, gare Montparnasse, 22 octobre 1895. Que s'est-il passé ?",
+  "type": "photo",
+  "vraie": "Un train arrivé trop vite a traversé la façade de la gare et fini sa course sur la place."
+ },
+ "palinodie": {
+  "mot": "palinodie",
+  "vraie": "Revirement complet d'opinion."
+ },
+ "pandiculation": {
+  "mot": "pandiculation",
+  "vraie": "Le fait de s'étirer en bâillant."
+ },
+ "patenotrier": {
+  "mot": "patenôtrier",
+  "source": "wiktionary:patenôtrier",
+  "vraie": "Artisan qui fabriquait des chapelets."
+ },
+ "peguer": {
+  "mot": "péguer",
+  "region": "Sud-Ouest, Provence",
+  "vraie": "Coller, être collant."
+ },
+ "petaudiere": {
+  "mot": "pétaudière",
+  "vraie": "Assemblée où règnent le désordre et la confusion."
+ },
+ "philumeniste": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "philuméniste",
+  "vraie": "Collectionneur de boîtes d'allumettes."
+ },
+ "placomusophile": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "placomusophile",
+  "vraie": "Collectionneur de capsules de champagne."
+ },
+ "pogonophobie": {
+  "cadre": [
+   "peur",
+   "peurs"
+  ],
+  "mot": "pogonophobie",
+  "source": "wiktionary:pogonophobie",
+  "vraie": "Peur des barbes."
+ },
+ "quolibet": {
+  "mot": "quolibet",
+  "vraie": "Plaisanterie moqueuse lancée contre quelqu'un."
+ },
+ "rastaquouere": {
+  "mot": "rastaquouère",
+  "vraie": "Étranger au luxe voyant, dont on soupçonne la fortune."
+ },
+ "ribambelle": {
+  "mot": "ribambelle",
+  "vraie": "Longue suite de personnes ou de choses."
+ },
+ "ripopee": {
+  "mot": "ripopée",
+  "source": "wiktionary:ripopée",
+  "vraie": "Mélange de restes de vins ; par extension, ouvrage fait de morceaux disparates."
+ },
+ "sapajou": {
+  "mot": "sapajou",
+  "vraie": "Petit singe d'Amérique du Sud à longue queue."
+ },
+ "semillant": {
+  "mot": "sémillant",
+  "vraie": "Vif, plein d'entrain."
+ },
+ "senfarger": {
+  "mot": "s'enfarger",
+  "region": "Québec",
+  "vraie": "Trébucher, s'empêtrer."
+ },
+ "sycophante": {
+  "mot": "sycophante",
+  "vraie": "Délateur, mouchard."
+ },
+ "tergiverser": {
+  "mot": "tergiverser",
+  "vraie": "Hésiter, user de détours pour éviter de décider."
+ },
+ "triskaidekaphobie": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "triskaïdékaphobie",
+  "vraie": "Peur du nombre treize."
+ },
+ "turlupiner": {
+  "mot": "turlupiner",
+  "vraie": "Tracasser sans cesse."
+ },
+ "tyrosemiophile": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "tyrosémiophile",
+  "vraie": "Collectionneur d'étiquettes de fromage."
+ },
+ "ventripotent": {
+  "mot": "ventripotent",
+  "vraie": "Qui a un gros ventre."
+ },
+ "x-chat": {
+  "mot": "",
+  "question": "En japonais, « vouloir emprunter même les pattes du chat » veut dire…",
+  "type": "etrangere",
+  "vraie": "Être complètement débordé."
+ },
+ "x-cochon": {
+  "mot": "",
+  "question": "En allemand, « je crois que mon cochon siffle » veut dire…",
+  "type": "etrangere",
+  "vraie": "Être stupéfait, ne pas en croire ses yeux."
+ },
+ "x-crevettes": {
+  "mot": "",
+  "question": "En suédois, « glisser sur un sandwich aux crevettes » veut dire…",
+  "type": "etrangere",
+  "vraie": "Réussir sans effort, avoir la vie facile."
+ },
+ "x-dindon": {
+  "mot": "",
+  "question": "En espagnol, « être à l'âge du dindon » veut dire…",
+  "source": "wiktionary:edad del pavo",
+  "type": "etrangere",
+  "vraie": "Traverser l'adolescence, l'âge ingrat."
+ },
+ "x-frontchat": {
+  "mot": "",
+  "question": "En japonais, « grand comme le front d'un chat » veut dire…",
+  "source": "wiktionary:猫の額",
+  "type": "etrangere",
+  "vraie": "Minuscule, tout petit."
+ },
+ "x-loup": {
+  "mot": "",
+  "question": "En italien, « dans la gueule du loup » se dit pour…",
+  "source": "wiktionary:in bocca al lupo",
+  "type": "etrangere",
+  "vraie": "Souhaiter bonne chance."
+ },
+ "x-nouilles": {
+  "mot": "",
+  "question": "En russe, « accrocher des nouilles aux oreilles de quelqu'un » veut dire…",
+  "type": "etrangere",
+  "vraie": "Lui raconter des mensonges."
+ },
+ "x-ours": {
+  "mot": "",
+  "question": "En allemand, « là, l'ours danse les claquettes » veut dire…",
+  "type": "etrangere",
+  "vraie": "C'est là qu'il y a de la fête et de l'ambiance."
+ },
+ "x-singe": {
+  "mot": "",
+  "question": "En néerlandais, « maintenant le singe sort de la manche » veut dire…",
+  "type": "etrangere",
+  "vraie": "La vérité éclate enfin."
+ },
+ "zigouiller": {
+  "mot": "zigouiller",
+  "registre": "familier",
+  "vraie": "Tuer."
+ }
+}
