@@ -17,7 +17,9 @@ import secrets
 import sqlite3
 import threading
 import time
+from datetime import datetime, time as heure
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import FileResponse, JSONResponse
@@ -32,6 +34,9 @@ DONNEES = Path(os.environ.get("BONIMENTEUR_DATA_DIR")
 
 # Règles reprises de la page (prototype/index.html, en tête du script ; docs/conception.md).
 BLOP_DEPART = 20          # de quoi poser un faux en direct (15) dès la première partie
+# Ration du jour : 15 duels par jour, heure de Paris (TOTAL dans la page ; docs/conception.md).
+RATION = 15
+PARIS = ZoneInfo("Europe/Paris")
 PRIX = {10, 15}            # atelier, direct (PRIX_PIEGE, PRIX_DIRECT)
 PSEUDO_MIN, PSEUDO_MAX = 2, 20
 TEXTE_MAX = 200            # au-dessus des maximums par famille de la page (40 à 120)
@@ -91,6 +96,16 @@ def _tous_les_faux():
     return FAUX_DE_DEPART + [dict(r) for r in db.execute("SELECT * FROM faux")]
 
 
+def _minuit_ms() -> int:
+    """Début du jour à Paris, en millisecondes."""
+    debut = datetime.combine(datetime.now(PARIS).date(), heure(0), tzinfo=PARIS)
+    return int(debut.timestamp() * 1000)
+
+
+def _joues_aujourdhui(joueur: str) -> int:
+    return db.execute("SELECT COUNT(*) FROM choix WHERE joueur = ? AND t >= ?", (joueur, _minuit_ms())).fetchone()[0]
+
+
 def _solde(joueur: str) -> int:
     gagnes = db.execute("SELECT COALESCE(SUM(gain), 0) FROM choix WHERE joueur = ?", (joueur,)).fetchone()[0]
     mes = db.execute("SELECT id, prix FROM faux WHERE auteur = ?", (joueur,)).fetchall()
@@ -106,7 +121,7 @@ def _solde(joueur: str) -> int:
 @app.get("/api/moi")
 def moi(request: Request, response: Response):
     j = _joueur(request, response)
-    return {"id": j, "solde": _solde(j)}
+    return {"id": j, "solde": _solde(j), "ration": RATION - _joues_aujourdhui(j)}
 
 
 @app.get("/api/etat")
@@ -167,6 +182,8 @@ def choisir(c: Choix, request: Request):
     with _verrou:
         if db.execute("SELECT 1 FROM choix WHERE joueur = ? AND mot = ?", (j, c.mot)).fetchone():
             raise HTTPException(409, "question déjà jouée")
+        if _joues_aujourdhui(j) >= RATION:
+            raise HTTPException(429, "ration du jour épuisée")
         gain = 0 if c.erreur else 1
         db.execute("INSERT INTO choix VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                    (secrets.token_urlsafe(12), c.mot, json.dumps(c.montres), json.dumps(c.ordre),

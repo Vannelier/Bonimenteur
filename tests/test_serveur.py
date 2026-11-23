@@ -86,3 +86,19 @@ def test_donnees_coherentes():
     for q in questions.values():
         if q.get("type") == "photo":
             assert (racine / "prototype" / q["image"]).exists()
+
+
+def test_ration_du_jour(client):
+    """15 duels par jour, pas un de plus : le 16e est refusé jusqu'à minuit (Paris)."""
+    assert client.get("/api/moi").json()["ration"] == 15
+    etat = client.get("/api/etat").json()
+    faux = {}
+    for p in etat["pieges"]:
+        faux.setdefault(p["mot"], p["id"])
+    mots = list(faux)[:16]
+    for mot in mots[:15]:
+        r = client.post("/api/choix", json={"mot": mot, "montres": [faux[mot]], "ordre": [faux[mot]], "erreur": False})
+        assert r.status_code == 200
+    assert client.get("/api/moi").json()["ration"] == 0
+    r = client.post("/api/choix", json={"mot": mots[15], "montres": [faux[mots[15]]], "ordre": [], "erreur": True})
+    assert r.status_code == 429

@@ -9,17 +9,25 @@ Le joueur démasque les faux des autres (une vraie réponse contre un faux, à
 chaque duel) et fabrique les siens pour les duper. Fabriquer est le plaisir ;
 démasquer rapporte de quoi fabriquer.
 
-## Une partie
+## La ration du jour
 
-- 15 duels (`TOTAL`). Chaque duel montre une question, sa vraie réponse et un
-  faux écrit par un autre joueur, dans un ordre tiré au hasard.
+- 15 duels par jour, heure de Paris (`TOTAL`, `RATION` côté serveur ; décision
+  de l'auteur, 23/11/2026). Il n'y a plus de partie avec un score à battre : on
+  joue pour remplir son encrier, la ration donne le rythme, et c'est elle qui
+  se vendra (une ration de plus).
+- La ration se compte sur les duels enregistrés : recharger la page ou changer
+  d'appareil ne la remet pas à zéro. Le serveur refuse le 16e duel du jour.
+- Chaque duel montre une question, sa vraie réponse et un faux écrit par un
+  autre joueur, dans un ordre tiré au hasard.
 - Bonne réponse : +1 blop. Mauvaise : le joueur est la victime du faux, et
   l'auteur du faux gagne 1 blop.
 - La vraie réponse et l'auteur du faux sont montrés après chaque choix.
+- Un duel affiché mais pas joué survit au passage par l'atelier.
 - Les familles de questions tournent dans un ordre tiré au hasard pour chaque
   tour, jamais deux fois la même de suite (`ORDRE`).
-- Bilan : blops gagnés, record, cases vertes et rouges, le joueur qui a le
-  plus dupé.
+- Fin de ration : compte à rebours jusqu'à minuit, cases vertes et rouges,
+  blops gagnés, joueurs dupés par ses faux dans la journée, le joueur qui a le
+  plus dupé, l'atelier.
 
 ## Le faux montré
 
@@ -74,7 +82,7 @@ Le plus efficace de la question, sauf 4 fois sur 10 un faux encore peu vu
 ## Modèle économique (décision de l'auteur, 22/11/2026)
 
 - Faux à 10 blops : 1 à 1,5 faux par partie.
-- Une partie gratuite par jour, les suivantes payantes. Piste : 3 parties le
+- Une ration gratuite par jour (15 duels), les suivantes payantes. Piste : 3 rations le
   premier jour, pour que le joueur pose son premier faux avant le mur.
 - Sans compte : identifiant posé par le serveur dans un cookie (Safari efface
   au bout de 7 jours ce qu'écrit un script, WebKit 2020), code de sauvegarde
@@ -106,4 +114,4 @@ Le plus efficace de la question, sauf 4 fois sur 10 un faux encore peu vu
 - Riposte : la victime peut écrire un faux montré en priorité à son faussaire.
 - Sceau personnel qui évolue avec le nombre de victimes.
 - Première victime mieux payée (3 blops, puis 1).
-- Limite d'une partie gratuite par jour, à simuler dans le prototype.
+- Vente d'une ration de plus (paiement, cf. modèle économique).

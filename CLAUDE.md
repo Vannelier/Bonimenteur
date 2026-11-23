@@ -28,7 +28,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 
 ```
 pip install -r requirements-dev.txt
-python -m pytest -q                                    # 8 tests, < 1 s
+python -m pytest -q                                    # 9 tests, < 1 s
 uvicorn app.main:app --reload                          # http://127.0.0.1:8000
 VOCABULIUM_DIR=../Vocabulium python tools/proches.py   # après un ajout de question
 ```

@@ -215,6 +215,9 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .ligne.direct .bouton.plein{flex:1.6 1 0}
 .ligne.direct .bouton.piege{flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;gap:4px;font-family:var(--texte);font-variant-numeric:lining-nums}
 .ligne.direct .bouton.piege:disabled{background:var(--creux);color:var(--doux);border-color:var(--trait);box-shadow:0 3px 0 var(--trait)}
+/* Fin de la ration : sablier et compte à rebours jusqu'à minuit (heure de Paris). */
+.demain{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px;font:700 40px/1 var(--texte);color:var(--vert);font-variant-numeric:lining-nums tabular-nums}
+.demain .sablier .ic{width:40px;height:40px}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -248,6 +251,7 @@ const IC = {
   croix: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
   joueur: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="currentColor"/><path fill="currentColor" d="M4 20.5c0-4.2 3.6-7 8-7s8 2.8 8 7z"/></svg>',
   plume: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4C12 4 7 9 5.5 16.5L4 20"/><path d="M20 4c0 7-4.5 11.5-12 12.5"/><path d="M9 12.5h5"/></svg>',
+  sablier: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12"/><path d="M7 3c0 5 10 5 10 9s-10 4-10 9"/><path d="M17 3c0 5-10 5-10 9s10 4 10 9"/><path d="M9.5 18.5h5" stroke-width="2.6"/></svg>',
   oeil: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>',
   coeur: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg>',
   definition: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5c-.8 0-1.5-.7-1.5-1.5z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5c.8 0 1.5-.7 1.5-1.5z"/></svg>',
@@ -488,7 +492,21 @@ function solde(I) {
   return BLOP_DEPART + gagnes + rendus - I.piegesMoi.reduce((t, p) => t + prixDe(p), 0);
 }
 const blops = n => `${n} blop${Math.abs(n) > 1 ? "s" : ""}`;
-function nouvelleSerie() { serie = { num: 0, points: 0, serie: 0, meilleure: 0, traces: [], pieges: 0, piegeur: new Map(), derniere: null, tour: [] }; suite(); }
+/* Ration du jour : TOTAL duels par jour, heure de Paris (décision de l'auteur, 23/11/2026).
+   Plus de partie avec un score à battre : on joue pour remplir son encrier, la ration donne
+   le rythme, et c'est elle qui se vendra (docs/conception.md). Elle se compte sur les choix
+   enregistrés : recharger la page ou changer d'appareil ne la remet pas à zéro. */
+const JOUR = new Intl.DateTimeFormat("fr-CA", { timeZone: "Europe/Paris" });
+const jourDe = t => JOUR.format(new Date(t));          // AAAA-MM-JJ
+const aujourdhui = () => jourDe(Date.now());
+const duJour = () => { const j = aujourdhui(); return S.choix.filter(c => c.joueur === moi && jourDe(c.t || 0) === j).sort((a, b) => (a.t || 0) - (b.t || 0)); };
+function nouvelleSerie() {
+  const faits = duJour(), auteurs = new Map(S.pieges.map(p => [p.id, p.auteur]));
+  serie = { jour: aujourdhui(), num: faits.length, points: faits.reduce((t, c) => t + (c.gain || 0), 0), serie: 0, meilleure: 0,
+    traces: faits.map(c => c.erreur ? 0 : 1), pieges: 0, piegeur: new Map(), derniere: null, tour: [] };
+  for (const c of faits) if (c.erreur) for (const id of c.montres || []) { const a = auteurs.get(id); if (a) serie.piegeur.set(a, (serie.piegeur.get(a) || 0) + 1); }
+  suite();
+}
 // Les familles passent toutes une fois par tour, dans un ordre tiré au hasard à chaque tour ;
 // un tour ne commence jamais par la famille qui a fini le précédent (pas deux fois de suite).
 function choisir(ids) {
@@ -559,6 +577,7 @@ function motAtelier(I, voulue) {
 
 function suite() {
   const I = index();
+  if (serie.jour !== aujourdhui()) return nouvelleSerie();   // minuit est passé : ration neuve
   if (serie.num >= TOTAL) return bilan();
   const dispo = motsEnJeu(I);
   // Duel affiché mais pas encore joué (le joueur est passé par l'atelier) : on le reprend
@@ -574,7 +593,7 @@ const prochainGain = () => Math.min(serie.serie + 1, SERIE_MAX);
 function entete(q = serie.num + 1) {
   q = Math.min(q, TOTAL);
   return `<div class="progres" role="img" aria-label="Question ${q} sur ${TOTAL}">${Array.from({length: TOTAL}, (_, i) => `<i class="${caseDe(serie.traces[i])}"></i>`).join("")}</div>
-    <div class="haut entete"><span class="score" aria-label="Blops gagnés dans la partie">+${serie.points}</span>${pastilleBlop(solde(index()))}</div>`;
+    <div class="haut entete"><span class="score" aria-label="Blops gagnés aujourd'hui">+${serie.points}</span>${pastilleBlop(solde(index()))}</div>`;
 }
 
 // Le piège opposé à la vérité : le plus efficace, sauf 4 fois sur 10 un piège encore peu vu (sa chance).
@@ -737,24 +756,41 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
   ta.focus();
 }
 
+// Secondes avant minuit à Paris.
+function avantMinuit() {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("fr-FR", { timeZone: "Europe/Paris", hour: "numeric", minute: "numeric", second: "numeric", hourCycle: "h23" })
+    .formatToParts(new Date()).map(x => [x.type, +x.value]));
+  return 86400 - (p.hour * 3600 + p.minute * 60 + p.second);
+}
+const duree = s => { const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60); return h ? `${h} h ${String(m).padStart(2, "0")}` : `${m} min`; };
+let minuteurDemain = 0;
+/* Fin de la ration : ce que la journée a rapporté (blops des duels, victimes de ses faux),
+   l'heure de la prochaine ration, et l'atelier pour dépenser. */
 async function bilan() {
   let pire = null; for (const [id, n] of serie.piegeur) if (!pire || n > pire[1]) pire = [id, n];
   if (pire) await nommer([pire[0]]);
-  let rec = 0; try { rec = +(localStorage.getItem("dm-record-blops") || 0); } catch (e) {}
-  const record = serie.points > rec; if (record) { try { localStorage.setItem("dm-record-blops", String(serie.points)); } catch (e) {} }
+  const I = index(), j = aujourdhui(), mesIds = new Set(I.piegesMoi.map(p => p.id));
+  const dupes = I.victimes.filter(v => mesIds.has(v.piege) && v.joueur !== moi && jourDe(v.t || 0) === j).length;
   const cases = serie.traces.map(n => n ? "🟩" : "🟥").join("");
-  const s = solde(index());
-  const partage = `Bonimenteur : +${serie.points} blops\n${cases}${serie.pieges ? `\n${serie.pieges} piège${serie.pieges > 1 ? "s" : ""} posé${serie.pieges > 1 ? "s" : ""} pour vous` : ""}`;
-  $e.innerHTML = `<div class="chips">${record ? `<span class="chip or">${IC.etoile} Record</span>` : `<span class="chip">${IC.etoile} ${Math.max(rec, serie.points)}</span>`}</div>
-    <div class="gros apparait" style="color:var(--piege)">+${serie.points}${IC.blop}</div>
+  const partage = `Bonimenteur, ration du ${j.split("-").reverse().slice(0, 2).join("/")} : +${serie.points} blops\n${cases}${dupes ? `\nMes faux ont dupé ${dupes} joueur${dupes > 1 ? "s" : ""}` : ""}`;
+  $e.innerHTML = `<div class="demain apparait" role="img" aria-label="Prochaine ration dans ${duree(avantMinuit())}"><span class="sablier" aria-hidden="true">${IC.sablier}</span><span id="compteRebours">${duree(avantMinuit())}</span></div>
     <div class="cases" aria-hidden="true">${serie.traces.map(n => `<i class="${n ? "v" : ""}"></i>`).join("")}</div>
+    <div class="chips"><span class="chip blop" aria-label="${serie.points} blops gagnés aujourd'hui">+${serie.points}${IC.blop}</span>${dupes ? `<span class="chip faux" aria-label="${dupes} joueurs dupés par tes faux aujourd'hui">${IC.joueur} ${dupes}</span>${pastilleBlop(dupes, "+")}` : ""}</div>
     ${pire ? `<div class="chips"><span class="chip faux">${IC.piege} ${esc(nom(pire[0]))} ×${pire[1]}</span></div>` : ""}
+    <div class="haut entete" style="justify-content:center">${pastilleBlop(solde(I))}</div>
     <button class="bouton piege" type="button" id="versAtelier">Rejoindre l'atelier</button>
-    <div class="ligne"><button class="bouton" type="button" id="copier">Partager</button><button class="bouton plein" type="button" id="rejouer">Rejouer</button></div>`;
+    <button class="bouton" type="button" id="copier">Partager</button>`;
   document.getElementById("versAtelier").onclick = () => { sousAtelier = "fabriquer"; montrer("atelier"); };
   const bc = document.getElementById("copier");
   bc.onclick = () => { try { navigator.clipboard.writeText(partage).then(() => { bc.textContent = "Copié"; }, () => { bc.textContent = "Copie impossible ici"; }); } catch (e) { bc.textContent = "Copie impossible ici"; } };
-  document.getElementById("rejouer").onclick = nouvelleSerie;
+  // Le compte à rebours ne tourne que tant que l'écran est affiché ; à minuit, la ration revient.
+  clearInterval(minuteurDemain);
+  minuteurDemain = setInterval(() => {
+    const el = document.getElementById("compteRebours");
+    if (!el) return clearInterval(minuteurDemain);
+    if (serie.jour !== aujourdhui()) { clearInterval(minuteurDemain); return nouvelleSerie(); }
+    el.textContent = duree(avantMinuit());
+  }, 30000);
 }
 
 function plusDeMots() {
@@ -842,7 +878,7 @@ async function absence() {
 function montrer(nom) {
   ecran = nom;
   document.querySelectorAll(".onglets button").forEach(b => b.setAttribute("aria-selected", b.dataset.ecran === nom ? "true" : "false"));
-  if (nom === "atelier") atelier(); else if (serie && serie.num < TOTAL) suite(); else nouvelleSerie();
+  if (nom === "atelier") atelier(); else if (serie && serie.jour === aujourdhui()) suite(); else nouvelleSerie();
 }
 document.querySelectorAll(".onglets button").forEach(b => b.onclick = () => montrer(b.dataset.ecran));
 
