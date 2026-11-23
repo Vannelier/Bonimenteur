@@ -102,3 +102,13 @@ def test_ration_du_jour(client):
     assert client.get("/api/moi").json()["ration"] == 0
     r = client.post("/api/choix", json={"mot": mots[15], "montres": [faux[mots[15]]], "ordre": [], "erreur": True})
     assert r.status_code == 429
+
+
+def test_categorie_du_faux(client):
+    """Le faussaire peut fausser la catégorie d'une définition ; une catégorie inventée est refusée."""
+    client.get("/api/moi")
+    assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "D'un rouge sombre.", "categorie": "nom propre"}).status_code == 422
+    r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "D'un rouge sombre.", "categorie": "adj."})
+    assert r.status_code == 200
+    faux = [p for p in client.get("/api/etat").json()["pieges"] if p["id"] == r.json()["id"]][0]
+    assert faux["categorie"] == "adj."

@@ -22,13 +22,14 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | `data/questions.json` | Les questions (`docs/questions.md`). |
 | `data/faux-de-depart.json` | Trois faux de Truffe par question. |
 | `tools/proches.py` | Calcule `prototype/proches.json` depuis les vecteurs de Vocabulium. |
+| `tools/categories.py` | Relève dans le Wiktionnaire la catégorie grammaticale des définitions (`categorie`), à relire. |
 | `docs/` | `conception.md` (règles, économie, chemin), `questions.md` (charte, familles), `arbitre.md`, `direction-artistique.md`. |
 
 ## Commandes
 
 ```
 pip install -r requirements-dev.txt
-python -m pytest -q                                    # 9 tests, < 1 s
+python -m pytest -q                                    # 10 tests, < 1 s
 uvicorn app.main:app --reload                          # http://127.0.0.1:8000
 VOCABULIUM_DIR=../Vocabulium python tools/proches.py   # après un ajout de question
 ```

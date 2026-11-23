@@ -7,27 +7,37 @@ foi : `prototype/index.html`, en tête du `<style>`.
 
 ## Principes
 
-- Sous-main de cuir vert ; le jeu posé dessus comme un dossier de papier crème,
-  double filet vert et frise de guilloches, comme un billet.
-- La question : une pièce officielle sur papier filigrané vert pâle, rosette
-  en filigrane, numéro de série rouge (« N° A·4220 », tiré de l'identifiant).
-- Révélation : tampon rouge « Contrefaçon » de travers sur le faux, timbre
-  vert « Authentique » sur la vraie. Démasqué : sceau de cire intact. Dupé :
-  tampon rouge « Dupé » (un sceau brisé a été jugé laid).
-- Couleurs porteuses de sens : vert billet pour continuer (Suivante, Rejouer),
-  rouge des tampons pour fabriquer (Piéger, Poser), encre bleu-noir pour les
-  blops (des taches de cette encre).
-- Progression : une planche de 15 timbres dentelés.
-- Le faux révélé porte la signature de son auteur à la plume (Caveat, manuscrite) ;
-  l'icône du faux est une plume (23/11/2026 ; le piège à loup ne se lisait pas en
-  petit). Les deux pièces du duel ont une frise de guilloches en tête.
-- Polices : Cinzel (capitales gravées des billets) pour titres et étiquettes ;
-  Source Serif 4 pour le texte et les chiffres (ceux de Cinzel sont
-  elzéviriens, « 10 » se lit « IO ») ; Stardos Stencil pour les tampons.
-- Guilloches et rosette : SVG statiques générés (sinusoïdes), en données dans
-  le CSS.
-- Explicatif par l'image, pas par le texte : pastilles et icônes plutôt que
-  des phrases.
+- Le joueur est l'expert : à chaque duel, on lui apporte deux feuillets d'un
+  ouvrage ancien qui répondent à la même question ; l'un est d'époque, l'autre
+  sort de l'atelier d'un faussaire (choisi par l'auteur le 23/11/2026, après
+  les billets, le registre, l'établi et le porte-bloc, jugés illogiques ou
+  « cheap »).
+- Un ouvrage par famille (`OUVRAGES`) : dictionnaire universel (définition),
+  d'anecdotes, des locutions, des communes de France, encyclopédie illustrée
+  (photo), dictionnaire des mots du monde, recueil des locutions étrangères.
+  Tout ce qui entoure la réponse (titre, page, tome, département) est
+  identique sur les deux feuillets et vient de la question.
+- Définition : « **sapajou**, *n. m.* Petit singe… ». La catégorie de la vraie
+  vient des données (`categorie`, `tools/categories.py`) ; le faussaire choisit
+  celle de son faux, il peut la fausser aussi.
+- Papier vieilli en CSS : rousseurs, bords brunis, bord frangé (`clip-path`),
+  caractères IM Fell English (SIL OFL).
+- Révélation sous la lampe à ultraviolets (`LAMPE_UV`, à juger en jeu) : un
+  voile violet sur la table, le papier moderne du faux s'allume en bleu et
+  montre la signature de son faussaire et le tampon « Contrefaçon » ; le papier
+  d'époque s'éteint, montre son filigrane et le timbre « D'époque ». Seuls le
+  voile et les calques `peau-uv` s'animent, en opacité. `LAMPE_UV = false` :
+  tampons et signature sur le papier, sans changer de fond.
+- La question reste une pièce officielle sur papier filigrané (numéro de série
+  rouge) ; sous-main de cuir vert, cadre à guilloches.
+- Démasqué : sceau de cire. Dupé : tampon « Dupé ».
+- Couleurs porteuses de sens : vert billet pour continuer (Suivante), rouge
+  des tampons pour fabriquer (Piéger, Poser), encre bleu-noir pour les blops.
+- Icône du faux : une plume ; signatures à la plume (Caveat).
+- Polices : Cinzel (titres, étiquettes), Source Serif 4 (texte, chiffres),
+  IM Fell English (ouvrages anciens), Stardos Stencil (tampons), Caveat
+  (signatures).
+- Explicatif par l'image, pas par le texte.
 
 ## Mise en page
 

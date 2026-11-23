@@ -99,12 +99,16 @@
  },
  "abscons": {
   "mot": "abscons",
-  "vraie": "Difficile à comprendre."
+  "vraie": "Difficile à comprendre.",
+  "categorie": "adj.",
+  "source": "wiktionary:abscons"
  },
  "achaler": {
   "mot": "achaler",
   "region": "Québec",
-  "vraie": "Importuner, agacer."
+  "vraie": "Importuner, agacer.",
+  "categorie": "v.",
+  "source": "wiktionary:achaler"
  },
  "arachibutyrophobie": {
   "cadre": [
@@ -115,34 +119,46 @@
    "peurs"
   ],
   "mot": "arachibutyrophobie",
-  "vraie": "Peur que du beurre de cacahuète reste collé au palais."
+  "vraie": "Peur que du beurre de cacahuète reste collé au palais.",
+  "categorie": "n. f.",
+  "source": "wiktionary:arachibutyrophobie"
  },
  "atrabilaire": {
   "mot": "atrabilaire",
-  "vraie": "D'humeur sombre et irritable."
+  "vraie": "D'humeur sombre et irritable.",
+  "categorie": "adj.",
+  "source": "wiktionary:atrabilaire"
  },
  "billevesee": {
   "mot": "billevesée",
-  "vraie": "Propos creux, idée sans valeur."
+  "vraie": "Propos creux, idée sans valeur.",
+  "categorie": "n. f.",
+  "source": "wiktionary:billevesée"
  },
  "bimbelotier": {
   "mot": "bimbelotier",
   "source": "wiktionary:bimbelotier",
-  "vraie": "Fabricant ou marchand de jouets et de petits objets de pacotille."
+  "vraie": "Fabricant ou marchand de jouets et de petits objets de pacotille.",
+  "categorie": "n. m."
  },
  "bisbille": {
   "mot": "bisbille",
-  "vraie": "Petite querelle pour des riens."
+  "vraie": "Petite querelle pour des riens.",
+  "categorie": "n. f.",
+  "source": "wiktionary:bisbille"
  },
  "brimbelle": {
   "mot": "brimbelle",
   "region": "Vosges, Lorraine",
-  "vraie": "La myrtille."
+  "vraie": "La myrtille.",
+  "categorie": "n. f.",
+  "source": "wiktionary:brimbelle"
  },
  "brimborion": {
   "mot": "brimborion",
   "source": "wiktionary:brimborion",
-  "vraie": "Petit objet sans valeur, babiole."
+  "vraie": "Petit objet sans valeur, babiole.",
+  "categorie": "n. m."
  },
  "buticulamicrophile": {
   "cadre": [
@@ -153,7 +169,9 @@
    "peurs"
   ],
   "mot": "buticulamicrophile",
-  "vraie": "Collectionneur de mignonnettes, ces minuscules bouteilles d'alcool."
+  "vraie": "Collectionneur de mignonnettes, ces minuscules bouteilles d'alcool.",
+  "categorie": "n.",
+  "source": "wiktionary:buticulamicrophile"
  },
  "c-andouille": {
   "mot": "",
@@ -233,35 +251,48 @@
  },
  "cacochyme": {
   "mot": "cacochyme",
-  "vraie": "De santé fragile, toujours souffrant."
+  "vraie": "De santé fragile, toujours souffrant.",
+  "categorie": "adj.",
+  "source": "wiktionary:cacochyme"
  },
  "cagnard": {
   "mot": "cagnard",
   "region": "Midi",
-  "vraie": "Soleil brûlant, chaleur écrasante."
+  "vraie": "Soleil brûlant, chaleur écrasante.",
+  "categorie": "n. m.",
+  "source": "wiktionary:cagnard"
  },
  "callipyge": {
   "mot": "callipyge",
-  "vraie": "Qui a de belles fesses."
+  "vraie": "Qui a de belles fesses.",
+  "categorie": "adj.",
+  "source": "wiktionary:callipyge"
  },
  "carabistouille": {
   "mot": "carabistouille",
   "region": "Belgique",
-  "vraie": "Baliverne, propos peu sérieux."
+  "vraie": "Baliverne, propos peu sérieux.",
+  "categorie": "n. f.",
+  "source": "wiktionary:carabistouille"
  },
  "cenacle": {
   "mot": "cénacle",
-  "vraie": "Petit cercle de gens réunis par des idées communes."
+  "vraie": "Petit cercle de gens réunis par des idées communes.",
+  "categorie": "n. m.",
+  "source": "wiktionary:cénacle"
  },
  "chafouin": {
   "mot": "chafouin",
   "source": "wiktionary:chafouin",
-  "vraie": "Qui a un air sournois et rusé."
+  "vraie": "Qui a un air sournois et rusé.",
+  "categorie": "adj."
  },
  "clampin": {
   "mot": "clampin",
   "registre": "familier",
-  "vraie": "Personne paresseuse, traînard."
+  "vraie": "Personne paresseuse, traînard.",
+  "categorie": "n. m.",
+  "source": "wiktionary:clampin"
  },
  "copoclephile": {
   "cadre": [
@@ -272,38 +303,52 @@
    "peurs"
   ],
   "mot": "copocléphile",
-  "vraie": "Collectionneur de porte-clés."
+  "vraie": "Collectionneur de porte-clés.",
+  "categorie": "n.",
+  "source": "wiktionary:copocléphile"
  },
  "coquecigrue": {
   "mot": "coquecigrue",
-  "vraie": "Chose imaginaire et absurde, baliverne."
+  "vraie": "Chose imaginaire et absurde, baliverne.",
+  "categorie": "n. f.",
+  "source": "wiktionary:coquecigrue"
  },
  "crocheteur": {
   "mot": "crocheteur",
   "source": "wiktionary:crocheteur",
-  "vraie": "Portefaix qui transportait des fardeaux sur un crochet fixé à son dos."
+  "vraie": "Portefaix qui transportait des fardeaux sur un crochet fixé à son dos.",
+  "categorie": "n. m."
  },
  "croquignolet": {
   "mot": "croquignolet",
-  "vraie": "Mignon, charmant. Souvent ironique."
+  "vraie": "Mignon, charmant. Souvent ironique.",
+  "categorie": "adj.",
+  "source": "wiktionary:croquignolet"
  },
  "cuistre": {
   "mot": "cuistre",
-  "vraie": "Pédant vaniteux et ridicule."
+  "vraie": "Pédant vaniteux et ridicule.",
+  "categorie": "n. m.",
+  "source": "wiktionary:cuistre"
  },
  "degingande": {
   "mot": "dégingandé",
-  "vraie": "Grand, à la démarche désarticulée."
+  "vraie": "Grand, à la démarche désarticulée.",
+  "categorie": "adj.",
+  "source": "wiktionary:dégingandé"
  },
  "degun": {
   "mot": "dégun",
   "region": "Marseille",
-  "vraie": "Personne, aucune personne."
+  "vraie": "Personne, aucune personne.",
+  "categorie": "pron."
  },
  "drache": {
   "mot": "drache",
   "region": "Belgique, Nord",
-  "vraie": "Averse soudaine et violente."
+  "vraie": "Averse soudaine et violente.",
+  "categorie": "n. f.",
+  "source": "wiktionary:drache"
  },
  "e-lapin": {
   "mot": "poser un lapin",
@@ -337,33 +382,45 @@
  },
  "esbroufe": {
   "mot": "esbroufe",
-  "vraie": "Étalage de manières prétentieuses pour impressionner."
+  "vraie": "Étalage de manières prétentieuses pour impressionner.",
+  "categorie": "n. f.",
+  "source": "wiktionary:esbroufe"
  },
  "escarcelle": {
   "mot": "escarcelle",
-  "vraie": "Grande bourse qu'on portait à la ceinture."
+  "vraie": "Grande bourse qu'on portait à la ceinture.",
+  "categorie": "n. f.",
+  "source": "wiktionary:escarcelle"
  },
  "eschatologie": {
   "mot": "eschatologie",
   "source": "https://www.cnrtl.fr/definition/eschatologie",
-  "vraie": "Doctrine sur la fin des temps : le jugement dernier et le sort de l'homme et du monde après la mort."
+  "vraie": "Doctrine sur la fin des temps : le jugement dernier et le sort de l'homme et du monde après la mort.",
+  "categorie": "n. f."
  },
  "esperluette": {
   "mot": "esperluette",
   "source": "wiktionary:esperluette",
-  "vraie": "Le signe typographique « & », qui signifie « et »."
+  "vraie": "Le signe typographique « & », qui signifie « et ».",
+  "categorie": "n. f."
  },
  "falbala": {
   "mot": "falbala",
-  "vraie": "Volant plissé qui orne une robe ; ornement voyant."
+  "vraie": "Volant plissé qui orne une robe ; ornement voyant.",
+  "categorie": "n. m.",
+  "source": "wiktionary:falbala"
  },
  "fanfreluche": {
   "mot": "fanfreluche",
-  "vraie": "Petit ornement léger de toilette."
+  "vraie": "Petit ornement léger de toilette.",
+  "categorie": "n. f.",
+  "source": "wiktionary:fanfreluche"
  },
  "faribole": {
   "mot": "faribole",
-  "vraie": "Propos frivole, sans valeur."
+  "vraie": "Propos frivole, sans valeur.",
+  "categorie": "n. f.",
+  "source": "wiktionary:faribole"
  },
  "gephyrophobie": {
   "cadre": [
@@ -372,11 +429,14 @@
   ],
   "mot": "géphyrophobie",
   "source": "wiktionary:géphyrophobie",
-  "vraie": "Peur de traverser les ponts."
+  "vraie": "Peur de traverser les ponts.",
+  "categorie": "n. f."
  },
  "goguenard": {
   "mot": "goguenard",
-  "vraie": "Moqueur, narquois."
+  "vraie": "Moqueur, narquois.",
+  "categorie": "adj.",
+  "source": "wiktionary:goguenard"
  },
  "hexakosioihexekontahexaphobie": {
   "cadre": [
@@ -387,7 +447,9 @@
    "peurs"
   ],
   "mot": "hexakosioihexekontahexaphobie",
-  "vraie": "Peur du nombre six cent soixante-six."
+  "vraie": "Peur du nombre six cent soixante-six.",
+  "categorie": "n. f.",
+  "source": "wiktionary:hexakosioihexekontahexaphobie"
  },
  "hippopotomonstrosesquippedaliophobie": {
   "cadre": [
@@ -398,11 +460,15 @@
    "peurs"
   ],
   "mot": "hippopotomonstrosesquippedaliophobie",
-  "vraie": "Peur des mots très longs."
+  "vraie": "Peur des mots très longs.",
+  "categorie": "n. f.",
+  "source": "wiktionary:hippopotomonstrosesquippedaliophobie"
  },
  "hurluberlu": {
   "mot": "hurluberlu",
-  "vraie": "Personne extravagante, qui agit sans réfléchir."
+  "vraie": "Personne extravagante, qui agit sans réfléchir.",
+  "categorie": "n. m.",
+  "source": "wiktionary:hurluberlu"
  },
  "i-backpfeifengesicht": {
   "mot": "",
@@ -477,28 +543,39 @@
  },
  "jeremiade": {
   "mot": "jérémiade",
-  "vraie": "Plainte sans fin, qui importune."
+  "vraie": "Plainte sans fin, qui importune.",
+  "categorie": "n. f.",
+  "source": "wiktionary:jérémiade"
  },
  "logorrhee": {
   "mot": "logorrhée",
-  "vraie": "Flot de paroles qu'on ne peut arrêter."
+  "vraie": "Flot de paroles qu'on ne peut arrêter.",
+  "categorie": "n. f.",
+  "source": "wiktionary:logorrhée"
  },
  "margoulin": {
   "mot": "margoulin",
-  "vraie": "Commerçant ou affairiste peu scrupuleux."
+  "vraie": "Commerçant ou affairiste peu scrupuleux.",
+  "categorie": "n. m.",
+  "source": "wiktionary:margoulin"
  },
  "mirliton": {
   "mot": "mirliton",
-  "vraie": "Petit tube garni d'une membrane qui vibre quand on chante dedans."
+  "vraie": "Petit tube garni d'une membrane qui vibre quand on chante dedans.",
+  "categorie": "n. m.",
+  "source": "wiktionary:mirliton"
  },
  "nyctalope": {
   "mot": "nyctalope",
-  "vraie": "Qui voit dans l'obscurité."
+  "vraie": "Qui voit dans l'obscurité.",
+  "categorie": "adj.",
+  "source": "wiktionary:nyctalope"
  },
  "nycthemere": {
   "mot": "nycthémère",
   "source": "wiktionary:nycthémère",
-  "vraie": "Durée de vingt-quatre heures, comprenant un jour et une nuit."
+  "vraie": "Durée de vingt-quatre heures, comprenant un jour et une nuit.",
+  "categorie": "n. m."
  },
  "o-bassinoire": {
   "alt": "Un grand récipient rond en laiton percé de motifs, au bout d'un long manche",
@@ -547,7 +624,9 @@
  },
  "olibrius": {
   "mot": "olibrius",
-  "vraie": "Individu bizarre, qui se fait remarquer."
+  "vraie": "Individu bizarre, qui se fait remarquer.",
+  "categorie": "n. m.",
+  "source": "wiktionary:olibrius"
  },
  "omphalophobie": {
   "cadre": [
@@ -558,12 +637,14 @@
    "peurs"
   ],
   "mot": "omphalophobie",
-  "vraie": "Peur des nombrils."
+  "vraie": "Peur des nombrils.",
+  "categorie": "n. f."
  },
  "oublieur": {
   "mot": "oublieur",
   "source": "wiktionary:oublieur",
-  "vraie": "Marchand ambulant qui vendait des gaufres roulées, appelées oublies."
+  "vraie": "Marchand ambulant qui vendait des gaufres roulées, appelées oublies.",
+  "categorie": "n. m."
  },
  "p-cheval": {
   "alt": "Un édifice de pierre sculpté de formes étranges, de colonnes et d'animaux",
@@ -612,25 +693,34 @@
  },
  "palinodie": {
   "mot": "palinodie",
-  "vraie": "Revirement complet d'opinion."
+  "vraie": "Revirement complet d'opinion.",
+  "categorie": "n. f.",
+  "source": "wiktionary:palinodie"
  },
  "pandiculation": {
   "mot": "pandiculation",
-  "vraie": "Le fait de s'étirer en bâillant."
+  "vraie": "Le fait de s'étirer en bâillant.",
+  "categorie": "n. f.",
+  "source": "wiktionary:pandiculation"
  },
  "patenotrier": {
   "mot": "patenôtrier",
   "source": "wiktionary:patenôtrier",
-  "vraie": "Artisan qui fabriquait des chapelets."
+  "vraie": "Artisan qui fabriquait des chapelets.",
+  "categorie": "n. m."
  },
  "peguer": {
   "mot": "péguer",
   "region": "Sud-Ouest, Provence",
-  "vraie": "Coller, être collant."
+  "vraie": "Coller, être collant.",
+  "categorie": "v.",
+  "source": "wiktionary:péguer"
  },
  "petaudiere": {
   "mot": "pétaudière",
-  "vraie": "Assemblée où règnent le désordre et la confusion."
+  "vraie": "Assemblée où règnent le désordre et la confusion.",
+  "categorie": "n. f.",
+  "source": "wiktionary:pétaudière"
  },
  "philumeniste": {
   "cadre": [
@@ -641,7 +731,9 @@
    "peurs"
   ],
   "mot": "philuméniste",
-  "vraie": "Collectionneur de boîtes d'allumettes."
+  "vraie": "Collectionneur de boîtes d'allumettes.",
+  "categorie": "n.",
+  "source": "wiktionary:philuméniste"
  },
  "placomusophile": {
   "cadre": [
@@ -652,7 +744,9 @@
    "peurs"
   ],
   "mot": "placomusophile",
-  "vraie": "Collectionneur de capsules de champagne."
+  "vraie": "Collectionneur de capsules de champagne.",
+  "categorie": "n. m.",
+  "source": "wiktionary:placomusophile"
  },
  "pogonophobie": {
   "cadre": [
@@ -661,45 +755,62 @@
   ],
   "mot": "pogonophobie",
   "source": "wiktionary:pogonophobie",
-  "vraie": "Peur des barbes."
+  "vraie": "Peur des barbes.",
+  "categorie": "n. f."
  },
  "quolibet": {
   "mot": "quolibet",
-  "vraie": "Plaisanterie moqueuse lancée contre quelqu'un."
+  "vraie": "Plaisanterie moqueuse lancée contre quelqu'un.",
+  "categorie": "n. m.",
+  "source": "wiktionary:quolibet"
  },
  "rastaquouere": {
   "mot": "rastaquouère",
-  "vraie": "Étranger au luxe voyant, dont on soupçonne la fortune."
+  "vraie": "Étranger au luxe voyant, dont on soupçonne la fortune.",
+  "categorie": "n. m.",
+  "source": "wiktionary:rastaquouère"
  },
  "ribambelle": {
   "mot": "ribambelle",
-  "vraie": "Longue suite de personnes ou de choses."
+  "vraie": "Longue suite de personnes ou de choses.",
+  "categorie": "n. f.",
+  "source": "wiktionary:ribambelle"
  },
  "ripopee": {
   "mot": "ripopée",
   "source": "wiktionary:ripopée",
-  "vraie": "Mélange de restes de vins ; par extension, ouvrage fait de morceaux disparates."
+  "vraie": "Mélange de restes de vins ; par extension, ouvrage fait de morceaux disparates.",
+  "categorie": "n. f."
  },
  "sapajou": {
   "mot": "sapajou",
-  "vraie": "Petit singe d'Amérique du Sud à longue queue."
+  "vraie": "Petit singe d'Amérique du Sud à longue queue.",
+  "categorie": "n. m.",
+  "source": "wiktionary:sapajou"
  },
  "semillant": {
   "mot": "sémillant",
-  "vraie": "Vif, plein d'entrain."
+  "vraie": "Vif, plein d'entrain.",
+  "categorie": "adj.",
+  "source": "wiktionary:sémillant"
  },
  "senfarger": {
   "mot": "s'enfarger",
   "region": "Québec",
-  "vraie": "Trébucher, s'empêtrer."
+  "vraie": "Trébucher, s'empêtrer.",
+  "categorie": "v."
  },
  "sycophante": {
   "mot": "sycophante",
-  "vraie": "Délateur, mouchard."
+  "vraie": "Délateur, mouchard.",
+  "categorie": "n. m.",
+  "source": "wiktionary:sycophante"
  },
  "tergiverser": {
   "mot": "tergiverser",
-  "vraie": "Hésiter, user de détours pour éviter de décider."
+  "vraie": "Hésiter, user de détours pour éviter de décider.",
+  "categorie": "v.",
+  "source": "wiktionary:tergiverser"
  },
  "triskaidekaphobie": {
   "cadre": [
@@ -710,11 +821,15 @@
    "peurs"
   ],
   "mot": "triskaïdékaphobie",
-  "vraie": "Peur du nombre treize."
+  "vraie": "Peur du nombre treize.",
+  "categorie": "n. f.",
+  "source": "wiktionary:triskaïdékaphobie"
  },
  "turlupiner": {
   "mot": "turlupiner",
-  "vraie": "Tracasser sans cesse."
+  "vraie": "Tracasser sans cesse.",
+  "categorie": "v.",
+  "source": "wiktionary:turlupiner"
  },
  "tyrosemiophile": {
   "cadre": [
@@ -725,11 +840,15 @@
    "peurs"
   ],
   "mot": "tyrosémiophile",
-  "vraie": "Collectionneur d'étiquettes de fromage."
+  "vraie": "Collectionneur d'étiquettes de fromage.",
+  "categorie": "n.",
+  "source": "wiktionary:tyrosémiophile"
  },
  "ventripotent": {
   "mot": "ventripotent",
-  "vraie": "Qui a un gros ventre."
+  "vraie": "Qui a un gros ventre.",
+  "categorie": "adj.",
+  "source": "wiktionary:ventripotent"
  },
  "x-chat": {
   "mot": "",
@@ -791,6 +910,8 @@
  "zigouiller": {
   "mot": "zigouiller",
   "registre": "familier",
-  "vraie": "Tuer."
+  "vraie": "Tuer.",
+  "categorie": "v.",
+  "source": "wiktionary:zigouiller"
  }
 }

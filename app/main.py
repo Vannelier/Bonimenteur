@@ -68,6 +68,9 @@ def _base():
             pieges TEXT, joueur TEXT, t INTEGER);
         CREATE TABLE IF NOT EXISTS joueurs (id TEXT PRIMARY KEY, pseudo TEXT NOT NULL, t INTEGER NOT NULL);
     """)
+    # Catégorie grammaticale du faux (définitions), ajoutée le 23/11/2026.
+    if "categorie" not in {r[1] for r in c.execute("PRAGMA table_info(faux)")}:
+        c.execute("ALTER TABLE faux ADD COLUMN categorie TEXT")
     return c
 
 
@@ -138,10 +141,14 @@ def etat(request: Request):
     }
 
 
+CATEGORIES = {"n. m.", "n. f.", "n.", "adj.", "v.", "adv."}   # celles que la page propose
+
+
 class Faux(BaseModel):
     mot: str
     texte: str = Field(min_length=3, max_length=TEXTE_MAX)
     prix: int = 10
+    categorie: str | None = None
 
 
 @app.post("/api/pieges")
@@ -151,12 +158,15 @@ def poser(f: Faux, request: Request):
         raise HTTPException(404, "question inconnue")
     if f.prix not in PRIX:
         raise HTTPException(422, "prix inconnu")
+    if f.categorie is not None and f.categorie not in CATEGORIES:
+        raise HTTPException(422, "catégorie inconnue")
     with _verrou:
         if _solde(j) < f.prix:
             raise HTTPException(402, "pas assez de blops")
         fid = secrets.token_urlsafe(12)
         try:
-            db.execute("INSERT INTO faux VALUES (?, ?, ?, ?, ?, ?)", (fid, f.mot, f.texte.strip(), j, _ms(), f.prix))
+            db.execute("INSERT INTO faux (id, mot, texte, auteur, cree, prix, categorie) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                       (fid, f.mot, f.texte.strip(), j, _ms(), f.prix, f.categorie))
             db.commit()
         except sqlite3.IntegrityError:
             raise HTTPException(409, "un seul faux par question")

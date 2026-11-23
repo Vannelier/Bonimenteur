@@ -6,7 +6,7 @@
 <title>Bonimenteur</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Cinzel:wght@700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Stardos+Stencil:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Cinzel:wght@700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Stardos+Stencil:wght@700&display=swap">
 <style>
 /* Bonimenteur : l'Atelier du faussaire. On fabrique des faux (documents, billets,
    tampons) et on démasque ceux des autres. Mise en page de Discoverium, univers propre :
@@ -100,7 +100,7 @@ h2{font-family:var(--titre);font-weight:700;font-size:19px;letter-spacing:.08em;
 .bouton.piege{font-family:var(--titre);letter-spacing:.06em;background:var(--rouge);color:#fff6ee;border-color:#7a1f19;box-shadow:0 3px 0 #7a1f19}
 .choix .bouton{position:relative;overflow:hidden;text-align:left;font-weight:400;font-size:16px;display:flex;flex-direction:column;gap:8px;
   border:1.5px solid var(--trait);box-shadow:0 1px 0 var(--trait),0 6px 14px -10px rgba(0,0,0,.5);background:var(--creux)}
-.choix.duel .bouton{min-height:88px;justify-content:center}
+.choix.duel .bouton:not(.feuillet){min-height:88px;justify-content:center}
 .choix .bouton:hover:not(:disabled){border-color:var(--vert)}
 .choix .bouton small{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;min-height:34px}
 .choix .bouton.ok{border-color:var(--vert);background:#f1f5ea}
@@ -235,6 +235,58 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .choix.duel .bouton.debout::before{opacity:0}
 /* Verdict dans un cartouche. */
 .verdict{padding:8px 12px;border:1.5px solid var(--trait);border-radius:4px;background:var(--creux)}
+/* --- Feuillets d'ouvrages anciens (les deux pièces du duel) ---------------------------
+   Papier vieilli : rousseurs, bords brunis, bord frangé (clip-path), caractères IM Fell. */
+.choix.feuillets{position:relative;gap:14px;padding:4px 2px}
+.choix .bouton.feuillet,.feuillet.modele{position:relative;display:flex;flex-direction:column;gap:6px;min-height:0;padding:12px 16px 12px;text-align:left;border:0;border-radius:0;color:#2b2016;cursor:pointer;
+  background:radial-gradient(circle at 18% 22%,rgba(150,95,40,.16) 0 3px,transparent 4px),radial-gradient(circle at 74% 64%,rgba(150,95,40,.12) 0 5px,transparent 7px),radial-gradient(circle at 88% 18%,rgba(150,95,40,.1) 0 2px,transparent 3px),radial-gradient(120% 120% at 50% 50%,#f1e5c6 45%,#dfca9d 85%,#cdb078 100%);
+  box-shadow:inset 0 -3px 0 rgba(120,85,40,.18),inset 0 0 18px rgba(120,85,40,.12);
+  clip-path:polygon(0 1.5%,4% 0,9% 1.2%,15% 0,22% 1%,30% 0,38% 1.2%,47% 0,55% 1%,63% 0,71% 1.3%,80% 0,88% 1%,95% 0,100% 1.5%,99.3% 15%,100% 30%,99.4% 45%,100% 60%,99.2% 75%,100% 90%,99.5% 100%,90% 98.8%,80% 100%,70% 98.9%,60% 100%,50% 99%,40% 100%,30% 98.8%,20% 100%,10% 99%,0 100%,.7% 85%,0 70%,.6% 55%,0 40%,.7% 25%,0 12%)}
+.choix .bouton.feuillet:nth-child(1){transform:rotate(-.7deg)}.choix .bouton.feuillet:nth-child(2){transform:rotate(.6deg)}
+.choix .bouton.feuillet::before{content:none}
+.choix .bouton.feuillet:active:not(:disabled){transform:scale(.985)}
+.f-tete{display:flex;justify-content:space-between;font:12px "IM Fell English SC",Georgia,serif;letter-spacing:.06em;border-bottom:1px solid rgba(43,32,22,.55);padding-bottom:3px}
+.f-art{font:400 18px/1.32 "IM Fell English",Georgia,serif;text-align:left}
+.f-art .vedette{font:400 19px "IM Fell English SC",Georgia,serif;letter-spacing:.03em}
+.f-art i,.f-art em{font-style:italic}
+.f-pied{display:flex;justify-content:space-between;gap:10px;margin-top:auto;font:italic 12px "IM Fell English",Georgia,serif;color:rgba(43,32,22,.7)}
+.f-pied span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.feuillet small{display:flex;align-items:center;gap:8px;min-height:30px;font-size:13px}
+.feuillet small[hidden]{display:none}
+.feuillet .tampon{position:relative;right:auto;bottom:auto;margin-left:auto;font-size:17px}
+.feuillet .chip.bon{background:rgba(241,229,198,.85)}
+.feuillet.modele .chip.bon{position:absolute;right:12px;bottom:10px;z-index:2}
+.feuillet.modele{padding-bottom:44px}
+.feuillet.modele{cursor:default;min-height:0;transform:rotate(-.5deg)}
+.choix .bouton.feuillet.ok{box-shadow:none;background:radial-gradient(120% 120% at 50% 50%,#f3e8cb 45%,#e2cfa5 85%,#d1b680 100%)}
+.choix .bouton.feuillet.ok > .f-art{font-weight:400}
+.choix .bouton.feuillet.debout,.choix .bouton.feuillet.demasque{background:radial-gradient(120% 120% at 50% 50%,#f1e5c6 45%,#dfca9d 85%,#cdb078 100%)}
+.choix .bouton.feuillet.demasque > span{opacity:1}
+.choix .bouton.feuillet.demasque .rep{text-decoration:line-through;text-decoration-color:rgba(179,50,42,.65)}
+/* Sous la lampe : un voile violet sur la table (opacité seule), le faux s'allume, le vrai s'éteint.
+   Les couleurs du texte changent d'un coup (pas de transition de couleur) ; seuls les calques
+   « peau-uv » et le voile s'animent, en opacité. */
+.peau-uv{position:absolute;inset:0;opacity:0;pointer-events:none;z-index:0;transition:opacity .45s ease-out}
+.feuillet > .f-tete,.feuillet > .f-art,.feuillet > .f-pied,.feuillet > small{position:relative;z-index:1}
+.choix.feuillets::before{content:"";position:absolute;inset:-10px -8px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .45s ease-out;
+  background:radial-gradient(90% 70% at 50% 0%,#4a2a86 0%,#24123f 60%,#140a26 100%)}
+.choix.feuillets.sous-lampe::before{opacity:1}
+.sous-lampe .feuillet .peau-uv{opacity:1}
+.sous-lampe .feuillet.ok .peau-uv{background:radial-gradient(120% 120% at 50% 50%,#43375a 40%,#2c2343 100%),var(--rosette) 85% 60%/110px no-repeat}
+.sous-lampe .feuillet.ok .peau-uv::after{content:"";position:absolute;right:12px;top:24px;width:96px;height:96px;background:var(--rosette) center/100% no-repeat;opacity:.4;filter:invert(1)}
+.sous-lampe .feuillet.ok{color:#a99cc6}
+.sous-lampe .feuillet.ok .f-tete{border-color:rgba(169,156,198,.4)}.sous-lampe .feuillet.ok .f-pied{color:#8a7fab}
+.sous-lampe .feuillet.ok .chip.bon{background:rgba(44,35,67,.9);color:#7de0a8;border-color:#7de0a8;box-shadow:inset 0 0 0 2px #2c2343,inset 0 0 0 3px #7de0a8}
+.sous-lampe .feuillet:not(.ok) .peau-uv{background:radial-gradient(120% 120% at 50% 50%,#e3f1ff 30%,#a8cdff 80%,#86b3ff 100%)}
+.sous-lampe .feuillet:not(.ok){color:#22306a}
+.sous-lampe .feuillet:not(.ok) .f-tete{border-color:rgba(34,48,106,.5)}.sous-lampe .feuillet:not(.ok) .f-pied{color:#3a4a88}
+.sous-lampe .signe-faux{color:#1f4fff}.sous-lampe .signe-faux.dupe{color:#1f4fff}
+.sous-lampe .tampon{color:#e0245e;border-color:#e0245e}
+@media (prefers-reduced-motion:reduce){.peau-uv,.choix.feuillets::before{transition:none}}
+/* Catégorie du faux (définitions) : le faussaire peut la fausser aussi. */
+.categories{display:flex;flex-wrap:wrap;gap:6px;margin-top:-6px}
+.cat{min-height:36px;padding:0 12px;border-radius:3px;border:1.5px solid var(--trait);background:var(--creux);font:italic 16px "IM Fell English",Georgia,serif;color:var(--encre);cursor:pointer}
+.cat[aria-checked="true"]{background:var(--vert);border-color:var(--vert);color:var(--papier)}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -624,23 +676,75 @@ function adversaire(I, ps) {
 }
 
 // La vérité se voit d'un coup d'œil : fond vert et pastille « Vrai ».
-const VRAI = `<span class="chip bon">Authentique</span>`;
+const VRAI = `<span class="chip bon">D'époque</span>`;
 
 async function question(motId, I) {
   const m = S.mots.get(motId);
   const ps = (I.vivants.get(motId) || []).filter(p => p.auteur !== moi);
   const piege = adversaire(I, ps);
   const f = famille(m);
-  const options = melange([{id: "vrai", texte: formater(m.vraie, f)}, {id: piege.id, texte: formater(piege.texte, f), auteur: piege.auteur}]);
+  const options = melange([{id: "vrai", texte: formater(m.vraie, f), categorie: m.categorie}, {id: piege.id, texte: formater(piege.texte, f), auteur: piege.auteur, categorie: piege.categorie || m.categorie}]);
   await nommer([piege.auteur]);
   serie.enCours = { motId, options, piege };
   afficherDuel(motId, options, piege);
 }
+/* Les deux pièces du duel sont deux feuillets d'un ouvrage ancien, l'un d'époque, l'autre
+   contrefait (direction artistique choisie par l'auteur le 23/11/2026, docs/direction-artistique.md).
+   Chaque famille a son ouvrage ; tout ce qui entoure la réponse (titre, page, tome) est
+   identique sur les deux feuillets et vient de la question, jamais de la réponse. */
+const OUVRAGES = {
+  definition:    ["Dictionnaire universel de la langue française", "1839"],
+  anecdote:      ["Dictionnaire d'anecdotes et de curiosités", "1874"],
+  expression:    ["Dictionnaire des locutions françaises", "1862"],
+  commune:       ["Dictionnaire des communes de France", "1887"],
+  photo:         ["Encyclopédie illustrée", "1902"],
+  intraduisible: ["Dictionnaire des mots du monde", "1896"],
+  etrangere:     ["Recueil des locutions étrangères", "1881"]
+};
+// Catégories proposées au faussaire pour une définition (la vraie est cochée d'office).
+const CATEGORIES = ["n. m.", "n. f.", "n.", "adj.", "v.", "adv."];
+// Début de réponse inséré dans une phrase : « L'urine » → « l'urine », « Moins de » → « moins de ».
+// La majuscule n'est retirée que si la lettre suivante est une minuscule ou une apostrophe (pas un sigle).
+const minusculeDebut = s => /^[A-ZÀ-Ý]([a-zà-ÿ]|['’])/.test(s) ? s[0].toLowerCase() + s.slice(1) : s;
+const sansPoint = s => String(s).replace(/[.\s]+$/, "");
+function entreeFeuillet(m, texte, categorie) {
+  const f = famille(m), t = esc(texte);
+  if (f === "definition") return `<b class="vedette">${esc(m.mot)}</b>, <i>${esc(categorie || m.categorie || "")}</i> <span class="rep">${t}</span>`;
+  if (f === "commune") {
+    const dep = (String(m.question || "").match(/commune (de la |du |des |d'|de l'|de )(.+?) existe/) || []);
+    return `<b class="vedette rep">${esc(sansPoint(texte))}</b>, <i>comm. ${esc(dep[1] || "")}${esc(dep[2] || m.region || "")}.</i>`;
+  }
+  if (f === "anecdote") {
+    const [avant, apres] = String(m.question || "").split("___");
+    return `${esc(avant || "")}<em class="rep">${esc(minusculeDebut(sansPoint(texte)))}</em>${esc(apres ?? ".")}`;
+  }
+  if (f === "expression") return `<b class="vedette">${esc(m.mot.charAt(0).toUpperCase() + m.mot.slice(1))}</b>, <i>loc.</i> <span class="rep">${t}</span>`;
+  if (f === "intraduisible" || f === "etrangere") {
+    const q = String(m.question || ""), mot = (q.match(/«\s*(.+?)\s*»/) || [])[1] || "", langue = (q.match(/^En ([a-zéèêàïîô-]+)/i) || [])[1] || "";
+    return `<b class="vedette">${esc(mot)}</b>${langue ? `, <i>${esc(langue)}</i>` : ""}. <span class="rep">${t}</span>`;
+  }
+  return `<b class="vedette">Fig.</b> — <span class="rep">${t}</span>`;
+}
+function feuillet(m, motId, texte, categorie) {
+  const f = famille(m), [titre, an] = OUVRAGES[f] || OUVRAGES.definition;
+  const n = +numero(motId).replace(/\D/g, "").slice(-4) || 1;
+  // En-tête courant, identique sur les deux feuillets : les trois premières lettres du mot (définition),
+  // le département (commune), sinon le tome.
+  const dep = f === "commune" ? (String(m.question || "").match(/commune (?:de la |du |des |d'|de l'|de )(.+?) existe/) || [])[1] : "";
+  const tete = f === "definition" ? m.mot.slice(0, 3).toUpperCase() : dep ? dep.toUpperCase() : `TOME ${["I", "II", "III", "IV"][n % 4]}`;
+  return `<span class="f-tete" aria-hidden="true"><span>${esc(tete)}</span><span>— ${n} —</span><span>${esc(tete)}</span></span>
+    <span class="f-art">${entreeFeuillet(m, texte, categorie)}</span>
+    <span class="f-pied" aria-hidden="true"><span>${esc(titre)}</span><span>${an}</span></span>`;
+}
+// Lampe à ultraviolets à la révélation : le papier moderne du faux s'allume, l'ancien reste éteint.
+// Réversible (LAMPE_UV = false : tampons et signature sur le papier, sans changer de fond).
+const LAMPE_UV = true;
+
 function afficherDuel(motId, options, piege) {
   const m = S.mots.get(motId);
   $e.innerHTML = `${entete()}
     ${enonce(m)}
-    <div class="choix duel">${options.map((o, k) => `<button class="bouton" type="button" data-k="${k}"><span>${esc(o.texte)}</span><small hidden></small></button>`).join("")}</div>
+    <div class="choix duel feuillets">${options.map((o, k) => `<button class="bouton feuillet" type="button" data-k="${k}"><span class="peau-uv" aria-hidden="true"></span>${feuillet(m, motId, o.texte, o.categorie)}<small hidden></small></button>`).join("")}</div>
     <div id="suite"></div>`;
   $e.querySelectorAll("[data-k]").forEach(b => b.onclick = () => repondre(motId, options, piege, +b.dataset.k));
 }
@@ -655,6 +759,7 @@ function repondre(motId, options, piege, k) {
     if (o.id === "vrai") montrer(b, VRAI, "ok");
     else montrer(b, `<span class="tampon" aria-label="Contrefaçon">Contrefaçon</span>${etoile}<span class="signe-faux ${juste ? "" : "dupe"}"><i>signé</i> ${esc(nom(o.auteur))}</span>`, juste ? "demasque" : "debout");
   });
+  if (LAMPE_UV) { const ch = $e.querySelector(".choix.feuillets"); requestAnimationFrame(() => ch && ch.classList.add("sous-lampe")); }
   let gain = 0;
   if (juste) gain = 1;
   else { serie.piegeur.set(piege.auteur, (serie.piegeur.get(piege.auteur) || 0) + 1); }
@@ -718,8 +823,9 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
   const m = S.mots.get(motId), F = FAMILLES[famille(m)], direct = prix !== PRIX_PIEGE;
   $e.innerHTML = `${enteteBlops(solde(index()), prix)}
     ${enonce(m)}
-    <div class="vraie-piege apparait"><span class="chip bon">Authentique</span><span>${esc(formater(m.vraie, famille(m)))}</span></div>
+    <div class="feuillet modele apparait"><span class="chip bon">D'époque</span>${feuillet(m, motId, formater(m.vraie, famille(m)), m.categorie)}</div>
     <label for="piegeTexte">${F.champ}</label>
+    ${famille(m) === "definition" ? `<div class="categories" role="radiogroup" aria-label="Catégorie de ton faux">${CATEGORIES.map(c => `<button type="button" role="radio" class="cat" data-cat="${c}" aria-checked="${c === (m.categorie || "n. m.")}">${c}</button>`).join("")}</div>` : ""}
     <textarea id="piegeTexte" maxlength="${F.max}" placeholder="Quelque chose qui sonne vrai…"></textarea>
     <div class="compte" id="compte">0 / ${F.max}</div>
     <label class="signer"><i>signé</i><input id="signeChamp" maxlength="${PSEUDO_MAX}" autocomplete="nickname" aria-label="Ta signature" placeholder="ton nom de faussaire" value="${esc(signatureProposee())}"></label>
@@ -728,6 +834,8 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
   const ta = document.getElementById("piegeTexte");
   ta.oninput = () => { document.getElementById("compte").textContent = `${ta.value.length} / ${F.max}`; };
   document.getElementById("signeChamp").oninput = e => e.target.classList.remove("refus");
+  // Catégorie du faux : le faussaire peut la fausser aussi (« sapajou, adj. »).
+  $e.querySelectorAll(".cat").forEach(b => b.onclick = () => $e.querySelectorAll(".cat").forEach(x => x.setAttribute("aria-checked", x === b ? "true" : "false")));
   document.getElementById("passer").onclick = () => { vusLocal.add(motId); retour(); };
   if (!direct) {
   const autreQuestion = () => { ecartes.add(motId); vusLocal.add(motId); const id = motAtelier(index(), famille(m)); if (id) cartePiege(id, retour); else choixFamille(retour); };
@@ -764,7 +872,8 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
     if (sig !== monPseudo()) { try { await db.doc(`joueurs/${moi}`).set({ pseudo: sig, t: Date.now() }); S.pseudos.set(moi, sig); } catch (e) {} }
     poser.disabled = true;
     try {
-      await db.collection("pieges").add({ mot: motId, texte, auteur: moi, cree: Date.now(), ...(direct ? { prix } : {}) });
+      const cat = $e.querySelector('.cat[aria-checked="true"]');
+      await db.collection("pieges").add({ mot: motId, texte, auteur: moi, cree: Date.now(), ...(direct ? { prix } : {}), ...(cat ? { categorie: cat.dataset.cat } : {}) });
       if (serie) serie.pieges++;
       const reste = solde(index());
       $e.innerHTML = `${enteteBlops(reste, prix)}

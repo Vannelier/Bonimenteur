@@ -39,6 +39,11 @@ prix Ig Nobel).
 Familles faibles : celles dont la réponse se sait souvent (expressions
 françaises, anecdotes connues).
 
+Définitions : `categorie` (n. m., n. f., n., adj., v., adv., pron.), relevée
+dans le Wiktionnaire par `tools/categories.py` puis relue à la main (le premier
+sens n'est pas toujours celui de la vraie réponse : « cagnard », adjectif,
+est ici un nom). Affichée sur le feuillet de la vraie réponse.
+
 Champs facultatifs : `cadre` (mots communs à une série, ignorés par
 l'arbitre : « peur » pour les phobies), `region`, `registre`, `source`.
 

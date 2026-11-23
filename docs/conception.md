@@ -56,6 +56,9 @@ Le plus efficace de la question, sauf 4 fois sur 10 un faux encore peu vu
   lui est plus posée ; une question neuve vue en fabriquant non plus.
 - Questions proposées : d'abord celles que le joueur a déjà jouées (rien n'est
   gâché), puis les neuves.
+- Définition : le faussaire choisit la catégorie de son faux (n. m., n. f.,
+  adj., v.…), celle de la vraie cochée d'office ; il peut la fausser aussi
+  (« sapajou, *adj.*, d'un rouge sombre »).
 - Mise en forme imposée (`formater`) : majuscule, point final ; pour une
   commune, majuscule à chaque partie du nom. Un faux ne se trahit pas par sa
   forme.

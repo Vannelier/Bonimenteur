@@ -40,7 +40,7 @@
     return reponse;
   }
   const ROUTES = {
-    pieges: d => ecrire("POST", "/api/pieges", { mot: d.mot, texte: d.texte, prix: d.prix || 10 }),
+    pieges: d => ecrire("POST", "/api/pieges", { mot: d.mot, texte: d.texte, prix: d.prix || 10, ...(d.categorie ? { categorie: d.categorie } : {}) }),
     choix: d => ecrire("POST", "/api/choix", { mot: d.mot, montres: d.montres || [], ordre: d.ordre || [], erreur: !!d.erreur }),
     signalements: d => ecrire("POST", "/api/signalements", { mot: d.mot, raison: d.raison, pieges: d.pieges || [] }),
   };
