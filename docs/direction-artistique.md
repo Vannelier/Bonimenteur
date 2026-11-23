@@ -18,6 +18,9 @@ foi : `prototype/index.html`, en tête du `<style>`.
   rouge des tampons pour fabriquer (Piéger, Poser), encre bleu-noir pour les
   blops (des taches de cette encre).
 - Progression : une planche de 15 timbres dentelés.
+- Le faux révélé porte la signature de son auteur à la plume (Caveat, manuscrite) ;
+  l'icône du faux est une plume (23/11/2026 ; le piège à loup ne se lisait pas en
+  petit). Les deux pièces du duel ont une frise de guilloches en tête.
 - Polices : Cinzel (capitales gravées des billets) pour titres et étiquettes ;
   Source Serif 4 pour le texte et les chiffres (ceux de Cinzel sont
   elzéviriens, « 10 » se lit « IO ») ; Stardos Stencil pour les tampons.

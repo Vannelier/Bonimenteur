@@ -74,8 +74,11 @@ Le plus efficace de la question, sauf 4 fois sur 10 un faux encore peu vu
 - « Pendant ton absence » : à l'ouverture, les victimes de ses faux depuis la
   dernière visite (dernière visite dans le navigateur ; dans le vrai jeu, sur
   le serveur).
-- Pseudo : onglet « Mes faux », ligne « Signé » (2 à 20 caractères ; à défaut,
-  le nom du compte claude.ai).
+- Pseudo : un seul par joueur (décision de l'auteur, 23/11/2026). Chaque faux se
+  signe au moment de la pose, signature préremplie avec le pseudo ; la changer
+  change le pseudo partout. Modifiable aussi dans « Mes faux », ligne « Signé »
+  (2 à 20 caractères). Une signature libre par faux casserait le lien entre le
+  joueur et ses faux, et permettrait de signer du nom d'un autre.
 - Signalement discret sous chaque duel : un faux dit vrai, la vraie réponse
   est fausse, contenu choquant.
 
