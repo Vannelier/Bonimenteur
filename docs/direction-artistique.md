@@ -65,11 +65,27 @@ Séquence d'environ 1,3 s, en CSS (classes `revele`, `choisi`, `autre`, `bien`,
 | 1 050 ms | la signature du faussaire apparaît |
 | 1 150 ms | le verdict monte, le gain saute, la pastille des blops bondit, la case du lot se pose |
 
-Coût mesuré (Playwright, 390 × 780, processeur ralenti ×4, 5 révélations,
-23/11/2026) : fil principal 110 ms par révélation avant, 355 ms après ; images
-de plus de 34 ms : 2 sur les 5 révélations contre 1 sans animation, pire image
-67 ms dans les deux cas (l'insertion du résultat). `will-change` essayé, sans
-gain mesuré, retiré.
+Coût, mesuré au processeur ralenti ×4 (Playwright, 390 × 780, trace
+`devtools.timeline`, moyenne sur 4 révélations, 23/11/2026). Première version :
+chute d'images signalée sur téléphone par l'auteur ; rastérisation 307 ms par
+révélation contre 54 ms sans animation. Trois causes :
+
+- les feuillets découpés (`clip-path`) et leurs dégradés étaient repeints à
+  chaque image : ils ont maintenant leur calque dès l'affichage du duel
+  (`will-change: transform`, et `opacity` pour l'éclat) ;
+- deux animations de transform à la fois sur un même feuillet (enfoncement,
+  puis tressautement), plus la transition du bouton : Chrome ne les compose
+  pas (« TargetHasIncompatibleAnimations », trace `blink.animations`) et les
+  fait tourner sur le fil principal ; une seule animation par cas désormais,
+  plus de transition sur les feuillets ;
+- `rotate(var(--r))` dans les keyframes : angles écrits en dur ;
+- le tremblement de toute la carte : seule la table des feuillets tremble.
+
+Après : rastérisation 39 ms par révélation (27 ms sans animation), aucune
+animation non composée. Il reste ≈ 250 ms de fil principal par révélation au
+processeur ralenti ×4, répartis sur 1,3 s (moins de 1 ms par image sur un
+téléphone réel) ; images de plus de 34 ms : 2 sur 5 révélations, autant que
+sans animation.
 
 ## Mise en page
 
