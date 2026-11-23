@@ -474,6 +474,8 @@ const nom = id => id === moi ? "toi" : (S.pseudos.get(id) || noms.get(id) || "Un
 /* Pseudo : choisi dans l'atelier, gardé dans « joueurs/<id> ». À défaut, le nom du compte. */
 const PSEUDO_MAX = 20;
 const monPseudo = () => S.pseudos.get(moi) || "";
+// Signature proposée : le pseudo, à défaut le nom du compte (claude.ai), à défaut rien.
+const signatureProposee = () => monPseudo() || (noms.has(moi) && noms.get(moi) !== "Un joueur" ? noms.get(moi) : "");
 
 /* Ressemblance entre un piège et la vraie définition */
 const VIDES = new Set("dans pour avec sans sous plus tres comme leur leurs cette celui celle elle elles etre avoir fait faire quon quil chose choses personne personnes quelqu quelque individu individus action relatif relative etat maniere sorte genre objet petit petite grand grande".split(" "));
@@ -720,7 +722,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
     <label for="piegeTexte">${F.champ}</label>
     <textarea id="piegeTexte" maxlength="${F.max}" placeholder="Quelque chose qui sonne vrai…"></textarea>
     <div class="compte" id="compte">0 / ${F.max}</div>
-    <label class="signer"><i>signé</i><input id="signeChamp" maxlength="${PSEUDO_MAX}" autocomplete="nickname" aria-label="Ta signature" placeholder="ton nom de faussaire" value="${esc(monPseudo())}"></label>
+    <label class="signer"><i>signé</i><input id="signeChamp" maxlength="${PSEUDO_MAX}" autocomplete="nickname" aria-label="Ta signature" placeholder="ton nom de faussaire" value="${esc(signatureProposee())}"></label>
     <div id="erreurPiege"></div>
     <div class="ligne"><button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button>${direct ? "" : `<button class="bouton" type="button" id="autre">Autre</button>`}<button class="bouton piege" type="button" id="poser">Poser</button></div>`;
   const ta = document.getElementById("piegeTexte");
@@ -914,6 +916,7 @@ const pret = () => S.charge.mots && S.charge.pieges && S.charge.choix;
   if (!db) { clearTimeout(minuteur); $e.innerHTML = `<p class="alerte">La mémoire partagée du jeu n'est pas disponible ici. Ouvre la page sur claude.ai, connecté à ton compte.</p>`; return; }
   try { moi = user ? await user.id() : null; } catch (e) { moi = null; }
   if (!moi) moi = "anonyme";
+  nommer([moi]).catch(() => {});
   let lance = false;
   const quandPret = async () => { if (pret() && !lance) { lance = true; clearTimeout(minuteur); if (!(await absence())) montrer("jouer"); } else if (lance && ecran === "atelier") atelier(); };
   db.collection("mots").onSnapshot(s => { S.mots = new Map(s.docs.map(d => [d.id, d.data()])); if (!s.metadata.fromCache) S.charge.mots = true; quandPret(); }, () => { S.charge.mots = true; quandPret(); });
