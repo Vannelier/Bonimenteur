@@ -401,7 +401,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 /* Panonceau de gare ancien (communes), choisi et vieilli à la demande de l'auteur (23/11/2026) :
    crème jaunie, crasse sur les bords, taches, cadre vert écaillé, vis et coulures de rouille,
    rayures, lettres usées. Tout est fixe (fonds et un calque SVG « patine »), rien n'est animé. */
-.choix .bouton.feuillet[data-style="plaque"],.feuillet.modele[data-style="plaque"]{clip-path:none;border-radius:3px;color:#2a2621;align-items:center;text-align:center;padding:18px 18px 12px;
+.choix .bouton.feuillet[data-style="plaque"],.feuillet.modele[data-style="plaque"]{clip-path:none;border-radius:3px;color:#2a2621;align-items:center;text-align:center;padding:16px 18px 30px;
   background:radial-gradient(ellipse 34px 20px at 22% 70%,rgba(120,85,35,.26),transparent 70%),radial-gradient(ellipse 56px 24px at 78% 30%,rgba(110,78,32,.2),transparent 70%),
     radial-gradient(ellipse 22px 30px at 92% 80%,rgba(95,70,30,.22),transparent 70%),
     radial-gradient(120% 150% at 50% 45%,transparent 45%,rgba(70,52,25,.42) 100%),var(--grain-plaque,none),linear-gradient(175deg,#eee3c6,#e2d3ad 60%,#d9c79c);
@@ -410,7 +410,11 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .plaque-nom{position:relative;z-index:1;font:700 clamp(20px,6vw,27px)/1.05 "Old Standard TT","Source Serif 4",Georgia,serif;letter-spacing:.1em;text-transform:uppercase;overflow-wrap:anywhere;
   color:rgba(32,28,24,.88);text-shadow:0 1px 0 rgba(255,250,230,.45)}
 .plaque-dep{position:relative;z-index:1;font:italic 400 13px "Old Standard TT","Source Serif 4",Georgia,serif;opacity:.75}
-[data-style="plaque"] small{position:relative;z-index:2;align-self:stretch;margin:8px -10px -4px;padding:6px 8px;border-radius:2px;background:#f3eedd;color:var(--encre)}
+/* Tampons et signature posés sur le panonceau lui-même, sans bande blanche (demande de l'auteur). */
+[data-style="plaque"] small{position:absolute;inset:0;z-index:2;display:block;min-height:0;margin:0;padding:0;background:none}
+[data-style="plaque"] small .etiquette{position:absolute;left:4px;top:-6px}
+[data-style="plaque"] small .tampon,[data-style="plaque"] small .chip.bon{position:absolute;left:20px;bottom:6px;margin:0;font-size:13px;background:rgba(238,227,198,.6)}
+[data-style="plaque"] small .signe-faux{position:absolute;right:16px;bottom:5px;margin:0;background:rgba(238,227,198,.8);padding:0 4px;border-radius:2px}
 /* Carte de visite (métiers) : bristol, nom, métier gravé en capitales, adresse. */
 .choix .bouton.feuillet[data-style="carte"],.feuillet.modele[data-style="carte"]{clip-path:none;border-radius:3px;align-items:center;text-align:center;gap:3px;padding:12px 16px 10px;
   background:linear-gradient(160deg,rgba(255,255,255,.6),transparent 45%),#f8f4ea;box-shadow:0 1px 0 #d9d0b5,0 6px 12px -6px rgba(0,0,0,.4),inset 0 0 0 1px rgba(43,32,22,.12)}
@@ -925,8 +929,8 @@ const OUVRAGES = {
   definition: [
     { titre: "Dictionnaire universel de la langue française", court: "Delormel, Dict. univ.", an: 1839, style: "classique", teinte: 0 },
     { titre: "Nouveau vocabulaire français", court: "Mauduit, Nouv. vocab.", an: 1852, style: "filet", teinte: 1 },
-    { titre: "Trésor des mots rares et oubliés", court: "Ravenel, Mots rares", an: 1868, style: "lettrine", teinte: 2 },
-    { titre: "Glossaire du vieux langage", court: "Fontenoy, Glossaire", an: 1825, style: "numero", teinte: 3 }],
+    { titre: "Trésor des mots rares et oubliés", court: "Ravenel, Mots rares", an: 1868, style: "filet", teinte: 2 },
+    { titre: "Glossaire du vieux langage", court: "Fontenoy, Glossaire", an: 1825, style: "classique", teinte: 3 }],
   // Anecdotes : une coupure de journal (journaux fictifs).
   anecdote: [
     { titre: "Le Petit Curieux", court: "", an: 1874, style: "coupure", teinte: 0 },
@@ -934,8 +938,8 @@ const OUVRAGES = {
     { titre: "Le Moniteur des curiosités", court: "", an: 1856, style: "coupure", teinte: 3 }],
   expression: [
     { titre: "Dictionnaire des locutions françaises", court: "Dict. des locutions", an: 1862, style: "classique", teinte: 1 },
-    { titre: "Origines des façons de parler", court: "Origines des locutions", an: 1847, style: "lettrine", teinte: 0 },
-    { titre: "Recueil des dictons et manières de dire", court: "Recueil des dictons", an: 1880, style: "numero", teinte: 2 }],
+    { titre: "Origines des façons de parler", court: "Origines des locutions", an: 1847, style: "filet", teinte: 0 },
+    { titre: "Recueil des dictons et manières de dire", court: "Recueil des dictons", an: 1880, style: "classique", teinte: 2 }],
   // Communes : une plaque de gare émaillée (la page de dictionnaire « ne donnait pas », 23/11/2026).
   commune: [{ titre: "Plaque émaillée", court: "", an: 1900, style: "plaque", teinte: 0 }],
   // Métiers : une carte de visite gravée.
@@ -943,7 +947,7 @@ const OUVRAGES = {
   photo: [
     { titre: "Encyclopédie illustrée", court: "Encyclopédie illustrée", an: 1902, style: "classique", teinte: 0 },
     { titre: "Planches du cabinet de curiosités", court: "Cabinet de curiosités, pl.", an: 1898, style: "filet", teinte: 3 },
-    { titre: "Revue des arts et métiers", court: "Revue des arts et métiers", an: 1908, style: "numero", teinte: 1 }],
+    { titre: "Revue des arts et métiers", court: "Revue des arts et métiers", an: 1908, style: "classique", teinte: 1 }],
   // Mots et expressions étrangères : une page de guide de conversation, en deux colonnes.
   intraduisible: [
     { titre: "Guide du voyageur polyglotte", court: "", an: 1883, style: "guide", teinte: 0 },
@@ -977,7 +981,7 @@ function lot(m, motId) {
 function entreeFeuillet(m, texte, categorie) {
   const f = famille(m), t = esc(texte);
   // Région et registre dans l'entrée, à l'identique sur les deux feuillets (charte, point 6).
-  if (f === "definition") return `<b class="vedette">${esc(m.mot)}</b>, <i>${esc([categorie || m.categorie, m.region, m.registre].filter(Boolean).join(", ").replace(/\.?$/, "."))}</i> 1° <span class="rep">${t}</span>`;
+  if (f === "definition") return `<b class="vedette">${esc(m.mot)}</b>, <i>${esc([categorie || m.categorie, m.region, m.registre].filter(Boolean).join(", ").replace(/\.?$/, "."))}</i> <span class="rep">${t}</span>`;
   if (f === "commune") {
     const dep = (String(m.question || "").match(/commune (de la |du |des |d'|de l'|de )(.+?) existe/) || []);
     return `<b class="vedette rep">${esc(sansPoint(texte))}</b>, <i>comm. ${esc(dep[1] || "")}${esc(dep[2] || m.region || "")}.</i>`;
@@ -1022,8 +1026,7 @@ function coupure(m, motId, texte, o) {
 function guide(m, texte, o) {
   const q = String(m.question || ""), mot = (q.match(/«\s*(.+?)\s*»/) || [])[1] || "", langue = (q.match(/^En ([a-zéèêàïîô-]+)/i) || [])[1] || "";
   return `<span class="g-tete" aria-hidden="true">${esc(langue.toUpperCase())} — FRANÇAIS</span>
-    <span class="g-ligne"><span class="g-ling">${esc(mot)}${m.type === "etrangere" ? `<span class="g-mam">mot à mot</span>` : ""}</span><span class="g-sep" aria-hidden="true"></span><span class="rep">${esc(texte)}</span></span>
-    <span class="g-pied" aria-hidden="true">${esc(o.titre)} · ${o.an}</span>`;
+    <span class="g-ligne"><span class="g-ling">${esc(mot)}</span><span class="g-sep" aria-hidden="true"></span><span class="rep">${esc(texte)}</span></span>`;
 }
 // Planche gravée (photo) : l'image en gravure dans sa cuvette, légende numérotée, réponse en italique.
 function plancheGravee(m, motId, texte) {
@@ -1045,12 +1048,11 @@ function feuillet(m, motId, texte, categorie) {
   const tome = ["I", "II", "III", "IV"][n % 4];
   const tete = f === "definition" ? m.mot.toLowerCase() : dep ? dep.toUpperCase() : `TOME ${tome}`;
   // Signature d'imprimeur (lettre du cahier et rang de la feuille), comme au bas des vrais livres.
-  const num = o.style === "numero" ? `<b class="f-num" aria-hidden="true">§ ${(n % 900) + 12}.</b> ` : "";
+  const num = "";   // plus de « § » (trop de fioritures, demande de l'auteur, 23/11/2026)
   const sig = `${"ABCDEFGHIKLMNOPQRSTV"[n % 20]}${n % 4 ? " " + (n % 4 + 1) : ""}`;
   return `<span class="f-tete" aria-hidden="true"><span>${esc(tete)}</span><span>— ${n} —</span><span>${esc(tete)}</span></span>
     ${f === "photo" ? `<span class="f-planche"><span class="f-zoom" role="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.legende || "")}"><span class="loupe" aria-hidden="true">⤢</span></span><span class="f-art">${num}${entreeFeuillet(m, texte, categorie)}</span></span>` : `<span class="f-art">${num}${entreeFeuillet(m, texte, categorie)}</span>`}
-    <span class="cote" aria-hidden="true">${"BCDFGLMR"[n % 8]}. ${n}</span>
-    <span class="f-pied" aria-hidden="true"><span class="sig">${sig}</span><span>${esc(o.court)}${f === "definition" || f === "commune" ? "" : `, t. ${tome}`} · ${o.an}</span></span>`;
+    <span class="f-pied" aria-hidden="true"><span></span><span>${esc(o.court)}${f === "definition" || f === "commune" ? "" : `, t. ${tome}`} · ${o.an}</span></span>`;
 }
 // Lampe à ultraviolets à la révélation : le papier moderne du faux s'allume, l'ancien reste éteint.
 // Réversible (LAMPE_UV = false : tampons et signature sur le papier, sans changer de fond).
