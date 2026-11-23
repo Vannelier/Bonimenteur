@@ -88,8 +88,11 @@ def test_donnees_coherentes():
             assert (racine / "prototype" / q["image"]).exists()
 
 
-def test_ration_du_jour(client):
-    """15 duels par jour, pas un de plus : le 16e est refusé jusqu'à minuit (Paris)."""
+def test_ration_du_jour(client, monkeypatch):
+    """Ration active : 15 duels par jour, pas un de plus ; le 16e est refusé jusqu'à minuit (Paris).
+    Coupée (RATION_ACTIVE = False, réglage actuel), le 16e passe."""
+    import app.main as m
+    monkeypatch.setattr(m, "RATION_ACTIVE", True)
     assert client.get("/api/moi").json()["ration"] == 15
     etat = client.get("/api/etat").json()
     faux = {}
@@ -102,6 +105,9 @@ def test_ration_du_jour(client):
     assert client.get("/api/moi").json()["ration"] == 0
     r = client.post("/api/choix", json={"mot": mots[15], "montres": [faux[mots[15]]], "ordre": [], "erreur": True})
     assert r.status_code == 429
+    monkeypatch.setattr(m, "RATION_ACTIVE", False)
+    r = client.post("/api/choix", json={"mot": mots[15], "montres": [faux[mots[15]]], "ordre": [], "erreur": True})
+    assert r.status_code == 200
 
 
 def test_categorie_du_faux(client):

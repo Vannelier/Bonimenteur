@@ -11,6 +11,11 @@ démasquer rapporte de quoi fabriquer.
 
 ## La ration du jour
 
+Coupée pour les essais (demande de l'auteur, 23/11/2026) : `RATION_ACTIVE =
+false` dans la page et dans `app/main.py`. Les 15 duels sont alors une
+tournée suivie d'un bilan et d'« Encore », sans limite. Ce qui suit décrit
+la ration active.
+
 - 15 duels par jour, heure de Paris (`TOTAL`, `RATION` côté serveur ; décision
   de l'auteur, 23/11/2026). Il n'y a plus de partie avec un score à battre : on
   joue pour remplir son encrier, la ration donne le rythme, et c'est elle qui

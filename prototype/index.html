@@ -572,8 +572,12 @@ const JOUR = new Intl.DateTimeFormat("fr-CA", { timeZone: "Europe/Paris" });
 const jourDe = t => JOUR.format(new Date(t));          // AAAA-MM-JJ
 const aujourdhui = () => jourDe(Date.now());
 const duJour = () => { const j = aujourdhui(); return S.choix.filter(c => c.joueur === moi && jourDe(c.t || 0) === j).sort((a, b) => (a.t || 0) - (b.t || 0)); };
+/* Limite du jour coupée pour les essais (demande de l'auteur, 23/11/2026) : les 15 duels sont
+   une simple tournée, suivie d'un bilan et d'« Encore ». RATION_ACTIVE = true la rétablit
+   (et RATION_ACTIVE dans app/main.py côté serveur). */
+const RATION_ACTIVE = false;
 function nouvelleSerie() {
-  const faits = duJour(), auteurs = new Map(S.pieges.map(p => [p.id, p.auteur]));
+  const faits = RATION_ACTIVE ? duJour() : [], auteurs = new Map(S.pieges.map(p => [p.id, p.auteur]));
   serie = { jour: aujourdhui(), num: faits.length, points: faits.reduce((t, c) => t + (c.gain || 0), 0), serie: 0, meilleure: 0,
     traces: faits.map(c => c.erreur ? 0 : 1), pieges: 0, piegeur: new Map(), derniere: null, tour: [] };
   for (const c of faits) if (c.erreur) for (const id of c.montres || []) { const a = auteurs.get(id); if (a) serie.piegeur.set(a, (serie.piegeur.get(a) || 0) + 1); }
@@ -907,19 +911,22 @@ async function bilan() {
   const I = index(), j = aujourdhui(), mesIds = new Set(I.piegesMoi.map(p => p.id));
   const dupes = I.victimes.filter(v => mesIds.has(v.piege) && v.joueur !== moi && jourDe(v.t || 0) === j).length;
   const cases = serie.traces.map(n => n ? "🟩" : "🟥").join("");
-  const partage = `Bonimenteur, ration du ${j.split("-").reverse().slice(0, 2).join("/")} : +${serie.points} blops\n${cases}${dupes ? `\nMes faux ont dupé ${dupes} joueur${dupes > 1 ? "s" : ""}` : ""}`;
-  $e.innerHTML = `<div class="demain apparait" role="img" aria-label="Prochaine ration dans ${duree(avantMinuit())}"><span class="sablier" aria-hidden="true">${IC.sablier}</span><span id="compteRebours">${duree(avantMinuit())}</span></div>
+  const partage = `Bonimenteur${RATION_ACTIVE ? `, ration du ${j.split("-").reverse().slice(0, 2).join("/")}` : ""} : +${serie.points} blops\n${cases}${dupes ? `\nMes faux ont dupé ${dupes} joueur${dupes > 1 ? "s" : ""}` : ""}`;
+  $e.innerHTML = `${RATION_ACTIVE ? "" : `<div class="gros apparait" style="color:var(--piege)">+${serie.points}${IC.blop}</div>`}${RATION_ACTIVE ? `<div class="demain apparait" role="img" aria-label="Prochaine ration dans ${duree(avantMinuit())}"><span class="sablier" aria-hidden="true">${IC.sablier}</span><span id="compteRebours">${duree(avantMinuit())}</span></div>` : ""}
     <div class="cases" aria-hidden="true">${serie.traces.map(n => `<i class="${n ? "v" : ""}"></i>`).join("")}</div>
-    <div class="chips"><span class="chip blop" aria-label="${serie.points} blops gagnés aujourd'hui">+${serie.points}${IC.blop}</span>${dupes ? `<span class="chip faux" aria-label="${dupes} joueurs dupés par tes faux aujourd'hui">${IC.joueur} ${dupes}</span>${pastilleBlop(dupes, "+")}` : ""}</div>
+    <div class="chips">${RATION_ACTIVE ? `<span class="chip blop" aria-label="${serie.points} blops gagnés aujourd'hui">+${serie.points}${IC.blop}</span>` : ""}${dupes ? `<span class="chip faux" aria-label="${dupes} joueurs dupés par tes faux aujourd'hui">${IC.joueur} ${dupes}</span>${pastilleBlop(dupes, "+")}` : ""}</div>
     ${pire ? `<div class="chips"><span class="chip faux">${IC.piege} ${esc(nom(pire[0]))} ×${pire[1]}</span></div>` : ""}
     <div class="haut entete" style="justify-content:center">${pastilleBlop(solde(I))}</div>
     <button class="bouton piege" type="button" id="versAtelier">Rejoindre l'atelier</button>
+    ${RATION_ACTIVE ? "" : `<button class="bouton plein" type="button" id="encore">Encore</button>`}
     <button class="bouton" type="button" id="copier">Partager</button>`;
+  const enc = document.getElementById("encore"); if (enc) enc.onclick = nouvelleSerie;
   document.getElementById("versAtelier").onclick = () => { sousAtelier = "fabriquer"; montrer("atelier"); };
   const bc = document.getElementById("copier");
   bc.onclick = () => { try { navigator.clipboard.writeText(partage).then(() => { bc.textContent = "Copié"; }, () => { bc.textContent = "Copie impossible ici"; }); } catch (e) { bc.textContent = "Copie impossible ici"; } };
   // Le compte à rebours ne tourne que tant que l'écran est affiché ; à minuit, la ration revient.
   clearInterval(minuteurDemain);
+  if (!RATION_ACTIVE) return;
   minuteurDemain = setInterval(() => {
     const el = document.getElementById("compteRebours");
     if (!el) return clearInterval(minuteurDemain);

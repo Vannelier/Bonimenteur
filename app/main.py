@@ -36,6 +36,8 @@ DONNEES = Path(os.environ.get("BONIMENTEUR_DATA_DIR")
 BLOP_DEPART = 20          # de quoi poser un faux en direct (15) dès la première partie
 # Ration du jour : 15 duels par jour, heure de Paris (TOTAL dans la page ; docs/conception.md).
 RATION = 15
+# Coupée pour les essais (demande de l'auteur, 23/11/2026) ; True la rétablit, avec RATION_ACTIVE de la page.
+RATION_ACTIVE = False
 PARIS = ZoneInfo("Europe/Paris")
 PRIX = {10, 15}            # atelier, direct (PRIX_PIEGE, PRIX_DIRECT)
 PSEUDO_MIN, PSEUDO_MAX = 2, 20
@@ -192,7 +194,7 @@ def choisir(c: Choix, request: Request):
     with _verrou:
         if db.execute("SELECT 1 FROM choix WHERE joueur = ? AND mot = ?", (j, c.mot)).fetchone():
             raise HTTPException(409, "question déjà jouée")
-        if _joues_aujourdhui(j) >= RATION:
+        if RATION_ACTIVE and _joues_aujourdhui(j) >= RATION:
             raise HTTPException(429, "ration du jour épuisée")
         gain = 0 if c.erreur else 1
         db.execute("INSERT INTO choix VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
