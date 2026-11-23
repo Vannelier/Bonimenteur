@@ -4,15 +4,17 @@ Bonimenteur (bonimenteur.fr) : jeu de bluff asynchrone. Le joueur démasque les
 faux des autres (une vraie réponse contre un faux) et fabrique les siens pour
 les duper. Quatrième jeu de la famille Discoverium, Vocabulium, Snouff.
 
-État : prototype en une page (`prototype/index.html`), publié comme artifact
-claude.ai : base partagée et identité des joueurs par `window.claude`. Il ne
-tourne pas hors de claude.ai. Le vrai jeu reprendra l'architecture de
-Discoverium (Python 3.11, FastAPI, front HTML/JS sans build, Railway).
+État : prototype en une page (`prototype/index.html`), écrit pour la base des
+artifacts claude.ai (`window.claude`). Sur Railway, `app/main.py` (FastAPI,
+SQLite) sert la page et `prototype/serveur.js` lui fournit la même interface,
+branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 
 ## Carte
 
 | Fichier | Contenu |
 |---|---|
+| `app/main.py` | Serveur : page, API (`/api/moi`, `/api/etat`, `/api/pieges`, `/api/choix`, `/api/contestations`, `/api/signalements`, `/api/pseudo`), SQLite. Identité par cookie HttpOnly posé par le serveur ; auteur d'un faux, gain d'un duel, prix et solde décidés ici. |
+| `prototype/serveur.js` | Interface `window.claude` (collection, doc, user) branchée sur l'API, relue toutes les 20 s et après chaque écriture. |
 | `prototype/index.html` | Le jeu : duels, atelier (Fabriquer, Mes faux), arbitre, bilan. Réglages en tête du script (`TOTAL`, `PRIX_PIEGE`, `PRIX_DIRECT`, `BLOP_DEPART`, `MORT_VUS`, `PVQN_VUS`, `CONTEST_MIN`, `FAMILLES` et leurs seuils). |
 | `prototype/proches.json` | Données de l'arbitre du sens, générées par `tools/proches.py`. Ne pas éditer. |
 | `prototype/communes.txt` | Communes de France (geo.api.gouv.fr, 34 969). |
@@ -25,8 +27,18 @@ Discoverium (Python 3.11, FastAPI, front HTML/JS sans build, Railway).
 ## Commandes
 
 ```
+pip install -r requirements-dev.txt
+python -m pytest -q                                    # 8 tests, < 1 s
+uvicorn app.main:app --reload                          # http://127.0.0.1:8000
 VOCABULIUM_DIR=../Vocabulium python tools/proches.py   # après un ajout de question
 ```
+
+CI : `.github/workflows/tests.yml` lance `pytest -q` sur chaque PR.
+
+## Variables d'environnement
+
+`BONIMENTEUR_DATA_DIR` (base SQLite ; à défaut le volume Railway,
+`RAILWAY_VOLUME_MOUNT_PATH`, puis `var/` en local).
 
 ## Invariants
 

@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Jeu de bluff : démasque les faux des autres joueurs et fabrique les tiens pour les duper.">
 <title>Bonimenteur</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -231,6 +236,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
   <p class="note">Prototype</p>
 </div>
 
+<script src="serveur.js"></script>
 <script>
 const $e = document.getElementById("ecran");
 /* Icônes : un blop (goutte), un piège (mâchoire), une étoile, et une par famille de questions. */
@@ -715,7 +721,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
       document.getElementById("suivant").focus();
     } catch (e) {
       poser.disabled = false;
-      err.innerHTML = `<p class="alerte">${e && e.code === "quota_exceeded" ? "Plus de place." : "Échec de l'enregistrement (accès Contributeur requis)."}</p>`;
+      err.innerHTML = e && e.code === "solde" ? reserve(solde(index()), prix) : `<p class="alerte">${e && e.code === "quota_exceeded" ? "Plus de place." : e && e.code === "doublon" ? "Tu as déjà un faux ici." : "Échec de l'enregistrement."}</p>`;
     }
   };
   ta.focus();
