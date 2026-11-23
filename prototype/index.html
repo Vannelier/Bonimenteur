@@ -481,7 +481,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .pg-rep{position:relative;z-index:1;text-align:center;font:italic 15.5px/1.3 "IM Fell English",Georgia,serif}
 .pg-rep .rubrique{font-style:normal}
 @media (max-height:700px){.pg-cuvette img{width:120px;height:72px}.pg-rep{font-size:14.5px}}
-@media (max-height:600px){
+@media (max-height:700px){
   .choix .bouton.feuillet:has(.pg-cuvette),.feuillet.apercu:has(.pg-cuvette){display:grid;grid-template-columns:86px 1fr;column-gap:10px;align-items:center}
   .pg-cuvette{grid-row:1/span 2;padding:4px}.pg-cuvette img{width:76px;height:64px}
   .pg-leg,.pg-rep{text-align:left}.pg-rep{font-size:14px}.feuillet small{grid-column:1/-1}}
@@ -494,6 +494,26 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
   box-shadow:0 1px 0 #d9d0b5,0 6px 12px -6px rgba(0,0,0,.4),inset 0 0 0 7px #f8f4ea,inset 0 0 0 8px rgba(43,32,22,.14),inset 1px 1px 0 9px rgba(255,255,255,.6);
   clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%)}
 .choix .bouton.feuillet[data-style="carte"]::before,.feuillet.modele[data-style="carte"]::before{content:"";position:absolute;right:0;top:0;width:20px;height:20px;z-index:2;background:linear-gradient(225deg,transparent 50%,#e7dfcb 50%,#d3c7aa);box-shadow:-2px 2px 3px rgba(0,0,0,.15)}
+/* Consigne du lot (« Trouve la vraie définition ») et place réservée : ni les feuillets ni la carte
+   ne grandissent quand les tampons, le verdict et les boutons apparaissent (demande de l'auteur). */
+.lot .consigne{font:700 12px/1.4 var(--titre);letter-spacing:.16em;text-transform:uppercase;color:var(--encre)}
+.feuillet small:empty{visibility:hidden}
+#suite{min-height:137px}
+/* Écran de duel compact : progression et solde sur une ligne, verdict resserré. */
+.ligne-haut{gap:12px}.ligne-haut .progres{flex:1;min-width:0}
+.verdict{min-height:0;padding:5px 10px;gap:10px}
+.verdict .sceau{width:36px;height:36px}
+.verdict .tampon-dupe{font-size:14px;padding:5px 7px}
+.verdict .gain{font-size:24px}
+#suite .ligne.direct{margin-top:-4px}
+#suite .signal{margin-top:-6px}
+
+/* Étiquette, tampon et signature sur une seule ligne : la pièce achetée ne grandit pas. */
+.choix .feuillet small{flex-wrap:nowrap;gap:6px;overflow:hidden}
+.choix .feuillet small .etiquette{flex:none;font-size:10px;padding:2px 8px 2px 14px}
+.choix .feuillet small .tampon{flex:none;font-size:13px;padding:2px 7px;letter-spacing:.1em}
+.choix .feuillet small .chip.bon{flex:none;font-size:11px;padding:4px 8px}
+.choix .feuillet small .signe-faux{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:18px}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -885,8 +905,9 @@ function suite() {
 const caseDe = n => n === 1 ? "v" : n === 0 ? "f" : "";
 function entete(q = serie.num + 1) {
   q = Math.min(q, TOTAL);
-  return `<div class="progres" role="img" aria-label="Question ${q} sur ${TOTAL}">${Array.from({length: TOTAL}, (_, i) => `<i class="${caseDe(serie.traces[i])}"></i>`).join("")}</div>
-    <div class="haut entete"><span class="score" aria-label="Écus gagnés aujourd'hui">+${serie.points}</span>${pastilleEcus(solde(index()))}</div>`;
+  // Progression et solde sur une ligne : le gain du lot est déjà dans le verdict (place gagnée pour
+  // que « Lot suivant » reste dans l'écran sans que la carte grandisse).
+  return `<div class="haut entete ligne-haut"><div class="progres" role="img" aria-label="Lot ${q} sur ${TOTAL}, ${serie.points} écus gagnés">${Array.from({length: TOTAL}, (_, i) => `<i class="${caseDe(serie.traces[i])}"></i>`).join("")}</div>${pastilleEcus(solde(index()))}</div>`;
 }
 
 // Le piège opposé à la vérité : le plus efficace, sauf 4 fois sur 10 un piège encore peu vu (sa chance).
@@ -961,10 +982,13 @@ const sansPoint = s => String(s).replace(/[.\s]+$/, "");
 /* Plus de question d'en-tête (demande de l'auteur, 23/11/2026) : le feuillet dit tout. Au-dessus,
    une ligne fine (famille, numéro de lot) et, pour une photo, la planche : l'image et sa question
    en légende, sans quoi « Fig. — Un facteur » ne voudrait rien dire. */
-function lot(m, motId) {
-  const f = famille(m);
-  const planche = false ? `<figure class="photo planche apparait"><button class="zoom" type="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.question)}"><span class="loupe" aria-hidden="true">⤢</span></button><figcaption><span class="legende">${esc(m.question)}</span><span class="credit">${esc(m.credit || "")}</span></figcaption></figure>` : "";
-  return `<div class="lot"><span class="pastille">${FAMILLES[f].label}</span><span class="n-lot">${numero(motId)}</span></div>${planche}`;
+// Consigne au-dessus des pièces, à la place de la pastille de famille (demande de l'auteur, 23/11/2026).
+const OBJETS = { definition: ["la vraie définition", "la définition"], anecdote: ["la vraie anecdote", "l'anecdote"],
+  expression: ["la vraie expression", "l'expression"], commune: ["la vraie commune", "la commune"], photo: ["la vraie légende", "la légende"],
+  metier: ["le vrai métier", "le métier"], intraduisible: ["la vraie traduction", "la traduction"], etrangere: ["le vrai sens", "le sens"] };
+function lot(m, motId, pose = false) {
+  const f = famille(m), [vrai, simple] = OBJETS[f] || OBJETS.definition;
+  return `<div class="lot"><span class="consigne">${pose ? `Contrefais ${simple}` : `Trouve ${vrai}`}</span><span class="n-lot">${numero(motId)}</span></div>`;
 }
 function entreeFeuillet(m, texte, categorie) {
   const f = famille(m), t = esc(texte);
@@ -978,7 +1002,7 @@ function entreeFeuillet(m, texte, categorie) {
     const [avant, apres] = String(m.question || "").split("___");
     return `${esc(avant || "")}<em class="rep">${esc(minuscule1(sansPoint(texte)))}</em>${esc(apres ?? ".")}`;
   }
-  if (f === "expression") return `<b class="vedette">${esc(m.mot.charAt(0).toUpperCase() + m.mot.slice(1))}</b>, <i>loc.</i> <span class="rep">${t}</span>`;
+  if (f === "expression") return `<b class="vedette">${esc(m.mot.charAt(0).toUpperCase() + m.mot.slice(1))}</b>. <span class="rep">${t}</span>`;
   if (f === "intraduisible" || f === "etrangere") {
     const q = String(m.question || ""), mot = (q.match(/«\s*(.+?)\s*»/) || [])[1] || "", langue = (q.match(/^En ([a-zéèêàïîô-]+)/i) || [])[1] || "";
     return `<b class="vedette">${esc(mot)}</b>${langue ? `, <i>${esc(langue)}</i>` : ""}. <span class="rep">${t}</span>`;
@@ -1050,8 +1074,7 @@ function afficherDuel(motId, options, piege) {
   const m = S.mots.get(motId);
   $e.innerHTML = `${entete()}
     ${lot(m, motId)}
-    <p class="consigne-achat">Trouve le vrai</p>
-    <div class="choix duel feuillets">${options.map((o, k) => `<button class="bouton feuillet" type="button" data-k="${k}" ${attrsFeuillet(m, motId)}><span class="peau-uv" aria-hidden="true"></span>${feuillet(m, motId, o.texte, o.categorie)}<small hidden></small></button>`).join("")}</div>
+    <div class="choix duel feuillets">${options.map((o, k) => `<button class="bouton feuillet" type="button" data-k="${k}" ${attrsFeuillet(m, motId)}><span class="peau-uv" aria-hidden="true"></span>${feuillet(m, motId, o.texte, o.categorie)}<small></small></button>`).join("")}</div>
     <div id="suite"></div>`;
   $e.querySelectorAll("[data-k]").forEach(b => b.onclick = () => repondre(motId, options, piege, +b.dataset.k));
 }
@@ -1110,9 +1133,12 @@ function repondre(motId, options, piege, k) {
     });
   };
   document.getElementById("suivant").onclick = suite;
+  // Petit écran : si « Lot suivant » est sous le bord, la page y descend une fois la révélation
+  // finie (une seule lecture de mise en page, hors de la séquence animée).
+  setTimeout(() => requestAnimationFrame(() => { const s = document.getElementById("suivant"); if (s && s.getBoundingClientRect().bottom > innerHeight) s.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "end" }); }), 1500);
   const bp = document.getElementById("pieger");
   if (bp) bp.onclick = () => cartePiege(motId, suite, PRIX_DIRECT);
-  document.getElementById("suivant").focus();
+  document.getElementById("suivant").focus({ preventScroll: true });
 }
 
 function enteteEcus(s, cout = PRIX_PIEGE) {
@@ -1140,7 +1166,7 @@ function choixFamille(retour) {
 function cartePiege(motId, retour, prix = PRIX_PIEGE) {
   const m = S.mots.get(motId), F = FAMILLES[famille(m)], direct = prix !== PRIX_PIEGE;
   $e.innerHTML = `${enteteEcus(solde(index()), prix)}
-    ${lot(m, motId)}
+    ${lot(m, motId, true)}
     <div class="original apparait"><span class="chip bon">D'époque</span><span>${esc(formater(m.vraie, famille(m)))}</span></div>
     <p class="titre-apercu">Ta contrefaçon</p>
     <div class="feuillet modele apercu vide" id="apercu" ${attrsFeuillet(m, motId)}>${feuillet(m, motId, formater(m.vraie, famille(m)), m.categorie)}</div>

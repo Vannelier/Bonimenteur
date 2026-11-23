@@ -103,6 +103,15 @@ sans animation.
 
 ## Mise en page
 
+Écran de duel (23/11/2026) : au-dessus des pièces, une seule ligne de consigne
+(« Trouve la vraie définition », « Trouve le vrai métier »…) et le numéro du
+lot, au lieu de la pastille de famille ; progression et solde sur une ligne.
+Rien ne grandit au choix : la ligne des tampons de chaque pièce et la zone du
+verdict et des boutons (`#suite`, 137 px) sont réservées dès l'affichage.
+Mesuré sur 15 lots : 0 px de variation à 390 × 664 et 375 × 553 ; « Lot
+suivant » dans l'écran à 390 × 664 (641 px au plus) ; sur iPhone SE, la page
+descend jusqu'à lui une fois la révélation finie.
+
 Celle de Discoverium : en-tête, onglets (Jouer, Atelier), la question, les deux
 réponses, le bouton principal dans le premier écran. L'atelier a deux
 sous-onglets : Contrefaire, Sur le marché.
