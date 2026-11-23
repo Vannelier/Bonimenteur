@@ -79,7 +79,9 @@ blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
   contrefait en direct, juste après l'avoir expertisé. Familles vides masquées.
 - Aperçu : le faux s'écrit dans l'emplacement de la réponse, sur le même
   artefact que l'original (surligné), au fil de la saisie ; l'original tient
-  en une ligne au-dessus.
+  en une ligne au-dessus. Tant que rien n'est tapé, le texte d'origine est
+  en filigrane dans le champ et grisé dans l'aperçu, à l'endroit qu'il va
+  remplacer.
 
 
 - Le poseur voit la vraie réponse (depuis le 23/11/2026 ; avant, il écrivait

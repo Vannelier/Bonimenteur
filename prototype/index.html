@@ -419,6 +419,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 /* Aperçu de la contrefaçon : l'emplacement de la réponse est surligné et suit la saisie. */
 .titre-apercu{margin:0 0 -6px;font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:var(--rouge)}
 .feuillet.apercu{transform:rotate(.4deg)}
+.apercu.vide .rep{opacity:.4}
 .apercu .rep{background:rgba(179,50,42,.12);box-shadow:0 0 0 2px rgba(179,50,42,.12);border-bottom:1.5px dashed var(--rouge);border-radius:2px}
 /* Écran de pose compact : l'original et l'aperçu sans en-tête ni pied, le bouton reste dans l'écran. */
 .feuillet.modele .f-tete,.feuillet.modele .f-pied,.feuillet.modele .carte-adresse{display:none}
@@ -1083,9 +1084,9 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
     ${lot(m, motId)}
     <div class="original apparait"><span class="chip bon">D'époque</span><span>${esc(formater(m.vraie, famille(m)))}</span></div>
     <p class="titre-apercu">Ta contrefaçon</p>
-    <div class="feuillet modele apercu" id="apercu" ${attrsFeuillet(m, motId)}>${feuillet(m, motId, "…", m.categorie)}</div>
+    <div class="feuillet modele apercu vide" id="apercu" ${attrsFeuillet(m, motId)}>${feuillet(m, motId, formater(m.vraie, famille(m)), m.categorie)}</div>
     ${famille(m) === "definition" ? `<div class="categories" role="radiogroup" aria-label="Catégorie de ton faux">${CATEGORIES.map(c => `<button type="button" role="radio" class="cat" data-cat="${c}" aria-checked="${c === (m.categorie || "n. m.")}">${c}</button>`).join("")}</div>` : ""}
-    <textarea id="piegeTexte" maxlength="${F.max}" aria-label="${F.champ}" placeholder="${F.champ}…"></textarea>
+    <textarea id="piegeTexte" maxlength="${F.max}" aria-label="${F.champ}" placeholder="${esc(formater(m.vraie, famille(m)))}"></textarea>
     <div class="sous-saisie"><label class="signer"><i>signé</i><input id="signeChamp" maxlength="${PSEUDO_MAX}" autocomplete="nickname" aria-label="Ta signature" placeholder="ton nom de faussaire" value="${esc(signatureProposee())}"></label><span class="compte" id="compte">0 / ${F.max}</span></div>
     <div id="erreurPiege"></div>
     <div class="ligne"><button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button>${direct ? "" : `<button class="bouton" type="button" id="autre">Autre</button>`}<button class="bouton piege" type="button" id="poser">Mettre en vente</button></div>`;
@@ -1094,7 +1095,9 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
   const apercu = document.getElementById("apercu"); let rafApercu = 0;
   const majApercu = () => { cancelAnimationFrame(rafApercu); rafApercu = requestAnimationFrame(() => {
     const cat = $e.querySelector('.cat[aria-checked="true"]');
-    apercu.innerHTML = feuillet(m, motId, ta.value.trim() ? formater(ta.value, famille(m)) : "…", cat ? cat.dataset.cat : m.categorie); }); };
+    // Champ vide : le texte d'origine, grisé, à l'emplacement qu'il va remplacer.
+    const vide = !ta.value.trim(); apercu.classList.toggle("vide", vide);
+    apercu.innerHTML = feuillet(m, motId, formater(vide ? m.vraie : ta.value, famille(m)), cat ? cat.dataset.cat : m.categorie); }); };
   ta.oninput = () => { document.getElementById("compte").textContent = `${ta.value.length} / ${F.max}`; majApercu(); };
   document.getElementById("signeChamp").oninput = e => e.target.classList.remove("refus");
   // Catégorie du faux : le faussaire peut la fausser aussi (« sapajou, adj. »).
