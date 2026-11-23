@@ -242,7 +242,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
   background:radial-gradient(circle at 18% 22%,rgba(150,95,40,.16) 0 3px,transparent 4px),radial-gradient(circle at 74% 64%,rgba(150,95,40,.12) 0 5px,transparent 7px),radial-gradient(circle at 88% 18%,rgba(150,95,40,.1) 0 2px,transparent 3px),radial-gradient(120% 120% at 50% 50%,#f1e5c6 45%,#dfca9d 85%,#cdb078 100%);
   box-shadow:inset 0 -3px 0 rgba(120,85,40,.18),inset 0 0 18px rgba(120,85,40,.12);
   clip-path:polygon(0 1.5%,4% 0,9% 1.2%,15% 0,22% 1%,30% 0,38% 1.2%,47% 0,55% 1%,63% 0,71% 1.3%,80% 0,88% 1%,95% 0,100% 1.5%,99.3% 15%,100% 30%,99.4% 45%,100% 60%,99.2% 75%,100% 90%,99.5% 100%,90% 98.8%,80% 100%,70% 98.9%,60% 100%,50% 99%,40% 100%,30% 98.8%,20% 100%,10% 99%,0 100%,.7% 85%,0 70%,.6% 55%,0 40%,.7% 25%,0 12%)}
-.choix .bouton.feuillet:nth-child(1){transform:rotate(-.7deg)}.choix .bouton.feuillet:nth-child(2){transform:rotate(.6deg)}
+.choix .bouton.feuillet{--r:0deg;transform:rotate(var(--r))}.choix .bouton.feuillet:nth-child(1){--r:-.7deg}.choix .bouton.feuillet:nth-child(2){--r:.6deg}
 .choix .bouton.feuillet::before{content:none}
 .choix .bouton.feuillet:active:not(:disabled){transform:scale(.985)}
 .choix .bouton.joue{cursor:default}
@@ -330,6 +330,45 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .f-planche .f-art{font-size:15.5px;line-height:1.28}
 .f-art .rubrique{font-style:italic}
 @media (max-height:700px){.f-planche{grid-template-columns:80px 1fr}.f-planche img{width:80px;height:80px}.f-planche .f-art{font-size:14.5px}}
+/* --- Révélation : séquence d'environ 1,3 s, transform et opacity seulement ------------------
+   0 ms     la pièce achetée s'enfonce puis se soulève ; l'étiquette « Acheté » s'épingle
+   300 ms   coup de tampon sur la pièce achetée ; à l'impact (≈ 600 ms) elle tressaute et un éclat
+            l'illumine (or si c'est la pièce d'époque, rouge si c'est un faux) ; floué : la table tremble
+   750 ms   tampon de l'autre pièce
+   1050 ms  la signature du faussaire apparaît
+   1150 ms  le verdict monte, le gain saute, la pastille des blops bondit, la case du lot se pose
+   Éclat et tampons sont des calques à part dont seule l'opacité et l'échelle varient. */
+.choix .bouton.feuillet::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;z-index:2}
+@media (prefers-reduced-motion:no-preference){
+  .revele .choisi{animation:achat .3s cubic-bezier(.2,1.6,.5,1),choc .32s .6s ease-out}
+  .revele.floue .choisi{animation:achat .3s cubic-bezier(.2,1.6,.5,1),secousse .42s .6s ease-out}
+  .revele .autre{animation:choc .3s 1.05s ease-out}
+  @keyframes achat{0%{transform:rotate(var(--r)) scale(.95)}60%{transform:rotate(var(--r)) scale(1.025)}100%{transform:rotate(var(--r))}}
+  @keyframes choc{0%{transform:rotate(var(--r)) scale(.97)}100%{transform:rotate(var(--r))}}
+  @keyframes secousse{0%,100%{transform:rotate(var(--r))}20%{transform:rotate(var(--r)) translateX(-7px)}40%{transform:rotate(var(--r)) translateX(6px)}60%{transform:rotate(var(--r)) translateX(-4px)}80%{transform:rotate(var(--r)) translateX(2px)}}
+  .revele .choisi::after{animation:eclat .55s .6s ease-out}
+  .revele.bien .choisi::after{background:radial-gradient(80% 90% at 50% 50%,rgba(240,200,90,.55),transparent 70%)}
+  .revele.floue .choisi::after{background:radial-gradient(80% 90% at 50% 50%,rgba(200,40,40,.42),transparent 70%)}
+  @keyframes eclat{0%{opacity:0}25%{opacity:1}100%{opacity:0}}
+  .revele .etiquette{animation:epingle .3s .08s cubic-bezier(.2,1.6,.5,1) both}
+  @keyframes epingle{from{opacity:0;transform:translateY(-14px) rotate(-14deg)}to{opacity:1;transform:rotate(-4deg)}}
+  .choix.revele .bouton.choisi .tampon,.choix.revele .bouton.choisi .chip.bon{animation-delay:.3s}
+  .choix.revele .bouton.autre .tampon,.choix.revele .bouton.autre .chip.bon{animation-delay:.75s}
+  .revele .signe-faux{animation:ap .35s 1.05s ease-out both}
+  .revele .bouton.demasque .rep,.revele .bouton.feuillet.debout .rep{transition:none}
+  .verdict{animation:monte .38s 1.15s cubic-bezier(.2,1.4,.5,1) both}
+  @keyframes monte{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .verdict .gain{animation:saute .45s 1.3s cubic-bezier(.2,1.8,.5,1) both}
+  @keyframes saute{0%{opacity:0;transform:scale(.3)}60%{opacity:1;transform:scale(1.35)}100%{transform:none}}
+  .verdict .sceau,.verdict .tampon-dupe{animation-delay:1.2s}
+  .ligne.direct,#suite .signal{animation:ap .3s 1.35s ease-out both}
+  .chip.blop.bump{animation:bondit .5s 1.45s cubic-bezier(.2,1.8,.5,1)}
+  @keyframes bondit{40%{transform:scale(1.3)}}
+  .progres i.neuf{animation:pose-case .4s 1.2s cubic-bezier(.2,1.8,.5,1) both}
+  @keyframes pose-case{from{transform:scale(0)}to{transform:none}}
+  .carte.secoue{animation:tremble .35s .62s ease-out}
+  @keyframes tremble{25%{transform:translateX(-4px)}50%{transform:translateX(3px)}75%{transform:translateX(-2px)}}
+}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -830,8 +869,12 @@ function repondre(motId, options, piege, k) {
   const etoile = I.pvqn.has(piege.id) ? `<span style="color:var(--piege)" title="Pièce de maître">${IC.etoile}</span>` : "";
   // L'étiquette « Acheté » marque la pièce que le joueur a choisie, vraie ou fausse.
   const achat = i => i === k ? `<span class="etiquette">Acheté</span>` : "";
+  // Séquence de révélation (CSS, docs/direction-artistique.md, « Révélation ») : la pièce achetée
+  // d'abord (étiquette, puis son tampon), l'autre ensuite, puis le verdict et les blops.
+  $e.querySelector(".choix.feuillets").classList.add("revele", juste ? "bien" : "floue");
   options.forEach((o, i) => {
     const b = $e.querySelector(`[data-k="${i}"]`);
+    b.classList.add(i === k ? "choisi" : "autre");
     if (o.id === "vrai") montrer(b, achat(i) + VRAI, "ok");
     else montrer(b, `${achat(i)}<span class="tampon" aria-label="Contrefaçon">Contrefaçon</span>${etoile}<span class="signe-faux ${juste ? "" : "dupe"}"><i>signé</i> ${esc(nom(o.auteur))}</span>`, juste ? "demasque" : "debout");
   });
@@ -846,11 +889,16 @@ function repondre(motId, options, piege, k) {
   if (db) db.collection("choix").add(trace).catch(() => {});
   serie.num++; serie.traces.push(juste ? 1 : 0);
   const fin = serie.num >= TOTAL;
-  document.getElementById("suite").innerHTML = `<div class="verdict apparait">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--piege)" : "var(--faux)"}">+${gain}${IC.blop}</span></div>
+  document.getElementById("suite").innerHTML = `<div class="verdict">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--piege)" : "var(--faux)"}">+${gain}${IC.blop}</span></div>
     <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="Contrefaire ce lot pour ${PRIX_DIRECT} blops">${IC.piege} −${PRIX_DIRECT}${IC.blop}</button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
     ${db ? `<div class="signal"><button class="lien" type="button" id="signaler">Signaler le lot</button><div id="raisons" hidden></div></div>` : ""}`;
   const pr = $e.querySelector(".progres"); if (pr) pr.remove();
   $e.querySelector(".entete").outerHTML = entete(serie.num);
+  const cases = $e.querySelectorAll(".progres i"); if (cases[serie.num - 1]) cases[serie.num - 1].classList.add("neuf");
+  const chipSolde = $e.querySelector(".entete .chip.blop"); if (chipSolde && gain) chipSolde.classList.add("bump");
+  if (!juste) $e.classList.add("secoue"); setTimeout(() => $e.classList.remove("secoue"), 1200);
+  // Vibration au coup de tampon (Android ; ignorée ailleurs), plus lourde si on est floué.
+  setTimeout(() => { try { navigator.vibrate && navigator.vibrate(juste ? 18 : [30, 50, 70]); } catch (e) {} }, 560);
   /* Signalement discret. « Un piège dit vrai » conteste le piège du duel ; tout est aussi gardé
      dans « signalements » pour la relecture. */
   const bs = document.getElementById("signaler");

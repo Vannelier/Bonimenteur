@@ -45,6 +45,26 @@ foi : `prototype/index.html`, en tête du `<style>`.
   (signatures).
 - Explicatif par l'image, pas par le texte.
 
+## Révélation
+
+Séquence d'environ 1,3 s, en CSS (classes `revele`, `choisi`, `autre`, `bien`,
+`floue` posées par `repondre`), transform et opacity seulement :
+
+| Temps | Ce qui se passe |
+|---|---|
+| 0 | la pièce achetée s'enfonce puis se soulève ; l'étiquette « Acheté » s'épingle |
+| 300 ms | coup de tampon sur la pièce achetée |
+| ≈ 600 ms | impact : la pièce tressaute, un éclat l'illumine (or si d'époque, rouge si faux) ; floué : la pièce secoue, la table tremble, le téléphone vibre (Android) |
+| 750 ms | tampon de l'autre pièce |
+| 1 050 ms | la signature du faussaire apparaît |
+| 1 150 ms | le verdict monte, le gain saute, la pastille des blops bondit, la case du lot se pose |
+
+Coût mesuré (Playwright, 390 × 780, processeur ralenti ×4, 5 révélations,
+23/11/2026) : fil principal 110 ms par révélation avant, 355 ms après ; images
+de plus de 34 ms : 2 sur les 5 révélations contre 1 sans animation, pire image
+67 ms dans les deux cas (l'insertion du résultat). `will-change` essayé, sans
+gain mesuré, retiré.
+
 ## Mise en page
 
 Celle de Discoverium : en-tête, onglets (Jouer, Atelier), la question, les deux
