@@ -17,9 +17,10 @@ foi : `prototype/index.html`, en tête du `<style>`.
   (photo), dictionnaire des mots du monde, recueil des locutions étrangères.
   Tout ce qui entoure la réponse (titre, page, tome, département) est
   identique sur les deux feuillets et vient de la question.
-- Deux familles ont leur objet plutôt qu'une page : la commune est une plaque
-  de gare émaillée (bleu, capitales blanches, liseré, éclats ; la page de
-  dictionnaire « ne donnait pas »), le métier une carte de visite gravée
+- Deux familles ont leur objet plutôt qu'une page : la commune est un panonceau
+  de gare ancien, vieilli (crème jaunie, cadre vert écaillé, vis et coulures de
+  rouille, rayures ; choisi parmi trois variantes le 23/11/2026, après la plaque
+  émaillée bleue et la page de dictionnaire), le métier une carte de visite gravée
   (nom et adresse fictifs, métier en capitales, spécialité à deviner).
 - Plusieurs ouvrages fictifs par famille (`OUVRAGES`, 22 en tout), tirés au
   sort par lot, le même pour les deux feuillets. Chacun a sa mise en page
