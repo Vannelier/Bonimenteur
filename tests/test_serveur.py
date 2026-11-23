@@ -118,3 +118,41 @@ def test_categorie_du_faux(client):
     assert r.status_code == 200
     faux = [p for p in client.get("/api/etat").json()["pieges"] if p["id"] == r.json()["id"]][0]
     assert faux["categorie"] == "adj."
+
+
+def test_contestation_controlee(client):
+    """On ne conteste qu'un faux de ce lot, déjà eu en duel, et pas le sien."""
+    client.get("/api/moi")
+    f = _faux_de(client, "sapajou")[0]
+    assert client.post("/api/contestations", json={"piege": "invente", "mot": "sapajou"}).status_code == 404
+    assert client.post("/api/contestations", json={"piege": f, "mot": "sapajou"}).status_code == 403
+    client.post("/api/choix", json={"mot": "sapajou", "montres": [f], "ordre": [f], "erreur": False})
+    assert client.post("/api/contestations", json={"piege": f, "mot": "sapajou"}).status_code == 200
+
+
+def test_pseudo_reserve_et_unique(client, tmp_path):
+    client.get("/api/moi")
+    assert client.put("/api/pseudo", json={"pseudo": "Truffe"}).status_code == 409
+    assert client.put("/api/pseudo", json={"pseudo": "Le Faussaire"}).status_code == 200
+    import app.main as m
+    with TestClient(m.app) as autre:
+        autre.get("/api/moi")
+        assert autre.put("/api/pseudo", json={"pseudo": "le  faussaire"}).status_code == 409
+
+
+def test_faux_identique_a_l_original_refuse(client):
+    client.get("/api/moi")
+    import app.main as m
+    vraie = m.QUESTIONS["sapajou"]["vraie"]
+    assert client.post("/api/pieges", json={"mot": "sapajou", "texte": vraie.upper()}).status_code == 422
+
+
+def test_signalement_controle(client):
+    client.get("/api/moi")
+    assert client.post("/api/signalements", json={"mot": "sapajou", "raison": "spam"}).status_code == 422
+    assert client.post("/api/signalements", json={"mot": "sapajou", "raison": "choquant"}).status_code == 200
+
+
+def test_compression(client):
+    r = client.get("/proches.json", headers={"Accept-Encoding": "gzip"})
+    assert r.headers.get("content-encoding") == "gzip"

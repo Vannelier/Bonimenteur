@@ -15,7 +15,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 |---|---|
 | `app/main.py` | Serveur : page, API (`/api/moi`, `/api/etat`, `/api/pieges`, `/api/choix`, `/api/contestations`, `/api/signalements`, `/api/pseudo`), SQLite. Identité par cookie HttpOnly posé par le serveur ; auteur d'un faux, gain d'un duel, prix et solde décidés ici. |
 | `prototype/serveur.js` | Interface `window.claude` (collection, doc, user) branchée sur l'API, relue toutes les 20 s et après chaque écriture. |
-| `prototype/index.html` | Le jeu : duels, atelier (Fabriquer, Mes faux), arbitre, bilan. Réglages en tête du script (`TOTAL`, `PRIX_PIEGE`, `PRIX_DIRECT`, `ECUS_DEPART`, `MORT_VUS`, `PVQN_VUS`, `CONTEST_MIN`, `FAMILLES` et leurs seuils). |
+| `prototype/index.html` | Le jeu : duels, atelier (Contrefaire, Sur le marché), arbitre, bilan. Réglages en tête du script (`TOTAL`, `PRIX_PIEGE`, `PRIX_DIRECT`, `ECUS_DEPART`, `MORT_VUS`, `PVQN_VUS`, `CONTEST_MIN`, `FAMILLES` et leurs seuils). |
 | `prototype/proches.json` | Données de l'arbitre du sens, générées par `tools/proches.py`. Ne pas éditer. |
 | `prototype/communes.txt` | Communes de France (geo.api.gouv.fr, 34 969). |
 | `prototype/photos/` | Images des questions photo (Wikimedia Commons, crédits dans les questions). |
@@ -23,13 +23,13 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | `data/faux-de-depart.json` | Trois faux de Truffe par question. |
 | `tools/proches.py` | Calcule `prototype/proches.json` depuis les vecteurs de Vocabulium. |
 | `tools/categories.py` | Relève dans le Wiktionnaire la catégorie grammaticale des définitions (`categorie`), à relire. |
-| `docs/` | `conception.md` (règles, économie, chemin), `questions.md` (charte, familles), `arbitre.md`, `direction-artistique.md`. |
+| `docs/` | `audit.md` (audit du 23/11/2026, points ouverts), `conception.md` (règles, économie, chemin), `questions.md` (charte, familles), `arbitre.md`, `direction-artistique.md`. |
 
 ## Commandes
 
 ```
 pip install -r requirements-dev.txt
-python -m pytest -q                                    # 10 tests, < 1 s
+python -m pytest -q                                    # 15 tests, ~2 s
 uvicorn app.main:app --reload                          # http://127.0.0.1:8000
 VOCABULIUM_DIR=../Vocabulium python tools/proches.py   # après un ajout de question
 ```
@@ -49,8 +49,12 @@ CI : `.github/workflows/tests.yml` lance `pytest -q` sur chaque PR.
   dire en quoi. Une question tentée ne lui est plus posée.
 - Un faux par joueur et par question ; une question où le joueur a un faux ne
   lui est pas posée.
-- Le score et les écus se calculent sur les choix enregistrés, jamais sur ce
-  que le client affirme (dans le vrai jeu : le serveur).
+- Le score et les écus se calculent sur les choix enregistrés. Limite connue :
+  la page reçoit les vraies réponses et déclare elle-même si le joueur s'est
+  trompé (`erreur`) ; le serveur ne peut pas encore le vérifier (`docs/audit.md`).
+- Serveur : tout accès à SQLite sous `_verrou` ; limites de débit par IP
+  (`LIMITES`) ; contestation seulement d'un faux eu en duel ; pseudos uniques,
+  « Truffe » réservé.
 - Toute nouvelle question suit la charte (`docs/questions.md`).
 
 ## Interface

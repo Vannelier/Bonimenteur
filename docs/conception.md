@@ -117,7 +117,7 @@ blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
   le serveur).
 - Pseudo : un seul par joueur (décision de l'auteur, 23/11/2026). Chaque faux se
   signe au moment de la pose, signature préremplie avec le pseudo ; la changer
-  change le pseudo partout. Modifiable aussi dans « Mes faux », ligne « Signé »
+  change le pseudo partout. Modifiable aussi dans « Sur le marché », ligne « Signé »
   (2 à 20 caractères). Une signature libre par faux casserait le lien entre le
   joueur et ses faux, et permettrait de signer du nom d'un autre.
 - Signalement discret sous chaque duel : un faux dit vrai, la vraie réponse

@@ -21,8 +21,12 @@ from datetime import datetime, time as heure
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import unicodedata
+from collections import defaultdict, deque
+
 from fastapi import FastAPI, HTTPException, Request, Response
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.middleware.gzip import GZipMiddleware
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
@@ -50,7 +54,31 @@ QUESTIONS = json.loads((RACINE / "data" / "questions.json").read_text())
 FAUX_DE_DEPART = [{**f, "auteur": "truffe", "cree": 0} for f in json.loads((RACINE / "data" / "faux-de-depart.json").read_text())]
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
-_verrou = threading.Lock()
+# Compression : proches.json passe de 2,7 Mo à 0,6 Mo (audit du 23/11/2026, docs/audit.md).
+app.add_middleware(GZipMiddleware, minimum_size=1000)
+# Un seul accès à la fois à la connexion SQLite, partagée entre les fils de FastAPI : sans ce
+# verrou, lectures et écritures de fils différents pouvaient se croiser (audit du 23/11/2026).
+_verrou = threading.RLock()
+
+# Limites de débit par adresse IP, en mémoire (comme les trois autres jeux) : identités neuves
+# (chaque cookie neuf reçoit 20 écus de départ) et écritures.
+LIMITES = {"identite": (20, 3600), "ecriture": (60, 60)}   # (nombre, fenêtre en secondes)
+_compteurs: dict = defaultdict(deque)
+
+
+def _ip(request: Request) -> str:
+    fwd = request.headers.get("x-forwarded-for", "")
+    return fwd.split(",")[0].strip() or (request.client.host if request.client else "?")
+
+
+def _limiter(request: Request, sorte: str):
+    n, fenetre = LIMITES[sorte]
+    q, now = _compteurs[(sorte, _ip(request))], time.monotonic()
+    while q and now - q[0] > fenetre:
+        q.popleft()
+    if len(q) >= n:
+        raise HTTPException(429, "trop de requêtes")
+    q.append(now)
 
 
 def _base():
@@ -91,10 +119,16 @@ def _joueur(request: Request, response: Response | None = None) -> str:
         return j
     if response is None:
         raise HTTPException(401, "joueur inconnu")
+    _limiter(request, "identite")
     j = "j_" + secrets.token_urlsafe(16)[:22]
     response.set_cookie(COOKIE, j, max_age=COOKIE_AGE, httponly=True, samesite="lax",
                         secure=request.url.scheme == "https" or request.headers.get("x-forwarded-proto") == "https")
     return j
+
+
+def _plat(s: str) -> str:
+    s = unicodedata.normalize("NFD", s.lower())
+    return re.sub(r"[^a-z0-9]+", " ", "".join(c for c in s if not unicodedata.combining(c))).strip()
 
 
 def _tous_les_faux():
@@ -126,12 +160,18 @@ def _solde(joueur: str) -> int:
 @app.get("/api/moi")
 def moi(request: Request, response: Response):
     j = _joueur(request, response)
-    return {"id": j, "solde": _solde(j), "ration": RATION - _joues_aujourdhui(j)}
+    with _verrou:
+        return {"id": j, "solde": _solde(j), "ration": RATION - _joues_aujourdhui(j)}
 
 
 @app.get("/api/etat")
 def etat(request: Request):
     """Tout ce que la page lit : questions, faux, choix, contestations, pseudos."""
+    with _verrou:
+        return _etat()
+
+
+def _etat():
     choix = [{**dict(r), "montres": json.loads(r["montres"]), "ordre": json.loads(r["ordre"]),
               "erreur": bool(r["erreur"])} for r in db.execute("SELECT * FROM choix")]
     return {
@@ -156,8 +196,13 @@ class Faux(BaseModel):
 @app.post("/api/pieges")
 def poser(f: Faux, request: Request):
     j = _joueur(request)
+    _limiter(request, "ecriture")
     if f.mot not in QUESTIONS:
         raise HTTPException(404, "question inconnue")
+    # Garde-fou minimal : l'arbitre du sens tourne dans la page ; ici, au moins, pas de copie
+    # de la vraie réponse (aux accents, à la casse et à la ponctuation près).
+    if _plat(f.texte) == _plat(QUESTIONS[f.mot]["vraie"]):
+        raise HTTPException(422, "trop proche de l'original")
     if f.prix not in PRIX:
         raise HTTPException(422, "prix inconnu")
     if f.categorie is not None and f.categorie not in CATEGORIES:
@@ -186,6 +231,7 @@ class Choix(BaseModel):
 def choisir(c: Choix, request: Request):
     """Un duel joué. Le gain se décide ici : 1 écu pour une bonne réponse."""
     j = _joueur(request)
+    _limiter(request, "ecriture")
     if c.mot not in QUESTIONS:
         raise HTTPException(404, "question inconnue")
     connus = {f["id"] for f in _tous_les_faux() if f["mot"] == c.mot}
@@ -211,10 +257,26 @@ class Contestation(BaseModel):
 
 @app.post("/api/contestations")
 def contester(c: Contestation, request: Request):
+    """Contester un faux qui dit vrai : seulement un faux de ce lot, qu'on a eu en duel et qui
+    n'est pas le sien (2 contestations le retirent : sans ces contrôles, deux cookies suffisaient
+    à retirer n'importe quel faux, audit du 23/11/2026)."""
     j = _joueur(request)
-    db.execute("INSERT OR IGNORE INTO contestations VALUES (?, ?, ?, ?)", (c.piege, j, c.mot, _ms()))
-    db.commit()
+    _limiter(request, "ecriture")
+    with _verrou:
+        faux = next((f for f in _tous_les_faux() if f["id"] == c.piege), None)
+        if not faux or faux["mot"] != c.mot:
+            raise HTTPException(404, "faux inconnu")
+        if faux["auteur"] == j:
+            raise HTTPException(403, "c'est ton faux")
+        vus = (json.loads(r["montres"]) for r in db.execute("SELECT montres FROM choix WHERE joueur = ? AND mot = ?", (j, c.mot)))
+        if not any(c.piege in m for m in vus):
+            raise HTTPException(403, "faux jamais expertisé")
+        db.execute("INSERT OR IGNORE INTO contestations VALUES (?, ?, ?, ?)", (c.piege, j, c.mot, _ms()))
+        db.commit()
     return {}
+
+
+RAISONS = {"piege-vrai", "verite-fausse", "choquant"}   # celles que la page propose
 
 
 class Signalement(BaseModel):
@@ -226,10 +288,17 @@ class Signalement(BaseModel):
 @app.post("/api/signalements")
 def signaler(s: Signalement, request: Request):
     j = _joueur(request)
-    db.execute("INSERT INTO signalements (mot, raison, pieges, joueur, t) VALUES (?, ?, ?, ?, ?)",
-               (s.mot, s.raison, json.dumps(s.pieges), j, _ms()))
-    db.commit()
+    _limiter(request, "ecriture")
+    if s.mot not in QUESTIONS or s.raison not in RAISONS:
+        raise HTTPException(422, "signalement inconnu")
+    with _verrou:
+        db.execute("INSERT INTO signalements (mot, raison, pieges, joueur, t) VALUES (?, ?, ?, ?, ?)",
+                   (s.mot, s.raison, json.dumps(s.pieges), j, _ms()))
+        db.commit()
     return {}
+
+
+RESERVES = {"truffe", "un joueur", "toi", "bonimenteur", "admin"}
 
 
 class Pseudo(BaseModel):
@@ -240,12 +309,19 @@ class Pseudo(BaseModel):
 def nommer(p: Pseudo, request: Request):
     """Chacun ne change que le sien : l'identifiant vient du cookie, pas de la requête."""
     j = _joueur(request)
+    _limiter(request, "ecriture")
     v = re.sub(r"\s+", " ", p.pseudo).strip()[:PSEUDO_MAX]
     if len(v) < PSEUDO_MIN:
         raise HTTPException(422, "pseudo trop court")
-    db.execute("INSERT INTO joueurs VALUES (?, ?, ?) ON CONFLICT (id) DO UPDATE SET pseudo = excluded.pseudo, t = excluded.t",
-               (j, v, _ms()))
-    db.commit()
+    # « Truffe » signe les faux de départ ; un pseudo n'appartient qu'à un joueur.
+    if _plat(v) in RESERVES:
+        raise HTTPException(409, "pseudo réservé")
+    with _verrou:
+        if any(_plat(r["pseudo"]) == _plat(v) for r in db.execute("SELECT pseudo FROM joueurs WHERE id != ?", (j,))):
+            raise HTTPException(409, "pseudo déjà pris")
+        db.execute("INSERT INTO joueurs VALUES (?, ?, ?) ON CONFLICT (id) DO UPDATE SET pseudo = excluded.pseudo, t = excluded.t",
+                   (j, v, _ms()))
+        db.commit()
     return {"pseudo": v}
 
 

@@ -105,7 +105,7 @@ sans animation.
 
 Celle de Discoverium : en-tête, onglets (Jouer, Atelier), la question, les deux
 réponses, le bouton principal dans le premier écran. L'atelier a deux
-sous-onglets : Fabriquer, Mes faux.
+sous-onglets : Contrefaire, Sur le marché.
 
 Un mot à définir ne se coupe jamais en deux : sa police rétrécit jusqu'à
 tenir sur une ligne (`ajusterMots`, 9 px au plus petit : la phobie de 36

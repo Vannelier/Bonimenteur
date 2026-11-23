@@ -590,7 +590,6 @@ $e.addEventListener("click", e => {
 }, true);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const melange = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
 
 /* État partagé */
 let db = null, user = null, moi = null, sample = null;
@@ -718,18 +717,6 @@ function formater(brut, f) {
 }
 const ORDRE = ["definition", "anecdote", "expression", "commune", "photo", "metier", "intraduisible", "etrangere"];
 const famille = m => FAMILLES[m.type] ? m.type : "definition";
-function enonce(m) { return `<div class="fiche apparait"><span class="serie" aria-hidden="true">${numero(m.id || m.mot || m.question)}</span>${enonceBrut(m).replaceAll(" apparait", "")}</div>`; }
-function enonceBrut(m) {
-  const f = famille(m);
-  const pastille = `<span class="pastille">${FAMILLES[f].label}</span>`;
-  if (f === "anecdote") return `${pastille}<p class="phrase apparait">${esc(m.question).replace("___", '<span class="trou">…</span>')}</p>`;
-  if (f === "commune" || f === "intraduisible" || f === "etrangere") return `${pastille}<p class="phrase apparait">${esc(m.question)}</p>`;
-  if (f === "photo") return `${pastille}<figure class="photo apparait"><button class="zoom" type="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.question)}"><span class="loupe" aria-hidden="true">⤢</span></button><figcaption>${esc(m.credit || "")}</figcaption></figure><p class="phrase">${esc(m.question)}</p>`;
-  if (f === "expression") return `${pastille}<p class="phrase apparait">D'où vient l'expression <span class="expr-titre">« ${esc(m.mot)} »</span> ?</p>`;
-  // Région ou registre dans la question, jamais dans la réponse : une étiquette « (Québec) » que seule la vérité porte la trahit.
-  const precisions = [m.region ? `<span class="chip">${IC.commune} ${esc(m.region)}</span>` : "", m.registre ? `<span class="chip">${esc(m.registre)}</span>` : ""].join("");
-  return `${pastille}<div class="mot apparait">${esc(m.mot)}</div>${precisions ? `<div class="chips">${precisions}</div>` : ""}`;
-}
 function titre(m) {
   const f = famille(m);
   if (f === "expression") return `« ${m.mot} »`;
@@ -777,7 +764,7 @@ let serie = null;
    Un piège coûte 10 écus ; 10 offerts au départ. Les deux choix : plus nerveux, et un seul piège suffit
    pour qu'une question soit jouable (les pièges des joueurs servent trois fois plus vite qu'avec quatre réponses). */
 // 20 écus au départ : de quoi poser un faux en direct (15) dès la première partie, avec du rab.
-const TOTAL = 15, SERIE_MAX = 5, PRIX_PIEGE = 10, ECUS_DEPART = 20;
+const TOTAL = 15, PRIX_PIEGE = 10, ECUS_DEPART = 20;
 /* Piéger en direct, juste après le duel : la question est choisie (dans l'atelier, on ne
    choisit que la famille) et la vraie vient d'être vue. Le choix se paie : 15 au lieu de 10. */
 const PRIX_DIRECT = 15;
@@ -891,7 +878,6 @@ function suite() {
 }
 
 const caseDe = n => n === 1 ? "v" : n === 0 ? "f" : "";
-const prochainGain = () => Math.min(serie.serie + 1, SERIE_MAX);
 function entete(q = serie.num + 1) {
   q = Math.min(q, TOTAL);
   return `<div class="progres" role="img" aria-label="Question ${q} sur ${TOTAL}">${Array.from({length: TOTAL}, (_, i) => `<i class="${caseDe(serie.traces[i])}"></i>`).join("")}</div>
@@ -964,9 +950,6 @@ const ouvrage = (m, motId) => { const l = OUVRAGES[famille(m)] || OUVRAGES.defin
 const attrsFeuillet = (m, motId) => { const o = ouvrage(m, motId), t = TEINTES[o.teinte]; return `data-style="${o.style}" style="--p1:${t[0]};--p2:${t[1]};--p3:${t[2]}"`; };
 // Catégories proposées au faussaire pour une définition (la vraie est cochée d'office).
 const CATEGORIES = ["n. m.", "n. f.", "n.", "adj.", "v.", "adv."];
-// Début de réponse inséré dans une phrase : « L'urine » → « l'urine », « Moins de » → « moins de ».
-// La majuscule n'est retirée que si la lettre suivante est une minuscule ou une apostrophe (pas un sigle).
-const minusculeDebut = s => /^[A-ZÀ-Ý]([a-zà-ÿ]|['’])/.test(s) ? s[0].toLowerCase() + s.slice(1) : s;
 // Première lettre en minuscule, accents compris (« À réchauffer » → « à réchauffer »), sauf un sigle.
 const minuscule1 = s => /^[A-ZÀ-Ý](?![A-ZÀ-Ý])/.test(String(s)) ? s.charAt(0).toLocaleLowerCase("fr") + s.slice(1) : s;
 const sansPoint = s => String(s).replace(/[.\s]+$/, "");
@@ -1206,7 +1189,10 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
     // Un seul pseudo par joueur : signer autrement le change partout (décision de l'auteur, 23/11/2026).
     const signe = document.getElementById("signeChamp"), sig = signe.value.replace(/\s+/g, " ").trim().slice(0, PSEUDO_MAX);
     if (sig.length < 2) { signe.focus(); signe.classList.add("refus"); return; }
-    if (sig !== monPseudo()) { try { await db.doc(`joueurs/${moi}`).set({ pseudo: sig, t: Date.now() }); S.pseudos.set(moi, sig); } catch (e) {} }
+    if (sig !== monPseudo()) {
+      try { await db.doc(`joueurs/${moi}`).set({ pseudo: sig, t: Date.now() }); S.pseudos.set(moi, sig); }
+      catch (e) { if (e && e.code === "doublon") { signe.classList.add("refus"); signe.focus(); err.innerHTML = `<p class="alerte">Cette signature est déjà prise.</p>`; return; } }
+    }
     poser.disabled = true;
     try {
       const cat = $e.querySelector('.cat[aria-checked="true"]');
@@ -1319,7 +1305,8 @@ function editerPseudo() {
   const valider = async () => {
     const v = ch.value.replace(/\s+/g, " ").trim().slice(0, PSEUDO_MAX);
     if (v.length < 2) { ch.focus(); ch.classList.add("refus"); return; }
-    try { await db.doc(`joueurs/${moi}`).set({ pseudo: v, t: Date.now() }); S.pseudos.set(moi, v); } catch (e) {}
+    try { await db.doc(`joueurs/${moi}`).set({ pseudo: v, t: Date.now() }); S.pseudos.set(moi, v); }
+    catch (e) { if (e && e.code === "doublon") { ch.classList.add("refus"); ch.focus(); return; } }
     atelier();
   };
   document.getElementById("pseudoOk").onclick = valider;
