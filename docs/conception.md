@@ -29,7 +29,7 @@ Le plus efficace de la question, sauf 4 fois sur 10 un faux encore peu vu
 
 ## Les blops
 
-- 10 au départ (`BLOP_DEPART`), +1 par bonne réponse, +1 par victime de ses faux.
+- 20 au départ (`BLOP_DEPART`, 23/11/2026 ; 10 avant) : de quoi poser un faux en direct dès la première partie, +1 par bonne réponse, +1 par victime de ses faux.
 - Faux posé dans l'atelier : 10 (`PRIX_PIEGE`). Le joueur choisit la famille ;
   le jeu lui donne la question qui a le moins de faux en vie.
 - Faux posé en direct, juste après un duel, sur cette question : 15

@@ -31,7 +31,7 @@ DONNEES = Path(os.environ.get("BONIMENTEUR_DATA_DIR")
                or RACINE / "var")
 
 # Règles reprises de la page (prototype/index.html, en tête du script ; docs/conception.md).
-BLOP_DEPART = 10
+BLOP_DEPART = 20          # de quoi poser un faux en direct (15) dès la première partie
 PRIX = {10, 15}            # atelier, direct (PRIX_PIEGE, PRIX_DIRECT)
 PSEUDO_MIN, PSEUDO_MAX = 2, 20
 TEXTE_MAX = 200            # au-dessus des maximums par famille de la page (40 à 120)

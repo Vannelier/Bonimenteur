@@ -28,7 +28,7 @@ def test_page_et_donnees_servies(client):
 
 def test_le_cookie_fait_le_joueur(client):
     a = client.get("/api/moi").json()
-    assert a["id"].startswith("j_") and a["solde"] == 10
+    assert a["id"].startswith("j_") and a["solde"] == 20
     assert client.get("/api/moi").json()["id"] == a["id"]
 
 
@@ -44,7 +44,7 @@ def test_gain_decide_par_le_serveur(client):
     client.get("/api/moi")
     f = _faux_de(client, "sapajou")[0]
     assert client.post("/api/choix", json={"mot": "sapajou", "montres": [f], "ordre": [f], "erreur": False}).json()["gain"] == 1
-    assert client.get("/api/moi").json()["solde"] == 11
+    assert client.get("/api/moi").json()["solde"] == 21
     # Une question ne se rejoue pas.
     assert client.post("/api/choix", json={"mot": "sapajou", "montres": [f], "ordre": [], "erreur": True}).status_code == 409
 
@@ -56,17 +56,18 @@ def test_faux_inconnu_refuse(client):
 
 def test_poser_un_faux_paye_et_rapporte(client, tmp_path):
     client.get("/api/moi")
-    assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15}).status_code == 402
-    r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves."})
+    # 20 au départ : un faux en direct (15) passe, le suivant à 10 n'a plus de quoi payer.
+    r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15})
     assert r.status_code == 200
-    assert client.get("/api/moi").json()["solde"] == 0
+    assert client.get("/api/moi").json()["solde"] == 5
+    assert client.post("/api/pieges", json={"mot": "cacochyme", "texte": "Plat mijoté."}).status_code == 402
     assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "Autre."}).status_code in (402, 409)
     # Un autre joueur tombe dans le faux : l'auteur gagne 1 blop.
     import app.main as m
     with TestClient(m.app) as autre:
         autre.get("/api/moi")
         assert autre.post("/api/choix", json={"mot": "sapajou", "montres": [r.json()["id"]], "ordre": [], "erreur": True}).json()["gain"] == 0
-    assert client.get("/api/moi").json()["solde"] == 1
+    assert client.get("/api/moi").json()["solde"] == 6
 
 
 def test_pseudo(client):

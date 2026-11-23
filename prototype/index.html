@@ -476,7 +476,8 @@ let serie = null;
    Juste : +1 blop. Faux : le piège fait du joueur sa victime (+1 blop à son auteur). Le score de la partie, ce sont les blops gagnés.
    Un piège coûte 10 blops ; 10 offerts au départ. Les deux choix : plus nerveux, et un seul piège suffit
    pour qu'une question soit jouable (les pièges des joueurs servent trois fois plus vite qu'avec quatre réponses). */
-const TOTAL = 15, SERIE_MAX = 5, PRIX_PIEGE = 10, BLOP_DEPART = 10;
+// 20 blops au départ : de quoi poser un faux en direct (15) dès la première partie, avec du rab.
+const TOTAL = 15, SERIE_MAX = 5, PRIX_PIEGE = 10, BLOP_DEPART = 20;
 /* Piéger en direct, juste après le duel : la question est choisie (dans l'atelier, on ne
    choisit que la famille) et la vraie vient d'être vue. Le choix se paie : 15 au lieu de 10. */
 const PRIX_DIRECT = 15;
@@ -560,6 +561,10 @@ function suite() {
   const I = index();
   if (serie.num >= TOTAL) return bilan();
   const dispo = motsEnJeu(I);
+  // Duel affiché mais pas encore joué (le joueur est passé par l'atelier) : on le reprend
+  // tel quel, même faux, même ordre ; sinon changer d'onglet ferait sauter une question.
+  const c = serie.enCours;
+  if (c && serie.repondu !== c.motId && S.mots.has(c.motId)) return afficherDuel(c.motId, c.options, c.piege);
   if (!dispo.length) return plusDeMots();
   question(choisir(dispo), I);
 }
@@ -589,6 +594,11 @@ async function question(motId, I) {
   const f = famille(m);
   const options = melange([{id: "vrai", texte: formater(m.vraie, f)}, {id: piege.id, texte: formater(piege.texte, f), auteur: piege.auteur}]);
   await nommer([piege.auteur]);
+  serie.enCours = { motId, options, piege };
+  afficherDuel(motId, options, piege);
+}
+function afficherDuel(motId, options, piege) {
+  const m = S.mots.get(motId);
   $e.innerHTML = `${entete()}
     ${enonce(m)}
     <div class="choix duel">${options.map((o, k) => `<button class="bouton" type="button" data-k="${k}"><span>${esc(o.texte)}</span><small hidden></small></button>`).join("")}</div>
