@@ -43,14 +43,14 @@ la ration active.
   d'appareil ne la remet pas à zéro. Le serveur refuse le 16e duel du jour.
 - Chaque duel montre une question, sa vraie réponse et un faux écrit par un
   autre joueur, dans un ordre tiré au hasard.
-- Bonne réponse : +1 blop. Mauvaise : le joueur est la victime du faux, et
-  l'auteur du faux gagne 1 blop.
+- Bonne réponse : +1 écu. Mauvaise : le joueur est la victime du faux, et
+  l'auteur du faux gagne 1 écu.
 - La vraie réponse et l'auteur du faux sont montrés après chaque choix.
 - Un duel affiché mais pas joué survit au passage par l'atelier.
 - Les familles de questions tournent dans un ordre tiré au hasard pour chaque
   tour, jamais deux fois la même de suite (`ORDRE`).
 - Fin de ration : compte à rebours jusqu'à minuit, cases vertes et rouges,
-  blops gagnés, joueurs dupés par ses faux dans la journée, le joueur qui a le
+  écus gagnés, joueurs dupés par ses faux dans la journée, le joueur qui a le
   plus dupé, l'atelier.
 
 ## Le faux montré
@@ -59,14 +59,17 @@ Le plus efficace de la question, sauf 4 fois sur 10 un faux encore peu vu
 (moins de 3 duels), pour lui laisser sa chance (`adversaire`). Efficacité :
 `(victimes + 1) / (victimes + démasquages + 3)` (`taux`).
 
-## Les blops
+## Les écus
 
-- 20 au départ (`BLOP_DEPART`, 23/11/2026 ; 10 avant) : de quoi poser un faux en direct dès la première partie, +1 par bonne réponse, +1 par victime de ses faux.
+La monnaie de l'antiquaire (décision de l'auteur, 23/11/2026 ; avant : le
+blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
+
+- 20 au départ (`ECUS_DEPART`, 23/11/2026 ; 10 avant) : de quoi poser un faux en direct dès la première partie, +1 par bonne réponse, +1 par victime de ses faux.
 - Faux posé dans l'atelier : 10 (`PRIX_PIEGE`). Le joueur choisit la famille ;
   le jeu lui donne la question qui a le moins de faux en vie.
 - Faux posé en direct, juste après un duel, sur cette question : 15
   (`PRIX_DIRECT`). Le prix est gardé avec le faux (`prix`).
-- La pastille du blop est une tache d'encre.
+- La pastille de l'écu est une pièce frappée d'un fleuron.
 
 ## Fabriquer un faux
 
@@ -111,7 +114,7 @@ Le plus efficace de la question, sauf 4 fois sur 10 un faux encore peu vu
 
 ## Modèle économique (décision de l'auteur, 22/11/2026)
 
-- Faux à 10 blops : 1 à 1,5 faux par partie.
+- Faux à 10 écus : 1 à 1,5 faux par partie.
 - Une ration gratuite par jour (15 duels), les suivantes payantes. Piste : 3 rations le
   premier jour, pour que le joueur pose son premier faux avant le mur.
 - Sans compte : identifiant posé par le serveur dans un cookie (Safari efface
@@ -127,7 +130,7 @@ Le plus efficace de la question, sauf 4 fois sur 10 un faux encore peu vu
 
 - QCM à 4 choix (une vraie, trois faux) : deviner amusait moins que piéger.
 - Course à 3 vies, puis parties de 12, puis de 10 questions.
-- Cartes de faux toutes les 4 questions, puis faux payés en blops au bilan.
+- Cartes de faux toutes les 4 questions, puis faux payés en écus au bilan.
 - « Chasse aux menteurs » (éliminer les faux un par un, gains 1, 2, 3) :
   abandonnée, le joueur qui connaissait la réponse cliquait les faux à la
   chaîne pour passer.
@@ -143,5 +146,5 @@ Le plus efficace de la question, sauf 4 fois sur 10 un faux encore peu vu
   auteur sur la fiche ; les autres cherchent à le détrôner.
 - Riposte : la victime peut écrire un faux montré en priorité à son faussaire.
 - Sceau personnel qui évolue avec le nombre de victimes.
-- Première victime mieux payée (3 blops, puis 1).
+- Première victime mieux payée (3 écus, puis 1).
 - Vente d'une ration de plus (paiement, cf. modèle économique).

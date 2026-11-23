@@ -62,7 +62,7 @@ def test_poser_un_faux_paye_et_rapporte(client, tmp_path):
     assert client.get("/api/moi").json()["solde"] == 5
     assert client.post("/api/pieges", json={"mot": "cacochyme", "texte": "Plat mijoté."}).status_code == 402
     assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "Autre."}).status_code in (402, 409)
-    # Un autre joueur tombe dans le faux : l'auteur gagne 1 blop.
+    # Un autre joueur tombe dans le faux : l'auteur gagne 1 écu.
     import app.main as m
     with TestClient(m.app) as autre:
         autre.get("/api/moi")

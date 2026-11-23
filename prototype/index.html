@@ -10,8 +10,8 @@
 <style>
 /* Bonimenteur : l'Atelier du faussaire. On fabrique des faux (documents, billets,
    tampons) et on démasque ceux des autres. Mise en page de Discoverium, univers propre :
-   sous-main de cuir vert, papier filigrané à guilloches, encre bleu-noir (les blops sont
-   des taches de cette encre), rouge des tampons, vert billet pour l'action principale.
+   sous-main de cuir vert, papier filigrané à guilloches, or terni pour les écus,
+   la monnaie de l'antiquaire, rouge des tampons, vert billet pour l'action principale.
    Cinzel (capitales gravées des billets) pour les titres et étiquettes, Source Serif 4
    pour le texte, Stardos Stencil pour les tampons. Guilloches et rosette : SVG statiques
    générés (sinusoïdes), rien d'animé dedans. N'anime que transform et opacity. */
@@ -23,7 +23,7 @@
   --vert:#2f5d4a; --vert-f:#1d3d30; --or:#b8973f; --rouge:#b3322a;
   --carte:var(--papier); --fond:#fbf8ee; --creux:#fffdf6;
   --accent:var(--vert); --accent-encre:#f3eedd; --surligne:var(--or);
-  --bon:var(--vert); --faux:var(--rouge); --piege:#2b3a6b;
+  --bon:var(--vert); --faux:var(--rouge); --piege:#2b3a6b; --ecu:#9a7424;
   --titre:"Cinzel","Times New Roman",serif;
   --texte:"Source Serif 4","Georgia",serif;
   --tampon:"Stardos Stencil","Impact",sans-serif;
@@ -161,13 +161,14 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .meche i{width:12px;height:12px;justify-self:center;border-radius:50%;background:var(--rouge)}
 .meche i.brule{background:transparent;box-shadow:inset 0 0 0 1.5px var(--trait)}
 .alerte{border:1.5px dashed var(--rouge);border-radius:3px;padding:12px;font-size:14px;margin:0;color:var(--rouge);background:#fbefe9}
-.jauge-blop{display:flex;align-items:center;gap:8px}
-.jauge-blop .barre{flex:1}
+.jauge-ecus{display:flex;align-items:center;gap:8px}
+.jauge-ecus .barre{flex:1}
 .signal{text-align:center;font-size:12.5px;color:var(--doux);margin-top:2px;display:flex;flex-direction:column;gap:4px;align-items:center}
 .lien{background:none;border:0;padding:4px 2px;font:inherit;font-size:12.5px;color:var(--doux);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .ic{width:1em;height:1em;display:inline-block;vertical-align:-.14em;flex:none}
 .chip{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:3px;background:var(--creux);border:1.5px solid var(--trait);font:700 14px/1.2 var(--titre);color:var(--encre);white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
-.chip.blop{color:var(--piege);border-color:rgba(43,58,107,.35)}
+.chip.ecu{color:var(--ecu);border-color:rgba(154,116,36,.45)}
+.chip.ecu .ic,.gros .ic,.gain .ic,.bouton .ic{width:1.15em;height:1.15em}
 .chip.faux{color:var(--rouge);border-color:rgba(179,50,42,.45)}
 .chip.or{background:var(--or);border-color:var(--or);color:#2a210a}
 .chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-items:center}
@@ -211,7 +212,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 #pseudoChamp:focus-visible{outline:2px solid var(--or);outline-offset:2px}
 #pseudoChamp.refus{border-bottom-color:var(--rouge);background:#fbefe9}
 .bouton.petit{min-height:44px;min-width:48px;padding:0 12px}
-/* Piéger en direct : à gauche de « Suivante », plus petit ; grisé tant qu'il manque des blops. */
+/* Piéger en direct : à gauche de « Suivante », plus petit ; grisé tant qu'il manque des écus. */
 .ligne.direct .bouton.plein{flex:1.6 1 0}
 .ligne.direct .bouton.piege{flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;gap:4px;font-family:var(--texte);font-variant-numeric:lining-nums}
 .ligne.direct .bouton.piege:disabled{background:var(--creux);color:var(--doux);border-color:var(--trait);box-shadow:0 3px 0 var(--trait)}
@@ -341,7 +342,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
             l'illumine (or si c'est la pièce d'époque, rouge si c'est un faux) ; floué : la table tremble
    750 ms   tampon de l'autre pièce
    1050 ms  la signature du faussaire apparaît
-   1150 ms  le verdict monte, le gain saute, la pastille des blops bondit, la case du lot se pose
+   1150 ms  le verdict monte, le gain saute, la pastille des écus bondit, la case du lot se pose
    Éclat et tampons sont des calques à part dont seule l'opacité et l'échelle varient. */
 .choix .bouton.feuillet::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;z-index:2}
 @media (prefers-reduced-motion:no-preference){
@@ -375,7 +376,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
   @keyframes saute{0%{opacity:0;transform:scale(.3)}60%{opacity:1;transform:scale(1.35)}100%{transform:none}}
   .verdict .sceau,.verdict .tampon-dupe{animation-delay:1.2s}
   .ligne.direct,#suite .signal{animation:ap .3s 1.35s ease-out both}
-  .chip.blop.bump{animation:bondit .5s 1.45s cubic-bezier(.2,1.8,.5,1)}
+  .chip.ecu.bump{animation:bondit .5s 1.45s cubic-bezier(.2,1.8,.5,1)}
   @keyframes bondit{40%{transform:scale(1.3)}}
   .progres i.neuf{animation:pose-case .4s 1.2s cubic-bezier(.2,1.8,.5,1) both}
   @keyframes pose-case{from{transform:scale(0)}to{transform:none}}
@@ -420,9 +421,10 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 <script src="serveur.js"></script>
 <script>
 const $e = document.getElementById("ecran");
-/* Icônes : un blop (goutte), un piège (mâchoire), une étoile, et une par famille de questions. */
+/* Icônes : un écu (goutte), un piège (mâchoire), une étoile, et une par famille de questions. */
 const IC = {
-  blop: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.6 3.1c1.3-.4 2 1.3 3.1 1.5 1.2.2 2.5-1 3.4-.2.9.9-.2 2.3.3 3.4.4 1 2.2 1.3 2.3 2.6.1 1.3-1.7 1.8-1.9 3-.2 1.1 1.1 2.5.3 3.4-.9.9-2.3-.1-3.4.4-1 .4-1.2 2.4-2.6 2.5-1.3.1-1.8-1.6-3-1.9-1.1-.3-2.6.9-3.5.1-.8-.8.2-2.2-.2-3.3-.4-1-2.3-1.2-2.4-2.5-.1-1.4 1.8-1.7 2.1-2.8.3-1.2-.9-2.6-.1-3.5.9-.9 2.3.2 3.4-.2 1-.4 1-2.2 2.2-2.5z"/><circle cx="21" cy="4.2" r="1.3" fill="currentColor"/><circle cx="2.9" cy="19.6" r="1.1" fill="currentColor"/><circle cx="20.6" cy="20.2" r=".7" fill="currentColor"/><circle cx="9.4" cy="9.6" r="1.5" fill="#fff" opacity=".55"/></svg>',
+  // L'écu, monnaie de l'antiquaire (choisi par l'auteur le 23/11/2026, à la place de l'écu, tache d'encre).
+  ecu: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1" stroke-dasharray="1.1 1.3"/><path fill="#fff" fill-opacity=".85" d="M12 7.2c.9 1.5 2.3 2 3.5 1.7-.4 1.6.2 3 1.5 3.6-1.3.6-1.9 2-1.5 3.6-1.2-.3-2.6.2-3.5 1.7-.9-1.5-2.3-2-3.5-1.7.4-1.6-.2-3-1.5-3.6 1.3-.6 1.9-2 1.5-3.6 1.2.3 2.6-.2 3.5-1.7z"/><ellipse cx="8.6" cy="7.4" rx="3" ry="1.3" fill="#fff" opacity=".35" transform="rotate(-35 8.6 7.4)"/></svg>',
   // Le faux s'écrit à la plume (choisie par l'auteur le 23/11/2026, à la place du piège à loup, illisible en petit).
   piege: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5c-6 .5-11 4.5-12.5 11l-1 3.5"/><path d="M20.5 3.5c.2 6.5-4 11.2-11 12.2"/><path d="M11 9.5l3.5.5M9.6 12.6l3.4.4"/><path d="M7 18l-2.5 2.5"/></svg>',
   etoile: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>',
@@ -463,7 +465,7 @@ function ajusterMots() {
 let ajustement = 0;
 new MutationObserver(() => { cancelAnimationFrame(ajustement); ajustement = requestAnimationFrame(ajusterMots); }).observe($e, { childList: true });
 if (document.fonts) document.fonts.ready.then(ajusterMots);
-const pastilleBlop = (n, signe = "") => `<span class="chip blop" aria-label="${signe}${n} blop${Math.abs(n) > 1 ? "s" : ""}">${signe}${n}${IC.blop}</span>`;
+const pastilleEcus = (n, signe = "") => `<span class="chip ecu" aria-label="${signe}${n} écu${Math.abs(n) > 1 ? "s" : ""}">${signe}${n}${IC.ecu}</span>`;
 /* Visionneuse : toucher une photo l'affiche en grand ; toucher n'importe où, × ou Échap la ferme. */
 function fermerVisionneuse() { const v = document.querySelector(".visionneuse"); if (v) { v.remove(); document.removeEventListener("keydown", echap); } }
 function echap(e) { if (e.key === "Escape") fermerVisionneuse(); }
@@ -671,11 +673,11 @@ function tropProche(piege, vraie, cadre) {
 /* Série */
 let serie = null;
 /* Partie : 15 duels. Chaque question oppose la vérité à un seul piège ; on touche celle qu'on croit vraie.
-   Juste : +1 blop. Faux : le piège fait du joueur sa victime (+1 blop à son auteur). Le score de la partie, ce sont les blops gagnés.
-   Un piège coûte 10 blops ; 10 offerts au départ. Les deux choix : plus nerveux, et un seul piège suffit
+   Juste : +1 écu. Faux : le piège fait du joueur sa victime (+1 écu à son auteur). Le score de la partie, ce sont les écus gagnés.
+   Un piège coûte 10 écus ; 10 offerts au départ. Les deux choix : plus nerveux, et un seul piège suffit
    pour qu'une question soit jouable (les pièges des joueurs servent trois fois plus vite qu'avec quatre réponses). */
-// 20 blops au départ : de quoi poser un faux en direct (15) dès la première partie, avec du rab.
-const TOTAL = 15, SERIE_MAX = 5, PRIX_PIEGE = 10, BLOP_DEPART = 20;
+// 20 écus au départ : de quoi poser un faux en direct (15) dès la première partie, avec du rab.
+const TOTAL = 15, SERIE_MAX = 5, PRIX_PIEGE = 10, ECUS_DEPART = 20;
 /* Piéger en direct, juste après le duel : la question est choisie (dans l'atelier, on ne
    choisit que la famille) et la vraie vient d'être vue. Le choix se paie : 15 au lieu de 10. */
 const PRIX_DIRECT = 15;
@@ -683,9 +685,9 @@ const prixDe = p => p.prix || PRIX_PIEGE;
 function solde(I) {
   const gagnes = S.choix.filter(c => c.joueur === moi).reduce((t, c) => t + (Array.isArray(c.ordre) ? (c.gain || 0) : (c.choisi === "vrai" ? 1 : 0)), 0);
   const rendus = I.piegesMoi.reduce((t, p) => t + (I.pris.get(p.id) || 0), 0);
-  return BLOP_DEPART + gagnes + rendus - I.piegesMoi.reduce((t, p) => t + prixDe(p), 0);
+  return ECUS_DEPART + gagnes + rendus - I.piegesMoi.reduce((t, p) => t + prixDe(p), 0);
 }
-const blops = n => `${n} blop${Math.abs(n) > 1 ? "s" : ""}`;
+const écus = n => `${n} écu${Math.abs(n) > 1 ? "s" : ""}`;
 /* Ration du jour : TOTAL duels par jour, heure de Paris (décision de l'auteur, 23/11/2026).
    Plus de partie avec un score à battre : on joue pour remplir son encrier, la ration donne
    le rythme, et c'est elle qui se vendra (docs/conception.md). Elle se compte sur les choix
@@ -791,7 +793,7 @@ const prochainGain = () => Math.min(serie.serie + 1, SERIE_MAX);
 function entete(q = serie.num + 1) {
   q = Math.min(q, TOTAL);
   return `<div class="progres" role="img" aria-label="Question ${q} sur ${TOTAL}">${Array.from({length: TOTAL}, (_, i) => `<i class="${caseDe(serie.traces[i])}"></i>`).join("")}</div>
-    <div class="haut entete"><span class="score" aria-label="Blops gagnés aujourd'hui">+${serie.points}</span>${pastilleBlop(solde(index()))}</div>`;
+    <div class="haut entete"><span class="score" aria-label="Écus gagnés aujourd'hui">+${serie.points}</span>${pastilleEcus(solde(index()))}</div>`;
 }
 
 // Le piège opposé à la vérité : le plus efficace, sauf 4 fois sur 10 un piège encore peu vu (sa chance).
@@ -932,7 +934,7 @@ function repondre(motId, options, piege, k) {
   // L'étiquette « Acheté » marque la pièce que le joueur a choisie, vraie ou fausse.
   const achat = i => i === k ? `<span class="etiquette">Acheté</span>` : "";
   // Séquence de révélation (CSS, docs/direction-artistique.md, « Révélation ») : la pièce achetée
-  // d'abord (étiquette, puis son tampon), l'autre ensuite, puis le verdict et les blops.
+  // d'abord (étiquette, puis son tampon), l'autre ensuite, puis le verdict et les écus.
   $e.querySelector(".choix.feuillets").classList.add("revele", juste ? "bien" : "floue");
   options.forEach((o, i) => {
     const b = $e.querySelector(`[data-k="${i}"]`);
@@ -951,13 +953,13 @@ function repondre(motId, options, piege, k) {
   if (db) db.collection("choix").add(trace).catch(() => {});
   serie.num++; serie.traces.push(juste ? 1 : 0);
   const fin = serie.num >= TOTAL;
-  document.getElementById("suite").innerHTML = `<div class="verdict">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--piege)" : "var(--faux)"}">+${gain}${IC.blop}</span></div>
-    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="Contrefaire ce lot pour ${PRIX_DIRECT} blops">${IC.piege} −${PRIX_DIRECT}${IC.blop}</button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
+  document.getElementById("suite").innerHTML = `<div class="verdict">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--ecu)" : "var(--faux)"}">+${gain}${IC.ecu}</span></div>
+    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="Contrefaire ce lot pour ${PRIX_DIRECT} écus">${IC.piege} −${PRIX_DIRECT}${IC.ecu}</button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
     ${db ? `<div class="signal"><button class="lien" type="button" id="signaler">Signaler le lot</button><div id="raisons" hidden></div></div>` : ""}`;
   const pr = $e.querySelector(".progres"); if (pr) pr.remove();
   $e.querySelector(".entete").outerHTML = entete(serie.num);
   const cases = $e.querySelectorAll(".progres i"); if (cases[serie.num - 1]) cases[serie.num - 1].classList.add("neuf");
-  const chipSolde = $e.querySelector(".entete .chip.blop"); if (chipSolde && gain) chipSolde.classList.add("bump");
+  const chipSolde = $e.querySelector(".entete .chip.ecu"); if (chipSolde && gain) chipSolde.classList.add("bump");
   if (!juste) $e.classList.add("secoue"); setTimeout(() => $e.classList.remove("secoue"), 1200);
   // Vibration au coup de tampon (Android ; ignorée ailleurs), plus lourde si on est floué.
   setTimeout(() => { try { navigator.vibrate && navigator.vibrate(juste ? 18 : [30, 50, 70]); } catch (e) {} }, 560);
@@ -983,23 +985,23 @@ function repondre(motId, options, piege, k) {
   document.getElementById("suivant").focus();
 }
 
-function enteteBlops(s, cout = PRIX_PIEGE) {
-  return `<div class="haut entete"><span class="chip blop" aria-label="Un piège coûte ${cout} blops">${IC.piege} −${cout}${IC.blop}</span>${pastilleBlop(s)}</div>`;
+function enteteEcus(s, cout = PRIX_PIEGE) {
+  return `<div class="haut entete"><span class="chip ecu" aria-label="Un piège coûte ${cout} écus">${IC.piege} −${cout}${IC.ecu}</span>${pastilleEcus(s)}</div>`;
 }
-// Réserve de blops face au prix : une goutte pleine par blop possédé, vide sinon.
-const reserve = (s, cout = PRIX_PIEGE) => `<div class="jauge-blop" role="img" aria-label="${Math.max(s, 0)} blops sur ${cout}"><span class="barre"><i style="transform:scaleX(${Math.min(Math.max(s, 0) / cout, 1)})"></i></span><span class="chip blop">${Math.max(s, 0)}/${cout}${IC.blop}</span></div>`;
+// Réserve d'écus face au prix : une pièce pleine par écu possédé, vide sinon.
+const reserve = (s, cout = PRIX_PIEGE) => `<div class="jauge-ecus" role="img" aria-label="${Math.max(s, 0)} écus sur ${cout}"><span class="barre"><i style="transform:scaleX(${Math.min(Math.max(s, 0) / cout, 1)})"></i></span><span class="chip ecu">${Math.max(s, 0)}/${cout}${IC.ecu}</span></div>`;
 
 function choixFamille(retour) {
   const I = index(), s = solde(I), par = aPieger(I);
   if (s < PRIX_PIEGE) {
-    $e.innerHTML = `${retour === atelier ? sousOnglets("fabriquer", I) : ""}${enteteBlops(s)}
+    $e.innerHTML = `${retour === atelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(s)}
       <div class="grosse-ic apparait">${IC.piege}</div>
       ${reserve(s)}
       <button class="bouton plein" type="button" id="retour" style="width:100%">Expertise</button>`;
     document.getElementById("retour").onclick = () => (retour === atelier ? montrer("jouer") : nouvelleSerie()); if (retour === atelier) lierSous(); return;
   }
   const dansAtelier = retour === atelier;
-  $e.innerHTML = `${dansAtelier ? sousOnglets("fabriquer", I) : ""}${enteteBlops(s)}
+  $e.innerHTML = `${dansAtelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(s)}
     <div class="tuiles apparait">${ORDRE.map(f => `<button class="tuile" type="button" data-f="${f}" ${par.has(f) ? "" : "disabled"}>${IC[f]}${FAMILLES[f].label}</button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
   $e.querySelectorAll("[data-f]").forEach(b => b.onclick = () => { const id = motAtelier(index(), b.dataset.f); if (id) cartePiege(id, retour); });
   if (dansAtelier) lierSous(); else document.getElementById("retour").onclick = retour;
@@ -1007,7 +1009,7 @@ function choixFamille(retour) {
 
 function cartePiege(motId, retour, prix = PRIX_PIEGE) {
   const m = S.mots.get(motId), F = FAMILLES[famille(m)], direct = prix !== PRIX_PIEGE;
-  $e.innerHTML = `${enteteBlops(solde(index()), prix)}
+  $e.innerHTML = `${enteteEcus(solde(index()), prix)}
     ${lot(m, motId)}
     <div class="feuillet modele apparait" ${attrsFeuillet(m, motId)}><span class="chip bon">D'époque</span>${feuillet(m, motId, formater(m.vraie, famille(m)), m.categorie)}</div>
     <label for="piegeTexte">${F.champ}</label>
@@ -1062,9 +1064,9 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
       await db.collection("pieges").add({ mot: motId, texte, auteur: moi, cree: Date.now(), ...(direct ? { prix } : {}), ...(cat ? { categorie: cat.dataset.cat } : {}) });
       if (serie) serie.pieges++;
       const reste = solde(index());
-      $e.innerHTML = `${enteteBlops(reste, prix)}
+      $e.innerHTML = `${enteteEcus(reste, prix)}
         <div class="grosse-ic apparait">${IC.piege}</div>
-        <div class="chips"><span class="chip bon">${IC.ok} En vente</span>${pastilleBlop(prix, "−")}</div>
+        <div class="chips"><span class="chip bon">${IC.ok} En vente</span>${pastilleEcus(prix, "−")}</div>
         <div class="ligne">${!direct && reste >= PRIX_PIEGE ? `<button class="bouton piege" type="button" id="encore">Encore</button>` : ""}<button class="bouton plein" type="button" id="suivant">Continuer</button></div>`;
       const enc = document.getElementById("encore"); if (enc) enc.onclick = () => choixFamille(retour);
       document.getElementById("suivant").onclick = retour;
@@ -1085,7 +1087,7 @@ function avantMinuit() {
 }
 const duree = s => { const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60); return h ? `${h} h ${String(m).padStart(2, "0")}` : `${m} min`; };
 let minuteurDemain = 0;
-/* Fin de la ration : ce que la journée a rapporté (blops des duels, victimes de ses faux),
+/* Fin de la ration : ce que la journée a rapporté (écus des duels, victimes de ses faux),
    l'heure de la prochaine ration, et l'atelier pour dépenser. */
 async function bilan() {
   let pire = null; for (const [id, n] of serie.piegeur) if (!pire || n > pire[1]) pire = [id, n];
@@ -1093,12 +1095,12 @@ async function bilan() {
   const I = index(), j = aujourdhui(), mesIds = new Set(I.piegesMoi.map(p => p.id));
   const dupes = I.victimes.filter(v => mesIds.has(v.piege) && v.joueur !== moi && jourDe(v.t || 0) === j).length;
   const cases = serie.traces.map(n => n ? "🟩" : "🟥").join("");
-  const partage = `Bonimenteur, vacation${RATION_ACTIVE ? ` du ${j.split("-").reverse().slice(0, 2).join("/")}` : ""} : +${serie.points} blops\n${cases}${dupes ? `\nMes faux ont dupé ${dupes} joueur${dupes > 1 ? "s" : ""}` : ""}`;
-  $e.innerHTML = `${RATION_ACTIVE ? "" : `<h2 class="apparait">Fin de vacation</h2><div class="gros apparait" style="color:var(--piege)">+${serie.points}${IC.blop}</div>`}${RATION_ACTIVE ? `<div class="demain apparait" role="img" aria-label="Prochaine ration dans ${duree(avantMinuit())}"><span class="sablier" aria-hidden="true">${IC.sablier}</span><span id="compteRebours">${duree(avantMinuit())}</span></div>` : ""}
+  const partage = `Bonimenteur, vacation${RATION_ACTIVE ? ` du ${j.split("-").reverse().slice(0, 2).join("/")}` : ""} : +${serie.points} écus\n${cases}${dupes ? `\nMes faux ont dupé ${dupes} joueur${dupes > 1 ? "s" : ""}` : ""}`;
+  $e.innerHTML = `${RATION_ACTIVE ? "" : `<h2 class="apparait">Fin de vacation</h2><div class="gros apparait" style="color:var(--ecu)">+${serie.points}${IC.ecu}</div>`}${RATION_ACTIVE ? `<div class="demain apparait" role="img" aria-label="Prochaine ration dans ${duree(avantMinuit())}"><span class="sablier" aria-hidden="true">${IC.sablier}</span><span id="compteRebours">${duree(avantMinuit())}</span></div>` : ""}
     <div class="cases" aria-hidden="true">${serie.traces.map(n => `<i class="${n ? "v" : ""}"></i>`).join("")}</div>
-    <div class="chips">${RATION_ACTIVE ? `<span class="chip blop" aria-label="${serie.points} blops gagnés aujourd'hui">+${serie.points}${IC.blop}</span>` : ""}${dupes ? `<span class="chip faux" aria-label="${dupes} joueurs dupés par tes faux aujourd'hui">${IC.joueur} ${dupes}</span>${pastilleBlop(dupes, "+")}` : ""}</div>
+    <div class="chips">${RATION_ACTIVE ? `<span class="chip ecu" aria-label="${serie.points} écus gagnés aujourd'hui">+${serie.points}${IC.ecu}</span>` : ""}${dupes ? `<span class="chip faux" aria-label="${dupes} joueurs dupés par tes faux aujourd'hui">${IC.joueur} ${dupes}</span>${pastilleEcus(dupes, "+")}` : ""}</div>
     ${pire ? `<div class="chips"><span class="chip faux">${IC.piege} ${esc(nom(pire[0]))} ×${pire[1]}</span></div>` : ""}
-    <div class="haut entete" style="justify-content:center">${pastilleBlop(solde(I))}</div>
+    <div class="haut entete" style="justify-content:center">${pastilleEcus(solde(I))}</div>
     <button class="bouton piege" type="button" id="versAtelier">Passer à l'atelier</button>
     ${RATION_ACTIVE ? "" : `<button class="bouton plein" type="button" id="encore">Nouvelle vacation</button>`}
     <button class="bouton" type="button" id="copier">Partager</button>`;
@@ -1151,11 +1153,11 @@ async function atelier(sous) {
   const etat = p => {
     if (I.retire.has(p.id)) return `<span class="chip faux">${IC.croix} Retiré du marché</span>`;
     if (I.mort.has(p.id)) return `<span class="chip faux">${IC.croix} Saisi</span>`;
-    if (I.pvqn.has(p.id)) return `<span class="chip blop">${IC.etoile} Pièce de maître</span>`;
+    if (I.pvqn.has(p.id)) return `<span class="chip ecu">${IC.etoile} Pièce de maître</span>`;
     return "";
   };
-  $e.innerHTML = `${sousOnglets("faux", I)}<div class="signature" id="signature"><span class="signe">Signé</span><button class="nom-signe" type="button" id="pseudoBtn" aria-label="Changer de pseudo">${monPseudo() ? esc(monPseudo()) : "ton pseudo"}${IC.plume}</button></div><div class="haut entete"><span class="chip" aria-label="${mes.length} pièges posés">${IC.piege} ${mes.length}</span><span class="chip faux" aria-label="${total} joueurs piégés">${IC.joueur} ${total}</span>${pastilleBlop(s)}</div>
-    ${mes.length ? `<ul class="liste">${mes.map(p => { const v = I.demasque.get(p.id) || 0, n = I.pris.get(p.id) || 0; const mot = S.mots.get(p.mot); return `<li class="${I.mort.has(p.id) || I.retire.has(p.id) ? "eteint" : ""}"><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>${esc(formater(p.texte, mot ? famille(mot) : "definition"))}</span>${!n && !I.mort.has(p.id) && !I.retire.has(p.id) ? meche(v) : ""}<span class="chips" style="justify-content:flex-start">${etat(p)}<span class="chip" aria-label="${v} joueurs l'ont démasqué">${IC.oeil} ${v}</span><span class="chip faux" aria-label="${n} joueurs piégés">${IC.joueur} ${n}</span>${n ? pastilleBlop(n, "+") : ""}</span></li>`; }).join("")}</ul>`
+  $e.innerHTML = `${sousOnglets("faux", I)}<div class="signature" id="signature"><span class="signe">Signé</span><button class="nom-signe" type="button" id="pseudoBtn" aria-label="Changer de pseudo">${monPseudo() ? esc(monPseudo()) : "ton pseudo"}${IC.plume}</button></div><div class="haut entete"><span class="chip" aria-label="${mes.length} pièges posés">${IC.piege} ${mes.length}</span><span class="chip faux" aria-label="${total} joueurs piégés">${IC.joueur} ${total}</span>${pastilleEcus(s)}</div>
+    ${mes.length ? `<ul class="liste">${mes.map(p => { const v = I.demasque.get(p.id) || 0, n = I.pris.get(p.id) || 0; const mot = S.mots.get(p.mot); return `<li class="${I.mort.has(p.id) || I.retire.has(p.id) ? "eteint" : ""}"><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>${esc(formater(p.texte, mot ? famille(mot) : "definition"))}</span>${!n && !I.mort.has(p.id) && !I.retire.has(p.id) ? meche(v) : ""}<span class="chips" style="justify-content:flex-start">${etat(p)}<span class="chip" aria-label="${v} joueurs l'ont démasqué">${IC.oeil} ${v}</span><span class="chip faux" aria-label="${n} joueurs piégés">${IC.joueur} ${n}</span>${n ? pastilleEcus(n, "+") : ""}</span></li>`; }).join("")}</ul>`
       : `<div class="grosse-ic">${IC.piege}</div>`}
     ${galerie.length ? `<h2>${IC.etoile} Pièces de maître</h2><ul class="liste">${galerie.map(p => { const mot = S.mots.get(p.mot); return `<li><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>« ${esc(formater(p.texte, mot ? famille(mot) : "definition"))} »</span><span class="chips" style="justify-content:flex-start"><span class="chip">${IC.piege} ${esc(nom(p.auteur))}</span><span class="chip faux" aria-label="joueurs piégés">${IC.joueur} ${I.pris.get(p.id) || 0}</span></span></li>`; }).join("")}</ul>` : ""}`;
   lierSous();
@@ -1191,7 +1193,7 @@ async function absence() {
   const initiale = id => esc((nom(id) || "?").charAt(0).toUpperCase());
   $e.innerHTML = `<h2 style="text-align:center">Tes faux ont trouvé preneur</h2>
     <div class="gros apparait" aria-label="${victimes.length} victimes">${victimes.length}</div>
-    <div class="chips">${IC.joueur}${pastilleBlop(victimes.length, "+")}</div>
+    <div class="chips">${IC.joueur}${pastilleEcus(victimes.length, "+")}</div>
     <ul class="liste">${[...parPiege].map(([id, js]) => { const p = mesIds.get(id), mot = S.mots.get(p.mot); return `<li><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>${esc(formater(p.texte, mot ? famille(mot) : "definition"))}</span><span class="victimes">${[...new Set(js)].map(j => `<span class="victime"><b aria-hidden="true">${initiale(j)}</b>${esc(nom(j))}</span>`).join("")}</span></li>`; }).join("")}</ul>
     <button class="bouton plein" type="button" id="jouerAbsence">Expertise</button>`;
   document.getElementById("jouerAbsence").onclick = () => montrer("jouer");

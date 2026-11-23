@@ -44,7 +44,7 @@ foi : `prototype/index.html`, en tête du `<style>`.
   401 à 603 px à 390 × 664, 395 à 523 px à 375 × 553, tous dans l'écran.
 - Démasqué : sceau de cire. Dupé : tampon « Dupé ».
 - Couleurs porteuses de sens : vert billet pour continuer (Suivante), rouge
-  des tampons pour fabriquer (Piéger, Poser), encre bleu-noir pour les blops.
+  des tampons pour fabriquer (Piéger, Poser), or terni pour les écus.
 - Icône du faux : une plume ; signatures à la plume (Caveat).
 - Polices : Cinzel (titres, étiquettes), Source Serif 4 (texte, chiffres),
   IM Fell English (ouvrages anciens), Stardos Stencil (tampons), Caveat
@@ -63,7 +63,7 @@ Séquence d'environ 1,3 s, en CSS (classes `revele`, `choisi`, `autre`, `bien`,
 | ≈ 600 ms | impact : la pièce tressaute, un éclat l'illumine (or si d'époque, rouge si faux) ; floué : la pièce secoue, la table tremble, le téléphone vibre (Android) |
 | 750 ms | tampon de l'autre pièce |
 | 1 050 ms | la signature du faussaire apparaît |
-| 1 150 ms | le verdict monte, le gain saute, la pastille des blops bondit, la case du lot se pose |
+| 1 150 ms | le verdict monte, le gain saute, la pastille des écus bondit, la case du lot se pose |
 
 Coût, mesuré au processeur ralenti ×4 (Playwright, 390 × 780, trace
 `devtools.timeline`, moyenne sur 4 révélations, 23/11/2026). Première version :

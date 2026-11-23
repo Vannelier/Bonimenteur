@@ -4,7 +4,7 @@ La page (prototype/index.html) a été écrite pour la base des artifacts claude
 (window.claude). Hors de claude.ai, prototype/serveur.js lui fournit la même
 interface, branchée sur l'API ci-dessous. Le serveur garde la main sur ce qui
 compte : l'identité du joueur (cookie posé par lui), l'auteur d'un faux, le gain
-d'un duel, le prix d'un faux et le solde de blops.
+d'un duel, le prix d'un faux et le solde d'écus.
 
 Données : SQLite dans BONIMENTEUR_DATA_DIR, à défaut le volume Railway
 (RAILWAY_VOLUME_MOUNT_PATH), puis var/ en local. Questions et faux de départ :
@@ -33,7 +33,7 @@ DONNEES = Path(os.environ.get("BONIMENTEUR_DATA_DIR")
                or RACINE / "var")
 
 # Règles reprises de la page (prototype/index.html, en tête du script ; docs/conception.md).
-BLOP_DEPART = 20          # de quoi poser un faux en direct (15) dès la première partie
+ECUS_DEPART = 20          # de quoi poser un faux en direct (15) dès la première partie
 # Ration du jour : 15 duels par jour, heure de Paris (TOTAL dans la page ; docs/conception.md).
 RATION = 15
 # Coupée pour les essais (demande de l'auteur, 23/11/2026) ; True la rétablit, avec RATION_ACTIVE de la page.
@@ -120,7 +120,7 @@ def _solde(joueur: str) -> int:
         for r in db.execute("SELECT montres, ordre FROM choix WHERE erreur = 1"):
             ordre = set(json.loads(r["ordre"]))
             victimes += sum(1 for f in json.loads(r["montres"]) if f in ids and f not in ordre)
-    return BLOP_DEPART + gagnes + victimes - sum(r["prix"] for r in mes)
+    return ECUS_DEPART + gagnes + victimes - sum(r["prix"] for r in mes)
 
 
 @app.get("/api/moi")
@@ -164,7 +164,7 @@ def poser(f: Faux, request: Request):
         raise HTTPException(422, "catégorie inconnue")
     with _verrou:
         if _solde(j) < f.prix:
-            raise HTTPException(402, "pas assez de blops")
+            raise HTTPException(402, "pas assez d'écus")
         fid = secrets.token_urlsafe(12)
         try:
             db.execute("INSERT INTO faux (id, mot, texte, auteur, cree, prix, categorie) VALUES (?, ?, ?, ?, ?, ?, ?)",
@@ -184,7 +184,7 @@ class Choix(BaseModel):
 
 @app.post("/api/choix")
 def choisir(c: Choix, request: Request):
-    """Un duel joué. Le gain se décide ici : 1 blop pour une bonne réponse."""
+    """Un duel joué. Le gain se décide ici : 1 écu pour une bonne réponse."""
     j = _joueur(request)
     if c.mot not in QUESTIONS:
         raise HTTPException(404, "question inconnue")
