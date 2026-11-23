@@ -27,8 +27,14 @@ foi : `prototype/index.html`, en tête du `<style>`.
   étiquette « Acheté » sur la pièce choisie. La lampe à ultraviolets
   (`LAMPE_UV`) a été essayée puis écartée le 23/11/2026 : « ça ne marche pas »
   en jeu. Le code reste, coupé.
-- La question reste une pièce officielle sur papier filigrané (numéro de série
-  rouge) ; sous-main de cuir vert, cadre à guilloches.
+- Plus de question d'en-tête (23/11/2026) : le feuillet dit tout. Au-dessus,
+  une ligne fine (famille, « Lot C·2912 ») et la consigne « Trouve le vrai ».
+  Région et registre passent dans l'entrée du feuillet, identiques sur les
+  deux (« **achaler**, *v., Québec.* »). La photo garde sa question, en
+  légende d'une planche (image et légende côte à côte). Sous 700 px de haut,
+  en-tête et feuillets resserrés ; sous 600 px, en-tête courant et pied des
+  feuillets masqués. Bas du second feuillet mesuré (Playwright, 15 lots) :
+  401 à 603 px à 390 × 664, 395 à 523 px à 375 × 553, tous dans l'écran.
 - Démasqué : sceau de cire. Dupé : tampon « Dupé ».
 - Couleurs porteuses de sens : vert billet pour continuer (Suivante), rouge
   des tampons pour fabriquer (Piéger, Poser), encre bleu-noir pour les blops.

@@ -294,6 +294,32 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .etiquette{position:relative;display:inline-flex;align-items:center;gap:6px;padding:3px 10px 3px 16px;font:700 11px/1.2 var(--titre);letter-spacing:.14em;text-transform:uppercase;
   color:#4a3618;background:#e9d29a;clip-path:polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%);transform:rotate(-4deg)}
 .etiquette::before{content:"";position:absolute;left:7px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:#f1e5c6}
+/* Ligne du lot (famille, numéro) et planche de la photo, à la place de la question d'en-tête. */
+.lot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:-4px}
+.lot .pastille{align-self:auto}
+.n-lot{font:700 13px/1 var(--tampon);letter-spacing:.12em;color:var(--rouge)}
+.photo.planche{display:grid;grid-template-columns:112px 1fr;gap:10px;align-items:center;background:var(--filigrane);padding:8px;border:1.5px solid var(--vert);border-radius:3px}
+.photo.planche img{height:96px;border:3px solid #fff}
+.photo.planche .loupe{width:26px;height:26px;font-size:14px;right:5px;bottom:5px}
+.photo.planche figcaption{display:flex;flex-direction:column;gap:2px;text-align:left}
+.photo.planche .legende{font:600 16px/1.3 var(--texte);color:var(--encre)}
+.photo.planche .credit{font-size:11px;color:var(--doux);text-align:right}
+/* Écran court (téléphone en Safari, 553 à 700 px utiles) : les deux feuillets doivent tenir
+   dans le premier écran. En-tête resserré, feuillets un peu plus serrés, planche photo réduite. */
+@media (max-height:700px){
+  header{margin-bottom:6px} header .rosette{width:36px;height:36px} h1{font-size:21px}
+  .carte{padding:14px 12px 12px;gap:10px}
+  .progres i{height:9px}
+  .choix .bouton.feuillet{padding:9px 14px 9px;gap:4px}
+  .f-art{font-size:16.5px;line-height:1.28} .f-art .vedette{font-size:17px}
+  .f-tete{font-size:11px} .f-pied{font-size:11px}
+  .photo.planche img{height:84px}
+  .photo.planche .legende{font-size:15px}
+  .choix.feuillets{gap:10px}
+}
+/* Très court (iPhone SE en Safari, 553 px) : l'en-tête courant et le pied des feuillets, décoratifs,
+   s'effacent pour que la planche photo et ses deux feuillets tiennent dans l'écran. */
+@media (max-height:600px){.choix .bouton.feuillet .f-tete,.choix .bouton.feuillet .f-pied{display:none}}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -720,9 +746,18 @@ const CATEGORIES = ["n. m.", "n. f.", "n.", "adj.", "v.", "adv."];
 // La majuscule n'est retirée que si la lettre suivante est une minuscule ou une apostrophe (pas un sigle).
 const minusculeDebut = s => /^[A-ZÀ-Ý]([a-zà-ÿ]|['’])/.test(s) ? s[0].toLowerCase() + s.slice(1) : s;
 const sansPoint = s => String(s).replace(/[.\s]+$/, "");
+/* Plus de question d'en-tête (demande de l'auteur, 23/11/2026) : le feuillet dit tout. Au-dessus,
+   une ligne fine (famille, numéro de lot) et, pour une photo, la planche : l'image et sa question
+   en légende, sans quoi « Fig. — Un facteur » ne voudrait rien dire. */
+function lot(m, motId) {
+  const f = famille(m);
+  const planche = f === "photo" ? `<figure class="photo planche apparait"><button class="zoom" type="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.question)}"><span class="loupe" aria-hidden="true">⤢</span></button><figcaption><span class="legende">${esc(m.question)}</span><span class="credit">${esc(m.credit || "")}</span></figcaption></figure>` : "";
+  return `<div class="lot"><span class="pastille">${FAMILLES[f].label}</span><span class="n-lot">${numero(motId)}</span></div>${planche}`;
+}
 function entreeFeuillet(m, texte, categorie) {
   const f = famille(m), t = esc(texte);
-  if (f === "definition") return `<b class="vedette">${esc(m.mot)}</b>, <i>${esc(categorie || m.categorie || "")}</i> <span class="rep">${t}</span>`;
+  // Région et registre dans l'entrée, à l'identique sur les deux feuillets (charte, point 6).
+  if (f === "definition") return `<b class="vedette">${esc(m.mot)}</b>, <i>${esc([categorie || m.categorie, m.region, m.registre].filter(Boolean).join(", ").replace(/\.?$/, "."))}</i> <span class="rep">${t}</span>`;
   if (f === "commune") {
     const dep = (String(m.question || "").match(/commune (de la |du |des |d'|de l'|de )(.+?) existe/) || []);
     return `<b class="vedette rep">${esc(sansPoint(texte))}</b>, <i>comm. ${esc(dep[1] || "")}${esc(dep[2] || m.region || "")}.</i>`;
@@ -756,8 +791,8 @@ const LAMPE_UV = false;   // jugée en jeu le 23/11/2026 : « ça ne marche pas 
 function afficherDuel(motId, options, piege) {
   const m = S.mots.get(motId);
   $e.innerHTML = `${entete()}
-    ${enonce(m)}
-    <p class="consigne-achat" aria-hidden="true">Achète la pièce d'époque</p>
+    ${lot(m, motId)}
+    <p class="consigne-achat">Trouve le vrai</p>
     <div class="choix duel feuillets">${options.map((o, k) => `<button class="bouton feuillet" type="button" data-k="${k}"><span class="peau-uv" aria-hidden="true"></span>${feuillet(m, motId, o.texte, o.categorie)}<small hidden></small></button>`).join("")}</div>
     <div id="suite"></div>`;
   $e.querySelectorAll("[data-k]").forEach(b => b.onclick = () => repondre(motId, options, piege, +b.dataset.k));
@@ -838,7 +873,7 @@ function choixFamille(retour) {
 function cartePiege(motId, retour, prix = PRIX_PIEGE) {
   const m = S.mots.get(motId), F = FAMILLES[famille(m)], direct = prix !== PRIX_PIEGE;
   $e.innerHTML = `${enteteBlops(solde(index()), prix)}
-    ${enonce(m)}
+    ${lot(m, motId)}
     <div class="feuillet modele apparait"><span class="chip bon">D'époque</span>${feuillet(m, motId, formater(m.vraie, famille(m)), m.categorie)}</div>
     <label for="piegeTexte">${F.champ}</label>
     ${famille(m) === "definition" ? `<div class="categories" role="radiogroup" aria-label="Catégorie de ton faux">${CATEGORIES.map(c => `<button type="button" role="radio" class="cat" data-cat="${c}" aria-checked="${c === (m.categorie || "n. m.")}">${c}</button>`).join("")}</div>` : ""}
