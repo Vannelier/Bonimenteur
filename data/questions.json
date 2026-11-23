@@ -139,7 +139,7 @@
   "mot": "bimbelotier",
   "source": "wiktionary:bimbelotier",
   "vraie": "Fabricant ou marchand de jouets et de petits objets de pacotille.",
-  "categorie": "n. m."
+  "type": "metier"
  },
  "bisbille": {
   "mot": "bisbille",
@@ -317,7 +317,7 @@
   "mot": "crocheteur",
   "source": "wiktionary:crocheteur",
   "vraie": "Portefaix qui transportait des fardeaux sur un crochet fixé à son dos.",
-  "categorie": "n. m."
+  "type": "metier"
  },
  "croquignolet": {
   "mot": "croquignolet",
@@ -654,7 +654,7 @@
   "mot": "oublieur",
   "source": "wiktionary:oublieur",
   "vraie": "Marchand ambulant qui vendait des gaufres roulées, appelées oublies.",
-  "categorie": "n. m."
+  "type": "metier"
  },
  "p-cheval": {
   "alt": "Un édifice de pierre sculpté de formes étranges, de colonnes et d'animaux",
@@ -727,7 +727,7 @@
   "mot": "patenôtrier",
   "source": "wiktionary:patenôtrier",
   "vraie": "Artisan qui fabriquait des chapelets.",
-  "categorie": "n. m."
+  "type": "metier"
  },
  "peguer": {
   "mot": "péguer",
@@ -933,5 +933,65 @@
   "vraie": "Tuer.",
   "categorie": "v.",
   "source": "wiktionary:zigouiller"
+ },
+ "gindre": {
+  "type": "metier",
+  "mot": "gindre",
+  "vraie": "Ouvrier boulanger chargé de pétrir la pâte.",
+  "source": "wiktionary:gindre"
+ },
+ "bourrelier": {
+  "type": "metier",
+  "mot": "bourrelier",
+  "vraie": "Fabrique les harnais et les colliers des chevaux.",
+  "source": "wiktionary:bourrelier"
+ },
+ "megissier": {
+  "type": "metier",
+  "mot": "mégissier",
+  "vraie": "Prépare les peaux fines de moutons et de chèvres.",
+  "source": "wiktionary:mégissier"
+ },
+ "feuillardier": {
+  "type": "metier",
+  "mot": "feuillardier",
+  "vraie": "Fend les branches de châtaignier pour cercler les tonneaux.",
+  "source": "wiktionary:feuillardier"
+ },
+ "ravaudeuse": {
+  "type": "metier",
+  "mot": "ravaudeuse",
+  "vraie": "Raccommode les bas et les vieux habits.",
+  "source": "wiktionary:ravaudeuse"
+ },
+ "boquillon": {
+  "type": "metier",
+  "mot": "boquillon",
+  "vraie": "Bûcheron, abat les arbres en forêt.",
+  "source": "wiktionary:boquillon"
+ },
+ "aboyeur": {
+  "type": "metier",
+  "mot": "aboyeur",
+  "vraie": "Attire les clients à la porte d'un théâtre ou d'un café en criant.",
+  "source": "wiktionary:aboyeur"
+ },
+ "blatier": {
+  "type": "metier",
+  "mot": "blatier",
+  "vraie": "Achète du blé pour le revendre.",
+  "source": "wiktionary:blatier"
+ },
+ "regrattier": {
+  "type": "metier",
+  "mot": "regrattier",
+  "vraie": "Revend au détail des denrées de seconde main, comme le sel au petit poids.",
+  "source": "wiktionary:regrattier"
+ },
+ "formier": {
+  "type": "metier",
+  "mot": "formier",
+  "vraie": "Fabrique les formes en bois des cordonniers et des chapeliers.",
+  "source": "wiktionary:formier"
  }
 }

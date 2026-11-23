@@ -35,6 +35,7 @@ prix Ig Nobel).
 | `photo` | Photo | une image (`image`, `alt`, `credit`) | 10 |
 | `etrangere` | Expression étrangère | une expression traduite mot à mot | 9 |
 | `expression` | Expression | l'origine d'une expression française | 6 |
+| `metier` | Métier | un métier disparu, sa spécialité à deviner (carte de visite) | 14 |
 
 Familles faibles : celles dont la réponse se sait souvent (expressions
 françaises, anecdotes connues).

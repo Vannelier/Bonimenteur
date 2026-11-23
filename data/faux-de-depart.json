@@ -1753,5 +1753,155 @@
   "id": "t-x-singe-3",
   "mot": "x-singe",
   "texte": "Les ennuis commencent."
+ },
+ {
+  "id": "t-gindre-1",
+  "mot": "gindre",
+  "texte": "Marchand ambulant de gingembre confit."
+ },
+ {
+  "id": "t-gindre-2",
+  "mot": "gindre",
+  "texte": "Garde champêtre chargé de l'entretien des haies."
+ },
+ {
+  "id": "t-gindre-3",
+  "mot": "gindre",
+  "texte": "Fondeur de cloches pour les églises de campagne."
+ },
+ {
+  "id": "t-bourrelier-1",
+  "mot": "bourrelier",
+  "texte": "Rembourre les fauteuils et les matelas."
+ },
+ {
+  "id": "t-bourrelier-2",
+  "mot": "bourrelier",
+  "texte": "Prépare les fagots de petit bois pour les fours."
+ },
+ {
+  "id": "t-bourrelier-3",
+  "mot": "bourrelier",
+  "texte": "Vérifie les poids et mesures des marchands."
+ },
+ {
+  "id": "t-megissier-1",
+  "mot": "megissier",
+  "texte": "Fabrique les mèches des lampes à huile."
+ },
+ {
+  "id": "t-megissier-2",
+  "mot": "megissier",
+  "texte": "Taille les meules des moulins à grain."
+ },
+ {
+  "id": "t-megissier-3",
+  "mot": "megissier",
+  "texte": "Soigne les chevaux de poste fatigués."
+ },
+ {
+  "id": "t-feuillardier-1",
+  "mot": "feuillardier",
+  "texte": "Relie les feuillets des registres de la mairie."
+ },
+ {
+  "id": "t-feuillardier-2",
+  "mot": "feuillardier",
+  "texte": "Ramasse les feuilles mortes des jardins publics."
+ },
+ {
+  "id": "t-feuillardier-3",
+  "mot": "feuillardier",
+  "texte": "Découpe et vend les feuilletons des journaux."
+ },
+ {
+  "id": "t-ravaudeuse-1",
+  "mot": "ravaudeuse",
+  "texte": "Ravive les couleurs des tapisseries anciennes."
+ },
+ {
+  "id": "t-ravaudeuse-2",
+  "mot": "ravaudeuse",
+  "texte": "Garde les oies et les canards du village."
+ },
+ {
+  "id": "t-ravaudeuse-3",
+  "mot": "ravaudeuse",
+  "texte": "Lave le linge des hôpitaux au lavoir."
+ },
+ {
+  "id": "t-boquillon-1",
+  "mot": "boquillon",
+  "texte": "Fabrique les sabots de bois."
+ },
+ {
+  "id": "t-boquillon-2",
+  "mot": "boquillon",
+  "texte": "Vend du boudin sur les foires."
+ },
+ {
+  "id": "t-boquillon-3",
+  "mot": "boquillon",
+  "texte": "Prépare les bocaux de conserves."
+ },
+ {
+  "id": "t-aboyeur-1",
+  "mot": "aboyeur",
+  "texte": "Dresse les chiens de garde des châteaux."
+ },
+ {
+  "id": "t-aboyeur-2",
+  "mot": "aboyeur",
+  "texte": "Annonce les décès dans les rues du village."
+ },
+ {
+  "id": "t-aboyeur-3",
+  "mot": "aboyeur",
+  "texte": "Vend des billets de loterie à la criée."
+ },
+ {
+  "id": "t-blatier-1",
+  "mot": "blatier",
+  "texte": "Blanchit les murs à la chaux."
+ },
+ {
+  "id": "t-blatier-2",
+  "mot": "blatier",
+  "texte": "Fabrique les blagues à tabac."
+ },
+ {
+  "id": "t-blatier-3",
+  "mot": "blatier",
+  "texte": "Tond les moutons au printemps."
+ },
+ {
+  "id": "t-regrattier-1",
+  "mot": "regrattier",
+  "texte": "Gratte la rouille des grilles et des balcons."
+ },
+ {
+  "id": "t-regrattier-2",
+  "mot": "regrattier",
+  "texte": "Efface les vieux parchemins pour les réutiliser."
+ },
+ {
+  "id": "t-regrattier-3",
+  "mot": "regrattier",
+  "texte": "Ramone les cheminées des maisons bourgeoises."
+ },
+ {
+  "id": "t-formier-1",
+  "mot": "formier",
+  "texte": "Rédige les formulaires des notaires."
+ },
+ {
+  "id": "t-formier-2",
+  "mot": "formier",
+  "texte": "Moule les fromages dans leurs faisselles."
+ },
+ {
+  "id": "t-formier-3",
+  "mot": "formier",
+  "texte": "Taille les haies en forme d'animaux."
  }
 ]

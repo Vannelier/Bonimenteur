@@ -73,6 +73,15 @@ blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
 
 ## Fabriquer un faux
 
+- L'atelier ne propose que des lots déjà expertisés (23/11/2026) : le joueur en
+  connaît déjà la vraie réponse. Avant, il pouvait faire défiler une famille
+  rare (les métiers) et apprendre toutes ses réponses. Un lot neuf se
+  contrefait en direct, juste après l'avoir expertisé. Familles vides masquées.
+- Aperçu : le faux s'écrit dans l'emplacement de la réponse, sur le même
+  artefact que l'original (surligné), au fil de la saisie ; l'original tient
+  en une ligne au-dessus.
+
+
 - Le poseur voit la vraie réponse (depuis le 23/11/2026 ; avant, il écrivait
   à l'aveugle et devinait deux fois). Il imite son ton, sa longueur, sa
   bizarrerie.

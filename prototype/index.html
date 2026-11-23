@@ -397,6 +397,53 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 [data-style="lettrine"] .f-art::first-letter{float:left;font:400 2.6em/.85 "IM Fell English",Georgia,serif;color:#8e2a1f;margin:4px 6px 0 0}
 [data-style="numero"] .f-tete{font-style:italic;text-transform:none}
 [data-style="numero"] .f-num{font:400 1em "IM Fell English SC",Georgia,serif;color:rgba(43,32,22,.7)}
+/* Plaque de gare émaillée (communes) : bleu profond, capitales blanches, liseré, éclats. */
+.choix .bouton.feuillet[data-style="plaque"],.feuillet.modele[data-style="plaque"]{clip-path:none;border-radius:10px;color:#fff;align-items:center;text-align:center;padding:16px 14px 12px;
+  background:radial-gradient(circle at 6% 12%,#e9e4d6 0 5px,#2a2a2a 5.5px 6.5px,transparent 7px),radial-gradient(circle at 94% 12%,#e9e4d6 0 5px,#2a2a2a 5.5px 6.5px,transparent 7px),
+    radial-gradient(circle at 6% 88%,#e9e4d6 0 5px,#2a2a2a 5.5px 6.5px,transparent 7px),radial-gradient(circle at 94% 88%,#e9e4d6 0 5px,#2a2a2a 5.5px 6.5px,transparent 7px),
+    radial-gradient(ellipse 18px 9px at 82% 96%,#1b1b1b 40%,transparent 60%),radial-gradient(ellipse 12px 8px at 3% 40%,#202020 40%,transparent 60%),
+    linear-gradient(160deg,rgba(255,255,255,.16),transparent 40%),#1d3f86;
+  box-shadow:inset 0 0 0 4px #1d3f86,inset 0 0 0 6px #f4f1e8,0 6px 12px -6px rgba(0,0,0,.5)}
+.plaque-nom{position:relative;z-index:1;font:700 clamp(20px,6.4vw,28px)/1.1 "Source Serif 4",Georgia,serif;letter-spacing:.06em;text-transform:uppercase;overflow-wrap:anywhere}
+.plaque-dep{position:relative;z-index:1;font:600 11px/1 var(--titre);letter-spacing:.24em;text-transform:uppercase;opacity:.8}
+[data-style="plaque"] small{align-self:stretch;margin:6px -8px -4px;padding:6px 8px;border-radius:4px;background:#f3eedd;color:var(--encre)}
+/* Carte de visite (métiers) : bristol, nom, métier gravé en capitales, adresse. */
+.choix .bouton.feuillet[data-style="carte"],.feuillet.modele[data-style="carte"]{clip-path:none;border-radius:3px;align-items:center;text-align:center;gap:3px;padding:12px 16px 10px;
+  background:linear-gradient(160deg,rgba(255,255,255,.6),transparent 45%),#f8f4ea;box-shadow:0 1px 0 #d9d0b5,0 6px 12px -6px rgba(0,0,0,.4),inset 0 0 0 1px rgba(43,32,22,.12)}
+.carte-nom{position:relative;z-index:1;font:italic 400 15px "IM Fell English",Georgia,serif;color:#4a3d2c}
+.carte-metier{position:relative;z-index:1;font:700 20px/1.1 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:#1f2a44}
+.carte-filet{width:60px;height:5px;border-top:1px solid rgba(43,32,22,.5);border-bottom:1px solid rgba(43,32,22,.5);margin:2px 0}
+.carte-spec{position:relative;z-index:1;font:400 16.5px/1.3 "IM Fell English",Georgia,serif;color:#2b2016}
+.carte-adresse{position:relative;z-index:1;font:italic 12px "IM Fell English",Georgia,serif;color:rgba(43,32,22,.7)}
+.nb-tuile{font:700 12px/1 var(--texte);color:var(--doux)}
+/* Aperçu de la contrefaçon : l'emplacement de la réponse est surligné et suit la saisie. */
+.titre-apercu{margin:0 0 -6px;font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:var(--rouge)}
+.feuillet.apercu{transform:rotate(.4deg)}
+.apercu .rep{background:rgba(179,50,42,.12);box-shadow:0 0 0 2px rgba(179,50,42,.12);border-bottom:1.5px dashed var(--rouge);border-radius:2px}
+/* Écran de pose compact : l'original et l'aperçu sans en-tête ni pied, le bouton reste dans l'écran. */
+.feuillet.modele .f-tete,.feuillet.modele .f-pied,.feuillet.modele .carte-adresse{display:none}
+.feuillet.modele{padding-top:10px;padding-bottom:10px;min-height:0}
+.feuillet.modele:not(.apercu){padding-bottom:40px}
+.feuillet.modele .f-art{font-size:16px}
+.feuillet.modele[data-style="plaque"] .plaque-nom{font-size:22px}
+#piegeTexte{min-height:58px}
+/* Pose : l'original en une ligne, l'aperçu, la saisie, puis signature et compteur sur une ligne. */
+.original{display:flex;align-items:baseline;gap:8px;padding:6px 10px;border-left:3px solid var(--vert);background:rgba(47,93,74,.07);font:400 15px/1.35 "IM Fell English",Georgia,serif;color:var(--encre)}
+.original .chip.bon{flex:none;font-size:10px;padding:3px 7px;transform:rotate(-3deg)}
+.sous-saisie{display:flex;align-items:center;gap:10px;margin-top:-6px}
+.sous-saisie .signer{flex:1;margin:0;justify-content:flex-start}
+.sous-saisie #signeChamp{width:auto;flex:1;min-width:0}
+.sous-saisie .compte{margin:0;flex:none}
+@media (max-height:700px){.carte:has(#piegeTexte) .lot{display:none}}
+@media (max-height:600px){
+  .carte:has(#piegeTexte){gap:8px}
+  .feuillet.apercu{padding:7px 12px}
+  .apercu .f-planche{grid-template-columns:58px 1fr}.apercu .f-planche img{width:58px;height:58px}
+  .apercu .f-art,.apercu .carte-spec{font-size:14.5px}.apercu .carte-metier{font-size:17px}.apercu .carte-nom{font-size:13px}
+  .cat{min-height:30px;padding:0 9px;font-size:14px}
+  #piegeTexte{min-height:46px;font-size:16px}
+  .original{font-size:13.5px;padding:4px 8px}
+}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -436,6 +483,7 @@ const IC = {
   oeil: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>',
   coeur: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg>',
   definition: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5c-.8 0-1.5-.7-1.5-1.5z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5c.8 0 1.5-.7 1.5-1.5z"/></svg>',
+  metier: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M7 10h10M8.5 13.5h7" stroke-linecap="round"/></svg>',
   anecdote: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5" stroke-linecap="round"/></svg>',
   expression: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 17.5c0-4.2 1.6-7.5 5-9.5l1 1.6c-1.9 1.4-2.8 3-2.9 4.9H10v3H5zm9 0c0-4.2 1.6-7.5 5-9.5l1 1.6c-1.9 1.4-2.8 3-2.9 4.9H19v3h-5z"/></svg>',
   commune: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-6.5-6.3-6.5-11a6.5 6.5 0 0 1 13 0c0 4.7-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>',
@@ -593,7 +641,9 @@ const FAMILLES = {
   photo:      { label: "Photo", consigne: "", piege: "Invente une explication crédible, mais fausse.", champ: "Ta fausse explication", max: 120, seuil: 0.65 },
   // Mots intraduisibles et expressions étrangères mot à mot : pièges de Truffe à 0,46 au plus, reformulations de 0,62 à 0,82.
   intraduisible: { label: "Mot étranger", consigne: "", piege: "Invente une fausse traduction.", champ: "Ta fausse traduction", max: 110, seuil: 0.55 },
-  etrangere:  { label: "Expression étrangère", consigne: "", piege: "Invente un faux sens.", champ: "Ton faux sens", max: 100, seuil: 0.55 }
+  etrangere:  { label: "Expression étrangère", consigne: "", piege: "Invente un faux sens.", champ: "Ton faux sens", max: 100, seuil: 0.55 },
+  // Métiers disparus : la carte de visite du métier, la spécialité à deviner (ajoutée le 23/11/2026).
+  metier:     { label: "Métier", consigne: "", piege: "Invente une fausse spécialité.", champ: "Ta fausse spécialité", max: 100, seuil: 0.5 },
 };
 /* Mise en forme d'un piège au format des vraies réponses de sa famille, pour qu'il ne se trahisse pas :
    - commune : majuscule à chaque partie du nom (« Saint-Jean-sur-Loire »), petits mots en minuscule, sans point ;
@@ -616,7 +666,7 @@ function formater(brut, f) {
   if (!/[.!?…]$/.test(t)) t += ".";
   return t;
 }
-const ORDRE = ["definition", "anecdote", "expression", "commune", "photo", "intraduisible", "etrangere"];
+const ORDRE = ["definition", "anecdote", "expression", "commune", "photo", "metier", "intraduisible", "etrangere"];
 const famille = m => FAMILLES[m.type] ? m.type : "definition";
 function enonce(m) { return `<div class="fiche apparait"><span class="serie" aria-hidden="true">${numero(m.id || m.mot || m.question)}</span>${enonceBrut(m).replaceAll(" apparait", "")}</div>`; }
 function enonceBrut(m) {
@@ -744,9 +794,11 @@ function aPieger(I) {
     if (!cible.has(f)) cible.set(f, []);
     cible.get(f).push([id, (I.vivants.get(id) || []).length]);
   }
-  const par = new Map();
-  for (const f of new Set([...neuves.keys(), ...jouees.keys()])) par.set(f, jouees.get(f) || neuves.get(f));
-  return par;
+  // L'atelier ne propose que des lots déjà expertisés : le joueur en connaît déjà la vraie réponse.
+  // Sinon, dans une famille rare (métiers), il pourrait faire défiler les questions et apprendre
+  // toutes les réponses (remarque de l'auteur, 23/11/2026). Un lot neuf se contrefait en direct,
+  // juste après l'avoir expertisé (PRIX_DIRECT).
+  return jouees;
 }
 let dernierPiege = null, dernierMot = null;
 const ecartes = new Set();
@@ -837,10 +889,10 @@ const OUVRAGES = {
     { titre: "Dictionnaire des locutions françaises", court: "Dict. des locutions", an: 1862, style: "classique", teinte: 1 },
     { titre: "Origines des façons de parler", court: "Origines des locutions", an: 1847, style: "lettrine", teinte: 0 },
     { titre: "Recueil des dictons et manières de dire", court: "Recueil des dictons", an: 1880, style: "numero", teinte: 2 }],
-  commune: [
-    { titre: "Dictionnaire des communes de France", court: "Dict. des communes", an: 1887, style: "classique", teinte: 3 },
-    { titre: "Annuaire des postes et des bureaux", court: "Annuaire des postes", an: 1893, style: "numero", teinte: 1 },
-    { titre: "Nomenclature des communes du royaume", court: "Nomenclature", an: 1836, style: "filet", teinte: 2 }],
+  // Communes : une plaque de gare émaillée (la page de dictionnaire « ne donnait pas », 23/11/2026).
+  commune: [{ titre: "Plaque émaillée", court: "", an: 1900, style: "plaque", teinte: 0 }],
+  // Métiers : une carte de visite gravée.
+  metier: [{ titre: "Carte de visite", court: "", an: 1890, style: "carte", teinte: 1 }],
   photo: [
     { titre: "Encyclopédie illustrée", court: "Encyclopédie illustrée", an: 1902, style: "classique", teinte: 0 },
     { titre: "Planches du cabinet de curiosités", court: "Cabinet de curiosités, pl.", an: 1898, style: "filet", teinte: 3 },
@@ -897,8 +949,26 @@ function entreeFeuillet(m, texte, categorie) {
   // « Fig. Poêle en laiton percée… — Usage : à réchauffer le lit… ».
   return `<b class="vedette">Fig.</b> ${esc(m.legende || "")}. <span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(minuscule1(texte))}</span>`;
 }
+// Noms et adresses des cartes de visite : fictifs, tirés par lot (les mêmes sur les deux cartes).
+const PRENOMS = ["Auguste", "Désiré", "Hippolyte", "Anselme", "Prosper", "Théodore", "Honorine", "Clémence", "Eugénie", "Adélaïde"];
+const NOMS = ["Ferrand", "Bouvard", "Lemercier", "Gaudin", "Rouxel", "Delage", "Peyrot", "Mazeau", "Chabert", "Tessier"];
+const RUES = ["rue des Lombards", "rue du Pot-de-Fer", "quai de la Mégisserie", "rue de la Huchette", "rue des Bons-Enfants", "place du Marché", "rue Saint-Jacques", "rue de la Ferronnerie"];
+const VILLES = ["Paris", "Lyon", "Rouen", "Tours", "Limoges", "Nantes", "Dijon", "Besançon"];
+function objet(m, motId, texte) {
+  const f = famille(m), e = empreinte(motId);
+  if (f === "commune") {
+    const dep = (String(m.question || "").match(/commune (?:de la |du |des |d'|de l'|de )(.+?) existe/) || [])[1] || m.region || "";
+    return `<span class="plaque-nom rep">${esc(sansPoint(texte))}</span><span class="plaque-dep" aria-hidden="true">${esc(dep)}</span>`;
+  }
+  const feminin = /euse$|ère$|ière$/.test(m.mot), prenom = feminin ? ["Honorine", "Clémence", "Eugénie", "Adélaïde"][e % 4] : PRENOMS[e % 6];
+  return `<span class="carte-nom">${feminin ? "Mme" : "M."} ${prenom} ${NOMS[(e >> 3) % NOMS.length].toUpperCase()}</span>
+    <span class="carte-metier">${esc(m.mot)}</span><span class="carte-filet" aria-hidden="true"></span>
+    <span class="carte-spec rep">${esc(sansPoint(texte))}.</span>
+    <span class="carte-adresse" aria-hidden="true">${(e % 40) + 2}, ${RUES[(e >> 2) % RUES.length]} — ${VILLES[(e >> 5) % VILLES.length]}</span>`;
+}
 function feuillet(m, motId, texte, categorie) {
   const f = famille(m), o = ouvrage(m, motId);
+  if (o.style === "plaque" || o.style === "carte") return objet(m, motId, texte);
   const n = +numero(motId).replace(/\D/g, "").slice(-4) || 1;
   // En-tête courant, identique sur les deux feuillets : les trois premières lettres du mot (définition),
   // le département (commune), sinon le tome.
@@ -1002,7 +1072,7 @@ function choixFamille(retour) {
   }
   const dansAtelier = retour === atelier;
   $e.innerHTML = `${dansAtelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(s)}
-    <div class="tuiles apparait">${ORDRE.map(f => `<button class="tuile" type="button" data-f="${f}" ${par.has(f) ? "" : "disabled"}>${IC[f]}${FAMILLES[f].label}</button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
+    ${par.size ? "" : `<div class="grosse-ic">${IC.piege}</div><p class="centre">Expertise d'abord des lots : tu contreferas ceux que tu connais.</p>`}<div class="tuiles apparait">${ORDRE.filter(f => par.has(f)).map(f => `<button class="tuile" type="button" data-f="${f}">${IC[f]}${FAMILLES[f].label}<span class="nb-tuile">${par.get(f).length}</span></button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
   $e.querySelectorAll("[data-f]").forEach(b => b.onclick = () => { const id = motAtelier(index(), b.dataset.f); if (id) cartePiege(id, retour); });
   if (dansAtelier) lierSous(); else document.getElementById("retour").onclick = retour;
 }
@@ -1011,19 +1081,24 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
   const m = S.mots.get(motId), F = FAMILLES[famille(m)], direct = prix !== PRIX_PIEGE;
   $e.innerHTML = `${enteteEcus(solde(index()), prix)}
     ${lot(m, motId)}
-    <div class="feuillet modele apparait" ${attrsFeuillet(m, motId)}><span class="chip bon">D'époque</span>${feuillet(m, motId, formater(m.vraie, famille(m)), m.categorie)}</div>
-    <label for="piegeTexte">${F.champ}</label>
+    <div class="original apparait"><span class="chip bon">D'époque</span><span>${esc(formater(m.vraie, famille(m)))}</span></div>
+    <p class="titre-apercu">Ta contrefaçon</p>
+    <div class="feuillet modele apercu" id="apercu" ${attrsFeuillet(m, motId)}>${feuillet(m, motId, "…", m.categorie)}</div>
     ${famille(m) === "definition" ? `<div class="categories" role="radiogroup" aria-label="Catégorie de ton faux">${CATEGORIES.map(c => `<button type="button" role="radio" class="cat" data-cat="${c}" aria-checked="${c === (m.categorie || "n. m.")}">${c}</button>`).join("")}</div>` : ""}
-    <textarea id="piegeTexte" maxlength="${F.max}" placeholder="Quelque chose qui sonne vrai…"></textarea>
-    <div class="compte" id="compte">0 / ${F.max}</div>
-    <label class="signer"><i>signé</i><input id="signeChamp" maxlength="${PSEUDO_MAX}" autocomplete="nickname" aria-label="Ta signature" placeholder="ton nom de faussaire" value="${esc(signatureProposee())}"></label>
+    <textarea id="piegeTexte" maxlength="${F.max}" aria-label="${F.champ}" placeholder="${F.champ}…"></textarea>
+    <div class="sous-saisie"><label class="signer"><i>signé</i><input id="signeChamp" maxlength="${PSEUDO_MAX}" autocomplete="nickname" aria-label="Ta signature" placeholder="ton nom de faussaire" value="${esc(signatureProposee())}"></label><span class="compte" id="compte">0 / ${F.max}</span></div>
     <div id="erreurPiege"></div>
     <div class="ligne"><button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button>${direct ? "" : `<button class="bouton" type="button" id="autre">Autre</button>`}<button class="bouton piege" type="button" id="poser">Mettre en vente</button></div>`;
   const ta = document.getElementById("piegeTexte");
-  ta.oninput = () => { document.getElementById("compte").textContent = `${ta.value.length} / ${F.max}`; };
+  // Aperçu : le faux s'écrit dans l'emplacement de la réponse, sur le même artefact que l'original.
+  const apercu = document.getElementById("apercu"); let rafApercu = 0;
+  const majApercu = () => { cancelAnimationFrame(rafApercu); rafApercu = requestAnimationFrame(() => {
+    const cat = $e.querySelector('.cat[aria-checked="true"]');
+    apercu.innerHTML = feuillet(m, motId, ta.value.trim() ? formater(ta.value, famille(m)) : "…", cat ? cat.dataset.cat : m.categorie); }); };
+  ta.oninput = () => { document.getElementById("compte").textContent = `${ta.value.length} / ${F.max}`; majApercu(); };
   document.getElementById("signeChamp").oninput = e => e.target.classList.remove("refus");
   // Catégorie du faux : le faussaire peut la fausser aussi (« sapajou, adj. »).
-  $e.querySelectorAll(".cat").forEach(b => b.onclick = () => $e.querySelectorAll(".cat").forEach(x => x.setAttribute("aria-checked", x === b ? "true" : "false")));
+  $e.querySelectorAll(".cat").forEach(b => b.onclick = () => { $e.querySelectorAll(".cat").forEach(x => x.setAttribute("aria-checked", x === b ? "true" : "false")); majApercu(); });
   document.getElementById("passer").onclick = () => { vusLocal.add(motId); retour(); };
   if (!direct) {
   const autreQuestion = () => { ecartes.add(motId); vusLocal.add(motId); const id = motAtelier(index(), famille(m)); if (id) cartePiege(id, retour); else choixFamille(retour); };
