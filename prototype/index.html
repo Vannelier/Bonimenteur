@@ -245,6 +245,8 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .choix .bouton.feuillet:nth-child(1){transform:rotate(-.7deg)}.choix .bouton.feuillet:nth-child(2){transform:rotate(.6deg)}
 .choix .bouton.feuillet::before{content:none}
 .choix .bouton.feuillet:active:not(:disabled){transform:scale(.985)}
+.choix .bouton.joue{cursor:default}
+.choix .bouton.joue:active{transform:none}
 .f-tete{display:flex;justify-content:space-between;font:12px "IM Fell English SC",Georgia,serif;letter-spacing:.06em;border-bottom:1px solid rgba(43,32,22,.55);padding-bottom:3px}
 .f-art{font:400 18px/1.32 "IM Fell English",Georgia,serif;text-align:left}
 .f-art .vedette{font:400 19px "IM Fell English SC",Georgia,serif;letter-spacing:.03em}
@@ -322,6 +324,8 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 @media (max-height:600px){.choix .bouton.feuillet .f-tete,.choix .bouton.feuillet .f-pied{display:none}}
 /* Planche illustrée (photo) : la photo et sa légende dans le même feuillet. */
 .f-planche{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:start}
+.f-zoom{position:relative;display:block;cursor:zoom-in}
+.f-zoom .loupe{width:24px;height:24px;font-size:13px;right:4px;bottom:4px}
 .f-planche img{width:96px;height:96px;object-fit:cover;border:3px solid #fbf6e8;box-shadow:0 1px 3px rgba(43,32,22,.35);filter:sepia(.35) saturate(.8)}
 .f-planche .f-art{font-size:15.5px;line-height:1.28}
 .f-art .rubrique{font-style:italic}
@@ -397,16 +401,27 @@ const pastilleBlop = (n, signe = "") => `<span class="chip blop" aria-label="${s
 /* Visionneuse : toucher une photo l'affiche en grand ; toucher n'importe où, × ou Échap la ferme. */
 function fermerVisionneuse() { const v = document.querySelector(".visionneuse"); if (v) { v.remove(); document.removeEventListener("keydown", echap); } }
 function echap(e) { if (e.key === "Escape") fermerVisionneuse(); }
-$e.addEventListener("click", e => {
-  const z = e.target.closest(".zoom"); if (!z) return;
-  const img = z.querySelector("img"), cap = z.closest("figure").querySelector("figcaption");
+function ouvrirVisionneuse(img, texte) {
   const v = document.createElement("div"); v.className = "visionneuse"; v.setAttribute("role", "dialog"); v.setAttribute("aria-label", "Image agrandie");
   const grand = document.createElement("img"); grand.src = img.src; grand.alt = img.alt;
-  const legende = document.createElement("p"); legende.textContent = cap ? cap.textContent : "";
+  const legende = document.createElement("p"); legende.textContent = texte || "";
   const fermer = document.createElement("button"); fermer.type = "button"; fermer.setAttribute("aria-label", "Fermer"); fermer.textContent = "×";
   v.append(fermer, grand, legende); v.onclick = fermerVisionneuse;
   document.body.append(v); document.addEventListener("keydown", echap); fermer.focus();
+}
+$e.addEventListener("click", e => {
+  const z = e.target.closest(".zoom"); if (!z) return;
+  const cap = z.closest("figure") && z.closest("figure").querySelector("figcaption");
+  ouvrirVisionneuse(z.querySelector("img"), cap ? cap.textContent : "");
 });
+/* Photo d'une planche : toucher l'image l'agrandit, sans acheter la pièce. Écouté en capture, sur
+   le conteneur : l'événement est arrêté avant d'atteindre le bouton du feuillet. */
+$e.addEventListener("click", e => {
+  const z = e.target.closest(".f-zoom"); if (!z) return;
+  e.stopPropagation(); e.preventDefault();
+  const art = z.closest(".f-planche").querySelector(".f-art");
+  ouvrirVisionneuse(z.querySelector("img"), art ? art.textContent : "");
+}, true);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const melange = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
@@ -791,7 +806,7 @@ function feuillet(m, motId, texte, categorie) {
   const dep = f === "commune" ? (String(m.question || "").match(/commune (?:de la |du |des |d'|de l'|de )(.+?) existe/) || [])[1] : "";
   const tete = f === "definition" ? m.mot.slice(0, 3).toUpperCase() : dep ? dep.toUpperCase() : `TOME ${["I", "II", "III", "IV"][n % 4]}`;
   return `<span class="f-tete" aria-hidden="true"><span>${esc(tete)}</span><span>— ${n} —</span><span>${esc(tete)}</span></span>
-    ${f === "photo" ? `<span class="f-planche"><img src="${esc(m.image)}" alt="${esc(m.alt || m.legende || "")}"><span class="f-art">${entreeFeuillet(m, texte, categorie)}</span></span>` : `<span class="f-art">${entreeFeuillet(m, texte, categorie)}</span>`}
+    ${f === "photo" ? `<span class="f-planche"><span class="f-zoom" role="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.legende || "")}"><span class="loupe" aria-hidden="true">⤢</span></span><span class="f-art">${entreeFeuillet(m, texte, categorie)}</span></span>` : `<span class="f-art">${entreeFeuillet(m, texte, categorie)}</span>`}
     <span class="f-pied" aria-hidden="true"><span>${esc(titre)}</span><span>${an}</span></span>`;
 }
 // Lampe à ultraviolets à la révélation : le papier moderne du faux s'allume, l'ancien reste éteint.
@@ -811,7 +826,7 @@ function afficherDuel(motId, options, piege) {
 function repondre(motId, options, piege, k) {
   if (serie.repondu === motId) return; serie.repondu = motId;
   const juste = options[k].id === "vrai", I = index();
-  const montrer = (btn, html, cls) => { btn.disabled = true; btn.classList.add(cls); const sm = btn.querySelector("small"); sm.hidden = false; sm.innerHTML = html; };
+  const montrer = (btn, html, cls) => { btn.setAttribute("aria-disabled", "true"); btn.classList.add(cls, "joue"); const sm = btn.querySelector("small"); sm.hidden = false; sm.innerHTML = html; };
   const etoile = I.pvqn.has(piege.id) ? `<span style="color:var(--piege)" title="Pièce de maître">${IC.etoile}</span>` : "";
   // L'étiquette « Acheté » marque la pièce que le joueur a choisie, vraie ou fausse.
   const achat = i => i === k ? `<span class="etiquette">Acheté</span>` : "";
