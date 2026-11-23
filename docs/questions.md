@@ -52,13 +52,13 @@ Photos : `legende` (ce que montre l'image, sans la réponse) et `rubrique`
 Champs facultatifs : `cadre` (mots communs à une série, ignorés par
 l'arbitre : « peur » pour les phobies), `region`, `registre`, `source`.
 
-## Questions sans faux de départ
+## Faux de départ
 
-15 définitions n'ont aucun faux de Truffe, donc ne sont jamais posées :
-carabistouille, cénacle, clampin, cuistre, esbroufe, fanfreluche, faribole,
-goguenard, margoulin, mirliton, pétaudière, ribambelle, sémillant,
-tergiverser, zigouiller. Reprises de la première version, elles sont trop
-connues (charte, point 1). À retirer ou à remplacer.
+Chaque question a ses trois faux de Truffe. Les 15 définitions reprises de la
+première version (carabistouille, cénacle, cuistre…) n'en avaient pas et
+n'étaient jamais posées : faux écrits le 23/11/2026, tous sous 0,45 à
+l'arbitre. Ces mots restent assez connus (charte, point 1) : à surveiller dans
+les duels.
 
 ## Vérification
 

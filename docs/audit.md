@@ -1,7 +1,8 @@
 # Audit du 23/11/2026
 
 Relecture du serveur, de la page, des données, des docs et du déploiement.
-Corrigé le jour même : marqué « fait ». Le reste attend une décision.
+Corrigé le jour même : marqué « fait ». Le reste attend une décision. Décidé par l'auteur ensuite : la triche par
+lecture du réseau est acceptée pour l'instant ; le déploiement attendra.
 
 ## Sécurité et triche
 
@@ -12,7 +13,7 @@ Corrigé le jour même : marqué « fait ». Le reste attend une décision.
 | Chaque cookie neuf reçoit 20 écus : effacer ses cookies donnait des écus sans limite. | moyenne | fait : 20 identités neuves par heure et par IP (`LIMITES`) |
 | Aucune limite de débit sur les écritures. | moyenne | fait : 60 écritures par minute et par IP |
 | Pseudo : n'importe qui pouvait signer « Truffe » ou le pseudo d'un autre. | moyenne | fait : « Truffe » et quelques noms réservés, pseudos uniques (aux accents et à la casse près) |
-| Pseudos et faux sans filtre de grossièretés. | moyenne | ouvert : reprendre `app/pseudos.py` de Vocabulium (code commun) |
+| Pseudos et faux sans filtre de grossièretés. | moyenne | fait : `app/pseudos.py`, copie de Vocabulium (pseudo offensant → « Joueur », faux offensant refusé) |
 | Signalements : question et raison non contrôlées. | faible | fait |
 | L'arbitre du sens ne tourne que dans la page : un faux identique à l'original passait par l'API. | moyenne | fait pour la copie exacte (aux accents près) ; l'arbitre complet reste dans la page |
 | Pas de modération des faux (retrait à la main). | moyenne | ouvert : `/api/moderation` sur le modèle de Snouff |
@@ -21,10 +22,11 @@ Corrigé le jour même : marqué « fait ». Le reste attend une décision.
 
 - Connexion SQLite partagée entre les fils sans verrou pour les lectures et
   certaines écritures : fait, tout accès passe par `_verrou`.
-- `/api/etat` renvoie toute la base (tous les duels de tous les joueurs) à
-  chaque lecture, toutes les 20 s. Ouvert : à quelques milliers de duels, la
-  réponse et `_solde` (qui relit tous les duels perdus) deviennent lourds.
-  Remède : l'état propre au joueur et des compteurs agrégés côté serveur.
+- `/api/etat` renvoyait tous les duels de tous les joueurs toutes les 20 s,
+  et `_solde` relisait tous les duels perdus. Fait : table `stats` (vu, pris,
+  démasqué par faux) tenue à chaque duel, l'état ne contient plus que les
+  duels du joueur et ceux où l'un de ses faux a trompé. Reste sur claude.ai :
+  la page y lit au plus 1 000 duels (`limit(1000)`).
 - Pas de sauvegarde du volume Railway. Ouvert.
 
 ## Performance
@@ -50,9 +52,7 @@ Corrigé le jour même : marqué « fait ». Le reste attend une décision.
 
 - 142 questions : 64 définitions, 16 anecdotes, 14 métiers, 12 communes,
   11 mots étrangers, 10 photos, 9 expressions étrangères, 6 expressions.
-- 15 définitions n'ont aucun faux de départ, donc ne sont jamais posées
-  (cuistre, zigouiller…). Trop connues (charte, point 1) : à retirer ou à
-  remplacer.
+- 15 définitions n'avaient aucun faux de départ : fait, 45 faux écrits.
 - 53 questions sur 142 sans `source`.
 - Familles minces : 6 expressions, 9 expressions étrangères. Un joueur assidu
   les épuise vite.

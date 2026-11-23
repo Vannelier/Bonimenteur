@@ -13,8 +13,9 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 
 | Fichier | Contenu |
 |---|---|
+| `app/pseudos.py` | Filtre des pseudos, copie exacte de Vocabulium (`tests/test_copies.py`) : ne pas l'éditer ici. Appliqué aussi aux textes des faux. |
 | `app/main.py` | Serveur : page, API (`/api/moi`, `/api/etat`, `/api/pieges`, `/api/choix`, `/api/contestations`, `/api/signalements`, `/api/pseudo`), SQLite. Identité par cookie HttpOnly posé par le serveur ; auteur d'un faux, gain d'un duel, prix et solde décidés ici. |
-| `prototype/serveur.js` | Interface `window.claude` (collection, doc, user) branchée sur l'API, relue toutes les 20 s et après chaque écriture. |
+| `prototype/serveur.js` | Interface `window.claude` (collection, doc, user) branchée sur l'API, relue toutes les 20 s et après chaque écriture ; passe à la page les compteurs par faux du serveur (`window.__statsServeur`). |
 | `prototype/index.html` | Le jeu : duels, atelier (Contrefaire, Sur le marché), arbitre, bilan. Réglages en tête du script (`TOTAL`, `PRIX_PIEGE`, `PRIX_DIRECT`, `ECUS_DEPART`, `MORT_VUS`, `PVQN_VUS`, `CONTEST_MIN`, `FAMILLES` et leurs seuils). |
 | `prototype/proches.json` | Données de l'arbitre du sens, générées par `tools/proches.py`. Ne pas éditer. |
 | `prototype/communes.txt` | Communes de France (geo.api.gouv.fr, 34 969). |
@@ -29,7 +30,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 
 ```
 pip install -r requirements-dev.txt
-python -m pytest -q                                    # 15 tests, ~2 s
+python -m pytest -q                                    # 19 tests, ~3 s
 uvicorn app.main:app --reload                          # http://127.0.0.1:8000
 VOCABULIUM_DIR=../Vocabulium python tools/proches.py   # après un ajout de question
 ```

@@ -605,15 +605,20 @@ function index() {
   const parMot = new Map(), vu = new Map(), pris = new Map(), demasque = new Map(), choixParMot = new Map(), victimes = [];
   const plus = (m, id) => m.set(id, (m.get(id) || 0) + 1);
   for (const p of S.pieges) { if (!parMot.has(p.mot)) parMot.set(p.mot, []); parMot.get(p.mot).push(p); }
+  // Sur Railway, le serveur envoie les compteurs par faux et seulement les duels du joueur
+  // (prototype/serveur.js) ; sur claude.ai, on les compte ici sur tous les duels.
+  const ST = window.__statsServeur;
+  if (ST) for (const [id, [v, p, d]] of Object.entries(ST)) { vu.set(id, v); pris.set(id, p); demasque.set(id, d); }
+  const compter = (m, id) => { if (!ST) plus(m, id); };
   for (const c of S.choix) {
     const montres = c.montres || [];
-    for (const id of montres) plus(vu, id);
+    for (const id of montres) compter(vu, id);
     if (Array.isArray(c.ordre)) {
-      for (const id of c.ordre) plus(demasque, id);
-      if (c.erreur) for (const id of montres) if (!c.ordre.includes(id)) { plus(pris, id); victimes.push({ piege: id, joueur: c.joueur, t: c.t }); }
+      for (const id of c.ordre) compter(demasque, id);
+      if (c.erreur) for (const id of montres) if (!c.ordre.includes(id)) { compter(pris, id); victimes.push({ piege: id, joueur: c.joueur, t: c.t }); }
     } else {
-      if (c.choisi && c.choisi !== "vrai") { plus(pris, c.choisi); victimes.push({ piege: c.choisi, joueur: c.joueur, t: c.t }); }
-      for (const id of montres) if (id !== c.choisi) plus(demasque, id);
+      if (c.choisi && c.choisi !== "vrai") { compter(pris, c.choisi); victimes.push({ piege: c.choisi, joueur: c.joueur, t: c.t }); }
+      for (const id of montres) if (id !== c.choisi) compter(demasque, id);
     }
     if (!choixParMot.has(c.mot)) choixParMot.set(c.mot, []); choixParMot.get(c.mot).push(c);
   }
@@ -1190,7 +1195,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
     const signe = document.getElementById("signeChamp"), sig = signe.value.replace(/\s+/g, " ").trim().slice(0, PSEUDO_MAX);
     if (sig.length < 2) { signe.focus(); signe.classList.add("refus"); return; }
     if (sig !== monPseudo()) {
-      try { await db.doc(`joueurs/${moi}`).set({ pseudo: sig, t: Date.now() }); S.pseudos.set(moi, sig); }
+      try { const r = await db.doc(`joueurs/${moi}`).set({ pseudo: sig, t: Date.now() }); S.pseudos.set(moi, (r && r.pseudo) || sig); }
       catch (e) { if (e && e.code === "doublon") { signe.classList.add("refus"); signe.focus(); err.innerHTML = `<p class="alerte">Cette signature est déjà prise.</p>`; return; } }
     }
     poser.disabled = true;
@@ -1208,7 +1213,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
       document.getElementById("suivant").focus();
     } catch (e) {
       poser.disabled = false;
-      err.innerHTML = e && e.code === "solde" ? reserve(solde(index()), prix) : `<p class="alerte">${e && e.code === "quota_exceeded" ? "Plus de place." : e && e.code === "doublon" ? "Tu as déjà un faux ici." : "Échec de l'enregistrement."}</p>`;
+      err.innerHTML = e && e.code === "solde" ? reserve(solde(index()), prix) : `<p class="alerte">${e && e.code === "quota_exceeded" ? "Plus de place." : e && e.code === "doublon" ? "Tu as déjà un faux ici." : e && e.code === "refuse" ? "Texte refusé." : e && e.code === "debit" ? "Trop vite : réessaie dans un instant." : "Échec de l'enregistrement."}</p>`;
     }
   };
   ta.focus();
@@ -1305,7 +1310,7 @@ function editerPseudo() {
   const valider = async () => {
     const v = ch.value.replace(/\s+/g, " ").trim().slice(0, PSEUDO_MAX);
     if (v.length < 2) { ch.focus(); ch.classList.add("refus"); return; }
-    try { await db.doc(`joueurs/${moi}`).set({ pseudo: v, t: Date.now() }); S.pseudos.set(moi, v); }
+    try { const r = await db.doc(`joueurs/${moi}`).set({ pseudo: v, t: Date.now() }); S.pseudos.set(moi, (r && r.pseudo) || v); }
     catch (e) { if (e && e.code === "doublon") { ch.classList.add("refus"); ch.focus(); return; } }
     atelier();
   };

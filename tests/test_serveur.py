@@ -156,3 +156,29 @@ def test_signalement_controle(client):
 def test_compression(client):
     r = client.get("/proches.json", headers={"Accept-Encoding": "gzip"})
     assert r.headers.get("content-encoding") == "gzip"
+
+
+def test_filtre_commun(client):
+    """Pseudo offensant neutralisé en « Joueur » ; faux offensant refusé."""
+    j = client.get("/api/moi").json()["id"]
+    assert client.put("/api/pseudo", json={"pseudo": "Gros connard"}).json()["pseudo"] == "Joueur"
+    assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "Un vrai salopard."}).status_code == 422
+
+
+def test_etat_allege(client):
+    """L'état ne renvoie que les duels du joueur et ceux où son faux a trompé ; les compteurs par faux
+    viennent du serveur."""
+    client.get("/api/moi")
+    r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15}).json()["id"]
+    import app.main as m
+    autres = []
+    for _ in range(2):
+        a = TestClient(m.app); a.__enter__(); a.get("/api/moi"); autres.append(a)
+    t = _faux_de(client, "cacochyme")[0]
+    autres[0].post("/api/choix", json={"mot": "sapajou", "montres": [r], "ordre": [], "erreur": True})
+    autres[1].post("/api/choix", json={"mot": "cacochyme", "montres": [t], "ordre": [t], "erreur": False})
+    e = client.get("/api/etat").json()
+    assert [c["mot"] for c in e["choix"]] == ["sapajou"]          # le duel où son faux a trompé, pas l'autre
+    assert e["stats"][r] == [1, 1, 0] and e["stats"][t] == [1, 0, 1]
+    assert len(autres[1].get("/api/etat").json()["choix"]) == 1   # ses propres duels seulement
+    for a in autres: a.__exit__(None, None, None)

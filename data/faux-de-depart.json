@@ -1903,5 +1903,230 @@
   "id": "t-formier-3",
   "mot": "formier",
   "texte": "Taille les haies en forme d'animaux."
+ },
+ {
+  "id": "t-carabistouille-1",
+  "mot": "carabistouille",
+  "texte": "Petite carabine à un coup pour la chasse aux oiseaux."
+ },
+ {
+  "id": "t-carabistouille-2",
+  "mot": "carabistouille",
+  "texte": "Pâtisserie flamande fourrée à la cassonade."
+ },
+ {
+  "id": "t-carabistouille-3",
+  "mot": "carabistouille",
+  "texte": "Querelle bruyante entre voisins de palier."
+ },
+ {
+  "id": "t-cenacle-1",
+  "mot": "cenacle",
+  "texte": "Petite niche creusée dans un mur pour y poser une lampe."
+ },
+ {
+  "id": "t-cenacle-2",
+  "mot": "cenacle",
+  "texte": "Repas maigre pris la veille d'une fête religieuse."
+ },
+ {
+  "id": "t-cenacle-3",
+  "mot": "cenacle",
+  "texte": "Bassin de pierre où l'on rinçait le linge au lavoir."
+ },
+ {
+  "id": "t-clampin-1",
+  "mot": "clampin",
+  "texte": "Crochet de fer qui maintient une planche sur l'établi."
+ },
+ {
+  "id": "t-clampin-2",
+  "mot": "clampin",
+  "texte": "Petit sabot de bois pour les enfants."
+ },
+ {
+  "id": "t-clampin-3",
+  "mot": "clampin",
+  "texte": "Commis de ferme chargé de garder les oies."
+ },
+ {
+  "id": "t-cuistre-1",
+  "mot": "cuistre",
+  "texte": "Coffre de cuir pour les voyages en diligence."
+ },
+ {
+  "id": "t-cuistre-2",
+  "mot": "cuistre",
+  "texte": "Pièce de cuir qui protège la cuisse du cavalier."
+ },
+ {
+  "id": "t-cuistre-3",
+  "mot": "cuistre",
+  "texte": "Grand récipient de cuivre pour cuire les confitures."
+ },
+ {
+  "id": "t-esbroufe-1",
+  "mot": "esbroufe",
+  "texte": "Gerbe de copeaux qui jaillit sous le rabot."
+ },
+ {
+  "id": "t-esbroufe-2",
+  "mot": "esbroufe",
+  "texte": "Pluie fine et glacée des matins d'hiver."
+ },
+ {
+  "id": "t-esbroufe-3",
+  "mot": "esbroufe",
+  "texte": "Coiffure ébouriffée à la mode sous le Directoire."
+ },
+ {
+  "id": "t-fanfreluche-1",
+  "mot": "fanfreluche",
+  "texte": "Petite fanfare de village jouée aux mariages."
+ },
+ {
+  "id": "t-fanfreluche-2",
+  "mot": "fanfreluche",
+  "texte": "Fruit sauvage acide qu'on cueille en automne."
+ },
+ {
+  "id": "t-fanfreluche-3",
+  "mot": "fanfreluche",
+  "texte": "Sifflet de bois taillé par les bergers."
+ },
+ {
+  "id": "t-faribole-1",
+  "mot": "faribole",
+  "texte": "Petite farandole dansée en fin de banquet."
+ },
+ {
+  "id": "t-faribole-2",
+  "mot": "faribole",
+  "texte": "Galette de farine de fève cuite sous la cendre."
+ },
+ {
+  "id": "t-faribole-3",
+  "mot": "faribole",
+  "texte": "Lanterne en papier des fêtes de quartier."
+ },
+ {
+  "id": "t-goguenard-1",
+  "mot": "goguenard",
+  "texte": "Qui boit au goulot, sans verre."
+ },
+ {
+  "id": "t-goguenard-2",
+  "mot": "goguenard",
+  "texte": "Qui marche en se dandinant comme un canard."
+ },
+ {
+  "id": "t-goguenard-3",
+  "mot": "goguenard",
+  "texte": "Qui parle du nez, d'une voix nasillarde."
+ },
+ {
+  "id": "t-margoulin-1",
+  "mot": "margoulin",
+  "texte": "Petit bateau plat des marais salants."
+ },
+ {
+  "id": "t-margoulin-2",
+  "mot": "margoulin",
+  "texte": "Ouvrier qui taille les pierres de marbre."
+ },
+ {
+  "id": "t-margoulin-3",
+  "mot": "margoulin",
+  "texte": "Gâteau sec aux amandes de la Saint-Martin."
+ },
+ {
+  "id": "t-mirliton-1",
+  "mot": "mirliton",
+  "texte": "Petit miroir de poche monté sur un manche."
+ },
+ {
+  "id": "t-mirliton-2",
+  "mot": "mirliton",
+  "texte": "Rapace nocturne de la taille d'un merle."
+ },
+ {
+  "id": "t-mirliton-3",
+  "mot": "mirliton",
+  "texte": "Lame courbe des faucheurs de roseaux."
+ },
+ {
+  "id": "t-petaudiere-1",
+  "mot": "petaudiere",
+  "texte": "Fabrique de pétards pour les feux de la Saint-Jean."
+ },
+ {
+  "id": "t-petaudiere-2",
+  "mot": "petaudiere",
+  "texte": "Marmite où l'on faisait mijoter le pot-au-feu."
+ },
+ {
+  "id": "t-petaudiere-3",
+  "mot": "petaudiere",
+  "texte": "Lande humide où poussent les joncs."
+ },
+ {
+  "id": "t-ribambelle-1",
+  "mot": "ribambelle",
+  "texte": "Ruban de couleur noué aux cornes des bœufs de concours."
+ },
+ {
+  "id": "t-ribambelle-2",
+  "mot": "ribambelle",
+  "texte": "Petite cloche qui annonçait la fin du marché."
+ },
+ {
+  "id": "t-ribambelle-3",
+  "mot": "ribambelle",
+  "texte": "Danse en rond des vendanges, mains liées."
+ },
+ {
+  "id": "t-semillant-1",
+  "mot": "semillant",
+  "texte": "Qui est en train de germer, pour une graine."
+ },
+ {
+  "id": "t-semillant-2",
+  "mot": "semillant",
+  "texte": "Couvert de petites taches de son, de rousseur."
+ },
+ {
+  "id": "t-semillant-3",
+  "mot": "semillant",
+  "texte": "Qui sent le foin fraîchement coupé."
+ },
+ {
+  "id": "t-tergiverser-1",
+  "mot": "tergiverser",
+  "texte": "Retourner la terre d'un champ avant l'hiver."
+ },
+ {
+  "id": "t-tergiverser-2",
+  "mot": "tergiverser",
+  "texte": "Frotter un parquet à la cire jusqu'à le faire briller."
+ },
+ {
+  "id": "t-tergiverser-3",
+  "mot": "tergiverser",
+  "texte": "Recopier un texte en changeant l'ordre des mots."
+ },
+ {
+  "id": "t-zigouiller-1",
+  "mot": "zigouiller",
+  "texte": "Danser la gigue en tapant des talons."
+ },
+ {
+  "id": "t-zigouiller-2",
+  "mot": "zigouiller",
+  "texte": "Faire des zigzags en marchant, comme un homme ivre."
+ },
+ {
+  "id": "t-zigouiller-3",
+  "mot": "zigouiller",
+  "texte": "Gribouiller dans les marges d'un cahier."
  }
 ]

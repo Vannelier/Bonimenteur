@@ -30,6 +30,8 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
+from app.pseudos import NAME_FALLBACK, is_offensive_name
+
 RACINE = Path(__file__).resolve().parent.parent
 PAGE = RACINE / "prototype"
 DONNEES = Path(os.environ.get("BONIMENTEUR_DATA_DIR")
@@ -97,11 +99,28 @@ def _base():
         CREATE TABLE IF NOT EXISTS signalements (id INTEGER PRIMARY KEY AUTOINCREMENT, mot TEXT, raison TEXT,
             pieges TEXT, joueur TEXT, t INTEGER);
         CREATE TABLE IF NOT EXISTS joueurs (id TEXT PRIMARY KEY, pseudo TEXT NOT NULL, t INTEGER NOT NULL);
+        CREATE INDEX IF NOT EXISTS faux_auteur ON faux (auteur);
+        CREATE TABLE IF NOT EXISTS stats (faux TEXT PRIMARY KEY, vu INTEGER NOT NULL DEFAULT 0,
+            pris INTEGER NOT NULL DEFAULT 0, demasque INTEGER NOT NULL DEFAULT 0);
     """)
     # Catégorie grammaticale du faux (définitions), ajoutée le 23/11/2026.
     if "categorie" not in {r[1] for r in c.execute("PRAGMA table_info(faux)")}:
         c.execute("ALTER TABLE faux ADD COLUMN categorie TEXT")
+    # Compteurs par faux (ajoutés le 23/11/2026) : reconstruits une fois depuis les duels existants.
+    if not c.execute("SELECT 1 FROM stats LIMIT 1").fetchone():
+        for r in c.execute("SELECT montres, ordre, erreur FROM choix").fetchall():
+            _compter(c, json.loads(r["montres"]), json.loads(r["ordre"]), bool(r["erreur"]))
+        c.commit()
     return c
+
+
+def _compter(c, montres, ordre, erreur):
+    """Un duel joué : chaque faux montré est vu ; démasqué s'il est dans « ordre », sinon pris
+    si le joueur s'est trompé (même règle que index() dans la page)."""
+    for f in montres:
+        dem, pris = int(f in ordre), int(erreur and f not in ordre)
+        c.execute("INSERT INTO stats (faux, vu, pris, demasque) VALUES (?, 1, ?, ?) ON CONFLICT (faux) DO UPDATE "
+                  "SET vu = vu + 1, pris = pris + excluded.pris, demasque = demasque + excluded.demasque", (f, pris, dem))
 
 
 db = _base()
@@ -147,14 +166,9 @@ def _joues_aujourdhui(joueur: str) -> int:
 
 def _solde(joueur: str) -> int:
     gagnes = db.execute("SELECT COALESCE(SUM(gain), 0) FROM choix WHERE joueur = ?", (joueur,)).fetchone()[0]
-    mes = db.execute("SELECT id, prix FROM faux WHERE auteur = ?", (joueur,)).fetchall()
-    ids = {r["id"] for r in mes}
-    victimes = 0
-    if ids:
-        for r in db.execute("SELECT montres, ordre FROM choix WHERE erreur = 1"):
-            ordre = set(json.loads(r["ordre"]))
-            victimes += sum(1 for f in json.loads(r["montres"]) if f in ids and f not in ordre)
-    return ECUS_DEPART + gagnes + victimes - sum(r["prix"] for r in mes)
+    prix, victimes = db.execute("SELECT COALESCE(SUM(f.prix), 0), COALESCE(SUM(s.pris), 0) FROM faux f "
+                                "LEFT JOIN stats s ON s.faux = f.id WHERE f.auteur = ?", (joueur,)).fetchone()
+    return ECUS_DEPART + gagnes + victimes - prix
 
 
 @app.get("/api/moi")
@@ -166,15 +180,23 @@ def moi(request: Request, response: Response):
 
 @app.get("/api/etat")
 def etat(request: Request):
-    """Tout ce que la page lit : questions, faux, choix, contestations, pseudos."""
+    """Ce que la page lit : questions, faux, compteurs par faux, contestations, pseudos, et
+    seulement les duels qui concernent le joueur (les siens, et ceux où l'un de ses faux a
+    trompé quelqu'un : « Tes faux ont trouvé preneur »). Avant le 23/11/2026, tous les duels de
+    tous les joueurs repartaient toutes les 20 s (audit, docs/audit.md)."""
+    j = request.cookies.get(COOKIE, "")
     with _verrou:
-        return _etat()
+        return _etat(j if IDENTIFIANT.match(j) else "")
 
 
-def _etat():
+def _etat(j: str):
+    lignes = db.execute("SELECT * FROM choix WHERE joueur = ? OR erreur = 1 AND EXISTS (SELECT 1 FROM faux f "
+                        "WHERE f.auteur = ? AND instr(choix.montres, '\"' || f.id || '\"') > 0)", (j, j)).fetchall()
     choix = [{**dict(r), "montres": json.loads(r["montres"]), "ordre": json.loads(r["ordre"]),
-              "erreur": bool(r["erreur"])} for r in db.execute("SELECT * FROM choix")]
+              "erreur": bool(r["erreur"])} for r in lignes]
+    stats = {r["faux"]: [r["vu"], r["pris"], r["demasque"]] for r in db.execute("SELECT * FROM stats")}
     return {
+        "stats": stats,
         "mots": QUESTIONS,
         "pieges": _tous_les_faux(),
         "choix": choix,
@@ -203,6 +225,9 @@ def poser(f: Faux, request: Request):
     # de la vraie réponse (aux accents, à la casse et à la ponctuation près).
     if _plat(f.texte) == _plat(QUESTIONS[f.mot]["vraie"]):
         raise HTTPException(422, "trop proche de l'original")
+    # Même filtre que les pseudos, sur le texte du faux : il est montré à tous les joueurs.
+    if is_offensive_name(f.texte):
+        raise HTTPException(422, "contenu refusé")
     if f.prix not in PRIX:
         raise HTTPException(422, "prix inconnu")
     if f.categorie is not None and f.categorie not in CATEGORIES:
@@ -246,6 +271,7 @@ def choisir(c: Choix, request: Request):
         db.execute("INSERT INTO choix VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                    (secrets.token_urlsafe(12), c.mot, json.dumps(c.montres), json.dumps(c.ordre),
                     int(c.erreur), gain, j, _ms()))
+        _compter(db, c.montres, c.ordre, c.erreur)
         db.commit()
     return {"gain": gain}
 
@@ -316,8 +342,12 @@ def nommer(p: Pseudo, request: Request):
     # « Truffe » signe les faux de départ ; un pseudo n'appartient qu'à un joueur.
     if _plat(v) in RESERVES:
         raise HTTPException(409, "pseudo réservé")
+    # Filtre commun aux jeux (app/pseudos.py, copie de Vocabulium) : un pseudo offensant devient
+    # « Joueur », sans erreur qui aiderait à contourner le filtre.
+    if is_offensive_name(v):
+        v = NAME_FALLBACK
     with _verrou:
-        if any(_plat(r["pseudo"]) == _plat(v) for r in db.execute("SELECT pseudo FROM joueurs WHERE id != ?", (j,))):
+        if v != NAME_FALLBACK and any(_plat(r["pseudo"]) == _plat(v) for r in db.execute("SELECT pseudo FROM joueurs WHERE id != ?", (j,))):
             raise HTTPException(409, "pseudo déjà pris")
         db.execute("INSERT INTO joueurs VALUES (?, ?, ?) ON CONFLICT (id) DO UPDATE SET pseudo = excluded.pseudo, t = excluded.t",
                    (j, v, _ms()))
