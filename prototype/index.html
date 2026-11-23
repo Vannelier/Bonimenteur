@@ -48,7 +48,7 @@ header .rosette{width:46px;height:46px;flex:none;border-radius:50%;background:va
   box-shadow:0 0 0 2px var(--or),0 0 0 4px var(--cuir),0 0 0 5px rgba(184,151,63,.5)}
 h1{font-family:var(--titre);font-weight:700;font-size:25px;line-height:1.05;margin:0;letter-spacing:.06em;text-transform:uppercase;color:#e7d6a0;
   text-shadow:0 1px 0 #000}
-h1 span{display:block;font-size:.62em;letter-spacing:.32em;color:#b9c7bb;white-space:nowrap}
+h1 span{display:block;font-size:.62em;letter-spacing:.2em;color:#b9c7bb;white-space:nowrap}
 @media (max-width:389px){h1{font-size:22px}h1 span{letter-spacing:.2em}}
 h2{font-family:var(--titre);font-weight:700;font-size:19px;letter-spacing:.08em;text-transform:uppercase;margin:0;text-align:center}
 
@@ -122,7 +122,7 @@ h2{font-family:var(--titre);font-weight:700;font-size:19px;letter-spacing:.08em;
 /* Verdict : le sceau de cire (intact quand on démasque, brisé quand on est dupé), la phrase, le gain. */
 .verdict{display:flex;align-items:center;gap:12px;min-height:58px}
 .sceau{width:52px;height:52px;flex:none;display:block}
-.verdict .dit{flex:1;margin:0;font-family:var(--titre);font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--encre)}
+.verdict .dit{flex:1;margin:0;font-family:var(--titre);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--encre)}
 .gain{font-family:var(--titre);font-weight:700;font-size:30px;line-height:1;color:var(--piege);display:inline-flex;align-items:center;gap:2px;font-variant-numeric:lining-nums}
 @media (prefers-reduced-motion:no-preference){
   .sceau.pose{animation:pose .36s cubic-bezier(.2,1.5,.5,1) both}
@@ -287,6 +287,8 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .categories{display:flex;flex-wrap:wrap;gap:6px;margin-top:-6px}
 .cat{min-height:36px;padding:0 12px;border-radius:3px;border:1.5px solid var(--trait);background:var(--creux);font:italic 16px "IM Fell English",Georgia,serif;color:var(--encre);cursor:pointer}
 .cat[aria-checked="true"]{background:var(--vert);border-color:var(--vert);color:var(--papier)}
+/* Salle des ventes : une ligne au-dessus des deux pièces, dans le ton du catalogue. */
+.consigne-achat{margin:-4px 0 -6px;text-align:center;font:700 11px/1.4 var(--titre);letter-spacing:.22em;text-transform:uppercase;color:var(--doux)}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -298,13 +300,13 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 <div class="page">
   <header>
     <span class="rosette" aria-hidden="true"></span>
-    <h1>Bonimenteur<span>Atelier du faussaire</span></h1>
+    <h1>Bonimenteur<span>Antiquaire &amp; faussaire</span></h1>
   </header>
   <nav class="onglets" role="tablist" aria-label="Écrans">
-    <button id="o-jouer" role="tab" aria-selected="true" data-ecran="jouer">Jouer</button>
+    <button id="o-jouer" role="tab" aria-selected="true" data-ecran="jouer">Ventes</button>
     <button id="o-atelier" role="tab" aria-selected="false" data-ecran="atelier">Atelier</button>
   </nav>
-  <main id="ecran" class="carte" aria-live="polite"><p class="centre">Chargement des mots…</p></main>
+  <main id="ecran" class="carte" aria-live="polite"><p class="centre">Ouverture de la salle des ventes…</p></main>
   <p class="note">Prototype</p>
 </div>
 
@@ -334,9 +336,11 @@ const IC = {
 };
 /* Sceau de cire : intact quand on démasque le faux, brisé quand on est dupé. */
 const sceau = (intact, cls = "") => `<svg class="sceau ${cls}" viewBox="0 0 60 60" aria-hidden="true"><path fill="#9e2a22" d="M30 3c4 0 5 3 8.5 4s6.5-1 9 1.7.8 6.2 2.5 9.3 5 4 5 8-3 5.2-4 8.6 1 6.6-1.7 9.3-6.2.8-9.3 2.5S34 57 30 57s-5.2-3-8.6-4-6.6 1-9.3-1.7-.8-6.2-2.5-9.3S4 34 4 30s3-5.2 4-8.6-1-6.6 1.7-9.3 6.2-.8 9.3-2.5S26 3 30 3z"/><circle cx="30" cy="30" r="17" fill="#b3322a" stroke="#7a1f19" stroke-width="2"/><circle cx="30" cy="30" r="12" fill="none" stroke="#e7a59c" stroke-width="1" stroke-dasharray="2 2.4" opacity=".8"/><path d="M23 30.5l5 5 9-10" fill="none" stroke="#f6d5cf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ${intact ? "" : 'opacity="0"'}/>${intact ? "" : '<path d="M24 22l9 9M33 22l-9 9" stroke="#f6d5cf" stroke-width="3" stroke-linecap="round"/><path d="M31 3l-3 13 6 7-5 9 4 9-3 16" fill="none" stroke="#15281f" stroke-width="2.4" stroke-linejoin="round"/>'}<ellipse cx="22" cy="16" rx="6" ry="2.6" fill="#fff" opacity=".22" transform="rotate(-30 22 16)"/></svg>`;
-const REPLIQUES = { juste: ["Faux démasqué.", "Contrefaçon repérée."], cru: ["Le faux est passé.", "Bien imité."] };
+// Vocabulaire de la salle des ventes (demande de l'auteur, 23/11/2026) : on achète les pièces
+// d'époque, on met des faux sur le marché (docs/conception.md, « Lexique »).
+const REPLIQUES = { juste: ["Bonne affaire.", "Pièce d'époque acquise."], cru: ["On t'a refourgué un faux.", "Tu as acheté un faux."] };
 const replique = k => REPLIQUES[k][Math.floor(Math.random() * REPLIQUES[k].length)];
-const numero = id => { let n = 0; for (const c of String(id)) n = (n * 31 + c.charCodeAt(0)) % 9000; return `N° ${"ABCDEFGHJK"[n % 10]}·${String(1000 + n).padStart(4, "0")}`; };
+const numero = id => { let n = 0; for (const c of String(id)) n = (n * 31 + c.charCodeAt(0)) % 9000; return `Lot ${"ABCDEFGHJK"[n % 10]}·${String(1000 + n).padStart(4, "0")}`; };
 /* Un mot ne se coupe jamais en deux : s'il dépasse la fiche, sa police rétrécit jusqu'à
    tenir sur la largeur (9 px au plus petit : la phobie de 36 lettres sur un écran de 320 px). Une lecture et une écriture par mot, à
    l'image suivante, après chaque affichage et quand les polices arrivent. */
@@ -748,6 +752,7 @@ function afficherDuel(motId, options, piege) {
   const m = S.mots.get(motId);
   $e.innerHTML = `${entete()}
     ${enonce(m)}
+    <p class="consigne-achat" aria-hidden="true">Achète la pièce d'époque</p>
     <div class="choix duel feuillets">${options.map((o, k) => `<button class="bouton feuillet" type="button" data-k="${k}"><span class="peau-uv" aria-hidden="true"></span>${feuillet(m, motId, o.texte, o.categorie)}<small hidden></small></button>`).join("")}</div>
     <div id="suite"></div>`;
   $e.querySelectorAll("[data-k]").forEach(b => b.onclick = () => repondre(motId, options, piege, +b.dataset.k));
@@ -757,7 +762,7 @@ function repondre(motId, options, piege, k) {
   if (serie.repondu === motId) return; serie.repondu = motId;
   const juste = options[k].id === "vrai", I = index();
   const montrer = (btn, html, cls) => { btn.disabled = true; btn.classList.add(cls); const sm = btn.querySelector("small"); sm.hidden = false; sm.innerHTML = html; };
-  const etoile = I.pvqn.has(piege.id) ? `<span style="color:var(--piege)" title="Plus vrai que nature">${IC.etoile}</span>` : "";
+  const etoile = I.pvqn.has(piege.id) ? `<span style="color:var(--piege)" title="Pièce de maître">${IC.etoile}</span>` : "";
   options.forEach((o, i) => {
     const b = $e.querySelector(`[data-k="${i}"]`);
     if (o.id === "vrai") montrer(b, VRAI, "ok");
@@ -774,9 +779,9 @@ function repondre(motId, options, piege, k) {
   if (db) db.collection("choix").add(trace).catch(() => {});
   serie.num++; serie.traces.push(juste ? 1 : 0);
   const fin = serie.num >= TOTAL;
-  document.getElementById("suite").innerHTML = `<div class="verdict apparait">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Dupé</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--piege)" : "var(--faux)"}">+${gain}${IC.blop}</span></div>
-    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="Piéger cette question pour ${PRIX_DIRECT} blops">${IC.piege} −${PRIX_DIRECT}${IC.blop}</button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Résultat" : "Suivante"}</button></div>
-    ${db ? `<div class="signal"><button class="lien" type="button" id="signaler">Signaler la question</button><div id="raisons" hidden></div></div>` : ""}`;
+  document.getElementById("suite").innerHTML = `<div class="verdict apparait">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--piege)" : "var(--faux)"}">+${gain}${IC.blop}</span></div>
+    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="Contrefaire ce lot pour ${PRIX_DIRECT} blops">${IC.piege} −${PRIX_DIRECT}${IC.blop}</button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
+    ${db ? `<div class="signal"><button class="lien" type="button" id="signaler">Signaler le lot</button><div id="raisons" hidden></div></div>` : ""}`;
   const pr = $e.querySelector(".progres"); if (pr) pr.remove();
   $e.querySelector(".entete").outerHTML = entete(serie.num);
   /* Signalement discret. « Un piège dit vrai » conteste le piège du duel ; tout est aussi gardé
@@ -784,7 +789,7 @@ function repondre(motId, options, piege, k) {
   const bs = document.getElementById("signaler");
   if (bs) bs.onclick = () => {
     const r = document.getElementById("raisons"); r.hidden = !r.hidden; if (r.hidden) return;
-    const raisons = [["piege-vrai", "Un piège dit vrai"], ["verite-fausse", "La bonne réponse est fausse"], ["choquant", "Contenu choquant"]];
+    const raisons = [["piege-vrai", "Le faux dit vrai"], ["verite-fausse", "La pièce d'époque est fausse"], ["choquant", "Contenu choquant"]];
     r.innerHTML = raisons.map(([kk, t]) => `<button class="lien" type="button" data-raison="${kk}">${t}</button>`).join(" · ");
     r.querySelectorAll("[data-raison]").forEach(b => b.onclick = async () => {
       const raison = b.dataset.raison;
@@ -813,7 +818,7 @@ function choixFamille(retour) {
     $e.innerHTML = `${retour === atelier ? sousOnglets("fabriquer", I) : ""}${enteteBlops(s)}
       <div class="grosse-ic apparait">${IC.piege}</div>
       ${reserve(s)}
-      <button class="bouton plein" type="button" id="retour" style="width:100%">Jouer</button>`;
+      <button class="bouton plein" type="button" id="retour" style="width:100%">Salle des ventes</button>`;
     document.getElementById("retour").onclick = () => (retour === atelier ? montrer("jouer") : nouvelleSerie()); if (retour === atelier) lierSous(); return;
   }
   const dansAtelier = retour === atelier;
@@ -834,7 +839,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
     <div class="compte" id="compte">0 / ${F.max}</div>
     <label class="signer"><i>signé</i><input id="signeChamp" maxlength="${PSEUDO_MAX}" autocomplete="nickname" aria-label="Ta signature" placeholder="ton nom de faussaire" value="${esc(signatureProposee())}"></label>
     <div id="erreurPiege"></div>
-    <div class="ligne"><button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button>${direct ? "" : `<button class="bouton" type="button" id="autre">Autre</button>`}<button class="bouton piege" type="button" id="poser">Poser</button></div>`;
+    <div class="ligne"><button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button>${direct ? "" : `<button class="bouton" type="button" id="autre">Autre</button>`}<button class="bouton piege" type="button" id="poser">Mettre en vente</button></div>`;
   const ta = document.getElementById("piegeTexte");
   ta.oninput = () => { document.getElementById("compte").textContent = `${ta.value.length} / ${F.max}`; };
   document.getElementById("signeChamp").oninput = e => e.target.classList.remove("refus");
@@ -867,7 +872,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
     poser.disabled = false; poser.innerHTML = libelle;
     // Refus sans révéler la vérité : l'arbitre se trompe parfois (1 piège sans rapport sur 784 refusé à tort),
     // le joueur réécrit. Pas de triche possible : une question tentée ne lui sera plus posée.
-    if (proche) { vusLocal.add(motId); err.innerHTML = `<p class="alerte">Trop proche de la vérité.</p>`; ta.focus(); return; }
+    if (proche) { vusLocal.add(motId); err.innerHTML = `<p class="alerte">Trop proche de l'original.</p>`; ta.focus(); return; }
     if (!db) { err.innerHTML = `<p class="alerte">Mémoire partagée indisponible.</p>`; return; }
     if (solde(index()) < prix) { err.innerHTML = reserve(solde(index()), prix); return; }
     // Un seul pseudo par joueur : signer autrement le change partout (décision de l'auteur, 23/11/2026).
@@ -882,7 +887,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
       const reste = solde(index());
       $e.innerHTML = `${enteteBlops(reste, prix)}
         <div class="grosse-ic apparait">${IC.piege}</div>
-        <div class="chips"><span class="chip bon">${IC.ok} Posé</span>${pastilleBlop(prix, "−")}</div>
+        <div class="chips"><span class="chip bon">${IC.ok} En vente</span>${pastilleBlop(prix, "−")}</div>
         <div class="ligne">${!direct && reste >= PRIX_PIEGE ? `<button class="bouton piege" type="button" id="encore">Encore</button>` : ""}<button class="bouton plein" type="button" id="suivant">Continuer</button></div>`;
       const enc = document.getElementById("encore"); if (enc) enc.onclick = () => choixFamille(retour);
       document.getElementById("suivant").onclick = retour;
@@ -911,14 +916,14 @@ async function bilan() {
   const I = index(), j = aujourdhui(), mesIds = new Set(I.piegesMoi.map(p => p.id));
   const dupes = I.victimes.filter(v => mesIds.has(v.piege) && v.joueur !== moi && jourDe(v.t || 0) === j).length;
   const cases = serie.traces.map(n => n ? "🟩" : "🟥").join("");
-  const partage = `Bonimenteur${RATION_ACTIVE ? `, ration du ${j.split("-").reverse().slice(0, 2).join("/")}` : ""} : +${serie.points} blops\n${cases}${dupes ? `\nMes faux ont dupé ${dupes} joueur${dupes > 1 ? "s" : ""}` : ""}`;
-  $e.innerHTML = `${RATION_ACTIVE ? "" : `<div class="gros apparait" style="color:var(--piege)">+${serie.points}${IC.blop}</div>`}${RATION_ACTIVE ? `<div class="demain apparait" role="img" aria-label="Prochaine ration dans ${duree(avantMinuit())}"><span class="sablier" aria-hidden="true">${IC.sablier}</span><span id="compteRebours">${duree(avantMinuit())}</span></div>` : ""}
+  const partage = `Bonimenteur, vacation${RATION_ACTIVE ? ` du ${j.split("-").reverse().slice(0, 2).join("/")}` : ""} : +${serie.points} blops\n${cases}${dupes ? `\nMes faux ont dupé ${dupes} joueur${dupes > 1 ? "s" : ""}` : ""}`;
+  $e.innerHTML = `${RATION_ACTIVE ? "" : `<h2 class="apparait">Fin de vacation</h2><div class="gros apparait" style="color:var(--piege)">+${serie.points}${IC.blop}</div>`}${RATION_ACTIVE ? `<div class="demain apparait" role="img" aria-label="Prochaine ration dans ${duree(avantMinuit())}"><span class="sablier" aria-hidden="true">${IC.sablier}</span><span id="compteRebours">${duree(avantMinuit())}</span></div>` : ""}
     <div class="cases" aria-hidden="true">${serie.traces.map(n => `<i class="${n ? "v" : ""}"></i>`).join("")}</div>
     <div class="chips">${RATION_ACTIVE ? `<span class="chip blop" aria-label="${serie.points} blops gagnés aujourd'hui">+${serie.points}${IC.blop}</span>` : ""}${dupes ? `<span class="chip faux" aria-label="${dupes} joueurs dupés par tes faux aujourd'hui">${IC.joueur} ${dupes}</span>${pastilleBlop(dupes, "+")}` : ""}</div>
     ${pire ? `<div class="chips"><span class="chip faux">${IC.piege} ${esc(nom(pire[0]))} ×${pire[1]}</span></div>` : ""}
     <div class="haut entete" style="justify-content:center">${pastilleBlop(solde(I))}</div>
-    <button class="bouton piege" type="button" id="versAtelier">Rejoindre l'atelier</button>
-    ${RATION_ACTIVE ? "" : `<button class="bouton plein" type="button" id="encore">Encore</button>`}
+    <button class="bouton piege" type="button" id="versAtelier">Passer à l'atelier</button>
+    ${RATION_ACTIVE ? "" : `<button class="bouton plein" type="button" id="encore">Nouvelle vacation</button>`}
     <button class="bouton" type="button" id="copier">Partager</button>`;
   const enc = document.getElementById("encore"); if (enc) enc.onclick = nouvelleSerie;
   document.getElementById("versAtelier").onclick = () => { sousAtelier = "fabriquer"; montrer("atelier"); };
@@ -936,8 +941,8 @@ async function bilan() {
 }
 
 function plusDeMots() {
-  $e.innerHTML = `${serie ? entete() : ""}<div class="grosse-ic">${IC.definition}</div><p class="centre">Plus de questions pour toi.</p>
-    <div class="ligne"><button class="bouton piege" type="button" id="versAtelier">Piéger</button>${serie && serie.num ? `<button class="bouton" type="button" id="bilanBtn">Résultat</button>` : ""}</div>`;
+  $e.innerHTML = `${serie ? entete() : ""}<div class="grosse-ic">${IC.definition}</div><p class="centre">Plus aucun lot en vente.</p>
+    <div class="ligne"><button class="bouton piege" type="button" id="versAtelier">Contrefaire</button>${serie && serie.num ? `<button class="bouton" type="button" id="bilanBtn">Bilan</button>` : ""}</div>`;
   document.getElementById("versAtelier").onclick = () => { sousAtelier = "fabriquer"; montrer("atelier"); };
   const b = document.getElementById("bilanBtn"); if (b) b.onclick = bilan;
 }
@@ -949,7 +954,7 @@ function plusDeMots() {
 let sousAtelier = null;
 function sousOnglets(actif, I) {
   const n = I.piegesMoi.length;
-  return `<div class="sous-onglets" role="tablist" aria-label="Atelier"><button type="button" role="tab" data-sous="fabriquer" aria-selected="${actif === "fabriquer"}">${IC.piege} Fabriquer</button><button type="button" role="tab" data-sous="faux" aria-selected="${actif === "faux"}">Mes faux <span class="nb">${n}</span></button></div>`;
+  return `<div class="sous-onglets" role="tablist" aria-label="Atelier"><button type="button" role="tab" data-sous="fabriquer" aria-selected="${actif === "fabriquer"}">${IC.piege} Contrefaire</button><button type="button" role="tab" data-sous="faux" aria-selected="${actif === "faux"}">Sur le marché <span class="nb">${n}</span></button></div>`;
 }
 function lierSous() { $e.querySelectorAll("[data-sous]").forEach(b => b.onclick = () => atelier(b.dataset.sous)); }
 async function atelier(sous) {
@@ -967,15 +972,15 @@ async function atelier(sous) {
   // Dès la première victime, il est sauvé pour de bon : plus de mèche.
   const meche = v => `<div class="meche" role="img" aria-label="${MORT_VUS - v} démasquages avant de disparaître">${Array.from({length: MORT_VUS}, (_, i) => `<i class="${i < v ? "brule" : ""}"></i>`).join("")}</div>`;
   const etat = p => {
-    if (I.retire.has(p.id)) return `<span class="chip faux">${IC.croix} Retiré</span>`;
-    if (I.mort.has(p.id)) return `<span class="chip faux">${IC.croix} Démasqué</span>`;
-    if (I.pvqn.has(p.id)) return `<span class="chip blop">${IC.etoile} Plus vrai que nature</span>`;
+    if (I.retire.has(p.id)) return `<span class="chip faux">${IC.croix} Retiré du marché</span>`;
+    if (I.mort.has(p.id)) return `<span class="chip faux">${IC.croix} Saisi</span>`;
+    if (I.pvqn.has(p.id)) return `<span class="chip blop">${IC.etoile} Pièce de maître</span>`;
     return "";
   };
   $e.innerHTML = `${sousOnglets("faux", I)}<div class="signature" id="signature"><span class="signe">Signé</span><button class="nom-signe" type="button" id="pseudoBtn" aria-label="Changer de pseudo">${monPseudo() ? esc(monPseudo()) : "ton pseudo"}${IC.plume}</button></div><div class="haut entete"><span class="chip" aria-label="${mes.length} pièges posés">${IC.piege} ${mes.length}</span><span class="chip faux" aria-label="${total} joueurs piégés">${IC.joueur} ${total}</span>${pastilleBlop(s)}</div>
     ${mes.length ? `<ul class="liste">${mes.map(p => { const v = I.demasque.get(p.id) || 0, n = I.pris.get(p.id) || 0; const mot = S.mots.get(p.mot); return `<li class="${I.mort.has(p.id) || I.retire.has(p.id) ? "eteint" : ""}"><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>${esc(formater(p.texte, mot ? famille(mot) : "definition"))}</span>${!n && !I.mort.has(p.id) && !I.retire.has(p.id) ? meche(v) : ""}<span class="chips" style="justify-content:flex-start">${etat(p)}<span class="chip" aria-label="${v} joueurs l'ont démasqué">${IC.oeil} ${v}</span><span class="chip faux" aria-label="${n} joueurs piégés">${IC.joueur} ${n}</span>${n ? pastilleBlop(n, "+") : ""}</span></li>`; }).join("")}</ul>`
       : `<div class="grosse-ic">${IC.piege}</div>`}
-    ${galerie.length ? `<h2>${IC.etoile} Plus vrais que nature</h2><ul class="liste">${galerie.map(p => { const mot = S.mots.get(p.mot); return `<li><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>« ${esc(formater(p.texte, mot ? famille(mot) : "definition"))} »</span><span class="chips" style="justify-content:flex-start"><span class="chip">${IC.piege} ${esc(nom(p.auteur))}</span><span class="chip faux" aria-label="joueurs piégés">${IC.joueur} ${I.pris.get(p.id) || 0}</span></span></li>`; }).join("")}</ul>` : ""}`;
+    ${galerie.length ? `<h2>${IC.etoile} Pièces de maître</h2><ul class="liste">${galerie.map(p => { const mot = S.mots.get(p.mot); return `<li><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>« ${esc(formater(p.texte, mot ? famille(mot) : "definition"))} »</span><span class="chips" style="justify-content:flex-start"><span class="chip">${IC.piege} ${esc(nom(p.auteur))}</span><span class="chip faux" aria-label="joueurs piégés">${IC.joueur} ${I.pris.get(p.id) || 0}</span></span></li>`; }).join("")}</ul>` : ""}`;
   lierSous();
   document.getElementById("pseudoBtn").onclick = editerPseudo;
 }
@@ -1007,11 +1012,11 @@ async function absence() {
   for (const v of victimes) { if (!parPiege.has(v.piege)) parPiege.set(v.piege, []); parPiege.get(v.piege).push(v.joueur); }
   await nommer(victimes.map(c => c.joueur));
   const initiale = id => esc((nom(id) || "?").charAt(0).toUpperCase());
-  $e.innerHTML = `<h2 style="text-align:center">Pendant ton absence</h2>
+  $e.innerHTML = `<h2 style="text-align:center">Tes faux ont trouvé preneur</h2>
     <div class="gros apparait" aria-label="${victimes.length} victimes">${victimes.length}</div>
     <div class="chips">${IC.joueur}${pastilleBlop(victimes.length, "+")}</div>
     <ul class="liste">${[...parPiege].map(([id, js]) => { const p = mesIds.get(id), mot = S.mots.get(p.mot); return `<li><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>${esc(formater(p.texte, mot ? famille(mot) : "definition"))}</span><span class="victimes">${[...new Set(js)].map(j => `<span class="victime"><b aria-hidden="true">${initiale(j)}</b>${esc(nom(j))}</span>`).join("")}</span></li>`; }).join("")}</ul>
-    <button class="bouton plein" type="button" id="jouerAbsence">Jouer</button>`;
+    <button class="bouton plein" type="button" id="jouerAbsence">Salle des ventes</button>`;
   document.getElementById("jouerAbsence").onclick = () => montrer("jouer");
   return true;
 }
