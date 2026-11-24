@@ -35,7 +35,7 @@
   }
   async function ecrire(methode, url, corps) {
     const r = await fetch(url, { method: methode, credentials: "same-origin", headers: { "Content-Type": "application/json" }, body: JSON.stringify(corps) });
-    if (!r.ok) { const e = new Error(`HTTP ${r.status}`); e.code = r.status === 402 ? "solde" : r.status === 403 ? "non_achete" : r.status === 409 ? "doublon" : r.status === 422 ? "refuse" : r.status === 429 ? "debit" : String(r.status); throw e; }
+    if (!r.ok) { const e = new Error(`HTTP ${r.status}`); e.code = r.status === 402 ? "solde" : r.status === 403 ? "non_authentifie" : r.status === 409 ? "doublon" : r.status === 422 ? "refuse" : r.status === 429 ? "debit" : String(r.status); throw e; }
     const reponse = await r.json();
     // La page relit l'état juste après : il doit être à jour. Une lecture partie avant
     // l'écriture ne compte pas, on en relance une.

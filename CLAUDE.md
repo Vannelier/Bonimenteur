@@ -16,7 +16,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | `app/pseudos.py` | Filtre des pseudos, copie exacte de Vocabulium (`tests/test_copies.py`) : ne pas l'éditer ici. Appliqué aussi aux textes des faux. |
 | `app/main.py` | Serveur : page, API (`/api/moi`, `/api/etat` (avec le classement des faussaires de la semaine, `_piegeurs`, et la jauge des joueurs, `_communaute`), `/api/pieges`, `/api/choix`, `/api/contestations`, `/api/signalements`, `/api/pseudo`), SQLite. Identité par cookie HttpOnly posé par le serveur ; auteur d'un faux, gain d'un duel, prix et solde décidés ici. |
 | `prototype/serveur.js` | Interface `window.claude` (collection, doc, user) branchée sur l'API, relue toutes les 20 s et après chaque écriture ; passe à la page les compteurs par faux du serveur (`window.__statsServeur`). |
-| `prototype/index.html` | Le jeu : accueil (canevas des trois autres jeux, podium des faussaires, `majAccueil`), classement de la semaine (`ecranClassement`), duels, atelier (Contrefaire : lots tamponnés « Acheté » ou « Floué » ; Sur le marché), arbitre, bilan. Réglages en tête du script (`TOTAL`, `PRIX_PIEGE`, `PRIX_DIRECT`, `ECUS_DEPART`, `MORT_VUS`, `PVQN_VUS`, `CONTEST_MIN`, `FAMILLES` et leurs seuils). |
+| `prototype/index.html` | Le jeu : accueil (canevas des trois autres jeux, podium des faussaires, `majAccueil`), classement de la semaine (`ecranClassement`), duels, atelier (Contrefaire : lots tamponnés « Authentifié » ou « Floué » ; Sur le marché), arbitre, bilan. Réglages en tête du script (`TOTAL`, `PRIX_PIEGE`, `PRIX_DIRECT`, `ECUS_DEPART`, `MORT_VUS`, `PVQN_VUS`, `CONTEST_MIN`, `FAMILLES` et leurs seuils). |
 | `prototype/proches.json` | Données de l'arbitre du sens, générées par `tools/proches.py`. Ne pas éditer. |
 | `prototype/communes.txt` | Communes de France (geo.api.gouv.fr, 34 969). |
 | `prototype/photos/` | Images des questions photo (Wikimedia Commons, crédits dans les questions). |
@@ -55,7 +55,7 @@ CI : `.github/workflows/tests.yml` lance `pytest -q` sur chaque PR.
 - Le score et les écus se calculent sur les choix enregistrés. Limite connue :
   la page reçoit les vraies réponses et déclare elle-même si le joueur s'est
   trompé (`erreur`) ; le serveur ne peut pas encore le vérifier (`docs/audit.md`).
-- On ne contrefait que les pièces achetées (lot où le joueur a trouvé la vraie) ;
+- On ne contrefait que les pièces authentifiées (lot où le joueur a trouvé la vraie) ;
   le serveur refuse les autres (403).
 - Serveur : tout accès à SQLite sous `_verrou` ; limites de débit par IP
   (`LIMITES`) ; contestation seulement d'un faux eu en duel ; pseudos uniques,

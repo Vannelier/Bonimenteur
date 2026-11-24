@@ -11,7 +11,7 @@
 /* Bonimenteur : l'Atelier du faussaire. On fabrique des faux (documents, billets,
    tampons) et on démasque ceux des autres. Mise en page de Discoverium, univers propre :
    sous-main de cuir vert, papier filigrané à guilloches, or terni pour les écus,
-   la monnaie de l'antiquaire, rouge des tampons, vert billet pour l'action principale.
+   la monnaie de l'expert, rouge des tampons, vert billet pour l'action principale.
    Cinzel (capitales gravées des billets) pour les titres et étiquettes, Source Serif 4
    pour le texte, Stardos Stencil pour les tampons. Guilloches et rosette : SVG statiques
    générés (sinusoïdes), rien d'animé dedans. N'anime que transform et opacity. */
@@ -297,9 +297,9 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .categories{display:flex;flex-wrap:wrap;gap:6px;margin-top:-6px}
 .cat{min-height:36px;padding:0 12px;border-radius:3px;border:1.5px solid var(--trait);background:var(--creux);font:italic 16px "IM Fell English",Georgia,serif;color:var(--encre);cursor:pointer}
 .cat[aria-checked="true"]{background:var(--vert);border-color:var(--vert);color:var(--papier)}
-/* Salle des ventes : une ligne au-dessus des deux pièces, dans le ton du catalogue. */
-.consigne-achat{margin:-4px 0 -6px;text-align:center;font:700 11px/1.4 var(--titre);letter-spacing:.22em;text-transform:uppercase;color:var(--doux)}
-/* Étiquette d'achat : un ticket de carton percé, sur la pièce choisie. */
+/* Cabinet d'expertise : une ligne au-dessus des deux pièces, dans le ton du catalogue. */
+.consigne-expertise{margin:-4px 0 -6px;text-align:center;font:700 11px/1.4 var(--titre);letter-spacing:.22em;text-transform:uppercase;color:var(--doux)}
+/* Étiquette d'expertise : un ticket de carton percé, sur la pièce choisie (« Certifié »). */
 .etiquette{position:relative;display:inline-flex;align-items:center;gap:6px;padding:3px 10px 3px 16px;font:700 11px/1.2 var(--titre);letter-spacing:.14em;text-transform:uppercase;
   color:#4a3618;background:#e9d29a;clip-path:polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%);transform:rotate(-4deg)}
 .etiquette::before{content:"";position:absolute;left:7px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:#f1e5c6}
@@ -338,8 +338,8 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .f-art .rubrique{font-style:italic}
 @media (max-height:700px){.f-planche{grid-template-columns:80px 1fr}.f-planche img{width:80px;height:80px}.f-planche .f-art{font-size:14.5px}}
 /* --- Révélation : séquence d'environ 1,3 s, transform et opacity seulement ------------------
-   0 ms     la pièce achetée s'enfonce puis se soulève ; l'étiquette « Acheté » s'épingle
-   300 ms   coup de tampon sur la pièce achetée ; à l'impact (≈ 600 ms) elle tressaute et un éclat
+   0 ms     la pièce choisie s'enfonce puis se soulève ; l'étiquette « Certifié » s'épingle
+   300 ms   coup de tampon sur la pièce authentifiée ; à l'impact (≈ 600 ms) elle tressaute et un éclat
             l'illumine (or si c'est la pièce d'époque, rouge si c'est un faux) ; floué : la table tremble
    750 ms   tampon de l'autre pièce
    1050 ms  la signature du faussaire apparaît
@@ -349,17 +349,17 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 @media (prefers-reduced-motion:no-preference){
   /* Une seule animation de transform par feuillet : deux à la fois ne se composent pas
      (Chrome, « TargetHasIncompatibleAnimations »), la révélation passait sur le fil principal. */
-  .choix.revele .bouton.feuillet:nth-child(1).choisi{animation:achat-bien1 1.02s linear}
-  .choix.revele.floue .bouton.feuillet:nth-child(1).choisi{animation:achat-floue1 1.02s linear}
+  .choix.revele .bouton.feuillet:nth-child(1).choisi{animation:expertise-bien1 1.02s linear}
+  .choix.revele.floue .bouton.feuillet:nth-child(1).choisi{animation:expertise-floue1 1.02s linear}
   .choix.revele .bouton.feuillet:nth-child(1).autre{animation:choc1 .3s 1.05s ease-out}
-  @keyframes achat-bien1{0%{transform:rotate(-.7deg) scale(.95)}17%{transform:rotate(-.7deg) scale(1.025)}29%,59%{transform:rotate(-.7deg)}63%{transform:rotate(-.7deg) scale(.97)}90%,100%{transform:rotate(-.7deg)}}
-  @keyframes achat-floue1{0%{transform:rotate(-.7deg) scale(.95)}17%{transform:rotate(-.7deg) scale(1.025)}29%,59%{transform:rotate(-.7deg)}64%{transform:rotate(-.7deg) translateX(-7px)}69%{transform:rotate(-.7deg) translateX(6px)}74%{transform:rotate(-.7deg) translateX(-4px)}79%{transform:rotate(-.7deg) translateX(2px)}84%,100%{transform:rotate(-.7deg)}}
+  @keyframes expertise-bien1{0%{transform:rotate(-.7deg) scale(.95)}17%{transform:rotate(-.7deg) scale(1.025)}29%,59%{transform:rotate(-.7deg)}63%{transform:rotate(-.7deg) scale(.97)}90%,100%{transform:rotate(-.7deg)}}
+  @keyframes expertise-floue1{0%{transform:rotate(-.7deg) scale(.95)}17%{transform:rotate(-.7deg) scale(1.025)}29%,59%{transform:rotate(-.7deg)}64%{transform:rotate(-.7deg) translateX(-7px)}69%{transform:rotate(-.7deg) translateX(6px)}74%{transform:rotate(-.7deg) translateX(-4px)}79%{transform:rotate(-.7deg) translateX(2px)}84%,100%{transform:rotate(-.7deg)}}
   @keyframes choc1{0%{transform:rotate(-.7deg) scale(.97)}100%{transform:rotate(-.7deg)}}
-  .choix.revele .bouton.feuillet:nth-child(2).choisi{animation:achat-bien2 1.02s linear}
-  .choix.revele.floue .bouton.feuillet:nth-child(2).choisi{animation:achat-floue2 1.02s linear}
+  .choix.revele .bouton.feuillet:nth-child(2).choisi{animation:expertise-bien2 1.02s linear}
+  .choix.revele.floue .bouton.feuillet:nth-child(2).choisi{animation:expertise-floue2 1.02s linear}
   .choix.revele .bouton.feuillet:nth-child(2).autre{animation:choc2 .3s 1.05s ease-out}
-  @keyframes achat-bien2{0%{transform:rotate(.6deg) scale(.95)}17%{transform:rotate(.6deg) scale(1.025)}29%,59%{transform:rotate(.6deg)}63%{transform:rotate(.6deg) scale(.97)}90%,100%{transform:rotate(.6deg)}}
-  @keyframes achat-floue2{0%{transform:rotate(.6deg) scale(.95)}17%{transform:rotate(.6deg) scale(1.025)}29%,59%{transform:rotate(.6deg)}64%{transform:rotate(.6deg) translateX(-7px)}69%{transform:rotate(.6deg) translateX(6px)}74%{transform:rotate(.6deg) translateX(-4px)}79%{transform:rotate(.6deg) translateX(2px)}84%,100%{transform:rotate(.6deg)}}
+  @keyframes expertise-bien2{0%{transform:rotate(.6deg) scale(.95)}17%{transform:rotate(.6deg) scale(1.025)}29%,59%{transform:rotate(.6deg)}63%{transform:rotate(.6deg) scale(.97)}90%,100%{transform:rotate(.6deg)}}
+  @keyframes expertise-floue2{0%{transform:rotate(.6deg) scale(.95)}17%{transform:rotate(.6deg) scale(1.025)}29%,59%{transform:rotate(.6deg)}64%{transform:rotate(.6deg) translateX(-7px)}69%{transform:rotate(.6deg) translateX(6px)}74%{transform:rotate(.6deg) translateX(-4px)}79%{transform:rotate(.6deg) translateX(2px)}84%,100%{transform:rotate(.6deg)}}
   @keyframes choc2{0%{transform:rotate(.6deg) scale(.97)}100%{transform:rotate(.6deg)}}
   .revele .choisi::after{animation:eclat .55s .6s ease-out}
   .revele.bien .choisi::after{background:radial-gradient(80% 90% at 50% 50%,rgba(240,200,90,.55),transparent 70%)}
@@ -507,12 +507,15 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .verdict .tampon-dupe{font-size:14px;padding:5px 7px}
 .verdict .gain{font-size:24px}
 
-/* Étiquette, tampon et signature sur une seule ligne : la pièce achetée ne grandit pas. */
+/* Étiquette, tampon et signature sur une seule ligne : la pièce authentifiée ne grandit pas. */
 .choix .feuillet small{flex-wrap:nowrap;gap:6px;overflow:hidden}
 .choix .feuillet small .etiquette{flex:none;font-size:10px;padding:2px 8px 2px 14px}
 .choix .feuillet small .tampon{flex:none;font-size:13px;padding:2px 7px;letter-spacing:.1em}
 .choix .feuillet small .chip.bon{flex:none;font-size:11px;padding:4px 8px}
 .choix .feuillet small .signe-faux{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:18px}
+/* Écran étroit : la signature du faussaire passe avant le mot « signé » et l'espacement du tampon
+   (à 360 px, étiquette et tampon ne lui laissaient que « si… »). */
+@media (max-width:380px){.choix .feuillet small .signe-faux i{display:none}.choix .feuillet small .tampon{letter-spacing:.05em;padding:2px 5px}}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -520,7 +523,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .chip,.score,.gain,.gros{font-family:var(--texte);font-weight:700;font-variant-numeric:lining-nums tabular-nums}
 @media (max-height:700px){.carte{min-height:0;gap:12px}.choix.duel .bouton{min-height:76px}.mot{margin:2px 0 4px}}
 
-/* Atelier : les lots joués d'une famille, tamponnés « Acheté » (se contrefait) ou « Floué »
+/* Atelier : les lots joués d'une famille, tamponnés « Authentifié » (se contrefait) ou « Floué »
    (grisé : on n'imite que la pièce qu'on a eue sous les yeux, décision de l'auteur, 24/11/2026). */
 .retour-famille{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:4px 10px 4px 6px;border:0;background:none;cursor:pointer;
   font:700 12px/1.2 var(--titre);letter-spacing:.12em;text-transform:uppercase;color:var(--vert)}
@@ -534,7 +537,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .lot-at:disabled .lot-titre{color:var(--doux)}
 .lot-titre{min-width:0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .estampille{flex:none;font:700 12px/1 var(--tampon);letter-spacing:.12em;text-transform:uppercase;padding:4px 6px 3px;border:2px solid currentColor;border-radius:3px;transform:rotate(-6deg)}
-.estampille.achete{color:var(--vert)}
+.estampille.authentifie{color:var(--vert)}
 .estampille.floue{color:var(--rouge);opacity:.8}
 .nb-tuile.zero{opacity:.45}
 
@@ -643,7 +646,7 @@ header.vers-accueil{cursor:pointer}
     </div>
     <h1 class="logo">Bonimenteur</h1>
     <p class="tagline">Démasque les faux</p>
-    <p class="recap">Achète la pièce d'époque, laisse la contrefaçon. Puis fabrique tes faux pour <b>duper les autres</b>.</p>
+    <p class="recap">Authentifie la pièce d'époque, démasque la contrefaçon. Puis fabrique tes faux pour <b>duper les autres</b>.</p>
     <div class="menu-play"><button class="bouton plein" type="button" id="jouer">Expertiser</button></div>
     <div class="podium-semaine">
       <div class="pd-tete"><span>Faussaires de la semaine</span><button class="lien" type="button" id="voirTout">Voir tout</button></div>
@@ -669,10 +672,10 @@ header.vers-accueil{cursor:pointer}
   <details class="home-about" open>
     <summary>Comment jouer</summary>
     <ol class="regles">
-      <li>On t'apporte deux pièces d'un même lot : l'une est d'époque, l'autre sort de l'atelier d'un faussaire. Achète la vraie : <b>+1 écu</b>.</li>
-      <li>Les faux sont écrits par les autres joueurs, et signés : le nom du faussaire apparaît une fois la pièce achetée.</li>
-      <li>Dans l'atelier, contrefais les pièces que tu as achetées (10 écus), ou tout de suite après les avoir achetées (15 écus). Chaque joueur dupé par ton faux te rapporte <b>1 écu</b>.</li>
-      <li>Le classement des faussaires compte les joueurs dupés de la semaine. Il repart de zéro chaque lundi.</li>
+      <li>Tu es expert. On t'apporte deux pièces d'un même lot : l'une est d'époque, l'autre sort de l'atelier d'un faussaire. Authentifie la vraie : ton expertise te rapporte <b>1 écu</b>.</li>
+      <li>Les faux sont écrits par les autres joueurs, et signés : le nom du faussaire apparaît après ton expertise.</li>
+      <li>Une pièce que tu as authentifiée, tu l'as eue entre les mains : tu peux la contrefaire, dans l'atelier (10 écus) ou tout de suite après ton expertise (15 écus). Chaque expert dupé par ton faux te rapporte <b>1 écu</b>.</li>
+      <li>Le classement des faussaires compte les experts dupés de la semaine. Il repart de zéro chaque lundi.</li>
     </ol>
   </details>
 </div>
@@ -682,7 +685,7 @@ header.vers-accueil{cursor:pointer}
 <div class="page" id="jeu" hidden>
   <header class="vers-accueil" id="versAccueil" role="link" tabindex="0" aria-label="Accueil">
     <span class="rosette" aria-hidden="true"></span>
-    <h1>Bonimenteur<span>Antiquaire &amp; faussaire</span></h1>
+    <h1>Bonimenteur<span>Expert &amp; faussaire</span></h1>
   </header>
   <nav class="onglets" role="tablist" aria-label="Écrans">
     <button id="o-jouer" role="tab" aria-selected="true" data-ecran="jouer">Expertise</button>
@@ -697,7 +700,7 @@ header.vers-accueil{cursor:pointer}
 const $e = document.getElementById("ecran");
 /* Icônes : un écu (goutte), un piège (mâchoire), une étoile, et une par famille de questions. */
 const IC = {
-  // L'écu, monnaie de l'antiquaire (choisi par l'auteur le 23/11/2026, à la place de l'écu, tache d'encre).
+  // L'écu, monnaie de l'expert (choisi par l'auteur le 23/11/2026, à la place de l'écu, tache d'encre).
   ecu: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1" stroke-dasharray="1.1 1.3"/><path fill="#fff" fill-opacity=".85" d="M12 7.2c.9 1.5 2.3 2 3.5 1.7-.4 1.6.2 3 1.5 3.6-1.3.6-1.9 2-1.5 3.6-1.2-.3-2.6.2-3.5 1.7-.9-1.5-2.3-2-3.5-1.7.4-1.6-.2-3-1.5-3.6 1.3-.6 1.9-2 1.5-3.6 1.2.3 2.6-.2 3.5-1.7z"/><ellipse cx="8.6" cy="7.4" rx="3" ry="1.3" fill="#fff" opacity=".35" transform="rotate(-35 8.6 7.4)"/></svg>',
   // Le faux s'écrit à la plume (choisie par l'auteur le 23/11/2026, à la place du piège à loup, illisible en petit).
   piege: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5c-6 .5-11 4.5-12.5 11l-1 3.5"/><path d="M20.5 3.5c.2 6.5-4 11.2-11 12.2"/><path d="M11 9.5l3.5.5M9.6 12.6l3.4.4"/><path d="M7 18l-2.5 2.5"/></svg>',
@@ -720,9 +723,10 @@ const IC = {
 };
 /* Sceau de cire : intact quand on démasque le faux, brisé quand on est dupé. */
 const sceau = (intact, cls = "") => `<svg class="sceau ${cls}" viewBox="0 0 60 60" aria-hidden="true"><path fill="#9e2a22" d="M30 3c4 0 5 3 8.5 4s6.5-1 9 1.7.8 6.2 2.5 9.3 5 4 5 8-3 5.2-4 8.6 1 6.6-1.7 9.3-6.2.8-9.3 2.5S34 57 30 57s-5.2-3-8.6-4-6.6 1-9.3-1.7-.8-6.2-2.5-9.3S4 34 4 30s3-5.2 4-8.6-1-6.6 1.7-9.3 6.2-.8 9.3-2.5S26 3 30 3z"/><circle cx="30" cy="30" r="17" fill="#b3322a" stroke="#7a1f19" stroke-width="2"/><circle cx="30" cy="30" r="12" fill="none" stroke="#e7a59c" stroke-width="1" stroke-dasharray="2 2.4" opacity=".8"/><path d="M23 30.5l5 5 9-10" fill="none" stroke="#f6d5cf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ${intact ? "" : 'opacity="0"'}/>${intact ? "" : '<path d="M24 22l9 9M33 22l-9 9" stroke="#f6d5cf" stroke-width="3" stroke-linecap="round"/><path d="M31 3l-3 13 6 7-5 9 4 9-3 16" fill="none" stroke="#15281f" stroke-width="2.4" stroke-linejoin="round"/>'}<ellipse cx="22" cy="16" rx="6" ry="2.6" fill="#fff" opacity=".22" transform="rotate(-30 22 16)"/></svg>`;
-// Vocabulaire de la salle des ventes (demande de l'auteur, 23/11/2026) : on achète les pièces
-// d'époque, on met des faux sur le marché (docs/conception.md, « Lexique »).
-const REPLIQUES = { juste: ["Bonne affaire.", "Pièce d'époque acquise."], cru: ["On t'a refourgué un faux.", "Tu as acheté un faux."] };
+// Vocabulaire de l'expertise (demande de l'auteur, 24/11/2026) : l'expert authentifie la pièce
+// d'époque sans l'acheter, il est payé pour son expertise ; le faussaire met ses faux sur le
+// marché (docs/conception.md, « Lexique »).
+const REPLIQUES = { juste: ["Expertise juste.", "Pièce d'époque authentifiée."], cru: ["Tu as certifié un faux.", "Ton certificat couvre un faux."] };
 const replique = k => REPLIQUES[k][Math.floor(Math.random() * REPLIQUES[k].length)];
 const numero = id => { let n = 0; for (const c of String(id)) n = (n * 31 + c.charCodeAt(0)) % 9000; return `Lot ${"ABCDEFGHJK"[n % 10]}·${String(1000 + n).padStart(4, "0")}`; };
 /* Un mot ne se coupe jamais en deux : s'il dépasse la fiche, sa police rétrécit jusqu'à
@@ -757,7 +761,7 @@ $e.addEventListener("click", e => {
   const cap = z.closest("figure") && z.closest("figure").querySelector("figcaption");
   ouvrirVisionneuse(z.querySelector("img"), cap ? cap.textContent : "");
 });
-/* Photo d'une planche : toucher l'image l'agrandit, sans acheter la pièce. Écouté en capture, sur
+/* Photo d'une planche : toucher l'image l'agrandit, sans rendre l'expertise. Écouté en capture, sur
    le conteneur : l'événement est arrêté avant d'atteindre le bouton du feuillet. */
 $e.addEventListener("click", e => {
   const z = e.target.closest(".f-zoom"); if (!z) return;
@@ -799,8 +803,8 @@ function index() {
     }
     if (!choixParMot.has(c.mot)) choixParMot.set(c.mot, []); choixParMot.get(c.mot).push(c);
   }
-  const vusMoi = new Set(vusLocal), achetesMoi = new Set(), jouesMoi = new Map();
-  for (const c of [...S.choix, ...choixEnVol]) if (c.joueur === moi) { vusMoi.add(c.mot); jouesMoi.set(c.mot, !c.erreur); if (!c.erreur) achetesMoi.add(c.mot); }
+  const vusMoi = new Set(vusLocal), authentifiesMoi = new Set(), jouesMoi = new Map();
+  for (const c of [...S.choix, ...choixEnVol]) if (c.joueur === moi) { vusMoi.add(c.mot); jouesMoi.set(c.mot, !c.erreur); if (!c.erreur) authentifiesMoi.add(c.mot); }
   const piegesMoi = S.pieges.filter(p => p.auteur === moi);
   const motsPiegesMoi = new Set(piegesMoi.map(p => p.mot));
   // Démasqué pour de bon : percé MORT_VUS fois sans avoir fait une seule victime (la mèche).
@@ -817,7 +821,7 @@ function index() {
   const retire = new Set([...nbContest].filter(([, n]) => n >= CONTEST_MIN).map(([id]) => id));
   const vivants = new Map();
   for (const [m, ps] of parMot) vivants.set(m, ps.filter(p => !mort.has(p.id) && !retire.has(p.id)));
-  return { parMot, vivants, vu, pris, demasque, victimes, choixParMot, vusMoi, achetesMoi, jouesMoi, piegesMoi, motsPiegesMoi, mort, pvqn, retire, mesContest };
+  return { parMot, vivants, vu, pris, demasque, victimes, choixParMot, vusMoi, authentifiesMoi, jouesMoi, piegesMoi, motsPiegesMoi, mort, pvqn, retire, mesContest };
 }
 // Réglages du prototype : petits pour qu'on voie les effets avec quelques testeurs.
 const MORT_VUS = 10, PVQN_VUS = 5, CONTEST_MIN = 2;
@@ -997,13 +1001,14 @@ function aPieger(I) {
   const neuves = new Map(), jouees = new Map();
   for (const [id, m] of S.mots) {
     if (I.motsPiegesMoi.has(id)) continue;
-    const f = famille(m), cible = I.achetesMoi.has(id) ? jouees : neuves;
+    const f = famille(m), cible = I.authentifiesMoi.has(id) ? jouees : neuves;
     if (!cible.has(f)) cible.set(f, []);
     cible.get(f).push([id, (I.vivants.get(id) || []).length]);
   }
-  // L'atelier ne propose que les pièces achetées : on imite l'objet qu'on a sous les yeux
+  // L'atelier ne propose que les pièces authentifiées : l'expert les a eues entre les mains
   // (décision de l'auteur, 24/11/2026). Un lot où l'on a été floué ne se contrefait pas, ni ici
-  // ni en direct ; un lot neuf se contrefait en direct, juste après l'avoir acheté (PRIX_DIRECT).
+  // ni en direct : on n'a pas su reconnaître l'original. Un lot neuf se contrefait en direct,
+  // juste après l'avoir authentifié (PRIX_DIRECT).
   // Le serveur refuse aussi (app/main.py, poser).
   return jouees;
 }
@@ -1227,16 +1232,18 @@ function repondre(motId, options, piege, k) {
   const juste = options[k].id === "vrai", I = index();
   const montrer = (btn, html, cls) => { btn.setAttribute("aria-disabled", "true"); btn.classList.add(cls, "joue"); const sm = btn.querySelector("small"); sm.hidden = false; sm.innerHTML = html; };
   const etoile = I.pvqn.has(piege.id) ? `<span style="color:var(--piege)" title="Pièce de maître">${IC.etoile}</span>` : "";
-  // L'étiquette « Acheté » marque la pièce que le joueur a choisie, vraie ou fausse.
-  const achat = i => i === k ? `<span class="etiquette">Acheté</span>` : "";
-  // Séquence de révélation (CSS, docs/direction-artistique.md, « Révélation ») : la pièce achetée
+  // L'étiquette « Certifié » marque la pièce que le joueur a choisie, vraie ou fausse : l'expert
+  // la certifie, à tort s'il est floué (« Authentifié », plus long, coupait la signature du
+  // faussaire à 360 px de large).
+  const etiquette = i => i === k ? `<span class="etiquette">Certifié</span>` : "";
+  // Séquence de révélation (CSS, docs/direction-artistique.md, « Révélation ») : la pièce choisie
   // d'abord (étiquette, puis son tampon), l'autre ensuite, puis le verdict et les écus.
   $e.querySelector(".choix.feuillets").classList.add("revele", juste ? "bien" : "floue");
   options.forEach((o, i) => {
     const b = $e.querySelector(`[data-k="${i}"]`);
     b.classList.add(i === k ? "choisi" : "autre");
-    if (o.id === "vrai") montrer(b, achat(i) + VRAI, "ok");
-    else montrer(b, `${achat(i)}<span class="tampon" aria-label="Contrefaçon">Contrefaçon</span>${etoile}<span class="signe-faux ${juste ? "" : "dupe"}"><i>signé</i> ${esc(nom(o.auteur))}</span>`, juste ? "demasque" : "debout");
+    if (o.id === "vrai") montrer(b, etiquette(i) + VRAI, "ok");
+    else montrer(b, `${etiquette(i)}<span class="tampon" aria-label="Contrefaçon">Contrefaçon</span>${etoile}<span class="signe-faux ${juste ? "" : "dupe"}"><i>signé</i> ${esc(nom(o.auteur))}</span>`, juste ? "demasque" : "debout");
   });
   if (LAMPE_UV) { const ch = $e.querySelector(".choix.feuillets"); requestAnimationFrame(() => ch && ch.classList.add("sous-lampe")); }
   let gain = 0;
@@ -1251,7 +1258,7 @@ function repondre(motId, options, piege, k) {
   serie.num++; serie.traces.push(juste ? 1 : 0);
   const fin = serie.num >= TOTAL;
   document.getElementById("suite").innerHTML = `<div class="verdict">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--ecu)" : "var(--faux)"}">+${gain}${IC.ecu}</span></div>
-    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${juste && solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="${juste ? `Contrefaire ce lot pour ${PRIX_DIRECT} écus` : "Contrefaçon réservée aux pièces achetées"}">${IC.piege} −${PRIX_DIRECT}${IC.ecu}</button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
+    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${juste && solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="${juste ? `Contrefaire ce lot pour ${PRIX_DIRECT} écus` : "Contrefaçon réservée aux pièces authentifiées"}">${IC.piege} −${PRIX_DIRECT}${IC.ecu}</button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
     ${db ? `<div class="signal"><button class="lien" type="button" id="signaler">Signaler le lot</button><div id="raisons" hidden></div></div>` : ""}`;
   const pr = $e.querySelector(".progres"); if (pr) pr.remove();
   $e.querySelector(".entete").outerHTML = entete(serie.num);
@@ -1296,16 +1303,16 @@ function enteteEcus(s, cout = PRIX_PIEGE) {
 // Réserve d'écus face au prix : une pièce pleine par écu possédé, vide sinon.
 const reserve = (s, cout = PRIX_PIEGE) => `<div class="jauge-ecus" role="img" aria-label="${Math.max(s, 0)} écus sur ${cout}"><span class="barre"><i style="transform:scaleX(${Math.min(Math.max(s, 0) / cout, 1)})"></i></span><span class="chip ecu">${Math.max(s, 0)}/${cout}${IC.ecu}</span></div>`;
 
-/* Lots joués par famille, sauf ceux déjà contrefaits : achetés d'abord (le moins de faux en vie
+/* Lots joués par famille, sauf ceux déjà contrefaits : authentifiés d'abord (le moins de faux en vie
    en tête), floués ensuite, grisés. */
 function lotsJoues(I) {
   const par = new Map();
-  for (const [id, achete] of I.jouesMoi) {
+  for (const [id, authentifie] of I.jouesMoi) {
     const m = S.mots.get(id); if (!m || I.motsPiegesMoi.has(id)) continue;
     const f = famille(m); if (!par.has(f)) par.set(f, []);
-    par.get(f).push({ id, achete, vivants: (I.vivants.get(id) || []).length });
+    par.get(f).push({ id, authentifie, vivants: (I.vivants.get(id) || []).length });
   }
-  for (const l of par.values()) l.sort((a, b) => b.achete - a.achete || a.vivants - b.vivants);
+  for (const l of par.values()) l.sort((a, b) => b.authentifie - a.authentifie || a.vivants - b.vivants);
   return par;
 }
 let familleAtelier = null;
@@ -1315,7 +1322,7 @@ function lotsFamille(retour, f) {
   familleAtelier = f;
   $e.innerHTML = `${retour === atelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(solde(I))}
     <button class="retour-famille" type="button" id="familles" aria-label="Toutes les familles"><span aria-hidden="true">‹</span>${IC[f]}${FAMILLES[f].label}</button>
-    <ul class="lots-atelier apparait">${l.map(x => { const t = titre(S.mots.get(x.id)); return `<li><button class="lot-at" type="button" data-id="${esc(x.id)}" ${x.achete ? "" : "disabled"} aria-label="${esc(t)} : ${x.achete ? "acheté" : "floué, pas de contrefaçon"}"><span class="lot-titre">${esc(t)}</span><span class="estampille ${x.achete ? "achete" : "floue"}" aria-hidden="true">${x.achete ? "Acheté" : "Floué"}</span></button></li>`; }).join("")}</ul>`;
+    <ul class="lots-atelier apparait">${l.map(x => { const t = titre(S.mots.get(x.id)); return `<li><button class="lot-at" type="button" data-id="${esc(x.id)}" ${x.authentifie ? "" : "disabled"} aria-label="${esc(t)} : ${x.authentifie ? "authentifié" : "floué, pas de contrefaçon"}"><span class="lot-titre">${esc(t)}</span><span class="estampille ${x.authentifie ? "authentifie" : "floue"}" aria-hidden="true">${x.authentifie ? "Authentifié" : "Floué"}</span></button></li>`; }).join("")}</ul>`;
   $e.querySelectorAll(".lot-at[data-id]").forEach(b => b.onclick = () => { dernierMot = b.dataset.id; cartePiege(b.dataset.id, retour); });
   document.getElementById("familles").onclick = () => { familleAtelier = null; choixFamille(retour); };
   if (retour === atelier) lierSous();
@@ -1331,9 +1338,9 @@ function choixFamille(retour) {
   }
   if (familleAtelier && par.has(familleAtelier)) return lotsFamille(retour, familleAtelier);
   const dansAtelier = retour === atelier;
-  const nb = f => par.get(f).filter(x => x.achete).length;
+  const nb = f => par.get(f).filter(x => x.authentifie).length;
   $e.innerHTML = `${dansAtelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(s)}
-    ${par.size ? "" : `<div class="grosse-ic">${IC.piege}</div><p class="centre">Expertise d'abord des lots : tu contreferas les pièces achetées.</p>`}<div class="tuiles apparait">${ORDRE.filter(f => par.has(f)).map(f => `<button class="tuile" type="button" data-f="${f}">${IC[f]}${FAMILLES[f].label}<span class="nb-tuile ${nb(f) ? "" : "zero"}" aria-label="${nb(f)} pièces achetées">${nb(f)}</span></button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
+    ${par.size ? "" : `<div class="grosse-ic">${IC.piege}</div><p class="centre">Expertise d'abord des lots : tu contreferas les pièces authentifiées.</p>`}<div class="tuiles apparait">${ORDRE.filter(f => par.has(f)).map(f => `<button class="tuile" type="button" data-f="${f}">${IC[f]}${FAMILLES[f].label}<span class="nb-tuile ${nb(f) ? "" : "zero"}" aria-label="${nb(f)} pièces authentifiées">${nb(f)}</span></button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
   $e.querySelectorAll("[data-f]").forEach(b => b.onclick = () => lotsFamille(retour, b.dataset.f));
   if (dansAtelier) lierSous(); else document.getElementById("retour").onclick = retour;
 }
@@ -1414,7 +1421,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
       document.getElementById("suivant").focus();
     } catch (e) {
       poser.disabled = false;
-      err.innerHTML = e && e.code === "solde" ? reserve(solde(index()), prix) : `<p class="alerte">${e && e.code === "quota_exceeded" ? "Plus de place." : e && e.code === "doublon" ? "Tu as déjà un faux ici." : e && e.code === "non_achete" ? "Pièce non achetée." : e && e.code === "refuse" ? "Texte refusé." : e && e.code === "debit" ? "Trop vite : réessaie dans un instant." : "Échec de l'enregistrement."}</p>`;
+      err.innerHTML = e && e.code === "solde" ? reserve(solde(index()), prix) : `<p class="alerte">${e && e.code === "quota_exceeded" ? "Plus de place." : e && e.code === "doublon" ? "Tu as déjà un faux ici." : e && e.code === "non_authentifie" ? "Pièce non authentifiée." : e && e.code === "refuse" ? "Texte refusé." : e && e.code === "debit" ? "Trop vite : réessaie dans un instant." : "Échec de l'enregistrement."}</p>`;
     }
   };
   ta.focus();

@@ -19,8 +19,8 @@ def _faux_de(client, mot):
     return [p["id"] for p in client.get("/api/etat").json()["pieges"] if p["mot"] == mot]
 
 
-def _acheter(client, mot):
-    """Expertise juste du lot : la pièce est achetée, le joueur peut la contrefaire (+1 écu)."""
+def _authentifier(client, mot):
+    """Expertise juste du lot : la pièce est authentifiée, le joueur peut la contrefaire (+1 écu)."""
     f = _faux_de(client, mot)[0]
     assert client.post("/api/choix", json={"mot": mot, "montres": [f], "ordre": [f], "erreur": False}).status_code == 200
     return f
@@ -63,8 +63,8 @@ def test_faux_inconnu_refuse(client):
 
 def test_poser_un_faux_paye_et_rapporte(client, tmp_path):
     client.get("/api/moi")
-    _acheter(client, "sapajou"); _acheter(client, "cacochyme")
-    # 20 au départ + 2 achats justes : un faux en direct (15) passe, le suivant à 10 n'a plus de quoi payer.
+    _authentifier(client, "sapajou"); _authentifier(client, "cacochyme")
+    # 20 au départ + 2 expertises justes : un faux en direct (15) passe, le suivant à 10 n'a plus de quoi payer.
     r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15})
     assert r.status_code == 200
     assert client.get("/api/moi").json()["solde"] == 7
@@ -78,15 +78,15 @@ def test_poser_un_faux_paye_et_rapporte(client, tmp_path):
     assert client.get("/api/moi").json()["solde"] == 8
 
 
-def test_seulement_les_pieces_achetees(client):
-    """On ne contrefait que la pièce achetée : ni un lot jamais joué, ni un lot où l'on a été floué."""
+def test_seulement_les_pieces_authentifiees(client):
+    """On ne contrefait que la pièce authentifiée : ni un lot jamais joué, ni un lot où l'on a été floué."""
     client.get("/api/moi")
     texte = {"texte": "Ragoût de fèves.", "prix": 15}
     assert client.post("/api/pieges", json={"mot": "sapajou", **texte}).status_code == 403
     f = _faux_de(client, "cacochyme")[0]
     client.post("/api/choix", json={"mot": "cacochyme", "montres": [f], "ordre": [], "erreur": True})
     assert client.post("/api/pieges", json={"mot": "cacochyme", **texte}).status_code == 403
-    _acheter(client, "sapajou")
+    _authentifier(client, "sapajou")
     assert client.post("/api/pieges", json={"mot": "sapajou", **texte}).status_code == 200
 
 
@@ -142,7 +142,7 @@ def test_ration_du_jour(client, monkeypatch):
 def test_categorie_du_faux(client):
     """Le faussaire peut fausser la catégorie d'une définition ; une catégorie inventée est refusée."""
     client.get("/api/moi")
-    _acheter(client, "sapajou")
+    _authentifier(client, "sapajou")
     assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "D'un rouge sombre.", "categorie": "nom propre"}).status_code == 422
     r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "D'un rouge sombre.", "categorie": "adj."})
     assert r.status_code == 200
@@ -199,7 +199,7 @@ def test_etat_allege(client):
     """L'état ne renvoie que les duels du joueur et ceux où son faux a trompé ; les compteurs par faux
     viennent du serveur."""
     client.get("/api/moi")
-    _acheter(client, "sapajou")
+    _authentifier(client, "sapajou")
     r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15}).json()["id"]
     import app.main as m
     autres = []
@@ -209,7 +209,7 @@ def test_etat_allege(client):
     autres[0].post("/api/choix", json={"mot": "sapajou", "montres": [r], "ordre": [], "erreur": True})
     autres[1].post("/api/choix", json={"mot": "cacochyme", "montres": [t], "ordre": [t], "erreur": False})
     e = client.get("/api/etat").json()
-    # Son propre achat et le duel où son faux a trompé ; pas le duel de cacochyme.
+    # Sa propre expertise et le duel où son faux a trompé ; pas le duel de cacochyme.
     assert sorted((c["mot"], c["erreur"]) for c in e["choix"]) == [("sapajou", False), ("sapajou", True)]
     assert e["stats"][r] == [1, 1, 0] and e["stats"][t] == [1, 0, 1]
     assert len(autres[1].get("/api/etat").json()["choix"]) == 1   # ses propres duels seulement
@@ -220,7 +220,7 @@ def test_classement_des_faussaires(client):
     """Un joueur dupé par le faux de A compte pour A cette semaine ; les faux de Truffe ne comptent pas.
     La jauge compte les joueurs qui ont joué."""
     a = client.get("/api/moi").json()["id"]
-    _acheter(client, "sapajou")
+    _authentifier(client, "sapajou")
     faux_a = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15}).json()["id"]
     import app.main as m
     with TestClient(m.app) as b:

@@ -276,10 +276,10 @@ def poser(f: Faux, request: Request):
     if f.categorie is not None and f.categorie not in CATEGORIES:
         raise HTTPException(422, "catégorie inconnue")
     with _verrou:
-        # On imite la pièce qu'on a achetée (décision de l'auteur, 24/11/2026) : pas de faux sur
-        # un lot jamais joué ni sur un lot où l'on a été floué.
+        # On ne contrefait que la pièce qu'on a authentifiée, eue entre les mains (décision de
+        # l'auteur, 24/11/2026) : pas de faux sur un lot jamais joué ni sur un lot où l'on a été floué.
         if not db.execute("SELECT 1 FROM choix WHERE joueur = ? AND mot = ? AND erreur = 0", (j, f.mot)).fetchone():
-            raise HTTPException(403, "pièce non achetée")
+            raise HTTPException(403, "pièce non authentifiée")
         if _solde(j) < f.prix:
             raise HTTPException(402, "pas assez d'écus")
         fid = secrets.token_urlsafe(12)

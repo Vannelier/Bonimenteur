@@ -11,15 +11,22 @@ démasquer rapporte de quoi fabriquer.
 
 ## Lexique : l'expertise
 
-Décision de l'auteur, 23/11/2026 : le joueur est antiquaire et faussaire. À
-l'expertise, il achète les pièces d'époque ; dans son atelier, il contrefait
-et met ses faux sur le marché.
+Décision de l'auteur, 24/11/2026 (avant, le 23/11 : antiquaire qui achète les
+pièces) : le joueur est expert et faussaire. À l'expertise, il authentifie la
+pièce d'époque sans l'acheter, et son expertise lui rapporte 1 écu ; une pièce
+authentifiée, il l'a eue entre les mains, il peut la contrefaire. Dans son
+atelier, il met ses faux sur le marché ; un faux qui trompe un expert se vend
+comme authentique, d'où l'écu du faussaire. Précédent réel : Abraham Bredius,
+spécialiste de Vermeer, authentifia en 1937 *Les Pèlerins d'Emmaüs*, faux de
+Han van Meegeren.
+
+Seul le vocabulaire a changé : aucune règle, aucun prix.
 
 | Jeu | Dans l'interface |
 |---|---|
-| duel | lot (« Lot C·2912 »), « Achète la pièce d'époque » |
-| bonne réponse | « Bonne affaire. », sceau de cire |
-| mauvaise réponse | « Tu as acheté un faux. », tampon « Floué » |
+| duel | lot (« Lot C·2912 »), « Authentifie la pièce d'époque » ; étiquette « Certifié » sur la pièce choisie (« Authentifié » coupait la signature à 360 px) ; dans l'atelier, lots « Authentifié » ou « Floué » |
+| bonne réponse | « Expertise juste. », sceau de cire |
+| mauvaise réponse | « Tu as certifié un faux. », tampon « Floué » |
 | tournée de 15 duels | vacation (« Fin de vacation », « Nouvelle vacation ») |
 | onglets | Expertise, Atelier ; dans l'atelier : Contrefaire, Sur le marché |
 | poser un faux | « Mettre en vente » ; après : « En vente » |
@@ -61,7 +68,7 @@ Le plus efficace de la question, sauf 4 fois sur 10 un faux encore peu vu
 
 ## Les écus
 
-La monnaie de l'antiquaire (décision de l'auteur, 23/11/2026 ; avant : le
+La monnaie de l'expert (décision de l'auteur, 23/11/2026 ; avant : le
 blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
 
 - 20 au départ (`ECUS_DEPART`, 23/11/2026 ; 10 avant) : de quoi poser un faux en direct dès la première partie, +1 par bonne réponse, +1 par victime de ses faux.
@@ -73,13 +80,13 @@ blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
 
 ## Fabriquer un faux
 
-- On ne contrefait que les pièces achetées, c'est-à-dire les lots où l'on a
-  trouvé la vraie (24/11/2026) : on imite l'objet qu'on a sous les yeux. Le
+- On ne contrefait que les pièces authentifiées, c'est-à-dire les lots où l'on a
+  trouvé la vraie (24/11/2026) : on les a eues entre les mains. Le
   joueur floué ne peut pas contrefaire ce lot, ni dans l'atelier ni en direct
   (bouton −15 grisé) ; le serveur refuse aussi (403). Le 23/11/2026, l'atelier
   ne proposait déjà que des lots expertisés : avant, on pouvait faire défiler
   une famille rare (les métiers) et apprendre toutes ses réponses. Un lot neuf
-  se contrefait en direct, juste après l'avoir acheté. Familles vides
+  se contrefait en direct, juste après l'avoir authentifié. Familles vides
   masquées.
 - Aperçu : le faux s'écrit dans l'emplacement de la réponse, sur le même
   artefact que l'original (surligné), au fil de la saisie ; l'original tient
@@ -96,7 +103,7 @@ blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
   réécrit.
 - Un faux par joueur et par question. Une question où le joueur a un faux ne
   lui est plus posée ; une question neuve vue en fabriquant non plus.
-- Questions proposées : les pièces achetées seulement.
+- Questions proposées : les pièces authentifiées seulement.
 - Définition : le faussaire choisit la catégorie de son faux (n. m., n. f.,
   adj., v.…), celle de la vraie cochée d'office ; il peut la fausser aussi
   (« sapajou, *adj.*, d'un rouge sombre »).

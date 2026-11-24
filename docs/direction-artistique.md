@@ -44,7 +44,7 @@ foi : `prototype/index.html`, en tête du `<style>`.
   caractères IM Fell English (SIL OFL).
 - Révélation par les tampons : « Contrefaçon » et la signature du faussaire sur
   le faux (réponse barrée s'il est démasqué), timbre « D'époque » sur le vrai,
-  étiquette « Acheté » sur la pièce choisie. La lampe à ultraviolets
+  étiquette « Certifié » sur la pièce choisie. La lampe à ultraviolets
   (`LAMPE_UV`) a été essayée puis écartée le 23/11/2026 : « ça ne marche pas »
   en jeu. Le code reste, coupé.
 - Plus de question d'en-tête (23/11/2026) : le feuillet dit tout. Au-dessus,
@@ -72,8 +72,8 @@ Séquence d'environ 1,3 s, en CSS (classes `revele`, `choisi`, `autre`, `bien`,
 
 | Temps | Ce qui se passe |
 |---|---|
-| 0 | la pièce achetée s'enfonce puis se soulève ; l'étiquette « Acheté » s'épingle |
-| 300 ms | coup de tampon sur la pièce achetée |
+| 0 | la pièce choisie s'enfonce puis se soulève ; l'étiquette « Certifié » s'épingle |
+| 300 ms | coup de tampon sur la pièce choisie |
 | ≈ 600 ms | impact : la pièce tressaute, un éclat l'illumine (or si d'époque, rouge si faux) ; floué : la pièce secoue, la table tremble, le téléphone vibre (Android) |
 | 750 ms | tampon de l'autre pièce |
 | 1 050 ms | la signature du faussaire apparaît |
@@ -139,8 +139,8 @@ avec « Signe ton nom », vainqueur de la semaine passée, jauge) : titre et
 
 ## Atelier : lots tamponnés
 
-Contrefaire : une tuile par famille (nombre de pièces achetées), puis la liste
-des lots joués de la famille, tamponnés « Acheté » (vert, se contrefait) ou
+Contrefaire : une tuile par famille (nombre de pièces authentifiées), puis la liste
+des lots joués de la famille, tamponnés « Authentifié » (vert, se contrefait) ou
 « Floué » (rouge, grisé, en pointillé). Les lots déjà contrefaits sont sur le
 marché, pas dans la liste.
 
