@@ -776,8 +776,13 @@ const TOTAL = 15, PRIX_PIEGE = 10, ECUS_DEPART = 20;
    choisit que la famille) et la vraie vient d'être vue. Le choix se paie : 15 au lieu de 10. */
 const PRIX_DIRECT = 15;
 const prixDe = p => p.prix || PRIX_PIEGE;
+/* Choix du joueur enregistrés mais pas encore revenus de la base (la relecture arrive après la
+   révélation) : comptés tout de suite, sinon la pastille bondit sans changer de chiffre. */
+const choixEnVol = [];
 function solde(I) {
-  const gagnes = S.choix.filter(c => c.joueur === moi).reduce((t, c) => t + (Array.isArray(c.ordre) ? (c.gain || 0) : (c.choisi === "vrai" ? 1 : 0)), 0);
+  const vus = new Set(S.choix.filter(c => c.joueur === moi).map(c => c.mot));
+  for (let i = choixEnVol.length - 1; i >= 0; i--) if (vus.has(choixEnVol[i].mot)) choixEnVol.splice(i, 1);
+  const gagnes = [...S.choix.filter(c => c.joueur === moi), ...choixEnVol].reduce((t, c) => t + (Array.isArray(c.ordre) ? (c.gain || 0) : (c.choisi === "vrai" ? 1 : 0)), 0);
   const rendus = I.piegesMoi.reduce((t, p) => t + (I.pris.get(p.id) || 0), 0);
   return ECUS_DEPART + gagnes + rendus - I.piegesMoi.reduce((t, p) => t + prixDe(p), 0);
 }
@@ -1083,7 +1088,8 @@ function repondre(motId, options, piege, k) {
   vusLocal.add(motId);
   // Même forme d'enregistrement que la chasse : « ordre » = piège démasqué, « erreur » = piège cru.
   const trace = { mot: motId, montres: [piege.id], ordre: juste ? [piege.id] : [], erreur: !juste, gain, joueur: moi, t: Date.now() };
-  if (db) db.collection("choix").add(trace).catch(() => {});
+  const avant = solde(index());
+  if (db) { choixEnVol.push(trace); db.collection("choix").add(trace).catch(() => { choixEnVol.splice(choixEnVol.indexOf(trace), 1); }); }
   serie.num++; serie.traces.push(juste ? 1 : 0);
   const fin = serie.num >= TOTAL;
   document.getElementById("suite").innerHTML = `<div class="verdict">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--ecu)" : "var(--faux)"}">+${gain}${IC.ecu}</span></div>
@@ -1092,7 +1098,12 @@ function repondre(motId, options, piege, k) {
   const pr = $e.querySelector(".progres"); if (pr) pr.remove();
   $e.querySelector(".entete").outerHTML = entete(serie.num);
   const cases = $e.querySelectorAll(".progres i"); if (cases[serie.num - 1]) cases[serie.num - 1].classList.add("neuf");
-  const chipSolde = $e.querySelector(".entete .chip.ecu"); if (chipSolde && gain) chipSolde.classList.add("bump");
+  // Le chiffre change au moment où la pastille bondit (1,45 s, « Révélation »), pas avant.
+  const chipSolde = $e.querySelector(".entete .chip.ecu");
+  if (chipSolde && gain) {
+    const apres = chipSolde.outerHTML; chipSolde.outerHTML = pastilleEcus(avant);
+    setTimeout(() => { const c = $e.querySelector(".entete .chip.ecu"); if (c && serie.repondu === motId) { c.outerHTML = apres; const n = $e.querySelector(".entete .chip.ecu"); n.style.animationDelay = "0s"; n.classList.add("bump"); } }, 1450);
+  }
   if (!juste) $e.classList.add("secoue"); setTimeout(() => $e.classList.remove("secoue"), 1200);
   // Vibration au coup de tampon (Android ; ignorée ailleurs), plus lourde si on est floué.
   setTimeout(() => { try { navigator.vibrate && navigator.vibrate(juste ? 18 : [30, 50, 70]); } catch (e) {} }, 560);
