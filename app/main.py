@@ -17,7 +17,7 @@ import secrets
 import sqlite3
 import threading
 import time
-from datetime import datetime, time as heure
+from datetime import datetime, time as heure, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -164,6 +164,45 @@ def _joues_aujourdhui(joueur: str) -> int:
     return db.execute("SELECT COUNT(*) FROM choix WHERE joueur = ? AND t >= ?", (joueur, _minuit_ms())).fetchone()[0]
 
 
+def _lundi_ms(semaines_avant: int = 0) -> int:
+    """Lundi 0 h (Paris) de la semaine en cours, ou d'une semaine passée : le classement des
+    faussaires repart de zéro chaque lundi, comme ceux des trois autres jeux."""
+    jour = datetime.now(PARIS).date()
+    lundi = jour - timedelta(days=jour.weekday(), weeks=semaines_avant)
+    return int(datetime.combine(lundi, heure(0), tzinfo=PARIS).timestamp() * 1000)
+
+
+def _piegeurs(debut: int, fin: int | None = None) -> list[dict]:
+    """Classement des faussaires : joueurs dupés par leurs faux entre debut et fin (même règle
+    que _compter : un faux montré, pas démasqué, à un joueur qui s'est trompé). Les faux de
+    Truffe ne comptent pas."""
+    auteurs = {f["id"]: f["auteur"] for f in db.execute("SELECT id, auteur FROM faux")}
+    n: dict = defaultdict(int)
+    for c in db.execute("SELECT montres, ordre, joueur FROM choix WHERE erreur = 1 AND t >= ? AND t < ?",
+                        (debut, fin or 2**62)):
+        ordre = json.loads(c["ordre"])
+        for f in json.loads(c["montres"]):
+            a = auteurs.get(f)
+            if a and a != c["joueur"] and f not in ordre:
+                n[a] += 1
+    return [{"id": a, "victimes": v} for a, v in sorted(n.items(), key=lambda x: (-x[1], x[0]))]
+
+
+PALIERS = (10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000)   # jauge des joueurs, comme les trois autres jeux
+
+
+def _communaute() -> dict:
+    n = db.execute("SELECT COUNT(DISTINCT joueur) FROM choix").fetchone()[0]
+    return {"joueurs": n, "objectif": next((p for p in PALIERS if p > n), n + 1)}
+
+
+def _classement(j: str) -> dict:
+    semaine = _piegeurs(_lundi_ms())
+    passee = _piegeurs(_lundi_ms(1), _lundi_ms())
+    moi = next(({"rang": i + 1, "victimes": r["victimes"]} for i, r in enumerate(semaine) if r["id"] == j), None)
+    return {"semaine": semaine[:20], "passee": passee[0] if passee else None, "moi": moi}
+
+
 def _solde(joueur: str) -> int:
     gagnes = db.execute("SELECT COALESCE(SUM(gain), 0) FROM choix WHERE joueur = ?", (joueur,)).fetchone()[0]
     prix, victimes = db.execute("SELECT COALESCE(SUM(f.prix), 0), COALESCE(SUM(s.pris), 0) FROM faux f "
@@ -202,6 +241,10 @@ def _etat(j: str):
         "choix": choix,
         "contestations": [dict(r) for r in db.execute("SELECT piege, joueur, mot, t FROM contestations")],
         "joueurs": {r["id"]: r["pseudo"] for r in db.execute("SELECT id, pseudo FROM joueurs")},
+        # Accueil : podium des faussaires de la semaine et jauge des joueurs (le classement ne
+        # peut pas se calculer dans la page, qui ne reçoit que les duels du joueur).
+        "classement": _classement(j),
+        "communaute": _communaute(),
     }
 
 

@@ -104,6 +104,18 @@ blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
   majuscules et ponctuation comprises ; imiter la forme de la vraie fait partie
   du travail du faussaire (`docs/questions.md`, « Forme des réponses »).
 
+## Classement des faussaires
+
+Décidé le 24/11/2026. Classement de la semaine (lundi 0 h, heure de Paris,
+comme les trois autres jeux) : joueurs dupés par les faux de chacun, même règle
+que les écus rendus (un faux montré, pas démasqué, à un joueur qui s'est
+trompé). Les faux de Truffe ne comptent pas. Sur Railway, le serveur le calcule
+(`_piegeurs`, dans `/api/etat`), la page ne recevant que les duels du joueur ;
+sur claude.ai, la page le calcule (`classementLocal`). Podium à l'accueil,
+classement complet (20 premiers et ta place) sous « Voir tout », vainqueur de la
+semaine passée sur une ligne. Classé sans pseudo : « Signe ton nom » sous le
+podium.
+
 ## La vie d'un faux
 
 - Mèche : 10 démasquages sans aucune victime (`MORT_VUS`) et le faux est

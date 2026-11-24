@@ -27,7 +27,9 @@
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       // Compteurs par faux calculés par le serveur (vu, pris, démasqué) : la page ne reçoit plus
       // tous les duels de tous les joueurs, index() les lit ici (window.__statsServeur).
-      .then(d => { etat = d; window.__statsServeur = d.stats || null; diffuser(); })
+      // Podium des faussaires et jauge des joueurs, calculés par le serveur pour la même raison.
+      .then(d => { etat = d; window.__statsServeur = d.stats || null; window.__classementServeur = d.classement || null;
+        window.__communauteServeur = d.communaute || null; diffuser(); })
       .finally(() => { enCours = null; });
     return enCours;
   }

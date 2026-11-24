@@ -214,3 +214,22 @@ def test_etat_allege(client):
     assert e["stats"][r] == [1, 1, 0] and e["stats"][t] == [1, 0, 1]
     assert len(autres[1].get("/api/etat").json()["choix"]) == 1   # ses propres duels seulement
     for a in autres: a.__exit__(None, None, None)
+
+
+def test_classement_des_faussaires(client):
+    """Un joueur dupé par le faux de A compte pour A cette semaine ; les faux de Truffe ne comptent pas.
+    La jauge compte les joueurs qui ont joué."""
+    a = client.get("/api/moi").json()["id"]
+    _acheter(client, "sapajou")
+    faux_a = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15}).json()["id"]
+    import app.main as m
+    with TestClient(m.app) as b:
+        b.get("/api/moi")
+        b.post("/api/choix", json={"mot": "sapajou", "montres": [faux_a], "ordre": [], "erreur": True})
+        t = _faux_de(b, "cacochyme")[0]
+        b.post("/api/choix", json={"mot": "cacochyme", "montres": [t], "ordre": [], "erreur": True})   # dupé par Truffe
+    c = client.get("/api/etat").json()
+    assert c["classement"]["semaine"] == [{"id": a, "victimes": 1}]
+    assert c["classement"]["moi"] == {"rang": 1, "victimes": 1}
+    assert c["classement"]["passee"] is None
+    assert c["communaute"] == {"joueurs": 2, "objectif": 10}

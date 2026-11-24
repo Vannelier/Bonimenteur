@@ -519,10 +519,168 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 /* Chiffres : ceux de Cinzel sont elzéviriens (« 10 » se lit « IO ») ; Source Serif, alignés. */
 .chip,.score,.gain,.gros{font-family:var(--texte);font-weight:700;font-variant-numeric:lining-nums tabular-nums}
 @media (max-height:700px){.carte{min-height:0;gap:12px}.choix.duel .bouton{min-height:76px}.mot{margin:2px 0 4px}}
+
+/* Atelier : les lots joués d'une famille, tamponnés « Acheté » (se contrefait) ou « Floué »
+   (grisé : on n'imite que la pièce qu'on a eue sous les yeux, décision de l'auteur, 24/11/2026). */
+.retour-famille{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:4px 10px 4px 6px;border:0;background:none;cursor:pointer;
+  font:700 12px/1.2 var(--titre);letter-spacing:.12em;text-transform:uppercase;color:var(--vert)}
+.retour-famille .ic{width:20px;height:20px}
+.retour-famille > span{font:400 24px/1 var(--texte);margin-top:-3px}
+.lots-atelier{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.lot-at{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:8px 10px 8px 12px;text-align:left;cursor:pointer;
+  border:1.5px solid var(--trait);border-radius:3px;background:var(--creux);font:600 15px/1.3 var(--texte);color:var(--encre)}
+.lot-at:hover:not(:disabled){border-color:var(--vert)}
+.lot-at:disabled{cursor:default;background:transparent;border-style:dashed}
+.lot-at:disabled .lot-titre{color:var(--doux)}
+.lot-titre{min-width:0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.estampille{flex:none;font:700 12px/1 var(--tampon);letter-spacing:.12em;text-transform:uppercase;padding:4px 6px 3px;border:2px solid currentColor;border-radius:3px;transform:rotate(-6deg)}
+.estampille.achete{color:var(--vert)}
+.estampille.floue{color:var(--rouge);opacity:.8}
+.nb-tuile.zero{opacity:.45}
+
+/* Accueil : même canevas que Discoverium, Snouff et Vocabulium (CLAUDE.md, « Accueil ») :
+   décor, titre, sous-titre, explication, bouton, podium de la semaine, jauge des joueurs,
+   « Nos autres jeux » en bas du premier écran, « Comment jouer » sous le bord. Marges de
+   14 px en haut et 26 px en bas, 8 px entre les blocs (6 sous 700 px de haut, 4 sous 380 px
+   de large et 700 px de haut). Décor : deux pièces du même lot, tamponnées. */
+.accueil[hidden],.page[hidden],.tableau[hidden]{display:none}
+.accueil{max-width:460px;margin:0 auto;padding:14px max(16px,env(safe-area-inset-right,0px)) 26px max(16px,env(safe-area-inset-left,0px));
+  display:flex;flex-direction:column;align-items:center;gap:8px;color:#e9e2c8}
+.accueil-haut{display:flex;flex-direction:column;align-items:center;gap:inherit;width:100%;min-height:calc(100svh - 40px);text-align:center}
+.accueil-haut > *{flex:none}
+/* Places fixes : l'espace au-dessus du décor ne dépend que de la hauteur de l'écran ; le reste
+   de la place libre va sous le podium, autres jeux et jauge alignés en bas (comme Discoverium). */
+.accueil-haut::before{content:"";flex:0 0 clamp(0px,4svh - 24px,24px)}
+.accueil-haut::after{content:"";flex:1 1 0}
+.accueil-haut > .communaute,.accueil-haut > .cross-titre,.accueil-haut > .cross-promos{order:1}
+.decor{position:relative;width:100%;max-width:330px;height:138px}
+.d-piece{position:absolute;top:6px;width:52%;padding:10px 11px 30px;text-align:left;font:13px/1.35 "IM Fell English",Georgia,serif;color:#3a2f1c;
+  background:var(--grain),linear-gradient(160deg,#f6efd9,#e8dcb8);border-radius:2px;box-shadow:0 12px 20px -10px #000}
+.d-piece b{font-weight:700}
+.d-vraie{left:2px;transform:rotate(-5deg)}
+.d-vraie .d-tampon{right:auto;left:9px}
+.d-fausse{right:2px;top:20px;transform:rotate(4deg)}
+.d-tampon{position:absolute;right:8px;bottom:7px;font:700 12px/1 var(--tampon);letter-spacing:.12em;text-transform:uppercase;padding:3px 5px 2px;border:2px solid currentColor;border-radius:3px;transform:rotate(-7deg)}
+.d-epoque{color:var(--vert)}
+.d-contre{color:var(--rouge)}
+.accueil h1.logo{font-size:34px;letter-spacing:.08em;line-height:1.1}
+.tagline{margin:0;font:700 18px/1.3 var(--titre);letter-spacing:.05em;color:#e7d6a0}
+.recap{margin:0;max-width:380px;font:15px/1.45 var(--texte);color:#b9c7bb}
+.recap b{color:#e9e2c8}
+.menu-play{width:100%;max-width:380px;margin-top:8px}
+.menu-play .bouton{width:100%}
+.podium-semaine{width:100%;max-width:380px;margin-top:2px}
+.pd-tete{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font:700 11px/1.5 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:#b9c7bb}
+.pd-tete .lien{font:700 11px/1.5 var(--titre);letter-spacing:.1em;color:#e7d6a0;padding:0 2px}
+.podium{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:end;gap:8px}
+.pd-slot{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;padding:6px 4px;border-radius:3px;background:var(--papier);color:var(--encre);box-shadow:0 3px 0 var(--sombre)}
+.pd-slot.r1{order:2;padding-bottom:16px}
+.pd-slot.r2{order:1}
+.pd-slot.r3{order:3}
+.pd-rang{font:700 13px/1.4 var(--texte);padding:0 8px;border-radius:999px;color:#2a210a;background:#e0c46c}
+.r2 .pd-rang{background:#d6dbe0}
+.r3 .pd-rang{background:#e2aa7c}
+.pd-nom{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:700 14px/1.4 var(--texte)}
+.pd-score{display:flex;align-items:center;gap:3px;font:700 16px/1.5 var(--texte);color:var(--rouge);font-variant-numeric:lining-nums tabular-nums}
+.pd-score .ic{width:.95em;height:.95em}
+.pd-slot.vide .pd-nom,.pd-slot.vide .pd-score{color:var(--trait)}
+.pd-slot.moi{box-shadow:0 3px 0 var(--sombre),inset 0 0 0 2px var(--or)}
+.pd-champ,.pd-moi{margin:6px 0 0;font-size:13px;line-height:1.5;color:#b9c7bb}
+.pd-champ b,.pd-moi b{color:#e7d6a0}
+.pd-moi{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.pd-moi .lien{color:#e7d6a0;font-size:13px}
+.pd-moi input{width:150px;min-height:34px;padding:2px 8px;font:16px var(--texte);border:1.5px solid var(--or);border-radius:3px;background:var(--creux);color:var(--encre)}
+.pd-moi input.refus{border-color:var(--rouge)}
+.pd-moi .bouton.petit{min-height:34px;padding:2px 10px}
+.communaute{width:100%;max-width:380px;margin-top:4px;font-size:14px;line-height:1.5;color:#b9c7bb}
+.communaute-ligne{display:flex;align-items:center;gap:10px}
+.communaute-txt{white-space:nowrap}
+.communaute b{color:#e7d6a0}
+.communaute-barre{flex:1;height:5px;border-radius:3px;overflow:hidden;background:rgba(233,226,200,.14)}
+.communaute-barre i{display:block;height:100%;background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .9s ease-out}
+.cross-titre{display:flex;align-items:center;gap:10px;width:100%;max-width:380px;margin:4px 0 0;font:700 11px/1.5 var(--titre);letter-spacing:.12em;text-transform:uppercase;color:#8fa596}
+.cross-titre::before,.cross-titre::after{content:"";flex:1;height:1px;background:rgba(233,226,200,.18)}
+.cross-promos{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.cross-promo{display:flex;align-items:center;height:28px;padding:0 13px;border:1.5px solid rgba(233,226,200,.25);border-radius:999px;color:#e9e2c8;text-decoration:none;font:600 13px/1 var(--texte)}
+.cross-promo:hover{border-color:#e7d6a0}
+.home-about{width:100%;max-width:460px;margin-top:26px;/* + 8 px d'espacement : « Comment jouer » commence 8 px sous le bord */padding:14px 16px;text-align:left;border-radius:6px;background:var(--papier);color:var(--encre)}
+.home-about summary{font:700 15px/1.3 var(--titre);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.regles{margin:10px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:15px}
+@media (max-height:700px){
+  .accueil{gap:6px}
+  .decor{height:104px;max-width:300px}
+  .d-piece{font-size:11.5px;padding:7px 8px 26px}
+  .d-fausse{top:14px}
+  .accueil h1.logo{font-size:30px}
+  .recap{font-size:14px;line-height:1.35}
+  .home-about{margin-top:28px}
+}
+@media (max-height:600px){.decor{height:88px}.d-piece{-webkit-line-clamp:3}}
+@media (max-width:380px) and (max-height:700px){.accueil{gap:4px}.home-about{margin-top:30px}}
+@media (prefers-reduced-motion:reduce){.communaute-barre i{transition:none}}
+header.vers-accueil{cursor:pointer}
+/* Classement des faussaires : joueurs dupés par leurs faux, cette semaine (remis à zéro le lundi). */
+.tableau{max-width:460px;margin:0 auto;padding-block:14px 26px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.classement{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.classement li{display:flex;align-items:center;gap:10px;min-height:42px;padding:6px 12px;border:1.5px solid var(--trait);border-radius:3px;background:var(--creux)}
+.classement li.moi{border-color:var(--or);background:#f6ecc9}
+.classement .t-rang{flex:none;min-width:28px;text-align:center;font:700 13px/1.4 var(--texte);padding:0 6px;border-radius:999px;background:var(--papier-2)}
+.classement li:nth-child(1) .t-rang{background:#e0c46c}
+.classement li:nth-child(2) .t-rang{background:#d6dbe0}
+.classement li:nth-child(3) .t-rang{background:#e2aa7c}
+.classement .t-nom{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.classement .t-score{display:flex;align-items:center;gap:3px;font:700 16px/1.5 var(--texte);color:var(--rouge);font-variant-numeric:lining-nums tabular-nums}
+.classement .t-score .ic{width:.95em;height:.95em}
+.champ-passe{margin:0;text-align:center;font-size:14px;color:var(--doux)}
 </style>
 
-<div class="page">
-  <header>
+<div class="accueil" id="accueil">
+  <div class="accueil-haut">
+    <!-- Décor : deux pièces du même lot, l'une d'époque, l'autre contrefaite. Rien d'animé. -->
+    <div class="decor" aria-hidden="true">
+      <div class="d-piece d-vraie"><b>sapajou</b>, <i>n. m.</i> Petit singe d'Amérique du Sud à longue queue.<span class="d-tampon d-epoque">D'époque</span></div>
+      <div class="d-piece d-fausse"><b>sapajou</b>, <i>n. m.</i> Ragoût antillais au lait de coco.<span class="d-tampon d-contre">Contrefaçon</span></div>
+    </div>
+    <h1 class="logo">Bonimenteur</h1>
+    <p class="tagline">Démasque les faux</p>
+    <p class="recap">Achète la pièce d'époque, laisse la contrefaçon. Puis fabrique tes faux pour <b>duper les autres</b>.</p>
+    <div class="menu-play"><button class="bouton plein" type="button" id="jouer">Expertiser</button></div>
+    <div class="podium-semaine">
+      <div class="pd-tete"><span>Faussaires de la semaine</span><button class="lien" type="button" id="voirTout">Voir tout</button></div>
+      <ol class="podium" id="podium" aria-label="Podium de la semaine">
+        <li class="pd-slot r1 vide"><span class="pd-rang">1</span><span class="pd-nom">—</span><span class="pd-score">&nbsp;</span></li>
+        <li class="pd-slot r2 vide"><span class="pd-rang">2</span><span class="pd-nom">—</span><span class="pd-score">&nbsp;</span></li>
+        <li class="pd-slot r3 vide"><span class="pd-rang">3</span><span class="pd-nom">—</span><span class="pd-score">&nbsp;</span></li>
+      </ol>
+      <p class="pd-moi" id="pdMoi" hidden></p>
+      <p class="pd-champ" id="pdChamp" hidden></p>
+    </div>
+    <!-- Jauge des joueurs (pour qui a déjà joué) : la barre se remplit en transform, jamais en width. -->
+    <div class="communaute" id="communaute" hidden>
+      <div class="communaute-ligne"><span class="communaute-txt"><b id="commN">0</b> joueurs, objectif <span id="commObj">10</span></span><span class="communaute-barre" aria-hidden="true"><i id="commBarre"></i></span></div>
+    </div>
+    <p class="cross-titre">Nos autres jeux</p>
+    <div class="cross-promos">
+      <a class="cross-promo" href="https://www.discoverium.fr" target="_blank" rel="noopener">Discoverium</a>
+      <a class="cross-promo" href="https://www.vocabulium.fr" target="_blank" rel="noopener">Vocabulium</a>
+      <a class="cross-promo" href="https://snouff.fr" target="_blank" rel="noopener">Snouff</a>
+    </div>
+  </div>
+  <details class="home-about" open>
+    <summary>Comment jouer</summary>
+    <ol class="regles">
+      <li>On t'apporte deux pièces d'un même lot : l'une est d'époque, l'autre sort de l'atelier d'un faussaire. Achète la vraie : <b>+1 écu</b>.</li>
+      <li>Les faux sont écrits par les autres joueurs, et signés : le nom du faussaire apparaît une fois la pièce achetée.</li>
+      <li>Dans l'atelier, contrefais les pièces que tu as achetées (10 écus), ou tout de suite après les avoir achetées (15 écus). Chaque joueur dupé par ton faux te rapporte <b>1 écu</b>.</li>
+      <li>Le classement des faussaires compte les joueurs dupés de la semaine. Il repart de zéro chaque lundi.</li>
+    </ol>
+  </details>
+</div>
+
+<div class="tableau" id="tableau" hidden></div>
+
+<div class="page" id="jeu" hidden>
+  <header class="vers-accueil" id="versAccueil" role="link" tabindex="0" aria-label="Accueil">
     <span class="rosette" aria-hidden="true"></span>
     <h1>Bonimenteur<span>Antiquaire &amp; faussaire</span></h1>
   </header>
@@ -615,7 +773,7 @@ let db = null, user = null, moi = null, sample = null;
 const S = { pseudos: new Map(), mots: new Map(), pieges: [], choix: [], contest: [], charge: {mots: false, pieges: false, choix: false} };
 const noms = new Map([["truffe", "Truffe"]]);
 const vusLocal = new Set();
-let ecran = "jouer";
+let ecran = "jouer", lance = false;
 
 /* Dérivés */
 function index() {
@@ -641,8 +799,8 @@ function index() {
     }
     if (!choixParMot.has(c.mot)) choixParMot.set(c.mot, []); choixParMot.get(c.mot).push(c);
   }
-  const vusMoi = new Set(vusLocal), achetesMoi = new Set();
-  for (const c of [...S.choix, ...choixEnVol]) if (c.joueur === moi) { vusMoi.add(c.mot); if (!c.erreur) achetesMoi.add(c.mot); }
+  const vusMoi = new Set(vusLocal), achetesMoi = new Set(), jouesMoi = new Map();
+  for (const c of [...S.choix, ...choixEnVol]) if (c.joueur === moi) { vusMoi.add(c.mot); jouesMoi.set(c.mot, !c.erreur); if (!c.erreur) achetesMoi.add(c.mot); }
   const piegesMoi = S.pieges.filter(p => p.auteur === moi);
   const motsPiegesMoi = new Set(piegesMoi.map(p => p.mot));
   // Démasqué pour de bon : percé MORT_VUS fois sans avoir fait une seule victime (la mèche).
@@ -659,7 +817,7 @@ function index() {
   const retire = new Set([...nbContest].filter(([, n]) => n >= CONTEST_MIN).map(([id]) => id));
   const vivants = new Map();
   for (const [m, ps] of parMot) vivants.set(m, ps.filter(p => !mort.has(p.id) && !retire.has(p.id)));
-  return { parMot, vivants, vu, pris, demasque, victimes, choixParMot, vusMoi, achetesMoi, piegesMoi, motsPiegesMoi, mort, pvqn, retire, mesContest };
+  return { parMot, vivants, vu, pris, demasque, victimes, choixParMot, vusMoi, achetesMoi, jouesMoi, piegesMoi, motsPiegesMoi, mort, pvqn, retire, mesContest };
 }
 // Réglages du prototype : petits pour qu'on voie les effets avec quelques testeurs.
 const MORT_VUS = 10, PVQN_VUS = 5, CONTEST_MIN = 2;
@@ -1138,8 +1296,32 @@ function enteteEcus(s, cout = PRIX_PIEGE) {
 // Réserve d'écus face au prix : une pièce pleine par écu possédé, vide sinon.
 const reserve = (s, cout = PRIX_PIEGE) => `<div class="jauge-ecus" role="img" aria-label="${Math.max(s, 0)} écus sur ${cout}"><span class="barre"><i style="transform:scaleX(${Math.min(Math.max(s, 0) / cout, 1)})"></i></span><span class="chip ecu">${Math.max(s, 0)}/${cout}${IC.ecu}</span></div>`;
 
+/* Lots joués par famille, sauf ceux déjà contrefaits : achetés d'abord (le moins de faux en vie
+   en tête), floués ensuite, grisés. */
+function lotsJoues(I) {
+  const par = new Map();
+  for (const [id, achete] of I.jouesMoi) {
+    const m = S.mots.get(id); if (!m || I.motsPiegesMoi.has(id)) continue;
+    const f = famille(m); if (!par.has(f)) par.set(f, []);
+    par.get(f).push({ id, achete, vivants: (I.vivants.get(id) || []).length });
+  }
+  for (const l of par.values()) l.sort((a, b) => b.achete - a.achete || a.vivants - b.vivants);
+  return par;
+}
+let familleAtelier = null;
+function lotsFamille(retour, f) {
+  const I = index(), l = lotsJoues(I).get(f) || [];
+  if (!l.length) { familleAtelier = null; return choixFamille(retour); }
+  familleAtelier = f;
+  $e.innerHTML = `${retour === atelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(solde(I))}
+    <button class="retour-famille" type="button" id="familles" aria-label="Toutes les familles"><span aria-hidden="true">‹</span>${IC[f]}${FAMILLES[f].label}</button>
+    <ul class="lots-atelier apparait">${l.map(x => { const t = titre(S.mots.get(x.id)); return `<li><button class="lot-at" type="button" data-id="${esc(x.id)}" ${x.achete ? "" : "disabled"} aria-label="${esc(t)} : ${x.achete ? "acheté" : "floué, pas de contrefaçon"}"><span class="lot-titre">${esc(t)}</span><span class="estampille ${x.achete ? "achete" : "floue"}" aria-hidden="true">${x.achete ? "Acheté" : "Floué"}</span></button></li>`; }).join("")}</ul>`;
+  $e.querySelectorAll(".lot-at[data-id]").forEach(b => b.onclick = () => { dernierMot = b.dataset.id; cartePiege(b.dataset.id, retour); });
+  document.getElementById("familles").onclick = () => { familleAtelier = null; choixFamille(retour); };
+  if (retour === atelier) lierSous();
+}
 function choixFamille(retour) {
-  const I = index(), s = solde(I), par = aPieger(I);
+  const I = index(), s = solde(I), par = lotsJoues(I);
   if (s < PRIX_PIEGE) {
     $e.innerHTML = `${retour === atelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(s)}
       <div class="grosse-ic apparait">${IC.piege}</div>
@@ -1147,10 +1329,12 @@ function choixFamille(retour) {
       <button class="bouton plein" type="button" id="retour" style="width:100%">Expertise</button>`;
     document.getElementById("retour").onclick = () => (retour === atelier ? montrer("jouer") : nouvelleSerie()); if (retour === atelier) lierSous(); return;
   }
+  if (familleAtelier && par.has(familleAtelier)) return lotsFamille(retour, familleAtelier);
   const dansAtelier = retour === atelier;
+  const nb = f => par.get(f).filter(x => x.achete).length;
   $e.innerHTML = `${dansAtelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(s)}
-    ${par.size ? "" : `<div class="grosse-ic">${IC.piege}</div><p class="centre">Expertise d'abord des lots : tu contreferas les pièces achetées.</p>`}<div class="tuiles apparait">${ORDRE.filter(f => par.has(f)).map(f => `<button class="tuile" type="button" data-f="${f}">${IC[f]}${FAMILLES[f].label}<span class="nb-tuile">${par.get(f).length}</span></button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
-  $e.querySelectorAll("[data-f]").forEach(b => b.onclick = () => { const id = motAtelier(index(), b.dataset.f); if (id) cartePiege(id, retour); });
+    ${par.size ? "" : `<div class="grosse-ic">${IC.piege}</div><p class="centre">Expertise d'abord des lots : tu contreferas les pièces achetées.</p>`}<div class="tuiles apparait">${ORDRE.filter(f => par.has(f)).map(f => `<button class="tuile" type="button" data-f="${f}">${IC[f]}${FAMILLES[f].label}<span class="nb-tuile ${nb(f) ? "" : "zero"}" aria-label="${nb(f)} pièces achetées">${nb(f)}</span></button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
+  $e.querySelectorAll("[data-f]").forEach(b => b.onclick = () => lotsFamille(retour, b.dataset.f));
   if (dansAtelier) lierSous(); else document.getElementById("retour").onclick = retour;
 }
 
@@ -1292,7 +1476,7 @@ function sousOnglets(actif, I) {
   const n = I.piegesMoi.length;
   return `<div class="sous-onglets" role="tablist" aria-label="Atelier"><button type="button" role="tab" data-sous="fabriquer" aria-selected="${actif === "fabriquer"}">${IC.piege} Contrefaire</button><button type="button" role="tab" data-sous="faux" aria-selected="${actif === "faux"}">Sur le marché <span class="nb">${n}</span></button></div>`;
 }
-function lierSous() { $e.querySelectorAll("[data-sous]").forEach(b => b.onclick = () => atelier(b.dataset.sous)); }
+function lierSous() { $e.querySelectorAll("[data-sous]").forEach(b => b.onclick = () => { familleAtelier = null; atelier(b.dataset.sous); }); }
 async function atelier(sous) {
   if (typeof sous === "string") sousAtelier = sous;
   const I = index();
@@ -1358,6 +1542,111 @@ async function absence() {
   return true;
 }
 
+/* Accueil et classement des faussaires */
+const ACC = document.getElementById("accueil"), JEU = document.getElementById("jeu"), TAB = document.getElementById("tableau");
+let vue = "accueil";
+function afficher(v) { vue = v; ACC.hidden = v !== "accueil"; JEU.hidden = v !== "jeu"; TAB.hidden = v !== "classement"; window.scrollTo(0, 0); }
+// Semaine de Paris : du lundi 0 h au lundi suivant, comme les classements des trois autres jeux.
+function minuitParis(t) {
+  const [y, m, d] = jourDe(t).split("-").map(Number), u = Date.UTC(y, m - 1, d);
+  const decalage = new Date(new Date(u).toLocaleString("en-US", { timeZone: "Europe/Paris" })) - new Date(new Date(u).toLocaleString("en-US", { timeZone: "UTC" }));
+  return u - decalage;
+}
+function lundiParis(t = Date.now()) {
+  const [y, m, d] = jourDe(t).split("-").map(Number), jour = (new Date(Date.UTC(y, m - 1, d)).getUTCDay() + 6) % 7;
+  return minuitParis(minuitParis(t) - jour * 864e5 + 12 * 3600e3);
+}
+/* Faussaires classés par joueurs dupés (même règle que index() et que le serveur, _piegeurs) ;
+   Truffe n'est pas classé. Sur Railway, la page ne reçoit que ses duels : le serveur calcule
+   (window.__classementServeur) ; sur claude.ai, la page a tous les duels et calcule ici. */
+function classementLocal() {
+  const auteurs = new Map(S.pieges.map(p => [p.id, p.auteur])), lundi = lundiParis(), avant = lundiParis(lundi - 864e5);
+  const compter = (debut, fin) => {
+    const n = new Map();
+    for (const c of S.choix) {
+      const t = c.t || 0; if (!c.erreur || t < debut || t >= fin) continue;
+      for (const id of c.montres || []) { const a = auteurs.get(id); if (a && a !== "truffe" && a !== c.joueur && !(c.ordre || []).includes(id)) n.set(a, (n.get(a) || 0) + 1); }
+    }
+    return [...n].map(([id, victimes]) => ({ id, victimes })).sort((x, y) => y.victimes - x.victimes || (x.id < y.id ? -1 : 1));
+  };
+  const semaine = compter(lundi, Infinity), passee = compter(avant, lundi), i = semaine.findIndex(r => r.id === moi);
+  return { semaine: semaine.slice(0, 20), passee: passee[0] || null, moi: i < 0 ? null : { rang: i + 1, victimes: semaine[i].victimes } };
+}
+const classement = () => window.__classementServeur || classementLocal();
+const PALIERS = [10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000];
+function communaute() {
+  if (window.__communauteServeur) return window.__communauteServeur;
+  const n = new Set(S.choix.map(c => c.joueur)).size;
+  return { joueurs: n, objectif: PALIERS.find(p => p > n) || n + 1 };
+}
+const nomClasse = id => id === moi ? (monPseudo() || "Toi") : (S.pseudos.get(id) || noms.get(id) || "Anonyme");
+const dupes = n => `<span class="pd-score" aria-label="${n} joueur${n > 1 ? "s" : ""} dupé${n > 1 ? "s" : ""}">${n}${IC.joueur}</span>`;
+async function majAccueil() {
+  if (!lance) return;
+  const C = classement(), ids = [...C.semaine.slice(0, 3).map(r => r.id), ...(C.passee ? [C.passee.id] : [])];
+  await nommer(ids).catch(() => {});
+  if (vue !== "accueil") return;
+  document.getElementById("podium").innerHTML = [0, 1, 2].map(i => { const r = C.semaine[i];
+    return r ? `<li class="pd-slot r${i + 1} ${r.id === moi ? "moi" : ""}"><span class="pd-rang">${i + 1}</span><span class="pd-nom">${esc(nomClasse(r.id))}</span>${dupes(r.victimes)}</li>`
+      : `<li class="pd-slot r${i + 1} vide"><span class="pd-rang">${i + 1}</span><span class="pd-nom">—</span><span class="pd-score">&nbsp;</span></li>`; }).join("");
+  // Ta ligne sous le podium : ton rang au-delà du 3e ; classé sans pseudo, de quoi signer.
+  const pm = document.getElementById("pdMoi"), sansNom = C.moi && !monPseudo();
+  pm.hidden = !C.moi || (C.moi.rang <= 3 && !sansNom);
+  if (!pm.hidden) {
+    pm.innerHTML = `${C.moi.rang > 3 ? `<span>Toi : <b>${C.moi.rang}<sup>e</sup></b>, ${C.moi.victimes}${IC.joueur}</span>` : ""}${sansNom ? `<button class="lien" type="button" id="signerAcc">Signe ton nom</button>` : ""}`;
+    const sg = document.getElementById("signerAcc"); if (sg) sg.onclick = signerAccueil;
+  }
+  const ch = document.getElementById("pdChamp");
+  ch.hidden = !C.passee;
+  if (C.passee) ch.innerHTML = `Semaine dernière : <b>${esc(nomClasse(C.passee.id))}</b>, ${C.passee.victimes} dupé${C.passee.victimes > 1 ? "s" : ""}`;
+  const cm = communaute(), aJoue = index().vusMoi.size > 0, bloc = document.getElementById("communaute");
+  bloc.hidden = !aJoue;
+  if (aJoue) {
+    document.getElementById("commN").textContent = cm.joueurs; document.getElementById("commObj").textContent = cm.objectif;
+    requestAnimationFrame(() => { document.getElementById("commBarre").style.transform = `scaleX(${Math.min(cm.joueurs / cm.objectif, 1)})`; });
+  }
+}
+function signerAccueil() {
+  const pm = document.getElementById("pdMoi");
+  pm.innerHTML = `<input id="pseudoAcc" maxlength="${PSEUDO_MAX}" autocomplete="nickname" aria-label="Ton pseudo" placeholder="Ton pseudo"><button class="bouton plein petit" type="button" id="pseudoAccOk" aria-label="Valider">${IC.ok}</button>`;
+  const ch = document.getElementById("pseudoAcc"); ch.focus();
+  const valider = async () => {
+    const v = ch.value.replace(/\s+/g, " ").trim().slice(0, PSEUDO_MAX);
+    if (v.length < 2) { ch.classList.add("refus"); ch.focus(); return; }
+    try { const r = await db.doc(`joueurs/${moi}`).set({ pseudo: v, t: Date.now() }); S.pseudos.set(moi, (r && r.pseudo) || v); }
+    catch (e) { ch.classList.add("refus"); ch.focus(); return; }
+    majAccueil();
+  };
+  document.getElementById("pseudoAccOk").onclick = valider;
+  ch.onkeydown = e => { ch.classList.remove("refus"); if (e.key === "Enter") valider(); else if (e.key === "Escape") majAccueil(); };
+}
+async function ecranClassement() {
+  afficher("classement");
+  const C = classement();
+  await nommer([...C.semaine.map(r => r.id), ...(C.passee ? [C.passee.id] : [])]).catch(() => {});
+  const ligne = (r, rang) => `<li class="${r.id === moi ? "moi" : ""}"><span class="t-rang">${rang}</span><span class="t-nom">${esc(nomClasse(r.id))}</span><span class="t-score" aria-label="${r.victimes} joueurs dupés">${r.victimes}${IC.joueur}</span></li>`;
+  const horsTop = C.moi && C.moi.rang > C.semaine.length ? ligne({ id: moi, victimes: C.moi.victimes }, C.moi.rang) : "";
+  TAB.innerHTML = `<main class="carte">
+    <div class="haut"><button class="retour-famille" type="button" id="retourAcc"><span aria-hidden="true">‹</span>Accueil</button>${pastilleEcus(solde(index()))}</div>
+    <h2>Faussaires de la semaine</h2>
+    ${C.semaine.length ? `<ol class="classement">${C.semaine.map((r, i) => ligne(r, i + 1)).join("")}${horsTop}</ol>` : `<div class="grosse-ic">${IC.piege}</div><p class="champ-passe">Personne n'a encore été dupé cette semaine.</p>`}
+    ${C.passee ? `<p class="champ-passe">Semaine dernière : <b>${esc(nomClasse(C.passee.id))}</b>, ${C.passee.victimes} dupé${C.passee.victimes > 1 ? "s" : ""}</p>` : ""}
+    <button class="bouton plein" type="button" id="jouerTab">Expertiser</button>
+  </main>`;
+  document.getElementById("retourAcc").onclick = versAccueil;
+  document.getElementById("jouerTab").onclick = jouer;
+}
+function versAccueil() { afficher("accueil"); majAccueil(); }
+async function jouer() {
+  afficher("jeu");
+  if (!lance) return;          // les données arrivent : quandPret lancera la partie
+  if (!(await absence())) montrer("jouer");
+}
+document.getElementById("jouer").onclick = jouer;
+document.getElementById("voirTout").onclick = ecranClassement;
+document.getElementById("versAccueil").onclick = versAccueil;
+document.getElementById("versAccueil").onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); versAccueil(); } };
+
 /* Navigation */
 function montrer(nom) {
   ecran = nom;
@@ -1369,18 +1658,21 @@ document.querySelectorAll(".onglets button").forEach(b => b.onclick = () => mont
 /* Démarrage */
 const pret = () => S.charge.mots && S.charge.pieges && S.charge.choix;
 (async () => {
-  const minuteur = setTimeout(() => { if (!pret()) $e.innerHTML = `<p class="alerte">Les mots ne répondent pas encore. Vérifie ta connexion : il faut être connecté à claude.ai pour jouer.</p>`; }, 10000);
+  const minuteur = setTimeout(() => { if (!pret()) { afficher("jeu"); $e.innerHTML = `<p class="alerte">Les mots ne répondent pas encore. Vérifie ta connexion : il faut être connecté à claude.ai pour jouer.</p>`; } }, 10000);
   try { [db, user] = await Promise.all([window.claude?.use?.("db") ?? null, window.claude?.use?.("user") ?? null]); } catch (e) { db = null; }
-  if (!db) { clearTimeout(minuteur); $e.innerHTML = `<p class="alerte">La mémoire partagée du jeu n'est pas disponible ici. Ouvre la page sur claude.ai, connecté à ton compte.</p>`; return; }
+  if (!db) { clearTimeout(minuteur); afficher("jeu"); $e.innerHTML = `<p class="alerte">La mémoire partagée du jeu n'est pas disponible ici. Ouvre la page sur claude.ai, connecté à ton compte.</p>`; return; }
   try { moi = user ? await user.id() : null; } catch (e) { moi = null; }
   if (!moi) moi = "anonyme";
   nommer([moi]).catch(() => {});
-  let lance = false;
-  const quandPret = async () => { if (pret() && !lance) { lance = true; clearTimeout(minuteur); if (!(await absence())) montrer("jouer"); } else if (lance && ecran === "atelier") atelier(); };
+  const quandPret = async () => {
+    if (pret() && !lance) { lance = true; clearTimeout(minuteur); if (vue === "jeu") { if (!(await absence())) montrer("jouer"); } else majAccueil(); }
+    else if (lance && vue === "accueil") majAccueil();
+    else if (lance && vue === "jeu" && ecran === "atelier") atelier();
+  };
   db.collection("mots").onSnapshot(s => { S.mots = new Map(s.docs.map(d => [d.id, d.data()])); if (!s.metadata.fromCache) S.charge.mots = true; quandPret(); }, () => { S.charge.mots = true; quandPret(); });
   db.collection("pieges").limit(1000).onSnapshot(s => { S.pieges = s.docs.map(d => ({id: d.id, ...d.data()})); if (!s.metadata.fromCache) S.charge.pieges = true; quandPret(); }, () => { S.charge.pieges = true; quandPret(); });
-  db.collection("joueurs").onSnapshot(s => { S.pseudos = new Map(s.docs.map(d => [d.id, String(d.data().pseudo || "").slice(0, PSEUDO_MAX)]).filter(x => x[1])); if (lance && ecran === "atelier" && sousAtelier === "faux" && !document.getElementById("pseudoChamp")) atelier(); }, () => {});
-  db.collection("contestations").limit(1000).onSnapshot(s => { S.contest = s.docs.map(d => d.data()); if (lance && ecran === "atelier") atelier(); }, () => {});
+  db.collection("joueurs").onSnapshot(s => { S.pseudos = new Map(s.docs.map(d => [d.id, String(d.data().pseudo || "").slice(0, PSEUDO_MAX)]).filter(x => x[1])); if (lance && vue === "jeu" && ecran === "atelier" && sousAtelier === "faux" && !document.getElementById("pseudoChamp")) atelier(); if (lance && vue === "accueil" && !document.getElementById("pseudoAcc")) majAccueil(); }, () => {});
+  db.collection("contestations").limit(1000).onSnapshot(s => { S.contest = s.docs.map(d => d.data()); if (lance && vue === "jeu" && ecran === "atelier") atelier(); }, () => {});
   db.collection("choix").limit(1000).onSnapshot(s => { S.choix = s.docs.map(d => ({id: d.id, ...d.data()})); if (!s.metadata.fromCache) S.charge.choix = true; quandPret(); }, () => { S.charge.choix = true; quandPret(); });
 })();
 </script>
