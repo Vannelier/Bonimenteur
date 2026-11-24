@@ -641,8 +641,8 @@ function index() {
     }
     if (!choixParMot.has(c.mot)) choixParMot.set(c.mot, []); choixParMot.get(c.mot).push(c);
   }
-  const vusMoi = new Set(vusLocal);
-  for (const c of S.choix) if (c.joueur === moi) vusMoi.add(c.mot);
+  const vusMoi = new Set(vusLocal), achetesMoi = new Set();
+  for (const c of [...S.choix, ...choixEnVol]) if (c.joueur === moi) { vusMoi.add(c.mot); if (!c.erreur) achetesMoi.add(c.mot); }
   const piegesMoi = S.pieges.filter(p => p.auteur === moi);
   const motsPiegesMoi = new Set(piegesMoi.map(p => p.mot));
   // Démasqué pour de bon : percé MORT_VUS fois sans avoir fait une seule victime (la mèche).
@@ -659,7 +659,7 @@ function index() {
   const retire = new Set([...nbContest].filter(([, n]) => n >= CONTEST_MIN).map(([id]) => id));
   const vivants = new Map();
   for (const [m, ps] of parMot) vivants.set(m, ps.filter(p => !mort.has(p.id) && !retire.has(p.id)));
-  return { parMot, vivants, vu, pris, demasque, victimes, choixParMot, vusMoi, piegesMoi, motsPiegesMoi, mort, pvqn, retire, mesContest };
+  return { parMot, vivants, vu, pris, demasque, victimes, choixParMot, vusMoi, achetesMoi, piegesMoi, motsPiegesMoi, mort, pvqn, retire, mesContest };
 }
 // Réglages du prototype : petits pour qu'on voie les effets avec quelques testeurs.
 const MORT_VUS = 10, PVQN_VUS = 5, CONTEST_MIN = 2;
@@ -839,14 +839,14 @@ function aPieger(I) {
   const neuves = new Map(), jouees = new Map();
   for (const [id, m] of S.mots) {
     if (I.motsPiegesMoi.has(id)) continue;
-    const f = famille(m), cible = I.vusMoi.has(id) ? jouees : neuves;
+    const f = famille(m), cible = I.achetesMoi.has(id) ? jouees : neuves;
     if (!cible.has(f)) cible.set(f, []);
     cible.get(f).push([id, (I.vivants.get(id) || []).length]);
   }
-  // L'atelier ne propose que des lots déjà expertisés : le joueur en connaît déjà la vraie réponse.
-  // Sinon, dans une famille rare (métiers), il pourrait faire défiler les questions et apprendre
-  // toutes les réponses (remarque de l'auteur, 23/11/2026). Un lot neuf se contrefait en direct,
-  // juste après l'avoir expertisé (PRIX_DIRECT).
+  // L'atelier ne propose que les pièces achetées : on imite l'objet qu'on a sous les yeux
+  // (décision de l'auteur, 24/11/2026). Un lot où l'on a été floué ne se contrefait pas, ni ici
+  // ni en direct ; un lot neuf se contrefait en direct, juste après l'avoir acheté (PRIX_DIRECT).
+  // Le serveur refuse aussi (app/main.py, poser).
   return jouees;
 }
 let dernierPiege = null, dernierMot = null;
@@ -1093,7 +1093,7 @@ function repondre(motId, options, piege, k) {
   serie.num++; serie.traces.push(juste ? 1 : 0);
   const fin = serie.num >= TOTAL;
   document.getElementById("suite").innerHTML = `<div class="verdict">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--ecu)" : "var(--faux)"}">+${gain}${IC.ecu}</span></div>
-    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="Contrefaire ce lot pour ${PRIX_DIRECT} écus">${IC.piege} −${PRIX_DIRECT}${IC.ecu}</button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
+    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${juste && solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="${juste ? `Contrefaire ce lot pour ${PRIX_DIRECT} écus` : "Contrefaçon réservée aux pièces achetées"}">${IC.piege} −${PRIX_DIRECT}${IC.ecu}</button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
     ${db ? `<div class="signal"><button class="lien" type="button" id="signaler">Signaler le lot</button><div id="raisons" hidden></div></div>` : ""}`;
   const pr = $e.querySelector(".progres"); if (pr) pr.remove();
   $e.querySelector(".entete").outerHTML = entete(serie.num);
@@ -1149,7 +1149,7 @@ function choixFamille(retour) {
   }
   const dansAtelier = retour === atelier;
   $e.innerHTML = `${dansAtelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(s)}
-    ${par.size ? "" : `<div class="grosse-ic">${IC.piege}</div><p class="centre">Expertise d'abord des lots : tu contreferas ceux que tu connais.</p>`}<div class="tuiles apparait">${ORDRE.filter(f => par.has(f)).map(f => `<button class="tuile" type="button" data-f="${f}">${IC[f]}${FAMILLES[f].label}<span class="nb-tuile">${par.get(f).length}</span></button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
+    ${par.size ? "" : `<div class="grosse-ic">${IC.piege}</div><p class="centre">Expertise d'abord des lots : tu contreferas les pièces achetées.</p>`}<div class="tuiles apparait">${ORDRE.filter(f => par.has(f)).map(f => `<button class="tuile" type="button" data-f="${f}">${IC[f]}${FAMILLES[f].label}<span class="nb-tuile">${par.get(f).length}</span></button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
   $e.querySelectorAll("[data-f]").forEach(b => b.onclick = () => { const id = motAtelier(index(), b.dataset.f); if (id) cartePiege(id, retour); });
   if (dansAtelier) lierSous(); else document.getElementById("retour").onclick = retour;
 }
@@ -1230,7 +1230,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
       document.getElementById("suivant").focus();
     } catch (e) {
       poser.disabled = false;
-      err.innerHTML = e && e.code === "solde" ? reserve(solde(index()), prix) : `<p class="alerte">${e && e.code === "quota_exceeded" ? "Plus de place." : e && e.code === "doublon" ? "Tu as déjà un faux ici." : e && e.code === "refuse" ? "Texte refusé." : e && e.code === "debit" ? "Trop vite : réessaie dans un instant." : "Échec de l'enregistrement."}</p>`;
+      err.innerHTML = e && e.code === "solde" ? reserve(solde(index()), prix) : `<p class="alerte">${e && e.code === "quota_exceeded" ? "Plus de place." : e && e.code === "doublon" ? "Tu as déjà un faux ici." : e && e.code === "non_achete" ? "Pièce non achetée." : e && e.code === "refuse" ? "Texte refusé." : e && e.code === "debit" ? "Trop vite : réessaie dans un instant." : "Échec de l'enregistrement."}</p>`;
     }
   };
   ta.focus();

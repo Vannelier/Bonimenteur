@@ -19,6 +19,13 @@ def _faux_de(client, mot):
     return [p["id"] for p in client.get("/api/etat").json()["pieges"] if p["mot"] == mot]
 
 
+def _acheter(client, mot):
+    """Expertise juste du lot : la pièce est achetée, le joueur peut la contrefaire (+1 écu)."""
+    f = _faux_de(client, mot)[0]
+    assert client.post("/api/choix", json={"mot": mot, "montres": [f], "ordre": [f], "erreur": False}).status_code == 200
+    return f
+
+
 def test_page_et_donnees_servies(client):
     assert "Bonimenteur" in client.get("/").text
     assert client.get("/serveur.js").status_code == 200
@@ -56,10 +63,11 @@ def test_faux_inconnu_refuse(client):
 
 def test_poser_un_faux_paye_et_rapporte(client, tmp_path):
     client.get("/api/moi")
-    # 20 au départ : un faux en direct (15) passe, le suivant à 10 n'a plus de quoi payer.
+    _acheter(client, "sapajou"); _acheter(client, "cacochyme")
+    # 20 au départ + 2 achats justes : un faux en direct (15) passe, le suivant à 10 n'a plus de quoi payer.
     r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15})
     assert r.status_code == 200
-    assert client.get("/api/moi").json()["solde"] == 5
+    assert client.get("/api/moi").json()["solde"] == 7
     assert client.post("/api/pieges", json={"mot": "cacochyme", "texte": "Plat mijoté."}).status_code == 402
     assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "Autre."}).status_code in (402, 409)
     # Un autre joueur tombe dans le faux : l'auteur gagne 1 écu.
@@ -67,7 +75,19 @@ def test_poser_un_faux_paye_et_rapporte(client, tmp_path):
     with TestClient(m.app) as autre:
         autre.get("/api/moi")
         assert autre.post("/api/choix", json={"mot": "sapajou", "montres": [r.json()["id"]], "ordre": [], "erreur": True}).json()["gain"] == 0
-    assert client.get("/api/moi").json()["solde"] == 6
+    assert client.get("/api/moi").json()["solde"] == 8
+
+
+def test_seulement_les_pieces_achetees(client):
+    """On ne contrefait que la pièce achetée : ni un lot jamais joué, ni un lot où l'on a été floué."""
+    client.get("/api/moi")
+    texte = {"texte": "Ragoût de fèves.", "prix": 15}
+    assert client.post("/api/pieges", json={"mot": "sapajou", **texte}).status_code == 403
+    f = _faux_de(client, "cacochyme")[0]
+    client.post("/api/choix", json={"mot": "cacochyme", "montres": [f], "ordre": [], "erreur": True})
+    assert client.post("/api/pieges", json={"mot": "cacochyme", **texte}).status_code == 403
+    _acheter(client, "sapajou")
+    assert client.post("/api/pieges", json={"mot": "sapajou", **texte}).status_code == 200
 
 
 def test_pseudo(client):
@@ -122,6 +142,7 @@ def test_ration_du_jour(client, monkeypatch):
 def test_categorie_du_faux(client):
     """Le faussaire peut fausser la catégorie d'une définition ; une catégorie inventée est refusée."""
     client.get("/api/moi")
+    _acheter(client, "sapajou")
     assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "D'un rouge sombre.", "categorie": "nom propre"}).status_code == 422
     r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "D'un rouge sombre.", "categorie": "adj."})
     assert r.status_code == 200
@@ -178,6 +199,7 @@ def test_etat_allege(client):
     """L'état ne renvoie que les duels du joueur et ceux où son faux a trompé ; les compteurs par faux
     viennent du serveur."""
     client.get("/api/moi")
+    _acheter(client, "sapajou")
     r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15}).json()["id"]
     import app.main as m
     autres = []
@@ -187,7 +209,8 @@ def test_etat_allege(client):
     autres[0].post("/api/choix", json={"mot": "sapajou", "montres": [r], "ordre": [], "erreur": True})
     autres[1].post("/api/choix", json={"mot": "cacochyme", "montres": [t], "ordre": [t], "erreur": False})
     e = client.get("/api/etat").json()
-    assert [c["mot"] for c in e["choix"]] == ["sapajou"]          # le duel où son faux a trompé, pas l'autre
+    # Son propre achat et le duel où son faux a trompé ; pas le duel de cacochyme.
+    assert sorted((c["mot"], c["erreur"]) for c in e["choix"]) == [("sapajou", False), ("sapajou", True)]
     assert e["stats"][r] == [1, 1, 0] and e["stats"][t] == [1, 0, 1]
     assert len(autres[1].get("/api/etat").json()["choix"]) == 1   # ses propres duels seulement
     for a in autres: a.__exit__(None, None, None)

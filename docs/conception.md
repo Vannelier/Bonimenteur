@@ -73,10 +73,14 @@ blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
 
 ## Fabriquer un faux
 
-- L'atelier ne propose que des lots déjà expertisés (23/11/2026) : le joueur en
-  connaît déjà la vraie réponse. Avant, il pouvait faire défiler une famille
-  rare (les métiers) et apprendre toutes ses réponses. Un lot neuf se
-  contrefait en direct, juste après l'avoir expertisé. Familles vides masquées.
+- On ne contrefait que les pièces achetées, c'est-à-dire les lots où l'on a
+  trouvé la vraie (24/11/2026) : on imite l'objet qu'on a sous les yeux. Le
+  joueur floué ne peut pas contrefaire ce lot, ni dans l'atelier ni en direct
+  (bouton −15 grisé) ; le serveur refuse aussi (403). Le 23/11/2026, l'atelier
+  ne proposait déjà que des lots expertisés : avant, on pouvait faire défiler
+  une famille rare (les métiers) et apprendre toutes ses réponses. Un lot neuf
+  se contrefait en direct, juste après l'avoir acheté. Familles vides
+  masquées.
 - Aperçu : le faux s'écrit dans l'emplacement de la réponse, sur le même
   artefact que l'original (surligné), au fil de la saisie ; l'original tient
   en une ligne au-dessus. Tant que rien n'est tapé, le texte d'origine est
@@ -92,14 +96,13 @@ blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
   réécrit.
 - Un faux par joueur et par question. Une question où le joueur a un faux ne
   lui est plus posée ; une question neuve vue en fabriquant non plus.
-- Questions proposées : d'abord celles que le joueur a déjà jouées (rien n'est
-  gâché), puis les neuves.
+- Questions proposées : les pièces achetées seulement.
 - Définition : le faussaire choisit la catégorie de son faux (n. m., n. f.,
   adj., v.…), celle de la vraie cochée d'office ; il peut la fausser aussi
   (« sapajou, *adj.*, d'un rouge sombre »).
-- Mise en forme imposée (`formater`) : majuscule, point final ; pour une
-  commune, majuscule à chaque partie du nom. Un faux ne se trahit pas par sa
-  forme.
+- Plus de mise en forme imposée (24/11/2026) : le faux s'affiche tel qu'écrit,
+  majuscules et ponctuation comprises ; imiter la forme de la vraie fait partie
+  du travail du faussaire (`docs/questions.md`, « Forme des réponses »).
 
 ## La vie d'un faux
 
