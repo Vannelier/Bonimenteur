@@ -16,7 +16,7 @@
   "question": "En 1518, à Strasbourg, des centaines de personnes se sont mises à ___.",
   "source": "wikipedia:Épidémie dansante de 1518",
   "type": "anecdote",
-  "vraie": "Danser sans pouvoir s'arrêter, pendant des semaines."
+  "vraie": "danser sans pouvoir s'arrêter, pendant des semaines"
  },
  "a-eiffel": {
   "mot": "",
@@ -47,7 +47,7 @@
   "question": "Après le vol de la Joconde en 1911, la police a interrogé ___.",
   "source": "wikipedia:Vol de La Joconde",
   "type": "anecdote",
-  "vraie": "Le peintre Pablo Picasso."
+  "vraie": "le peintre Pablo Picasso"
  },
  "a-ketchup": {
   "mot": "",
@@ -584,7 +584,7 @@
   "mot": "",
   "question": "À quoi servait cette poêle en laiton percée, au très long manche ?",
   "type": "photo",
-  "vraie": "À réchauffer le lit avant de s'y coucher : on la remplissait de braises et on la passait entre les draps.",
+  "vraie": "à réchauffer le lit avant de s'y coucher : on la remplissait de braises et on la passait entre les draps.",
   "legende": "Poêle en laiton percée, au très long manche",
   "rubrique": "Usage"
  },
@@ -595,7 +595,7 @@
   "mot": "",
   "question": "À quoi servait cette pince en métal ?",
   "type": "photo",
-  "vraie": "À friser les cheveux : on la chauffait avant d'y enrouler les mèches.",
+  "vraie": "à friser les cheveux : on la chauffait avant d'y enrouler les mèches.",
   "legende": "Pince en métal",
   "rubrique": "Usage"
  },
@@ -606,7 +606,7 @@
   "mot": "",
   "question": "À quoi servait cette tasse en porcelaine, avec son drôle de rebord intérieur ?",
   "type": "photo",
-  "vraie": "À boire son thé ou son café sans mouiller sa moustache.",
+  "vraie": "à boire son thé ou son café sans mouiller sa moustache.",
   "legende": "Tasse en porcelaine à rebord intérieur",
   "rubrique": "Usage"
  },
@@ -617,7 +617,7 @@
   "mot": "",
   "question": "À quoi servait cet objet en fonte, en forme d'insecte ?",
   "type": "photo",
-  "vraie": "À retirer ses bottes sans les mains : on coinçait le talon entre ses deux pattes.",
+  "vraie": "à retirer ses bottes sans les mains : on coinçait le talon entre ses deux pattes.",
   "legende": "Objet en fonte en forme d'insecte",
   "rubrique": "Usage"
  },
@@ -628,7 +628,7 @@
   "mot": "",
   "question": "À quoi servait cet objet terminé par un petit crochet ?",
   "type": "photo",
-  "vraie": "À boutonner les bottines et les gants en attrapant chaque bouton à travers sa boutonnière.",
+  "vraie": "à boutonner les bottines et les gants en attrapant chaque bouton à travers sa boutonnière.",
   "legende": "Objet terminé par un petit crochet",
   "rubrique": "Usage"
  },
@@ -663,7 +663,7 @@
   "mot": "",
   "question": "Hauterives, dans la Drôme. Qui a construit ce palais de pierre ?",
   "type": "photo",
-  "vraie": "Un facteur, seul, avec les pierres ramassées pendant ses tournées, en 33 ans.",
+  "vraie": "un facteur, seul, avec les pierres ramassées pendant ses tournées, en 33 ans.",
   "legende": "Palais de pierre, Hauterives (Drôme)",
   "rubrique": "Bâtisseur"
  },
@@ -674,7 +674,7 @@
   "mot": "",
   "question": "Paris, crue de janvier 1910. Jusqu'où l'eau est-elle montée sur le Zouave, la statue du pont de l'Alma qui sert de repère ?",
   "type": "photo",
-  "vraie": "Jusqu'à ses épaules.",
+  "vraie": "jusqu'à ses épaules.",
   "legende": "Le Zouave du pont de l'Alma, crue de janvier 1910",
   "rubrique": "Hauteur de l'eau"
  },
@@ -685,7 +685,7 @@
   "mot": "",
   "question": "Ce lac d'une île d'Australie occidentale est rose. Pourquoi ?",
   "type": "photo",
-  "vraie": "À cause d'algues microscopiques et de bactéries qui vivent dans son eau très salée.",
+  "vraie": "à cause d'algues microscopiques et de bactéries qui vivent dans son eau très salée.",
   "legende": "Lac rose d'une île d'Australie occidentale",
   "rubrique": "Origine de la couleur"
  },
@@ -696,7 +696,7 @@
   "mot": "",
   "question": "Paris, rue de Chazelles, vers 1884. Que fait cette statue géante au-dessus des toits ?",
   "type": "photo",
-  "vraie": "C'est la statue de la Liberté, assemblée à Paris avant d'être démontée et envoyée à New York.",
+  "vraie": "c'est la statue de la Liberté, assemblée à Paris avant d'être démontée et envoyée à New York.",
   "legende": "Statue géante au-dessus des toits, rue de Chazelles, Paris, vers 1884",
   "rubrique": "Identification"
  },
@@ -707,7 +707,7 @@
   "mot": "",
   "question": "Paris, gare Montparnasse, 22 octobre 1895. Que s'est-il passé ?",
   "type": "photo",
-  "vraie": "Un train arrivé trop vite a traversé la façade de la gare et fini sa course sur la place.",
+  "vraie": "un train arrivé trop vite a traversé la façade de la gare et fini sa course sur la place.",
   "legende": "Gare Montparnasse, Paris, 22 octobre 1895",
   "rubrique": "Événement"
  },

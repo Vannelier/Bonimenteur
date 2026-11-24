@@ -52,6 +52,24 @@ Photos : `legende` (ce que montre l'image, sans la réponse) et `rubrique`
 Champs facultatifs : `cadre` (mots communs à une série, ignorés par
 l'arbitre : « peur » pour les phobies), `region`, `registre`, `source`.
 
+## Forme des réponses
+
+La page affiche les réponses telles qu'elles sont écrites, vraies comme faux :
+majuscules et ponctuation d'un faux sont l'affaire du faussaire (décision de
+l'auteur, 24/11/2026 : la page corrigeait « Étienne Daho » en « étienne
+Daho »). Les vraies et les faux de départ s'écrivent donc dans leur forme
+d'affichage, vérifiée par `test_donnees_coherentes` :
+
+- anecdote : le bout de phrase qui remplace `___`, sans majuscule (sauf nom
+  propre) ni point final ;
+- photo : la suite de « Usage : », sans majuscule, avec point final ;
+- commune : le nom, sans point ;
+- autres familles : une phrase, majuscule et point final.
+
+Seuls retouchés à l'affichage : les espaces en trop, et le point final d'une
+anecdote, d'une commune ou d'une carte de visite, que la mise en page porte
+déjà.
+
 ## Faux de départ
 
 Chaque question a ses trois faux de Truffe. Les 15 définitions reprises de la

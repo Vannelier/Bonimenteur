@@ -44,8 +44,10 @@ CI : `.github/workflows/tests.yml` lance `pytest -q` sur chaque PR.
 
 ## Invariants
 
-- La vraie réponse ne se distingue jamais d'un faux : même mise en forme
-  (`formater`), région et registre dans la question, jamais dans la réponse.
+- La vraie réponse ne se distingue jamais d'un faux par la page : région et
+  registre dans la question, jamais dans la réponse. Le faux s'affiche tel que
+  le faussaire l'a écrit (`formater` ne retire que les espaces en trop) ; les
+  vraies sont écrites dans leur forme d'affichage (`docs/questions.md`).
 - Le poseur voit la vraie réponse ; l'arbitre refuse un faux trop proche, sans
   dire en quoi. Une question tentée ne lui est plus posée.
 - Un faux par joueur et par question ; une question où le joueur a un faux ne

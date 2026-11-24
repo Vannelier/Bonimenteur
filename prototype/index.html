@@ -718,27 +718,10 @@ const FAMILLES = {
   // Métiers disparus : la carte de visite du métier, la spécialité à deviner (ajoutée le 23/11/2026).
   metier:     { label: "Métier", consigne: "", piege: "Invente une fausse spécialité.", champ: "Ta fausse spécialité", max: 100, seuil: 0.5 },
 };
-/* Mise en forme d'un piège au format des vraies réponses de sa famille, pour qu'il ne se trahisse pas :
-   - commune : majuscule à chaque partie du nom (« Saint-Jean-sur-Loire »), petits mots en minuscule, sans point ;
-   - toutes les autres familles : majuscule au début et après . ! ?, point final s'il manque.
-   Appliquée à l'enregistrement et à l'affichage : les réponses déjà en base suivent le même canevas. */
-const PETITS = new Set(["le", "la", "les", "l", "de", "du", "des", "d", "sur", "sous", "en", "et", "aux", "au", "lez", "lès"]);
-function formater(brut, f) {
-  let t = String(brut).replace(/\s+/g, " ").trim();
-  if (!t) return t;
-  const maj = s => s.charAt(0).toLocaleUpperCase("fr") + s.slice(1);
-  if (f === "commune") {
-    t = t.replace(/[.!?]+$/, "").trim();
-    // Espaces → traits d'union, comme dans les vrais noms, sauf après un article initial (Le Mans, La Rochelle).
-    const art = t.match(/^(le|la|les)\s+/i);
-    t = (art ? art[0].trim() + " " : "") + t.slice(art ? art[0].length : 0).replace(/\s+/g, "-");
-    let i = 0;
-    return t.split(/([-\s']+)/).map(p => { if (/^[-\s']+$/.test(p) || !p) return p; const premier = i++ === 0; return !premier && PETITS.has(p.toLowerCase()) ? p.toLowerCase() : maj(p.toLowerCase()); }).join("");
-  }
-  t = maj(t).replace(/([.!?]\s+)(\p{Ll})/gu, (_, a, b) => a + b.toLocaleUpperCase("fr"));
-  if (!/[.!?…]$/.test(t)) t += ".";
-  return t;
-}
+/* Le faux s'affiche tel que le faussaire l'a écrit : majuscules et ponctuation sont à lui, comme le soin
+   qu'il met à imiter la vraie (demande de l'auteur, 24/11/2026). Seuls les espaces en trop sont retirés.
+   Les vraies réponses sont écrites dans leur forme d'affichage (docs/questions.md, « Forme des réponses »). */
+const formater = brut => String(brut).replace(/\s+/g, " ").trim();
 const ORDRE = ["definition", "anecdote", "expression", "commune", "photo", "metier", "intraduisible", "etrangere"];
 const famille = m => FAMILLES[m.type] ? m.type : "definition";
 function titre(m) {
@@ -975,8 +958,6 @@ const ouvrage = (m, motId) => { const l = OUVRAGES[famille(m)] || OUVRAGES.defin
 const attrsFeuillet = (m, motId) => { const o = ouvrage(m, motId), t = TEINTES[o.teinte]; return `data-style="${o.style}" style="--p1:${t[0]};--p2:${t[1]};--p3:${t[2]}"`; };
 // Catégories proposées au faussaire pour une définition (la vraie est cochée d'office).
 const CATEGORIES = ["n. m.", "n. f.", "n.", "adj.", "v.", "adv."];
-// Première lettre en minuscule, accents compris (« À réchauffer » → « à réchauffer »), sauf un sigle.
-const minuscule1 = s => /^[A-ZÀ-Ý](?![A-ZÀ-Ý])/.test(String(s)) ? s.charAt(0).toLocaleLowerCase("fr") + s.slice(1) : s;
 const sansPoint = s => String(s).replace(/[.\s]+$/, "");
 /* Plus de question d'en-tête (demande de l'auteur, 23/11/2026) : le feuillet dit tout. Au-dessus,
    une ligne fine (famille, numéro de lot) et, pour une photo, la planche : l'image et sa question
@@ -999,7 +980,7 @@ function entreeFeuillet(m, texte, categorie) {
   }
   if (f === "anecdote") {
     const [avant, apres] = String(m.question || "").split("___");
-    return `${esc(avant || "")}<em class="rep">${esc(minuscule1(sansPoint(texte)))}</em>${esc(apres ?? ".")}`;
+    return `${esc(avant || "")}<em class="rep">${esc(sansPoint(texte))}</em>${esc(apres ?? ".")}`;
   }
   if (f === "expression") return `<b class="vedette">${esc(m.mot.charAt(0).toUpperCase() + m.mot.slice(1))}</b>. <span class="rep">${t}</span>`;
   if (f === "intraduisible" || f === "etrangere") {
@@ -1008,7 +989,7 @@ function entreeFeuillet(m, texte, categorie) {
   }
   // Photo : une planche légendée complète, sans la question (demande de l'auteur, 23/11/2026) :
   // « Fig. Poêle en laiton percée… — Usage : à réchauffer le lit… ».
-  return `<b class="vedette">Fig.</b> ${esc(m.legende || "")}. <span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(minuscule1(texte))}</span>`;
+  return `<b class="vedette">Fig.</b> ${esc(m.legende || "")}. <span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(texte)}</span>`;
 }
 // Noms et adresses des cartes de visite : fictifs, tirés par lot (les mêmes sur les deux cartes).
 const PRENOMS = ["Auguste", "Désiré", "Hippolyte", "Anselme", "Prosper", "Théodore", "Honorine", "Clémence", "Eugénie", "Adélaïde"];
@@ -1031,7 +1012,7 @@ const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", 
 function coupure(m, motId, texte, o) {
   const e = empreinte(motId), [avant, apres] = String(m.question || "").split("___");
   return `<span class="c-rub" aria-hidden="true">Faits divers</span>
-    <span class="c-txt">${esc(avant || "")}<em class="rep">${esc(minuscule1(sansPoint(texte)))}</em>${esc(apres ?? ".")}</span>
+    <span class="c-txt">${esc(avant || "")}<em class="rep">${esc(sansPoint(texte))}</em>${esc(apres ?? ".")}</span>
     <span class="c-date" aria-hidden="true">${esc(o.titre)}, ${(e % 27) + 1} ${MOIS[(e >> 4) % 12]} ${o.an}</span>`;
 }
 function guide(m, texte, o) {
@@ -1044,7 +1025,7 @@ function plancheGravee(m, motId, texte) {
   const n = (empreinte(motId) % 60) + 4;
   return `<span class="f-zoom pg-cuvette" role="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.legende || "")}"><span class="loupe" aria-hidden="true">⤢</span></span>
     <span class="pg-leg" aria-hidden="true">Fig. ${n}. — ${esc(m.legende || "")}</span>
-    <span class="pg-rep"><span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(minuscule1(texte))}</span></span>`;
+    <span class="pg-rep"><span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(texte)}</span></span>`;
 }
 function feuillet(m, motId, texte, categorie) {
   const f = famille(m), o = ouvrage(m, motId);

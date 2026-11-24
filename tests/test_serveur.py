@@ -86,6 +86,15 @@ def test_donnees_coherentes():
     for q in questions.values():
         if q.get("type") == "photo":
             assert (racine / "prototype" / q["image"]).exists()
+    # Forme d'affichage (docs/questions.md) : la page n'y touche plus. Anecdote : un bout de phrase,
+    # sans majuscule ni point ; photo : la suite de « Usage : », sans majuscule.
+    type_de = {k: q.get("type") for k, q in questions.items()}
+    textes = [(q.get("type"), q["vraie"]) for q in questions.values()] + [(type_de[x["mot"]], x["texte"]) for x in faux]
+    for typ, t in textes:
+        if typ in ("anecdote", "photo"):
+            assert not t[:1].isupper() or t[1:2].isupper(), t
+        if typ == "anecdote":
+            assert not t.endswith("."), t
 
 
 def test_ration_du_jour(client, monkeypatch):
