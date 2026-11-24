@@ -107,7 +107,8 @@ sans animation.
 (« Trouve la vraie définition », « Trouve le vrai métier »…) et le numéro du
 lot, au lieu de la pastille de famille ; progression et solde sur une ligne.
 Rien ne grandit au choix : la ligne des tampons de chaque pièce et la zone du
-verdict et des boutons (`#suite`, 137 px) sont réservées dès l'affichage.
+verdict, des boutons et de « Signaler le lot » (`#suite`, 152 px, 163 px sous
+380 px de large, 8 px entre chaque) sont réservées dès l'affichage.
 Mesuré sur 15 lots : 0 px de variation à 390 × 664 et 375 × 553 ; « Lot
 suivant » dans l'écran à 390 × 664 (641 px au plus) ; sur iPhone SE, la page
 descend jusqu'à lui une fois la révélation finie.

@@ -164,7 +164,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .alerte{border:1.5px dashed var(--rouge);border-radius:3px;padding:12px;font-size:14px;margin:0;color:var(--rouge);background:#fbefe9}
 .jauge-ecus{display:flex;align-items:center;gap:8px}
 .jauge-ecus .barre{flex:1}
-.signal{text-align:center;font-size:12.5px;color:var(--doux);margin-top:2px;display:flex;flex-direction:column;gap:4px;align-items:center}
+.signal{text-align:center;font-size:12.5px;color:var(--doux);margin-top:0;display:flex;flex-direction:column;gap:4px;align-items:center}
 .lien{background:none;border:0;padding:4px 2px;font:inherit;font-size:12.5px;color:var(--doux);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .ic{width:1em;height:1em;display:inline-block;vertical-align:-.14em;flex:none}
 .chip{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:3px;background:var(--creux);border:1.5px solid var(--trait);font:700 14px/1.2 var(--titre);color:var(--encre);white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
@@ -498,15 +498,14 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
    ne grandissent quand les tampons, le verdict et les boutons apparaissent (demande de l'auteur). */
 .lot .consigne{font:700 12px/1.4 var(--titre);letter-spacing:.16em;text-transform:uppercase;color:var(--encre)}
 .feuillet small:empty{visibility:hidden}
-#suite{min-height:137px}
+#suite{min-height:152px;display:flex;flex-direction:column;gap:8px}
+@media (max-width:380px){#suite{min-height:163px}}
 /* Écran de duel compact : progression et solde sur une ligne, verdict resserré. */
 .ligne-haut{gap:12px}.ligne-haut .progres{flex:1;min-width:0}
 .verdict{min-height:0;padding:5px 10px;gap:10px}
 .verdict .sceau{width:36px;height:36px}
 .verdict .tampon-dupe{font-size:14px;padding:5px 7px}
 .verdict .gain{font-size:24px}
-#suite .ligne.direct{margin-top:-4px}
-#suite .signal{margin-top:-6px}
 
 /* Étiquette, tampon et signature sur une seule ligne : la pièce achetée ne grandit pas. */
 .choix .feuillet small{flex-wrap:nowrap;gap:6px;overflow:hidden}
