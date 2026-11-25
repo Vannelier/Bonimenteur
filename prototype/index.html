@@ -569,8 +569,12 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .tagline{margin:0;font:700 18px/1.3 var(--titre);letter-spacing:.05em;color:#e7d6a0}
 .recap{margin:0;max-width:380px;font:15px/1.45 var(--texte);color:#b9c7bb}
 .recap b{color:#e9e2c8}
-.menu-play{width:100%;max-width:380px;margin-top:8px}
-.menu-play .bouton{width:100%}
+.menu-play{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:380px;margin-top:8px}
+.menu-play .bouton{width:100%;padding-left:8px;padding-right:8px}
+/* Atelier : bouton secondaire, contour or sur le cuir (Expertiser reste l'action principale). */
+.menu-play .atelier-acc{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-family:var(--titre);letter-spacing:.08em;
+  background:transparent;color:#e7d6a0;border-color:rgba(231,214,160,.6);box-shadow:0 3px 0 rgba(0,0,0,.35)}
+.menu-play .atelier-acc .ic{width:18px;height:18px}
 .podium-semaine{width:100%;max-width:380px;margin-top:2px}
 .pd-tete{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font:700 11px/1.5 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:#b9c7bb}
 .pd-tete .lien{font:700 11px/1.5 var(--titre);letter-spacing:.1em;color:#e7d6a0;padding:0 2px}
@@ -740,8 +744,9 @@ header.vers-accueil{cursor:pointer}
     </div>
     <h1 class="logo">Bonimenteur</h1>
     <p class="tagline">Démasque les faux</p>
-    <p class="recap">Authentifie la pièce d'époque, démasque la contrefaçon. Puis fabrique tes faux pour <b>duper les autres</b>.</p>
-    <div class="menu-play"><button class="bouton plein" type="button" id="jouer">Expertiser</button></div>
+    <p class="recap">Authentifie la pièce d'époque, démasque le faux. Puis fabrique les tiens pour <b>duper les autres</b>.</p>
+    <!-- Deux boutons côte à côte, comme « Jouer » et « Multijoueur » de Snouff et Vocabulium. -->
+    <div class="menu-play"><button class="bouton plein" type="button" id="jouer">Expertiser</button><button class="bouton atelier-acc" type="button" id="versAtelierAcc">Atelier</button></div>
     <div class="podium-semaine">
       <div class="pd-tete"><span>Faussaires de la semaine</span><button class="lien" type="button" id="voirTout">Voir tout</button></div>
       <ol class="podium" id="podium" aria-label="Podium de la semaine">
@@ -1874,12 +1879,19 @@ async function ecranClassement() {
   document.getElementById("jouerTab").onclick = jouer;
 }
 function versAccueil() { afficher("accueil"); majAccueil(); }
+let ecranVoulu = "jouer";   // écran demandé depuis l'accueil, ouvert dès que les données sont là
 async function jouer() {
-  afficher("jeu");
+  afficher("jeu"); ecranVoulu = "jouer";
   if (!lance) return;          // les données arrivent : quandPret lancera la partie
   if (!(await absence())) montrer("jouer");
 }
+function ouvrirAtelier() {
+  afficher("jeu"); ecranVoulu = "atelier";
+  if (lance) montrer("atelier");
+}
 document.getElementById("jouer").onclick = jouer;
+document.getElementById("versAtelierAcc").onclick = ouvrirAtelier;
+document.getElementById("versAtelierAcc").insertAdjacentHTML("afterbegin", IC.piege);
 document.getElementById("voirTout").onclick = ecranClassement;
 document.getElementById("versAccueil").onclick = versAccueil;
 document.getElementById("versAccueil").onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); versAccueil(); } };
@@ -1904,7 +1916,7 @@ const pret = () => S.charge.mots && S.charge.pieges && S.charge.choix;
   const quandPret = async () => {
     if (pret() && !lance) { lance = true; clearTimeout(minuteur);
       if (CODE_DEFI && await accueilDefi()) return;
-      if (vue === "jeu") { if (!(await absence())) montrer("jouer"); } else majAccueil(); }
+      if (vue === "jeu") { if (ecranVoulu === "atelier") montrer("atelier"); else if (!(await absence())) montrer("jouer"); } else majAccueil(); }
     else if (lance && vue === "accueil") majAccueil();
     else if (lance && vue === "jeu" && ecran === "atelier") atelier();
   };

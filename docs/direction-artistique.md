@@ -176,13 +176,17 @@ lettres sur 320 px).
 
 Même canevas que Discoverium, Snouff et Vocabulium (`CLAUDE.md` de Discoverium,
 « Accueil ») : décor, titre, « Démasque les faux », explication sur deux lignes,
-« Expertiser », podium des faussaires de la semaine, jauge des joueurs (pour qui
+« Expertiser » et « Atelier » côte à côte (25/11/2026, comme « Jouer » et
+« Multijoueur » de Snouff et Vocabulium ; Atelier en contour or, secondaire),
+podium des faussaires de la semaine, jauge des joueurs (pour qui
 a déjà joué), « Nos autres jeux » en bas du premier écran, « Comment jouer »
 8 px sous le bord. Décor : deux pièces du lot « sapajou », la vraie tamponnée
 « D'époque », le faux « Contrefaçon », rien d'animé ; réduit sous 700 et 600 px
 de haut. Le titre du jeu, en haut des autres écrans, ramène à l'accueil.
 
-Mesuré le 24/11/2026 (Playwright), accueil vide puis plein (podium, ta ligne
+Mesuré le 24/11/2026 puis le 25/11/2026 avec « Atelier » (Playwright ; explication
+raccourcie pour tenir en 2 lignes : « Authentifie la pièce d'époque, démasque le
+faux… »), accueil vide puis plein (podium, ta ligne
 avec « Signe ton nom », vainqueur de la semaine passée, jauge) : titre et
 « Expertiser » à la même place dans les deux états ; « Nos autres jeux » finit à
 638 px sur 664 (390 × 664), 541 sur 553 (375 × 553, plein), 614 sur 640
