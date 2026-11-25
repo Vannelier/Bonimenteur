@@ -142,6 +142,26 @@ l'arbitre (seuil 0,65) ; un faux ne reprend jamais une autre vraie coutume du
 même pays (la soupe au riz et l'amande, la danse des petites grenouilles).
 Bas des pièces à 539 px au plus à 375 × 553.
 
+## Ajouter des questions par lots (26/11/2026)
+
+`tools/lot.py` : un lot JSON écrit dans `tools/lots/` (communes : nom et
+département ; autres : champs de la question et trois faux), contrôlé puis
+fusionné. Il vérifie la commune sur geo.api.gouv.fr et `communes.txt`, que
+les faux de commune n'existent pas, la forme des définitions, la source,
+les doublons, et que la vraie ne se trahit pas par sa longueur (0,7 à 1,35
+fois la moyenne des faux). Pour une définition, il montre la première du
+Wiktionnaire, à comparer. Puis `tools/proches.py` et `tools/lot.py
+--arbitre`. Pages gardées dans `tools/cache/`, lues par curl (Wikimedia
+répond 429 à urllib).
+
+- Lot 01 : 12 communes, 13 définitions. Grossœuvre écartée (`communes.txt`
+  la confond avec Grossouvre, Cher). « turlutaine » : propos frivole, pas
+  idée fixe (Wiktionnaire). Vraies d'« escarbille » et de « pataquès »
+  raccourcies, deux fois plus longues que leurs faux.
+- Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) ont une
+  vraie plus longue que 1,35 fois la moyenne de leurs faux (huchier : 76
+  signes contre 33). À corriger en allongeant les faux de Mr Halifax.
+
 ## Ajouter une question
 
 1. L'écrire dans `data/questions.json` selon la charte, avec sa source.

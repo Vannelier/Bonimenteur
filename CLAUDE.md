@@ -22,6 +22,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | `prototype/photos/` | Images des questions photo (Wikimedia Commons, crédits dans les questions). |
 | `data/questions.json` | Les questions (`docs/questions.md`). |
 | `data/faux-de-depart.json` | Trois faux de Mr Halifax (faussaire maison, identifiant `truffe`) par question, impérissables, en complément tant qu'une question a moins de 3 faux de joueurs en vente (`MELANGE`). |
+| `tools/lot.py` | Import de questions par lots (`tools/lots/*.json`) : contrôle (commune réelle, faux inexistants, forme, source, longueur de la vraie face aux faux), fusion, `--arbitre` (faux de Mr Halifax trop proches). `docs/questions.md`. |
 | `tools/proches.py` | Calcule `prototype/proches.json` depuis les vecteurs de Vocabulium. |
 | `tools/icones.py` | Favicon et icônes d'application (sceau de cire et plume dorée) : `prototype/favicon.svg`, `favicon.ico`, `img/`. |
 | `tools/categories.py` | Relève dans le Wiktionnaire la catégorie grammaticale des définitions (`categorie`), à relire. |

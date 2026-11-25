@@ -3433,5 +3433,380 @@
   "id": "t-k-treppe-3",
   "mot": "k-treppe",
   "texte": "doit grimper au mât de la place du marché"
+ },
+ {
+  "id": "t-c-trouillas-1",
+  "mot": "c-trouillas",
+  "texte": "Frissonnas"
+ },
+ {
+  "id": "t-c-trouillas-2",
+  "mot": "c-trouillas",
+  "texte": "Tremblaygues"
+ },
+ {
+  "id": "t-c-trouillas-3",
+  "mot": "c-trouillas",
+  "texte": "Pétochas"
+ },
+ {
+  "id": "t-c-cucuron-1",
+  "mot": "c-cucuron",
+  "texte": "Cornichon-sur-Durance"
+ },
+ {
+  "id": "t-c-cucuron-2",
+  "mot": "c-cucuron",
+  "texte": "Courgeron"
+ },
+ {
+  "id": "t-c-cucuron-3",
+  "mot": "c-cucuron",
+  "texte": "Melonès"
+ },
+ {
+  "id": "t-c-coucouron-1",
+  "mot": "c-coucouron",
+  "texte": "Roucoulon"
+ },
+ {
+  "id": "t-c-coucouron-2",
+  "mot": "c-coucouron",
+  "texte": "Tourterelles"
+ },
+ {
+  "id": "t-c-coucouron-3",
+  "mot": "c-coucouron",
+  "texte": "Pigeonnac"
+ },
+ {
+  "id": "t-c-tourtour-1",
+  "mot": "c-tourtour",
+  "texte": "Toupie-sur-Argens"
+ },
+ {
+  "id": "t-c-tourtour-2",
+  "mot": "c-tourtour",
+  "texte": "Tournicoti"
+ },
+ {
+  "id": "t-c-tourtour-3",
+  "mot": "c-tourtour",
+  "texte": "Virevolte"
+ },
+ {
+  "id": "t-c-sallespisse-1",
+  "mot": "c-sallespisse",
+  "texte": "Lavabonne"
+ },
+ {
+  "id": "t-c-sallespisse-2",
+  "mot": "c-sallespisse",
+  "texte": "Bidetx"
+ },
+ {
+  "id": "t-c-sallespisse-3",
+  "mot": "c-sallespisse",
+  "texte": "Robinetz"
+ },
+ {
+  "id": "t-c-pleurs-1",
+  "mot": "c-pleurs",
+  "texte": "Sanglots-sur-Marne"
+ },
+ {
+  "id": "t-c-pleurs-2",
+  "mot": "c-pleurs",
+  "texte": "Larmeuil"
+ },
+ {
+  "id": "t-c-pleurs-3",
+  "mot": "c-pleurs",
+  "texte": "Chagrin-le-Petit"
+ },
+ {
+  "id": "t-c-vinsobres-1",
+  "mot": "c-vinsobres",
+  "texte": "Pichetmoins"
+ },
+ {
+  "id": "t-c-vinsobres-2",
+  "mot": "c-vinsobres",
+  "texte": "Sobrinas"
+ },
+ {
+  "id": "t-c-vinsobres-3",
+  "mot": "c-vinsobres",
+  "texte": "Vinsages"
+ },
+ {
+  "id": "t-c-cocumont-1",
+  "mot": "c-cocumont",
+  "texte": "Poulemont"
+ },
+ {
+  "id": "t-c-cocumont-2",
+  "mot": "c-cocumont",
+  "texte": "Coqueville-en-Albret"
+ },
+ {
+  "id": "t-c-cocumont-3",
+  "mot": "c-cocumont",
+  "texte": "Cotcodès"
+ },
+ {
+  "id": "t-c-bizou-1",
+  "mot": "c-bizou",
+  "texte": "Câlin-sur-Huisne"
+ },
+ {
+  "id": "t-c-bizou-2",
+  "mot": "c-bizou",
+  "texte": "Smackville"
+ },
+ {
+  "id": "t-c-bizou-3",
+  "mot": "c-bizou",
+  "texte": "Embrassay"
+ },
+ {
+  "id": "t-c-vergongheon-1",
+  "mot": "c-vergongheon",
+  "texte": "Rougissac"
+ },
+ {
+  "id": "t-c-vergongheon-2",
+  "mot": "c-vergongheon",
+  "texte": "Hontheux"
+ },
+ {
+  "id": "t-c-vergongheon-3",
+  "mot": "c-vergongheon",
+  "texte": "Pudeyrac"
+ },
+ {
+  "id": "t-c-boulot-1",
+  "mot": "c-boulot",
+  "texte": "Turbin-sur-Ognon"
+ },
+ {
+  "id": "t-c-boulot-2",
+  "mot": "c-boulot",
+  "texte": "Chômage-les-Bains"
+ },
+ {
+  "id": "t-c-boulot-3",
+  "mot": "c-boulot",
+  "texte": "Taffeville"
+ },
+ {
+  "id": "t-c-cornebarrieu-1",
+  "mot": "c-cornebarrieu",
+  "texte": "Sonnebarrière"
+ },
+ {
+  "id": "t-c-cornebarrieu-2",
+  "mot": "c-cornebarrieu",
+  "texte": "Klaxonnac"
+ },
+ {
+  "id": "t-c-cornebarrieu-3",
+  "mot": "c-cornebarrieu",
+  "texte": "Trompebarrieu"
+ },
+ {
+  "id": "t-quinaud-1",
+  "mot": "quinaud",
+  "texte": "Qui boite légèrement du pied gauche."
+ },
+ {
+  "id": "t-quinaud-2",
+  "mot": "quinaud",
+  "texte": "Se dit d'un vin tourné au vinaigre."
+ },
+ {
+  "id": "t-quinaud-3",
+  "mot": "quinaud",
+  "texte": "Rusé comme un marchand de foire."
+ },
+ {
+  "id": "t-escarbille-1",
+  "mot": "escarbille",
+  "texte": "Petite escarmouche entre bandes de gamins."
+ },
+ {
+  "id": "t-escarbille-2",
+  "mot": "escarbille",
+  "texte": "Coquillage nacré ramassé sur les côtes bretonnes."
+ },
+ {
+  "id": "t-escarbille-3",
+  "mot": "escarbille",
+  "texte": "Barrette d'écaille pour retenir le chignon."
+ },
+ {
+  "id": "t-turlutaine-1",
+  "mot": "turlutaine",
+  "texte": "Petite flûte de berger en roseau."
+ },
+ {
+  "id": "t-turlutaine-2",
+  "mot": "turlutaine",
+  "texte": "Danse paysanne du Poitou, en rond."
+ },
+ {
+  "id": "t-turlutaine-3",
+  "mot": "turlutaine",
+  "texte": "Tarte aux pruneaux des Ardennes."
+ },
+ {
+  "id": "t-bouffarde-1",
+  "mot": "bouffarde",
+  "texte": "Femme qui parle haut et fort."
+ },
+ {
+  "id": "t-bouffarde-2",
+  "mot": "bouffarde",
+  "texte": "Coup de vent soudain sur la lande."
+ },
+ {
+  "id": "t-bouffarde-3",
+  "mot": "bouffarde",
+  "texte": "Repas copieux pris debout."
+ },
+ {
+  "id": "t-gnognote-1",
+  "mot": "gnognote",
+  "texte": "Petite note de musique fausse."
+ },
+ {
+  "id": "t-gnognote-2",
+  "mot": "gnognote",
+  "texte": "Pâtisserie lyonnaise au saindoux."
+ },
+ {
+  "id": "t-gnognote-3",
+  "mot": "gnognote",
+  "texte": "Querelle entre voisins de palier."
+ },
+ {
+  "id": "t-escogriffe-1",
+  "mot": "escogriffe",
+  "texte": "Outil de tonnelier pour cercler les fûts."
+ },
+ {
+  "id": "t-escogriffe-2",
+  "mot": "escogriffe",
+  "texte": "Oiseau de proie des Pyrénées."
+ },
+ {
+  "id": "t-escogriffe-3",
+  "mot": "escogriffe",
+  "texte": "Paraphe tarabiscoté au bas d'un acte."
+ },
+ {
+  "id": "t-rogaton-1",
+  "mot": "rogaton",
+  "texte": "Petit chien hargneux."
+ },
+ {
+  "id": "t-rogaton-2",
+  "mot": "rogaton",
+  "texte": "Moine chargé de la quête."
+ },
+ {
+  "id": "t-rogaton-3",
+  "mot": "rogaton",
+  "texte": "Bonnet de nuit à pompon."
+ },
+ {
+  "id": "t-pataques-1",
+  "mot": "pataques",
+  "texte": "Purée de pommes de terre au lard et à l'oignon."
+ },
+ {
+  "id": "t-pataques-2",
+  "mot": "pataques",
+  "texte": "Chute bruyante, de préférence dans un escalier."
+ },
+ {
+  "id": "t-pataques-3",
+  "mot": "pataques",
+  "texte": "Fête de village qui suit les dernières vendanges."
+ },
+ {
+  "id": "t-roupie-1",
+  "mot": "roupie",
+  "texte": "Petite sieste après le déjeuner."
+ },
+ {
+  "id": "t-roupie-2",
+  "mot": "roupie",
+  "texte": "Jupon de laine des paysannes."
+ },
+ {
+  "id": "t-roupie-3",
+  "mot": "roupie",
+  "texte": "Pièce de vingt sous."
+ },
+ {
+  "id": "t-pignocher-1",
+  "mot": "pignocher",
+  "texte": "Cueillir les pommes de pin."
+ },
+ {
+  "id": "t-pignocher-2",
+  "mot": "pignocher",
+  "texte": "Se chamailler pour des broutilles."
+ },
+ {
+  "id": "t-pignocher-3",
+  "mot": "pignocher",
+  "texte": "Gratter une vieille peinture au couteau."
+ },
+ {
+  "id": "t-galetas-1",
+  "mot": "galetas",
+  "texte": "Galette de sarrasin roulée au beurre."
+ },
+ {
+  "id": "t-galetas-2",
+  "mot": "galetas",
+  "texte": "Tas de galets sur une grève."
+ },
+ {
+  "id": "t-galetas-3",
+  "mot": "galetas",
+  "texte": "Voilier de pêche à fond plat."
+ },
+ {
+  "id": "t-graillon-1",
+  "mot": "graillon",
+  "texte": "Jeune corbeau tombé du nid."
+ },
+ {
+  "id": "t-graillon-2",
+  "mot": "graillon",
+  "texte": "Voix éraillée du crieur public."
+ },
+ {
+  "id": "t-graillon-3",
+  "mot": "graillon",
+  "texte": "Gravier fin des allées de jardin."
+ },
+ {
+  "id": "t-aboulie-1",
+  "mot": "aboulie",
+  "texte": "Peur maladive des boules et des billes."
+ },
+ {
+  "id": "t-aboulie-2",
+  "mot": "aboulie",
+  "texte": "Manie de tout ranger par paires."
+ },
+ {
+  "id": "t-aboulie-3",
+  "mot": "aboulie",
+  "texte": "Sommeil profond des marmottes."
  }
 ]

@@ -1658,5 +1658,172 @@
   "question": "Ici, l'homme encore célibataire le jour de ses 30 ans ___.",
   "vraie": "doit balayer les marches de la cathédrale",
   "source": "wikipedia-de:Domtreppenfegen"
+ },
+ "c-trouillas": {
+  "mot": "",
+  "question": "Quel nom de commune des Pyrénées-Orientales existe réellement ?",
+  "type": "commune",
+  "vraie": "Trouillas",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cucuron": {
+  "mot": "",
+  "question": "Quel nom de commune du Vaucluse existe réellement ?",
+  "type": "commune",
+  "vraie": "Cucuron",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-coucouron": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Ardèche existe réellement ?",
+  "type": "commune",
+  "vraie": "Coucouron",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-tourtour": {
+  "mot": "",
+  "question": "Quel nom de commune du Var existe réellement ?",
+  "type": "commune",
+  "vraie": "Tourtour",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-sallespisse": {
+  "mot": "",
+  "question": "Quel nom de commune des Pyrénées-Atlantiques existe réellement ?",
+  "type": "commune",
+  "vraie": "Sallespisse",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-pleurs": {
+  "mot": "",
+  "question": "Quel nom de commune de la Marne existe réellement ?",
+  "type": "commune",
+  "vraie": "Pleurs",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-vinsobres": {
+  "mot": "",
+  "question": "Quel nom de commune de la Drôme existe réellement ?",
+  "type": "commune",
+  "vraie": "Vinsobres",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cocumont": {
+  "mot": "",
+  "question": "Quel nom de commune de Lot-et-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Cocumont",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bizou": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Orne existe réellement ?",
+  "type": "commune",
+  "vraie": "Bizou",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-vergongheon": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Loire existe réellement ?",
+  "type": "commune",
+  "vraie": "Vergongheon",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-boulot": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Saône existe réellement ?",
+  "type": "commune",
+  "vraie": "Boulot",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cornebarrieu": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Cornebarrieu",
+  "source": "geo.api.gouv.fr"
+ },
+ "quinaud": {
+  "mot": "quinaud",
+  "vraie": "Honteux, confus, penaud.",
+  "categorie": "adj.",
+  "source": "wiktionary:quinaud"
+ },
+ "escarbille": {
+  "mot": "escarbille",
+  "vraie": "Morceau de braise qui s'échappe d'une cheminée.",
+  "categorie": "n. f.",
+  "source": "wiktionary:escarbille"
+ },
+ "turlutaine": {
+  "mot": "turlutaine",
+  "vraie": "Propos frivole qu'on répète sans cesse.",
+  "categorie": "n. f.",
+  "source": "wiktionary:turlutaine"
+ },
+ "bouffarde": {
+  "mot": "bouffarde",
+  "vraie": "Grosse pipe à tuyau court.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:bouffarde"
+ },
+ "gnognote": {
+  "mot": "gnognote",
+  "vraie": "Chose de peu de valeur.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:gnognote"
+ },
+ "escogriffe": {
+  "mot": "escogriffe",
+  "vraie": "Homme de grande taille, mal bâti.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:escogriffe"
+ },
+ "rogaton": {
+  "mot": "rogaton",
+  "vraie": "Reste de nourriture.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:rogaton"
+ },
+ "pataques": {
+  "mot": "pataquès",
+  "vraie": "Liaison fautive, comme « il était-z-un roi ».",
+  "categorie": "n. m.",
+  "source": "wiktionary:pataquès"
+ },
+ "roupie": {
+  "mot": "roupie",
+  "vraie": "Goutte qui pend au bout du nez.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:roupie"
+ },
+ "pignocher": {
+  "mot": "pignocher",
+  "vraie": "Manger sans appétit, du bout des dents.",
+  "categorie": "v.",
+  "source": "wiktionary:pignocher"
+ },
+ "galetas": {
+  "mot": "galetas",
+  "vraie": "Logement misérable, sous les toits.",
+  "categorie": "n. m.",
+  "source": "wiktionary:galetas"
+ },
+ "graillon": {
+  "mot": "graillon",
+  "vraie": "Odeur de graisse brûlée.",
+  "categorie": "n. m.",
+  "source": "wiktionary:graillon"
+ },
+ "aboulie": {
+  "mot": "aboulie",
+  "vraie": "Absence de volonté, incapacité à se décider.",
+  "categorie": "n. f.",
+  "source": "wiktionary:aboulie"
  }
 }
