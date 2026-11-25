@@ -185,7 +185,7 @@ def _lundi_ms(semaines_avant: int = 0) -> int:
 def _piegeurs(debut: int, fin: int | None = None) -> list[dict]:
     """Classement des faussaires : joueurs dupés par leurs faux entre debut et fin (même règle
     que _compter : un faux montré, pas démasqué, à un joueur qui s'est trompé). Les faux de
-    Truffe ne comptent pas."""
+    Mr Halifax ne comptent pas."""
     auteurs = {f["id"]: f["auteur"] for f in db.execute("SELECT id, auteur FROM faux")}
     n: dict = defaultdict(int)
     for c in db.execute("SELECT montres, ordre, joueur FROM choix WHERE erreur = 1 AND t >= ? AND t < ?",
@@ -520,7 +520,7 @@ def signaler(s: Signalement, request: Request):
     return {}
 
 
-RESERVES = {"truffe", "un joueur", "toi", "bonimenteur", "admin"}
+RESERVES = {"truffe", "mr halifax", "m halifax", "monsieur halifax", "halifax", "un joueur", "toi", "bonimenteur", "admin"}
 
 
 class Pseudo(BaseModel):
@@ -535,7 +535,7 @@ def nommer(p: Pseudo, request: Request):
     v = re.sub(r"\s+", " ", p.pseudo).strip()[:PSEUDO_MAX]
     if len(v) < PSEUDO_MIN:
         raise HTTPException(422, "pseudo trop court")
-    # « Truffe » signe les faux de départ ; un pseudo n'appartient qu'à un joueur.
+    # « Mr Halifax » signe les faux de départ ; un pseudo n'appartient qu'à un joueur.
     if _plat(v) in RESERVES:
         raise HTTPException(409, "pseudo réservé")
     # Filtre commun aux jeux (app/pseudos.py, copie de Vocabulium) : un pseudo offensant devient

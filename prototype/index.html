@@ -524,11 +524,13 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .verdict .gain{font-size:24px}
 
 /* Étiquette, tampon et signature sur une seule ligne : la pièce authentifiée ne grandit pas. */
-.choix .feuillet small{flex-wrap:nowrap;gap:6px;overflow:hidden}
+/* Pas d'overflow:hidden ici : il coupait les tampons penchés et la fin de la signature (remarque de
+   l'auteur, 26/11/2026). La ligne tient quand même : seule la signature rétrécit (ellipse). */
+.choix .feuillet small{flex-wrap:nowrap;gap:6px;overflow:visible}
 .choix .feuillet small .etiquette{flex:none;font-size:10px;padding:2px 8px 2px 14px}
 .choix .feuillet small .tampon{flex:none;font-size:13px;padding:2px 7px;letter-spacing:.1em}
 .choix .feuillet small .chip.bon{flex:none;font-size:11px;padding:4px 8px}
-.choix .feuillet small .signe-faux{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:18px}
+.choix .feuillet small .signe-faux{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:18px;padding:3px 6px 3px 0}
 /* Écran étroit : la signature du faussaire passe avant le mot « signé » et l'espacement du tampon
    (à 360 px, étiquette et tampon ne lui laissaient que « si… »). */
 @media (max-width:380px){.choix .feuillet small .signe-faux i{display:none}.choix .feuillet small .tampon{letter-spacing:.05em;padding:2px 5px}}
@@ -921,7 +923,9 @@ const melange = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { c
 /* État partagé */
 let db = null, user = null, moi = null, sample = null;
 const S = { pseudos: new Map(), mots: new Map(), pieges: [], choix: [], contest: [], actes: [], defis: new Map(), charge: {mots: false, pieges: false, choix: false} };
-const noms = new Map([["truffe", "Truffe"]]);
+/* Les faux de départ sont signés Mr Halifax, faussaire maison (nommé ainsi par l'auteur le
+   26/11/2026 ; identifiant « truffe » gardé dans les données). */
+const noms = new Map([["truffe", "Mr Halifax"]]);
 const vusLocal = new Set();
 let ecran = "jouer", lance = false;
 
@@ -955,8 +959,8 @@ function index() {
   const motsPiegesMoi = new Set(piegesMoi.map(p => p.mot));
   /* Édition (docs/conception.md, « Édition et étal ») : un faux de joueur est tiré à EXEMPLAIRES
      exemplaires ; chaque duel où il paraît en écoule un, vendu (victime) ou saisi (démasqué). Épuisé,
-     il quitte le marché ; le faussaire le réédite. Les faux de Truffe gardent l'ancienne règle :
-     saisis après MORT_VUS démasquages sans victime.
+     il quitte le marché ; le faussaire le réédite. Les faux de Mr Halifax sont impérissables : ils
+     servent de secours quand une question n'a pas de faux de joueur (adverses).
      Actes du faussaire (collection « actes », en ajout seul) : réédition, retouche, retrait, remise,
      place d'étal. Le dernier de retrait / remise / réédition dit si le faux est rangé. */
   const actesPar = new Map(); let placesMoi = 0;
@@ -964,11 +968,11 @@ function index() {
     if (a.sorte === "place") { if (a.joueur === moi) placesMoi++; continue; }
     if (!actesPar.has(a.faux)) actesPar.set(a.faux, []); actesPar.get(a.faux).push(a);
   }
-  const mort = new Set(), pvqn = new Set(), epuise = new Set(), range = new Set(), edition = new Map();
+  const pvqn = new Set(), epuise = new Set(), range = new Set(), edition = new Map();
   for (const p of S.pieges) {
     const d = demasque.get(p.id) || 0, n = pris.get(p.id) || 0;
     if ((vu.get(p.id) || 0) >= PVQN_VUS && n > d) pvqn.add(p.id);
-    if (p.auteur === "truffe") { if (d >= MORT_VUS && n === 0) mort.add(p.id); continue; }
+    if (p.auteur === "truffe") continue;
     const actes = (actesPar.get(p.id) || []).slice().sort((a, b) => (a.t || 0) - (b.t || 0));
     let editions = 1, base = [0, 0], rangeP = false;
     for (const a of actes) {
@@ -987,16 +991,16 @@ function index() {
   const nbContest = new Map(), mesContest = new Set();
   for (const c of S.contest) { nbContest.set(c.piege, (nbContest.get(c.piege) || 0) + 1); if (c.joueur === moi) mesContest.add(c.piege); }
   const retire = new Set([...nbContest].filter(([, n]) => n >= CONTEST_MIN).map(([id]) => id));
-  // Hors du marché : saisi (Truffe), épuisé, rangé par son auteur, retiré par contestation.
-  const horsVente = new Set([...mort, ...epuise, ...range, ...retire]);
+  // Hors du marché : épuisé, rangé par son auteur, retiré par contestation.
+  const horsVente = new Set([...epuise, ...range, ...retire]);
   const vivants = new Map();
   for (const [m, ps] of parMot) vivants.set(m, ps.filter(p => !horsVente.has(p.id)));
   const enVenteMoi = piegesMoi.filter(p => !horsVente.has(p.id)).length, places = ETAL + placesMoi;
-  return { parMot, vivants, vu, pris, demasque, victimes, choixParMot, vusMoi, authentifiesMoi, jouesMoi, piegesMoi, motsPiegesMoi, mort, pvqn, retire, mesContest,
+  return { parMot, vivants, vu, pris, demasque, victimes, choixParMot, vusMoi, authentifiesMoi, jouesMoi, piegesMoi, motsPiegesMoi, pvqn, retire, mesContest,
     epuise, range, edition, horsVente, enVenteMoi, places, etalPlein: enVenteMoi >= places };
 }
 // Réglages du prototype : petits pour qu'on voie les effets avec quelques testeurs.
-const MORT_VUS = 10, PVQN_VUS = 5, CONTEST_MIN = 2;
+const PVQN_VUS = 5, CONTEST_MIN = 2;
 /* Édition et étal (décision de l'auteur, 25/11/2026 ; docs/conception.md, « Édition et étal ») :
    10 exemplaires par édition, réédition plus chère qu'un faux neuf (25 contre 10 : un faux qui a fait
    ses preuves vaut plus) ; 10 places à l'étal, agrandi place par place jusqu'à 20. Prix de départ,
@@ -1007,7 +1011,7 @@ const EXEMPLAIRES = 10, ETAL = 10, ETAL_MAX = 20, PRIX_REEDITION = 25, PRIX_RETO
    proches.json donne, pour chaque mot du jeu, les mots dont la proximité est ≥ 0,45 :
    [proximité au plus proche mot de la vraie définition, proximité au mot lui-même].
    Score = max(moyenne des proximités des mots du piège, mot du piège le plus proche du mot).
-   Mesure : 25 reformulations de vraies définitions et 75 pièges de Truffe, seuil 0,5 :
+   Mesure : 25 reformulations de vraies définitions et 75 pièges de Mr Halifax, seuil 0,5 :
    22 reformulations refusées, 1 piège honnête refusé à tort. */
 let PROCHES = null, COMMUNES = null;
 fetch("proches.json").then(r => r.json()).then(d => { PROCHES = d; d.videsSet = new Set(d.vides); }).catch(() => {});
@@ -1046,7 +1050,7 @@ const nomCommune = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
 
    Familles de questions. La série les fait tourner dans un ordre tiré au hasard.
    Seuil du sens : 0,5 pour les définitions (mesure ci-dessus) ; 0,65 pour anecdotes et expressions,
-   où les fausses réponses restent dans le même domaine (6 pièges de Truffe sur 42 au-dessus de 0,5). */
+   où les fausses réponses restent dans le même domaine (6 pièges de Mr Halifax sur 42 au-dessus de 0,5). */
 const FAMILLES = {
   definition: { label: "Définition", consigne: "", piege: "Invente une fausse définition crédible.", champ: "Ta fausse définition", max: 90, seuil: 0.5 },
   anecdote:   { label: "Anecdote", consigne: "", piege: "Invente une fin crédible, mais fausse.", champ: "Ta fausse fin de phrase", max: 110, seuil: 0.65 },
@@ -1055,7 +1059,7 @@ const FAMILLES = {
   expression: { label: "Expression", consigne: "", piege: "Invente une fausse origine crédible.", champ: "Ta fausse origine", max: 120, seuil: 0.65 },
   commune:    { label: "Commune", consigne: "", piege: "Invente un faux nom de commune crédible.", champ: "Ton faux nom de commune", max: 40, seuil: 2 },
   photo:      { label: "Photo", consigne: "", piege: "Invente une explication crédible, mais fausse.", champ: "Ta fausse explication", max: 120, seuil: 0.65 },
-  // Mots intraduisibles et expressions étrangères mot à mot : pièges de Truffe à 0,46 au plus, reformulations de 0,62 à 0,82.
+  // Mots intraduisibles et expressions étrangères mot à mot : pièges de Mr Halifax à 0,46 au plus, reformulations de 0,62 à 0,82.
   intraduisible: { label: "Mot étranger", consigne: "", piege: "Invente une fausse traduction.", champ: "Ta fausse traduction", max: 110, seuil: 0.55 },
   etrangere:  { label: "Expression étrangère", consigne: "", piege: "Invente un faux sens.", champ: "Ton faux sens", max: 100, seuil: 0.55 },
   // Métiers disparus : le livret d'ouvrier, la spécialité (« Ouvrage ») à deviner (ajoutée le 23/11/2026).
@@ -1174,12 +1178,19 @@ function choisir(ids) {
   return melange(ids)[0];
 }
 
+/* Faux opposables à la vraie : ceux des joueurs d'abord ; ceux de Mr Halifax seulement si la question
+   n'en a aucun en vente (décision de l'auteur, 26/11/2026). Impérissables, ils gardent le jeu jouable
+   sans joueurs. */
+function adverses(I, id) {
+  const ps = (I.vivants.get(id) || []).filter(p => p.auteur !== moi);
+  const joueurs = ps.filter(p => p.auteur !== "truffe");
+  return joueurs.length ? joueurs : ps;
+}
 function motsEnJeu(I) {
   const r = [];
   for (const [id, m] of S.mots) {
     if (I.vusMoi.has(id) || I.motsPiegesMoi.has(id)) continue;
-    const ps = (I.vivants.get(id) || []).filter(p => p.auteur !== moi);
-    if (ps.length >= 1) r.push(id);
+    if (adverses(I, id).length) r.push(id);
   }
   return r;
 }
@@ -1222,8 +1233,7 @@ const VRAI = `<span class="chip bon">D'époque</span>`;
 
 async function question(motId, I, piegeImpose = null) {
   const m = S.mots.get(motId);
-  const ps = (I.vivants.get(motId) || []).filter(p => p.auteur !== moi);
-  const piege = piegeImpose || adversaire(I, ps);
+  const piege = piegeImpose || adversaire(I, adverses(I, motId));
   const f = famille(m);
   const options = melange([{id: "vrai", texte: formater(m.vraie, f), categorie: m.categorie}, {id: piege.id, texte: formater(piege.texte, f), auteur: piege.auteur, categorie: piege.categorie || m.categorie}]);
   await nommer([piege.auteur]);
@@ -1909,10 +1919,10 @@ function lundiParis(t = Date.now()) {
   return minuitParis(minuitParis(t) - jour * 864e5 + 12 * 3600e3);
 }
 /* Faussaires classés par joueurs dupés (même règle que index() et que le serveur, _piegeurs) ;
-   Truffe n'est pas classé. Sur Railway, la page ne reçoit que ses duels : le serveur calcule
+   Mr Halifax n'est pas classé. Sur Railway, la page ne reçoit que ses duels : le serveur calcule
    (window.__classementServeur) ; sur claude.ai, la page a tous les duels et calcule ici. */
 /* Les deux classements de la semaine, calculés comme le serveur (_experts, _piegeurs) : experts
-   (pièces authentifiées) et faussaires (joueurs dupés, hors Truffe). */
+   (pièces authentifiées) et faussaires (joueurs dupés, hors Mr Halifax). */
 function classementLocal() {
   const auteurs = new Map(S.pieges.map(p => [p.id, p.auteur])), lundi = lundiParis(), avant = lundiParis(lundi - 864e5);
   const trier = n => [...n].map(([id, k]) => ({ id, n: k })).sort((x, y) => y.n - x.n || (x.id < y.id ? -1 : 1));

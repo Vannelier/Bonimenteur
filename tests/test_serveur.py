@@ -167,6 +167,7 @@ def test_contestation_controlee(client):
 def test_pseudo_reserve_et_unique(client, tmp_path):
     client.get("/api/moi")
     assert client.put("/api/pseudo", json={"pseudo": "Truffe"}).status_code == 409
+    assert client.put("/api/pseudo", json={"pseudo": "Mr Halifax"}).status_code == 409
     assert client.put("/api/pseudo", json={"pseudo": "Le Faussaire"}).status_code == 200
     import app.main as m
     with TestClient(m.app) as autre:

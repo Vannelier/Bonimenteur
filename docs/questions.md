@@ -1,7 +1,7 @@
 # Questions
 
 `data/questions.json` : une entrée par question, clé = identifiant.
-`data/faux-de-depart.json` : trois faux par question, signés Truffe, pour que
+`data/faux-de-depart.json` : trois faux par question, signés Mr Halifax, pour que
 la question soit jouable avant les premiers joueurs.
 
 ## Charte
@@ -85,7 +85,7 @@ déjà.
 
 ## Faux de départ
 
-Chaque question a ses trois faux de Truffe. Les 15 définitions reprises de la
+Chaque question a ses trois faux de Mr Halifax. Les 15 définitions reprises de la
 première version (carabistouille, cénacle, cuistre…) n'en avaient pas et
 n'étaient jamais posées : faux écrits le 23/11/2026, tous sous 0,45 à
 l'arbitre. Ces mots restent assez connus (charte, point 1) : à surveiller dans
@@ -114,7 +114,7 @@ les duels.
   carottes violettes avant le XVIIe siècle, « sabler le champagne », « la fin
   des haricots », « avoir le cafard », « tirer son épingle du jeu », « monter
   sur ses grands chevaux » (origine marquée douteuse dans le Wiktionnaire).
-- Faux de Truffe passés à l'arbitre : 207 sur 207 sous le seuil de leur
+- Faux de Mr Halifax passés à l'arbitre : 207 sur 207 sous le seuil de leur
   famille (0,02 sous le seuil au plus près ; 7 réécrits). Faux de commune
   absents de la liste officielle.
 - Réponse chiffrée : retirée (25/11/2026). Le nombre de vitres de la pyramide
@@ -137,7 +137,7 @@ Japon, les livres de la veille de Noël en Islande, le festin des singes de
 Lopburi, la guerre des fusées de Vrontados, Donald Duck à Noël en Suède, la
 course au fromage de Cooper's Hill, le drakkar brûlé de Lerwick, les marches
 balayées de Brême. Écartées faute de source dans l'article : la cannelle des
-célibataires danois, le prix du portage d'épouse. Faux de Truffe sous 0,5 à
+célibataires danois, le prix du portage d'épouse. Faux de Mr Halifax sous 0,5 à
 l'arbitre (seuil 0,65) ; un faux ne reprend jamais une autre vraie coutume du
 même pays (la soupe au riz et l'amande, la danse des petites grenouilles).
 Bas des pièces à 539 px au plus à 375 × 553.

@@ -22,9 +22,9 @@ modèle de langue (coût) : vecteurs de mots et contrôle de forme.
 
 | Famille | Seuil | Mesure |
 |---|---|---|
-| Définition | 0,5 | 25 reformulations de vraies définitions et 75 faux de Truffe : 22 reformulations refusées, 1 faux honnête refusé à tort |
-| Anecdote, expression, photo | 0,65 | les faux restent dans le domaine de la vérité : 6 faux de Truffe sur 42 dépassaient 0,5 |
-| Mot étranger, expression étrangère | 0,55 | faux de Truffe à 0,46 au plus, reformulations de 0,62 à 0,82 |
+| Définition | 0,5 | 25 reformulations de vraies définitions et 75 faux de Mr Halifax : 22 reformulations refusées, 1 faux honnête refusé à tort |
+| Anecdote, expression, photo | 0,65 | les faux restent dans le domaine de la vérité : 6 faux de Mr Halifax sur 42 dépassaient 0,5 |
+| Mot étranger, expression étrangère | 0,55 | faux de Mr Halifax à 0,46 au plus, reformulations de 0,62 à 0,82 |
 
 Sans les mots de cadrage, 19 faux honnêtes de phobies et de collections sur
 48 étaient refusés.

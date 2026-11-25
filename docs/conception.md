@@ -120,7 +120,7 @@ autres jeux :
 - **Experts** : pièces authentifiées dans la semaine (expertises justes).
 - **Faussaires** : joueurs dupés par les faux de chacun, même règle que les écus
   rendus (un faux montré, pas démasqué, à un joueur qui s'est trompé). Les faux
-  de Truffe ne comptent pas.
+  de Mr Halifax ne comptent pas.
 
 Sur Railway, le serveur les calcule (`_experts`, `_piegeurs`, dans
 `/api/etat`), la page ne recevant que les duels du joueur ; sur claude.ai, la
@@ -145,8 +145,11 @@ seulement : sur claude.ai, l'adresse de la page n'est pas partageable.
 
 ## La vie d'un faux
 
-- Édition et étal : voir ci-dessous. Les faux de Truffe gardent l'ancienne
-  mèche : 10 démasquages sans aucune victime (`MORT_VUS`) et ils sont saisis.
+- Édition et étal : voir ci-dessous.
+- Faux de Mr Halifax (faussaire maison, 26/11/2026 ; « Truffe » avant, identifiant
+  `truffe` gardé dans les données) : impérissables, ni édition ni saisie. Opposés
+  seulement aux questions sans faux de joueur en vente (`adverses`) : ils gardent
+  le jeu jouable en l'absence de joueurs.
 - « Plus vrai que nature » : au moins 5 duels (`PVQN_VUS`) et plus de victimes
   que de démasquages. Galerie dans l'atelier.
 - Contestation « Un faux dit vrai » : 2 joueurs (`CONTEST_MIN`) et il est retiré.
@@ -168,7 +171,8 @@ donne au faussaire de quoi dépenser ses écus une fois ses faux posés.
   il la libère. Étal plein : pas de faux neuf, ni de remise en vente ou de
   réédition. « +1 place » : 20 écus (`PRIX_PLACE`), jusqu'à 20 places (`ETAL_MAX`).
 - « Ranger » : gratuit, le faux garde ses exemplaires ; « Remettre » le remet en
-  vente s'il y a une place.
+  vente s'il y a une place. Rangé, il bloque toujours sa question : un faux par
+  joueur et par question (confirmé par l'auteur, 26/11/2026).
 - « Retoucher » : 5 écus (`PRIX_RETOUCHE`), même écran que la contrefaçon,
   arbitre compris ; l'édition en cours et ses compteurs restent.
 - Prix de départ, à régler sur les parties réelles.

@@ -16,12 +16,12 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | `app/pseudos.py` | Filtre des pseudos, copie exacte de Vocabulium (`tests/test_copies.py`) : ne pas l'éditer ici. Appliqué aussi aux textes des faux. |
 | `app/main.py` | Serveur : page, API (`/api/moi`, `/api/etat` (avec les classements de la semaine, experts `_experts` et faussaires `_piegeurs`, et la jauge des joueurs, `_communaute`), `/api/pieges`, `/api/choix`, `/api/contestations`, `/api/signalements`, `/api/pseudo`, `/api/actes` (gestes du faussaire sur son étal, `_situation`, `_places`), `/api/defis` (défi par lien ; `/api/etat?defi=CODE` ne renvoie que ce défi)), SQLite. Identité par cookie HttpOnly posé par le serveur ; auteur d'un faux, gain d'un duel, prix et solde décidés ici. |
 | `prototype/serveur.js` | Interface `window.claude` (collection, doc, user) branchée sur l'API, relue toutes les 20 s et après chaque écriture ; passe à la page les compteurs par faux du serveur (`window.__statsServeur`). |
-| `prototype/index.html` | Le jeu : accueil (canevas des trois autres jeux, expert et faussaire de la semaine à l'honneur, `majAccueil`), classements de la semaine en deux onglets, experts et faussaires (`ecranClassement`), duels, atelier (Contrefaire : lots tamponnés « Authentifié » ou « Floué » ; Sur le marché : étal, éditions, ranger, rééditer, retoucher, `acte`), arbitre, bilan. Réglages en tête du script (`TOTAL`, `PRIX_PIEGE`, `PRIX_DIRECT`, `ECUS_DEPART`, `MORT_VUS`, `PVQN_VUS`, `CONTEST_MIN`, `EXEMPLAIRES`, `ETAL`, `ETAL_MAX`, `PRIX_REEDITION`, `PRIX_RETOUCHE`, `PRIX_PLACE`, `FAMILLES` et leurs seuils). |
+| `prototype/index.html` | Le jeu : accueil (canevas des trois autres jeux, expert et faussaire de la semaine à l'honneur, `majAccueil`), classements de la semaine en deux onglets, experts et faussaires (`ecranClassement`), duels, atelier (Contrefaire : lots tamponnés « Authentifié » ou « Floué » ; Sur le marché : étal, éditions, ranger, rééditer, retoucher, `acte`), arbitre, bilan. Réglages en tête du script (`TOTAL`, `PRIX_PIEGE`, `PRIX_DIRECT`, `ECUS_DEPART`, `PVQN_VUS`, `CONTEST_MIN`, `EXEMPLAIRES`, `ETAL`, `ETAL_MAX`, `PRIX_REEDITION`, `PRIX_RETOUCHE`, `PRIX_PLACE`, `FAMILLES` et leurs seuils). |
 | `prototype/proches.json` | Données de l'arbitre du sens, générées par `tools/proches.py`. Ne pas éditer. |
 | `prototype/communes.txt` | Communes de France (geo.api.gouv.fr, 34 969). |
 | `prototype/photos/` | Images des questions photo (Wikimedia Commons, crédits dans les questions). |
 | `data/questions.json` | Les questions (`docs/questions.md`). |
-| `data/faux-de-depart.json` | Trois faux de Truffe par question. |
+| `data/faux-de-depart.json` | Trois faux de Mr Halifax (faussaire maison, identifiant `truffe`) par question, impérissables, opposés seulement aux questions sans faux de joueur en vente. |
 | `tools/proches.py` | Calcule `prototype/proches.json` depuis les vecteurs de Vocabulium. |
 | `tools/icones.py` | Favicon et icônes d'application (sceau de cire et plume dorée) : `prototype/favicon.svg`, `favicon.ico`, `img/`. |
 | `tools/categories.py` | Relève dans le Wiktionnaire la catégorie grammaticale des définitions (`categorie`), à relire. |
@@ -62,7 +62,7 @@ CI : `.github/workflows/tests.yml` lance `pytest -q` sur chaque PR.
   le serveur refuse les autres (403).
 - Serveur : tout accès à SQLite sous `_verrou` ; limites de débit par IP
   (`LIMITES`) ; contestation seulement d'un faux eu en duel ; pseudos uniques,
-  « Truffe » réservé.
+  « Mr Halifax » et « Truffe » réservés.
 - Toute nouvelle question suit la charte (`docs/questions.md`), dont la règle 7 :
   amusante à contrefaire, la réponse parle le ton de son objet.
 
