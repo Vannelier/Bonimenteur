@@ -23,6 +23,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | `data/questions.json` | Les questions (`docs/questions.md`). |
 | `data/faux-de-depart.json` | Trois faux de Truffe par question. |
 | `tools/proches.py` | Calcule `prototype/proches.json` depuis les vecteurs de Vocabulium. |
+| `tools/icones.py` | Favicon et icônes d'application (sceau de cire et plume dorée) : `prototype/favicon.svg`, `favicon.ico`, `img/`. |
 | `tools/categories.py` | Relève dans le Wiktionnaire la catégorie grammaticale des définitions (`categorie`), à relire. |
 | `docs/` | `audit.md` (audit du 23/11/2026, points ouverts), `conception.md` (règles, économie, chemin), `questions.md` (charte, familles), `arbitre.md`, `direction-artistique.md`. |
 

@@ -31,6 +31,10 @@ def test_page_et_donnees_servies(client):
     assert client.get("/serveur.js").status_code == 200
     assert client.get("/proches.json").json()["mots"]
     assert client.get("/photos/bassinoire.jpg").status_code == 200
+    # Icônes (tools/icones.py) : servies et déclarées dans la page.
+    for chemin in ("/favicon.ico", "/favicon.svg", "/img/apple-touch-icon.png", "/img/icon-192.png", "/manifest.webmanifest"):
+        assert client.get(chemin).status_code == 200, chemin
+    assert 'href="favicon.ico"' in client.get("/").text
 
 
 def test_le_cookie_fait_le_joueur(client):

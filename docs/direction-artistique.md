@@ -114,6 +114,14 @@ processeur ralenti ×4, répartis sur 1,3 s (moins de 1 ms par image sur un
 téléphone réel) ; images de plus de 34 ms : 2 sur 5 révélations, autant que
 sans animation.
 
+## Icône
+
+Sceau de cire rouge traversé de la plume dorée du faussaire, sur le cuir vert du
+sous-main (25/11/2026). Une seule source, `tools/icones.py`, comme Discoverium :
+`prototype/favicon.svg`, `favicon.ico` (16, 32, 48 px, frames BMP),
+`img/icon-192.png`, `img/icon-512.png`, `img/apple-touch-icon.png` (plein cadre),
+déclarés dans la page et dans `manifest.webmanifest`.
+
 ## Mise en vente
 
 Après « Mettre en vente » (25/11/2026, demande de l'auteur), la contrefaçon se
