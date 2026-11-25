@@ -221,7 +221,7 @@ def test_etat_allege(client):
 
 
 def test_classement_des_faussaires(client):
-    """Un joueur dupé par le faux de A compte pour A cette semaine ; les faux de Truffe ne comptent pas.
+    """Faussaires : un joueur dupé par le faux de A compte pour A cette semaine ; les faux de Truffe ne comptent pas.
     La jauge compte les joueurs qui ont joué."""
     a = client.get("/api/moi").json()["id"]
     _authentifier(client, "sapajou")
@@ -233,9 +233,12 @@ def test_classement_des_faussaires(client):
         t = _faux_de(b, "cacochyme")[0]
         b.post("/api/choix", json={"mot": "cacochyme", "montres": [t], "ordre": [], "erreur": True})   # dupé par Truffe
     c = client.get("/api/etat").json()
-    assert c["classement"]["semaine"] == [{"id": a, "victimes": 1}]
-    assert c["classement"]["moi"] == {"rang": 1, "victimes": 1}
-    assert c["classement"]["passee"] is None
+    assert c["classement"]["faussaires"]["semaine"] == [{"id": a, "n": 1}]
+    assert c["classement"]["faussaires"]["moi"] == {"rang": 1, "n": 1}
+    assert c["classement"]["faussaires"]["passee"] is None
+    # Experts : pièces authentifiées de la semaine (A en a une, B aucune : il s'est trompé deux fois).
+    assert c["classement"]["experts"]["semaine"] == [{"id": a, "n": 1}]
+    assert c["classement"]["experts"]["moi"] == {"rang": 1, "n": 1}
     assert c["communaute"] == {"joueurs": 2, "objectif": 10}
 
 

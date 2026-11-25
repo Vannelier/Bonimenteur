@@ -111,17 +111,24 @@ blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
   majuscules et ponctuation comprises ; imiter la forme de la vraie fait partie
   du travail du faussaire (`docs/questions.md`, « Forme des réponses »).
 
-## Classement des faussaires
+## Classements de la semaine
 
-Décidé le 24/11/2026. Classement de la semaine (lundi 0 h, heure de Paris,
-comme les trois autres jeux) : joueurs dupés par les faux de chacun, même règle
-que les écus rendus (un faux montré, pas démasqué, à un joueur qui s'est
-trompé). Les faux de Truffe ne comptent pas. Sur Railway, le serveur le calcule
-(`_piegeurs`, dans `/api/etat`), la page ne recevant que les duels du joueur ;
-sur claude.ai, la page le calcule (`classementLocal`). Podium à l'accueil,
-classement complet (20 premiers et ta place) sous « Voir tout », vainqueur de la
-semaine passée sur une ligne. Classé sans pseudo : « Signe ton nom » sous le
-podium.
+Deux classements (25/11/2026, demande de l'auteur ; avant, le 24/11, les
+faussaires seuls), remis à zéro le lundi 0 h, heure de Paris, comme les trois
+autres jeux :
+
+- **Experts** : pièces authentifiées dans la semaine (expertises justes).
+- **Faussaires** : joueurs dupés par les faux de chacun, même règle que les écus
+  rendus (un faux montré, pas démasqué, à un joueur qui s'est trompé). Les faux
+  de Truffe ne comptent pas.
+
+Sur Railway, le serveur les calcule (`_experts`, `_piegeurs`, dans
+`/api/etat`), la page ne recevant que les duels du joueur ; sur claude.ai, la
+page les calcule (`classementLocal`). À l'accueil, « À l'honneur cette
+semaine » : le premier expert et le premier faussaire, une carte chacun ; ta
+place dans chacun (« Toi : 3e expert · 5e faussaire ») ; les deux premiers de la
+semaine passée sur une ligne. « Voir tout » : deux onglets, Experts et
+Faussaires, 20 premiers et ta place. Classé sans pseudo : « Signe ton nom ».
 
 ## Défi par lien
 

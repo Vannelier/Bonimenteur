@@ -186,7 +186,14 @@ def _piegeurs(debut: int, fin: int | None = None) -> list[dict]:
             a = auteurs.get(f)
             if a and a != c["joueur"] and f not in ordre:
                 n[a] += 1
-    return [{"id": a, "victimes": v} for a, v in sorted(n.items(), key=lambda x: (-x[1], x[0]))]
+    return [{"id": a, "n": v} for a, v in sorted(n.items(), key=lambda x: (-x[1], x[0]))]
+
+
+def _experts(debut: int, fin: int | None = None) -> list[dict]:
+    """Classement des experts : pièces authentifiées (expertises justes) entre debut et fin."""
+    lignes = db.execute("SELECT joueur, COUNT(*) AS n FROM choix WHERE erreur = 0 AND t >= ? AND t < ? "
+                        "GROUP BY joueur ORDER BY n DESC, joueur", (debut, fin or 2**62))
+    return [{"id": l["joueur"], "n": l["n"]} for l in lignes]
 
 
 PALIERS = (10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000)   # jauge des joueurs, comme les trois autres jeux
@@ -198,10 +205,14 @@ def _communaute() -> dict:
 
 
 def _classement(j: str) -> dict:
-    semaine = _piegeurs(_lundi_ms())
-    passee = _piegeurs(_lundi_ms(1), _lundi_ms())
-    moi = next(({"rang": i + 1, "victimes": r["victimes"]} for i, r in enumerate(semaine) if r["id"] == j), None)
-    return {"semaine": semaine[:20], "passee": passee[0] if passee else None, "moi": moi}
+    """Deux classements de la semaine (demande de l'auteur, 25/11/2026) : les experts (pièces
+    authentifiées) et les faussaires (joueurs dupés). Pour chacun : les 20 premiers, le premier
+    de la semaine passée et la place du joueur."""
+    def un(compter):
+        semaine, passee = compter(_lundi_ms()), compter(_lundi_ms(1), _lundi_ms())
+        moi = next(({"rang": i + 1, "n": r["n"]} for i, r in enumerate(semaine) if r["id"] == j), None)
+        return {"semaine": semaine[:20], "passee": passee[0] if passee else None, "moi": moi}
+    return {"experts": un(_experts), "faussaires": un(_piegeurs)}
 
 
 def _solde(joueur: str) -> int:

@@ -578,21 +578,13 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .podium-semaine{width:100%;max-width:380px;margin-top:2px}
 .pd-tete{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font:700 11px/1.5 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:#b9c7bb}
 .pd-tete .lien{font:700 11px/1.5 var(--titre);letter-spacing:.1em;color:#e7d6a0;padding:0 2px}
-.podium{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:end;gap:8px}
-.pd-slot{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;padding:6px 4px;border-radius:3px;background:var(--papier);color:var(--encre);box-shadow:0 3px 0 var(--sombre)}
-.pd-slot.r1{order:2;padding-bottom:16px}
-.pd-slot.r2{order:1}
-.pd-slot.r3{order:3}
-.pd-rang{font:700 13px/1.4 var(--texte);padding:0 8px;border-radius:999px;color:#2a210a;background:#e0c46c}
-.r2 .pd-rang{background:#d6dbe0}
-.r3 .pd-rang{background:#e2aa7c}
-.pd-nom{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:700 14px/1.4 var(--texte)}
-.pd-score{display:flex;align-items:center;gap:3px;font:700 16px/1.5 var(--texte);color:var(--rouge);font-variant-numeric:lining-nums tabular-nums}
-.pd-score .ic{width:.95em;height:.95em}
-.pd-slot.vide .pd-nom,.pd-slot.vide .pd-score{color:var(--trait)}
-.pd-slot.moi{box-shadow:0 3px 0 var(--sombre),inset 0 0 0 2px var(--or)}
 .pd-champ,.pd-moi{margin:6px 0 0;font-size:13px;line-height:1.5;color:#b9c7bb}
 .pd-champ b,.pd-moi b{color:#e7d6a0}
+/* Une seule ligne, quels que soient les noms : la hauteur ne bouge pas (les autres jeux restent dans l'écran). */
+.pd-champ{display:flex;justify-content:center;align-items:baseline;gap:8px;white-space:nowrap}
+.pd-champ[hidden]{display:none}
+.pc-lab{flex:none}
+.pc-nom{min-width:0;overflow:hidden;text-overflow:ellipsis}
 .pd-moi{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
 .pd-moi .lien{color:#e7d6a0;font-size:13px}
 .pd-moi input{width:150px;min-height:34px;padding:2px 8px;font:16px var(--texte);border:1.5px solid var(--or);border-radius:3px;background:var(--creux);color:var(--encre)}
@@ -733,6 +725,20 @@ header.vers-accueil{cursor:pointer}
 .defi-bloc .bouton{width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px}
 .defi-bloc .bouton .chip{background:transparent}
 .lien-defi{width:100%;padding:8px 10px;font:14px var(--texte);border:1.5px dashed var(--vert);border-radius:3px;background:var(--creux);color:var(--encre)}
+/* À l'honneur (accueil) : l'expert et le faussaire de la semaine, deux cartes côte à côte. */
+.honneur{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hn-carte{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;padding:6px 6px 8px;border-radius:3px;background:var(--papier);color:var(--encre);box-shadow:0 3px 0 var(--sombre)}
+.hn-carte::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;border-radius:3px 3px 0 0}
+.hn-expert::before{background:var(--vert)}.hn-faussaire::before{background:var(--rouge)}
+.hn-cat{font:700 11px/1.5 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:var(--doux)}
+.hn-nom{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:700 15px/1.4 var(--texte)}
+.hn-score{display:flex;align-items:center;gap:3px;font:700 16px/1.5 var(--texte);font-variant-numeric:lining-nums tabular-nums}
+.hn-score .ic,.pd-champ .ic,.t-score .ic{width:.95em;height:.95em}
+.sc-experts{color:var(--vert)}.sc-faussaires{color:var(--rouge)}
+.pd-champ .sc-experts{color:#9fc4ad}.pd-champ .sc-faussaires{color:#e59a8f}
+.hn-carte.vide .hn-nom{color:var(--trait);font-weight:400}
+.hn-carte.moi{box-shadow:0 3px 0 var(--sombre),inset 0 0 0 2px var(--or)}
+.classement .t-score.sc-experts{color:var(--vert)}
 </style>
 
 <div class="accueil" id="accueil">
@@ -748,12 +754,13 @@ header.vers-accueil{cursor:pointer}
     <!-- Deux boutons côte à côte, comme « Jouer » et « Multijoueur » de Snouff et Vocabulium. -->
     <div class="menu-play"><button class="bouton plein" type="button" id="jouer">Expertiser</button><button class="bouton atelier-acc" type="button" id="versAtelierAcc">Atelier</button></div>
     <div class="podium-semaine">
-      <div class="pd-tete"><span>Faussaires de la semaine</span><button class="lien" type="button" id="voirTout">Voir tout</button></div>
-      <ol class="podium" id="podium" aria-label="Podium de la semaine">
-        <li class="pd-slot r1 vide"><span class="pd-rang">1</span><span class="pd-nom">—</span><span class="pd-score">&nbsp;</span></li>
-        <li class="pd-slot r2 vide"><span class="pd-rang">2</span><span class="pd-nom">—</span><span class="pd-score">&nbsp;</span></li>
-        <li class="pd-slot r3 vide"><span class="pd-rang">3</span><span class="pd-nom">—</span><span class="pd-score">&nbsp;</span></li>
-      </ol>
+      <!-- À l'honneur : l'expert et le faussaire de la semaine, un de chaque (demande de l'auteur,
+           25/11/2026) ; les deux classements complets sous « Voir tout ». -->
+      <div class="pd-tete"><span>À l'honneur cette semaine</span><button class="lien" type="button" id="voirTout">Voir tout</button></div>
+      <div class="honneur" id="honneur">
+        <div class="hn-carte hn-expert vide"><span class="hn-cat">Expert</span><span class="hn-nom">—</span><span class="hn-score">&nbsp;</span></div>
+        <div class="hn-carte hn-faussaire vide"><span class="hn-cat">Faussaire</span><span class="hn-nom">—</span><span class="hn-score">&nbsp;</span></div>
+      </div>
       <p class="pd-moi" id="pdMoi" hidden></p>
       <p class="pd-champ" id="pdChamp" hidden></p>
     </div>
@@ -1100,51 +1107,10 @@ function motsEnJeu(I) {
   }
   return r;
 }
-// Questions qu'un joueur peut piéger, par famille : toutes, sauf celles où il a déjà un piège.
-// Le poseur voit la vraie réponse : celles qu'il a déjà jouées passent d'abord (rien n'est
-// gâché) ; une question neuve vue en piégeant sort de ses parties (vusLocal). Dans la famille, la question qui a le moins
-// de pièges en vie (sinon tout le monde piégerait les mêmes).
-function aPieger(I) {
-  const neuves = new Map(), jouees = new Map();
-  for (const [id, m] of S.mots) {
-    if (I.motsPiegesMoi.has(id)) continue;
-    const f = famille(m), cible = I.authentifiesMoi.has(id) ? jouees : neuves;
-    if (!cible.has(f)) cible.set(f, []);
-    cible.get(f).push([id, (I.vivants.get(id) || []).length]);
-  }
-  // L'atelier ne propose que les pièces authentifiées : l'expert les a eues entre les mains
-  // (décision de l'auteur, 24/11/2026). Un lot où l'on a été floué ne se contrefait pas, ni ici
-  // ni en direct : on n'a pas su reconnaître l'original. Un lot neuf se contrefait en direct,
-  // juste après l'avoir authentifié (PRIX_DIRECT).
-  // Le serveur refuse aussi (app/main.py, poser).
-  return jouees;
-}
-let dernierPiege = null, dernierMot = null;
-const ecartes = new Set();
-function motAtelier(I, voulue) {
-  if (voulue) {
-    const tout = aPieger(I).get(voulue); if (!tout || !tout.length) return null;
-    // « Autre » écarte la question pour ce tour de la famille, sans la brûler : la famille
-    // épuisée repart du début, et on peut enchaîner les pièges dans la même famille.
-    let r = tout.filter(x => !ecartes.has(x[0]));
-    if (!r.length) { for (const x of tout) ecartes.delete(x[0]); r = tout.filter(x => x[0] !== dernierMot); if (!r.length) r = tout; }
-    const min = Math.min(...r.map(x => x[1])), id = melange(r.filter(x => x[1] === min))[0][0];
-    dernierMot = id; return id;
-  }
-  const par = new Map();
-  for (const [id, m] of S.mots) {
-    if (I.vusMoi.has(id) || I.motsPiegesMoi.has(id)) continue;
-    const f = famille(m); if (!par.has(f)) par.set(f, []);
-    par.get(f).push([id, (I.vivants.get(id) || []).length]);
-  }
-  if (!par.size) return null;
-  let fams = melange([...par.keys()]);
-  if (fams.length > 1 && fams[0] === dernierPiege) fams.push(fams.shift());
-  const f = fams[0], r = par.get(f);
-  dernierPiege = f;
-  const min = Math.min(...r.map(x => x[1]));
-  return melange(r.filter(x => x[1] === min))[0][0];
-}
+// L'atelier ne propose que les pièces authentifiées, choisies dans la liste de leur famille
+// (lotsJoues) : l'expert les a eues entre les mains (décision de l'auteur, 24/11/2026). Un lot
+// où l'on a été floué ne se contrefait pas, ni ici ni en direct ; le serveur refuse aussi
+// (app/main.py, poser). Plus de bouton « Autre » : on choisit son lot (remarque de l'auteur, 25/11/2026).
 
 function suite() {
   const I = index();
@@ -1474,7 +1440,7 @@ function lotsFamille(retour, f) {
   $e.innerHTML = `${retour === atelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(solde(I))}
     <button class="retour-famille" type="button" id="familles" aria-label="Toutes les familles"><span aria-hidden="true">‹</span>${IC[f]}${FAMILLES[f].label}</button>
     <ul class="lots-atelier apparait">${l.map(x => { const t = titre(S.mots.get(x.id)); return `<li><button class="lot-at" type="button" data-id="${esc(x.id)}" ${x.authentifie ? "" : "disabled"} aria-label="${esc(t)} : ${x.authentifie ? "authentifié" : "floué, pas de contrefaçon"}"><span class="lot-titre">${esc(t)}</span><span class="estampille ${x.authentifie ? "authentifie" : "floue"}" aria-hidden="true">${x.authentifie ? "Authentifié" : "Floué"}</span></button></li>`; }).join("")}</ul>`;
-  $e.querySelectorAll(".lot-at[data-id]").forEach(b => b.onclick = () => { dernierMot = b.dataset.id; cartePiege(b.dataset.id, retour); });
+  $e.querySelectorAll(".lot-at[data-id]").forEach(b => b.onclick = () => cartePiege(b.dataset.id, retour));
   document.getElementById("familles").onclick = () => { familleAtelier = null; choixFamille(retour); };
   if (retour === atelier) lierSous();
 }
@@ -1507,7 +1473,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
     <textarea id="piegeTexte" maxlength="${F.max}" aria-label="${F.champ}" placeholder="${esc(formater(m.vraie, famille(m)))}"></textarea>
     <div class="sous-saisie"><label class="signer"><i>signé</i><input id="signeChamp" maxlength="${PSEUDO_MAX}" autocomplete="nickname" aria-label="Ta signature" placeholder="ton nom de faussaire" value="${esc(signatureProposee())}"></label><span class="compte" id="compte">0 / ${F.max}</span></div>
     <div id="erreurPiege"></div>
-    <div class="ligne"><button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button>${direct ? "" : `<button class="bouton" type="button" id="autre">Autre</button>`}<button class="bouton piege" type="button" id="poser">Mettre en vente</button></div>`;
+    <div class="ligne"><button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button><button class="bouton piege" type="button" id="poser">Mettre en vente</button></div>`;
   const ta = document.getElementById("piegeTexte");
   // Aperçu : le faux s'écrit dans l'emplacement de la réponse, sur le même artefact que l'original.
   const apercu = document.getElementById("apercu"); let rafApercu = 0;
@@ -1521,10 +1487,6 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
   // Catégorie du faux : le faussaire peut la fausser aussi (« sapajou, adj. »).
   $e.querySelectorAll(".cat").forEach(b => b.onclick = () => { $e.querySelectorAll(".cat").forEach(x => x.setAttribute("aria-checked", x === b ? "true" : "false")); majApercu(); });
   document.getElementById("passer").onclick = () => { vusLocal.add(motId); retour(); };
-  if (!direct) {
-  const autreQuestion = () => { ecartes.add(motId); vusLocal.add(motId); const id = motAtelier(index(), famille(m)); if (id) cartePiege(id, retour); else choixFamille(retour); };
-  document.getElementById("autre").onclick = autreQuestion;
-  }
   const libelle = document.getElementById("poser").innerHTML;
   document.getElementById("poser").onclick = async () => {
     const texte = formater(ta.value, famille(m));
@@ -1535,9 +1497,8 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
       if (nomCommune(texte) === nomCommune(m.vraie)) {
         vusLocal.add(motId);
         err.innerHTML = `<p class="alerte">${IC.ok} C'est la vraie !</p>`;
-        $e.querySelector(".ligne").innerHTML = `<button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button>${direct ? "" : `<button class="bouton piege" type="button" id="autre">Autre</button>`}`;
+        $e.querySelector(".ligne").innerHTML = `<button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button>`;
         document.getElementById("passer").onclick = retour;
-        if (!direct) document.getElementById("autre").onclick = autreQuestion;
       } else err.innerHTML = `<p class="alerte">Cette commune existe vraiment.</p>`;
       return;
     }
@@ -1801,18 +1762,27 @@ function lundiParis(t = Date.now()) {
 /* Faussaires classés par joueurs dupés (même règle que index() et que le serveur, _piegeurs) ;
    Truffe n'est pas classé. Sur Railway, la page ne reçoit que ses duels : le serveur calcule
    (window.__classementServeur) ; sur claude.ai, la page a tous les duels et calcule ici. */
+/* Les deux classements de la semaine, calculés comme le serveur (_experts, _piegeurs) : experts
+   (pièces authentifiées) et faussaires (joueurs dupés, hors Truffe). */
 function classementLocal() {
   const auteurs = new Map(S.pieges.map(p => [p.id, p.auteur])), lundi = lundiParis(), avant = lundiParis(lundi - 864e5);
-  const compter = (debut, fin) => {
+  const trier = n => [...n].map(([id, k]) => ({ id, n: k })).sort((x, y) => y.n - x.n || (x.id < y.id ? -1 : 1));
+  const faussaires = (debut, fin) => {
     const n = new Map();
     for (const c of S.choix) {
       const t = c.t || 0; if (!c.erreur || t < debut || t >= fin) continue;
       for (const id of c.montres || []) { const a = auteurs.get(id); if (a && a !== "truffe" && a !== c.joueur && !(c.ordre || []).includes(id)) n.set(a, (n.get(a) || 0) + 1); }
     }
-    return [...n].map(([id, victimes]) => ({ id, victimes })).sort((x, y) => y.victimes - x.victimes || (x.id < y.id ? -1 : 1));
+    return trier(n);
   };
-  const semaine = compter(lundi, Infinity), passee = compter(avant, lundi), i = semaine.findIndex(r => r.id === moi);
-  return { semaine: semaine.slice(0, 20), passee: passee[0] || null, moi: i < 0 ? null : { rang: i + 1, victimes: semaine[i].victimes } };
+  const experts = (debut, fin) => {
+    const n = new Map();
+    for (const c of S.choix) { const t = c.t || 0; if (!c.erreur && t >= debut && t < fin) n.set(c.joueur, (n.get(c.joueur) || 0) + 1); }
+    return trier(n);
+  };
+  const un = compter => { const s = compter(lundi, Infinity), p = compter(avant, lundi), i = s.findIndex(r => r.id === moi);
+    return { semaine: s.slice(0, 20), passee: p[0] || null, moi: i < 0 ? null : { rang: i + 1, n: s[i].n } }; };
+  return { experts: un(experts), faussaires: un(faussaires) };
 }
 const classement = () => window.__classementServeur || classementLocal();
 const PALIERS = [10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000];
@@ -1822,25 +1792,30 @@ function communaute() {
   return { joueurs: n, objectif: PALIERS.find(p => p > n) || n + 1 };
 }
 const nomClasse = id => id === moi ? (monPseudo() || "Toi") : (S.pseudos.get(id) || noms.get(id) || "Anonyme");
-const dupes = n => `<span class="pd-score" aria-label="${n} joueur${n > 1 ? "s" : ""} dupé${n > 1 ? "s" : ""}">${n}${IC.joueur}</span>`;
+// Score d'un classé : pièces authentifiées (sceau vert) ou joueurs dupés (rouge).
+const CATS = { experts: { titre: "Experts", seul: "Expert", ic: () => IC.ok, dit: n => `${n} pièce${n > 1 ? "s" : ""} authentifiée${n > 1 ? "s" : ""}` },
+  faussaires: { titre: "Faussaires", seul: "Faussaire", ic: () => IC.joueur, dit: n => `${n} joueur${n > 1 ? "s" : ""} dupé${n > 1 ? "s" : ""}` } };
+const score = (cat, n, cls = "hn-score") => `<span class="${cls} sc-${cat}" aria-label="${CATS[cat].dit(n)}">${n}${CATS[cat].ic()}</span>`;
 async function majAccueil() {
   if (!lance) return;
-  const C = classement(), ids = [...C.semaine.slice(0, 3).map(r => r.id), ...(C.passee ? [C.passee.id] : [])];
-  await nommer(ids).catch(() => {});
+  const C = classement(), cats = ["experts", "faussaires"];
+  await nommer(cats.flatMap(k => [C[k].semaine[0], C[k].passee].filter(Boolean).map(r => r.id))).catch(() => {});
   if (vue !== "accueil") return;
-  document.getElementById("podium").innerHTML = [0, 1, 2].map(i => { const r = C.semaine[i];
-    return r ? `<li class="pd-slot r${i + 1} ${r.id === moi ? "moi" : ""}"><span class="pd-rang">${i + 1}</span><span class="pd-nom">${esc(nomClasse(r.id))}</span>${dupes(r.victimes)}</li>`
-      : `<li class="pd-slot r${i + 1} vide"><span class="pd-rang">${i + 1}</span><span class="pd-nom">—</span><span class="pd-score">&nbsp;</span></li>`; }).join("");
-  // Ta ligne sous le podium : ton rang au-delà du 3e ; classé sans pseudo, de quoi signer.
-  const pm = document.getElementById("pdMoi"), sansNom = C.moi && !monPseudo();
-  pm.hidden = !C.moi || (C.moi.rang <= 3 && !sansNom);
+  // Un de chaque à l'honneur : le premier expert et le premier faussaire de la semaine.
+  document.getElementById("honneur").innerHTML = cats.map(k => { const r = C[k].semaine[0], cl = k === "experts" ? "hn-expert" : "hn-faussaire";
+    return r ? `<div class="hn-carte ${cl} ${r.id === moi ? "moi" : ""}"><span class="hn-cat">${CATS[k].seul}</span><span class="hn-nom">${esc(nomClasse(r.id))}</span>${score(k, r.n)}</div>`
+      : `<div class="hn-carte ${cl} vide"><span class="hn-cat">${CATS[k].seul}</span><span class="hn-nom">—</span><span class="hn-score">&nbsp;</span></div>`; }).join("");
+  // Ta place sous les cartes, dans chaque classement où tu figures sans être premier ; classé sans pseudo, de quoi signer.
+  const places = cats.filter(k => C[k].moi && C[k].moi.rang > 1).map(k => `<b>${C[k].moi.rang}<sup>e</sup></b> ${CATS[k].seul.toLowerCase()}`);
+  const pm = document.getElementById("pdMoi"), sansNom = (C.experts.moi || C.faussaires.moi) && !monPseudo();
+  pm.hidden = !places.length && !sansNom;
   if (!pm.hidden) {
-    pm.innerHTML = `${C.moi.rang > 3 ? `<span>Toi : <b>${C.moi.rang}<sup>e</sup></b>, ${C.moi.victimes}${IC.joueur}</span>` : ""}${sansNom ? `<button class="lien" type="button" id="signerAcc">Signe ton nom</button>` : ""}`;
+    pm.innerHTML = `${places.length ? `<span>Toi : ${places.join(" · ")}</span>` : ""}${sansNom ? `<button class="lien" type="button" id="signerAcc">Signe ton nom</button>` : ""}`;
     const sg = document.getElementById("signerAcc"); if (sg) sg.onclick = signerAccueil;
   }
-  const ch = document.getElementById("pdChamp");
-  ch.hidden = !C.passee;
-  if (C.passee) ch.innerHTML = `Semaine dernière : <b>${esc(nomClasse(C.passee.id))}</b>, ${C.passee.victimes} dupé${C.passee.victimes > 1 ? "s" : ""}`;
+  const ch = document.getElementById("pdChamp"), passes = cats.filter(k => C[k].passee);
+  ch.hidden = !passes.length;
+  if (passes.length) ch.innerHTML = `<span class="pc-lab">Semaine dernière :</span>${passes.map(k => `<span class="pc-nom"><span class="sc-${k}">${CATS[k].ic()}</span> <b>${esc(nomClasse(C[k].passee.id))}</b></span>`).join("")}`;
   const cm = communaute(), aJoue = index().vusMoi.size > 0, bloc = document.getElementById("communaute");
   bloc.hidden = !aJoue;
   if (aJoue) {
@@ -1862,21 +1837,27 @@ function signerAccueil() {
   document.getElementById("pseudoAccOk").onclick = valider;
   ch.onkeydown = e => { ch.classList.remove("refus"); if (e.key === "Enter") valider(); else if (e.key === "Escape") majAccueil(); };
 }
-async function ecranClassement() {
+let ongletClassement = "experts";
+async function ecranClassement(onglet) {
+  if (onglet) ongletClassement = onglet;
   afficher("classement");
-  const C = classement();
+  const k = ongletClassement, C = classement()[k];
   await nommer([...C.semaine.map(r => r.id), ...(C.passee ? [C.passee.id] : [])]).catch(() => {});
-  const ligne = (r, rang) => `<li class="${r.id === moi ? "moi" : ""}"><span class="t-rang">${rang}</span><span class="t-nom">${esc(nomClasse(r.id))}</span><span class="t-score" aria-label="${r.victimes} joueurs dupés">${r.victimes}${IC.joueur}</span></li>`;
-  const horsTop = C.moi && C.moi.rang > C.semaine.length ? ligne({ id: moi, victimes: C.moi.victimes }, C.moi.rang) : "";
+  const ligne = (r, rang) => `<li class="${r.id === moi ? "moi" : ""}"><span class="t-rang">${rang}</span><span class="t-nom">${esc(nomClasse(r.id))}</span>${score(k, r.n, "t-score")}</li>`;
+  const horsTop = C.moi && C.moi.rang > C.semaine.length ? ligne({ id: moi, n: C.moi.n }, C.moi.rang) : "";
+  const onglets = `<div class="sous-onglets" role="tablist" aria-label="Classements">${Object.keys(CATS).map(c => `<button type="button" role="tab" data-cl="${c}" aria-selected="${c === k}">${c === "experts" ? IC.ok : IC.piege} ${CATS[c].titre}</button>`).join("")}</div>`;
   TAB.innerHTML = `<main class="carte">
     <div class="haut"><button class="retour-famille" type="button" id="retourAcc"><span aria-hidden="true">‹</span>Accueil</button>${pastilleEcus(solde(index()))}</div>
-    <h2>Faussaires de la semaine</h2>
-    ${C.semaine.length ? `<ol class="classement">${C.semaine.map((r, i) => ligne(r, i + 1)).join("")}${horsTop}</ol>` : `<div class="grosse-ic">${IC.piege}</div><p class="champ-passe">Personne n'a encore été dupé cette semaine.</p>`}
-    ${C.passee ? `<p class="champ-passe">Semaine dernière : <b>${esc(nomClasse(C.passee.id))}</b>, ${C.passee.victimes} dupé${C.passee.victimes > 1 ? "s" : ""}</p>` : ""}
+    ${onglets}
+    <h2>${CATS[k].titre} de la semaine</h2>
+    ${C.semaine.length ? `<ol class="classement">${C.semaine.map((r, i) => ligne(r, i + 1)).join("")}${horsTop}</ol>`
+      : `<div class="grosse-ic">${k === "experts" ? IC.ok : IC.piege}</div><p class="champ-passe">${k === "experts" ? "Aucune pièce authentifiée cette semaine." : "Personne n'a encore été dupé cette semaine."}</p>`}
+    ${C.passee ? `<p class="champ-passe">Semaine dernière : <b>${esc(nomClasse(C.passee.id))}</b>, ${CATS[k].dit(C.passee.n)}</p>` : ""}
     <button class="bouton plein" type="button" id="jouerTab">Expertiser</button>
   </main>`;
   document.getElementById("retourAcc").onclick = versAccueil;
   document.getElementById("jouerTab").onclick = jouer;
+  TAB.querySelectorAll("[data-cl]").forEach(b => b.onclick = () => ecranClassement(b.dataset.cl));
 }
 function versAccueil() { afficher("accueil"); majAccueil(); }
 let ecranVoulu = "jouer";   // écran demandé depuis l'accueil, ouvert dès que les données sont là
@@ -1892,7 +1873,7 @@ function ouvrirAtelier() {
 document.getElementById("jouer").onclick = jouer;
 document.getElementById("versAtelierAcc").onclick = ouvrirAtelier;
 document.getElementById("versAtelierAcc").insertAdjacentHTML("afterbegin", IC.piege);
-document.getElementById("voirTout").onclick = ecranClassement;
+document.getElementById("voirTout").onclick = () => ecranClassement();
 document.getElementById("versAccueil").onclick = versAccueil;
 document.getElementById("versAccueil").onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); versAccueil(); } };
 
