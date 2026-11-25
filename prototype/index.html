@@ -425,8 +425,11 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .plaque-dep{position:relative;z-index:1;font:italic 400 13px "Old Standard TT","Source Serif 4",Georgia,serif;opacity:.75}
 /* Tampons et signature posés sur le panonceau lui-même, sans bande blanche (demande de l'auteur). */
 [data-style="plaque"] small{position:absolute;inset:0;z-index:2;display:block;min-height:0;margin:0;padding:0;background:none}
-[data-style="plaque"] small .etiquette{position:absolute;left:4px;top:-6px}
-[data-style="plaque"] small .tampon,[data-style="plaque"] small .chip.bon{position:absolute;left:20px;bottom:6px;margin:0;font-size:13px;background:rgba(238,227,198,.6)}
+/* Étiquette et tampons dans le panneau, jamais au-dehors (remarque de l'auteur, 25/11/2026) : sur la
+   tôle, en bas, l'étiquette après le tampon ; en haut, elle cachait le début des noms longs. */
+[data-style="plaque"] small .etiquette{position:absolute;left:146px;bottom:15px}
+[data-style="plaque"] small > span[title]{position:absolute;right:30px;bottom:36px}
+[data-style="plaque"] small .tampon,[data-style="plaque"] small .chip.bon{position:absolute;left:22px;bottom:13px;margin:0;font-size:13px;background:rgba(238,227,198,.6)}
 /* Signature à même la tôle, sans pavé clair derrière (remarque de l'auteur, 25/11/2026) : un liseré
    crème fixe (text-shadow, jamais animé) la détache des coulures. */
 [data-style="plaque"] small .signe-faux{position:absolute;right:28px;bottom:12px;margin:0;background:none;padding:0;
