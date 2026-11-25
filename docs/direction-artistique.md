@@ -116,8 +116,10 @@ sans animation.
 
 ## Icône
 
-Sceau de cire rouge traversé de la plume dorée du faussaire, sur le cuir vert du
-sous-main (25/11/2026). Une seule source, `tools/icones.py`, comme Discoverium :
+Sceau de cire rouge traversé de la plume dorée du faussaire (25/11/2026), sur fond
+transparent, cire éclaircie et contour de la plume en brun doré pour les fonds
+clairs comme sombres (demande de l'auteur) ; l'icône iOS garde le cuir vert du
+sous-main (iOS remplit de noir le transparent). Une seule source, `tools/icones.py`, comme Discoverium :
 `prototype/favicon.svg`, `favicon.ico` (16, 32, 48 px, frames BMP),
 `img/icon-192.png`, `img/icon-512.png`, `img/apple-touch-icon.png` (plein cadre),
 déclarés dans la page et dans `manifest.webmanifest`.

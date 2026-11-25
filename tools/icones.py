@@ -3,8 +3,9 @@ dorée du faussaire, sur le cuir vert du sous-main (docs/direction-artistique.md
 
 Une seule source, le SVG dessiné ici, écrit dans prototype/favicon.svg puis rendu
 par Chromium : prototype/favicon.ico (16, 32, 48 px), prototype/img/icon-192.png,
-prototype/img/icon-512.png (carré arrondi, coins transparents) et
-prototype/img/apple-touch-icon.png (180 px plein cadre : iOS arrondit lui-même).
+prototype/img/icon-512.png (fond transparent : le sceau et la plume seuls, demande de
+l'auteur, 25/11/2026) et prototype/img/apple-touch-icon.png (180 px sur le cuir, plein
+cadre : iOS remplit de noir ce qui est transparent, et arrondit lui-même).
 Même méthode que tools/icones.py de Discoverium : ICO à frames BMP 32 bits (le
 décodeur d'icônes de Bing lit mal les frames PNG, constaté sur Vocabulium).
 
@@ -23,14 +24,14 @@ RACINE = Path(__file__).resolve().parent.parent
 PAGE = RACINE / "prototype"
 
 
-def icone(arrondi: bool) -> str:
-    """SVG 64 × 64. `arrondi` : carré à coins arrondis (favicon, icônes du
-    manifeste) ; sinon plein cadre (icône iOS)."""
-    fond = 'rx="14" ' if arrondi else ""
+def icone(cuir: bool) -> str:
+    """SVG 64 × 64. `cuir` : sur le cuir vert, plein cadre (icône iOS) ; sinon fond
+    transparent (favicon, icônes du manifeste)."""
+    fond = '<rect width="64" height="64" fill="url(#cuir)"/>' if cuir else ""
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <title>Bonimenteur</title>
   <!-- Généré par tools/icones.py : le sceau de cire rouge et la plume dorée du
-       faussaire, sur le cuir vert du sous-main. -->
+       faussaire (fond transparent ; le cuir vert du sous-main pour iOS). -->
   <defs>
     <radialGradient id="cuir" cx="50%" cy="12%" r="95%">
       <stop offset="0" stop-color="#2c4a3a"/><stop offset=".6" stop-color="#15281f"/>
@@ -41,16 +42,16 @@ def icone(arrondi: bool) -> str:
       <stop offset="1" stop-color="#b8973f"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" {fond}fill="url(#cuir)"/>
+  {fond}
   <g transform="translate(5 6) scale(.9)">
-    <path fill="#7a1f19" d="M30 3c4 0 5 3 8.5 4s6.5-1 9 1.7.8 6.2 2.5 9.3 5 4 5 8-3 5.2-4 8.6 1 6.6-1.7 9.3-6.2.8-9.3 2.5S34 57 30 57s-5.2-3-8.6-4-6.6 1-9.3-1.7-.8-6.2-2.5-9.3S4 34 4 30s3-5.2 4-8.6-1-6.6 1.7-9.3 6.2-.8 9.3-2.5S26 3 30 3z" transform="translate(1.5 2)"/>
-    <path fill="#b3322a" d="M30 3c4 0 5 3 8.5 4s6.5-1 9 1.7.8 6.2 2.5 9.3 5 4 5 8-3 5.2-4 8.6 1 6.6-1.7 9.3-6.2.8-9.3 2.5S34 57 30 57s-5.2-3-8.6-4-6.6 1-9.3-1.7-.8-6.2-2.5-9.3S4 34 4 30s3-5.2 4-8.6-1-6.6 1.7-9.3 6.2-.8 9.3-2.5S26 3 30 3z"/>
-    <circle cx="30" cy="30" r="18" fill="none" stroke="#8e2620" stroke-width="2"/>
-    <ellipse cx="21" cy="15" rx="7" ry="3" fill="#fff" opacity=".22" transform="rotate(-30 21 15)"/>
+    <path fill="#9e2e25" d="M30 3c4 0 5 3 8.5 4s6.5-1 9 1.7.8 6.2 2.5 9.3 5 4 5 8-3 5.2-4 8.6 1 6.6-1.7 9.3-6.2.8-9.3 2.5S34 57 30 57s-5.2-3-8.6-4-6.6 1-9.3-1.7-.8-6.2-2.5-9.3S4 34 4 30s3-5.2 4-8.6-1-6.6 1.7-9.3 6.2-.8 9.3-2.5S26 3 30 3z" transform="translate(1.5 2)"/>
+    <path fill="#d24a3c" d="M30 3c4 0 5 3 8.5 4s6.5-1 9 1.7.8 6.2 2.5 9.3 5 4 5 8-3 5.2-4 8.6 1 6.6-1.7 9.3-6.2.8-9.3 2.5S34 57 30 57s-5.2-3-8.6-4-6.6 1-9.3-1.7-.8-6.2-2.5-9.3S4 34 4 30s3-5.2 4-8.6-1-6.6 1.7-9.3 6.2-.8 9.3-2.5S26 3 30 3z"/>
+    <circle cx="30" cy="30" r="18" fill="none" stroke="#b23a2e" stroke-width="2"/>
+    <ellipse cx="21" cy="15" rx="7" ry="3" fill="#fff" opacity=".3" transform="rotate(-30 21 15)"/>
   </g>
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M55 7C37 8 26 19 21.5 36L18 52" stroke="#0b1712" stroke-width="7" opacity=".55"/>
-    <path d="M55 7C55.5 23 46 34 28.5 37" stroke="#0b1712" stroke-width="7" opacity=".55"/>
+    <path d="M55 7C37 8 26 19 21.5 36L18 52" stroke="#5a3a10" stroke-width="6.5" opacity=".7"/>
+    <path d="M55 7C55.5 23 46 34 28.5 37" stroke="#5a3a10" stroke-width="6.5" opacity=".7"/>
     <path d="M55 7C37 8 26 19 21.5 36L18 52" stroke="url(#or)" stroke-width="3.6"/>
     <path d="M55 7C55.5 23 46 34 28.5 37" stroke="url(#or)" stroke-width="3.6"/>
     <path d="M34 22L45 22M30 29L40 30" stroke="url(#or)" stroke-width="2.4"/>
@@ -85,8 +86,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--chrome", default="/opt/pw-browsers/chromium")
     args = ap.parse_args()
-    arrondi, plein = icone(True), icone(False)
-    (PAGE / "favicon.svg").write_text(arrondi, encoding="utf-8")
+    transparent, plein = icone(False), icone(True)
+    (PAGE / "favicon.svg").write_text(transparent, encoding="utf-8")
     (PAGE / "img").mkdir(exist_ok=True)
     with sync_playwright() as p:
         nav = p.chromium.launch(executable_path=args.chrome if Path(args.chrome).exists() else None)
@@ -99,9 +100,9 @@ def main() -> None:
             page.close()
             return Image.open(io.BytesIO(data)).convert("RGBA")
 
-        (PAGE / "favicon.ico").write_bytes(ico([png(arrondi, t) for t in (16, 32, 48)]))
-        png(arrondi, 192).save(PAGE / "img" / "icon-192.png")
-        png(arrondi, 512).save(PAGE / "img" / "icon-512.png")
+        (PAGE / "favicon.ico").write_bytes(ico([png(transparent, t) for t in (16, 32, 48)]))
+        png(transparent, 192).save(PAGE / "img" / "icon-192.png")
+        png(transparent, 512).save(PAGE / "img" / "icon-512.png")
         png(plein, 180).convert("RGB").save(PAGE / "img" / "apple-touch-icon.png")
         nav.close()
     print("écrit : favicon.svg, favicon.ico, img/icon-192.png, img/icon-512.png, img/apple-touch-icon.png")

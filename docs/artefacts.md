@@ -62,4 +62,10 @@ Nombre de questions au 25/11/2026 (217 en tout).
 ## Pistes (non faites)
 
 Télégramme et carnet de voyage : retenus par l'auteur comme objets, sans
-thème encore (les mots étrangers ne lui semblent pas le bon).
+thème encore (les mots étrangers ne lui semblent pas le bon). Carnet de voyage
+pour un thème « Coutumes du monde » : maquette faite le 25/11/2026.
+
+Écarté : remèdes d'apothicaire (composition, vertus des remèdes de charlatan),
+jugé drôle mais pas jouable par l'auteur (25/11/2026). Leçon : la partie cachée
+doit laisser inventer, pas choisir dans une liste fermée (une maladie contre
+une autre).
