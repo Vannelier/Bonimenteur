@@ -214,8 +214,14 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 #pseudoChamp.refus{border-bottom-color:var(--rouge);background:#fbefe9}
 .bouton.petit{min-height:44px;min-width:48px;padding:0 12px}
 /* Piéger en direct : à gauche de « Suivante », plus petit ; grisé tant qu'il manque des écus. */
-.ligne.direct .bouton.plein{flex:1.6 1 0}
-.ligne.direct .bouton.piege{flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;gap:4px;font-family:var(--texte);font-variant-numeric:lining-nums}
+/* « Contrefaire −15 » et « Lot suivant » : même taille (demande de l'auteur, 25/11/2026). */
+.ligne.direct .bouton.plein,.ligne.direct .bouton.piege{flex:1 1 0;min-width:0}
+.ligne.direct .bouton.piege{position:relative;padding-left:8px;padding-right:8px;font-family:var(--titre);letter-spacing:.04em;white-space:nowrap}
+/* Le prix, en étiquette sur le coin du bouton : « Contrefaire » tient sur une ligne à 360 px. */
+.ligne.direct .bouton.piege .prix{position:absolute;top:-9px;right:-6px;display:inline-flex;align-items:center;gap:2px;padding:2px 6px;border-radius:999px;
+  background:var(--fond);color:var(--rouge);border:1.5px solid var(--rouge);font:700 12px/1 var(--texte);letter-spacing:0;font-variant-numeric:lining-nums;transform:rotate(5deg)}
+.ligne.direct .bouton.piege .prix .ic{width:1.1em;height:1.1em;color:var(--ecu)}
+.ligne.direct .bouton.piege:disabled .prix{color:var(--doux);border-color:var(--trait)}
 .ligne.direct .bouton.piege:disabled{background:var(--creux);color:var(--doux);border-color:var(--trait);box-shadow:0 3px 0 var(--trait)}
 /* Fin de la ration : sablier et compte à rebours jusqu'à minuit (heure de Paris). */
 .demain{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px;font:700 40px/1 var(--texte);color:var(--vert);font-variant-numeric:lining-nums tabular-nums}
@@ -256,7 +262,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .choix .bouton.joue:active{transform:none}
 .f-tete{display:flex;justify-content:space-between;font:12px "IM Fell English SC",Georgia,serif;letter-spacing:.06em;border-bottom:1px solid rgba(43,32,22,.55);padding-bottom:3px}
 .f-art{font:400 18px/1.32 "IM Fell English",Georgia,serif;text-align:left}
-.f-art .vedette{font:400 19px "IM Fell English SC",Georgia,serif;letter-spacing:.03em}
+.f-art .vedette{font:400 23px "IM Fell English SC",Georgia,serif;letter-spacing:.03em}
 .f-art i,.f-art em{font-style:italic}
 .f-pied{display:flex;justify-content:space-between;gap:10px;margin-top:auto;font:italic 12px "IM Fell English",Georgia,serif;color:rgba(43,32,22,.7)}
 .f-pied span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -320,7 +326,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
   .carte{padding:14px 12px 12px;gap:10px}
   .progres i{height:9px}
   .choix .bouton.feuillet{padding:9px 14px 9px;gap:4px}
-  .f-art{font-size:16.5px;line-height:1.28} .f-art .vedette{font-size:17px}
+  .f-art{font-size:16.5px;line-height:1.28} .f-art .vedette{font-size:21px}
   .f-tete{font-size:11px} .f-pied{font-size:11px}
   .photo.planche img{height:84px}
   .photo.planche .legende{font-size:15px}
@@ -415,14 +421,6 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 [data-style="plaque"] small .etiquette{position:absolute;left:4px;top:-6px}
 [data-style="plaque"] small .tampon,[data-style="plaque"] small .chip.bon{position:absolute;left:20px;bottom:6px;margin:0;font-size:13px;background:rgba(238,227,198,.6)}
 [data-style="plaque"] small .signe-faux{position:absolute;right:16px;bottom:5px;margin:0;background:rgba(238,227,198,.8);padding:0 4px;border-radius:2px}
-/* Carte de visite (métiers) : bristol, nom, métier gravé en capitales, adresse. */
-.choix .bouton.feuillet[data-style="carte"],.feuillet.modele[data-style="carte"]{clip-path:none;border-radius:3px;align-items:center;text-align:center;gap:3px;padding:12px 16px 10px;
-  background:linear-gradient(160deg,rgba(255,255,255,.6),transparent 45%),#f8f4ea;box-shadow:0 1px 0 #d9d0b5,0 6px 12px -6px rgba(0,0,0,.4),inset 0 0 0 1px rgba(43,32,22,.12)}
-.carte-nom{position:relative;z-index:1;font:italic 400 15px "IM Fell English",Georgia,serif;color:#4a3d2c}
-.carte-metier{position:relative;z-index:1;font:700 20px/1.1 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:#1f2a44}
-.carte-filet{width:60px;height:5px;border-top:1px solid rgba(43,32,22,.5);border-bottom:1px solid rgba(43,32,22,.5);margin:2px 0}
-.carte-spec{position:relative;z-index:1;font:400 16.5px/1.3 "IM Fell English",Georgia,serif;color:#2b2016}
-.carte-adresse{position:relative;z-index:1;font:italic 12px "IM Fell English",Georgia,serif;color:rgba(43,32,22,.7)}
 .nb-tuile{font:700 12px/1 var(--texte);color:var(--doux)}
 /* Aperçu de la contrefaçon : l'emplacement de la réponse est surligné et suit la saisie. */
 .titre-apercu{margin:0 0 -6px;font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:var(--rouge)}
@@ -430,7 +428,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .apercu.vide .rep{opacity:.4}
 .apercu .rep{background:rgba(179,50,42,.12);box-shadow:0 0 0 2px rgba(179,50,42,.12);border-bottom:1.5px dashed var(--rouge);border-radius:2px}
 /* Écran de pose compact : l'original et l'aperçu sans en-tête ni pied, le bouton reste dans l'écran. */
-.feuillet.modele .f-tete,.feuillet.modele .f-pied,.feuillet.modele .carte-adresse{display:none}
+.feuillet.modele .f-tete,.feuillet.modele .f-pied{display:none}
 .feuillet.modele{padding-top:10px;padding-bottom:10px;min-height:0}
 .feuillet.modele:not(.apercu){padding-bottom:40px}
 .feuillet.modele .f-art{font-size:16px}
@@ -448,7 +446,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
   .carte:has(#piegeTexte){gap:8px}
   .feuillet.apercu{padding:7px 12px}
   .apercu .f-planche{grid-template-columns:58px 1fr}.apercu .f-planche img{width:58px;height:58px}
-  .apercu .f-art,.apercu .carte-spec{font-size:14.5px}.apercu .carte-metier{font-size:17px}.apercu .carte-nom{font-size:13px}
+  .apercu .f-art{font-size:14.5px}
   .cat{min-height:30px;padding:0 9px;font-size:14px}
   #piegeTexte{min-height:46px;font-size:16px}
   .original{font-size:13.5px;padding:4px 8px}
@@ -456,7 +454,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 /* --- Artefacts, deuxième passe (maquette G, 23/11/2026) -------------------------------------
    Grain de papier fixe (bruit SVG, 3 octaves) et encre « foulée » (ombre claire de 1 px). */
 .choix .bouton.feuillet,.feuillet.modele{background-image:var(--grain),radial-gradient(circle at 18% 22%,rgba(150,95,40,.16) 0 3px,transparent 4px),radial-gradient(circle at 74% 64%,rgba(150,95,40,.12) 0 5px,transparent 7px),radial-gradient(120% 120% at 50% 50%,var(--p1,#f1e5c6) 45%,var(--p2,#dfca9d) 85%,var(--p3,#cdb078) 100%)}
-.f-art,.c-txt,.g-ligne,.pg-leg,.pg-rep,.carte-spec{text-shadow:0 1px 0 rgba(255,250,235,.5)}
+.f-art,.c-txt,.g-ligne,.pg-leg,.pg-rep{text-shadow:0 1px 0 rgba(255,250,235,.5)}
 .f-tete span:first-child,.f-tete span:last-child{font-style:italic;text-transform:none}
 .cote{position:absolute;right:12px;bottom:22px;z-index:1;font:700 15px/1 "Caveat",cursive;color:rgba(70,70,95,.5);transform:rotate(-4deg)}
 .joue .cote,[data-style="numero"] .cote{display:none}
@@ -485,15 +483,6 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
   .choix .bouton.feuillet:has(.pg-cuvette),.feuillet.apercu:has(.pg-cuvette){display:grid;grid-template-columns:86px 1fr;column-gap:10px;align-items:center}
   .pg-cuvette{grid-row:1/span 2;padding:4px}.pg-cuvette img{width:76px;height:64px}
   .pg-leg,.pg-rep{text-align:left}.pg-rep{font-size:14px}.feuillet small{grid-column:1/-1}}
-/* Carte de visite : nom en écriture anglaise, coin corné, liseré gaufré */
-.carte-nom{font:400 27px/1.1 "Pinyon Script",cursive;color:#1f2a44;font-style:normal}
-.carte-metier{font-size:14px;letter-spacing:.3em;color:#4a3d2c}
-.carte-filet{display:none}
-.carte-adresse{align-self:flex-end;font-size:11px}
-.choix .bouton.feuillet[data-style="carte"],.feuillet.modele[data-style="carte"]{background-image:var(--grain),linear-gradient(160deg,rgba(255,255,255,.6),transparent 45%);background-color:#f8f4ea;
-  box-shadow:0 1px 0 #d9d0b5,0 6px 12px -6px rgba(0,0,0,.4),inset 0 0 0 7px #f8f4ea,inset 0 0 0 8px rgba(43,32,22,.14),inset 1px 1px 0 9px rgba(255,255,255,.6);
-  clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%)}
-.choix .bouton.feuillet[data-style="carte"]::before,.feuillet.modele[data-style="carte"]::before{content:"";position:absolute;right:0;top:0;width:20px;height:20px;z-index:2;background:linear-gradient(225deg,transparent 50%,#e7dfcb 50%,#d3c7aa);box-shadow:-2px 2px 3px rgba(0,0,0,.15)}
 /* Consigne du lot (« Trouve la vraie définition ») et place réservée : ni les feuillets ni la carte
    ne grandissent quand les tampons, le verdict et les boutons apparaissent (demande de l'auteur). */
 .lot .consigne{font:700 12px/1.4 var(--titre);letter-spacing:.16em;text-transform:uppercase;color:var(--encre)}
@@ -635,6 +624,31 @@ header.vers-accueil{cursor:pointer}
 .classement .t-score{display:flex;align-items:center;gap:3px;font:700 16px/1.5 var(--texte);color:var(--rouge);font-variant-numeric:lining-nums tabular-nums}
 .classement .t-score .ic{width:.95em;height:.95em}
 .champ-passe{margin:0;text-align:center;font-size:14px;color:var(--doux)}
+/* Fiche de lexicographe (expressions) : bristol réglé, filet rouge, trou de tige en bas ; « Origine : »
+   dit ce qu'il faut deviner (remarque de l'auteur, 25/11/2026). */
+.choix .bouton.feuillet[data-style="fiche"],.feuillet.modele[data-style="fiche"]{clip-path:none;border-radius:3px;gap:5px;padding:8px 14px 16px;color:#1f2a44;
+  background:linear-gradient(rgba(179,50,42,.75),rgba(179,50,42,.75)) 0 29px/100% 1.5px no-repeat,repeating-linear-gradient(180deg,transparent 0 22px,rgba(70,110,170,.2) 22px 23px) 0 31px/100% calc(100% - 31px) no-repeat,var(--grain),linear-gradient(170deg,#fbf8ef,#eee7d2);
+  box-shadow:0 1px 0 #d9d0b5,0 6px 12px -6px rgba(0,0,0,.4),inset 0 0 0 1px rgba(43,32,22,.12)}
+.fi-tete{position:relative;z-index:1;display:flex;justify-content:space-between;height:18px;font:11px/18px "IM Fell English SC",Georgia,serif;letter-spacing:.14em;color:#8e2a1f}
+.fi-loc{position:relative;z-index:1;font:700 17px/1.25 "IM Fell English",Georgia,serif}
+.fi-orig{position:relative;z-index:1;font:16.5px/23px "IM Fell English",Georgia,serif;text-align:left}
+.fi-lab{font:12px "IM Fell English SC",Georgia,serif;letter-spacing:.1em;color:#8e2a1f}
+.fi-trou{position:absolute;left:50%;bottom:4px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--papier);box-shadow:inset 0 1px 2px rgba(0,0,0,.45)}
+/* Livret d'ouvrier (métiers) : couverture toilée au dos, « Profession » et « Ouvrage », cachet de mairie
+   (la carte de visite ne disait pas qu'il s'agissait d'un métier, remarque de l'auteur, 25/11/2026). */
+.choix .bouton.feuillet[data-style="livret"],.feuillet.modele[data-style="livret"]{clip-path:none;border-radius:2px 4px 4px 2px;gap:4px;padding:9px 14px 10px 24px;color:#2b2016;
+  background:linear-gradient(90deg,#2f4a5e 0 9px,rgba(0,0,0,.28) 9px 10px,transparent 10px),var(--grain),linear-gradient(170deg,#f4ecd6,#e4d5b0);
+  box-shadow:0 6px 12px -6px rgba(0,0,0,.45),inset 0 0 0 1px rgba(43,32,22,.15)}
+.li-tete{position:relative;z-index:1;display:flex;justify-content:space-between;font:11px "IM Fell English SC",Georgia,serif;letter-spacing:.14em;border-bottom:1px solid rgba(43,32,22,.5);padding-bottom:3px}
+.li-ligne{position:relative;z-index:1;display:flex;align-items:baseline;gap:8px;text-align:left}
+.li-lab{flex:none;width:68px;font:11.5px "IM Fell English SC",Georgia,serif;letter-spacing:.06em;color:rgba(43,32,22,.68)}
+.li-nom{font:italic 15px/1.3 "IM Fell English",Georgia,serif}
+.li-prof{font:700 15px/1.3 var(--titre);letter-spacing:.12em;text-transform:uppercase;color:#1f2a44}
+.li-ouv{font:16.5px/1.3 "IM Fell English",Georgia,serif}
+.li-cachet{position:absolute;right:12px;top:22px;z-index:0;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;text-align:center;
+  font:9px/1.15 "IM Fell English SC",Georgia,serif;letter-spacing:.06em;color:rgba(58,74,136,.5);border:2px solid rgba(58,74,136,.4);box-shadow:inset 0 0 0 3px rgba(244,236,214,.6),inset 0 0 0 4px rgba(58,74,136,.3);transform:rotate(-12deg)}
+@media (max-height:700px){.fi-orig,.li-ouv{font-size:15.5px}.fi-orig{line-height:22px}}
+@media (max-height:600px){.li-titulaire{display:none}.li-cachet{top:14px;width:48px;height:48px}}
 </style>
 
 <div class="accueil" id="accueil">
@@ -877,7 +891,7 @@ const FAMILLES = {
   // Mots intraduisibles et expressions étrangères mot à mot : pièges de Truffe à 0,46 au plus, reformulations de 0,62 à 0,82.
   intraduisible: { label: "Mot étranger", consigne: "", piege: "Invente une fausse traduction.", champ: "Ta fausse traduction", max: 110, seuil: 0.55 },
   etrangere:  { label: "Expression étrangère", consigne: "", piege: "Invente un faux sens.", champ: "Ton faux sens", max: 100, seuil: 0.55 },
-  // Métiers disparus : la carte de visite du métier, la spécialité à deviner (ajoutée le 23/11/2026).
+  // Métiers disparus : le livret d'ouvrier, la spécialité (« Ouvrage ») à deviner (ajoutée le 23/11/2026).
   metier:     { label: "Métier", consigne: "", piege: "Invente une fausse spécialité.", champ: "Ta fausse spécialité", max: 100, seuil: 0.5 },
 };
 /* Le faux s'affiche tel que le faussaire l'a écrit : majuscules et ponctuation sont à lui, comme le soin
@@ -1098,14 +1112,15 @@ const OUVRAGES = {
     { titre: "Le Petit Curieux", court: "", an: 1874, style: "coupure", teinte: 0 },
     { titre: "L'Écho des faits singuliers", court: "", an: 1889, style: "coupure", teinte: 1 },
     { titre: "Le Moniteur des curiosités", court: "", an: 1856, style: "coupure", teinte: 3 }],
-  expression: [
-    { titre: "Dictionnaire des locutions françaises", court: "Dict. des locutions", an: 1862, style: "classique", teinte: 1 },
-    { titre: "Origines des façons de parler", court: "Origines des locutions", an: 1847, style: "filet", teinte: 0 },
-    { titre: "Recueil des dictons et manières de dire", court: "Recueil des dictons", an: 1880, style: "classique", teinte: 2 }],
+  // Expressions : la fiche cartonnée d'un lexicographe, « Origine : » écrit dessus (la page de
+  // dictionnaire ne disait pas qu'il fallait deviner l'origine, remarque de l'auteur, 25/11/2026).
+  expression: [{ titre: "Fichier des locutions", court: "", an: 1891, style: "fiche", teinte: 0 }],
   // Communes : une plaque de gare émaillée (la page de dictionnaire « ne donnait pas », 23/11/2026).
   commune: [{ titre: "Plaque émaillée", court: "", an: 1900, style: "plaque", teinte: 0 }],
   // Métiers : une carte de visite gravée.
-  metier: [{ titre: "Carte de visite", court: "", an: 1890, style: "carte", teinte: 1 }],
+  // Métiers : le livret d'ouvrier, « Profession » et « Ouvrage » (la carte de visite ne disait pas
+  // qu'il s'agissait d'un métier, remarque de l'auteur, 25/11/2026).
+  metier: [{ titre: "Livret d'ouvrier", court: "", an: 1854, style: "livret", teinte: 1 }],
   photo: [
     { titre: "Encyclopédie illustrée", court: "Encyclopédie illustrée", an: 1902, style: "classique", teinte: 0 },
     { titre: "Planches du cabinet de curiosités", court: "Cabinet de curiosités, pl.", an: 1898, style: "filet", teinte: 3 },
@@ -1132,7 +1147,7 @@ const sansPoint = s => String(s).replace(/[.\s]+$/, "");
    en légende, sans quoi « Fig. — Un facteur » ne voudrait rien dire. */
 // Consigne au-dessus des pièces, à la place de la pastille de famille (demande de l'auteur, 23/11/2026).
 const OBJETS = { definition: ["la vraie définition", "la définition"], anecdote: ["la vraie anecdote", "l'anecdote"],
-  expression: ["la vraie expression", "l'expression"], commune: ["la vraie commune", "la commune"], photo: ["la vraie légende", "la légende"],
+  expression: ["la vraie origine", "l'origine"], commune: ["la vraie commune", "la commune"], photo: ["la vraie légende", "la légende"],
   metier: ["le vrai métier", "le métier"], intraduisible: ["la vraie traduction", "la traduction"], etrangere: ["le vrai sens", "le sens"] };
 function lot(m, motId, pose = false) {
   const f = famille(m), [vrai, simple] = OBJETS[f] || OBJETS.definition;
@@ -1141,7 +1156,7 @@ function lot(m, motId, pose = false) {
 function entreeFeuillet(m, texte, categorie) {
   const f = famille(m), t = esc(texte);
   // Région et registre dans l'entrée, à l'identique sur les deux feuillets (charte, point 6).
-  if (f === "definition") return `<b class="vedette">${esc(m.mot)}</b>, <i>${esc([categorie || m.categorie, m.region, m.registre].filter(Boolean).join(", ").replace(/\.?$/, "."))}</i> <span class="rep">${t}</span>`;
+  if (f === "definition") return `<b class="vedette">${esc(m.mot)}</b> : <i>${esc([categorie || m.categorie, m.region, m.registre].filter(Boolean).join(", ").replace(/\.?$/, "."))}</i> <span class="rep">${t}</span>`;
   if (f === "commune") {
     const dep = (String(m.question || "").match(/commune (de la |du |des |d'|de l'|de )(.+?) existe/) || []);
     return `<b class="vedette rep">${esc(sansPoint(texte))}</b>, <i>comm. ${esc(dep[1] || "")}${esc(dep[2] || m.region || "")}.</i>`;
@@ -1159,22 +1174,30 @@ function entreeFeuillet(m, texte, categorie) {
   // « Fig. Poêle en laiton percée… — Usage : à réchauffer le lit… ».
   return `<b class="vedette">Fig.</b> ${esc(m.legende || "")}. <span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(texte)}</span>`;
 }
-// Noms et adresses des cartes de visite : fictifs, tirés par lot (les mêmes sur les deux cartes).
+// Noms des livrets d'ouvrier : fictifs, tirés par lot (les mêmes sur les deux pièces).
 const PRENOMS = ["Auguste", "Désiré", "Hippolyte", "Anselme", "Prosper", "Théodore", "Honorine", "Clémence", "Eugénie", "Adélaïde"];
 const NOMS = ["Ferrand", "Bouvard", "Lemercier", "Gaudin", "Rouxel", "Delage", "Peyrot", "Mazeau", "Chabert", "Tessier"];
-const RUES = ["rue des Lombards", "rue du Pot-de-Fer", "quai de la Mégisserie", "rue de la Huchette", "rue des Bons-Enfants", "place du Marché", "rue Saint-Jacques", "rue de la Ferronnerie"];
 const VILLES = ["Paris", "Lyon", "Rouen", "Tours", "Limoges", "Nantes", "Dijon", "Besançon"];
 function objet(m, motId, texte) {
-  const f = famille(m), e = empreinte(motId);
-  if (f === "commune") {
-    const dep = (String(m.question || "").match(/commune (?:de la |du |des |d'|de l'|de )(.+?) existe/) || [])[1] || m.region || "";
-    return `<span class="patine" aria-hidden="true"></span><span class="plaque-nom rep">${esc(sansPoint(texte))}</span><span class="plaque-dep" aria-hidden="true">— ${esc(dep)} —</span>`;
-  }
-  const feminin = /euse$|ère$|ière$/.test(m.mot), prenom = feminin ? ["Honorine", "Clémence", "Eugénie", "Adélaïde"][e % 4] : PRENOMS[e % 6];
-  return `<span class="carte-nom">${prenom} ${NOMS[(e >> 3) % NOMS.length]}</span>
-    <span class="carte-metier">${esc(m.mot)}</span><span class="carte-filet" aria-hidden="true"></span>
-    <span class="carte-spec rep">${esc(sansPoint(texte))}.</span>
-    <span class="carte-adresse" aria-hidden="true">${(e % 40) + 2}, ${RUES[(e >> 2) % RUES.length]}, ${VILLES[(e >> 5) % VILLES.length]}</span>`;
+  const dep = (String(m.question || "").match(/commune (?:de la |du |des |d'|de l'|de )(.+?) existe/) || [])[1] || m.region || "";
+  return `<span class="patine" aria-hidden="true"></span><span class="plaque-nom rep">${esc(sansPoint(texte))}</span><span class="plaque-dep" aria-hidden="true">— ${esc(dep)} —</span>`;
+}
+// Livret d'ouvrier (métiers) : titulaire, profession en capitales, « Ouvrage » à deviner, cachet de la mairie.
+function livret(m, motId, texte) {
+  const e = empreinte(motId), feminin = /euse$|ère$|ière$/.test(m.mot), prenom = feminin ? ["Honorine", "Clémence", "Eugénie", "Adélaïde"][e % 4] : PRENOMS[e % 6];
+  return `<span class="li-tete" aria-hidden="true"><span>Livret d'ouvrier</span><span>N° ${1000 + e % 8999}</span></span>
+    <span class="li-ligne li-titulaire" aria-hidden="true"><span class="li-lab">Délivré à</span><span class="li-nom">${prenom} ${NOMS[(e >> 3) % NOMS.length]}</span></span>
+    <span class="li-ligne"><span class="li-lab">Profession</span><span class="li-prof">${esc(m.mot)}</span></span>
+    <span class="li-ligne"><span class="li-lab">Ouvrage</span><span class="li-ouv rep">${esc(sansPoint(texte))}.</span></span>
+    <span class="li-cachet" aria-hidden="true">Mairie<br>de ${VILLES[(e >> 5) % VILLES.length]}</span>`;
+}
+// Fiche de lexicographe (expressions) : fiche cartonnée réglée, la locution, « Origine : » et la réponse.
+function fiche(m, motId, texte) {
+  const e = empreinte(motId);
+  return `<span class="fi-tete" aria-hidden="true"><span>Locution</span><span>N° ${1000 + e % 8999}</span></span>
+    <span class="fi-loc">« ${esc(m.mot.charAt(0).toUpperCase() + m.mot.slice(1))} »</span>
+    <span class="fi-orig"><span class="fi-lab">Origine :</span> <span class="rep">${esc(texte)}</span></span>
+    <span class="fi-trou" aria-hidden="true"></span>`;
 }
 const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 function coupure(m, motId, texte, o) {
@@ -1195,9 +1218,14 @@ function plancheGravee(m, motId, texte) {
     <span class="pg-leg" aria-hidden="true">Fig. ${n}. — ${esc(m.legende || "")}</span>
     <span class="pg-rep"><span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(texte)}</span></span>`;
 }
+// Typographie française : espace insécable après « et avant » : ; ! ? (le » ne part plus seul à la ligne).
+const insecables = s => String(s).replace(/« /g, "«\u00a0").replace(/ ([»:;!?])/g, "\u00a0$1");
 function feuillet(m, motId, texte, categorie) {
+  texte = insecables(texte);
   const f = famille(m), o = ouvrage(m, motId);
-  if (o.style === "plaque" || o.style === "carte") return objet(m, motId, texte);
+  if (o.style === "plaque") return objet(m, motId, texte);
+  if (o.style === "fiche") return fiche(m, motId, texte);
+  if (o.style === "livret") return livret(m, motId, texte);
   if (o.style === "coupure") return coupure(m, motId, texte, o);
   if (o.style === "guide") return guide(m, texte, o);
   if (f === "photo") return plancheGravee(m, motId, texte);
@@ -1258,7 +1286,7 @@ function repondre(motId, options, piege, k) {
   serie.num++; serie.traces.push(juste ? 1 : 0);
   const fin = serie.num >= TOTAL;
   document.getElementById("suite").innerHTML = `<div class="verdict">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--ecu)" : "var(--faux)"}">+${gain}${IC.ecu}</span></div>
-    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${juste && solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="${juste ? `Contrefaire ce lot pour ${PRIX_DIRECT} écus` : "Contrefaçon réservée aux pièces authentifiées"}">${IC.piege} −${PRIX_DIRECT}${IC.ecu}</button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
+    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${juste && solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="${juste ? `Contrefaire ce lot pour ${PRIX_DIRECT} écus` : "Contrefaçon réservée aux pièces authentifiées"}">Contrefaire <span class="prix">−${PRIX_DIRECT}${IC.ecu}</span></button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
     ${db ? `<div class="signal"><button class="lien" type="button" id="signaler">Signaler le lot</button><div id="raisons" hidden></div></div>` : ""}`;
   const pr = $e.querySelector(".progres"); if (pr) pr.remove();
   $e.querySelector(".entete").outerHTML = entete(serie.num);
