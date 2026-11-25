@@ -3253,5 +3253,185 @@
   "id": "t-o-pomander-3",
   "mot": "o-pomander",
   "texte": "à réchauffer ses doigts avec une braise."
+ },
+ {
+  "id": "t-k-colacho-1",
+  "mot": "k-colacho",
+  "texte": "jettent des pétards dans les cheminées pour chasser l'hiver"
+ },
+ {
+  "id": "t-k-colacho-2",
+  "mot": "k-colacho",
+  "texte": "volent la chèvre du curé et la ramènent le lendemain"
+ },
+ {
+  "id": "t-k-colacho-3",
+  "mot": "k-colacho",
+  "texte": "plongent tout habillés dans la fontaine du village"
+ },
+ {
+  "id": "t-k-nakisumo-1",
+  "mot": "k-nakisumo",
+  "texte": "portent les jeunes mariés sur leurs épaules autour du sanctuaire"
+ },
+ {
+  "id": "t-k-nakisumo-2",
+  "mot": "k-nakisumo",
+  "texte": "font la course avec des cochons dans les rizières"
+ },
+ {
+  "id": "t-k-nakisumo-3",
+  "mot": "k-nakisumo",
+  "texte": "avalent des piments crus devant les moines"
+ },
+ {
+  "id": "t-k-blackening-1",
+  "mot": "k-blackening",
+  "texte": "enfermés une nuit entière dans le phare du port"
+ },
+ {
+  "id": "t-k-blackening-2",
+  "mot": "k-blackening",
+  "texte": "obligés de traverser le loch à la nage"
+ },
+ {
+  "id": "t-k-blackening-3",
+  "mot": "k-blackening",
+  "texte": "forcés de chanter sous les fenêtres de tous leurs voisins"
+ },
+ {
+  "id": "t-k-jolakottur-1",
+  "mot": "k-jolakottur",
+  "texte": "vole les cadeaux des enfants qui ont menti"
+ },
+ {
+  "id": "t-k-jolakottur-2",
+  "mot": "k-jolakottur",
+  "texte": "dort sous le sapin et griffe les curieux"
+ },
+ {
+  "id": "t-k-jolakottur-3",
+  "mot": "k-jolakottur",
+  "texte": "dévore les restes de ceux qui n'ont pas fini leur assiette"
+ },
+ {
+  "id": "t-k-kitkat-1",
+  "mot": "k-kitkat",
+  "texte": "un crayon taillé par un moine, pour ne faire aucune faute"
+ },
+ {
+  "id": "t-k-kitkat-2",
+  "mot": "k-kitkat",
+  "texte": "un poisson séché à garder dans la poche"
+ },
+ {
+  "id": "t-k-kitkat-3",
+  "mot": "k-kitkat",
+  "texte": "des chaussettes rouges qui portent bonheur"
+ },
+ {
+  "id": "t-k-bokaflod-1",
+  "mot": "k-bokaflod",
+  "texte": "des poissons séchés emballés dans du papier journal"
+ },
+ {
+  "id": "t-k-bokaflod-2",
+  "mot": "k-bokaflod",
+  "texte": "des chaussettes en laine tricotées par la grand-mère"
+ },
+ {
+  "id": "t-k-bokaflod-3",
+  "mot": "k-bokaflod",
+  "texte": "des bougies à garder allumées jusqu'à l'aube"
+ },
+ {
+  "id": "t-k-lopburi-1",
+  "mot": "k-lopburi",
+  "texte": "font défiler des chats habillés en moines"
+ },
+ {
+  "id": "t-k-lopburi-2",
+  "mot": "k-lopburi",
+  "texte": "repeignent en or les marches du grand temple"
+ },
+ {
+  "id": "t-k-lopburi-3",
+  "mot": "k-lopburi",
+  "texte": "organisent une course d'éléphants dans les rues"
+ },
+ {
+  "id": "t-k-rouketo-1",
+  "mot": "k-rouketo",
+  "texte": "se disputent un agneau rôti au cours d'une partie de soule"
+ },
+ {
+  "id": "t-k-rouketo-2",
+  "mot": "k-rouketo",
+  "texte": "s'aspergent d'eau bénite depuis les toits"
+ },
+ {
+  "id": "t-k-rouketo-3",
+  "mot": "k-rouketo",
+  "texte": "font sonner leurs cloches jusqu'à ce que l'autre se taise"
+ },
+ {
+  "id": "t-k-donald-1",
+  "mot": "k-donald",
+  "texte": "éteignent toutes les lumières pour guetter les lutins"
+ },
+ {
+  "id": "t-k-donald-2",
+  "mot": "k-donald",
+  "texte": "chantent l'hymne national à leur fenêtre"
+ },
+ {
+  "id": "t-k-donald-3",
+  "mot": "k-donald",
+  "texte": "mangent un hareng entier sans les mains"
+ },
+ {
+  "id": "t-k-fromage-1",
+  "mot": "k-fromage",
+  "texte": "à dos de mouton, sans selle ni bride"
+ },
+ {
+  "id": "t-k-fromage-2",
+  "mot": "k-fromage",
+  "texte": "en se tenant à une corde attachée à un tonneau"
+ },
+ {
+  "id": "t-k-fromage-3",
+  "mot": "k-fromage",
+  "texte": "avec un œuf en équilibre sur une cuillère"
+ },
+ {
+  "id": "t-k-uphellyaa-1",
+  "mot": "k-uphellyaa",
+  "texte": "plongent ensemble dans la mer glacée du port"
+ },
+ {
+  "id": "t-k-uphellyaa-2",
+  "mot": "k-uphellyaa",
+  "texte": "élisent un roi de l'hiver qui gouverne la ville une journée"
+ },
+ {
+  "id": "t-k-uphellyaa-3",
+  "mot": "k-uphellyaa",
+  "texte": "se lancent des boules de neige jusqu'au lever du jour"
+ },
+ {
+  "id": "t-k-treppe-1",
+  "mot": "k-treppe",
+  "texte": "doit porter un chapeau de paille toute la journée"
+ },
+ {
+  "id": "t-k-treppe-2",
+  "mot": "k-treppe",
+  "texte": "doit offrir une tournée de bière à tout le village"
+ },
+ {
+  "id": "t-k-treppe-3",
+  "mot": "k-treppe",
+  "texte": "doit grimper au mât de la place du marché"
  }
 ]

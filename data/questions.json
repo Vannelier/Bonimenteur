@@ -1550,5 +1550,113 @@
   "legende": "Boule d'or ajourée, portée à la main (1518)",
   "rubrique": "Usage",
   "source": "wikipedia:Pomander"
+ },
+ "k-colacho": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Castrillo de Murcia, Espagne",
+  "timbre": "España",
+  "question": "Ici, chaque année, des hommes déguisés en diables ___.",
+  "vraie": "sautent par-dessus les bébés de l'année, couchés sur des matelas dans la rue",
+  "source": "wikipedia:Saute-Bébé"
+ },
+ "k-nakisumo": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Tokyo, Japon",
+  "timbre": "Nippon",
+  "question": "Ici, au temple, des lutteurs de sumo ___.",
+  "vraie": "font pleurer des bébés : le premier qui pleure a gagné",
+  "source": "wikipedia-en:Naki Sumo Crying Baby Festival"
+ },
+ "k-blackening": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Aberdeen, Écosse",
+  "timbre": "Scotland",
+  "question": "Ici, avant leur mariage, les futurs époux sont capturés par leurs amis, ___.",
+  "vraie": "couverts de nourriture et de tout ce qui colle, puis promenés dans les rues",
+  "source": "wikipedia-en:Blackening (Scottish wedding custom)"
+ },
+ "k-jolakottur": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Reykjavik, Islande",
+  "timbre": "Ísland",
+  "question": "Ici, on raconte aux enfants qu'à Noël, un chat géant ___.",
+  "vraie": "mange ceux qui n'ont pas reçu de vêtements neufs",
+  "source": "wikipedia:Jólakötturinn"
+ },
+ "k-kitkat": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Tokyo, Japon",
+  "timbre": "Nippon",
+  "question": "Ici, avant les examens, on offre aux étudiants ___.",
+  "vraie": "des barres Kit Kat, parce que leur nom sonne comme « tu vas gagner »",
+  "source": "wikipedia-en:Kit Kats in Japan"
+ },
+ "k-bokaflod": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Reykjavik, Islande",
+  "timbre": "Ísland",
+  "question": "Ici, la veille de Noël, on offre surtout ___.",
+  "vraie": "des livres : c'est le cadeau de Noël le plus offert du pays",
+  "source": "wikipedia-en:Jólabókaflóð"
+ },
+ "k-lopburi": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Lopburi, Thaïlande",
+  "timbre": "Siam",
+  "question": "Ici, chaque fin novembre, les habitants ___.",
+  "vraie": "offrent un immense festin aux singes de la ville",
+  "source": "wikipedia-en:Monkey Buffet Festival"
+ },
+ "k-rouketo": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Vrontados, Grèce",
+  "timbre": "Hellas",
+  "question": "Ici, à Pâques, les fidèles de deux églises rivales ___.",
+  "vraie": "se tirent des dizaines de milliers de fusées, en visant le clocher d'en face",
+  "source": "wikipedia-en:Rouketopolemos"
+ },
+ "k-donald": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Stockholm, Suède",
+  "timbre": "Sverige",
+  "question": "Ici, chaque veille de Noël depuis 1960, près de quatre habitants sur dix ___.",
+  "vraie": "regardent à la télévision la même émission de Donald Duck et ses amis",
+  "source": "wikipedia-en:From All of Us to All of You"
+ },
+ "k-fromage": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Brockworth, Angleterre",
+  "timbre": "England",
+  "question": "Ici, chaque printemps, des coureurs dévalent une colline très pentue ___.",
+  "vraie": "à la poursuite d'une meule de fromage",
+  "source": "wikipedia-en:Cooper's Hill Cheese-Rolling and Wake"
+ },
+ "k-uphellyaa": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Lerwick, Écosse",
+  "timbre": "Scotland",
+  "question": "Ici, fin janvier, un millier d'hommes costumés défilent avec des torches, puis ___.",
+  "vraie": "mettent le feu à une réplique de drakkar viking",
+  "source": "wikipedia-en:Up Helly Aa"
+ },
+ "k-treppe": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Brême, Allemagne",
+  "timbre": "Deutschland",
+  "question": "Ici, l'homme encore célibataire le jour de ses 30 ans ___.",
+  "vraie": "doit balayer les marches de la cathédrale",
+  "source": "wikipedia-de:Domtreppenfegen"
  }
 }

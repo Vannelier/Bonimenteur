@@ -13,7 +13,7 @@
 <meta name="theme-color" content="#15281f">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Pinyon+Script&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Cinzel:wght@700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Stardos+Stencil:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Kalam:wght@400;700&family=Pinyon+Script&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Cinzel:wght@700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Stardos+Stencil:wght@700&display=swap">
 <style>
 /* Bonimenteur : l'Atelier du faussaire. On fabrique des faux (documents, billets,
    tampons) et on démasque ceux des autres. Mise en page de Discoverium, univers propre :
@@ -739,6 +739,27 @@ header.vers-accueil{cursor:pointer}
 .hn-carte.vide .hn-nom{color:var(--trait);font-weight:400}
 .hn-carte.moi{box-shadow:0 3px 0 var(--sombre),inset 0 0 0 2px var(--or)}
 .classement .t-score.sc-experts{color:var(--vert)}
+/* Carnet de voyage (coutumes) : page lignée jaunie, dos de cuir, timbre du pays oblitéré,
+   écriture à la main (Kalam ; la signature du faussaire reste en Caveat). */
+.choix .bouton.feuillet[data-style="carnet"],.feuillet.modele[data-style="carnet"]{clip-path:none;border-radius:2px 6px 6px 2px;gap:4px;padding:10px 12px 12px 28px;color:#2a2f4a;
+  background:repeating-linear-gradient(180deg,transparent 0 24px,rgba(60,90,150,.16) 24px 25px) 0 36px/100% calc(100% - 36px) no-repeat,
+    radial-gradient(ellipse 46px 34px at 84% 84%,rgba(140,95,40,.15),transparent 70%),var(--grain),linear-gradient(170deg,#f7f0de,#ebe0c3);
+  box-shadow:0 7px 14px -7px rgba(0,0,0,.5),inset 18px 0 0 #3c2a1c,inset 20px 0 0 rgba(0,0,0,.25),inset 0 0 0 1px rgba(60,45,20,.12)}
+.ca-timbre{position:absolute;right:12px;top:7px;z-index:1;width:34px;height:41px;padding:3px;background:#fffaf0;outline:3px dotted #efe5cb;outline-offset:-1px;box-shadow:0 1px 2px rgba(0,0,0,.25);transform:rotate(5deg)}
+.ca-timbre i{display:flex;flex-direction:column;justify-content:space-between;height:100%;padding:3px 2px;background:linear-gradient(160deg,#b3322a,#7f2019);color:#fff;
+  font:700 7px/1 "IM Fell English SC",Georgia,serif;font-style:normal;text-align:center;overflow:hidden}
+.ca-timbre i b{font:700 12px var(--texte)}
+.ca-oblit{position:absolute;right:34px;top:4px;z-index:1;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;
+  border:2px solid rgba(40,50,90,.42);font:8px/1.1 "IM Fell English SC",Georgia,serif;color:rgba(40,50,90,.6);text-align:center;transform:rotate(-14deg)}
+.ca-lieu{position:relative;z-index:1;padding-right:84px;min-height:24px;font:700 15px/1.3 Kalam,cursive;color:#5a3f2a}
+.ca-texte{position:relative;z-index:1;font:400 17px/25px Kalam,cursive;text-align:left}
+.ca-texte .rep{font-weight:700;color:#1d2a5a}
+/* La première ligne contourne le timbre et son oblitération. */
+.ca-texte::before{content:"";float:right;width:78px;height:22px}
+@media (max-height:700px){.ca-texte{font-size:16px;line-height:23px}}
+@media (max-height:600px){.ca-texte{font-size:15px;line-height:21px}.ca-lieu{font-size:14px;min-height:20px}.choix .bouton.feuillet[data-style="carnet"]{padding-top:8px;padding-bottom:8px}}
+.feuillet.modele .ca-timbre,.feuillet.modele .ca-oblit,.feuillet.modele .feuillet.modele .ca-lieu{padding-right:0;min-height:0}
+.feuillet.modele .ca-texte::before{content:none}
 </style>
 
 <div class="accueil" id="accueil">
@@ -820,6 +841,8 @@ const IC = {
   coeur: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg>',
   definition: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5c-.8 0-1.5-.7-1.5-1.5z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5c.8 0 1.5-.7 1.5-1.5z"/></svg>',
   metier: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M7 10h10M8.5 13.5h7" stroke-linecap="round"/></svg>',
+  // Coutume : une boussole.
+  coutume: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>',
   anecdote: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5" stroke-linecap="round"/></svg>',
   expression: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 17.5c0-4.2 1.6-7.5 5-9.5l1 1.6c-1.9 1.4-2.8 3-2.9 4.9H10v3H5zm9 0c0-4.2 1.6-7.5 5-9.5l1 1.6c-1.9 1.4-2.8 3-2.9 4.9H19v3h-5z"/></svg>',
   commune: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-6.5-6.3-6.5-11a6.5 6.5 0 0 1 13 0c0 4.7-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>',
@@ -979,6 +1002,8 @@ const nomCommune = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
 const FAMILLES = {
   definition: { label: "Définition", consigne: "", piege: "Invente une fausse définition crédible.", champ: "Ta fausse définition", max: 90, seuil: 0.5 },
   anecdote:   { label: "Anecdote", consigne: "", piege: "Invente une fin crédible, mais fausse.", champ: "Ta fausse fin de phrase", max: 110, seuil: 0.65 },
+  // Coutumes du monde : le carnet de voyage (25/11/2026). Phrase à trou comme les anecdotes, même seuil.
+  coutume:    { label: "Coutume", consigne: "", piege: "Invente une coutume crédible, mais fausse.", champ: "Ta fausse coutume", max: 110, seuil: 0.65 },
   expression: { label: "Expression", consigne: "", piege: "Invente une fausse origine crédible.", champ: "Ta fausse origine", max: 120, seuil: 0.65 },
   commune:    { label: "Commune", consigne: "", piege: "Invente un faux nom de commune crédible.", champ: "Ton faux nom de commune", max: 40, seuil: 2 },
   photo:      { label: "Photo", consigne: "", piege: "Invente une explication crédible, mais fausse.", champ: "Ta fausse explication", max: 120, seuil: 0.65 },
@@ -992,12 +1017,12 @@ const FAMILLES = {
    qu'il met à imiter la vraie (demande de l'auteur, 24/11/2026). Seuls les espaces en trop sont retirés.
    Les vraies réponses sont écrites dans leur forme d'affichage (docs/questions.md, « Forme des réponses »). */
 const formater = brut => String(brut).replace(/\s+/g, " ").trim();
-const ORDRE = ["definition", "anecdote", "expression", "commune", "photo", "metier", "intraduisible", "etrangere"];
+const ORDRE = ["definition", "anecdote", "coutume", "expression", "commune", "photo", "metier", "intraduisible", "etrangere"];
 const famille = m => FAMILLES[m.type] ? m.type : "definition";
 function titre(m) {
   const f = famille(m);
   if (f === "expression") return `« ${m.mot} »`;
-  if (f === "anecdote" || f === "commune" || f === "photo" || f === "intraduisible" || f === "etrangere") return m.question;
+  if (f === "anecdote" || f === "coutume" || f === "commune" || f === "photo" || f === "intraduisible" || f === "etrangere") return m.question;
   return m.mot;
 }
 const taux = (I, id) => ((I.pris.get(id) || 0) + 1) / ((I.pris.get(id) || 0) + (I.demasque.get(id) || 0) + 3);
@@ -1174,6 +1199,8 @@ const OUVRAGES = {
     { titre: "Le Petit Curieux", court: "", an: 1874, style: "coupure", teinte: 0 },
     { titre: "L'Écho des faits singuliers", court: "", an: 1889, style: "coupure", teinte: 1 },
     { titre: "Le Moniteur des curiosités", court: "", an: 1856, style: "coupure", teinte: 3 }],
+  // Coutumes du monde : le carnet de voyage, écrit sur place (maquette du 25/11/2026).
+  coutume: [{ titre: "Carnet de voyage", court: "", an: 1923, style: "carnet", teinte: 0 }],
   // Expressions : la fiche cartonnée d'un lexicographe, « Origine : » écrit dessus (la page de
   // dictionnaire ne disait pas qu'il fallait deviner l'origine, remarque de l'auteur, 25/11/2026).
   expression: [{ titre: "Fichier des locutions", court: "", an: 1891, style: "fiche", teinte: 0 }],
@@ -1215,7 +1242,7 @@ const sansPoint = s => String(s).replace(/[.\s]+$/, "");
    une ligne fine (famille, numéro de lot) et, pour une photo, la planche : l'image et sa question
    en légende, sans quoi « Fig. — Un facteur » ne voudrait rien dire. */
 // Consigne au-dessus des pièces, à la place de la pastille de famille (demande de l'auteur, 23/11/2026).
-const OBJETS = { definition: ["la vraie définition", "la définition"], anecdote: ["la vraie anecdote", "l'anecdote"],
+const OBJETS = { definition: ["la vraie définition", "la définition"], anecdote: ["la vraie anecdote", "l'anecdote"], coutume: ["la vraie coutume", "la coutume"],
   expression: ["la vraie origine", "l'origine"], commune: ["la vraie commune", "la commune"], photo: ["la vraie légende", "la légende"],
   metier: ["le vrai métier", "le métier"], intraduisible: ["la vraie traduction", "la traduction"], etrangere: ["le vrai sens", "le sens"] };
 function lot(m, motId, pose = false) {
@@ -1296,6 +1323,15 @@ function plancheGravee(m, motId, texte) {
     <span class="pg-leg" aria-hidden="true">Fig. ${n}. — ${esc(m.legende || "")}</span>
     <span class="pg-rep"><span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(texte)}</span></span>`;
 }
+// Carnet de voyage (coutumes) : le lieu et le jour, le timbre du pays oblitéré, la coutume notée sur
+// place, la réponse à la place de « ___ ». Pas d'année : certaines coutumes sont récentes.
+function carnet(m, motId, texte) {
+  const e = empreinte(motId), [avant, apres] = String(m.question || "").split("___");
+  return `<span class="ca-timbre" aria-hidden="true"><i>${esc(m.timbre || "")}<b>${[5, 10, 15, 20, 25][e % 5]}</b></i></span>
+    <span class="ca-oblit" aria-hidden="true">${(e % 27) + 1}<br>${MOIS[(e >> 4) % 12]}</span>
+    <span class="ca-lieu">${esc(m.lieu || "")}</span>
+    <span class="ca-texte">${esc(avant || "")}<span class="rep">${esc(sansPoint(texte))}</span>${esc(apres ?? ".")}</span>`;
+}
 // Brevet d'invention (objets photographiés) : en-tête et numéro, la planche du dessin, le titre de
 // l'invention, « Objet : » puis la réponse.
 function brevet(m, motId, texte) {
@@ -1315,6 +1351,7 @@ function feuillet(m, motId, texte, categorie) {
   if (o.style === "livret") return livret(m, motId, texte);
   if (o.style === "carte") return carteVisite(m, motId, texte);
   if (o.style === "brevet") return brevet(m, motId, texte);
+  if (o.style === "carnet") return carnet(m, motId, texte);
   if (o.style === "coupure") return coupure(m, motId, texte, o);
   if (o.style === "guide") return guide(m, texte, o);
   if (f === "photo") return plancheGravee(m, motId, texte);

@@ -39,6 +39,7 @@ prix Ig Nobel).
 |---|---|---|---|
 | absent | Définition | un mot rare (`mot`) | 74 |
 | `anecdote` | Anecdote | une phrase à trou `___` (`question`) | 26 |
+| `coutume` | Coutume | une phrase à trou `___` dans la voix du voyageur (« Ici, … »), avec `lieu` (« Ville, Pays ») et `timbre` (le pays dans sa langue) | 12 |
 | `commune` | Commune | une vraie commune au nom étonnant | 18 |
 | `intraduisible` | Mot étranger | un mot sans équivalent | 21 |
 | `photo` | Photo | une image (`image`, `alt`, `credit`) | 19 |
@@ -69,8 +70,8 @@ l'auteur, 24/11/2026 : la page corrigeait « Étienne Daho » en « étienne
 Daho »). Les vraies et les faux de départ s'écrivent donc dans leur forme
 d'affichage, vérifiée par `test_donnees_coherentes` :
 
-- anecdote : le bout de phrase qui remplace `___`, sans majuscule (sauf nom
-  propre) ni point final ;
+- anecdote et coutume : le bout de phrase qui remplace `___`, sans majuscule
+  (sauf nom propre) ni point final ;
 - photo : la suite de « Usage : » ou, en brevet, de « Objet : »
   (« appareil permettant de… »), sans majuscule, avec point final ;
 - commune : le nom, sans point ;
@@ -94,7 +95,7 @@ les duels.
 
 - Les vérités du premier pack (25 questions) et les ajouts suivants sont
   vérifiés dans une source (Wiktionnaire, CNRTL, Wikipédia) ; les faux de
-  départ aussi, pour qu'aucun ne dise vrai. 164 questions sur 217 portent leur
+  départ aussi, pour qu'aucun ne dise vrai. 176 questions sur 229 portent leur
   source dans `source` (`wiktionary:`, `wiktionary-en:`, `wikipedia:`,
   `wikipedia-en:`, `geo.api.gouv.fr`) : les autres sont à sourcer. Exemples de faux corrigés : « sobremesa » veut aussi dire nappe et dessert ;
   « crocheteur » désigne aussi celui qui crochète les serrures.
@@ -126,6 +127,20 @@ les duels.
 - Photos : Wikimedia Commons, réduites à 640 px, crédit dans `credit`. Le
   pomander, que Wikimedia refusait de servir (limite de débit), fourni par
   l'auteur : détail d'un portrait de 1518, domaine public.
+
+## Coutumes du monde (25/11/2026)
+
+12 coutumes, toutes sourcées (Wikipédia en français, anglais et allemand) : le
+saut des diables par-dessus les bébés (Castrillo de Murcia), le Naki Sumo, le
+« blackening » écossais, le chat de Noël islandais, les Kit Kat des examens au
+Japon, les livres de la veille de Noël en Islande, le festin des singes de
+Lopburi, la guerre des fusées de Vrontados, Donald Duck à Noël en Suède, la
+course au fromage de Cooper's Hill, le drakkar brûlé de Lerwick, les marches
+balayées de Brême. Écartées faute de source dans l'article : la cannelle des
+célibataires danois, le prix du portage d'épouse. Faux de Truffe sous 0,5 à
+l'arbitre (seuil 0,65) ; un faux ne reprend jamais une autre vraie coutume du
+même pays (la soupe au riz et l'amande, la danse des petites grenouilles).
+Bas des pièces à 539 px au plus à 375 × 553.
 
 ## Ajouter une question
 

@@ -28,17 +28,19 @@ réclame, un brevet comme un inventeur).
 | `livret` | livret d'ouvrier | après « Ouvrage » | `livret` |
 | `carte` | carte de visite réclame | le slogan de l'artisan | `carteVisite` |
 | `brevet` | brevet d'invention, avec la planche du dessin | après « Objet : » | `brevet` |
+| `carnet` | carnet de voyage : lieu, timbre du pays oblitéré, écriture à la main (Kalam) | à la place de `___` dans la phrase | `carnet` |
 | `plaque` | panonceau de gare ancien | le nom de la commune | `objet` |
 | planche gravée | photo dans sa cuvette, « Fig. n. — » (pages `classique`, `filet` du thème photo) | après la rubrique (« Usage : ») | `plancheGravee` |
 
 ## Thèmes et leurs artefacts
 
-Nombre de questions au 25/11/2026 (217 en tout).
+Nombre de questions au 25/11/2026 (229 en tout).
 
 | Thème (`type`) | Questions | Artefacts | Choix |
 |---|---|---|---|
 | définition | 74 | page de dictionnaire (`classique`, `filet`) | au sort |
 | anecdote | 26 | coupure de journal | — |
+| coutume | 12 | carnet de voyage | — |
 | mot étranger (`intraduisible`) | 21 | guide de conversation | — |
 | expression étrangère (`etrangere`) | 19 | guide de conversation | — |
 | commune | 18 | panonceau de gare | — |
@@ -61,9 +63,9 @@ Nombre de questions au 25/11/2026 (217 en tout).
 
 ## Pistes (non faites)
 
-Télégramme et carnet de voyage : retenus par l'auteur comme objets, sans
-thème encore (les mots étrangers ne lui semblent pas le bon). Carnet de voyage
-pour un thème « Coutumes du monde » : maquette faite le 25/11/2026.
+Télégramme : retenu par l'auteur comme objet, sans thème encore (les mots
+étrangers ne lui semblent pas le bon). Le carnet de voyage a trouvé le sien :
+« Coutumes du monde », ajouté le 25/11/2026.
 
 Écarté : remèdes d'apothicaire (composition, vertus des remèdes de charlatan),
 jugé drôle mais pas jouable par l'auteur (25/11/2026). Leçon : la partie cachée
