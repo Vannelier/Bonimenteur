@@ -1277,17 +1277,17 @@
  {
   "id": "t-oublieur-1",
   "mot": "oublieur",
-  "texte": "Employé chargé d'effacer les registres des condamnés graciés."
+  "texte": "Registres effacés pour les condamnés graciés !"
  },
  {
   "id": "t-oublieur-2",
   "mot": "oublieur",
-  "texte": "Moine qui recopiait les manuscrits abîmés."
+  "texte": "Manuscrits abîmés recopiés à la plume !"
  },
  {
   "id": "t-oublieur-3",
   "mot": "oublieur",
-  "texte": "Domestique qui rangeait les objets perdus d'un château."
+  "texte": "Objets perdus retrouvés et rangés, dans tout le château !"
  },
  {
   "id": "t-p-cheval-1",
@@ -1397,17 +1397,17 @@
  {
   "id": "t-patenotrier-1",
   "mot": "patenotrier",
-  "texte": "Marchand de pâtes fraîches."
+  "texte": "Pâtes fraîches, roulées à la main chaque matin !"
  },
  {
   "id": "t-patenotrier-2",
   "mot": "patenotrier",
-  "texte": "Gardien des troupeaux de l'abbaye."
+  "texte": "Troupeaux gardés à l'année, sur les terres de l'abbaye !"
  },
  {
   "id": "t-patenotrier-3",
   "mot": "patenotrier",
-  "texte": "Maître d'école qui enseignait le latin."
+  "texte": "Leçons de latin à domicile, pour les jeunes gens !"
  },
  {
   "id": "t-peguer-1",
@@ -1772,32 +1772,32 @@
  {
   "id": "t-bourrelier-1",
   "mot": "bourrelier",
-  "texte": "Rembourre les fauteuils et les matelas."
+  "texte": "Fauteuils et matelas rembourrés comme neufs !"
  },
  {
   "id": "t-bourrelier-2",
   "mot": "bourrelier",
-  "texte": "Prépare les fagots de petit bois pour les fours."
+  "texte": "Fagots de petit bois pour vos fours, livrés chaque matin !"
  },
  {
   "id": "t-bourrelier-3",
   "mot": "bourrelier",
-  "texte": "Vérifie les poids et mesures des marchands."
+  "texte": "Poids et mesures vérifiés : ne vous faites plus voler au marché !"
  },
  {
   "id": "t-megissier-1",
   "mot": "megissier",
-  "texte": "Fabrique les mèches des lampes à huile."
+  "texte": "Mèches de lampe à huile : une flamme claire, sans fumée !"
  },
  {
   "id": "t-megissier-2",
   "mot": "megissier",
-  "texte": "Taille les meules des moulins à grain."
+  "texte": "Meules de moulin taillées et retaillées, pour une farine plus fine !"
  },
  {
   "id": "t-megissier-3",
   "mot": "megissier",
-  "texte": "Soigne les chevaux de poste fatigués."
+  "texte": "Chevaux de poste fourbus ? Je les remets sur pied en trois jours !"
  },
  {
   "id": "t-feuillardier-1",
@@ -1817,17 +1817,17 @@
  {
   "id": "t-ravaudeuse-1",
   "mot": "ravaudeuse",
-  "texte": "Ravive les couleurs des tapisseries anciennes."
+  "texte": "Tapisseries ternies ? Je ravive leurs couleurs d'antan !"
  },
  {
   "id": "t-ravaudeuse-2",
   "mot": "ravaudeuse",
-  "texte": "Garde les oies et les canards du village."
+  "texte": "Oies et canards gardés à la journée, au bord de l'étang !"
  },
  {
   "id": "t-ravaudeuse-3",
   "mot": "ravaudeuse",
-  "texte": "Lave le linge des hôpitaux au lavoir."
+  "texte": "Linge d'hôpital lavé au lavoir, blancheur garantie !"
  },
  {
   "id": "t-boquillon-1",
@@ -1847,17 +1847,17 @@
  {
   "id": "t-aboyeur-1",
   "mot": "aboyeur",
-  "texte": "Dresse les chiens de garde des châteaux."
+  "texte": "Chiens de garde dressés pour châteaux et grandes maisons !"
  },
  {
   "id": "t-aboyeur-2",
   "mot": "aboyeur",
-  "texte": "Annonce les décès dans les rues du village."
+  "texte": "Décès annoncés de rue en rue, avec dignité !"
  },
  {
   "id": "t-aboyeur-3",
   "mot": "aboyeur",
-  "texte": "Vend des billets de loterie à la criée."
+  "texte": "Billets de loterie vendus à la criée : la fortune vous attend !"
  },
  {
   "id": "t-blatier-1",
@@ -1877,32 +1877,32 @@
  {
   "id": "t-regrattier-1",
   "mot": "regrattier",
-  "texte": "Gratte la rouille des grilles et des balcons."
+  "texte": "Grilles et balcons grattés, la rouille n'a qu'à bien se tenir !"
  },
  {
   "id": "t-regrattier-2",
   "mot": "regrattier",
-  "texte": "Efface les vieux parchemins pour les réutiliser."
+  "texte": "Vieux parchemins effacés et prêts à resservir !"
  },
  {
   "id": "t-regrattier-3",
   "mot": "regrattier",
-  "texte": "Ramone les cheminées des maisons bourgeoises."
+  "texte": "Cheminées ramonées pour maisons bourgeoises !"
  },
  {
   "id": "t-formier-1",
   "mot": "formier",
-  "texte": "Rédige les formulaires des notaires."
+  "texte": "Formulaires de notaire rédigés en un clin d'œil !"
  },
  {
   "id": "t-formier-2",
   "mot": "formier",
-  "texte": "Moule les fromages dans leurs faisselles."
+  "texte": "Fromages moulés à la main dans leurs faisselles !"
  },
  {
   "id": "t-formier-3",
   "mot": "formier",
-  "texte": "Taille les haies en forme d'animaux."
+  "texte": "Haies taillées en forme d'animaux, pour épater vos voisins !"
  },
  {
   "id": "t-carabistouille-1",
@@ -2282,17 +2282,17 @@
  {
   "id": "t-tabletier-1",
   "mot": "tabletier",
-  "texte": "Marchand qui louait des tables sur les marchés."
+  "texte": "Tables louées pour vos jours de marché !"
  },
  {
   "id": "t-tabletier-2",
   "mot": "tabletier",
-  "texte": "Écrivain public qui rédigeait sur des tablettes de cire."
+  "texte": "Lettres rédigées sur tablettes de cire, discrétion assurée !"
  },
  {
   "id": "t-tabletier-3",
   "mot": "tabletier",
-  "texte": "Pâtissier spécialisé dans les tablettes de chocolat."
+  "texte": "Tablettes de chocolat fondantes, faites maison !"
  },
  {
   "id": "t-chasse-maree-1",
@@ -2357,17 +2357,17 @@
  {
   "id": "t-plumassier-1",
   "mot": "plumassier",
-  "texte": "Fabricant d'encriers en porcelaine."
+  "texte": "Encriers de porcelaine pour écrivains exigeants !"
  },
  {
   "id": "t-plumassier-2",
   "mot": "plumassier",
-  "texte": "Ouvrier qui garnissait les oreillers et les édredons."
+  "texte": "Oreillers et édredons garnis, pour des nuits moelleuses !"
  },
  {
   "id": "t-plumassier-3",
   "mot": "plumassier",
-  "texte": "Éleveur d'autruches pour les cirques."
+  "texte": "Autruches dressées, louées aux cirques !"
  },
  {
   "id": "t-huchier-1",
@@ -2387,32 +2387,32 @@
  {
   "id": "t-chandelier-1",
   "mot": "chandelier",
-  "texte": "Orfèvre qui ciselait les plats d'argent de la cour."
+  "texte": "Plats d'argent ciselés pour les tables de la cour !"
  },
  {
   "id": "t-chandelier-2",
   "mot": "chandelier",
-  "texte": "Serviteur qui allumait les lustres des salles de bal."
+  "texte": "Lustres allumés pour vos salles de bal, en un tournemain !"
  },
  {
   "id": "t-chandelier-3",
   "mot": "chandelier",
-  "texte": "Gardien de phare."
+  "texte": "Gardien de phare : vos navires rentrent à bon port !"
  },
  {
   "id": "t-remouleur-1",
   "mot": "remouleur",
-  "texte": "Ouvrier qui remontait les horloges des églises."
+  "texte": "Horloges d'église remontées à l'heure juste !"
  },
  {
   "id": "t-remouleur-2",
   "mot": "remouleur",
-  "texte": "Marchand ambulant de moules et de coquillages."
+  "texte": "Moules et coquillages frais, livrés à domicile !"
  },
  {
   "id": "t-remouleur-3",
   "mot": "remouleur",
-  "texte": "Batelier qui remorquait les péniches."
+  "texte": "Péniches remorquées d'une écluse à l'autre !"
  },
  {
   "id": "t-haleur-1",

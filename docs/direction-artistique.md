@@ -20,15 +20,26 @@ foi : `prototype/index.html`, en tête du `<style>`.
 - Deux familles ont leur objet plutôt qu'une page : la commune est un panonceau
   de gare ancien, vieilli (crème jaunie, cadre vert écaillé, vis et coulures de
   rouille, rayures ; choisi parmi trois variantes le 23/11/2026, après la plaque
-  émaillée bleue et la page de dictionnaire), le métier une carte de visite gravée
-  (nom et adresse fictifs, métier en capitales, spécialité à deviner).
+  émaillée bleue et la page de dictionnaire). Le métier a deux objets
+  (25/11/2026, la carte de visite seule ne disait pas qu'il s'agissait d'un
+  métier) : le livret d'ouvrier (couverture toilée au dos, « Délivré à »,
+  « Profession » en capitales, « Ouvrage » à deviner, cachet de mairie), et
+  la carte de visite réclame, où l'artisan vante son ouvrage (« Faites préparer
+  vos peaux… par un professionnel ! » ; nom à la plume, coin corné, adresse).
+  La question choisit la carte (`ouvrage` : `carte`) quand sa réponse est
+  écrite en réclame : 12 métiers sur 24.
+- Expression : fiche cartonnée de lexicographe (25/11/2026 ; avant, page de
+  dictionnaire, qui ne disait pas qu'il fallait deviner l'origine) : « Locution »
+  et numéro au-dessus d'un filet rouge, la locution entre guillemets,
+  « Origine : » puis la réponse sur les lignes réglées, trou de tige en bas.
+  Consigne : « Trouve la vraie origine ».
 - Un artefact par famille (maquette G, 23/11/2026) : page de dictionnaire
-  (définition, expression : article seul, titre courant au mot, « 1° », cote au
+  (définition : article seul, titre courant au mot, « 1° », cote au
   crayon), coupure de journal (anecdote : « Faits divers », journaux fictifs,
   date), guide de conversation en deux colonnes (mot et expression étrangère),
   planche gravée (photo : image en gravure dans sa cuvette, « Fig. n. — »,
-  réponse en italique), carte de visite (nom en écriture anglaise, coin corné,
-  liseré), panonceau de gare (commune). Grain de papier fixe (bruit SVG, 3
+  réponse en italique), livret d'ouvrier ou carte de visite (métier), fiche de
+  lexicographe (expression), panonceau de gare (commune). Grain de papier fixe (bruit SVG, 3
   octaves) et encre foulée sur tous. Sous 600 px de haut, la planche passe en
   deux colonnes.
 - Plusieurs ouvrages fictifs par famille (`OUVRAGES`, 22 en tout), tirés au
@@ -37,7 +48,9 @@ foi : `prototype/index.html`, en tête du `<style>`.
   fleurons ; article numéroté « § 642. »), sa teinte de papier (`TEINTES`,
   quatre) et un pied à l'ancienne : signature d'imprimeur (« B 2 ») et titre
   abrégé (« Mauduit, Nouv. vocab. · 1852 »), au lieu du titre complet.
-- Définition : « **sapajou**, *n. m.* Petit singe… ». La catégorie de la vraie
+- Définition : « **sapajou** : *n. m.* Petit singe… », le mot défini en grand
+  (23 px, 21 px sous 700 px de haut), suivi de « : » (demande de l'auteur,
+  25/11/2026). La catégorie de la vraie
   vient des données (`categorie`, `tools/categories.py`) ; le faussaire choisit
   celle de son faux, il peut la fausser aussi.
 - Papier vieilli en CSS : rousseurs, bords brunis, bord frangé (`clip-path`),
@@ -112,6 +125,13 @@ verdict, des boutons et de « Signaler le lot » (`#suite`, 152 px, 163 px sous
 Mesuré sur 15 lots : 0 px de variation à 390 × 664 et 375 × 553 ; « Lot
 suivant » dans l'écran à 390 × 664 (641 px au plus) ; sur iPhone SE, la page
 descend jusqu'à lui une fois la révélation finie.
+
+Après une bonne expertise, « Contrefaire » et « Lot suivant » ont la même
+taille (25/11/2026) ; le prix (−15) est une étiquette posée sur le coin du
+bouton, pour que « Contrefaire » tienne sur une ligne à 360 px. Mesuré
+(Playwright, 98 lots de définition, métier et expression, faux le plus long) :
+bas des pièces à 550 px au plus à 375 × 553 ; boutons de 52 px ; « Mettre en
+vente » à 548 px au plus à l'écran de pose (aperçu sans en-tête ni adresse).
 
 Celle de Discoverium : en-tête, onglets (Jouer, Atelier), la question, les deux
 réponses, le bouton principal dans le premier écran. L'atelier a deux

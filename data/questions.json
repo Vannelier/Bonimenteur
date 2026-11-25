@@ -653,8 +653,9 @@
  "oublieur": {
   "mot": "oublieur",
   "source": "wiktionary:oublieur",
-  "vraie": "Marchand ambulant qui vendait des gaufres roulées, appelées oublies.",
-  "type": "metier"
+  "vraie": "Gaufres roulées toutes chaudes, vendues dans votre rue !",
+  "type": "metier",
+  "ouvrage": "carte"
  },
  "p-cheval": {
   "alt": "Un édifice de pierre sculpté de formes étranges, de colonnes et d'animaux",
@@ -726,8 +727,9 @@
  "patenotrier": {
   "mot": "patenôtrier",
   "source": "wiktionary:patenôtrier",
-  "vraie": "Artisan qui fabriquait des chapelets.",
-  "type": "metier"
+  "vraie": "Chapelets de toute sorte, pour prier avec élégance !",
+  "type": "metier",
+  "ouvrage": "carte"
  },
  "peguer": {
   "mot": "péguer",
@@ -943,14 +945,16 @@
  "bourrelier": {
   "type": "metier",
   "mot": "bourrelier",
-  "vraie": "Fabrique les harnais et les colliers des chevaux.",
-  "source": "wiktionary:bourrelier"
+  "vraie": "Harnais et colliers pour vos chevaux, faits main et sur mesure !",
+  "source": "wiktionary:bourrelier",
+  "ouvrage": "carte"
  },
  "megissier": {
   "type": "metier",
   "mot": "mégissier",
-  "vraie": "Prépare les peaux fines de moutons et de chèvres.",
-  "source": "wiktionary:mégissier"
+  "vraie": "Faites préparer vos peaux fines de mouton et de chèvre par un professionnel !",
+  "source": "wiktionary:mégissier",
+  "ouvrage": "carte"
  },
  "feuillardier": {
   "type": "metier",
@@ -961,8 +965,9 @@
  "ravaudeuse": {
   "type": "metier",
   "mot": "ravaudeuse",
-  "vraie": "Raccommode les bas et les vieux habits.",
-  "source": "wiktionary:ravaudeuse"
+  "vraie": "Bas troués, habits usés ? Je les raccommode comme neufs !",
+  "source": "wiktionary:ravaudeuse",
+  "ouvrage": "carte"
  },
  "boquillon": {
   "type": "metier",
@@ -973,8 +978,9 @@
  "aboyeur": {
   "type": "metier",
   "mot": "aboyeur",
-  "vraie": "Attire les clients à la porte d'un théâtre ou d'un café en criant.",
-  "source": "wiktionary:aboyeur"
+  "vraie": "Salle vide ? Je crie à votre porte et j'attire les clients au théâtre ou au café !",
+  "source": "wiktionary:aboyeur",
+  "ouvrage": "carte"
  },
  "blatier": {
   "type": "metier",
@@ -985,14 +991,16 @@
  "regrattier": {
   "type": "metier",
   "mot": "regrattier",
-  "vraie": "Revend au détail des denrées de seconde main, comme le sel au petit poids.",
-  "source": "wiktionary:regrattier"
+  "vraie": "Sel au petit poids et denrées de seconde main, vendus au détail !",
+  "source": "wiktionary:regrattier",
+  "ouvrage": "carte"
  },
  "formier": {
   "type": "metier",
   "mot": "formier",
-  "vraie": "Fabrique les formes en bois des cordonniers et des chapeliers.",
-  "source": "wiktionary:formier"
+  "vraie": "Cordonniers, chapeliers : vos formes en bois taillées sur mesure !",
+  "source": "wiktionary:formier",
+  "ouvrage": "carte"
  },
  "glabelle": {
   "mot": "glabelle",
@@ -1057,8 +1065,9 @@
  "tabletier": {
   "mot": "tabletier",
   "source": "wiktionary:tabletier",
-  "vraie": "Fabricant d'échiquiers et de petits objets en ivoire, en os ou en bois.",
-  "type": "metier"
+  "vraie": "Échiquiers, damiers et bibelots d'ivoire, d'os ou de bois !",
+  "type": "metier",
+  "ouvrage": "carte"
  },
  "chasse-maree": {
   "mot": "chasse-marée",
@@ -1087,8 +1096,9 @@
  "plumassier": {
   "mot": "plumassier",
   "source": "wiktionary:plumassier",
-  "vraie": "Artisan qui préparait et vendait les plumes pour les chapeaux et les parures.",
-  "type": "metier"
+  "vraie": "Plumes et aigrettes pour orner vos chapeaux et vos parures !",
+  "type": "metier",
+  "ouvrage": "carte"
  },
  "huchier": {
   "mot": "huchier",
@@ -1099,14 +1109,16 @@
  "chandelier": {
   "mot": "chandelier",
   "source": "wiktionary:chandelier",
-  "vraie": "Artisan qui fabriquait et vendait des chandelles.",
-  "type": "metier"
+  "vraie": "Chandelles de qualité, pour s'éclairer sans se ruiner !",
+  "type": "metier",
+  "ouvrage": "carte"
  },
  "remouleur": {
   "mot": "rémouleur",
   "source": "wiktionary:rémouleur",
-  "vraie": "Artisan ambulant qui aiguisait les couteaux et les ciseaux sur une meule.",
-  "type": "metier"
+  "vraie": "Couteaux et ciseaux aiguisés à la meule, je passe dans votre rue !",
+  "type": "metier",
+  "ouvrage": "carte"
  },
  "haleur": {
   "mot": "haleur",

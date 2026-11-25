@@ -21,6 +21,12 @@ Décidée avec l'auteur. Une bonne question :
 6. Rien dans la vérité ne la distingue des faux : région et registre vont dans
    la question (`region`, `registre`), jamais entre parenthèses dans la réponse.
 
+7. Amusant à contrefaire : l'objet et le ton de la réponse donnent au faussaire
+   un style à imiter. Une carte de visite parle comme une réclame (« Faites
+   préparer vos peaux fines de mouton et de chèvre par un professionnel ! »),
+   pas comme un dictionnaire (règle de l'auteur, 25/11/2026). La question impose
+   alors son objet (`ouvrage` : `carte`), et ses faux de départ prennent le ton.
+
 Et il doit être facile d'y inventer des faux (écartés pour cette raison : les
 prix Ig Nobel).
 
@@ -35,7 +41,7 @@ prix Ig Nobel).
 | `photo` | Photo | une image (`image`, `alt`, `credit`) | 20 |
 | `etrangere` | Expression étrangère | une expression traduite mot à mot | 19 |
 | `expression` | Expression | l'origine d'une expression française | 16 |
-| `metier` | Métier | un métier disparu, sa spécialité à deviner (carte de visite) | 24 |
+| `metier` | Métier | un métier disparu, sa spécialité à deviner (livret d'ouvrier, ou carte de visite réclame : `ouvrage`) | 24 |
 
 Familles faibles : celles dont la réponse se sait souvent (expressions
 françaises, anecdotes connues).
@@ -64,10 +70,12 @@ d'affichage, vérifiée par `test_donnees_coherentes` :
   propre) ni point final ;
 - photo : la suite de « Usage : », sans majuscule, avec point final ;
 - commune : le nom, sans point ;
+- métier en carte de visite (`ouvrage` : `carte`) : une réclame, ponctuée
+  comme une réclame (« … par un professionnel ! ») ;
 - autres familles : une phrase, majuscule et point final.
 
 Seuls retouchés à l'affichage : les espaces en trop, et le point final d'une
-anecdote, d'une commune ou d'une carte de visite, que la mise en page porte
+anecdote, d'une commune ou d'un livret d'ouvrier, que la mise en page porte
 déjà.
 
 ## Faux de départ

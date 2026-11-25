@@ -60,7 +60,8 @@ CI : `.github/workflows/tests.yml` lance `pytest -q` sur chaque PR.
 - Serveur : tout accès à SQLite sous `_verrou` ; limites de débit par IP
   (`LIMITES`) ; contestation seulement d'un faux eu en duel ; pseudos uniques,
   « Truffe » réservé.
-- Toute nouvelle question suit la charte (`docs/questions.md`).
+- Toute nouvelle question suit la charte (`docs/questions.md`), dont la règle 7 :
+  amusante à contrefaire, la réponse parle le ton de son objet.
 
 ## Interface
 

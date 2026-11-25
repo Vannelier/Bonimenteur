@@ -649,6 +649,24 @@ header.vers-accueil{cursor:pointer}
   font:9px/1.15 "IM Fell English SC",Georgia,serif;letter-spacing:.06em;color:rgba(58,74,136,.5);border:2px solid rgba(58,74,136,.4);box-shadow:inset 0 0 0 3px rgba(244,236,214,.6),inset 0 0 0 4px rgba(58,74,136,.3);transform:rotate(-12deg)}
 @media (max-height:700px){.fi-orig,.li-ouv{font-size:15.5px}.fi-orig{line-height:22px}}
 @media (max-height:600px){.li-titulaire{display:none}.li-cachet{top:14px;width:48px;height:48px}}
+/* Carte de visite réclame (métiers) : bristol à coin corné, nom à la plume, métier gravé, slogan. */
+.choix .bouton.feuillet[data-style="carte"],.feuillet.modele[data-style="carte"]{clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%);border-radius:3px;align-items:center;text-align:center;gap:3px;padding:12px 16px 10px;
+  background:var(--grain),linear-gradient(160deg,rgba(255,255,255,.6),transparent 45%),#f8f4ea;
+  box-shadow:0 1px 0 #d9d0b5,0 6px 12px -6px rgba(0,0,0,.4),inset 0 0 0 7px #f8f4ea,inset 0 0 0 8px rgba(43,32,22,.14)}
+.cv-coin{position:absolute;right:0;top:0;width:20px;height:20px;z-index:2;background:linear-gradient(225deg,transparent 50%,#e7dfcb 50%,#d3c7aa)}
+.cv-nom{position:relative;z-index:1;font:400 26px/1.1 "Pinyon Script",cursive;color:#1f2a44}
+.cv-metier{position:relative;z-index:1;font:700 13px/1.3 var(--titre);letter-spacing:.3em;text-transform:uppercase;color:#4a3d2c}
+.cv-reclame{position:relative;z-index:1;margin-top:2px;font:italic 400 16.5px/1.3 "IM Fell English",Georgia,serif;color:#2b2016}
+.cv-adresse{position:relative;z-index:1;align-self:flex-end;font:italic 11px "IM Fell English",Georgia,serif;color:rgba(43,32,22,.7)}
+@media (max-height:700px){.cv-reclame{font-size:15.5px}}
+@media (max-height:600px){.cv-nom{font-size:22px}.cv-adresse{display:none}}
+/* Aperçu de pose : fiche, livret et carte sans en-tête ni adresse, comme les pages (le bouton
+   « Mettre en vente » restait sous le bord à 375 × 553). */
+.feuillet.modele .fi-tete,.feuillet.modele .li-tete,.feuillet.modele .li-titulaire,.feuillet.modele .li-cachet,.feuillet.modele .cv-adresse,.feuillet.modele .fi-trou{display:none}
+.feuillet.modele[data-style="fiche"]{background:var(--grain),linear-gradient(170deg,#fbf8ef,#eee7d2);padding-bottom:8px}
+.feuillet.modele[data-style="carte"]{padding:8px 14px 8px}
+.feuillet.modele .cv-nom{font-size:21px}
+.feuillet.modele .fi-orig{line-height:1.3}
 </style>
 
 <div class="accueil" id="accueil">
@@ -876,6 +894,8 @@ const nomCommune = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
    5. Tout public : pas de contenu sexuel (paraphilies essayées puis retirées à la demande de l'auteur).
    6. Rien dans la vérité qui la distingue des pièges : région, registre (familier), source… vont dans la question
       (champs region et registre), jamais entre parenthèses dans la réponse.
+   7. Amusant à contrefaire : l'objet et le ton de la réponse donnent au faussaire un style à imiter
+      (une carte de visite parle comme une réclame : « Faites préparer vos peaux… par un professionnel ! »).
    Et il doit être facile d'y inventer des pièges (écarté pour cette raison : les prix Ig Nobel).
    Familles faibles : celles dont la réponse se sait souvent (expressions françaises, anecdotes connues).
 
@@ -1120,7 +1140,10 @@ const OUVRAGES = {
   // Métiers : une carte de visite gravée.
   // Métiers : le livret d'ouvrier, « Profession » et « Ouvrage » (la carte de visite ne disait pas
   // qu'il s'agissait d'un métier, remarque de l'auteur, 25/11/2026).
-  metier: [{ titre: "Livret d'ouvrier", court: "", an: 1854, style: "livret", teinte: 1 }],
+  metier: [{ titre: "Livret d'ouvrier", court: "", an: 1854, style: "livret", teinte: 1 },
+  // Carte de visite réclame : l'artisan vante son métier (« Faites préparer vos peaux… ! »), plus
+  // amusant à contrefaire (demande de l'auteur, 25/11/2026). Choisie par la question (`ouvrage`).
+    { titre: "Carte de visite", court: "", an: 1890, style: "carte", teinte: 1 }],
   photo: [
     { titre: "Encyclopédie illustrée", court: "Encyclopédie illustrée", an: 1902, style: "classique", teinte: 0 },
     { titre: "Planches du cabinet de curiosités", court: "Cabinet de curiosités, pl.", an: 1898, style: "filet", teinte: 3 },
@@ -1136,7 +1159,8 @@ const OUVRAGES = {
 // Papier : quatre teintes (crème, ivoire, bis, gris-vert d'archive).
 const TEINTES = [["#f1e5c6", "#dfca9d", "#cdb078"], ["#f4ecd8", "#e4d6b4", "#cfbd92"], ["#eedcbc", "#dcc193", "#c6a26a"], ["#ebe6d2", "#d6d0b2", "#bdb58f"]];
 const empreinte = s => { let n = 0; for (const c of String(s)) n = (n * 33 + c.charCodeAt(0)) % 100003; return n; };
-const ouvrage = (m, motId) => { const l = OUVRAGES[famille(m)] || OUVRAGES.definition; return l[empreinte(motId) % l.length]; };
+// La question peut imposer son objet (`ouvrage`), quand le ton de la réponse en dépend (carte réclame).
+const ouvrage = (m, motId) => { const l = OUVRAGES[famille(m)] || OUVRAGES.definition; return (m.ouvrage && l.find(o => o.style === m.ouvrage)) || l[empreinte(motId) % l.length]; };
 // Attributs du feuillet (classe de style, teinte) : les mêmes pour les deux pièces d'un lot.
 const attrsFeuillet = (m, motId) => { const o = ouvrage(m, motId), t = TEINTES[o.teinte]; return `data-style="${o.style}" style="--p1:${t[0]};--p2:${t[1]};--p3:${t[2]}"`; };
 // Catégories proposées au faussaire pour une définition (la vraie est cochée d'office).
@@ -1191,6 +1215,15 @@ function livret(m, motId, texte) {
     <span class="li-ligne"><span class="li-lab">Ouvrage</span><span class="li-ouv rep">${esc(sansPoint(texte))}.</span></span>
     <span class="li-cachet" aria-hidden="true">Mairie<br>de ${VILLES[(e >> 5) % VILLES.length]}</span>`;
 }
+// Carte de visite réclame (métiers) : nom à la plume, métier gravé, l'artisan vante son ouvrage, adresse.
+const RUES = ["rue des Lombards", "rue du Pot-de-Fer", "quai de la Mégisserie", "rue de la Huchette", "rue des Bons-Enfants", "place du Marché", "rue Saint-Jacques", "rue de la Ferronnerie"];
+function carteVisite(m, motId, texte) {
+  const e = empreinte(motId), feminin = /euse$|ère$|ière$/.test(m.mot), prenom = feminin ? ["Honorine", "Clémence", "Eugénie", "Adélaïde"][e % 4] : PRENOMS[e % 6];
+  return `<span class="cv-coin" aria-hidden="true"></span><span class="cv-nom">${prenom} ${NOMS[(e >> 3) % NOMS.length]}</span>
+    <span class="cv-metier">${esc(m.mot)}</span>
+    <span class="cv-reclame rep">${esc(texte)}</span>
+    <span class="cv-adresse" aria-hidden="true">${(e % 40) + 2}, ${RUES[(e >> 2) % RUES.length]}, ${VILLES[(e >> 5) % VILLES.length]}</span>`;
+}
 // Fiche de lexicographe (expressions) : fiche cartonnée réglée, la locution, « Origine : » et la réponse.
 function fiche(m, motId, texte) {
   const e = empreinte(motId);
@@ -1226,6 +1259,7 @@ function feuillet(m, motId, texte, categorie) {
   if (o.style === "plaque") return objet(m, motId, texte);
   if (o.style === "fiche") return fiche(m, motId, texte);
   if (o.style === "livret") return livret(m, motId, texte);
+  if (o.style === "carte") return carteVisite(m, motId, texte);
   if (o.style === "coupure") return coupure(m, motId, texte, o);
   if (o.style === "guide") return guide(m, texte, o);
   if (f === "photo") return plancheGravee(m, motId, texte);
