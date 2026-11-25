@@ -99,6 +99,7 @@ def _base():
         CREATE TABLE IF NOT EXISTS signalements (id INTEGER PRIMARY KEY AUTOINCREMENT, mot TEXT, raison TEXT,
             pieges TEXT, joueur TEXT, t INTEGER);
         CREATE TABLE IF NOT EXISTS joueurs (id TEXT PRIMARY KEY, pseudo TEXT NOT NULL, t INTEGER NOT NULL);
+        CREATE TABLE IF NOT EXISTS defis (code TEXT PRIMARY KEY, auteur TEXT NOT NULL, t INTEGER NOT NULL);
         CREATE INDEX IF NOT EXISTS faux_auteur ON faux (auteur);
         CREATE TABLE IF NOT EXISTS stats (faux TEXT PRIMARY KEY, vu INTEGER NOT NULL DEFAULT 0,
             pris INTEGER NOT NULL DEFAULT 0, demasque INTEGER NOT NULL DEFAULT 0);
@@ -218,17 +219,17 @@ def moi(request: Request, response: Response):
 
 
 @app.get("/api/etat")
-def etat(request: Request):
+def etat(request: Request, defi: str = ""):
     """Ce que la page lit : questions, faux, compteurs par faux, contestations, pseudos, et
     seulement les duels qui concernent le joueur (les siens, et ceux où l'un de ses faux a
     trompé quelqu'un : « Tes faux ont trouvé preneur »). Avant le 23/11/2026, tous les duels de
     tous les joueurs repartaient toutes les 20 s (audit, docs/audit.md)."""
     j = request.cookies.get(COOKIE, "")
     with _verrou:
-        return _etat(j if IDENTIFIANT.match(j) else "")
+        return _etat(j if IDENTIFIANT.match(j) else "", defi)
 
 
-def _etat(j: str):
+def _etat(j: str, defi: str = ""):
     lignes = db.execute("SELECT * FROM choix WHERE joueur = ? OR erreur = 1 AND EXISTS (SELECT 1 FROM faux f "
                         "WHERE f.auteur = ? AND instr(choix.montres, '\"' || f.id || '\"') > 0)", (j, j)).fetchall()
     choix = [{**dict(r), "montres": json.loads(r["montres"]), "ordre": json.loads(r["ordre"]),
@@ -244,8 +245,45 @@ def _etat(j: str):
         # Accueil : podium des faussaires de la semaine et jauge des joueurs (le classement ne
         # peut pas se calculer dans la page, qui ne reçoit que les duels du joueur).
         "classement": _classement(j),
+        # Le défi ouvert par le lien (?defi=CODE) : seulement celui-là, jamais la liste.
+        "defis": _defi(defi),
         "communaute": _communaute(),
     }
+
+
+# Défi par lien (docs/conception.md, « Défi ») : un faussaire qui a au moins DEFI_MIN faux en vente
+# envoie un lien ; l'ami expertise ses lots, face à ses faux.
+DEFI_MIN = 3
+CODE_DEFI = re.compile(r"^[a-z0-9]{6,12}$")
+
+
+def _defi(code: str) -> dict:
+    if not CODE_DEFI.match(code or ""):
+        return {}
+    r = db.execute("SELECT code, auteur, t FROM defis WHERE code = ?", (code,)).fetchone()
+    return {r["code"]: {"auteur": r["auteur"], "t": r["t"]}} if r else {}
+
+
+class Defi(BaseModel):
+    code: str
+
+
+@app.post("/api/defis")
+def defier(d: Defi, request: Request):
+    """Crée le défi du joueur : l'auteur vient du cookie ; il faut DEFI_MIN faux en vente."""
+    j = _joueur(request)
+    _limiter(request, "ecriture")
+    if not CODE_DEFI.match(d.code):
+        raise HTTPException(422, "code invalide")
+    with _verrou:
+        if db.execute("SELECT COUNT(*) FROM faux WHERE auteur = ?", (j,)).fetchone()[0] < DEFI_MIN:
+            raise HTTPException(403, "pas assez de faux")
+        try:
+            db.execute("INSERT INTO defis VALUES (?, ?, ?)", (d.code, j, _ms()))
+            db.commit()
+        except sqlite3.IntegrityError:
+            raise HTTPException(409, "code déjà pris")
+    return {"code": d.code}
 
 
 CATEGORIES = {"n. m.", "n. f.", "n.", "adj.", "v.", "adv."}   # celles que la page propose

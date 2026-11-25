@@ -237,3 +237,28 @@ def test_classement_des_faussaires(client):
     assert c["classement"]["moi"] == {"rang": 1, "victimes": 1}
     assert c["classement"]["passee"] is None
     assert c["communaute"] == {"joueurs": 2, "objectif": 10}
+
+
+def test_defi_par_lien(client):
+    """Un défi demande DEFI_MIN faux en vente ; le lien ne renvoie que son défi, avec son auteur."""
+    a = client.get("/api/moi").json()["id"]
+    assert client.post("/api/defis", json={"code": "abc12345"}).status_code == 403   # aucun faux
+    mots = ["sapajou", "cacochyme", "cuistre"]
+    for m in mots:
+        _authentifier(client, m)
+    import app.main as m
+    for mot in mots[:2]:   # 20 écus de départ + 3 expertises justes : deux faux à 10
+        assert client.post("/api/pieges", json={"mot": mot, "texte": "Ragoût de fèves au lard.", "prix": 10}).status_code == 200
+    assert client.post("/api/defis", json={"code": "abc12345"}).status_code == 403   # deux faux seulement
+    # Le troisième faux, payé par quelques expertises justes de plus.
+    for mot in ["degun", "drache", "falbala", "faribole", "goguenard", "hurluberlu", "margoulin"]:
+        _authentifier(client, mot)
+    assert client.post("/api/pieges", json={"mot": "cuistre", "texte": "Ragoût de fèves au lard.", "prix": 10}).status_code == 200
+    assert client.post("/api/defis", json={"code": "Pas bon!"}).status_code == 422
+    assert client.post("/api/defis", json={"code": "abc12345"}).status_code == 200
+    assert client.post("/api/defis", json={"code": "abc12345"}).status_code == 409
+    with TestClient(m.app) as ami:
+        ami.get("/api/moi")
+        assert ami.get("/api/etat?defi=abc12345").json()["defis"]["abc12345"]["auteur"] == a
+        assert ami.get("/api/etat").json()["defis"] == {}
+        assert ami.get("/api/etat?defi=inconnu1").json()["defis"] == {}

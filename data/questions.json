@@ -595,9 +595,10 @@
   "mot": "",
   "question": "À quoi servait cette pince en métal ?",
   "type": "photo",
-  "vraie": "à friser les cheveux : on la chauffait avant d'y enrouler les mèches.",
+  "vraie": "pince chauffante permettant de friser les cheveux en y enroulant les mèches.",
   "legende": "Pince en métal",
-  "rubrique": "Usage"
+  "rubrique": "Usage",
+  "ouvrage": "brevet"
  },
  "o-moustache": {
   "alt": "Une tasse de porcelaine dont l'intérieur porte un petit rebord en demi-lune",
@@ -606,9 +607,10 @@
   "mot": "",
   "question": "À quoi servait cette tasse en porcelaine, avec son drôle de rebord intérieur ?",
   "type": "photo",
-  "vraie": "à boire son thé ou son café sans mouiller sa moustache.",
+  "vraie": "tasse munie d'un rebord intérieur, permettant de boire son thé sans mouiller sa moustache.",
   "legende": "Tasse en porcelaine à rebord intérieur",
-  "rubrique": "Usage"
+  "rubrique": "Usage",
+  "ouvrage": "brevet"
  },
  "o-tirebotte": {
   "alt": "Un objet de fonte en forme d'insecte, avec deux longues pattes écartées à l'arrière",
@@ -617,9 +619,10 @@
   "mot": "",
   "question": "À quoi servait cet objet en fonte, en forme d'insecte ?",
   "type": "photo",
-  "vraie": "à retirer ses bottes sans les mains : on coinçait le talon entre ses deux pattes.",
+  "vraie": "appareil permettant de se débotter sans les mains, le talon coincé entre ses deux pattes.",
   "legende": "Objet en fonte en forme d'insecte",
-  "rubrique": "Usage"
+  "rubrique": "Usage",
+  "ouvrage": "brevet"
  },
  "o-tirebouton": {
   "alt": "Une longue tige de métal terminée par un crochet, avec un manche",
@@ -628,9 +631,10 @@
   "mot": "",
   "question": "À quoi servait cet objet terminé par un petit crochet ?",
   "type": "photo",
-  "vraie": "à boutonner les bottines et les gants en attrapant chaque bouton à travers sa boutonnière.",
+  "vraie": "crochet pour boutonner bottines et gants, en tirant chaque bouton par sa boutonnière.",
   "legende": "Objet terminé par un petit crochet",
-  "rubrique": "Usage"
+  "rubrique": "Usage",
+  "ouvrage": "brevet"
  },
  "olibrius": {
   "mot": "olibrius",
@@ -1469,10 +1473,11 @@
   "mot": "",
   "question": "À quoi servait cette boîte de bois au couvercle percé de trous ?",
   "type": "photo",
-  "vraie": "à se chauffer les pieds : on y glissait un bac de braises.",
+  "vraie": "boîte à couvercle percé, garnie d'un bac de braises, pour se chauffer les pieds.",
   "legende": "Boîte de bois à couvercle percé, avec un bac de métal",
   "rubrique": "Usage",
-  "source": "wikipedia:Chaufferette"
+  "source": "wikipedia:Chaufferette",
+  "ouvrage": "brevet"
  },
  "p-manneken": {
   "alt": "La petite statue d'un garçon, habillée d'un costume de néons colorés, dans sa niche de pierre",

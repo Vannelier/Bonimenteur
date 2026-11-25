@@ -123,6 +123,19 @@ classement complet (20 premiers et ta place) sous « Voir tout », vainqueur de 
 semaine passée sur une ligne. Classé sans pseudo : « Signe ton nom » sous le
 podium.
 
+## Défi par lien
+
+Décidé le 25/11/2026. Dès 3 faux en vente (`DEFI_MIN`), « Sur le marché »
+propose « Défier un ami » ; avant, le bouton est grisé avec la jauge (« 2/3 »).
+Le lien (`?defi=CODE`, code tiré au hasard, 8 caractères) ouvre une invitation
+(« Mlle Rubicon te met au défi », nombre de pièces), puis une tournée sur les lots
+du faussaire que l'ami n'a pas joués, face à ses faux en vente. Duels ordinaires :
+écus pour l'ami, écus et classement pour le faussaire. Bilan : faux démasqués sur
+le total, « Défier à mon tour ». Le lien ne relance pas le défi une fois joué.
+Serveur : table `defis` (code, auteur), `POST /api/defis` (auteur du cookie,
+3 faux au moins), `/api/etat?defi=CODE` (ce défi seulement). Sur le site
+seulement : sur claude.ai, l'adresse de la page n'est pas partageable.
+
 ## La vie d'un faux
 
 - Mèche : 10 démasquages sans aucune victime (`MORT_VUS`) et le faux est

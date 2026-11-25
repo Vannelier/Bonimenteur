@@ -16,6 +16,7 @@
     if (nom === "choix") return etat.choix.map(c => ({ id: c.id, d: c }));
     if (nom === "contestations") return etat.contestations.map(c => ({ id: `${c.piege}__${c.joueur}`, d: c }));
     if (nom === "joueurs") return Object.entries(etat.joueurs).map(([id, pseudo]) => ({ id, d: { pseudo } }));
+    if (nom === "defis") return Object.entries(etat.defis || {}).map(([id, d]) => ({ id, d }));
     return [];
   };
   const instantane = nom => ({ docs: docs(nom).map(x => ({ id: x.id, data: () => x.d })), metadata: { fromCache: false } });
@@ -23,7 +24,9 @@
 
   async function lire() {
     if (enCours) return enCours;
-    enCours = fetch("/api/etat", { credentials: "same-origin" })
+    // Le défi ouvert par le lien (?defi=CODE) : le serveur ne renvoie que celui-là.
+    const defi = new URLSearchParams(location.search).get("defi") || "";
+    enCours = fetch("/api/etat" + (defi ? "?defi=" + encodeURIComponent(defi) : ""), { credentials: "same-origin" })
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       // Compteurs par faux calculés par le serveur (vu, pris, démasqué) : la page ne reçoit plus
       // tous les duels de tous les joueurs, index() les lit ici (window.__statsServeur).
@@ -62,6 +65,7 @@
       const [nom] = chemin.split("/");
       if (nom === "contestations") return ecrire("POST", "/api/contestations", { piege: d.piege, mot: d.mot });
       if (nom === "joueurs") return ecrire("PUT", "/api/pseudo", { pseudo: d.pseudo });
+      if (nom === "defis") return ecrire("POST", "/api/defis", { code: chemin.split("/")[1] });
       throw new Error(`document ${chemin} en lecture seule`);
     },
   });
@@ -76,5 +80,7 @@
     },
   };
   setInterval(() => { if (!document.hidden) lire().catch(() => {}); }, RAFRAICHIR_MS);
+  // Le défi par lien n'existe que sur le site : sur claude.ai, l'adresse de la page n'est pas partageable.
+  window.__site = true;
   window.claude = { use: async nom => nom === "db" ? { collection, doc } : nom === "user" ? user : null };
 })();

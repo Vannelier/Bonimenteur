@@ -14,7 +14,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | Fichier | Contenu |
 |---|---|
 | `app/pseudos.py` | Filtre des pseudos, copie exacte de Vocabulium (`tests/test_copies.py`) : ne pas l'éditer ici. Appliqué aussi aux textes des faux. |
-| `app/main.py` | Serveur : page, API (`/api/moi`, `/api/etat` (avec le classement des faussaires de la semaine, `_piegeurs`, et la jauge des joueurs, `_communaute`), `/api/pieges`, `/api/choix`, `/api/contestations`, `/api/signalements`, `/api/pseudo`), SQLite. Identité par cookie HttpOnly posé par le serveur ; auteur d'un faux, gain d'un duel, prix et solde décidés ici. |
+| `app/main.py` | Serveur : page, API (`/api/moi`, `/api/etat` (avec le classement des faussaires de la semaine, `_piegeurs`, et la jauge des joueurs, `_communaute`), `/api/pieges`, `/api/choix`, `/api/contestations`, `/api/signalements`, `/api/pseudo`, `/api/defis` (défi par lien ; `/api/etat?defi=CODE` ne renvoie que ce défi)), SQLite. Identité par cookie HttpOnly posé par le serveur ; auteur d'un faux, gain d'un duel, prix et solde décidés ici. |
 | `prototype/serveur.js` | Interface `window.claude` (collection, doc, user) branchée sur l'API, relue toutes les 20 s et après chaque écriture ; passe à la page les compteurs par faux du serveur (`window.__statsServeur`). |
 | `prototype/index.html` | Le jeu : accueil (canevas des trois autres jeux, podium des faussaires, `majAccueil`), classement de la semaine (`ecranClassement`), duels, atelier (Contrefaire : lots tamponnés « Authentifié » ou « Floué » ; Sur le marché), arbitre, bilan. Réglages en tête du script (`TOTAL`, `PRIX_PIEGE`, `PRIX_DIRECT`, `ECUS_DEPART`, `MORT_VUS`, `PVQN_VUS`, `CONTEST_MIN`, `FAMILLES` et leurs seuils). |
 | `prototype/proches.json` | Données de l'arbitre du sens, générées par `tools/proches.py`. Ne pas éditer. |
@@ -25,13 +25,13 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | `tools/proches.py` | Calcule `prototype/proches.json` depuis les vecteurs de Vocabulium. |
 | `tools/icones.py` | Favicon et icônes d'application (sceau de cire et plume dorée) : `prototype/favicon.svg`, `favicon.ico`, `img/`. |
 | `tools/categories.py` | Relève dans le Wiktionnaire la catégorie grammaticale des définitions (`categorie`), à relire. |
-| `docs/` | `audit.md` (audit du 23/11/2026, points ouverts), `conception.md` (règles, économie, chemin), `questions.md` (charte, familles), `arbitre.md`, `direction-artistique.md`. |
+| `docs/` | `artefacts.md` (thèmes de questions et types d'artefacts : à lire avant d'ajouter l'un ou l'autre), `audit.md` (audit du 23/11/2026, points ouverts), `conception.md` (règles, économie, chemin), `questions.md` (charte, familles), `arbitre.md`, `direction-artistique.md`. |
 
 ## Commandes
 
 ```
 pip install -r requirements-dev.txt
-python -m pytest -q                                    # 20 tests, ~3 s
+python -m pytest -q                                    # 21 tests, ~5 s
 uvicorn app.main:app --reload                          # http://127.0.0.1:8000
 VOCABULIUM_DIR=../Vocabulium python tools/proches.py   # après un ajout de question
 ```
@@ -63,6 +63,12 @@ CI : `.github/workflows/tests.yml` lance `pytest -q` sur chaque PR.
   « Truffe » réservé.
 - Toute nouvelle question suit la charte (`docs/questions.md`), dont la règle 7 :
   amusante à contrefaire, la réponse parle le ton de son objet.
+
+## Vocabulaire
+
+- **Thème** de question (définition, métier, photo…) : champ `type`, `famille` dans le code.
+- **Type d'artefact** (page, panonceau, brevet, livret…) : `style` des `OUVRAGES`. Un thème
+  peut en avoir plusieurs ; la question impose le sien par `ouvrage`. Voir `docs/artefacts.md`.
 
 ## Interface
 

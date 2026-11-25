@@ -25,7 +25,8 @@ Décidée avec l'auteur. Une bonne question :
    un style à imiter. Une carte de visite parle comme une réclame (« Faites
    préparer vos peaux fines de mouton et de chèvre par un professionnel ! »),
    pas comme un dictionnaire (règle de l'auteur, 25/11/2026). La question impose
-   alors son objet (`ouvrage` : `carte`), et ses faux de départ prennent le ton.
+   alors son objet (`ouvrage` : `carte` pour un métier, `brevet` pour un objet
+   photographié), et ses faux de départ prennent le ton (`docs/artefacts.md`).
    Jamais une réponse réduite à un nombre ou à une date : le faussaire n'aurait
    qu'un nombre voisin à écrire.
 
@@ -70,7 +71,8 @@ d'affichage, vérifiée par `test_donnees_coherentes` :
 
 - anecdote : le bout de phrase qui remplace `___`, sans majuscule (sauf nom
   propre) ni point final ;
-- photo : la suite de « Usage : », sans majuscule, avec point final ;
+- photo : la suite de « Usage : » ou, en brevet, de « Objet : »
+  (« appareil permettant de… »), sans majuscule, avec point final ;
 - commune : le nom, sans point ;
 - métier en carte de visite (`ouvrage` : `carte`) : une réclame, ponctuée
   comme une réclame (« … par un professionnel ! ») ;

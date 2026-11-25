@@ -702,6 +702,33 @@ header.vers-accueil{cursor:pointer}
   @keyframes coup-vente{from{opacity:0;transform:scale(2.1) rotate(-18deg)}to{opacity:.88;transform:rotate(-7deg)}}
   @keyframes secousse{30%{transform:translateY(3px)}65%{transform:translateY(-1px)}}
 }
+/* Brevet d'invention (objets photographiés, `ouvrage` : `brevet`) : papier bleuté, encre bleue,
+   double filet, la planche du dessin à gauche, l'objet de l'invention à droite. */
+.choix .bouton.feuillet[data-style="brevet"],.feuillet.modele[data-style="brevet"]{clip-path:none;border-radius:2px;gap:6px;padding:9px 12px 10px;color:#22306b;
+  background:var(--grain),linear-gradient(170deg,#f5f5ec,#e6e8dc);
+  box-shadow:0 6px 12px -6px rgba(0,0,0,.4),inset 0 0 0 4px #f2f2e8,inset 0 0 0 5px rgba(34,48,107,.55),inset 0 0 0 7px #f2f2e8,inset 0 0 0 8px rgba(34,48,107,.35)}
+.br-tete{position:relative;z-index:1;display:flex;justify-content:space-between;font:11px "IM Fell English SC",Georgia,serif;letter-spacing:.14em;border-bottom:1px solid rgba(34,48,107,.45);padding:0 4px 3px}
+.br-corps{position:relative;z-index:1;display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center;padding:0 4px;text-align:left}
+.br-planche{padding:3px;background:#fff;box-shadow:0 0 0 1px rgba(34,48,107,.35)}
+.br-planche img{display:block;width:90px;height:76px;object-fit:cover;filter:grayscale(1) contrast(1.35) brightness(1.05)}
+.br-texte{display:flex;flex-direction:column;gap:3px;min-width:0}
+.br-titre{font:12px/1.3 "IM Fell English SC",Georgia,serif;letter-spacing:.04em}
+.br-objet{font:15.5px/1.3 "IM Fell English",Georgia,serif;color:#1c2450}
+.br-lab{font:12px "IM Fell English SC",Georgia,serif;letter-spacing:.06em;color:rgba(34,48,107,.75)}
+@media (max-height:700px){.br-planche img{width:76px;height:64px}.br-corps{grid-template-columns:82px 1fr}.br-objet{font-size:14.5px}}
+@media (max-height:600px){.choix .bouton.feuillet .br-tete{display:none}.br-objet{font-size:14px;line-height:1.25}.br-titre{font-size:11px}}
+.feuillet.modele .br-tete{display:none}
+/* Défi par lien : invitation, bilan, bloc dans « Sur le marché ». */
+.defi-intro{display:flex;flex-direction:column;align-items:center;gap:4px;padding-top:6px;text-align:center}
+.defi-sceau .sceau{width:56px;height:56px}
+.defi-nom{font-size:30px;transform:rotate(-3deg)}
+.defi-mot{font:700 13px/1.4 var(--titre);letter-spacing:.16em;text-transform:uppercase;color:var(--doux)}
+.defi-unite .ic{width:.6em;height:.6em;margin-left:6px;color:var(--rouge)}
+.defi-sur{font-size:.5em;color:var(--doux)}
+.defi-bloc{display:flex;flex-direction:column;gap:6px}
+.defi-bloc .bouton{width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.defi-bloc .bouton .chip{background:transparent}
+.lien-defi{width:100%;padding:8px 10px;font:14px var(--texte);border:1.5px dashed var(--vert);border-radius:3px;background:var(--creux);color:var(--encre)}
 </style>
 
 <div class="accueil" id="accueil">
@@ -833,7 +860,7 @@ $e.addEventListener("click", e => {
 $e.addEventListener("click", e => {
   const z = e.target.closest(".f-zoom"); if (!z) return;
   e.stopPropagation(); e.preventDefault();
-  const art = z.closest(".feuillet").querySelector(".pg-leg, .f-art");
+  const art = z.closest(".feuillet").querySelector(".pg-leg, .br-titre, .f-art");
   ouvrirVisionneuse(z.querySelector("img"), art ? art.textContent : "");
 }, true);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -841,7 +868,7 @@ const melange = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { c
 
 /* État partagé */
 let db = null, user = null, moi = null, sample = null;
-const S = { pseudos: new Map(), mots: new Map(), pieges: [], choix: [], contest: [], charge: {mots: false, pieges: false, choix: false} };
+const S = { pseudos: new Map(), mots: new Map(), pieges: [], choix: [], contest: [], defis: new Map(), charge: {mots: false, pieges: false, choix: false} };
 const noms = new Map([["truffe", "Truffe"]]);
 const vusLocal = new Set();
 let ecran = "jouer", lance = false;
@@ -1003,6 +1030,12 @@ let serie = null;
    pour qu'une question soit jouable (les pièges des joueurs servent trois fois plus vite qu'avec quatre réponses). */
 // 20 écus au départ : de quoi poser un faux en direct (15) dès la première partie, avec du rab.
 const TOTAL = 15, PRIX_PIEGE = 10, ECUS_DEPART = 20;
+/* Défi par lien (docs/conception.md, « Défi ») : dès DEFI_MIN faux en vente, le faussaire envoie un
+   lien ; l'ami expertise ses lots, face à ses faux. Sur le site seulement (window.__site, serveur.js). */
+const DEFI_MIN = 3;
+const CODE_DEFI = ((new URLSearchParams(location.search).get("defi") || "").toLowerCase().match(/^[a-z0-9]{6,12}$/) || [""])[0];
+// Longueur de la tournée : 15 lots, ou les lots du défi.
+const totalSerie = () => serie && serie.defi ? serie.defi.lots.length : TOTAL;
 /* Piéger en direct, juste après le duel : la question est choisie (dans l'atelier, on ne
    choisit que la famille) et la vraie vient d'être vue. Le choix se paie : 15 au lieu de 10. */
 const PRIX_DIRECT = 15;
@@ -1110,6 +1143,7 @@ function motAtelier(I, voulue) {
 
 function suite() {
   const I = index();
+  if (serie.defi) return suiteDefi(I);
   if (serie.jour !== aujourdhui()) return nouvelleSerie();   // minuit est passé : ration neuve
   if (serie.num >= TOTAL) return bilan();
   const dispo = motsEnJeu(I);
@@ -1123,10 +1157,10 @@ function suite() {
 
 const caseDe = n => n === 1 ? "v" : n === 0 ? "f" : "";
 function entete(q = serie.num + 1) {
-  q = Math.min(q, TOTAL);
+  q = Math.min(q, totalSerie());
   // Progression et solde sur une ligne : le gain du lot est déjà dans le verdict (place gagnée pour
   // que « Lot suivant » reste dans l'écran sans que la carte grandisse).
-  return `<div class="haut entete ligne-haut"><div class="progres" role="img" aria-label="Lot ${q} sur ${TOTAL}, ${serie.points} écus gagnés">${Array.from({length: TOTAL}, (_, i) => `<i class="${caseDe(serie.traces[i])}"></i>`).join("")}</div>${pastilleEcus(solde(index()))}</div>`;
+  return `<div class="haut entete ligne-haut"><div class="progres" role="img" aria-label="Lot ${q} sur ${totalSerie()}, ${serie.points} écus gagnés">${Array.from({length: totalSerie()}, (_, i) => `<i class="${caseDe(serie.traces[i])}"></i>`).join("")}</div>${pastilleEcus(solde(index()))}</div>`;
 }
 
 // Le piège opposé à la vérité : le plus efficace, sauf 4 fois sur 10 un piège encore peu vu (sa chance).
@@ -1139,10 +1173,10 @@ function adversaire(I, ps) {
 // La vérité se voit d'un coup d'œil : fond vert et pastille « Vrai ».
 const VRAI = `<span class="chip bon">D'époque</span>`;
 
-async function question(motId, I) {
+async function question(motId, I, piegeImpose = null) {
   const m = S.mots.get(motId);
   const ps = (I.vivants.get(motId) || []).filter(p => p.auteur !== moi);
-  const piege = adversaire(I, ps);
+  const piege = piegeImpose || adversaire(I, ps);
   const f = famille(m);
   const options = melange([{id: "vrai", texte: formater(m.vraie, f), categorie: m.categorie}, {id: piege.id, texte: formater(piege.texte, f), auteur: piege.auteur, categorie: piege.categorie || m.categorie}]);
   await nommer([piege.auteur]);
@@ -1153,9 +1187,11 @@ async function question(motId, I) {
    contrefait (direction artistique choisie par l'auteur le 23/11/2026, docs/direction-artistique.md).
    Chaque famille a son ouvrage ; tout ce qui entoure la réponse (titre, page, tome) est
    identique sur les deux feuillets et vient de la question, jamais de la réponse. */
-/* Ouvrages anciens, tous fictifs : plusieurs par famille, tirés au sort par lot (le même pour les
-   deux feuillets). Chacun a sa mise en page (style), la teinte de son papier et un pied de page
-   à l'ancienne : signature d'imprimeur et titre abrégé (demande de l'auteur, 23/11/2026). */
+/* Types d'artefacts par thème (docs/artefacts.md). Thème : ce que la question demande (famille,
+   champ `type`). Type d'artefact : l'objet qui porte les deux pièces (`style`, une fonction de rendu
+   par type, appelée par `feuillet`). Plusieurs par thème : tiré au sort par lot (le même pour les
+   deux pièces), sauf si la question impose le sien (`ouvrage`). Les ouvrages sont fictifs ; les
+   pages ont leur teinte et un pied à l'ancienne (demande de l'auteur, 23/11/2026). */
 const OUVRAGES = {
   definition: [
     { titre: "Dictionnaire universel de la langue française", court: "Delormel, Dict. univ.", an: 1839, style: "classique", teinte: 0 },
@@ -1182,7 +1218,10 @@ const OUVRAGES = {
   photo: [
     { titre: "Encyclopédie illustrée", court: "Encyclopédie illustrée", an: 1902, style: "classique", teinte: 0 },
     { titre: "Planches du cabinet de curiosités", court: "Cabinet de curiosités, pl.", an: 1898, style: "filet", teinte: 3 },
-    { titre: "Revue des arts et métiers", court: "Revue des arts et métiers", an: 1908, style: "classique", teinte: 1 }],
+    { titre: "Revue des arts et métiers", court: "Revue des arts et métiers", an: 1908, style: "classique", teinte: 1 },
+  // Brevet d'invention : pour certains objets (`ouvrage` : `brevet`), la réponse parle comme un
+  // inventeur (« appareil permettant de… »), plus amusant à contrefaire (demande de l'auteur, 25/11/2026).
+    { titre: "Brevet d'invention", court: "", an: 1887, style: "brevet", teinte: 0 }],
   // Mots et expressions étrangères : une page de guide de conversation, en deux colonnes.
   intraduisible: [
     { titre: "Guide du voyageur polyglotte", court: "", an: 1883, style: "guide", teinte: 0 },
@@ -1286,6 +1325,15 @@ function plancheGravee(m, motId, texte) {
     <span class="pg-leg" aria-hidden="true">Fig. ${n}. — ${esc(m.legende || "")}</span>
     <span class="pg-rep"><span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(texte)}</span></span>`;
 }
+// Brevet d'invention (objets photographiés) : en-tête et numéro, la planche du dessin, le titre de
+// l'invention, « Objet : » puis la réponse.
+function brevet(m, motId, texte) {
+  const e = empreinte(motId);
+  return `<span class="br-tete" aria-hidden="true"><span>Brevet d'invention</span><span>N° ${100000 + e % 89999}</span></span>
+    <span class="br-corps"><span class="f-zoom br-planche" role="button" aria-label="Agrandir l'image"><img src="${esc(m.image)}" alt="${esc(m.alt || m.legende || "")}"><span class="loupe" aria-hidden="true">⤢</span></span>
+    <span class="br-texte"><span class="br-titre">${esc(m.legende || "")}</span>
+    <span class="br-objet"><span class="br-lab">Objet :</span> <span class="rep">${esc(texte)}</span></span></span></span>`;
+}
 // Typographie française : espace insécable après « et avant » : ; ! ? (le » ne part plus seul à la ligne).
 const insecables = s => String(s).replace(/« /g, "«\u00a0").replace(/ ([»:;!?])/g, "\u00a0$1");
 function feuillet(m, motId, texte, categorie) {
@@ -1295,6 +1343,7 @@ function feuillet(m, motId, texte, categorie) {
   if (o.style === "fiche") return fiche(m, motId, texte);
   if (o.style === "livret") return livret(m, motId, texte);
   if (o.style === "carte") return carteVisite(m, motId, texte);
+  if (o.style === "brevet") return brevet(m, motId, texte);
   if (o.style === "coupure") return coupure(m, motId, texte, o);
   if (o.style === "guide") return guide(m, texte, o);
   if (f === "photo") return plancheGravee(m, motId, texte);
@@ -1353,7 +1402,7 @@ function repondre(motId, options, piege, k) {
   const avant = solde(index());
   if (db) { choixEnVol.push(trace); db.collection("choix").add(trace).catch(() => { choixEnVol.splice(choixEnVol.indexOf(trace), 1); }); }
   serie.num++; serie.traces.push(juste ? 1 : 0);
-  const fin = serie.num >= TOTAL;
+  const fin = serie.num >= totalSerie();
   document.getElementById("suite").innerHTML = `<div class="verdict">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--ecu)" : "var(--faux)"}">+${gain}${IC.ecu}</span></div>
     <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${juste && solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="${juste ? `Contrefaire ce lot pour ${PRIX_DIRECT} écus` : "Contrefaçon réservée aux pièces authentifiées"}">Contrefaire <span class="prix">−${PRIX_DIRECT}${IC.ecu}</span></button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
     ${db ? `<div class="signal"><button class="lien" type="button" id="signaler">Signaler le lot</button><div id="raisons" hidden></div></div>` : ""}`;
@@ -1577,6 +1626,81 @@ function plusDeMots() {
   const b = document.getElementById("bilanBtn"); if (b) b.onclick = bilan;
 }
 
+/* Défi par lien */
+// Lots du défi : un par faux encore en vente du faussaire, sur les lots que l'ami n'a pas joués.
+function lotsDefi(I, auteur) {
+  return S.pieges.filter(p => p.auteur === auteur && S.mots.has(p.mot) && !I.mort.has(p.id) && !I.retire.has(p.id)
+    && !I.vusMoi.has(p.mot) && !I.motsPiegesMoi.has(p.mot)).map(p => [p.mot, p]);
+}
+async function accueilDefi() {
+  const d = S.defis.get(CODE_DEFI);
+  if (!d || d.auteur === moi) return false;
+  await nommer([d.auteur]);
+  const I = index(), lots = lotsDefi(I, d.auteur);
+  afficher("jeu");
+  $e.innerHTML = `<div class="defi-intro apparait">
+      <span class="defi-sceau" aria-hidden="true">${sceau(true)}</span>
+      <span class="signe-faux defi-nom">${esc(nom(d.auteur))}</span>
+      <span class="defi-mot">te met au défi</span>
+      <div class="gros" aria-label="${lots.length} pièces à expertiser">${lots.length}<span class="defi-unite">${IC.piege}</span></div>
+    </div>
+    ${lots.length ? `<button class="bouton plein" type="button" id="releverDefi">Relever le défi</button>` : ""}
+    <button class="bouton" type="button" id="sansDefi">${lots.length ? "Plus tard" : "Expertiser"}</button>`;
+  const go = document.getElementById("releverDefi");
+  if (go) go.onclick = () => {
+    serie = { jour: aujourdhui(), num: 0, points: 0, serie: 0, meilleure: 0, traces: [], pieges: 0, piegeur: new Map(), derniere: null, tour: [],
+      defi: { code: CODE_DEFI, auteur: d.auteur, lots } };
+    suite();
+  };
+  document.getElementById("sansDefi").onclick = () => { oublierDefi(); montrer("jouer"); };
+  return true;
+}
+function suiteDefi(I) {
+  const c = serie.enCours;
+  if (c && serie.repondu !== c.motId && S.mots.has(c.motId)) return afficherDuel(c.motId, c.options, c.piege);
+  const suivant = serie.defi.lots.find(([mot]) => !I.vusMoi.has(mot));
+  if (serie.num >= totalSerie() || !suivant) return bilanDefi();
+  question(suivant[0], I, suivant[1]);
+}
+// Le lien ne relance pas le défi au prochain chargement de la page.
+function oublierDefi() { try { history.replaceState(null, "", location.pathname); } catch (e) {} }
+async function bilanDefi() {
+  const d = serie.defi; oublierDefi();
+  const dem = serie.traces.filter(x => x === 1).length, n = serie.traces.length;
+  const partage = `Bonimenteur : j'ai démasqué ${dem} faux sur ${n} de ${nom(d.auteur)}\n${serie.traces.map(x => x ? "🟩" : "🟥").join("")}`;
+  $e.innerHTML = `<div class="defi-intro apparait"><span class="signe-faux defi-nom">${esc(nom(d.auteur))}</span>
+      <div class="gros" aria-label="${dem} faux démasqués sur ${n}">${dem}<span class="defi-sur">/${n}</span></div></div>
+    <div class="cases" aria-hidden="true">${serie.traces.map(x => `<i class="${x ? "v" : ""}"></i>`).join("")}</div>
+    <div class="chips">${pastilleEcus(serie.points, "+")}${n - dem ? `<span class="chip faux" aria-label="${n - dem} faux crus">${IC.joueur} ${n - dem}</span>` : ""}</div>
+    ${window.__site ? `<button class="bouton piege" type="button" id="defierAussi">${IC.piege} Défier à mon tour</button>` : ""}
+    <button class="bouton plein" type="button" id="expertiser">Expertiser</button>
+    <button class="bouton" type="button" id="copier">Partager</button>`;
+  serie = null;
+  const da = document.getElementById("defierAussi"); if (da) da.onclick = () => { sousAtelier = "faux"; montrer("atelier"); };
+  document.getElementById("expertiser").onclick = () => { serie = null; nouvelleSerie(); };
+  const bc = document.getElementById("copier");
+  bc.onclick = () => { try { navigator.clipboard.writeText(partage).then(() => { bc.textContent = "Copié"; }, () => { bc.textContent = "Copie impossible ici"; }); } catch (e) { bc.textContent = "Copie impossible ici"; } };
+}
+// Bloc du défi dans « Sur le marché » : grisé, avec la jauge, tant qu'il manque des faux en vente.
+// Le dernier lien créé reste affiché : l'atelier se redessine à chaque relecture de la base.
+let lienDefi = "", lienCopie = false;
+function blocDefi(I) {
+  if (!window.__site) return "";
+  const n = I.piegesMoi.filter(p => !I.mort.has(p.id) && !I.retire.has(p.id)).length, pret = n >= DEFI_MIN;
+  return `<div class="defi-bloc"><button class="bouton ${pret ? "plein" : ""}" type="button" id="defier" ${pret ? "" : "disabled"} aria-label="${pret ? "Défier un ami" : `Défier un ami : ${n} faux en vente sur ${DEFI_MIN}`}">${IC.joueur} Défier un ami${pret ? "" : ` <span class="chip">${n}/${DEFI_MIN}</span>`}</button><div id="lienDefi" role="status">${lienDefi ? `<input class="lien-defi" readonly value="${esc(lienDefi)}" aria-label="Lien du défi">${lienCopie ? `<span class="chip bon">${IC.ok} Lien copié</span>` : ""}` : ""}</div></div>`;
+}
+async function defier() {
+  const bt = document.getElementById("defier"), zone = document.getElementById("lienDefi");
+  bt.disabled = true;
+  const code = Array.from(crypto.getRandomValues(new Uint8Array(8)), b => "abcdefghijkmnpqrstuvwxyz23456789"[b % 32]).join("");
+  try { await db.doc(`defis/${code}`).set({ auteur: moi, t: Date.now() }); }
+  catch (e) { bt.disabled = false; zone.innerHTML = `<p class="alerte">Défi impossible pour l'instant.</p>`; return; }
+  const url = `${location.origin}${location.pathname}?defi=${code}`;
+  lienDefi = url; lienCopie = false; atelier();
+  try { if (navigator.share) { await navigator.share({ title: "Bonimenteur", text: "Démasque mes faux sur Bonimenteur", url }); return; } } catch (e) {}
+  try { await navigator.clipboard.writeText(url); lienCopie = true; atelier(); } catch (e) {}
+}
+
 /* Atelier */
 /* L'atelier a deux sous-onglets : « Fabriquer » (choisir une famille, écrire un faux) et
    « Mes faux » (ses faux en circulation, leurs victimes, la galerie). Par défaut : Fabriquer
@@ -1608,11 +1732,14 @@ async function atelier(sous) {
     return "";
   };
   $e.innerHTML = `${sousOnglets("faux", I)}<div class="signature" id="signature"><span class="signe">Signé</span><button class="nom-signe" type="button" id="pseudoBtn" aria-label="Changer de pseudo">${monPseudo() ? esc(monPseudo()) : "ton pseudo"}${IC.plume}</button></div><div class="haut entete"><span class="chip" aria-label="${mes.length} pièges posés">${IC.piege} ${mes.length}</span><span class="chip faux" aria-label="${total} joueurs piégés">${IC.joueur} ${total}</span>${pastilleEcus(s)}</div>
+    ${blocDefi(I)}
     ${mes.length ? `<ul class="liste">${mes.map(p => { const v = I.demasque.get(p.id) || 0, n = I.pris.get(p.id) || 0; const mot = S.mots.get(p.mot); return `<li class="${I.mort.has(p.id) || I.retire.has(p.id) ? "eteint" : ""}"><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>${esc(formater(p.texte, mot ? famille(mot) : "definition"))}</span>${!n && !I.mort.has(p.id) && !I.retire.has(p.id) ? meche(v) : ""}<span class="chips" style="justify-content:flex-start">${etat(p)}<span class="chip" aria-label="${v} joueurs l'ont démasqué">${IC.oeil} ${v}</span><span class="chip faux" aria-label="${n} joueurs piégés">${IC.joueur} ${n}</span>${n ? pastilleEcus(n, "+") : ""}</span></li>`; }).join("")}</ul>`
       : `<div class="grosse-ic">${IC.piege}</div>`}
     ${galerie.length ? `<h2>${IC.etoile} Pièces de maître</h2><ul class="liste">${galerie.map(p => { const mot = S.mots.get(p.mot); return `<li><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>« ${esc(formater(p.texte, mot ? famille(mot) : "definition"))} »</span><span class="chips" style="justify-content:flex-start"><span class="chip">${IC.piege} ${esc(nom(p.auteur))}</span><span class="chip faux" aria-label="joueurs piégés">${IC.joueur} ${I.pris.get(p.id) || 0}</span></span></li>`; }).join("")}</ul>` : ""}`;
   lierSous();
   document.getElementById("pseudoBtn").onclick = editerPseudo;
+  const bd = document.getElementById("defier"); if (bd) bd.onclick = defier;
+  const ld = $e.querySelector(".lien-defi"); if (ld) ld.onclick = () => ld.select();
 }
 function editerPseudo() {
   const zone = document.getElementById("signature");
@@ -1775,13 +1902,16 @@ const pret = () => S.charge.mots && S.charge.pieges && S.charge.choix;
   if (!moi) moi = "anonyme";
   nommer([moi]).catch(() => {});
   const quandPret = async () => {
-    if (pret() && !lance) { lance = true; clearTimeout(minuteur); if (vue === "jeu") { if (!(await absence())) montrer("jouer"); } else majAccueil(); }
+    if (pret() && !lance) { lance = true; clearTimeout(minuteur);
+      if (CODE_DEFI && await accueilDefi()) return;
+      if (vue === "jeu") { if (!(await absence())) montrer("jouer"); } else majAccueil(); }
     else if (lance && vue === "accueil") majAccueil();
     else if (lance && vue === "jeu" && ecran === "atelier") atelier();
   };
   db.collection("mots").onSnapshot(s => { S.mots = new Map(s.docs.map(d => [d.id, d.data()])); if (!s.metadata.fromCache) S.charge.mots = true; quandPret(); }, () => { S.charge.mots = true; quandPret(); });
   db.collection("pieges").limit(1000).onSnapshot(s => { S.pieges = s.docs.map(d => ({id: d.id, ...d.data()})); if (!s.metadata.fromCache) S.charge.pieges = true; quandPret(); }, () => { S.charge.pieges = true; quandPret(); });
   db.collection("joueurs").onSnapshot(s => { S.pseudos = new Map(s.docs.map(d => [d.id, String(d.data().pseudo || "").slice(0, PSEUDO_MAX)]).filter(x => x[1])); if (lance && vue === "jeu" && ecran === "atelier" && sousAtelier === "faux" && !document.getElementById("pseudoChamp")) atelier(); if (lance && vue === "accueil" && !document.getElementById("pseudoAcc")) majAccueil(); }, () => {});
+  db.collection("defis").limit(1000).onSnapshot(s => { S.defis = new Map(s.docs.map(d => [d.id, d.data()])); }, () => {});
   db.collection("contestations").limit(1000).onSnapshot(s => { S.contest = s.docs.map(d => d.data()); if (lance && vue === "jeu" && ecran === "atelier") atelier(); }, () => {});
   db.collection("choix").limit(1000).onSnapshot(s => { S.choix = s.docs.map(d => ({id: d.id, ...d.data()})); if (!s.metadata.fromCache) S.charge.choix = true; quandPret(); }, () => { S.charge.choix = true; quandPret(); });
 })();
