@@ -155,7 +155,7 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .liste li{position:relative;border:1.5px solid var(--trait);border-radius:3px;padding:12px;display:flex;flex-direction:column;gap:6px;background:var(--creux)}
 .liste .m{font-family:var(--titre);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--vert)}
 .liste .stat{font-size:13px;color:var(--doux);font-variant-numeric:tabular-nums}
-.liste li.eteint{opacity:.55}
+.liste li.eteint > :not(.actions-faux){opacity:.55}
 .barre{height:6px;border-radius:1px;background:var(--papier-2);overflow:hidden}
 .barre i{display:block;height:100%;background:var(--piege);transform-origin:left}
 .note{font:11px/1.4 var(--titre);color:#8fa596;margin:10px 0 0;text-align:center;letter-spacing:.18em;text-transform:uppercase}
@@ -165,9 +165,23 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .victime{display:inline-flex;align-items:center;gap:6px;padding:2px 10px 2px 2px;border-radius:3px;background:rgba(179,50,42,.1);font-size:14px;font-weight:700}
 .victime b{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--rouge);color:#fff;font:700 12px var(--titre)}
 /* Le sceau du faux : chaque démasquage en brise un cran. */
-.meche{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px}
-.meche i{width:12px;height:12px;justify-self:center;border-radius:50%;background:var(--rouge)}
-.meche i.brule{background:transparent;box-shadow:inset 0 0 0 1.5px var(--trait)}
+/* Planche de l'édition : un timbre par exemplaire ; vendu (doré), saisi (barré), en stock (dentelé). */
+.planche{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px;align-items:center}
+.planche i{height:16px;width:12px;justify-self:center;border:1.5px dashed var(--trait);border-radius:2px;position:relative}
+.planche i.vendu{background:var(--ecu);border:1.5px solid var(--ecu)}
+.planche i.saisi{border:1.5px solid var(--doux);background:linear-gradient(to top right,transparent 44%,var(--doux) 46% 54%,transparent 56%)}
+.ed{font:700 13px/1 var(--titre);color:var(--doux);font-variant-caps:normal}
+.actions-faux{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.actions-faux .bouton{min-height:40px;padding:0 8px;font-size:14px;width:auto;text-transform:none;font-variant-caps:normal;letter-spacing:0;white-space:nowrap}
+.actions-faux .bouton .prix{position:static;margin-left:6px}
+/* Étal : une case par place, pleine si un faux y est en vente. */
+.etal{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.etal .cases-etal{display:flex;gap:3px;flex-wrap:wrap;flex:1 1 auto}
+.etal .cases-etal i{width:12px;height:18px;border:1.5px dashed var(--trait);border-radius:2px}
+.etal .cases-etal i.pleine{background:var(--piege);border:1.5px solid var(--piege)}
+.etal .nb-etal{font:700 13px/1 var(--titre);color:var(--encre);font-variant-numeric:tabular-nums}
+.etal .bouton{min-height:36px;padding:0 10px;font-size:14px;width:auto}
+.etal .bouton .prix{position:static;margin-left:6px}
 .alerte{border:1.5px dashed var(--rouge);border-radius:3px;padding:12px;font-size:14px;margin:0;color:var(--rouge);background:#fbefe9}
 .jauge-ecus{display:flex;align-items:center;gap:8px}
 .jauge-ecus .barre{flex:1}
@@ -773,7 +787,7 @@ header.vers-accueil{cursor:pointer}
       <div class="d-piece d-fausse"><b>sapajou</b>, <i>n. m.</i> Ragoût antillais au lait de coco.<span class="d-tampon d-contre">Contrefaçon</span></div>
     </div>
     <h1 class="logo">Bonimenteur</h1>
-    <p class="tagline">Démasque les faux</p>
+    <p class="tagline">L'expert et le faussaire</p>
     <p class="recap">Authentifie la pièce d'époque, démasque le faux. Puis fabrique les tiens pour <b>duper les autres</b>.</p>
     <!-- Deux boutons côte à côte, comme « Jouer » et « Multijoueur » de Snouff et Vocabulium. -->
     <div class="menu-play"><button class="bouton plein" type="button" id="jouer">Expertiser</button><button class="bouton atelier-acc" type="button" id="versAtelierAcc">Atelier</button></div>
@@ -906,7 +920,7 @@ const melange = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { c
 
 /* État partagé */
 let db = null, user = null, moi = null, sample = null;
-const S = { pseudos: new Map(), mots: new Map(), pieges: [], choix: [], contest: [], defis: new Map(), charge: {mots: false, pieges: false, choix: false} };
+const S = { pseudos: new Map(), mots: new Map(), pieges: [], choix: [], contest: [], actes: [], defis: new Map(), charge: {mots: false, pieges: false, choix: false} };
 const noms = new Map([["truffe", "Truffe"]]);
 const vusLocal = new Set();
 let ecran = "jouer", lance = false;
@@ -939,24 +953,55 @@ function index() {
   for (const c of [...S.choix, ...choixEnVol]) if (c.joueur === moi) { vusMoi.add(c.mot); jouesMoi.set(c.mot, !c.erreur); if (!c.erreur) authentifiesMoi.add(c.mot); }
   const piegesMoi = S.pieges.filter(p => p.auteur === moi);
   const motsPiegesMoi = new Set(piegesMoi.map(p => p.mot));
-  // Démasqué pour de bon : percé MORT_VUS fois sans avoir fait une seule victime (la mèche).
-  // Plus vrai que nature : plus de victimes que de démasquages, une fois assez joué.
-  const mort = new Set(), pvqn = new Set();
+  /* Édition (docs/conception.md, « Édition et étal ») : un faux de joueur est tiré à EXEMPLAIRES
+     exemplaires ; chaque duel où il paraît en écoule un, vendu (victime) ou saisi (démasqué). Épuisé,
+     il quitte le marché ; le faussaire le réédite. Les faux de Truffe gardent l'ancienne règle :
+     saisis après MORT_VUS démasquages sans victime.
+     Actes du faussaire (collection « actes », en ajout seul) : réédition, retouche, retrait, remise,
+     place d'étal. Le dernier de retrait / remise / réédition dit si le faux est rangé. */
+  const actesPar = new Map(); let placesMoi = 0;
+  for (const a of [...S.actes, ...actesEnVol]) {
+    if (a.sorte === "place") { if (a.joueur === moi) placesMoi++; continue; }
+    if (!actesPar.has(a.faux)) actesPar.set(a.faux, []); actesPar.get(a.faux).push(a);
+  }
+  const mort = new Set(), pvqn = new Set(), epuise = new Set(), range = new Set(), edition = new Map();
   for (const p of S.pieges) {
     const d = demasque.get(p.id) || 0, n = pris.get(p.id) || 0;
-    if (d >= MORT_VUS && n === 0) mort.add(p.id);
     if ((vu.get(p.id) || 0) >= PVQN_VUS && n > d) pvqn.add(p.id);
+    if (p.auteur === "truffe") { if (d >= MORT_VUS && n === 0) mort.add(p.id); continue; }
+    const actes = (actesPar.get(p.id) || []).slice().sort((a, b) => (a.t || 0) - (b.t || 0));
+    let editions = 1, base = [0, 0], rangeP = false;
+    for (const a of actes) {
+      if (a.sorte === "reedition") { editions++; base = a.base || base; rangeP = false; }
+      else if (a.sorte === "retrait") rangeP = true;
+      else if (a.sorte === "remise") rangeP = false;
+      else if (a.sorte === "retouche" && a.texte) { p.texte = a.texte; if (a.categorie) p.categorie = a.categorie; }
+    }
+    const vendus = Math.max(n - base[0], 0), saisis = Math.max(d - base[1], 0);
+    const restants = Math.max(EXEMPLAIRES - vendus - saisis, 0);
+    edition.set(p.id, { editions, vendus: Math.min(vendus, EXEMPLAIRES), saisis: Math.min(saisis, EXEMPLAIRES - Math.min(vendus, EXEMPLAIRES)), restants });
+    if (!restants) epuise.add(p.id);
+    if (rangeP) range.add(p.id);
   }
   // Retiré : contesté par CONTEST_MIN joueurs (le piège dit la même chose que la vraie définition).
   const nbContest = new Map(), mesContest = new Set();
   for (const c of S.contest) { nbContest.set(c.piege, (nbContest.get(c.piege) || 0) + 1); if (c.joueur === moi) mesContest.add(c.piege); }
   const retire = new Set([...nbContest].filter(([, n]) => n >= CONTEST_MIN).map(([id]) => id));
+  // Hors du marché : saisi (Truffe), épuisé, rangé par son auteur, retiré par contestation.
+  const horsVente = new Set([...mort, ...epuise, ...range, ...retire]);
   const vivants = new Map();
-  for (const [m, ps] of parMot) vivants.set(m, ps.filter(p => !mort.has(p.id) && !retire.has(p.id)));
-  return { parMot, vivants, vu, pris, demasque, victimes, choixParMot, vusMoi, authentifiesMoi, jouesMoi, piegesMoi, motsPiegesMoi, mort, pvqn, retire, mesContest };
+  for (const [m, ps] of parMot) vivants.set(m, ps.filter(p => !horsVente.has(p.id)));
+  const enVenteMoi = piegesMoi.filter(p => !horsVente.has(p.id)).length, places = ETAL + placesMoi;
+  return { parMot, vivants, vu, pris, demasque, victimes, choixParMot, vusMoi, authentifiesMoi, jouesMoi, piegesMoi, motsPiegesMoi, mort, pvqn, retire, mesContest,
+    epuise, range, edition, horsVente, enVenteMoi, places, etalPlein: enVenteMoi >= places };
 }
 // Réglages du prototype : petits pour qu'on voie les effets avec quelques testeurs.
 const MORT_VUS = 10, PVQN_VUS = 5, CONTEST_MIN = 2;
+/* Édition et étal (décision de l'auteur, 25/11/2026 ; docs/conception.md, « Édition et étal ») :
+   10 exemplaires par édition, réédition plus chère qu'un faux neuf (25 contre 10 : un faux qui a fait
+   ses preuves vaut plus) ; 10 places à l'étal, agrandi place par place jusqu'à 20. Prix de départ,
+   à régler sur les parties réelles. */
+const EXEMPLAIRES = 10, ETAL = 10, ETAL_MAX = 20, PRIX_REEDITION = 25, PRIX_RETOUCHE = 5, PRIX_PLACE = 20;
 
 /* Arbitre du sens, sans LLM : vecteurs Numberbatch (vocab de Vocabulium et ses mots rares).
    proches.json donne, pour chaque mot du jeu, les mots dont la proximité est ≥ 0,45 :
@@ -1083,12 +1128,15 @@ const prixDe = p => p.prix || PRIX_PIEGE;
 /* Choix du joueur enregistrés mais pas encore revenus de la base (la relecture arrive après la
    révélation) : comptés tout de suite, sinon la pastille bondit sans changer de chiffre. */
 const choixEnVol = [];
+// Actes du faussaire écrits mais pas encore relus : vidés à chaque relecture de la collection.
+const actesEnVol = [];
 function solde(I) {
   const vus = new Set(S.choix.filter(c => c.joueur === moi).map(c => c.mot));
   for (let i = choixEnVol.length - 1; i >= 0; i--) if (vus.has(choixEnVol[i].mot)) choixEnVol.splice(i, 1);
   const gagnes = [...S.choix.filter(c => c.joueur === moi), ...choixEnVol].reduce((t, c) => t + (Array.isArray(c.ordre) ? (c.gain || 0) : (c.choisi === "vrai" ? 1 : 0)), 0);
   const rendus = I.piegesMoi.reduce((t, p) => t + (I.pris.get(p.id) || 0), 0);
-  return ECUS_DEPART + gagnes + rendus - I.piegesMoi.reduce((t, p) => t + prixDe(p), 0);
+  const actes = [...S.actes, ...actesEnVol].filter(a => a.joueur === moi).reduce((t, a) => t + (a.prix || 0), 0);
+  return ECUS_DEPART + gagnes + rendus - I.piegesMoi.reduce((t, p) => t + prixDe(p), 0) - actes;
 }
 const écus = n => `${n} écu${Math.abs(n) > 1 ? "s" : ""}`;
 /* Ration du jour : TOTAL duels par jour, heure de Paris (décision de l'auteur, 23/11/2026).
@@ -1415,7 +1463,7 @@ function repondre(motId, options, piege, k) {
   serie.num++; serie.traces.push(juste ? 1 : 0);
   const fin = serie.num >= totalSerie();
   document.getElementById("suite").innerHTML = `<div class="verdict">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--ecu)" : "var(--faux)"}">+${gain}${IC.ecu}</span></div>
-    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${juste && solde(index()) >= PRIX_DIRECT ? "" : "disabled"} aria-label="${juste ? `Contrefaire ce lot pour ${PRIX_DIRECT} écus` : "Contrefaçon réservée aux pièces authentifiées"}">Contrefaire <span class="prix">−${PRIX_DIRECT}${IC.ecu}</span></button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
+    <div class="ligne direct">${db ? `<button class="bouton piege" type="button" id="pieger" ${juste && solde(index()) >= PRIX_DIRECT && !index().etalPlein ? "" : "disabled"} aria-label="${!juste ? "Contrefaçon réservée aux pièces authentifiées" : index().etalPlein ? "Étal plein" : `Contrefaire ce lot pour ${PRIX_DIRECT} écus`}">Contrefaire <span class="prix">−${PRIX_DIRECT}${IC.ecu}</span></button>` : ""}<button class="bouton plein" type="button" id="suivant">${fin ? "Bilan" : "Lot suivant"}</button></div>
     ${db ? `<div class="signal"><button class="lien" type="button" id="signaler">Signaler le lot</button><div id="raisons" hidden></div></div>` : ""}`;
   const pr = $e.querySelector(".progres"); if (pr) pr.remove();
   $e.querySelector(".entete").outerHTML = entete(serie.num);
@@ -1493,6 +1541,16 @@ function choixFamille(retour) {
       <button class="bouton plein" type="button" id="retour" style="width:100%">Expertise</button>`;
     document.getElementById("retour").onclick = () => (retour === atelier ? montrer("jouer") : nouvelleSerie()); if (retour === atelier) lierSous(); return;
   }
+  // Étal plein : pas de faux neuf ; le marché pour ranger, rééditer moins, ou agrandir.
+  if (index().etalPlein) {
+    const I2 = index();
+    $e.innerHTML = `${retour === atelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(s)}
+      <div class="etal apparait" role="img" aria-label="Étal plein : ${I2.enVenteMoi} faux sur ${I2.places} places" style="justify-content:center"><span class="cases-etal" aria-hidden="true" style="flex:0 1 auto">${Array.from({length: I2.places}, () => `<i class="pleine"></i>`).join("")}</span><span class="nb-etal">${I2.enVenteMoi}/${I2.places}</span></div>
+      <p class="centre">Étal plein.</p>
+      <button class="bouton plein" type="button" id="versMarche" style="width:100%">Sur le marché</button>`;
+    document.getElementById("versMarche").onclick = () => atelier("faux"); if (retour === atelier) lierSous();
+    return;
+  }
   if (familleAtelier && par.has(familleAtelier)) return lotsFamille(retour, familleAtelier);
   const dansAtelier = retour === atelier;
   const nb = f => par.get(f).filter(x => x.authentifie).length;
@@ -1502,18 +1560,21 @@ function choixFamille(retour) {
   if (dansAtelier) lierSous(); else document.getElementById("retour").onclick = retour;
 }
 
-function cartePiege(motId, retour, prix = PRIX_PIEGE) {
-  const m = S.mots.get(motId), F = FAMILLES[famille(m)], direct = prix !== PRIX_PIEGE;
+/* Retouche (retouche = le faux) : même écran, texte du faux à reprendre ; l'arbitre repasse,
+   l'édition en cours et ses compteurs restent. */
+function cartePiege(motId, retour, prix = PRIX_PIEGE, retouche = null) {
+  const m = S.mots.get(motId), F = FAMILLES[famille(m)], direct = prix !== PRIX_PIEGE && !retouche;
+  const catDefaut = (retouche && retouche.categorie) || m.categorie || "n. m.";
   $e.innerHTML = `${enteteEcus(solde(index()), prix)}
     ${lot(m, motId, true)}
     <div class="original apparait"><span class="chip bon">D'époque</span><span>${esc(formater(m.vraie, famille(m)))}</span></div>
     <p class="titre-apercu">Ta contrefaçon</p>
     <div class="feuillet modele apercu vide" id="apercu" ${attrsFeuillet(m, motId)}>${feuillet(m, motId, formater(m.vraie, famille(m)), m.categorie)}</div>
-    ${famille(m) === "definition" ? `<div class="categories" role="radiogroup" aria-label="Catégorie de ton faux">${CATEGORIES.map(c => `<button type="button" role="radio" class="cat" data-cat="${c}" aria-checked="${c === (m.categorie || "n. m.")}">${c}</button>`).join("")}</div>` : ""}
-    <textarea id="piegeTexte" maxlength="${F.max}" aria-label="${F.champ}" placeholder="${esc(formater(m.vraie, famille(m)))}"></textarea>
+    ${famille(m) === "definition" ? `<div class="categories" role="radiogroup" aria-label="Catégorie de ton faux">${CATEGORIES.map(c => `<button type="button" role="radio" class="cat" data-cat="${c}" aria-checked="${c === catDefaut}">${c}</button>`).join("")}</div>` : ""}
+    <textarea id="piegeTexte" maxlength="${F.max}" aria-label="${F.champ}" placeholder="${esc(formater(m.vraie, famille(m)))}">${retouche ? esc(retouche.texte) : ""}</textarea>
     <div class="sous-saisie"><label class="signer"><i>signé</i><input id="signeChamp" maxlength="${PSEUDO_MAX}" autocomplete="nickname" aria-label="Ta signature" placeholder="ton nom de faussaire" value="${esc(signatureProposee())}"></label><span class="compte" id="compte">0 / ${F.max}</span></div>
     <div id="erreurPiege"></div>
-    <div class="ligne"><button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button><button class="bouton piege" type="button" id="poser">Mettre en vente</button></div>`;
+    <div class="ligne"><button class="bouton" type="button" id="passer" aria-label="Retour">${IC.croix}</button><button class="bouton piege" type="button" id="poser">${retouche ? "Retoucher" : "Mettre en vente"}</button></div>`;
   const ta = document.getElementById("piegeTexte");
   // Aperçu : le faux s'écrit dans l'emplacement de la réponse, sur le même artefact que l'original.
   const apercu = document.getElementById("apercu"); let rafApercu = 0;
@@ -1533,6 +1594,9 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
     const err = document.getElementById("erreurPiege");
     const commune = famille(m) === "commune";
     if (texte.length < (commune ? 3 : 8)) { err.innerHTML = `<p class="alerte">Trop court.</p>`; return; }
+    const catChoisie = ($e.querySelector('.cat[aria-checked="true"]') || {}).dataset;
+    if (retouche && texte === retouche.texte && (!catChoisie || catChoisie.cat === retouche.categorie)) { err.innerHTML = `<p class="alerte">Rien de changé.</p>`; return; }
+    if (!retouche && index().etalPlein) { err.innerHTML = `<p class="alerte">Étal plein : range un faux ou agrandis l'étal.</p>`; return; }
     if (commune && COMMUNES && COMMUNES.has(nomCommune(texte))) {
       if (nomCommune(texte) === nomCommune(m.vraie)) {
         vusLocal.add(motId);
@@ -1559,6 +1623,10 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
       catch (e) { if (e && e.code === "doublon") { signe.classList.add("refus"); signe.focus(); err.innerHTML = `<p class="alerte">Cette signature est déjà prise.</p>`; return; } }
     }
     poser.disabled = true;
+    if (retouche) {
+      try { await acte({ sorte: "retouche", faux: retouche.id, prix, texte, ...(catChoisie ? { categorie: catChoisie.cat } : {}) }); return retour(); }
+      catch (e) { poser.disabled = false; err.innerHTML = `<p class="alerte">${MESSAGES_ERREUR[e && e.code] || "Échec de l'enregistrement."}</p>`; return; }
+    }
     try {
       const cat = $e.querySelector('.cat[aria-checked="true"]');
       await db.collection("pieges").add({ mot: motId, texte, auteur: moi, cree: Date.now(), ...(direct ? { prix } : {}), ...(cat ? { categorie: cat.dataset.cat } : {}) });
@@ -1579,7 +1647,7 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
       const ch = $e.querySelector(".entete .chip.ecu:last-child"); if (ch) ch.classList.add("bump-vente");
     } catch (e) {
       poser.disabled = false;
-      err.innerHTML = e && e.code === "solde" ? reserve(solde(index()), prix) : `<p class="alerte">${e && e.code === "quota_exceeded" ? "Plus de place." : e && e.code === "doublon" ? "Tu as déjà un faux ici." : e && e.code === "non_authentifie" ? "Pièce non authentifiée." : e && e.code === "refuse" ? "Texte refusé." : e && e.code === "debit" ? "Trop vite : réessaie dans un instant." : "Échec de l'enregistrement."}</p>`;
+      err.innerHTML = e && e.code === "solde" ? reserve(solde(index()), prix) : `<p class="alerte">${e && e.code === "refuse" ? "Texte refusé." : MESSAGES_ERREUR[e && e.code] || "Échec de l'enregistrement."}</p>`;
     }
   };
   ta.focus();
@@ -1635,7 +1703,7 @@ function plusDeMots() {
 /* Défi par lien */
 // Lots du défi : un par faux encore en vente du faussaire, sur les lots que l'ami n'a pas joués.
 function lotsDefi(I, auteur) {
-  return S.pieges.filter(p => p.auteur === auteur && S.mots.has(p.mot) && !I.mort.has(p.id) && !I.retire.has(p.id)
+  return S.pieges.filter(p => p.auteur === auteur && S.mots.has(p.mot) && !I.horsVente.has(p.id)
     && !I.vusMoi.has(p.mot) && !I.motsPiegesMoi.has(p.mot)).map(p => [p.mot, p]);
 }
 async function accueilDefi() {
@@ -1692,7 +1760,7 @@ async function bilanDefi() {
 let lienDefi = "", lienCopie = false;
 function blocDefi(I) {
   if (!window.__site) return "";
-  const n = I.piegesMoi.filter(p => !I.mort.has(p.id) && !I.retire.has(p.id)).length, pret = n >= DEFI_MIN;
+  const n = I.enVenteMoi, pret = n >= DEFI_MIN;
   return `<div class="defi-bloc"><button class="bouton ${pret ? "plein" : ""}" type="button" id="defier" ${pret ? "" : "disabled"} aria-label="${pret ? "Défier un ami" : `Défier un ami : ${n} faux en vente sur ${DEFI_MIN}`}">${IC.joueur} Défier un ami${pret ? "" : ` <span class="chip">${n}/${DEFI_MIN}</span>`}</button><div id="lienDefi" role="status">${lienDefi ? `<input class="lien-defi" readonly value="${esc(lienDefi)}" aria-label="Lien du défi">${lienCopie ? `<span class="chip bon">${IC.ok} Lien copié</span>` : ""}` : ""}</div></div>`;
 }
 async function defier() {
@@ -1724,28 +1792,69 @@ async function atelier(sous) {
   if (sousAtelier === "fabriquer") return choixFamille(atelier);
   const mes = I.piegesMoi.slice().sort((a, b) => (b.cree || 0) - (a.cree || 0));
   const total = mes.reduce((s, p) => s + (I.pris.get(p.id) || 0), 0);
-  const vivants = mes.filter(p => !I.mort.has(p.id) && !I.retire.has(p.id)).length;
   const s = solde(I);
+  // En vente d'abord, puis rangés, épuisés, retirés par contestation.
+  const rang = p => I.retire.has(p.id) ? 3 : I.epuise.has(p.id) ? 2 : I.range.has(p.id) ? 1 : 0;
+  mes.sort((a, b) => rang(a) - rang(b));
   const galerie = S.pieges.filter(p => I.pvqn.has(p.id)).sort((a, b) => taux(I, b.id) - taux(I, a.id));
   await nommer(galerie.map(p => p.auteur));
-  // Mèche : un piège sans victime se consume d'un cran à chaque lecture ; à MORT_VUS il est démasqué.
-  // Dès la première victime, il est sauvé pour de bon : plus de mèche.
-  const meche = v => `<div class="meche" role="img" aria-label="${MORT_VUS - v} démasquages avant de disparaître">${Array.from({length: MORT_VUS}, (_, i) => `<i class="${i < v ? "brule" : ""}"></i>`).join("")}</div>`;
+  // Planche de l'édition en cours : vendus, saisis, puis exemplaires en stock.
+  const planche = p => { const e = I.edition.get(p.id); if (!e) return "";
+    return `<div class="planche" role="img" aria-label="Édition ${e.editions} : ${e.vendus} vendus, ${e.saisis} saisis, ${e.restants} en stock">${Array.from({length: EXEMPLAIRES}, (_, i) => `<i class="${i < e.vendus ? "vendu" : i < e.vendus + e.saisis ? "saisi" : ""}"></i>`).join("")}</div>`; };
   const etat = p => {
+    const e = I.edition.get(p.id), ed = e && e.editions > 1 ? `<span class="ed">${e.editions}<sup>e</sup> éd.</span>` : "";
     if (I.retire.has(p.id)) return `<span class="chip faux">${IC.croix} Retiré du marché</span>`;
-    if (I.mort.has(p.id)) return `<span class="chip faux">${IC.croix} Saisi</span>`;
-    if (I.pvqn.has(p.id)) return `<span class="chip ecu">${IC.etoile} Pièce de maître</span>`;
-    return "";
+    if (I.epuise.has(p.id)) return `<span class="chip">Épuisé</span>${ed}`;
+    if (I.range.has(p.id)) return `<span class="chip">En réserve</span>${ed}`;
+    return `${I.pvqn.has(p.id) ? `<span class="chip ecu">${IC.etoile} Pièce de maître</span>` : ""}${ed}`;
   };
+  // Gestes du faussaire sur un faux : retoucher (toujours), retirer ou remettre, rééditer s'il est épuisé.
+  const prixBtn = n => `<span class="prix">−${n}${IC.ecu}</span>`;
+  const actions = p => {
+    if (I.retire.has(p.id)) return "";
+    const libre = !I.etalPlein, b = [`<button class="bouton" type="button" data-acte="retouche" data-id="${esc(p.id)}" ${s >= PRIX_RETOUCHE ? "" : "disabled"}>${IC.plume} Retoucher${prixBtn(PRIX_RETOUCHE)}</button>`];
+    if (I.epuise.has(p.id)) b.push(`<button class="bouton piege" type="button" data-acte="reedition" data-id="${esc(p.id)}" ${libre && s >= PRIX_REEDITION ? "" : "disabled"} aria-label="Rééditer : ${EXEMPLAIRES} exemplaires pour ${PRIX_REEDITION} écus${libre ? "" : ", étal plein"}">Rééditer${prixBtn(PRIX_REEDITION)}</button>`);
+    else if (I.range.has(p.id)) b.push(`<button class="bouton plein" type="button" data-acte="remise" data-id="${esc(p.id)}" ${libre ? "" : "disabled"} aria-label="Remettre en vente">Remettre</button>`);
+    else b.push(`<button class="bouton" type="button" data-acte="retrait" data-id="${esc(p.id)}">Ranger</button>`);
+    return `<div class="actions-faux">${b.join("")}</div>`;
+  };
+  const etal = `<div class="etal" role="group" aria-label="Étal : ${I.enVenteMoi} faux en vente sur ${I.places} places"><span class="cases-etal" aria-hidden="true">${Array.from({length: I.places}, (_, i) => `<i class="${i < I.enVenteMoi ? "pleine" : ""}"></i>`).join("")}</span><span class="nb-etal">${I.enVenteMoi}/${I.places}</span>${I.places < ETAL_MAX ? `<button class="bouton" type="button" id="agrandir" ${s >= PRIX_PLACE ? "" : "disabled"} aria-label="Agrandir l'étal d'une place pour ${PRIX_PLACE} écus">+1 place${prixBtn(PRIX_PLACE)}</button>` : ""}</div>`;
   $e.innerHTML = `${sousOnglets("faux", I)}<div class="signature" id="signature"><span class="signe">Signé</span><button class="nom-signe" type="button" id="pseudoBtn" aria-label="Changer de pseudo">${monPseudo() ? esc(monPseudo()) : "ton pseudo"}${IC.plume}</button></div><div class="haut entete"><span class="chip" aria-label="${mes.length} pièges posés">${IC.piege} ${mes.length}</span><span class="chip faux" aria-label="${total} joueurs piégés">${IC.joueur} ${total}</span>${pastilleEcus(s)}</div>
+    ${etal}
+    <div id="erreurActe"></div>
     ${blocDefi(I)}
-    ${mes.length ? `<ul class="liste">${mes.map(p => { const v = I.demasque.get(p.id) || 0, n = I.pris.get(p.id) || 0; const mot = S.mots.get(p.mot); return `<li class="${I.mort.has(p.id) || I.retire.has(p.id) ? "eteint" : ""}"><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>${esc(formater(p.texte, mot ? famille(mot) : "definition"))}</span>${!n && !I.mort.has(p.id) && !I.retire.has(p.id) ? meche(v) : ""}<span class="chips" style="justify-content:flex-start">${etat(p)}<span class="chip" aria-label="${v} joueurs l'ont démasqué">${IC.oeil} ${v}</span><span class="chip faux" aria-label="${n} joueurs piégés">${IC.joueur} ${n}</span>${n ? pastilleEcus(n, "+") : ""}</span></li>`; }).join("")}</ul>`
+    ${mes.length ? `<ul class="liste">${mes.map(p => { const v = I.demasque.get(p.id) || 0, n = I.pris.get(p.id) || 0; const mot = S.mots.get(p.mot); return `<li class="${I.horsVente.has(p.id) ? "eteint" : ""}"><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>${esc(formater(p.texte, mot ? famille(mot) : "definition"))}</span>${I.retire.has(p.id) ? "" : planche(p)}<span class="chips" style="justify-content:flex-start">${etat(p)}<span class="chip" aria-label="${v} joueurs l'ont démasqué">${IC.oeil} ${v}</span><span class="chip faux" aria-label="${n} joueurs piégés">${IC.joueur} ${n}</span>${n ? pastilleEcus(n, "+") : ""}</span>${actions(p)}</li>`; }).join("")}</ul>`
       : `<div class="grosse-ic">${IC.piege}</div>`}
     ${galerie.length ? `<h2>${IC.etoile} Pièces de maître</h2><ul class="liste">${galerie.map(p => { const mot = S.mots.get(p.mot); return `<li><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>« ${esc(formater(p.texte, mot ? famille(mot) : "definition"))} »</span><span class="chips" style="justify-content:flex-start"><span class="chip">${IC.piege} ${esc(nom(p.auteur))}</span><span class="chip faux" aria-label="joueurs piégés">${IC.joueur} ${I.pris.get(p.id) || 0}</span></span></li>`; }).join("")}</ul>` : ""}`;
   lierSous();
   document.getElementById("pseudoBtn").onclick = editerPseudo;
   const bd = document.getElementById("defier"); if (bd) bd.onclick = defier;
   const ld = $e.querySelector(".lien-defi"); if (ld) ld.onclick = () => ld.select();
+  const ba = document.getElementById("agrandir"); if (ba) ba.onclick = () => acte({ sorte: "place", prix: PRIX_PLACE });
+  $e.querySelectorAll("[data-acte]").forEach(b => b.onclick = () => {
+    const p = S.pieges.find(x => x.id === b.dataset.id); if (!p) return;
+    const sorte = b.dataset.acte;
+    if (sorte === "retouche") return cartePiege(p.mot, () => atelier("faux"), PRIX_RETOUCHE, p);
+    acte({ sorte, faux: p.id, prix: sorte === "reedition" ? PRIX_REEDITION : 0,
+      ...(sorte === "reedition" ? { base: [I.pris.get(p.id) || 0, I.demasque.get(p.id) || 0] } : {}) });
+  });
+}
+const MESSAGES_ERREUR = { solde: "Pas assez d'écus.", etal: "Étal plein.", doublon: "Tu as déjà un faux ici.", non_authentifie: "Pièce non authentifiée.",
+  refuse: "Refusé.", debit: "Trop vite : réessaie dans un instant.", quota_exceeded: "Plus de place." };
+// Acte du faussaire (place d'étal, retrait, remise, réédition, retouche) : compté dans le solde dès l'envoi.
+async function acte(a) {
+  if (!db) return;
+  const doc = { ...a, joueur: moi, t: Date.now() };
+  actesEnVol.push(doc);
+  try { await db.collection("actes").add(doc); }
+  catch (e) {
+    const i = actesEnVol.indexOf(doc); if (i >= 0) actesEnVol.splice(i, 1);
+    if (a.sorte === "retouche") throw e;
+    atelier("faux");
+    const z = document.getElementById("erreurActe"); if (z) z.innerHTML = `<p class="alerte">${MESSAGES_ERREUR[e && e.code] || "Échec de l'enregistrement."}</p>`;
+    return;
+  }
+  if (a.sorte !== "retouche") atelier("faux");
 }
 function editerPseudo() {
   const zone = document.getElementById("signature");
@@ -1945,6 +2054,7 @@ const pret = () => S.charge.mots && S.charge.pieges && S.charge.choix;
   db.collection("pieges").limit(1000).onSnapshot(s => { S.pieges = s.docs.map(d => ({id: d.id, ...d.data()})); if (!s.metadata.fromCache) S.charge.pieges = true; quandPret(); }, () => { S.charge.pieges = true; quandPret(); });
   db.collection("joueurs").onSnapshot(s => { S.pseudos = new Map(s.docs.map(d => [d.id, String(d.data().pseudo || "").slice(0, PSEUDO_MAX)]).filter(x => x[1])); if (lance && vue === "jeu" && ecran === "atelier" && sousAtelier === "faux" && !document.getElementById("pseudoChamp")) atelier(); if (lance && vue === "accueil" && !document.getElementById("pseudoAcc")) majAccueil(); }, () => {});
   db.collection("defis").limit(1000).onSnapshot(s => { S.defis = new Map(s.docs.map(d => [d.id, d.data()])); }, () => {});
+  db.collection("actes").limit(5000).onSnapshot(s => { S.actes = s.docs.map(d => d.data()); actesEnVol.length = 0; if (lance && vue === "jeu" && ecran === "atelier" && sousAtelier === "faux") atelier(); }, () => {});
   db.collection("contestations").limit(1000).onSnapshot(s => { S.contest = s.docs.map(d => d.data()); if (lance && vue === "jeu" && ecran === "atelier") atelier(); }, () => {});
   db.collection("choix").limit(1000).onSnapshot(s => { S.choix = s.docs.map(d => ({id: d.id, ...d.data()})); if (!s.metadata.fromCache) S.charge.choix = true; quandPret(); }, () => { S.charge.choix = true; quandPret(); });
 })();

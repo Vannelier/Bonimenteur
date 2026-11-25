@@ -46,6 +46,11 @@ RATION = 15
 RATION_ACTIVE = False
 PARIS = ZoneInfo("Europe/Paris")
 PRIX = {10, 15}            # atelier, direct (PRIX_PIEGE, PRIX_DIRECT)
+# Édition et étal (décision de l'auteur, 25/11/2026 ; mêmes constantes dans la page ; docs/conception.md,
+# « Édition et étal ») : 10 exemplaires par édition, 10 places d'étal agrandies jusqu'à 20.
+EXEMPLAIRES, ETAL, ETAL_MAX = 10, 10, 20
+PRIX_ACTES = {"place": 20, "reedition": 25, "retouche": 5, "retrait": 0, "remise": 0}
+CONTEST_MIN = 2            # contestations qui retirent un faux du marché (CONTEST_MIN de la page)
 PSEUDO_MIN, PSEUDO_MAX = 2, 20
 TEXTE_MAX = 200            # au-dessus des maximums par famille de la page (40 à 120)
 COOKIE = "bm_joueur"
@@ -101,6 +106,10 @@ def _base():
         CREATE TABLE IF NOT EXISTS joueurs (id TEXT PRIMARY KEY, pseudo TEXT NOT NULL, t INTEGER NOT NULL);
         CREATE TABLE IF NOT EXISTS defis (code TEXT PRIMARY KEY, auteur TEXT NOT NULL, t INTEGER NOT NULL);
         CREATE INDEX IF NOT EXISTS faux_auteur ON faux (auteur);
+        CREATE TABLE IF NOT EXISTS actes (id INTEGER PRIMARY KEY AUTOINCREMENT, joueur TEXT NOT NULL,
+            sorte TEXT NOT NULL, faux TEXT, prix INTEGER NOT NULL, texte TEXT, categorie TEXT,
+            base_pris INTEGER, base_dem INTEGER, t INTEGER NOT NULL);
+        CREATE INDEX IF NOT EXISTS actes_joueur ON actes (joueur);
         CREATE TABLE IF NOT EXISTS stats (faux TEXT PRIMARY KEY, vu INTEGER NOT NULL DEFAULT 0,
             pris INTEGER NOT NULL DEFAULT 0, demasque INTEGER NOT NULL DEFAULT 0);
     """)
@@ -219,7 +228,32 @@ def _solde(joueur: str) -> int:
     gagnes = db.execute("SELECT COALESCE(SUM(gain), 0) FROM choix WHERE joueur = ?", (joueur,)).fetchone()[0]
     prix, victimes = db.execute("SELECT COALESCE(SUM(f.prix), 0), COALESCE(SUM(s.pris), 0) FROM faux f "
                                 "LEFT JOIN stats s ON s.faux = f.id WHERE f.auteur = ?", (joueur,)).fetchone()
-    return ECUS_DEPART + gagnes + victimes - prix
+    actes = db.execute("SELECT COALESCE(SUM(prix), 0) FROM actes WHERE joueur = ?", (joueur,)).fetchone()[0]
+    return ECUS_DEPART + gagnes + victimes - prix - actes
+
+
+def _situation(fid: str) -> dict:
+    """Où en est un faux de joueur (même règle que index() dans la page) : édition en cours,
+    exemplaires restants, rangé par son auteur, retiré par contestation."""
+    s = db.execute("SELECT pris, demasque FROM stats WHERE faux = ?", (fid,)).fetchone()
+    pris, dem = (s["pris"], s["demasque"]) if s else (0, 0)
+    base, range_ = (0, 0), False
+    for a in db.execute("SELECT sorte, base_pris, base_dem FROM actes WHERE faux = ? ORDER BY id", (fid,)):
+        if a["sorte"] == "reedition":
+            base, range_ = (a["base_pris"], a["base_dem"]), False
+        elif a["sorte"] in ("retrait", "remise"):
+            range_ = a["sorte"] == "retrait"
+    epuise = (pris - base[0]) + (dem - base[1]) >= EXEMPLAIRES
+    conteste = db.execute("SELECT COUNT(*) FROM contestations WHERE piege = ?", (fid,)).fetchone()[0] >= CONTEST_MIN
+    return {"pris": pris, "dem": dem, "epuise": epuise, "range": range_, "conteste": conteste,
+            "en_vente": not (epuise or range_ or conteste)}
+
+
+def _places(joueur: str) -> tuple[int, int]:
+    """(faux en vente, places de l'étal) du joueur."""
+    ids = [r[0] for r in db.execute("SELECT id FROM faux WHERE auteur = ?", (joueur,))]
+    places = ETAL + db.execute("SELECT COUNT(*) FROM actes WHERE joueur = ? AND sorte = 'place'", (joueur,)).fetchone()[0]
+    return sum(_situation(f)["en_vente"] for f in ids), places
 
 
 @app.get("/api/moi")
@@ -252,6 +286,11 @@ def _etat(j: str, defi: str = ""):
         "pieges": _tous_les_faux(),
         "choix": choix,
         "contestations": [dict(r) for r in db.execute("SELECT piege, joueur, mot, t FROM contestations")],
+        # Actes des faussaires (éditions, rangements, places) : la page en tire l'état de chaque faux.
+        # Les textes des retouches sont déjà dans les faux.
+        "actes": [{"joueur": r["joueur"], "sorte": r["sorte"], "faux": r["faux"], "prix": r["prix"], "t": r["t"],
+                   **({"base": [r["base_pris"], r["base_dem"]]} if r["sorte"] == "reedition" else {})}
+                  for r in db.execute("SELECT * FROM actes WHERE sorte != 'retouche' OR joueur = ? ORDER BY id", (j,))],
         "joueurs": {r["id"]: r["pseudo"] for r in db.execute("SELECT id, pseudo FROM joueurs")},
         # Accueil : podium des faussaires de la semaine et jauge des joueurs (le classement ne
         # peut pas se calculer dans la page, qui ne reçoit que les duels du joueur).
@@ -331,6 +370,9 @@ def poser(f: Faux, request: Request):
             raise HTTPException(403, "pièce non authentifiée")
         if _solde(j) < f.prix:
             raise HTTPException(402, "pas assez d'écus")
+        en_vente, places = _places(j)
+        if en_vente >= places:
+            raise HTTPException(423, "étal plein")
         fid = secrets.token_urlsafe(12)
         try:
             db.execute("INSERT INTO faux (id, mot, texte, auteur, cree, prix, categorie) VALUES (?, ?, ?, ?, ?, ?, ?)",
@@ -339,6 +381,64 @@ def poser(f: Faux, request: Request):
         except sqlite3.IntegrityError:
             raise HTTPException(409, "un seul faux par question")
     return {"id": fid}
+
+
+class Acte(BaseModel):
+    sorte: str
+    faux: str | None = None
+    texte: str | None = Field(default=None, min_length=3, max_length=TEXTE_MAX)
+    categorie: str | None = None
+
+
+@app.post("/api/actes")
+def agir(a: Acte, request: Request):
+    """Gestes du faussaire sur son étal : une place de plus, ranger un faux, le remettre en
+    vente, le rééditer une fois épuisé, le retoucher. Prix fixés ici (PRIX_ACTES), auteur
+    vérifié, place libre exigée pour ce qui remet un faux en vente."""
+    j = _joueur(request)
+    _limiter(request, "ecriture")
+    if a.sorte not in PRIX_ACTES:
+        raise HTTPException(422, "acte inconnu")
+    prix = PRIX_ACTES[a.sorte]
+    with _verrou:
+        en_vente, places = _places(j)
+        if a.sorte == "place":
+            if places >= ETAL_MAX:
+                raise HTTPException(423, "étal au plus grand")
+            sit = None
+        else:
+            f = db.execute("SELECT * FROM faux WHERE id = ?", (a.faux or "",)).fetchone()
+            if not f:
+                raise HTTPException(404, "faux inconnu")
+            if f["auteur"] != j:
+                raise HTTPException(403, "pas ton faux")
+            sit = _situation(f["id"])
+            if sit["conteste"]:
+                raise HTTPException(423, "retiré du marché")
+            ok = {"retrait": sit["en_vente"], "remise": sit["range"] and not sit["epuise"],
+                  "reedition": sit["epuise"], "retouche": True}[a.sorte]
+            if not ok:
+                raise HTTPException(422, "état du faux")
+            if a.sorte in ("remise", "reedition") and en_vente >= places:
+                raise HTTPException(423, "étal plein")
+            if a.sorte == "retouche":
+                texte = (a.texte or "").strip()
+                if len(texte) < 3 or _plat(texte) == _plat(QUESTIONS[f["mot"]]["vraie"]):
+                    raise HTTPException(422, "trop proche de l'original")
+                if is_offensive_name(texte):
+                    raise HTTPException(422, "contenu refusé")
+                if a.categorie is not None and a.categorie not in CATEGORIES:
+                    raise HTTPException(422, "catégorie inconnue")
+        if prix and _solde(j) < prix:
+            raise HTTPException(402, "pas assez d'écus")
+        if a.sorte == "retouche":
+            db.execute("UPDATE faux SET texte = ?, categorie = COALESCE(?, categorie) WHERE id = ?", (texte, a.categorie, a.faux))
+        base = (sit["pris"], sit["dem"]) if a.sorte == "reedition" else (None, None)
+        db.execute("INSERT INTO actes (joueur, sorte, faux, prix, texte, categorie, base_pris, base_dem, t) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                   (j, a.sorte, a.faux if a.sorte != "place" else None, prix, texte if a.sorte == "retouche" else None,
+                    a.categorie if a.sorte == "retouche" else None, base[0], base[1], _ms()))
+        db.commit()
+    return {}
 
 
 class Choix(BaseModel):

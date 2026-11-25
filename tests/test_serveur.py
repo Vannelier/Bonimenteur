@@ -265,3 +265,47 @@ def test_defi_par_lien(client):
         assert ami.get("/api/etat?defi=abc12345").json()["defis"]["abc12345"]["auteur"] == a
         assert ami.get("/api/etat").json()["defis"] == {}
         assert ami.get("/api/etat?defi=inconnu1").json()["defis"] == {}
+
+
+def test_edition_et_etal(client):
+    """Édition de 10 exemplaires, réédition, étal de places, rangement et retouche (docs/conception.md,
+    « Édition et étal ») : prix, auteur et places décidés par le serveur."""
+    import app.main as m
+    m.ECUS_DEPART, m.ETAL = 500, 1
+    client.get("/api/moi")
+    _authentifier(client, "sapajou"); _authentifier(client, "cacochyme")
+    assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves."}).status_code == 200
+    fid = next(p["id"] for p in client.get("/api/etat").json()["pieges"] if p["texte"] == "Ragoût de fèves.")
+    # Étal d'une place, plein : pas de faux neuf ; une place de plus (20 écus), et il passe.
+    assert client.post("/api/pieges", json={"mot": "cacochyme", "texte": "Plat mijoté."}).status_code == 423
+    solde = client.get("/api/moi").json()["solde"]
+    assert client.post("/api/actes", json={"sorte": "place"}).status_code == 200
+    assert client.get("/api/moi").json()["solde"] == solde - 20
+    assert client.post("/api/pieges", json={"mot": "cacochyme", "texte": "Plat mijoté."}).status_code == 200
+    # Ranger libère une place ; remettre en vente en demande une.
+    assert client.post("/api/actes", json={"sorte": "retrait", "faux": fid}).status_code == 200
+    assert client.post("/api/actes", json={"sorte": "retrait", "faux": fid}).status_code == 422
+    assert m._places(m.db.execute("SELECT auteur FROM faux WHERE id = ?", (fid,)).fetchone()[0]) == (1, 2)
+    assert client.post("/api/actes", json={"sorte": "remise", "faux": fid}).status_code == 200
+    # Retouche : payée, appliquée au faux, refusée si c'est la vraie réponse.
+    assert client.post("/api/actes", json={"sorte": "retouche", "faux": fid, "texte": "Ragoût de lentilles."}).status_code == 200
+    assert any(p["texte"] == "Ragoût de lentilles." for p in client.get("/api/etat").json()["pieges"])
+    vraie = m.QUESTIONS["sapajou"]["vraie"]
+    assert client.post("/api/actes", json={"sorte": "retouche", "faux": fid, "texte": vraie}).status_code == 422
+    # Pas de réédition avant épuisement ; 10 duels l'épuisent (vendus ou saisis).
+    assert client.post("/api/actes", json={"sorte": "reedition", "faux": fid}).status_code == 422
+    for i in range(10):
+        with TestClient(m.app) as autre:
+            autre.get("/api/moi")
+            assert autre.post("/api/choix", json={"mot": "sapajou", "montres": [fid], "ordre": [] if i < 3 else [fid], "erreur": i < 3}).status_code == 200
+    assert m._situation(fid)["epuise"]
+    solde = client.get("/api/moi").json()["solde"]
+    assert client.post("/api/actes", json={"sorte": "reedition", "faux": fid}).status_code == 200
+    assert client.get("/api/moi").json()["solde"] == solde - 25
+    s = m._situation(fid)
+    assert s["en_vente"] and not s["epuise"]
+    assert next(a for a in client.get("/api/etat").json()["actes"] if a["sorte"] == "reedition")["base"] == [3, 7]
+    # Le faux d'un autre ne se touche pas.
+    with TestClient(m.app) as autre:
+        autre.get("/api/moi")
+        assert autre.post("/api/actes", json={"sorte": "retrait", "faux": fid}).status_code == 403

@@ -177,7 +177,7 @@ lettres sur 320 px).
 ## Accueil
 
 Même canevas que Discoverium, Snouff et Vocabulium (`CLAUDE.md` de Discoverium,
-« Accueil ») : décor, titre, « Démasque les faux », explication sur deux lignes,
+« Accueil ») : décor, titre, « L'expert et le faussaire », explication sur deux lignes,
 « Expertiser » et « Atelier » côte à côte (25/11/2026, comme « Jouer » et
 « Multijoueur » de Snouff et Vocabulium ; Atelier en contour or, secondaire),
 « À l'honneur cette semaine » (l'expert et le faussaire de la semaine, une

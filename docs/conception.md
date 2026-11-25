@@ -30,7 +30,7 @@ Seul le vocabulaire a changé : aucune règle, aucun prix.
 | tournée de 15 duels | vacation (« Fin de vacation », « Nouvelle vacation ») |
 | onglets | Expertise, Atelier ; dans l'atelier : Contrefaire, Sur le marché |
 | poser un faux | « Mettre en vente » ; après : « En vente » |
-| faux éteint (mèche) | Saisi ; contesté : Retiré du marché |
+| exemplaire d'un faux | vendu (victime), saisi (démasqué) ; édition « Épuisé », « Rééditer » ; « Ranger », « En réserve », « Remettre » ; « Retoucher » ; contesté : Retiré du marché |
 | plus vrai que nature | Pièce de maître |
 | victimes depuis la dernière visite | « Tes faux ont trouvé preneur » |
 | arbitre | « Trop proche de l'original. » |
@@ -145,12 +145,39 @@ seulement : sur claude.ai, l'adresse de la page n'est pas partageable.
 
 ## La vie d'un faux
 
-- Mèche : 10 démasquages sans aucune victime (`MORT_VUS`) et le faux est
-  démasqué pour de bon. Dès sa première victime, il est sauvé.
+- Édition et étal : voir ci-dessous. Les faux de Truffe gardent l'ancienne
+  mèche : 10 démasquages sans aucune victime (`MORT_VUS`) et ils sont saisis.
 - « Plus vrai que nature » : au moins 5 duels (`PVQN_VUS`) et plus de victimes
   que de démasquages. Galerie dans l'atelier.
 - Contestation « Un faux dit vrai » : 2 joueurs (`CONTEST_MIN`) et il est retiré.
 - Réglages petits pour voir les effets avec quelques testeurs.
+
+## Édition et étal
+
+Décidé le 25/11/2026. Remplace la mèche, jugée peu claire par l'auteur, et
+donne au faussaire de quoi dépenser ses écus une fois ses faux posés.
+
+- Un faux est tiré à 10 exemplaires (`EXEMPLAIRES`). Chaque duel où il paraît
+  en écoule un : vendu s'il dupe le joueur (+1 écu, comme avant), saisi s'il
+  est démasqué. Planche de 10 timbres dans « Sur le marché » : dorés (vendus),
+  barrés (saisis), dentelés (en stock).
+- Édition épuisée : le faux quitte le marché. « Rééditer » : 10 exemplaires de
+  plus pour 25 écus (`PRIX_REEDITION`), plus qu'un faux neuf (10) : un faux qui
+  a fait ses preuves vaut plus. Ses compteurs restent ; la planche repart de zéro.
+- Étal de 10 places (`ETAL`) : un faux en vente en occupe une ; épuisé ou rangé,
+  il la libère. Étal plein : pas de faux neuf, ni de remise en vente ou de
+  réédition. « +1 place » : 20 écus (`PRIX_PLACE`), jusqu'à 20 places (`ETAL_MAX`).
+- « Ranger » : gratuit, le faux garde ses exemplaires ; « Remettre » le remet en
+  vente s'il y a une place.
+- « Retoucher » : 5 écus (`PRIX_RETOUCHE`), même écran que la contrefaçon,
+  arbitre compris ; l'édition en cours et ses compteurs restent.
+- Prix de départ, à régler sur les parties réelles.
+
+Données : collection `actes` en ajout seul (`place`, `retrait`, `remise`,
+`reedition` avec les compteurs du faux à ce moment, `retouche` avec le texte).
+La page en tire l'état de chaque faux (`index()`). Serveur : table `actes`,
+`POST /api/actes` (auteur, état du faux, place libre et prix vérifiés), étal
+vérifié aussi à la pose (423 si plein), actes payants déduits du solde.
 
 ## Autour
 

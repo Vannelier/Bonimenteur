@@ -16,6 +16,7 @@
     if (nom === "choix") return etat.choix.map(c => ({ id: c.id, d: c }));
     if (nom === "contestations") return etat.contestations.map(c => ({ id: `${c.piege}__${c.joueur}`, d: c }));
     if (nom === "joueurs") return Object.entries(etat.joueurs).map(([id, pseudo]) => ({ id, d: { pseudo } }));
+    if (nom === "actes") return (etat.actes || []).map((d, i) => ({ id: String(i), d }));
     if (nom === "defis") return Object.entries(etat.defis || {}).map(([id, d]) => ({ id, d }));
     return [];
   };
@@ -38,7 +39,7 @@
   }
   async function ecrire(methode, url, corps) {
     const r = await fetch(url, { method: methode, credentials: "same-origin", headers: { "Content-Type": "application/json" }, body: JSON.stringify(corps) });
-    if (!r.ok) { const e = new Error(`HTTP ${r.status}`); e.code = r.status === 402 ? "solde" : r.status === 403 ? "non_authentifie" : r.status === 409 ? "doublon" : r.status === 422 ? "refuse" : r.status === 429 ? "debit" : String(r.status); throw e; }
+    if (!r.ok) { const e = new Error(`HTTP ${r.status}`); e.code = r.status === 402 ? "solde" : r.status === 403 ? "non_authentifie" : r.status === 423 ? "etal" : r.status === 409 ? "doublon" : r.status === 422 ? "refuse" : r.status === 429 ? "debit" : String(r.status); throw e; }
     const reponse = await r.json();
     // La page relit l'état juste après : il doit être à jour. Une lecture partie avant
     // l'écriture ne compte pas, on en relance une.
@@ -49,6 +50,8 @@
   const ROUTES = {
     pieges: d => ecrire("POST", "/api/pieges", { mot: d.mot, texte: d.texte, prix: d.prix || 10, ...(d.categorie ? { categorie: d.categorie } : {}) }),
     choix: d => ecrire("POST", "/api/choix", { mot: d.mot, montres: d.montres || [], ordre: d.ordre || [], erreur: !!d.erreur }),
+    // Prix, base de la réédition et horodatage décidés par le serveur.
+    actes: d => ecrire("POST", "/api/actes", { sorte: d.sorte, ...(d.faux ? { faux: d.faux } : {}), ...(d.texte ? { texte: d.texte } : {}), ...(d.categorie ? { categorie: d.categorie } : {}) }),
     signalements: d => ecrire("POST", "/api/signalements", { mot: d.mot, raison: d.raison, pieges: d.pieges || [] }),
   };
   const collection = nom => ({
@@ -65,7 +68,8 @@
       const [nom] = chemin.split("/");
       if (nom === "contestations") return ecrire("POST", "/api/contestations", { piege: d.piege, mot: d.mot });
       if (nom === "joueurs") return ecrire("PUT", "/api/pseudo", { pseudo: d.pseudo });
-      if (nom === "defis") return ecrire("POST", "/api/defis", { code: chemin.split("/")[1] });
+      if (nom === "actes") return (etat.actes || []).map((d, i) => ({ id: String(i), d }));
+    if (nom === "defis") return ecrire("POST", "/api/defis", { code: chemin.split("/")[1] });
       throw new Error(`document ${chemin} en lecture seule`);
     },
   });
