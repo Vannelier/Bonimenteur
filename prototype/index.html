@@ -446,6 +446,13 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 [data-style="plaque"] small .tampon,[data-style="plaque"] small .chip.bon{position:absolute;left:22px;bottom:13px;margin:0;font-size:13px;background:rgba(238,227,198,.6)}
 /* Signature à même la tôle, sans pavé clair derrière (remarque de l'auteur, 25/11/2026) : un liseré
    crème fixe (text-shadow, jamais animé) la détache des coulures. */
+/* Contrefaçon : le tampon s'abat sur la ligne du département (la même sur les deux panneaux ; sur le nom, il cachait le faux) ; la
+   ligne du bas reste à l'étiquette et à la signature entière (remarque de l'auteur, 26/11/2026). */
+[data-style="plaque"] small:has(.signe-faux) .tampon{left:0;right:0;bottom:31px;width:max-content;margin:auto;font-size:13px;background:rgba(238,227,198,.85)}
+/* Pas de place pour trois marques sur un panneau à 360 px : sur le faux certifié, l'étiquette répète le
+   verdict « Floué » juste dessous, elle s'efface ; tampon et signature restent entiers. */
+[data-style="plaque"] small:has(.signe-faux) .etiquette{display:none}
+[data-style="plaque"] small:has(.signe-faux) .signe-faux{bottom:9px;font-size:20px;max-width:calc(100% - 56px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-right:4px}
 [data-style="plaque"] small .signe-faux{position:absolute;right:28px;bottom:12px;margin:0;background:none;padding:0;
   text-shadow:0 0 2px #eee3c6,0 0 2px #eee3c6,0 1px 0 #eee3c6}
 .nb-tuile{font:700 12px/1 var(--texte);color:var(--doux)}
@@ -525,15 +532,15 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 
 /* Étiquette, tampon et signature sur une seule ligne : la pièce authentifiée ne grandit pas. */
 /* Pas d'overflow:hidden ici : il coupait les tampons penchés et la fin de la signature (remarque de
-   l'auteur, 26/11/2026). La ligne tient quand même : seule la signature rétrécit (ellipse). */
-.choix .feuillet small{flex-wrap:nowrap;gap:6px;overflow:visible}
+   l'auteur, 26/11/2026). Signature entière et plus grande (22 px, PSEUDO_MAX 16) : quand étiquette et
+   tampon ne lui laissent pas la place (41 à 89 px mesurés, 360 à 411 px de large), elle passe à la ligne,
+   à droite ; la page défile déjà jusqu'à « Lot suivant » si la pièce grandit. */
+.choix .feuillet small{flex-wrap:wrap;gap:2px 6px;overflow:visible}
 .choix .feuillet small .etiquette{flex:none;font-size:10px;padding:2px 8px 2px 14px}
 .choix .feuillet small .tampon{flex:none;font-size:13px;padding:2px 7px;letter-spacing:.1em}
 .choix .feuillet small .chip.bon{flex:none;font-size:11px;padding:4px 8px}
-.choix .feuillet small .signe-faux{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:18px;padding:3px 6px 3px 0}
-/* Écran étroit : la signature du faussaire passe avant le mot « signé » et l'espacement du tampon
-   (à 360 px, étiquette et tampon ne lui laissaient que « si… »). */
-@media (max-width:380px){.choix .feuillet small .signe-faux i{display:none}.choix .feuillet small .tampon{letter-spacing:.05em;padding:2px 5px}}
+.choix .feuillet small .signe-faux{flex:0 1 auto;min-width:0;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:22px;padding:3px 6px 3px 0}
+@media (max-width:380px){.choix .feuillet small .tampon{letter-spacing:.05em;padding:2px 5px}}
 .bouton .ic{margin-left:2px}
 .bouton .chip{background:transparent;border-color:currentColor;color:inherit}
 .choix .bouton .chip.bon{color:var(--vert);border-color:var(--vert)}
@@ -1089,7 +1096,8 @@ async function nommer(ids) {
 }
 const nom = id => id === moi ? "toi" : (S.pseudos.get(id) || noms.get(id) || "Un joueur");
 /* Pseudo : choisi dans l'atelier, gardé dans « joueurs/<id> ». À défaut, le nom du compte. */
-const PSEUDO_MAX = 20;
+// 16 caractères : la signature tient sur une ligne de pièce à 360 px, en 22 px (remarque de l'auteur, 26/11/2026).
+const PSEUDO_MAX = 16;
 const monPseudo = () => S.pseudos.get(moi) || "";
 // Signature proposée : le pseudo, à défaut le nom du compte (claude.ai), à défaut rien.
 const signatureProposee = () => monPseudo() || (noms.has(moi) && noms.get(moi) !== "Un joueur" ? noms.get(moi) : "");

@@ -193,7 +193,7 @@ vérifié aussi à la pose (423 si plein), actes payants déduits du solde.
 - Pseudo : un seul par joueur (décision de l'auteur, 23/11/2026). Chaque faux se
   signe au moment de la pose, signature préremplie avec le pseudo ; la changer
   change le pseudo partout. Modifiable aussi dans « Sur le marché », ligne « Signé »
-  (2 à 20 caractères). Une signature libre par faux casserait le lien entre le
+  (2 à 16 caractères : la signature, en 22 px, tient sur une ligne de pièce à 360 px). Une signature libre par faux casserait le lien entre le
   joueur et ses faux, et permettrait de signer du nom d'un autre.
 - Signalement discret sous chaque duel : un faux dit vrai, la vraie réponse
   est fausse, contenu choquant.
