@@ -993,5 +993,545 @@
   "mot": "formier",
   "vraie": "Fabrique les formes en bois des cordonniers et des chapeliers.",
   "source": "wiktionary:formier"
+ },
+ "glabelle": {
+  "mot": "glabelle",
+  "vraie": "Partie du front située entre les deux sourcils.",
+  "categorie": "n. f.",
+  "source": "wiktionary:glabelle"
+ },
+ "philtrum": {
+  "mot": "philtrum",
+  "vraie": "Petit sillon vertical entre le nez et la lèvre supérieure.",
+  "categorie": "n. m.",
+  "source": "wiktionary:philtrum"
+ },
+ "lunule": {
+  "mot": "lunule",
+  "vraie": "Tache claire en forme de croissant, à la base de l'ongle.",
+  "categorie": "n. f.",
+  "source": "wiktionary:lunule"
+ },
+ "ferret": {
+  "mot": "ferret",
+  "vraie": "Embout de métal ou de plastique au bout d'un lacet.",
+  "categorie": "n. m.",
+  "source": "wiktionary:ferret"
+ },
+ "zinzolin": {
+  "mot": "zinzolin",
+  "vraie": "Couleur d'un violet rougeâtre.",
+  "categorie": "n. m.",
+  "source": "wiktionary:zinzolin"
+ },
+ "pareidolie": {
+  "mot": "paréidolie",
+  "vraie": "Tendance à voir des visages ou des formes familières dans les nuages, les objets, les taches.",
+  "categorie": "n. f.",
+  "source": "wiktionary:paréidolie"
+ },
+ "petrichor": {
+  "mot": "pétrichor",
+  "vraie": "Odeur de la terre après la pluie.",
+  "categorie": "n. m.",
+  "source": "wiktionary:pétrichor"
+ },
+ "jocrisse": {
+  "mot": "jocrisse",
+  "vraie": "Benêt qui se laisse mener par le premier venu.",
+  "categorie": "n. m.",
+  "source": "wiktionary:jocrisse"
+ },
+ "ecornifleur": {
+  "mot": "écornifleur",
+  "vraie": "Pique-assiette, qui se fait nourrir aux dépens des autres.",
+  "categorie": "n. m.",
+  "source": "wiktionary:écornifler"
+ },
+ "tintinnabuler": {
+  "mot": "tintinnabuler",
+  "vraie": "Sonner comme une clochette, d'un son aigu et léger.",
+  "categorie": "v.",
+  "source": "wiktionary:tintinnabuler"
+ },
+ "tabletier": {
+  "mot": "tabletier",
+  "source": "wiktionary:tabletier",
+  "vraie": "Fabricant d'échiquiers et de petits objets en ivoire, en os ou en bois.",
+  "type": "metier"
+ },
+ "chasse-marée": {
+  "mot": "chasse-marée",
+  "source": "wiktionary:chasse-marée",
+  "vraie": "Marchand qui achetait le poisson dans les ports pour le revendre loin de la côte.",
+  "type": "metier"
+ },
+ "talmellier": {
+  "mot": "talmellier",
+  "source": "wiktionary:talmellier",
+  "vraie": "Boulanger : c'était l'ancien nom du métier.",
+  "type": "metier"
+ },
+ "aiguilletier": {
+  "mot": "aiguilletier",
+  "source": "wiktionary:aiguilletier",
+  "vraie": "Ouvrier qui fabriquait les aiguillettes et les lacets.",
+  "type": "metier"
+ },
+ "cordouanier": {
+  "mot": "cordouanier",
+  "source": "wiktionary:cordouanier",
+  "vraie": "Cordonnier du Moyen Âge, qui travaillait le cuir de Cordoue.",
+  "type": "metier"
+ },
+ "plumassier": {
+  "mot": "plumassier",
+  "source": "wiktionary:plumassier",
+  "vraie": "Artisan qui préparait et vendait les plumes pour les chapeaux et les parures.",
+  "type": "metier"
+ },
+ "huchier": {
+  "mot": "huchier",
+  "source": "wiktionary:huchier",
+  "vraie": "Menuisier qui fabriquait les huches et meublait les églises et les demeures.",
+  "type": "metier"
+ },
+ "chandelier": {
+  "mot": "chandelier",
+  "source": "wiktionary:chandelier",
+  "vraie": "Artisan qui fabriquait et vendait des chandelles.",
+  "type": "metier"
+ },
+ "rémouleur": {
+  "mot": "rémouleur",
+  "source": "wiktionary:rémouleur",
+  "vraie": "Artisan ambulant qui aiguisait les couteaux et les ciseaux sur une meule.",
+  "type": "metier"
+ },
+ "haleur": {
+  "mot": "haleur",
+  "source": "wiktionary:haleur",
+  "vraie": "Homme qui tirait les bateaux le long des rivières, à l'aide d'une corde.",
+  "type": "metier"
+ },
+ "i-komorebi": {
+  "mot": "",
+  "question": "En japonais, « komorebi » désigne…",
+  "source": "wiktionary-en:木漏れ日",
+  "type": "intraduisible",
+  "vraie": "La lumière du soleil qui filtre à travers le feuillage des arbres."
+ },
+ "i-mangata": {
+  "mot": "",
+  "question": "En suédois, « mångata » désigne…",
+  "source": "wiktionary-en:mångata",
+  "type": "intraduisible",
+  "vraie": "Le reflet de la lune sur l'eau, qui dessine comme un chemin."
+ },
+ "i-torschlusspanik": {
+  "mot": "",
+  "question": "En allemand, « Torschlusspanik » désigne…",
+  "source": "wiktionary-en:Torschlusspanik",
+  "type": "intraduisible",
+  "vraie": "La peur, avec l'âge, de voir se fermer les occasions de la vie."
+ },
+ "i-cafune": {
+  "mot": "",
+  "question": "En portugais du Brésil, « cafuné » désigne…",
+  "source": "wiktionary-en:cafuné",
+  "type": "intraduisible",
+  "vraie": "Le geste de passer tendrement les doigts dans les cheveux de quelqu'un."
+ },
+ "i-pochemuchka": {
+  "mot": "",
+  "question": "En russe, « potchemoutchka » désigne…",
+  "source": "wiktionary-en:почемучка",
+  "type": "intraduisible",
+  "vraie": "Une personne, souvent un enfant, qui pose sans cesse des questions."
+ },
+ "i-gigil": {
+  "mot": "",
+  "question": "En tagalog, « gigil » désigne…",
+  "source": "wiktionary-en:gigil",
+  "type": "intraduisible",
+  "vraie": "L'envie irrésistible de pincer ou de serrer quelque chose de trop mignon."
+ },
+ "i-abbiocco": {
+  "mot": "",
+  "question": "En italien, « abbiocco » désigne…",
+  "source": "wiktionary-en:abbiocco",
+  "type": "intraduisible",
+  "vraie": "La somnolence qui vous prend après un repas copieux."
+ },
+ "i-culaccino": {
+  "mot": "",
+  "question": "En italien, « culaccino » désigne…",
+  "source": "wiktionary-en:culaccino",
+  "type": "intraduisible",
+  "vraie": "La trace ronde laissée sur une table par un verre mouillé."
+ },
+ "i-zeg": {
+  "mot": "",
+  "question": "En géorgien, « zeg » veut dire…",
+  "source": "wiktionary-en:ზეგ",
+  "type": "intraduisible",
+  "vraie": "Le jour qui suit demain."
+ },
+ "i-verschlimmbessern": {
+  "mot": "",
+  "question": "En allemand, « verschlimmbessern » veut dire…",
+  "source": "wiktionary-en:verschlimmbessern",
+  "type": "intraduisible",
+  "vraie": "Empirer une chose en voulant l'améliorer."
+ },
+ "x-katboom": {
+  "mot": "",
+  "question": "En néerlandais, « regarder le chat descendre de l'arbre » veut dire…",
+  "source": "wiktionary-en:de kat uit de boom kijken",
+  "type": "etrangere",
+  "vraie": "Attendre de voir comment les choses tournent avant d'agir."
+ },
+ "x-seau": {
+  "mot": "",
+  "question": "En anglais, « donner un coup de pied dans le seau » veut dire…",
+  "source": "wiktionary-en:kick the bucket",
+  "type": "etrangere",
+  "vraie": "Mourir."
+ },
+ "x-koban": {
+  "mot": "",
+  "question": "En japonais, « des pièces d'or à un chat » veut dire…",
+  "source": "wiktionary-en:猫に小判",
+  "type": "etrangere",
+  "vraie": "Offrir quelque chose de précieux à qui ne sait pas l'apprécier."
+ },
+ "x-porte": {
+  "mot": "",
+  "question": "En néerlandais, « tomber dans la maison avec la porte » veut dire…",
+  "source": "wiktionary-en:met de deur in huis vallen",
+  "type": "etrangere",
+  "vraie": "Aller droit au but, sans préambule."
+ },
+ "x-poils": {
+  "mot": "",
+  "question": "En italien, « ne pas avoir de poils sur la langue » veut dire…",
+  "source": "wiktionary-it:non avere peli sulla lingua",
+  "type": "etrangere",
+  "vraie": "Parler franchement, sans ménager personne."
+ },
+ "x-eau": {
+  "mot": "",
+  "question": "En italien, « de l'eau dans la bouche ! » se dit pour dire……",
+  "source": "wiktionary-en:acqua in bocca",
+  "type": "etrangere",
+  "vraie": "Garde le secret, n'en parle à personne !"
+ },
+ "x-singes": {
+  "mot": "",
+  "question": "En japonais, « même les singes tombent des arbres » veut dire…",
+  "source": "wiktionary-en:猿も木から落ちる",
+  "type": "etrangere",
+  "vraie": "Même les meilleurs se trompent parfois."
+ },
+ "x-bottes": {
+  "mot": "",
+  "question": "En espagnol, « se mettre les bottes » veut dire…",
+  "source": "wiktionary-en:ponerse las botas",
+  "type": "etrangere",
+  "vraie": "Se régaler sans retenue, ou faire de gros profits."
+ },
+ "x-cochon2": {
+  "mot": "",
+  "question": "En allemand, « avoir du cochon » veut dire…",
+  "source": "wiktionary-en:Schwein haben",
+  "type": "etrangere",
+  "vraie": "Avoir de la chance."
+ },
+ "x-toit": {
+  "mot": "",
+  "question": "En suédois, « pas de danger sur le toit » veut dire…",
+  "source": "wiktionary-en:ingen fara på taket",
+  "type": "etrangere",
+  "vraie": "Tout va bien, la voie est libre."
+ },
+ "c-y": {
+  "mot": "",
+  "question": "Quel nom de commune de la Somme existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Y"
+ },
+ "c-bidon": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Ardèche existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Bidon"
+ },
+ "c-avoine": {
+  "mot": "",
+  "question": "Quel nom de commune d'Indre-et-Loire existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Avoine"
+ },
+ "c-folles": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Vienne existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Folles"
+ },
+ "c-ventouse": {
+  "mot": "",
+  "question": "Quel nom de commune de la Charente existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Ventouse"
+ },
+ "c-salives": {
+  "mot": "",
+  "question": "Quel nom de commune de la Côte-d'Or existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Salives"
+ },
+ "a-emeus": {
+  "mot": "",
+  "question": "En 1932, l'armée australienne a mené, à la mitrailleuse, une guerre ___.",
+  "source": "wikipedia:Guerre des Émeus",
+  "type": "anecdote",
+  "vraie": "contre les émeus, et l'ont perdue"
+ },
+ "a-wojtek": {
+  "mot": "",
+  "question": "Pendant la Seconde Guerre mondiale, l'armée polonaise a nommé caporal ___.",
+  "source": "wikipedia:Wojtek (ours)",
+  "type": "anecdote",
+  "vraie": "un ours brun, qui portait des caisses d'obus"
+ },
+ "a-felicette": {
+  "mot": "",
+  "question": "En 1963, la France a envoyé dans l'espace ___.",
+  "source": "wikipedia:Félicette",
+  "type": "anecdote",
+  "vraie": "une chatte, Félicette"
+ },
+ "a-licorne": {
+  "mot": "",
+  "question": "Dans les armoiries du Royaume-Uni, l'Écosse est représentée par ___.",
+  "source": "wikipedia:Licorne",
+  "type": "anecdote",
+  "vraie": "une licorne"
+ },
+ "a-nintendo": {
+  "mot": "",
+  "question": "Avant les jeux vidéo, Nintendo a commencé en 1889 en fabriquant ___.",
+  "source": "wikipedia:Nintendo",
+  "type": "anecdote",
+  "vraie": "des cartes à jouer"
+ },
+ "a-montgolfiere": {
+  "mot": "",
+  "question": "En 1783, devant Louis XVI, les premiers passagers d'un ballon furent ___.",
+  "source": "wikipedia:Montgolfière",
+  "type": "anecdote",
+  "vraie": "un coq, un mouton et un canard"
+ },
+ "a-robot": {
+  "mot": "",
+  "question": "Le mot « robot » vient du tchèque et veut dire ___.",
+  "source": "wikipedia:Robot",
+  "type": "anecdote",
+  "vraie": "travail, corvée"
+ },
+ "a-melasse": {
+  "mot": "",
+  "question": "En 1919, à Boston, 21 personnes sont mortes, emportées par une vague ___.",
+  "source": "wikipedia-en:Great Molasses Flood",
+  "type": "anecdote",
+  "vraie": "de mélasse, sortie d'une cuve géante éventrée"
+ },
+ "a-hoquet": {
+  "mot": "",
+  "question": "L'Américain Charles Osborne a eu le hoquet pendant ___.",
+  "source": "wikipedia-en:Charles Osborne (hiccups)",
+  "type": "anecdote",
+  "vraie": "de 1922 à 1990"
+ },
+ "a-koala": {
+  "mot": "",
+  "question": "Le koala a ___.",
+  "source": "wikipedia:Koala",
+  "type": "anecdote",
+  "vraie": "des empreintes digitales presque impossibles à distinguer des nôtres"
+ },
+ "e-longfeu": {
+  "mot": "faire long feu",
+  "source": "wiktionary:faire long feu",
+  "type": "expression",
+  "vraie": "D'une arme dont la charge brûle trop lentement : le coup ne part pas."
+ },
+ "e-maille": {
+  "mot": "avoir maille à partir",
+  "source": "wiktionary:avoir maille à partir",
+  "type": "expression",
+  "vraie": "La maille était la plus petite pièce de monnaie : impossible à partager, d'où les disputes."
+ },
+ "e-pave": {
+  "mot": "tenir le haut du pavé",
+  "source": "wiktionary:tenir le haut du pavé",
+  "type": "expression",
+  "vraie": "Les eaux sales coulaient au milieu de la rue : les gens importants marchaient le long des maisons, au sec."
+ },
+ "e-pou": {
+  "mot": "fier comme un pou",
+  "source": "wiktionary:fier comme un pou",
+  "type": "expression",
+  "vraie": "« Pou » est une vieille forme de « pouil », le coq : fier comme un coq."
+ },
+ "e-chou": {
+  "mot": "faire chou blanc",
+  "source": "wiktionary:faire chou blanc",
+  "type": "expression",
+  "vraie": "Au jeu de quilles, « faire coup blanc » : lancer la boule sans abattre une seule quille."
+ },
+ "e-leuleu": {
+  "mot": "à la queue leu leu",
+  "source": "wiktionary:à la queue leu leu",
+  "type": "expression",
+  "vraie": "« Leu » voulait dire « loup » : les loups marchent l'un derrière l'autre."
+ },
+ "e-pourpoint": {
+  "mot": "à brûle-pourpoint",
+  "source": "wiktionary:à brûle-pourpoint",
+  "type": "expression",
+  "vraie": "D'un coup de feu tiré à bout portant, assez près pour brûler le pourpoint."
+ },
+ "e-chamade": {
+  "mot": "battre la chamade",
+  "source": "wiktionary:battre la chamade",
+  "type": "expression",
+  "vraie": "D'un roulement de tambour par lequel une ville assiégée demandait à capituler."
+ },
+ "e-assiette": {
+  "mot": "ne pas être dans son assiette",
+  "source": "wiktionary:ne pas être dans son assiette",
+  "type": "expression",
+  "vraie": "L'assiette désignait la place de chacun à table, puis la disposition d'esprit."
+ },
+ "e-oignons": {
+  "mot": "en rang d'oignons",
+  "source": "wiktionary:en rang d'oignons",
+  "type": "expression",
+  "vraie": "Des maraîchers, qui rangeaient les oignons du plus gros au plus petit."
+ },
+ "o-bourdalou": {
+  "alt": "Trois récipients de porcelaine blanche, oblongs, à anse, décorés de petites fleurs",
+  "credit": "Pots « bourdaloue », Hofburg, Vienne · David Monniaux · CC BY-SA 3.0 (Wikimedia Commons)",
+  "image": "photos/bourdalou.jpg",
+  "mot": "",
+  "question": "À quoi servait ce récipient de porcelaine, en forme de saucière ?",
+  "type": "photo",
+  "vraie": "à servir d'urinoir de voyage aux dames, qui le glissaient sous leur robe.",
+  "legende": "Récipient de porcelaine, en forme de saucière",
+  "rubrique": "Usage",
+  "source": "wikipedia:Pot de chambre"
+ },
+ "o-kangri": {
+  "alt": "Un pot de terre cuite pris dans un panier d'osier tressé, avec une anse",
+  "credit": "Kangri du Cachemire · Sanu N · CC BY-SA 4.0 (Wikimedia Commons)",
+  "image": "photos/kangri.jpg",
+  "mot": "",
+  "question": "Au Cachemire, à quoi sert ce pot de terre entouré d'osier ?",
+  "type": "photo",
+  "vraie": "à se chauffer : rempli de braises, on le porte sous son grand manteau.",
+  "legende": "Pot de terre entouré d'osier, Cachemire",
+  "rubrique": "Usage",
+  "source": "wikipedia-en:Kanger"
+ },
+ "o-chaufferette": {
+  "alt": "Une boîte de bois à poignée, au couvercle de métal percé de trous, et le bac de métal sorti à côté",
+  "credit": "Chaufferette à braise · Nerijp · CC BY-SA 3.0 (Wikimedia Commons)",
+  "image": "photos/chaufferette.jpg",
+  "mot": "",
+  "question": "À quoi servait cette boîte de bois au couvercle percé de trous ?",
+  "type": "photo",
+  "vraie": "à se chauffer les pieds : on y glissait un bac de braises.",
+  "legende": "Boîte de bois à couvercle percé, avec un bac de métal",
+  "rubrique": "Usage",
+  "source": "wikipedia:Chaufferette"
+ },
+ "p-pyramide": {
+  "alt": "La cour du Louvre la nuit, avec la pyramide de verre éclairée au centre",
+  "credit": "Cour Napoléon du Louvre · Benh Lieu Song · CC BY-SA 3.0 (Wikimedia Commons)",
+  "image": "photos/pyramide-louvre.jpg",
+  "mot": "",
+  "question": "Paris, musée du Louvre. Combien de vitres recouvrent cette pyramide ?",
+  "type": "photo",
+  "vraie": "673.",
+  "legende": "Pyramide du Louvre, Paris",
+  "rubrique": "Vitres",
+  "source": "wikipedia:Pyramide du Louvre"
+ },
+ "p-manneken": {
+  "alt": "La petite statue d'un garçon, habillée d'un costume de néons colorés, dans sa niche de pierre",
+  "credit": "Manneken-Pis dans son 1000e costume · Trougnouf (Benoit Brummer) · CC BY 4.0 (Wikimedia Commons)",
+  "image": "photos/manneken-pis.jpg",
+  "mot": "",
+  "question": "Bruxelles. Que possède cette statuette de bronze ?",
+  "type": "photo",
+  "vraie": "une garde-robe de mille costumes, conservée dans un musée.",
+  "legende": "Le Manneken-Pis, Bruxelles",
+  "rubrique": "Particularité",
+  "source": "wikipedia:Manneken-Pis"
+ },
+ "p-chambord": {
+  "alt": "Un immense château blanc hérissé de tours et de cheminées, au bord de l'eau",
+  "credit": "Façade nord-ouest du château de Chambord · Benh Lieu Song · CC BY-SA 3.0 (Wikimedia Commons)",
+  "image": "photos/chambord.jpg",
+  "mot": "",
+  "question": "Château de Chambord. Qu'a de particulier son grand escalier central ?",
+  "type": "photo",
+  "vraie": "il est à double révolution : deux rampes enlacées, on monte et on descend sans se croiser.",
+  "legende": "Château de Chambord (Loir-et-Cher)",
+  "rubrique": "Escalier",
+  "source": "wikipedia:Château de Chambord"
+ },
+ "p-chiens": {
+  "alt": "Un portail de pierre au bord de la Seine, devant un bois",
+  "credit": "Entrée du cimetière d'Asnières · Wowo2008 · CC BY-SA 3.0 (Wikimedia Commons)",
+  "image": "photos/cimetiere-chiens-portail.jpg",
+  "mot": "",
+  "question": "Asnières-sur-Seine. Qu'abrite ce lieu depuis 1899 ?",
+  "type": "photo",
+  "vraie": "le premier cimetière pour animaux : chiens, chats et même des chevaux.",
+  "legende": "Portail sur la Seine, Asnières-sur-Seine",
+  "rubrique": "Usage",
+  "source": "wikipedia:Cimetière des Chiens"
+ },
+ "p-arc": {
+  "alt": "Le grand arc de pierre sculptée, sous un ciel bleu",
+  "credit": "Arc de triomphe de l'Étoile · Jiuguang Wang · CC BY-SA 2.0 (Wikimedia Commons)",
+  "image": "photos/arc-triomphe.jpg",
+  "mot": "",
+  "question": "Paris, 7 août 1919. Qu'est-il arrivé sous cet arc ?",
+  "type": "photo",
+  "vraie": "un aviateur est passé dessous, en avion.",
+  "legende": "Arc de triomphe de l'Étoile, Paris",
+  "rubrique": "Événement",
+  "source": "wikipedia:Arc de triomphe de l'Étoile"
+ },
+ "p-pontneuf": {
+  "alt": "Un tableau impressionniste : un pont de pierre animé de passants et de fiacres, devant des immeubles",
+  "credit": "Camille Pissarro, Le Pont-Neuf, 1902 · domaine public (Wikimedia Commons)",
+  "image": "photos/pont-neuf.jpg",
+  "mot": "",
+  "question": "Paris. Qu'a de particulier le Pont-Neuf, malgré son nom ?",
+  "type": "photo",
+  "vraie": "c'est le plus ancien pont de Paris encore debout.",
+  "legende": "Le Pont-Neuf, Paris (Camille Pissarro, 1902)",
+  "rubrique": "Particularité",
+  "source": "wikipedia:Pont Neuf"
  }
 }

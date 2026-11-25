@@ -26,16 +26,16 @@ prix Ig Nobel).
 
 ## Familles
 
-| `type` | Libellé | Question | Nombre (23/11/2026) |
+| `type` | Libellé | Question | Nombre (25/11/2026) |
 |---|---|---|---|
-| absent | Définition | un mot rare (`mot`) | 68 |
-| `anecdote` | Anecdote | une phrase à trou `___` (`question`) | 16 |
-| `commune` | Commune | une vraie commune au nom étonnant | 12 |
-| `intraduisible` | Mot étranger | un mot sans équivalent | 11 |
-| `photo` | Photo | une image (`image`, `alt`, `credit`) | 10 |
-| `etrangere` | Expression étrangère | une expression traduite mot à mot | 9 |
-| `expression` | Expression | l'origine d'une expression française | 6 |
-| `metier` | Métier | un métier disparu, sa spécialité à deviner (carte de visite) | 14 |
+| absent | Définition | un mot rare (`mot`) | 74 |
+| `anecdote` | Anecdote | une phrase à trou `___` (`question`) | 26 |
+| `commune` | Commune | une vraie commune au nom étonnant | 18 |
+| `intraduisible` | Mot étranger | un mot sans équivalent | 21 |
+| `photo` | Photo | une image (`image`, `alt`, `credit`) | 19 |
+| `etrangere` | Expression étrangère | une expression traduite mot à mot | 19 |
+| `expression` | Expression | l'origine d'une expression française | 16 |
+| `metier` | Métier | un métier disparu, sa spécialité à deviner (carte de visite) | 24 |
 
 Familles faibles : celles dont la réponse se sait souvent (expressions
 françaises, anecdotes connues).
@@ -82,8 +82,9 @@ les duels.
 
 - Les vérités du premier pack (25 questions) et les ajouts suivants sont
   vérifiés dans une source (Wiktionnaire, CNRTL, Wikipédia) ; les faux de
-  départ aussi, pour qu'aucun ne dise vrai. 26 questions sur 132 portent leur
-  source dans `source` : les autres sont à sourcer. Exemples de faux corrigés : « sobremesa » veut aussi dire nappe et dessert ;
+  départ aussi, pour qu'aucun ne dise vrai. 164 questions sur 217 portent leur
+  source dans `source` (`wiktionary:`, `wiktionary-en:`, `wikipedia:`,
+  `wikipedia-en:`, `geo.api.gouv.fr`) : les autres sont à sourcer. Exemples de faux corrigés : « sobremesa » veut aussi dire nappe et dessert ;
   « crocheteur » désigne aussi celui qui crochète les serrures.
 - Communes : présentes dans la liste officielle (`prototype/communes.txt`,
   geo.api.gouv.fr, 34 969 communes). Bourré et Montcuq, fusionnées en 2016,
@@ -91,6 +92,23 @@ les duels.
 - Photos : libres de droits (Wikimedia Commons), crédit dans `credit`.
 - Écartées faute de source sûre : ergophobie, payer le canard, saucisse
   allemande, planète Vulcain, momies de chats, turophobie.
+
+## Série du 25/11/2026
+
+75 questions : 10 par famille, 6 communes, 9 photos. Toutes sourcées.
+
+- Écartées faute de source sûre : Héron d'Alexandrie et l'eau bénite, les
+  carottes violettes avant le XVIIe siècle, « sabler le champagne », « la fin
+  des haricots », « avoir le cafard », « tirer son épingle du jeu », « monter
+  sur ses grands chevaux » (origine marquée douteuse dans le Wiktionnaire).
+- Faux de Truffe passés à l'arbitre : 207 sur 207 sous le seuil de leur
+  famille (0,02 sous le seuil au plus près ; 7 réécrits). Faux de commune
+  absents de la liste officielle.
+- Réponse chiffrée : sans mot (« 673. », « de 1922 à 1990 »). Avec « ans » ou
+  « losanges », l'arbitre refusait tout faux qui reprenait le mot.
+- Longueur : bas du second feuillet à 543 px au plus à 375 × 553, avec le faux
+  le plus long de chaque lot (Playwright, 75 lots).
+- Photos : Wikimedia Commons, réduites à 640 px, crédit dans `credit`.
 
 ## Ajouter une question
 
