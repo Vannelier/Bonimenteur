@@ -26,6 +26,8 @@ Décidée avec l'auteur. Une bonne question :
    préparer vos peaux fines de mouton et de chèvre par un professionnel ! »),
    pas comme un dictionnaire (règle de l'auteur, 25/11/2026). La question impose
    alors son objet (`ouvrage` : `carte`), et ses faux de départ prennent le ton.
+   Jamais une réponse réduite à un nombre ou à une date : le faussaire n'aurait
+   qu'un nombre voisin à écrire.
 
 Et il doit être facile d'y inventer des faux (écartés pour cette raison : les
 prix Ig Nobel).
@@ -38,7 +40,7 @@ prix Ig Nobel).
 | `anecdote` | Anecdote | une phrase à trou `___` (`question`) | 26 |
 | `commune` | Commune | une vraie commune au nom étonnant | 18 |
 | `intraduisible` | Mot étranger | un mot sans équivalent | 21 |
-| `photo` | Photo | une image (`image`, `alt`, `credit`) | 20 |
+| `photo` | Photo | une image (`image`, `alt`, `credit`) | 19 |
 | `etrangere` | Expression étrangère | une expression traduite mot à mot | 19 |
 | `expression` | Expression | l'origine d'une expression française | 16 |
 | `metier` | Métier | un métier disparu, sa spécialité à deviner (livret d'ouvrier, ou carte de visite réclame : `ouvrage`) | 24 |
@@ -90,7 +92,7 @@ les duels.
 
 - Les vérités du premier pack (25 questions) et les ajouts suivants sont
   vérifiés dans une source (Wiktionnaire, CNRTL, Wikipédia) ; les faux de
-  départ aussi, pour qu'aucun ne dise vrai. 165 questions sur 218 portent leur
+  départ aussi, pour qu'aucun ne dise vrai. 164 questions sur 217 portent leur
   source dans `source` (`wiktionary:`, `wiktionary-en:`, `wikipedia:`,
   `wikipedia-en:`, `geo.api.gouv.fr`) : les autres sont à sourcer. Exemples de faux corrigés : « sobremesa » veut aussi dire nappe et dessert ;
   « crocheteur » désigne aussi celui qui crochète les serrures.
@@ -103,7 +105,7 @@ les duels.
 
 ## Série du 25/11/2026
 
-76 questions : 10 par famille, 6 communes. Toutes sourcées.
+75 questions : 10 par famille, 6 communes, 9 photos. Toutes sourcées.
 
 - Écartées faute de source sûre : Héron d'Alexandrie et l'eau bénite, les
   carottes violettes avant le XVIIe siècle, « sabler le champagne », « la fin
@@ -112,8 +114,11 @@ les duels.
 - Faux de Truffe passés à l'arbitre : 207 sur 207 sous le seuil de leur
   famille (0,02 sous le seuil au plus près ; 7 réécrits). Faux de commune
   absents de la liste officielle.
-- Réponse chiffrée : sans mot (« 673. », « de 1922 à 1990 »). Avec « ans » ou
-  « losanges », l'arbitre refusait tout faux qui reprenait le mot.
+- Réponse chiffrée : retirée (25/11/2026). Le nombre de vitres de la pyramide
+  du Louvre (« 673 ») et la durée d'un hoquet (« de 1922 à 1990 ») ne laissaient
+  au faussaire qu'un nombre voisin à écrire, pas une contrefaçon amusante
+  (remarque de l'auteur). Pyramide retirée ; le hoquet porte maintenant sur sa
+  cause (un cochon de 160 kilos tombé sur Charles Osborne).
 - Longueur : bas du second feuillet à 543 px au plus à 375 × 553, avec le faux
   le plus long de chaque lot (Playwright, 75 lots).
 - Photos : Wikimedia Commons, réduites à 640 px, crédit dans `credit`. Le

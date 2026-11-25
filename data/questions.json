@@ -1366,10 +1366,10 @@
  },
  "a-hoquet": {
   "mot": "",
-  "question": "L'Américain Charles Osborne a eu le hoquet pendant ___.",
+  "question": "En 1922, l'Américain Charles Osborne a attrapé un hoquet qui a duré 68 ans, ___.",
   "source": "wikipedia-en:Charles Osborne (hiccups)",
   "type": "anecdote",
-  "vraie": "de 1922 à 1990"
+  "vraie": "après qu'un cochon de 160 kilos lui est tombé dessus"
  },
  "a-koala": {
   "mot": "",
@@ -1473,18 +1473,6 @@
   "legende": "Boîte de bois à couvercle percé, avec un bac de métal",
   "rubrique": "Usage",
   "source": "wikipedia:Chaufferette"
- },
- "p-pyramide": {
-  "alt": "La cour du Louvre la nuit, avec la pyramide de verre éclairée au centre",
-  "credit": "Cour Napoléon du Louvre · Benh Lieu Song · CC BY-SA 3.0 (Wikimedia Commons)",
-  "image": "photos/pyramide-louvre.jpg",
-  "mot": "",
-  "question": "Paris, musée du Louvre. Combien de vitres recouvrent cette pyramide ?",
-  "type": "photo",
-  "vraie": "673.",
-  "legende": "Pyramide du Louvre, Paris",
-  "rubrique": "Vitres",
-  "source": "wikipedia:Pyramide du Louvre"
  },
  "p-manneken": {
   "alt": "La petite statue d'un garçon, habillée d'un costume de néons colorés, dans sa niche de pierre",

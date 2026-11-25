@@ -2942,17 +2942,17 @@
  {
   "id": "t-a-hoquet-1",
   "mot": "a-hoquet",
-  "texte": "de 1922 à 1923"
+  "texte": "après avoir avalé une arête de poisson de travers"
  },
  {
   "id": "t-a-hoquet-2",
   "mot": "a-hoquet",
-  "texte": "d'avril à septembre 1922"
+  "texte": "après un fou rire pendant un enterrement"
  },
  {
   "id": "t-a-hoquet-3",
   "mot": "a-hoquet",
-  "texte": "de Noël 1922 à Pâques 1923"
+  "texte": "après avoir bu un litre de lait glacé d'une traite"
  },
  {
   "id": "t-a-koala-1",
@@ -3163,21 +3163,6 @@
   "id": "t-o-chaufferette-3",
   "mot": "o-chaufferette",
   "texte": "à faire sécher le tabac près de la cheminée."
- },
- {
-  "id": "t-p-pyramide-1",
-  "mot": "p-pyramide",
-  "texte": "666."
- },
- {
-  "id": "t-p-pyramide-2",
-  "mot": "p-pyramide",
-  "texte": "512."
- },
- {
-  "id": "t-p-pyramide-3",
-  "mot": "p-pyramide",
-  "texte": "1 000."
  },
  {
   "id": "t-p-manneken-1",
