@@ -667,6 +667,30 @@ header.vers-accueil{cursor:pointer}
 .feuillet.modele[data-style="carte"]{padding:8px 14px 8px}
 .feuillet.modele .cv-nom{font-size:21px}
 .feuillet.modele .fi-orig{line-height:1.3}
+/* Mise en vente : la pièce contrefaite sur la table, tampon « En vente », étiquette de prix. */
+.table-vente{position:relative;padding:14px 4px 4px}
+.feuillet.vendu{position:relative;cursor:default;transform:rotate(-1deg)}
+.feuillet.vendu small{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:34px;margin-top:4px}
+.feuillet.vendu .signe-faux{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tampon-vente{flex:none;padding:3px 10px 2px;white-space:nowrap;font:700 18px/1.2 var(--tampon);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--rouge);border:3px solid var(--rouge);border-radius:4px;opacity:.88;transform:rotate(-7deg)}
+/* L'étiquette de prix pend au coin de la pièce, sur la table : la pièce, découpée (clip-path), la rognait. */
+.prix-vente{position:absolute;left:0;top:2px;z-index:3;padding-left:16px}
+.prix-vente .chip{border:0;padding:0;background:none;font-size:13px;color:#4a3618}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){
+  /* Une seule animation de transform par élément : la table tressaute, la pièce se pose. */
+  .table-vente{animation:secousse .26s .55s ease-out}
+  .feuillet.vendu{animation:depose .34s cubic-bezier(.2,1.2,.5,1) both}
+  .feuillet.vendu .signe-faux{animation:ap .3s .3s ease-out both}
+  .tampon-vente{animation:coup-vente .28s .45s cubic-bezier(.3,1.5,.6,1) both}
+  .prix-vente{animation:epingle .3s .8s cubic-bezier(.2,1.6,.5,1) both}
+  .apres-vente{animation:ap .3s 1s ease-out both}
+  .chip.ecu.bump-vente{animation:bondit .5s .95s cubic-bezier(.2,1.8,.5,1)}
+  @keyframes depose{from{opacity:0;transform:translateY(-26px) rotate(-4deg) scale(1.05)}to{opacity:1;transform:rotate(-1deg)}}
+  @keyframes coup-vente{from{opacity:0;transform:scale(2.1) rotate(-18deg)}to{opacity:.88;transform:rotate(-7deg)}}
+  @keyframes secousse{30%{transform:translateY(3px)}65%{transform:translateY(-1px)}}
+}
 </style>
 
 <div class="accueil" id="accueil">
@@ -1474,13 +1498,19 @@ function cartePiege(motId, retour, prix = PRIX_PIEGE) {
       await db.collection("pieges").add({ mot: motId, texte, auteur: moi, cree: Date.now(), ...(direct ? { prix } : {}), ...(cat ? { categorie: cat.dataset.cat } : {}) });
       if (serie) serie.pieges++;
       const reste = solde(index());
+      /* Mise en vente : la contrefaçon se pose sur la table, signée ; le tampon « En vente » s'abat
+         (la table tressaute), l'étiquette de prix s'y accroche, la pastille des écus bondit
+         (docs/direction-artistique.md, « Mise en vente »). */
       $e.innerHTML = `${enteteEcus(reste, prix)}
-        <div class="grosse-ic apparait">${IC.piege}</div>
-        <div class="chips"><span class="chip bon">${IC.ok} En vente</span>${pastilleEcus(prix, "−")}</div>
-        <div class="ligne">${!direct && reste >= PRIX_PIEGE ? `<button class="bouton piege" type="button" id="encore">Encore</button>` : ""}<button class="bouton plein" type="button" id="suivant">Continuer</button></div>`;
+        <div class="table-vente"><div class="feuillet modele vendu" ${attrsFeuillet(m, motId)}>${feuillet(m, motId, texte, cat ? cat.dataset.cat : m.categorie)}
+          <small><span class="tampon-vente" aria-hidden="true">En vente</span><span class="signe-faux"><i>signé</i> ${esc(monPseudo() || sig)}</span></small></div>
+          <span class="etiquette prix-vente">${pastilleEcus(prix, "−")}</span></div>
+        <p class="sr-only" role="status">Contrefaçon mise en vente pour ${écus(prix)}.</p>
+        <div class="ligne apres-vente">${!direct && reste >= PRIX_PIEGE ? `<button class="bouton piege" type="button" id="encore">Encore</button>` : ""}<button class="bouton plein" type="button" id="suivant">Continuer</button></div>`;
       const enc = document.getElementById("encore"); if (enc) enc.onclick = () => choixFamille(retour);
       document.getElementById("suivant").onclick = retour;
-      document.getElementById("suivant").focus();
+      document.getElementById("suivant").focus({ preventScroll: true });
+      const ch = $e.querySelector(".entete .chip.ecu:last-child"); if (ch) ch.classList.add("bump-vente");
     } catch (e) {
       poser.disabled = false;
       err.innerHTML = e && e.code === "solde" ? reserve(solde(index()), prix) : `<p class="alerte">${e && e.code === "quota_exceeded" ? "Plus de place." : e && e.code === "doublon" ? "Tu as déjà un faux ici." : e && e.code === "non_authentifie" ? "Pièce non authentifiée." : e && e.code === "refuse" ? "Texte refusé." : e && e.code === "debit" ? "Trop vite : réessaie dans un instant." : "Échec de l'enregistrement."}</p>`;

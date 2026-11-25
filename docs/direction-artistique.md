@@ -114,6 +114,29 @@ processeur ralenti ×4, répartis sur 1,3 s (moins de 1 ms par image sur un
 téléphone réel) ; images de plus de 34 ms : 2 sur 5 révélations, autant que
 sans animation.
 
+## Mise en vente
+
+Après « Mettre en vente » (25/11/2026, demande de l'auteur), la contrefaçon se
+pose sur la table, signée, et le tampon « En vente » s'abat sur elle. Séquence
+d'environ 1,1 s, en CSS, transform et opacity seulement, une animation de
+transform par élément, rien sous `prefers-reduced-motion` :
+
+| Temps | Ce qui se passe |
+|---|---|
+| 0 | la pièce tombe sur la table (`depose`) |
+| 300 ms | la signature du faussaire apparaît |
+| 450 ms | coup de tampon « En vente » (`coup-vente`) ; à l'impact, la table tressaute (`secousse`) |
+| 800 ms | l'étiquette de prix s'épingle au coin de la pièce, sur la table (la pièce, découpée, la rognait) |
+| 950 ms | la pastille des écus bondit |
+| 1 000 ms | les boutons montent |
+
+Coût, processeur ralenti ×4 (Playwright, 375 × 553, 4 mises en vente de chaque
+sorte, 25/11/2026) : fil principal 467 ms en moyenne contre 275 ms avec
+`prefers-reduced-motion` (sans animation), soit environ 45 ms sur un téléphone
+réel, étalés sur 1,1 s ; une image de plus de 50 ms dans 2 essais sur 4 (77 et
+80 ms), contre 1 sur 4 sans animation (56 ms). Des calques posés d'avance
+(`will-change`) ne changeaient rien : retirés.
+
 ## Mise en page
 
 Écran de duel (23/11/2026) : au-dessus des pièces, une seule ligne de consigne
