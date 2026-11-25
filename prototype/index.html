@@ -1178,14 +1178,19 @@ function choisir(ids) {
   return melange(ids)[0];
 }
 
-/* Faux opposables à la vraie : ceux des joueurs d'abord ; ceux de Mr Halifax seulement si la question
-   n'en a aucun en vente (décision de l'auteur, 26/11/2026). Impérissables, ils gardent le jeu jouable
-   sans joueurs. */
+/* Faux opposables à la vraie : ceux des joueurs ; tant qu'une question en a moins de MELANGE en vente,
+   ceux de Mr Halifax complètent le lot jusqu'à MELANGE (décision de l'auteur, 26/11/2026 : un seul faux
+   de joueur ne doit pas être servi à tout le monde). Impérissables, ils gardent le jeu jouable sans joueurs. */
+const MELANGE = 3;
 function adverses(I, id) {
   const ps = (I.vivants.get(id) || []).filter(p => p.auteur !== moi);
   const joueurs = ps.filter(p => p.auteur !== "truffe");
-  return joueurs.length ? joueurs : ps;
+  if (joueurs.length >= MELANGE) return joueurs;
+  return [...joueurs, ...melange(ps.filter(p => p.auteur === "truffe")).slice(0, MELANGE - joueurs.length)];
 }
+// Lot mélangé (des faux de Mr Halifax dedans) : tirage égal, sinon adversaire servirait toujours le
+// faux au meilleur taux et le faux neuf du joueur ne sortirait presque jamais.
+const opposer = (I, ps) => ps.some(p => p.auteur === "truffe") ? melange(ps)[0] : adversaire(I, ps);
 function motsEnJeu(I) {
   const r = [];
   for (const [id, m] of S.mots) {
@@ -1233,7 +1238,7 @@ const VRAI = `<span class="chip bon">D'époque</span>`;
 
 async function question(motId, I, piegeImpose = null) {
   const m = S.mots.get(motId);
-  const piege = piegeImpose || adversaire(I, adverses(I, motId));
+  const piege = piegeImpose || opposer(I, adverses(I, motId));
   const f = famille(m);
   const options = melange([{id: "vrai", texte: formater(m.vraie, f), categorie: m.categorie}, {id: piege.id, texte: formater(piege.texte, f), auteur: piege.auteur, categorie: piege.categorie || m.categorie}]);
   await nommer([piege.auteur]);

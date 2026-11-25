@@ -147,9 +147,11 @@ seulement : sur claude.ai, l'adresse de la page n'est pas partageable.
 
 - Édition et étal : voir ci-dessous.
 - Faux de Mr Halifax (faussaire maison, 26/11/2026 ; « Truffe » avant, identifiant
-  `truffe` gardé dans les données) : impérissables, ni édition ni saisie. Opposés
-  seulement aux questions sans faux de joueur en vente (`adverses`) : ils gardent
-  le jeu jouable en l'absence de joueurs.
+  `truffe` gardé dans les données) : impérissables, ni édition ni saisie. Ils
+  complètent les faux de joueurs d'une question jusqu'à 3 (`MELANGE`, `adverses`),
+  tirés au sort à égalité avec eux ; à 3 faux de joueurs en vente, ils ne sortent
+  plus. Ils gardent le jeu jouable en l'absence de joueurs, et un faux de joueur
+  seul n'est pas servi à tout le monde.
 - « Plus vrai que nature » : au moins 5 duels (`PVQN_VUS`) et plus de victimes
   que de démasquages. Galerie dans l'atelier.
 - Contestation « Un faux dit vrai » : 2 joueurs (`CONTEST_MIN`) et il est retiré.
