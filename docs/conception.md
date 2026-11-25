@@ -171,7 +171,8 @@ donne au faussaire de quoi dépenser ses écus une fois ses faux posés.
   a fait ses preuves vaut plus. Ses compteurs restent ; la planche repart de zéro.
 - Étal de 10 places (`ETAL`) : un faux en vente en occupe une ; épuisé ou rangé,
   il la libère. Étal plein : pas de faux neuf, ni de remise en vente ou de
-  réédition. « +1 place » : 20 écus (`PRIX_PLACE`), jusqu'à 20 places (`ETAL_MAX`).
+  réédition. « +1 place » : 20 écus (`PRIX_PLACE`), jusqu'à 20 places (`ETAL_MAX`). Achat
+  confirmé dans une fenêtre (l'étal avant et après) ; la case neuve tombe au bout de l'étal.
 - « Ranger » : gratuit, le faux garde ses exemplaires ; « Remettre » le remet en
   vente s'il y a une place. Rangé, il bloque toujours sa question : un faux par
   joueur et par question (confirmé par l'auteur, 26/11/2026).

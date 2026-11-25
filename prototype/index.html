@@ -180,8 +180,22 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .etal .cases-etal i{width:12px;height:18px;border:1.5px dashed var(--trait);border-radius:2px}
 .etal .cases-etal i.pleine{background:var(--piege);border:1.5px solid var(--piege)}
 .etal .nb-etal{font:700 13px/1 var(--titre);color:var(--encre);font-variant-numeric:tabular-nums}
-.etal .bouton{min-height:36px;padding:0 10px;font-size:14px;width:auto}
-.etal .bouton .prix{position:static;margin-left:6px}
+/* « +1 place » serré : le prix passe dessous (remarque de l'auteur, 26/11/2026). */
+.etal .plus-place{min-height:40px;padding:3px 10px;width:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:13px;line-height:1.1}
+.etal .plus-place .prix{position:static;margin:0;font-size:12px}
+.etal .cases-etal i.a-venir{border-color:var(--ecu);border-style:solid;background:rgba(154,116,36,.18)}
+.etal .cases-etal i.neuve{border-color:var(--ecu)}
+.confirm-place{position:fixed;inset:0;z-index:50;background:rgba(13,23,18,.72);display:flex;align-items:center;justify-content:center;padding:16px}
+.confirm-carte{width:min(340px,100%);background:var(--papier,#f6f0e0);border:1.5px solid var(--trait);border-radius:4px;padding:18px 16px;display:flex;flex-direction:column;gap:16px;box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.confirm-carte h2{margin:0;text-align:center}
+.confirm-carte .etal{justify-content:center}
+.confirm-carte .cases-etal{flex:0 1 auto;justify-content:center}
+.confirm-carte .ligne .prix{position:static;margin-left:6px}
+.signature-bas{margin-top:6px;padding-top:10px;border-top:1px dashed var(--trait)}
+@media (prefers-reduced-motion:no-preference){
+  .etal .cases-etal i.neuve{animation:place-neuve .55s .1s cubic-bezier(.2,1.4,.5,1) both}
+  .etal .nb-etal.bondit{display:inline-block;animation:bondit .45s .45s ease-out}
+  @keyframes place-neuve{from{opacity:0;transform:translateY(-16px) scale(1.9)}to{opacity:1;transform:none}}}
 .alerte{border:1.5px dashed var(--rouge);border-radius:3px;padding:12px;font-size:14px;margin:0;color:var(--rouge);background:#fbefe9}
 .jauge-ecus{display:flex;align-items:center;gap:8px}
 .jauge-ecus .barre{flex:1}
@@ -1841,19 +1855,21 @@ async function atelier(sous) {
     else b.push(`<button class="bouton" type="button" data-acte="retrait" data-id="${esc(p.id)}">Ranger</button>`);
     return `<div class="actions-faux">${b.join("")}</div>`;
   };
-  const etal = `<div class="etal" role="group" aria-label="Étal : ${I.enVenteMoi} faux en vente sur ${I.places} places"><span class="cases-etal" aria-hidden="true">${Array.from({length: I.places}, (_, i) => `<i class="${i < I.enVenteMoi ? "pleine" : ""}"></i>`).join("")}</span><span class="nb-etal">${I.enVenteMoi}/${I.places}</span>${I.places < ETAL_MAX ? `<button class="bouton" type="button" id="agrandir" ${s >= PRIX_PLACE ? "" : "disabled"} aria-label="Agrandir l'étal d'une place pour ${PRIX_PLACE} écus">+1 place${prixBtn(PRIX_PLACE)}</button>` : ""}</div>`;
-  $e.innerHTML = `${sousOnglets("faux", I)}<div class="signature" id="signature"><span class="signe">Signé</span><button class="nom-signe" type="button" id="pseudoBtn" aria-label="Changer de pseudo">${monPseudo() ? esc(monPseudo()) : "ton pseudo"}${IC.plume}</button></div><div class="haut entete"><span class="chip" aria-label="${mes.length} pièges posés">${IC.piege} ${mes.length}</span><span class="chip faux" aria-label="${total} joueurs piégés">${IC.joueur} ${total}</span>${pastilleEcus(s)}</div>
+  const neuve = nouvellePlace; nouvellePlace = false;
+  const etal = `<div class="etal" role="group" aria-label="Étal : ${I.enVenteMoi} faux en vente sur ${I.places} places"><span class="cases-etal" aria-hidden="true">${casesEtal(I.places, I.enVenteMoi, neuve)}</span><span class="nb-etal${neuve ? " bondit" : ""}">${I.enVenteMoi}/${I.places}</span>${I.places < ETAL_MAX ? `<button class="bouton plus-place" type="button" id="agrandir" ${s >= PRIX_PLACE ? "" : "disabled"} aria-label="Agrandir l'étal d'une place pour ${PRIX_PLACE} écus"><span>+1 place</span>${prixBtn(PRIX_PLACE)}</button>` : ""}</div>${neuve ? `<p class="sr-only" role="status">Une place de plus à l'étal.</p>` : ""}`;
+  $e.innerHTML = `${sousOnglets("faux", I)}<div class="haut entete"><span class="chip" aria-label="${mes.length} pièges posés">${IC.piege} ${mes.length}</span><span class="chip faux" aria-label="${total} joueurs piégés">${IC.joueur} ${total}</span>${pastilleEcus(s)}</div>
     ${etal}
     <div id="erreurActe"></div>
     ${blocDefi(I)}
     ${mes.length ? `<ul class="liste">${mes.map(p => { const v = I.demasque.get(p.id) || 0, n = I.pris.get(p.id) || 0; const mot = S.mots.get(p.mot); return `<li class="${I.horsVente.has(p.id) ? "eteint" : ""}"><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>${esc(formater(p.texte, mot ? famille(mot) : "definition"))}</span>${I.retire.has(p.id) ? "" : planche(p)}<span class="chips" style="justify-content:flex-start">${etat(p)}<span class="chip" aria-label="${v} joueurs l'ont démasqué">${IC.oeil} ${v}</span><span class="chip faux" aria-label="${n} joueurs piégés">${IC.joueur} ${n}</span>${n ? pastilleEcus(n, "+") : ""}</span>${actions(p)}</li>`; }).join("")}</ul>`
       : `<div class="grosse-ic">${IC.piege}</div>`}
-    ${galerie.length ? `<h2>${IC.etoile} Pièces de maître</h2><ul class="liste">${galerie.map(p => { const mot = S.mots.get(p.mot); return `<li><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>« ${esc(formater(p.texte, mot ? famille(mot) : "definition"))} »</span><span class="chips" style="justify-content:flex-start"><span class="chip">${IC.piege} ${esc(nom(p.auteur))}</span><span class="chip faux" aria-label="joueurs piégés">${IC.joueur} ${I.pris.get(p.id) || 0}</span></span></li>`; }).join("")}</ul>` : ""}`;
+    ${galerie.length ? `<h2>${IC.etoile} Pièces de maître</h2><ul class="liste">${galerie.map(p => { const mot = S.mots.get(p.mot); return `<li><span class="m">${esc(mot ? titre(mot) : p.mot)}</span><span>« ${esc(formater(p.texte, mot ? famille(mot) : "definition"))} »</span><span class="chips" style="justify-content:flex-start"><span class="chip">${IC.piege} ${esc(nom(p.auteur))}</span><span class="chip faux" aria-label="joueurs piégés">${IC.joueur} ${I.pris.get(p.id) || 0}</span></span></li>`; }).join("")}</ul>` : ""}
+    <div class="signature signature-bas" id="signature"><span class="signe">Signé</span><button class="nom-signe" type="button" id="pseudoBtn" aria-label="Changer de pseudo">${monPseudo() ? esc(monPseudo()) : "ton pseudo"}${IC.plume}</button></div>`;
   lierSous();
   document.getElementById("pseudoBtn").onclick = editerPseudo;
   const bd = document.getElementById("defier"); if (bd) bd.onclick = defier;
   const ld = $e.querySelector(".lien-defi"); if (ld) ld.onclick = () => ld.select();
-  const ba = document.getElementById("agrandir"); if (ba) ba.onclick = () => acte({ sorte: "place", prix: PRIX_PLACE });
+  const ba = document.getElementById("agrandir"); if (ba) ba.onclick = confirmerPlace;
   $e.querySelectorAll("[data-acte]").forEach(b => b.onclick = () => {
     const p = S.pieges.find(x => x.id === b.dataset.id); if (!p) return;
     const sorte = b.dataset.acte;
@@ -1877,7 +1893,38 @@ async function acte(a) {
     const z = document.getElementById("erreurActe"); if (z) z.innerHTML = `<p class="alerte">${MESSAGES_ERREUR[e && e.code] || "Échec de l'enregistrement."}</p>`;
     return;
   }
+  if (a.sorte === "place") { nouvellePlace = true; animJusqua = Date.now() + 900; }
   if (a.sorte !== "retouche") atelier("faux");
+}
+/* Relectures de la base (toutes les 20 s sur le site, et après chaque écriture) : l'atelier se
+   redessine, sauf sur un écran que le joueur n'a pas quitté (mise en vente, saisie d'un faux ou du
+   pseudo) ni pendant l'arrivée d'une place d'étal. Avant le 26/11/2026, la relecture qui suit la
+   mise en vente ramenait d'office à la liste des familles (remarque de l'auteur). */
+let animJusqua = 0;
+function rafraichirAtelier(seulMarche = false) {
+  if (!(lance && vue === "jeu" && ecran === "atelier")) return;
+  if (seulMarche && sousAtelier !== "faux") return;
+  if (Date.now() < animJusqua || $e.querySelector(".table-vente, #piegeTexte, #pseudoChamp")) return;
+  atelier();
+}
+/* Une place d'étal de plus : confirmation (20 écus ne se dépensent pas d'un doigt qui glisse), puis
+   la case neuve tombe au bout de l'étal (atelier, nouvellePlace). */
+let nouvellePlace = false;
+const casesEtal = (n, pleines, neuve = false) => Array.from({length: n}, (_, i) => `<i class="${i < pleines ? "pleine" : ""}${neuve && i === n - 1 ? " neuve" : ""}"></i>`).join("");
+function confirmerPlace() {
+  const I = index(), v = document.createElement("div");
+  v.className = "confirm-place"; v.setAttribute("role", "dialog"); v.setAttribute("aria-modal", "true"); v.setAttribute("aria-labelledby", "titrePlace");
+  v.innerHTML = `<div class="confirm-carte apparait"><h2 id="titrePlace">Agrandir l'étal</h2>
+    <div class="etal" role="img" aria-label="${I.places} places, ${I.places + 1} après l'achat"><span class="cases-etal" aria-hidden="true">${casesEtal(I.places, I.enVenteMoi)}<i class="a-venir"></i></span><span class="nb-etal">${I.places} → ${I.places + 1}</span></div>
+    <div class="ligne"><button class="bouton" type="button" id="nonPlace">Annuler</button><button class="bouton piege" type="button" id="ouiPlace">+1 place <span class="prix">−${PRIX_PLACE}${IC.ecu}</span></button></div></div>`;
+  document.body.append(v);
+  const fermer = () => { v.remove(); document.removeEventListener("keydown", touche); const b = document.getElementById("agrandir"); if (b) b.focus(); };
+  const touche = e => { if (e.key === "Escape") fermer(); };
+  document.addEventListener("keydown", touche);
+  v.onclick = e => { if (e.target === v) fermer(); };
+  document.getElementById("nonPlace").onclick = fermer;
+  document.getElementById("ouiPlace").onclick = () => { fermer(); acte({ sorte: "place", prix: PRIX_PLACE }); };
+  document.getElementById("ouiPlace").focus();
 }
 function editerPseudo() {
   const zone = document.getElementById("signature");
@@ -2071,14 +2118,14 @@ const pret = () => S.charge.mots && S.charge.pieges && S.charge.choix;
       if (CODE_DEFI && await accueilDefi()) return;
       if (vue === "jeu") { if (ecranVoulu === "atelier") montrer("atelier"); else if (!(await absence())) montrer("jouer"); } else majAccueil(); }
     else if (lance && vue === "accueil") majAccueil();
-    else if (lance && vue === "jeu" && ecran === "atelier") atelier();
+    else rafraichirAtelier();
   };
   db.collection("mots").onSnapshot(s => { S.mots = new Map(s.docs.map(d => [d.id, d.data()])); if (!s.metadata.fromCache) S.charge.mots = true; quandPret(); }, () => { S.charge.mots = true; quandPret(); });
   db.collection("pieges").limit(1000).onSnapshot(s => { S.pieges = s.docs.map(d => ({id: d.id, ...d.data()})); if (!s.metadata.fromCache) S.charge.pieges = true; quandPret(); }, () => { S.charge.pieges = true; quandPret(); });
-  db.collection("joueurs").onSnapshot(s => { S.pseudos = new Map(s.docs.map(d => [d.id, String(d.data().pseudo || "").slice(0, PSEUDO_MAX)]).filter(x => x[1])); if (lance && vue === "jeu" && ecran === "atelier" && sousAtelier === "faux" && !document.getElementById("pseudoChamp")) atelier(); if (lance && vue === "accueil" && !document.getElementById("pseudoAcc")) majAccueil(); }, () => {});
+  db.collection("joueurs").onSnapshot(s => { S.pseudos = new Map(s.docs.map(d => [d.id, String(d.data().pseudo || "").slice(0, PSEUDO_MAX)]).filter(x => x[1])); rafraichirAtelier(true); if (lance && vue === "accueil" && !document.getElementById("pseudoAcc")) majAccueil(); }, () => {});
   db.collection("defis").limit(1000).onSnapshot(s => { S.defis = new Map(s.docs.map(d => [d.id, d.data()])); }, () => {});
-  db.collection("actes").limit(5000).onSnapshot(s => { S.actes = s.docs.map(d => d.data()); actesEnVol.length = 0; if (lance && vue === "jeu" && ecran === "atelier" && sousAtelier === "faux") atelier(); }, () => {});
-  db.collection("contestations").limit(1000).onSnapshot(s => { S.contest = s.docs.map(d => d.data()); if (lance && vue === "jeu" && ecran === "atelier") atelier(); }, () => {});
+  db.collection("actes").limit(5000).onSnapshot(s => { S.actes = s.docs.map(d => d.data()); actesEnVol.length = 0; rafraichirAtelier(true); }, () => {});
+  db.collection("contestations").limit(1000).onSnapshot(s => { S.contest = s.docs.map(d => d.data()); rafraichirAtelier(); }, () => {});
   db.collection("choix").limit(1000).onSnapshot(s => { S.choix = s.docs.map(d => ({id: d.id, ...d.data()})); if (!s.metadata.fromCache) S.charge.choix = true; quandPret(); }, () => { S.charge.choix = true; quandPret(); });
 })();
 </script>
