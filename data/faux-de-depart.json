@@ -3253,5 +3253,20 @@
   "id": "t-p-pontneuf-3",
   "mot": "p-pontneuf",
   "texte": "c'est le premier pont de Paris éclairé à l'électricité."
+ },
+ {
+  "id": "t-o-pomander-1",
+  "mot": "o-pomander",
+  "texte": "à garder ses pièces d'or à l'abri des voleurs."
+ },
+ {
+  "id": "t-o-pomander-2",
+  "mot": "o-pomander",
+  "texte": "à faire sonner un grelot pour éloigner les chiens."
+ },
+ {
+  "id": "t-o-pomander-3",
+  "mot": "o-pomander",
+  "texte": "à réchauffer ses doigts avec une braise."
  }
 ]

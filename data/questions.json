@@ -1533,5 +1533,17 @@
   "legende": "Le Pont-Neuf, Paris (Camille Pissarro, 1902)",
   "rubrique": "Particularité",
   "source": "wikipedia:Pont Neuf"
+ },
+ "o-pomander": {
+  "alt": "Une main baguée tient par une chaînette une petite boule d'or ciselée et ajourée",
+  "credit": "Jacob Cornelisz van Oostsanen, portrait, 1518 (détail) · domaine public (Wikimedia Commons)",
+  "image": "photos/pomander.jpg",
+  "mot": "",
+  "question": "À quoi servait cette petite boule d'or ajourée, qu'on portait sur soi ?",
+  "type": "photo",
+  "vraie": "à porter sur soi des parfums, ambre gris ou musc, censés protéger des maladies.",
+  "legende": "Boule d'or ajourée, portée à la main (1518)",
+  "rubrique": "Usage",
+  "source": "wikipedia:Pomander"
  }
 }

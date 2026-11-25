@@ -32,7 +32,7 @@ prix Ig Nobel).
 | `anecdote` | Anecdote | une phrase à trou `___` (`question`) | 26 |
 | `commune` | Commune | une vraie commune au nom étonnant | 18 |
 | `intraduisible` | Mot étranger | un mot sans équivalent | 21 |
-| `photo` | Photo | une image (`image`, `alt`, `credit`) | 19 |
+| `photo` | Photo | une image (`image`, `alt`, `credit`) | 20 |
 | `etrangere` | Expression étrangère | une expression traduite mot à mot | 19 |
 | `expression` | Expression | l'origine d'une expression française | 16 |
 | `metier` | Métier | un métier disparu, sa spécialité à deviner (carte de visite) | 24 |
@@ -82,7 +82,7 @@ les duels.
 
 - Les vérités du premier pack (25 questions) et les ajouts suivants sont
   vérifiés dans une source (Wiktionnaire, CNRTL, Wikipédia) ; les faux de
-  départ aussi, pour qu'aucun ne dise vrai. 164 questions sur 217 portent leur
+  départ aussi, pour qu'aucun ne dise vrai. 165 questions sur 218 portent leur
   source dans `source` (`wiktionary:`, `wiktionary-en:`, `wikipedia:`,
   `wikipedia-en:`, `geo.api.gouv.fr`) : les autres sont à sourcer. Exemples de faux corrigés : « sobremesa » veut aussi dire nappe et dessert ;
   « crocheteur » désigne aussi celui qui crochète les serrures.
@@ -95,7 +95,7 @@ les duels.
 
 ## Série du 25/11/2026
 
-75 questions : 10 par famille, 6 communes, 9 photos. Toutes sourcées.
+76 questions : 10 par famille, 6 communes. Toutes sourcées.
 
 - Écartées faute de source sûre : Héron d'Alexandrie et l'eau bénite, les
   carottes violettes avant le XVIIe siècle, « sabler le champagne », « la fin
@@ -108,7 +108,9 @@ les duels.
   « losanges », l'arbitre refusait tout faux qui reprenait le mot.
 - Longueur : bas du second feuillet à 543 px au plus à 375 × 553, avec le faux
   le plus long de chaque lot (Playwright, 75 lots).
-- Photos : Wikimedia Commons, réduites à 640 px, crédit dans `credit`.
+- Photos : Wikimedia Commons, réduites à 640 px, crédit dans `credit`. Le
+  pomander, que Wikimedia refusait de servir (limite de débit), fourni par
+  l'auteur : détail d'un portrait de 1518, domaine public.
 
 ## Ajouter une question
 
