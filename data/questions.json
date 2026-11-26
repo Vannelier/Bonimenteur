@@ -1,0 +1,4707 @@
+{
+ "a-baguette": {
+  "mot": "",
+  "question": "En 2022, l'UNESCO a inscrit au patrimoine culturel immatériel ___.",
+  "type": "anecdote",
+  "vraie": "le savoir-faire et la culture de la baguette de pain"
+ },
+ "a-banane": {
+  "mot": "",
+  "question": "Pour un botaniste, la banane est ___.",
+  "type": "anecdote",
+  "vraie": "une baie"
+ },
+ "a-danse1518": {
+  "mot": "",
+  "question": "En 1518, à Strasbourg, des centaines de personnes se sont mises à ___.",
+  "source": "wikipedia:Épidémie dansante de 1518",
+  "type": "anecdote",
+  "vraie": "danser sans pouvoir s'arrêter, pendant des semaines"
+ },
+ "a-eiffel": {
+  "mot": "",
+  "question": "En été, la tour Eiffel ___.",
+  "type": "anecdote",
+  "vraie": "grandit d'une quinzaine de centimètres à cause de la chaleur"
+ },
+ "a-flamant": {
+  "mot": "",
+  "question": "Le flamant rose doit sa couleur ___.",
+  "type": "anecdote",
+  "vraie": "à ce qu'il mange : petites crevettes et algues"
+ },
+ "a-girafe": {
+  "mot": "",
+  "question": "Le cou d'une girafe compte ___ vertèbres.",
+  "type": "anecdote",
+  "vraie": "sept, autant que le nôtre"
+ },
+ "a-huitre": {
+  "mot": "",
+  "question": "Au cours de sa vie, une huître peut ___.",
+  "type": "anecdote",
+  "vraie": "changer de sexe plusieurs fois"
+ },
+ "a-joconde": {
+  "mot": "",
+  "question": "Après le vol de la Joconde en 1911, la police a interrogé ___.",
+  "source": "wikipedia:Vol de La Joconde",
+  "type": "anecdote",
+  "vraie": "le peintre Pablo Picasso"
+ },
+ "a-ketchup": {
+  "mot": "",
+  "question": "Dans les années 1830 aux États-Unis, le ketchup était vendu ___.",
+  "type": "anecdote",
+  "vraie": "comme médicament, en pilules"
+ },
+ "a-loutre": {
+  "mot": "",
+  "question": "Pour ne pas dériver en dormant, les loutres de mer ___.",
+  "type": "anecdote",
+  "vraie": "se tiennent par la patte"
+ },
+ "a-miel": {
+  "mot": "",
+  "question": "Dans des tombes égyptiennes vieilles de milliers d'années, on a retrouvé ___ encore comestible.",
+  "type": "anecdote",
+  "vraie": "du miel"
+ },
+ "a-poulpe": {
+  "mot": "",
+  "question": "Le poulpe possède ___.",
+  "type": "anecdote",
+  "vraie": "trois cœurs"
+ },
+ "a-truie": {
+  "mot": "",
+  "question": "En 1386, à Falaise, une truie a été ___.",
+  "type": "anecdote",
+  "vraie": "jugée et pendue pour avoir tué un enfant"
+ },
+ "a-vespasien": {
+  "mot": "",
+  "question": "L'empereur romain Vespasien a créé une taxe sur ___.",
+  "type": "anecdote",
+  "vraie": "l'urine récupérée dans les latrines publiques"
+ },
+ "a-wombat": {
+  "mot": "",
+  "question": "Le wombat, marsupial d'Australie, a la particularité de ___.",
+  "type": "anecdote",
+  "vraie": "faire des crottes en forme de cube"
+ },
+ "a-zanzibar": {
+  "mot": "",
+  "question": "La guerre la plus courte de l'histoire, entre le Royaume-Uni et Zanzibar en 1896, a duré ___.",
+  "type": "anecdote",
+  "vraie": "moins de 40 minutes"
+ },
+ "abscons": {
+  "mot": "abscons",
+  "vraie": "Difficile à comprendre.",
+  "categorie": "adj.",
+  "source": "wiktionary:abscons"
+ },
+ "achaler": {
+  "mot": "achaler",
+  "region": "Québec",
+  "vraie": "Importuner, agacer.",
+  "categorie": "v.",
+  "source": "wiktionary:achaler"
+ },
+ "arachibutyrophobie": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "arachibutyrophobie",
+  "vraie": "Peur que du beurre de cacahuète reste collé au palais.",
+  "categorie": "n. f.",
+  "source": "wiktionary:arachibutyrophobie"
+ },
+ "atrabilaire": {
+  "mot": "atrabilaire",
+  "vraie": "D'humeur sombre et irritable.",
+  "categorie": "adj.",
+  "source": "wiktionary:atrabilaire"
+ },
+ "billevesee": {
+  "mot": "billevesée",
+  "vraie": "Propos creux, idée sans valeur.",
+  "categorie": "n. f.",
+  "source": "wiktionary:billevesée"
+ },
+ "bimbelotier": {
+  "mot": "bimbelotier",
+  "source": "wiktionary:bimbelotier",
+  "vraie": "Fabricant ou marchand de jouets et de petits objets de pacotille.",
+  "type": "metier"
+ },
+ "bisbille": {
+  "mot": "bisbille",
+  "vraie": "Petite querelle pour des riens.",
+  "categorie": "n. f.",
+  "source": "wiktionary:bisbille"
+ },
+ "brimbelle": {
+  "mot": "brimbelle",
+  "region": "Vosges, Lorraine",
+  "vraie": "La myrtille.",
+  "categorie": "n. f.",
+  "source": "wiktionary:brimbelle"
+ },
+ "brimborion": {
+  "mot": "brimborion",
+  "source": "wiktionary:brimborion",
+  "vraie": "Petit objet sans valeur, babiole.",
+  "categorie": "n. m."
+ },
+ "buticulamicrophile": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "buticulamicrophile",
+  "vraie": "Collectionneur de mignonnettes, ces minuscules bouteilles d'alcool.",
+  "categorie": "n.",
+  "source": "wiktionary:buticulamicrophile"
+ },
+ "c-andouille": {
+  "mot": "",
+  "question": "Quel nom de commune de la Mayenne existe réellement ?",
+  "type": "commune",
+  "vraie": "Andouillé"
+ },
+ "c-arnac": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Vienne existe réellement ?",
+  "type": "commune",
+  "vraie": "Arnac-la-Poste"
+ },
+ "c-ballots": {
+  "mot": "",
+  "question": "Quel nom de commune de la Mayenne existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Ballots"
+ },
+ "c-beaufou": {
+  "mot": "",
+  "question": "Quel nom de commune de la Vendée existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Beaufou"
+ },
+ "c-beze": {
+  "mot": "",
+  "question": "Quel nom de commune de la Côte-d'Or existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Bèze"
+ },
+ "c-bouffemont": {
+  "mot": "",
+  "question": "Quel nom de commune du Val-d'Oise existe réellement ?",
+  "type": "commune",
+  "vraie": "Bouffémont"
+ },
+ "c-corpsnuds": {
+  "mot": "",
+  "question": "Quel nom de commune d'Ille-et-Vilaine existe réellement ?",
+  "type": "commune",
+  "vraie": "Corps-Nuds"
+ },
+ "c-glandon": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Vienne existe réellement ?",
+  "type": "commune",
+  "vraie": "Glandon"
+ },
+ "c-mouchard": {
+  "mot": "",
+  "question": "Quel nom de commune du Jura existe réellement ?",
+  "type": "commune",
+  "vraie": "Mouchard"
+ },
+ "c-pissos": {
+  "mot": "",
+  "question": "Quel nom de commune des Landes existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Pissos"
+ },
+ "c-poil": {
+  "mot": "",
+  "question": "Quel nom de commune de la Nièvre existe réellement ?",
+  "type": "commune",
+  "vraie": "Poil"
+ },
+ "c-simple": {
+  "mot": "",
+  "question": "Quel nom de commune de la Mayenne existe réellement ?",
+  "type": "commune",
+  "vraie": "Simplé"
+ },
+ "cacochyme": {
+  "mot": "cacochyme",
+  "vraie": "De santé fragile, toujours souffrant.",
+  "categorie": "adj.",
+  "source": "wiktionary:cacochyme"
+ },
+ "cagnard": {
+  "mot": "cagnard",
+  "region": "Midi",
+  "vraie": "Soleil brûlant, chaleur écrasante.",
+  "categorie": "n. m.",
+  "source": "wiktionary:cagnard"
+ },
+ "callipyge": {
+  "mot": "callipyge",
+  "vraie": "Qui a de belles fesses.",
+  "categorie": "adj.",
+  "source": "wiktionary:callipyge"
+ },
+ "carabistouille": {
+  "mot": "carabistouille",
+  "region": "Belgique",
+  "vraie": "Baliverne, propos peu sérieux.",
+  "categorie": "n. f.",
+  "source": "wiktionary:carabistouille"
+ },
+ "cenacle": {
+  "mot": "cénacle",
+  "vraie": "Petit cercle de gens réunis par des idées communes.",
+  "categorie": "n. m.",
+  "source": "wiktionary:cénacle"
+ },
+ "chafouin": {
+  "mot": "chafouin",
+  "source": "wiktionary:chafouin",
+  "vraie": "Qui a un air sournois et rusé.",
+  "categorie": "adj."
+ },
+ "clampin": {
+  "mot": "clampin",
+  "registre": "familier",
+  "vraie": "Personne paresseuse, traînard.",
+  "categorie": "n. m.",
+  "source": "wiktionary:clampin"
+ },
+ "copoclephile": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "copocléphile",
+  "vraie": "Collectionneur de porte-clés.",
+  "categorie": "n.",
+  "source": "wiktionary:copocléphile"
+ },
+ "coquecigrue": {
+  "mot": "coquecigrue",
+  "vraie": "Chose imaginaire et absurde, baliverne.",
+  "categorie": "n. f.",
+  "source": "wiktionary:coquecigrue"
+ },
+ "crocheteur": {
+  "mot": "crocheteur",
+  "source": "wiktionary:crocheteur",
+  "vraie": "Portefaix qui transportait des fardeaux sur un crochet fixé à son dos.",
+  "type": "metier"
+ },
+ "croquignolet": {
+  "mot": "croquignolet",
+  "vraie": "Mignon, charmant. Souvent ironique.",
+  "categorie": "adj.",
+  "source": "wiktionary:croquignolet"
+ },
+ "cuistre": {
+  "mot": "cuistre",
+  "vraie": "Pédant vaniteux et ridicule.",
+  "categorie": "n. m.",
+  "source": "wiktionary:cuistre"
+ },
+ "degingande": {
+  "mot": "dégingandé",
+  "vraie": "Grand, à la démarche désarticulée.",
+  "categorie": "adj.",
+  "source": "wiktionary:dégingandé"
+ },
+ "degun": {
+  "mot": "dégun",
+  "region": "Marseille",
+  "vraie": "Personne, aucune personne.",
+  "categorie": "pron."
+ },
+ "drache": {
+  "mot": "drache",
+  "region": "Belgique, Nord",
+  "vraie": "Averse soudaine et violente.",
+  "categorie": "n. f.",
+  "source": "wiktionary:drache"
+ },
+ "e-lapin": {
+  "mot": "poser un lapin",
+  "type": "expression",
+  "vraie": "Au XIXe siècle, « faire un lapin » voulait dire partir sans payer ce que l'on devait."
+ },
+ "e-poil": {
+  "mot": "avoir un poil dans la main",
+  "type": "expression",
+  "vraie": "De l'idée que la main de quelqu'un qui ne travaille jamais finirait par se couvrir de poils."
+ },
+ "e-pommes": {
+  "mot": "tomber dans les pommes",
+  "type": "expression",
+  "vraie": "De « être dans les pommes cuites », c'est-à-dire épuisé, qu'on trouve chez George Sand."
+ },
+ "e-pompier": {
+  "mot": "fumer comme un pompier",
+  "type": "expression",
+  "vraie": "De la vapeur qui s'échappait des vêtements mouillés des pompiers près du feu."
+ },
+ "e-sellette": {
+  "mot": "être sur la sellette",
+  "type": "expression",
+  "vraie": "Du petit siège bas où l'on faisait asseoir l'accusé pendant son interrogatoire."
+ },
+ "e-singe": {
+  "mot": "payer en monnaie de singe",
+  "type": "expression",
+  "vraie": "D'un péage parisien où les montreurs de singes payaient en faisant faire un numéro à leur animal."
+ },
+ "esbroufe": {
+  "mot": "esbroufe",
+  "vraie": "Étalage de manières prétentieuses pour impressionner.",
+  "categorie": "n. f.",
+  "source": "wiktionary:esbroufe"
+ },
+ "escarcelle": {
+  "mot": "escarcelle",
+  "vraie": "Grande bourse qu'on portait à la ceinture.",
+  "categorie": "n. f.",
+  "source": "wiktionary:escarcelle"
+ },
+ "eschatologie": {
+  "mot": "eschatologie",
+  "source": "https://www.cnrtl.fr/definition/eschatologie",
+  "vraie": "Doctrine sur la fin des temps et le sort de l'homme après la mort.",
+  "categorie": "n. f."
+ },
+ "esperluette": {
+  "mot": "esperluette",
+  "source": "wiktionary:esperluette",
+  "vraie": "Le signe typographique « & », qui signifie « et ».",
+  "categorie": "n. f."
+ },
+ "falbala": {
+  "mot": "falbala",
+  "vraie": "Volant plissé qui orne une robe ; ornement voyant.",
+  "categorie": "n. m.",
+  "source": "wiktionary:falbala"
+ },
+ "fanfreluche": {
+  "mot": "fanfreluche",
+  "vraie": "Petit ornement léger de toilette.",
+  "categorie": "n. f.",
+  "source": "wiktionary:fanfreluche"
+ },
+ "faribole": {
+  "mot": "faribole",
+  "vraie": "Propos frivole, sans valeur.",
+  "categorie": "n. f.",
+  "source": "wiktionary:faribole"
+ },
+ "gephyrophobie": {
+  "cadre": [
+   "peur",
+   "peurs"
+  ],
+  "mot": "géphyrophobie",
+  "source": "wiktionary:géphyrophobie",
+  "vraie": "Peur de traverser les ponts.",
+  "categorie": "n. f."
+ },
+ "goguenard": {
+  "mot": "goguenard",
+  "vraie": "Moqueur, narquois.",
+  "categorie": "adj.",
+  "source": "wiktionary:goguenard"
+ },
+ "hexakosioihexekontahexaphobie": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "hexakosioihexekontahexaphobie",
+  "vraie": "Peur du nombre six cent soixante-six.",
+  "categorie": "n. f.",
+  "source": "wiktionary:hexakosioihexekontahexaphobie"
+ },
+ "hippopotomonstrosesquippedaliophobie": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "hippopotomonstrosesquippedaliophobie",
+  "vraie": "Peur des mots très longs.",
+  "categorie": "n. f.",
+  "source": "wiktionary:hippopotomonstrosesquippedaliophobie"
+ },
+ "hurluberlu": {
+  "mot": "hurluberlu",
+  "vraie": "Personne extravagante, qui agit sans réfléchir.",
+  "categorie": "n. m.",
+  "source": "wiktionary:hurluberlu"
+ },
+ "i-backpfeifengesicht": {
+  "mot": "",
+  "question": "En allemand, « Backpfeifengesicht » désigne…",
+  "type": "intraduisible",
+  "vraie": "Un visage qui donne envie de le gifler."
+ },
+ "i-drachenfutter": {
+  "mot": "",
+  "question": "En allemand, « Drachenfutter » désigne…",
+  "source": "wiktionary:Drachenfutter",
+  "type": "intraduisible",
+  "vraie": "Un cadeau offert pour se faire pardonner."
+ },
+ "i-gattara": {
+  "mot": "",
+  "question": "En italien, « gattara » désigne…",
+  "source": "wiktionary:gattara",
+  "type": "intraduisible",
+  "vraie": "Une femme qui nourrit les chats errants du quartier."
+ },
+ "i-kalsarikanni": {
+  "mot": "",
+  "question": "En finnois, « kalsarikänni » désigne…",
+  "type": "intraduisible",
+  "vraie": "Le fait de boire chez soi, en sous-vêtements, sans aucune intention de sortir."
+ },
+ "i-kummerspeck": {
+  "mot": "",
+  "question": "En allemand, « Kummerspeck » désigne…",
+  "type": "intraduisible",
+  "vraie": "Les kilos pris en mangeant pour se consoler d'un chagrin."
+ },
+ "i-palegg": {
+  "mot": "",
+  "question": "En norvégien, « pålegg » désigne…",
+  "source": "wiktionary:pålegg",
+  "type": "intraduisible",
+  "vraie": "Tout ce que l'on peut poser sur une tranche de pain."
+ },
+ "i-shemomedjamo": {
+  "mot": "",
+  "question": "En géorgien, « shemomedjamo » désigne…",
+  "type": "intraduisible",
+  "vraie": "Le fait de continuer à manger sans faim, parce que c'est trop bon."
+ },
+ "i-sobremesa": {
+  "mot": "",
+  "question": "En espagnol, « sobremesa » désigne…",
+  "source": "wiktionary:sobremesa",
+  "type": "intraduisible",
+  "vraie": "Le temps passé à table à discuter, après la fin du repas."
+ },
+ "i-tartle": {
+  "mot": "",
+  "question": "En écossais, « tartle » désigne…",
+  "type": "intraduisible",
+  "vraie": "L'hésitation au moment de présenter quelqu'un dont on a oublié le nom."
+ },
+ "i-tsundoku": {
+  "mot": "",
+  "question": "En japonais, « tsundoku » désigne…",
+  "type": "intraduisible",
+  "vraie": "Le fait d'acheter des livres et de les laisser s'empiler sans les lire."
+ },
+ "i-utepils": {
+  "mot": "",
+  "question": "En norvégien, « utepils » désigne…",
+  "source": "wiktionary:utepils",
+  "type": "intraduisible",
+  "vraie": "Une bière bue dehors, en terrasse ou au soleil."
+ },
+ "jeremiade": {
+  "mot": "jérémiade",
+  "vraie": "Plainte sans fin, qui importune.",
+  "categorie": "n. f.",
+  "source": "wiktionary:jérémiade"
+ },
+ "logorrhee": {
+  "mot": "logorrhée",
+  "vraie": "Flot de paroles qu'on ne peut arrêter.",
+  "categorie": "n. f.",
+  "source": "wiktionary:logorrhée"
+ },
+ "margoulin": {
+  "mot": "margoulin",
+  "vraie": "Commerçant ou affairiste peu scrupuleux.",
+  "categorie": "n. m.",
+  "source": "wiktionary:margoulin"
+ },
+ "mirliton": {
+  "mot": "mirliton",
+  "vraie": "Petit tube garni d'une membrane qui vibre quand on chante dedans.",
+  "categorie": "n. m.",
+  "source": "wiktionary:mirliton"
+ },
+ "nyctalope": {
+  "mot": "nyctalope",
+  "vraie": "Qui voit dans l'obscurité.",
+  "categorie": "adj.",
+  "source": "wiktionary:nyctalope"
+ },
+ "nycthemere": {
+  "mot": "nycthémère",
+  "source": "wiktionary:nycthémère",
+  "vraie": "Durée de vingt-quatre heures, comprenant un jour et une nuit.",
+  "categorie": "n. m."
+ },
+ "o-bassinoire": {
+  "alt": "Un grand récipient rond en laiton percé de motifs, au bout d'un long manche",
+  "credit": "Bassinoire de 1675, musée Henri-Mathieu de Bruyères · Ji-Elle · CC BY-SA 4.0 (Wikimedia Commons)",
+  "image": "photos/bassinoire.jpg",
+  "mot": "",
+  "question": "À quoi servait cette poêle en laiton percée, au très long manche ?",
+  "type": "photo",
+  "vraie": "à réchauffer le lit : on la remplissait de braises et on la passait entre les draps.",
+  "legende": "Poêle en laiton percée, au très long manche",
+  "rubrique": "Usage"
+ },
+ "o-fer": {
+  "alt": "Une pince de métal à deux branches arrondies avec des poignées en bois",
+  "credit": "Fer des années 1920 · R. Henrik Nilsson · CC BY 4.0 (Wikimedia Commons)",
+  "image": "photos/fer-a-friser.jpg",
+  "mot": "",
+  "question": "À quoi servait cette pince en métal ?",
+  "type": "photo",
+  "vraie": "pince chauffante permettant de friser les cheveux en y enroulant les mèches.",
+  "legende": "Pince en métal",
+  "rubrique": "Usage",
+  "ouvrage": "brevet"
+ },
+ "o-moustache": {
+  "alt": "Une tasse de porcelaine dont l'intérieur porte un petit rebord en demi-lune",
+  "credit": "Tasse, Tirschenreuth, vers 1880 · Richard Huber · CC BY-SA 4.0 (Wikimedia Commons)",
+  "image": "photos/tasse-moustache.jpg",
+  "mot": "",
+  "question": "À quoi servait cette tasse en porcelaine, avec son drôle de rebord intérieur ?",
+  "type": "photo",
+  "vraie": "tasse munie d'un rebord intérieur, permettant de boire son thé sans mouiller sa moustache.",
+  "legende": "Tasse en porcelaine à rebord intérieur",
+  "rubrique": "Usage",
+  "ouvrage": "brevet"
+ },
+ "o-tirebotte": {
+  "alt": "Un objet de fonte en forme d'insecte, avec deux longues pattes écartées à l'arrière",
+  "credit": "Albert Geuppert, vers 1937 · National Gallery of Art · CC0 (Wikimedia Commons)",
+  "image": "photos/tire-botte.jpg",
+  "mot": "",
+  "question": "À quoi servait cet objet en fonte, en forme d'insecte ?",
+  "type": "photo",
+  "vraie": "appareil pour se débotter sans les mains, le talon coincé entre ses deux pattes.",
+  "legende": "Objet en fonte en forme d'insecte",
+  "rubrique": "Usage",
+  "ouvrage": "brevet"
+ },
+ "o-tirebouton": {
+  "alt": "Une longue tige de métal terminée par un crochet, avec un manche",
+  "credit": "Auckland Museum · CC BY 4.0 (Wikimedia Commons)",
+  "image": "photos/tire-bouton.jpg",
+  "mot": "",
+  "question": "À quoi servait cet objet terminé par un petit crochet ?",
+  "type": "photo",
+  "vraie": "crochet pour boutonner bottines et gants, en tirant chaque bouton par sa boutonnière.",
+  "legende": "Objet terminé par un petit crochet",
+  "rubrique": "Usage",
+  "ouvrage": "brevet"
+ },
+ "olibrius": {
+  "mot": "olibrius",
+  "vraie": "Individu bizarre, qui se fait remarquer.",
+  "categorie": "n. m.",
+  "source": "wiktionary:olibrius"
+ },
+ "omphalophobie": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "omphalophobie",
+  "vraie": "Peur des nombrils.",
+  "categorie": "n. f."
+ },
+ "oublieur": {
+  "mot": "oublieur",
+  "source": "wiktionary:oublieur",
+  "vraie": "Gaufres roulées toutes chaudes, vendues dans votre rue !",
+  "type": "metier",
+  "ouvrage": "carte"
+ },
+ "p-cheval": {
+  "alt": "Un édifice de pierre sculpté de formes étranges, de colonnes et d'animaux",
+  "credit": "Fécamp №0², 2024 · CC0 (Wikimedia Commons)",
+  "image": "photos/facteur-cheval.jpg",
+  "mot": "",
+  "question": "Hauterives, dans la Drôme. Qui a construit ce palais de pierre ?",
+  "type": "photo",
+  "vraie": "un facteur, seul, avec les pierres ramassées pendant ses tournées, en 33 ans.",
+  "legende": "Palais de pierre, Hauterives (Drôme)",
+  "rubrique": "Bâtisseur"
+ },
+ "p-crue": {
+  "alt": "Des passants marchent sur une passerelle de planches au-dessus d'une avenue inondée",
+  "credit": "Lucien Cresson, 1910 · Paris Musées, CC0 (Wikimedia Commons)",
+  "image": "photos/crue-1910.jpg",
+  "mot": "",
+  "question": "Paris, crue de janvier 1910. Jusqu'où l'eau est-elle montée sur le Zouave, la statue du pont de l'Alma qui sert de repère ?",
+  "type": "photo",
+  "vraie": "jusqu'à ses épaules.",
+  "legende": "Le Zouave du pont de l'Alma, crue de janvier 1910",
+  "rubrique": "Hauteur de l'eau"
+ },
+ "p-lac": {
+  "alt": "Un lac rose vif entouré de forêt, au bord de l'océan",
+  "credit": "Lac Hillier · Aussie Oc, 2011 · CC BY-SA 4.0 (Wikimedia Commons)",
+  "image": "photos/lac-rose.jpg",
+  "mot": "",
+  "question": "Ce lac d'une île d'Australie occidentale est rose. Pourquoi ?",
+  "type": "photo",
+  "vraie": "à cause d'algues microscopiques et de bactéries qui vivent dans son eau très salée.",
+  "legende": "Lac rose d'une île d'Australie occidentale",
+  "rubrique": "Origine de la couleur"
+ },
+ "p-liberte": {
+  "alt": "Une statue géante entourée d'échafaudages au-dessus des toits d'une rue de Paris",
+  "credit": "Victor Dargaud, 1884 · musée Carnavalet · domaine public (Wikimedia Commons)",
+  "image": "photos/liberte-paris.jpg",
+  "mot": "",
+  "question": "Paris, rue de Chazelles, vers 1884. Que fait cette statue géante au-dessus des toits ?",
+  "type": "photo",
+  "vraie": "c'est la statue de la Liberté, assemblée à Paris avant d'être démontée et envoyée à New York.",
+  "legende": "Statue géante au-dessus des toits, rue de Chazelles, Paris, vers 1884",
+  "rubrique": "Identification"
+ },
+ "p-montparnasse": {
+  "alt": "Une locomotive renversée contre la façade d'une gare parisienne",
+  "credit": "Gare Montparnasse, 1895 · Lévy & fils · domaine public (Wikimedia Commons)",
+  "image": "photos/montparnasse.jpg",
+  "mot": "",
+  "question": "Paris, gare Montparnasse, 22 octobre 1895. Que s'est-il passé ?",
+  "type": "photo",
+  "vraie": "un train arrivé trop vite a traversé la façade de la gare et fini sa course sur la place.",
+  "legende": "Gare Montparnasse, Paris, 22 octobre 1895",
+  "rubrique": "Événement"
+ },
+ "palinodie": {
+  "mot": "palinodie",
+  "vraie": "Revirement complet d'opinion.",
+  "categorie": "n. f.",
+  "source": "wiktionary:palinodie"
+ },
+ "pandiculation": {
+  "mot": "pandiculation",
+  "vraie": "Le fait de s'étirer en bâillant.",
+  "categorie": "n. f.",
+  "source": "wiktionary:pandiculation"
+ },
+ "patenotrier": {
+  "mot": "patenôtrier",
+  "source": "wiktionary:patenôtrier",
+  "vraie": "Chapelets de toute sorte, pour prier avec élégance !",
+  "type": "metier",
+  "ouvrage": "carte"
+ },
+ "peguer": {
+  "mot": "péguer",
+  "region": "Sud-Ouest, Provence",
+  "vraie": "Coller, être collant.",
+  "categorie": "v.",
+  "source": "wiktionary:péguer"
+ },
+ "petaudiere": {
+  "mot": "pétaudière",
+  "vraie": "Assemblée où règnent le désordre et la confusion.",
+  "categorie": "n. f.",
+  "source": "wiktionary:pétaudière"
+ },
+ "philumeniste": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "philuméniste",
+  "vraie": "Collectionneur de boîtes d'allumettes.",
+  "categorie": "n.",
+  "source": "wiktionary:philuméniste"
+ },
+ "placomusophile": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "placomusophile",
+  "vraie": "Collectionneur de capsules de champagne.",
+  "categorie": "n. m.",
+  "source": "wiktionary:placomusophile"
+ },
+ "pogonophobie": {
+  "cadre": [
+   "peur",
+   "peurs"
+  ],
+  "mot": "pogonophobie",
+  "source": "wiktionary:pogonophobie",
+  "vraie": "Peur des barbes.",
+  "categorie": "n. f."
+ },
+ "quolibet": {
+  "mot": "quolibet",
+  "vraie": "Plaisanterie moqueuse lancée contre quelqu'un.",
+  "categorie": "n. m.",
+  "source": "wiktionary:quolibet"
+ },
+ "rastaquouere": {
+  "mot": "rastaquouère",
+  "vraie": "Étranger au luxe voyant, dont on soupçonne la fortune.",
+  "categorie": "n. m.",
+  "source": "wiktionary:rastaquouère"
+ },
+ "ribambelle": {
+  "mot": "ribambelle",
+  "vraie": "Longue suite de personnes ou de choses.",
+  "categorie": "n. f.",
+  "source": "wiktionary:ribambelle"
+ },
+ "ripopee": {
+  "mot": "ripopée",
+  "source": "wiktionary:ripopée",
+  "vraie": "Mélange de restes de vins ; par extension, ouvrage fait de morceaux disparates.",
+  "categorie": "n. f."
+ },
+ "sapajou": {
+  "mot": "sapajou",
+  "vraie": "Petit singe d'Amérique du Sud à longue queue.",
+  "categorie": "n. m.",
+  "source": "wiktionary:sapajou"
+ },
+ "semillant": {
+  "mot": "sémillant",
+  "vraie": "Vif, plein d'entrain.",
+  "categorie": "adj.",
+  "source": "wiktionary:sémillant"
+ },
+ "senfarger": {
+  "mot": "s'enfarger",
+  "region": "Québec",
+  "vraie": "Trébucher, s'empêtrer.",
+  "categorie": "v."
+ },
+ "sycophante": {
+  "mot": "sycophante",
+  "vraie": "Délateur, mouchard.",
+  "categorie": "n. m.",
+  "source": "wiktionary:sycophante"
+ },
+ "tergiverser": {
+  "mot": "tergiverser",
+  "vraie": "Hésiter, user de détours pour éviter de décider.",
+  "categorie": "v.",
+  "source": "wiktionary:tergiverser"
+ },
+ "triskaidekaphobie": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "triskaïdékaphobie",
+  "vraie": "Peur du nombre treize.",
+  "categorie": "n. f.",
+  "source": "wiktionary:triskaïdékaphobie"
+ },
+ "turlupiner": {
+  "mot": "turlupiner",
+  "vraie": "Tracasser sans cesse.",
+  "categorie": "v.",
+  "source": "wiktionary:turlupiner"
+ },
+ "tyrosemiophile": {
+  "cadre": [
+   "collection",
+   "collectionneur",
+   "collectionneurs",
+   "peur",
+   "peurs"
+  ],
+  "mot": "tyrosémiophile",
+  "vraie": "Collectionneur d'étiquettes de fromage.",
+  "categorie": "n.",
+  "source": "wiktionary:tyrosémiophile"
+ },
+ "ventripotent": {
+  "mot": "ventripotent",
+  "vraie": "Qui a un gros ventre.",
+  "categorie": "adj.",
+  "source": "wiktionary:ventripotent"
+ },
+ "x-chat": {
+  "mot": "",
+  "question": "En japonais, « vouloir emprunter même les pattes du chat » veut dire…",
+  "type": "etrangere",
+  "vraie": "Être complètement débordé."
+ },
+ "x-cochon": {
+  "mot": "",
+  "question": "En allemand, « je crois que mon cochon siffle » veut dire…",
+  "type": "etrangere",
+  "vraie": "Être stupéfait, ne pas en croire ses yeux."
+ },
+ "x-crevettes": {
+  "mot": "",
+  "question": "En suédois, « glisser sur un sandwich aux crevettes » veut dire…",
+  "type": "etrangere",
+  "vraie": "Réussir sans effort, avoir la vie facile."
+ },
+ "x-dindon": {
+  "mot": "",
+  "question": "En espagnol, « être à l'âge du dindon » veut dire…",
+  "source": "wiktionary:edad del pavo",
+  "type": "etrangere",
+  "vraie": "Traverser l'adolescence, l'âge ingrat."
+ },
+ "x-frontchat": {
+  "mot": "",
+  "question": "En japonais, « grand comme le front d'un chat » veut dire…",
+  "source": "wiktionary:猫の額",
+  "type": "etrangere",
+  "vraie": "Minuscule, tout petit."
+ },
+ "x-loup": {
+  "mot": "",
+  "question": "En italien, « dans la gueule du loup » se dit pour…",
+  "source": "wiktionary:in bocca al lupo",
+  "type": "etrangere",
+  "vraie": "Souhaiter bonne chance."
+ },
+ "x-nouilles": {
+  "mot": "",
+  "question": "En russe, « accrocher des nouilles aux oreilles de quelqu'un » veut dire…",
+  "type": "etrangere",
+  "vraie": "Lui raconter des mensonges."
+ },
+ "x-ours": {
+  "mot": "",
+  "question": "En allemand, « là, l'ours danse les claquettes » veut dire…",
+  "type": "etrangere",
+  "vraie": "C'est là qu'il y a de la fête et de l'ambiance."
+ },
+ "x-singe": {
+  "mot": "",
+  "question": "En néerlandais, « maintenant le singe sort de la manche » veut dire…",
+  "type": "etrangere",
+  "vraie": "La vérité éclate enfin."
+ },
+ "zigouiller": {
+  "mot": "zigouiller",
+  "registre": "familier",
+  "vraie": "Tuer quelqu'un.",
+  "categorie": "v.",
+  "source": "wiktionary:zigouiller"
+ },
+ "gindre": {
+  "type": "metier",
+  "mot": "gindre",
+  "vraie": "Ouvrier boulanger chargé de pétrir la pâte.",
+  "source": "wiktionary:gindre"
+ },
+ "bourrelier": {
+  "type": "metier",
+  "mot": "bourrelier",
+  "vraie": "Harnais et colliers pour vos chevaux, faits main et sur mesure !",
+  "source": "wiktionary:bourrelier",
+  "ouvrage": "carte"
+ },
+ "megissier": {
+  "type": "metier",
+  "mot": "mégissier",
+  "vraie": "Faites préparer vos peaux fines de mouton et de chèvre par un professionnel !",
+  "source": "wiktionary:mégissier",
+  "ouvrage": "carte"
+ },
+ "feuillardier": {
+  "type": "metier",
+  "mot": "feuillardier",
+  "vraie": "Fend les branches de châtaignier pour cercler les tonneaux.",
+  "source": "wiktionary:feuillardier"
+ },
+ "ravaudeuse": {
+  "type": "metier",
+  "mot": "ravaudeuse",
+  "vraie": "Bas troués, habits usés ? Je les raccommode comme neufs !",
+  "source": "wiktionary:ravaudeuse",
+  "ouvrage": "carte"
+ },
+ "boquillon": {
+  "type": "metier",
+  "mot": "boquillon",
+  "vraie": "Bûcheron, abat les arbres en forêt.",
+  "source": "wiktionary:boquillon"
+ },
+ "aboyeur": {
+  "type": "metier",
+  "mot": "aboyeur",
+  "vraie": "Salle vide ? Je crie à votre porte et j'attire les clients au théâtre ou au café !",
+  "source": "wiktionary:aboyeur",
+  "ouvrage": "carte"
+ },
+ "blatier": {
+  "type": "metier",
+  "mot": "blatier",
+  "vraie": "Achète du blé pour le revendre.",
+  "source": "wiktionary:blatier"
+ },
+ "regrattier": {
+  "type": "metier",
+  "mot": "regrattier",
+  "vraie": "Sel au petit poids et denrées de seconde main, vendus au détail !",
+  "source": "wiktionary:regrattier",
+  "ouvrage": "carte"
+ },
+ "formier": {
+  "type": "metier",
+  "mot": "formier",
+  "vraie": "Cordonniers, chapeliers : vos formes en bois taillées sur mesure !",
+  "source": "wiktionary:formier",
+  "ouvrage": "carte"
+ },
+ "glabelle": {
+  "mot": "glabelle",
+  "vraie": "Partie du front située entre les deux sourcils.",
+  "categorie": "n. f.",
+  "source": "wiktionary:glabelle"
+ },
+ "philtrum": {
+  "mot": "philtrum",
+  "vraie": "Petit sillon vertical entre le nez et la lèvre supérieure.",
+  "categorie": "n. m.",
+  "source": "wiktionary:philtrum"
+ },
+ "lunule": {
+  "mot": "lunule",
+  "vraie": "Tache claire en forme de croissant, à la base de l'ongle.",
+  "categorie": "n. f.",
+  "source": "wiktionary:lunule"
+ },
+ "ferret": {
+  "mot": "ferret",
+  "vraie": "Embout de métal ou de plastique au bout d'un lacet.",
+  "categorie": "n. m.",
+  "source": "wiktionary:ferret"
+ },
+ "zinzolin": {
+  "mot": "zinzolin",
+  "vraie": "Couleur d'un violet rougeâtre.",
+  "categorie": "n. m.",
+  "source": "wiktionary:zinzolin"
+ },
+ "pareidolie": {
+  "mot": "paréidolie",
+  "vraie": "Tendance à voir des visages dans les nuages, les objets ou les taches.",
+  "categorie": "n. f.",
+  "source": "wiktionary:paréidolie"
+ },
+ "petrichor": {
+  "mot": "pétrichor",
+  "vraie": "Odeur de la terre après la pluie.",
+  "categorie": "n. m.",
+  "source": "wiktionary:pétrichor"
+ },
+ "jocrisse": {
+  "mot": "jocrisse",
+  "vraie": "Benêt qui se laisse mener par le premier venu.",
+  "categorie": "n. m.",
+  "source": "wiktionary:jocrisse"
+ },
+ "ecornifleur": {
+  "mot": "écornifleur",
+  "vraie": "Pique-assiette, qui se fait nourrir aux dépens des autres.",
+  "categorie": "n. m.",
+  "source": "wiktionary:écornifler"
+ },
+ "tintinnabuler": {
+  "mot": "tintinnabuler",
+  "vraie": "Sonner comme une clochette, d'un son aigu et léger.",
+  "categorie": "v.",
+  "source": "wiktionary:tintinnabuler"
+ },
+ "tabletier": {
+  "mot": "tabletier",
+  "source": "wiktionary:tabletier",
+  "vraie": "Échiquiers, damiers et bibelots d'ivoire, d'os ou de bois !",
+  "type": "metier",
+  "ouvrage": "carte"
+ },
+ "chasse-maree": {
+  "mot": "chasse-marée",
+  "source": "wiktionary:chasse-marée",
+  "vraie": "Marchand qui achetait le poisson dans les ports pour le revendre loin de la côte.",
+  "type": "metier"
+ },
+ "talmellier": {
+  "mot": "talmellier",
+  "source": "wiktionary:talmellier",
+  "vraie": "Boulanger : c'était l'ancien nom du métier.",
+  "type": "metier"
+ },
+ "aiguilletier": {
+  "mot": "aiguilletier",
+  "source": "wiktionary:aiguilletier",
+  "vraie": "Ouvrier qui fabriquait les aiguillettes et les lacets.",
+  "type": "metier"
+ },
+ "cordouanier": {
+  "mot": "cordouanier",
+  "source": "wiktionary:cordouanier",
+  "vraie": "Cordonnier du Moyen Âge, qui travaillait le cuir de Cordoue.",
+  "type": "metier"
+ },
+ "plumassier": {
+  "mot": "plumassier",
+  "source": "wiktionary:plumassier",
+  "vraie": "Plumes et aigrettes pour orner vos chapeaux et vos parures !",
+  "type": "metier",
+  "ouvrage": "carte"
+ },
+ "huchier": {
+  "mot": "huchier",
+  "source": "wiktionary:huchier",
+  "vraie": "Menuisier qui fabriquait les huches et meublait les églises et les demeures.",
+  "type": "metier"
+ },
+ "chandelier": {
+  "mot": "chandelier",
+  "source": "wiktionary:chandelier",
+  "vraie": "Chandelles de qualité, pour s'éclairer sans se ruiner !",
+  "type": "metier",
+  "ouvrage": "carte"
+ },
+ "remouleur": {
+  "mot": "rémouleur",
+  "source": "wiktionary:rémouleur",
+  "vraie": "Couteaux et ciseaux aiguisés à la meule, je passe dans votre rue !",
+  "type": "metier",
+  "ouvrage": "carte"
+ },
+ "haleur": {
+  "mot": "haleur",
+  "source": "wiktionary:haleur",
+  "vraie": "Homme qui tirait les bateaux le long des rivières, à l'aide d'une corde.",
+  "type": "metier"
+ },
+ "i-komorebi": {
+  "mot": "",
+  "question": "En japonais, « komorebi » désigne…",
+  "source": "wiktionary-en:木漏れ日",
+  "type": "intraduisible",
+  "vraie": "La lumière du soleil qui filtre à travers le feuillage des arbres."
+ },
+ "i-mangata": {
+  "mot": "",
+  "question": "En suédois, « mångata » désigne…",
+  "source": "wiktionary-en:mångata",
+  "type": "intraduisible",
+  "vraie": "Le reflet de la lune sur l'eau, qui dessine comme un chemin."
+ },
+ "i-torschlusspanik": {
+  "mot": "",
+  "question": "En allemand, « Torschlusspanik » désigne…",
+  "source": "wiktionary-en:Torschlusspanik",
+  "type": "intraduisible",
+  "vraie": "La peur, avec l'âge, de voir se fermer les occasions de la vie."
+ },
+ "i-cafune": {
+  "mot": "",
+  "question": "En portugais du Brésil, « cafuné » désigne…",
+  "source": "wiktionary-en:cafuné",
+  "type": "intraduisible",
+  "vraie": "Le geste de passer tendrement les doigts dans les cheveux de quelqu'un."
+ },
+ "i-pochemuchka": {
+  "mot": "",
+  "question": "En russe, « potchemoutchka » désigne…",
+  "source": "wiktionary-en:почемучка",
+  "type": "intraduisible",
+  "vraie": "Une personne, souvent un enfant, qui pose sans cesse des questions."
+ },
+ "i-gigil": {
+  "mot": "",
+  "question": "En tagalog, « gigil » désigne…",
+  "source": "wiktionary-en:gigil",
+  "type": "intraduisible",
+  "vraie": "L'envie irrésistible de pincer ou de serrer quelque chose de trop mignon."
+ },
+ "i-abbiocco": {
+  "mot": "",
+  "question": "En italien, « abbiocco » désigne…",
+  "source": "wiktionary-en:abbiocco",
+  "type": "intraduisible",
+  "vraie": "La somnolence qui vous prend après un repas copieux."
+ },
+ "i-culaccino": {
+  "mot": "",
+  "question": "En italien, « culaccino » désigne…",
+  "source": "wiktionary-en:culaccino",
+  "type": "intraduisible",
+  "vraie": "La trace ronde laissée sur une table par un verre mouillé."
+ },
+ "i-zeg": {
+  "mot": "",
+  "question": "En géorgien, « zeg » veut dire…",
+  "source": "wiktionary-en:ზეგ",
+  "type": "intraduisible",
+  "vraie": "Le jour qui suit demain."
+ },
+ "i-verschlimmbessern": {
+  "mot": "",
+  "question": "En allemand, « verschlimmbessern » veut dire…",
+  "source": "wiktionary-en:verschlimmbessern",
+  "type": "intraduisible",
+  "vraie": "Empirer une chose en voulant l'améliorer."
+ },
+ "x-katboom": {
+  "mot": "",
+  "question": "En néerlandais, « regarder le chat descendre de l'arbre » veut dire…",
+  "source": "wiktionary-en:de kat uit de boom kijken",
+  "type": "etrangere",
+  "vraie": "Attendre de voir comment les choses tournent avant d'agir."
+ },
+ "x-seau": {
+  "mot": "",
+  "question": "En anglais, « donner un coup de pied dans le seau » veut dire…",
+  "source": "wiktionary-en:kick the bucket",
+  "type": "etrangere",
+  "vraie": "Mourir."
+ },
+ "x-koban": {
+  "mot": "",
+  "question": "En japonais, « des pièces d'or à un chat » veut dire…",
+  "source": "wiktionary-en:猫に小判",
+  "type": "etrangere",
+  "vraie": "Offrir quelque chose de précieux à qui ne sait pas l'apprécier."
+ },
+ "x-porte": {
+  "mot": "",
+  "question": "En néerlandais, « tomber dans la maison avec la porte » veut dire…",
+  "source": "wiktionary-en:met de deur in huis vallen",
+  "type": "etrangere",
+  "vraie": "Aller droit au but, sans préambule."
+ },
+ "x-poils": {
+  "mot": "",
+  "question": "En italien, « ne pas avoir de poils sur la langue » veut dire…",
+  "source": "wiktionary-it:non avere peli sulla lingua",
+  "type": "etrangere",
+  "vraie": "Parler franchement, sans ménager personne."
+ },
+ "x-eau": {
+  "mot": "",
+  "question": "En italien, « de l'eau dans la bouche ! » se dit pour dire……",
+  "source": "wiktionary-en:acqua in bocca",
+  "type": "etrangere",
+  "vraie": "Garde le secret, n'en parle à personne !"
+ },
+ "x-singes": {
+  "mot": "",
+  "question": "En japonais, « même les singes tombent des arbres » veut dire…",
+  "source": "wiktionary-en:猿も木から落ちる",
+  "type": "etrangere",
+  "vraie": "Même les meilleurs se trompent parfois."
+ },
+ "x-bottes": {
+  "mot": "",
+  "question": "En espagnol, « se mettre les bottes » veut dire…",
+  "source": "wiktionary-en:ponerse las botas",
+  "type": "etrangere",
+  "vraie": "Se régaler sans retenue, ou faire de gros profits."
+ },
+ "x-cochon2": {
+  "mot": "",
+  "question": "En allemand, « avoir du cochon » veut dire…",
+  "source": "wiktionary-en:Schwein haben",
+  "type": "etrangere",
+  "vraie": "Avoir de la chance."
+ },
+ "x-toit": {
+  "mot": "",
+  "question": "En suédois, « pas de danger sur le toit » veut dire…",
+  "source": "wiktionary-en:ingen fara på taket",
+  "type": "etrangere",
+  "vraie": "Tout va bien, la voie est libre."
+ },
+ "c-y": {
+  "mot": "",
+  "question": "Quel nom de commune de la Somme existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Y"
+ },
+ "c-bidon": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Ardèche existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Bidon"
+ },
+ "c-avoine": {
+  "mot": "",
+  "question": "Quel nom de commune d'Indre-et-Loire existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Avoine"
+ },
+ "c-folles": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Vienne existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Folles"
+ },
+ "c-ventouse": {
+  "mot": "",
+  "question": "Quel nom de commune de la Charente existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Ventouse"
+ },
+ "c-salives": {
+  "mot": "",
+  "question": "Quel nom de commune de la Côte-d'Or existe réellement ?",
+  "source": "geo.api.gouv.fr",
+  "type": "commune",
+  "vraie": "Salives"
+ },
+ "a-emeus": {
+  "mot": "",
+  "question": "En 1932, l'armée australienne a mené, à la mitrailleuse, une guerre ___.",
+  "source": "wikipedia:Guerre des Émeus",
+  "type": "anecdote",
+  "vraie": "contre les émeus, et l'a perdue"
+ },
+ "a-wojtek": {
+  "mot": "",
+  "question": "Pendant la Seconde Guerre mondiale, l'armée polonaise a nommé caporal ___.",
+  "source": "wikipedia:Wojtek (ours)",
+  "type": "anecdote",
+  "vraie": "un ours brun, qui portait des caisses d'obus"
+ },
+ "a-felicette": {
+  "mot": "",
+  "question": "En 1963, la France a envoyé dans l'espace ___.",
+  "source": "wikipedia:Félicette",
+  "type": "anecdote",
+  "vraie": "une chatte, Félicette"
+ },
+ "a-licorne": {
+  "mot": "",
+  "question": "Dans les armoiries du Royaume-Uni, l'Écosse est représentée par ___.",
+  "source": "wikipedia:Licorne",
+  "type": "anecdote",
+  "vraie": "une licorne"
+ },
+ "a-nintendo": {
+  "mot": "",
+  "question": "Avant les jeux vidéo, Nintendo a commencé en 1889 en fabriquant ___.",
+  "source": "wikipedia:Nintendo",
+  "type": "anecdote",
+  "vraie": "des cartes à jouer"
+ },
+ "a-montgolfiere": {
+  "mot": "",
+  "question": "En 1783, devant Louis XVI, les premiers passagers d'un ballon furent ___.",
+  "source": "wikipedia:Montgolfière",
+  "type": "anecdote",
+  "vraie": "un coq, un mouton et un canard"
+ },
+ "a-robot": {
+  "mot": "",
+  "question": "Le mot « robot » vient du tchèque et veut dire ___.",
+  "source": "wikipedia:Robot",
+  "type": "anecdote",
+  "vraie": "travail, corvée"
+ },
+ "a-melasse": {
+  "mot": "",
+  "question": "En 1919, à Boston, 21 personnes sont mortes, emportées par une vague ___.",
+  "source": "wikipedia-en:Great Molasses Flood",
+  "type": "anecdote",
+  "vraie": "de mélasse, sortie d'une cuve géante éventrée"
+ },
+ "a-hoquet": {
+  "mot": "",
+  "question": "En 1922, l'Américain Charles Osborne a attrapé un hoquet qui a duré 68 ans, ___.",
+  "source": "wikipedia-en:Charles Osborne (hiccups)",
+  "type": "anecdote",
+  "vraie": "après qu'un cochon de 160 kilos lui est tombé dessus"
+ },
+ "a-koala": {
+  "mot": "",
+  "question": "Le koala a ___.",
+  "source": "wikipedia:Koala",
+  "type": "anecdote",
+  "vraie": "des empreintes digitales presque impossibles à distinguer des nôtres"
+ },
+ "e-longfeu": {
+  "mot": "faire long feu",
+  "source": "wiktionary:faire long feu",
+  "type": "expression",
+  "vraie": "D'une arme dont la charge brûle trop lentement : le coup ne part pas."
+ },
+ "e-maille": {
+  "mot": "avoir maille à partir",
+  "source": "wiktionary:avoir maille à partir",
+  "type": "expression",
+  "vraie": "La maille était la plus petite pièce de monnaie : impossible à partager, d'où les disputes."
+ },
+ "e-pave": {
+  "mot": "tenir le haut du pavé",
+  "source": "wiktionary:tenir le haut du pavé",
+  "type": "expression",
+  "vraie": "L'eau sale coulait au milieu de la rue : les gens importants marchaient au sec, le long des murs."
+ },
+ "e-pou": {
+  "mot": "fier comme un pou",
+  "source": "wiktionary:fier comme un pou",
+  "type": "expression",
+  "vraie": "« Pou » est une vieille forme de « pouil », le coq : fier comme un coq."
+ },
+ "e-chou": {
+  "mot": "faire chou blanc",
+  "source": "wiktionary:faire chou blanc",
+  "type": "expression",
+  "vraie": "Au jeu de quilles, « faire coup blanc » : lancer la boule sans abattre une seule quille."
+ },
+ "e-leuleu": {
+  "mot": "à la queue leu leu",
+  "source": "wiktionary:à la queue leu leu",
+  "type": "expression",
+  "vraie": "« Leu » voulait dire « loup » : les loups marchent l'un derrière l'autre."
+ },
+ "e-pourpoint": {
+  "mot": "à brûle-pourpoint",
+  "source": "wiktionary:à brûle-pourpoint",
+  "type": "expression",
+  "vraie": "D'un coup de feu tiré à bout portant, assez près pour brûler le pourpoint."
+ },
+ "e-chamade": {
+  "mot": "battre la chamade",
+  "source": "wiktionary:battre la chamade",
+  "type": "expression",
+  "vraie": "D'un roulement de tambour par lequel une ville assiégée demandait à capituler."
+ },
+ "e-assiette": {
+  "mot": "ne pas être dans son assiette",
+  "source": "wiktionary:ne pas être dans son assiette",
+  "type": "expression",
+  "vraie": "L'assiette désignait la place de chacun à table, puis la disposition d'esprit."
+ },
+ "e-oignons": {
+  "mot": "en rang d'oignons",
+  "source": "wiktionary:en rang d'oignons",
+  "type": "expression",
+  "vraie": "Des maraîchers, qui rangeaient les oignons du plus gros au plus petit."
+ },
+ "o-bourdalou": {
+  "alt": "Trois récipients de porcelaine blanche, oblongs, à anse, décorés de petites fleurs",
+  "credit": "Pots « bourdaloue », Hofburg, Vienne · David Monniaux · CC BY-SA 3.0 (Wikimedia Commons)",
+  "image": "photos/bourdalou.jpg",
+  "mot": "",
+  "question": "À quoi servait ce récipient de porcelaine, en forme de saucière ?",
+  "type": "photo",
+  "vraie": "à servir d'urinoir de voyage aux dames, qui le glissaient sous leur robe.",
+  "legende": "Récipient de porcelaine, en forme de saucière",
+  "rubrique": "Usage",
+  "source": "wikipedia:Pot de chambre"
+ },
+ "o-kangri": {
+  "alt": "Un pot de terre cuite pris dans un panier d'osier tressé, avec une anse",
+  "credit": "Kangri du Cachemire · Sanu N · CC BY-SA 4.0 (Wikimedia Commons)",
+  "image": "photos/kangri.jpg",
+  "mot": "",
+  "question": "Au Cachemire, à quoi sert ce pot de terre entouré d'osier ?",
+  "type": "photo",
+  "vraie": "à se chauffer : rempli de braises, on le porte sous son grand manteau.",
+  "legende": "Pot de terre entouré d'osier, Cachemire",
+  "rubrique": "Usage",
+  "source": "wikipedia-en:Kanger"
+ },
+ "o-chaufferette": {
+  "alt": "Une boîte de bois à poignée, au couvercle de métal percé de trous, et le bac de métal sorti à côté",
+  "credit": "Chaufferette à braise · Nerijp · CC BY-SA 3.0 (Wikimedia Commons)",
+  "image": "photos/chaufferette.jpg",
+  "mot": "",
+  "question": "À quoi servait cette boîte de bois au couvercle percé de trous ?",
+  "type": "photo",
+  "vraie": "boîte à couvercle percé, garnie d'un bac de braises, pour se chauffer les pieds.",
+  "legende": "Boîte de bois à couvercle percé, avec un bac de métal",
+  "rubrique": "Usage",
+  "source": "wikipedia:Chaufferette",
+  "ouvrage": "brevet"
+ },
+ "p-manneken": {
+  "alt": "La petite statue d'un garçon, habillée d'un costume de néons colorés, dans sa niche de pierre",
+  "credit": "Manneken-Pis dans son 1000e costume · Trougnouf (Benoit Brummer) · CC BY 4.0 (Wikimedia Commons)",
+  "image": "photos/manneken-pis.jpg",
+  "mot": "",
+  "question": "Bruxelles. Que possède cette statuette de bronze ?",
+  "type": "photo",
+  "vraie": "une garde-robe de mille costumes, conservée dans un musée.",
+  "legende": "Le Manneken-Pis, Bruxelles",
+  "rubrique": "Particularité",
+  "source": "wikipedia:Manneken-Pis"
+ },
+ "p-chambord": {
+  "alt": "Un immense château blanc hérissé de tours et de cheminées, au bord de l'eau",
+  "credit": "Façade nord-ouest du château de Chambord · Benh Lieu Song · CC BY-SA 3.0 (Wikimedia Commons)",
+  "image": "photos/chambord.jpg",
+  "mot": "",
+  "question": "Château de Chambord. Qu'a de particulier son grand escalier central ?",
+  "type": "photo",
+  "vraie": "il est à double révolution : deux rampes enlacées, on monte et on descend sans se croiser.",
+  "legende": "Château de Chambord (Loir-et-Cher)",
+  "rubrique": "Escalier",
+  "source": "wikipedia:Château de Chambord"
+ },
+ "p-chiens": {
+  "alt": "Un portail de pierre au bord de la Seine, devant un bois",
+  "credit": "Entrée du cimetière d'Asnières · Wowo2008 · CC BY-SA 3.0 (Wikimedia Commons)",
+  "image": "photos/cimetiere-chiens-portail.jpg",
+  "mot": "",
+  "question": "Asnières-sur-Seine. Qu'abrite ce lieu depuis 1899 ?",
+  "type": "photo",
+  "vraie": "le premier cimetière pour animaux : chiens, chats et même des chevaux.",
+  "legende": "Portail sur la Seine, Asnières-sur-Seine",
+  "rubrique": "Usage",
+  "source": "wikipedia:Cimetière des Chiens"
+ },
+ "p-arc": {
+  "alt": "Le grand arc de pierre sculptée, sous un ciel bleu",
+  "credit": "Arc de triomphe de l'Étoile · Jiuguang Wang · CC BY-SA 2.0 (Wikimedia Commons)",
+  "image": "photos/arc-triomphe.jpg",
+  "mot": "",
+  "question": "Paris, 7 août 1919. Qu'est-il arrivé sous cet arc ?",
+  "type": "photo",
+  "vraie": "un aviateur est passé dessous, en avion.",
+  "legende": "Arc de triomphe de l'Étoile, Paris",
+  "rubrique": "Événement",
+  "source": "wikipedia:Arc de triomphe de l'Étoile"
+ },
+ "p-pontneuf": {
+  "alt": "Un tableau impressionniste : un pont de pierre animé de passants et de fiacres, devant des immeubles",
+  "credit": "Camille Pissarro, Le Pont-Neuf, 1902 · domaine public (Wikimedia Commons)",
+  "image": "photos/pont-neuf.jpg",
+  "mot": "",
+  "question": "Paris. Qu'a de particulier le Pont-Neuf, malgré son nom ?",
+  "type": "photo",
+  "vraie": "c'est le plus ancien pont de Paris encore debout.",
+  "legende": "Le Pont-Neuf, Paris (Camille Pissarro, 1902)",
+  "rubrique": "Particularité",
+  "source": "wikipedia:Pont Neuf"
+ },
+ "o-pomander": {
+  "alt": "Une main baguée tient par une chaînette une petite boule d'or ciselée et ajourée",
+  "credit": "Jacob Cornelisz van Oostsanen, portrait, 1518 (détail) · domaine public (Wikimedia Commons)",
+  "image": "photos/pomander.jpg",
+  "mot": "",
+  "question": "À quoi servait cette petite boule d'or ajourée, qu'on portait sur soi ?",
+  "type": "photo",
+  "vraie": "à porter sur soi des parfums, ambre gris ou musc, censés protéger des maladies.",
+  "legende": "Boule d'or ajourée, portée à la main (1518)",
+  "rubrique": "Usage",
+  "source": "wikipedia:Pomander"
+ },
+ "k-colacho": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Castrillo de Murcia, Espagne",
+  "timbre": "España",
+  "question": "Ici, chaque année, des hommes déguisés en diables ___.",
+  "vraie": "sautent par-dessus les bébés de l'année, couchés sur des matelas dans la rue",
+  "source": "wikipedia:Saute-Bébé"
+ },
+ "k-nakisumo": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Tokyo, Japon",
+  "timbre": "Nippon",
+  "question": "Ici, au temple, des lutteurs de sumo ___.",
+  "vraie": "font pleurer des bébés : le premier qui pleure a gagné",
+  "source": "wikipedia-en:Naki Sumo Crying Baby Festival"
+ },
+ "k-blackening": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Aberdeen, Écosse",
+  "timbre": "Scotland",
+  "question": "Ici, avant leur mariage, les futurs époux sont capturés par leurs amis, ___.",
+  "vraie": "couverts de nourriture et de tout ce qui colle, puis promenés dans les rues",
+  "source": "wikipedia-en:Blackening (Scottish wedding custom)"
+ },
+ "k-jolakottur": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Reykjavik, Islande",
+  "timbre": "Ísland",
+  "question": "Ici, on raconte aux enfants qu'à Noël, un chat géant ___.",
+  "vraie": "mange ceux qui n'ont pas reçu de vêtements neufs",
+  "source": "wikipedia:Jólakötturinn"
+ },
+ "k-kitkat": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Tokyo, Japon",
+  "timbre": "Nippon",
+  "question": "Ici, avant les examens, on offre aux étudiants ___.",
+  "vraie": "des barres Kit Kat, parce que leur nom sonne comme « tu vas gagner »",
+  "source": "wikipedia-en:Kit Kats in Japan"
+ },
+ "k-bokaflod": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Reykjavik, Islande",
+  "timbre": "Ísland",
+  "question": "Ici, la veille de Noël, on offre surtout ___.",
+  "vraie": "des livres : c'est le cadeau de Noël le plus offert du pays",
+  "source": "wikipedia-en:Jólabókaflóð"
+ },
+ "k-lopburi": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Lopburi, Thaïlande",
+  "timbre": "Siam",
+  "question": "Ici, chaque fin novembre, les habitants ___.",
+  "vraie": "offrent un immense festin aux singes de la ville",
+  "source": "wikipedia-en:Monkey Buffet Festival"
+ },
+ "k-rouketo": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Vrontados, Grèce",
+  "timbre": "Hellas",
+  "question": "Ici, à Pâques, les fidèles de deux églises rivales ___.",
+  "vraie": "se tirent des dizaines de milliers de fusées, en visant le clocher d'en face",
+  "source": "wikipedia-en:Rouketopolemos"
+ },
+ "k-donald": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Stockholm, Suède",
+  "timbre": "Sverige",
+  "question": "Ici, chaque veille de Noël depuis 1960, près de quatre habitants sur dix ___.",
+  "vraie": "regardent à la télévision la même émission de Donald Duck et ses amis",
+  "source": "wikipedia-en:From All of Us to All of You"
+ },
+ "k-fromage": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Brockworth, Angleterre",
+  "timbre": "England",
+  "question": "Ici, chaque printemps, des coureurs dévalent une colline très pentue ___.",
+  "vraie": "à la poursuite d'une meule de fromage",
+  "source": "wikipedia-en:Cooper's Hill Cheese-Rolling and Wake"
+ },
+ "k-uphellyaa": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Lerwick, Écosse",
+  "timbre": "Scotland",
+  "question": "Ici, fin janvier, un millier d'hommes costumés défilent avec des torches, puis ___.",
+  "vraie": "mettent le feu à une réplique de drakkar viking",
+  "source": "wikipedia-en:Up Helly Aa"
+ },
+ "k-treppe": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Brême, Allemagne",
+  "timbre": "Deutschland",
+  "question": "Ici, l'homme encore célibataire le jour de ses 30 ans ___.",
+  "vraie": "doit balayer les marches de la cathédrale",
+  "source": "wikipedia-de:Domtreppenfegen"
+ },
+ "c-trouillas": {
+  "mot": "",
+  "question": "Quel nom de commune des Pyrénées-Orientales existe réellement ?",
+  "type": "commune",
+  "vraie": "Trouillas",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cucuron": {
+  "mot": "",
+  "question": "Quel nom de commune du Vaucluse existe réellement ?",
+  "type": "commune",
+  "vraie": "Cucuron",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-coucouron": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Ardèche existe réellement ?",
+  "type": "commune",
+  "vraie": "Coucouron",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-tourtour": {
+  "mot": "",
+  "question": "Quel nom de commune du Var existe réellement ?",
+  "type": "commune",
+  "vraie": "Tourtour",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-sallespisse": {
+  "mot": "",
+  "question": "Quel nom de commune des Pyrénées-Atlantiques existe réellement ?",
+  "type": "commune",
+  "vraie": "Sallespisse",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-pleurs": {
+  "mot": "",
+  "question": "Quel nom de commune de la Marne existe réellement ?",
+  "type": "commune",
+  "vraie": "Pleurs",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-vinsobres": {
+  "mot": "",
+  "question": "Quel nom de commune de la Drôme existe réellement ?",
+  "type": "commune",
+  "vraie": "Vinsobres",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cocumont": {
+  "mot": "",
+  "question": "Quel nom de commune de Lot-et-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Cocumont",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bizou": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Orne existe réellement ?",
+  "type": "commune",
+  "vraie": "Bizou",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-vergongheon": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Loire existe réellement ?",
+  "type": "commune",
+  "vraie": "Vergongheon",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-boulot": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Saône existe réellement ?",
+  "type": "commune",
+  "vraie": "Boulot",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cornebarrieu": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Cornebarrieu",
+  "source": "geo.api.gouv.fr"
+ },
+ "quinaud": {
+  "mot": "quinaud",
+  "vraie": "Honteux, confus, penaud.",
+  "categorie": "adj.",
+  "source": "wiktionary:quinaud"
+ },
+ "escarbille": {
+  "mot": "escarbille",
+  "vraie": "Morceau de braise qui s'échappe d'une cheminée.",
+  "categorie": "n. f.",
+  "source": "wiktionary:escarbille"
+ },
+ "turlutaine": {
+  "mot": "turlutaine",
+  "vraie": "Propos frivole qu'on répète sans cesse.",
+  "categorie": "n. f.",
+  "source": "wiktionary:turlutaine"
+ },
+ "bouffarde": {
+  "mot": "bouffarde",
+  "vraie": "Grosse pipe à tuyau court.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:bouffarde"
+ },
+ "gnognote": {
+  "mot": "gnognote",
+  "vraie": "Chose de peu de valeur.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:gnognote"
+ },
+ "escogriffe": {
+  "mot": "escogriffe",
+  "vraie": "Homme de grande taille, mal bâti.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:escogriffe"
+ },
+ "rogaton": {
+  "mot": "rogaton",
+  "vraie": "Reste de nourriture.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:rogaton"
+ },
+ "pataques": {
+  "mot": "pataquès",
+  "vraie": "Liaison fautive, comme « il était-z-un roi ».",
+  "categorie": "n. m.",
+  "source": "wiktionary:pataquès"
+ },
+ "roupie": {
+  "mot": "roupie",
+  "vraie": "Goutte qui pend au bout du nez.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:roupie"
+ },
+ "pignocher": {
+  "mot": "pignocher",
+  "vraie": "Manger sans appétit, du bout des dents.",
+  "categorie": "v.",
+  "source": "wiktionary:pignocher"
+ },
+ "galetas": {
+  "mot": "galetas",
+  "vraie": "Logement misérable, sous les toits.",
+  "categorie": "n. m.",
+  "source": "wiktionary:galetas"
+ },
+ "graillon": {
+  "mot": "graillon",
+  "vraie": "Odeur de graisse brûlée.",
+  "categorie": "n. m.",
+  "source": "wiktionary:graillon"
+ },
+ "aboulie": {
+  "mot": "aboulie",
+  "vraie": "Absence de volonté, incapacité à se décider.",
+  "categorie": "n. f.",
+  "source": "wiktionary:aboulie"
+ },
+ "c-vatan": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Indre existe réellement ?",
+  "type": "commune",
+  "vraie": "Vatan",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-martignargues": {
+  "mot": "",
+  "question": "Quel nom de commune du Gard existe réellement ?",
+  "type": "commune",
+  "vraie": "Martignargues",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-chatuzange-le-goubet": {
+  "mot": "",
+  "question": "Quel nom de commune de la Drôme existe réellement ?",
+  "type": "commune",
+  "vraie": "Chatuzange-le-Goubet",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-glandage": {
+  "mot": "",
+  "question": "Quel nom de commune de la Drôme existe réellement ?",
+  "type": "commune",
+  "vraie": "Glandage",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-moncrabeau": {
+  "mot": "",
+  "question": "Quel nom de commune de Lot-et-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Moncrabeau",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cucq": {
+  "mot": "",
+  "question": "Quel nom de commune du Pas-de-Calais existe réellement ?",
+  "type": "commune",
+  "vraie": "Cucq",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bouc-bel-air": {
+  "mot": "",
+  "question": "Quel nom de commune des Bouches-du-Rhône existe réellement ?",
+  "type": "commune",
+  "vraie": "Bouc-Bel-Air",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-la-bourboule": {
+  "mot": "",
+  "question": "Quel nom de commune du Puy-de-Dôme existe réellement ?",
+  "type": "commune",
+  "vraie": "La Bourboule",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-suce-sur-erdre": {
+  "mot": "",
+  "question": "Quel nom de commune de la Loire-Atlantique existe réellement ?",
+  "type": "commune",
+  "vraie": "Sucé-sur-Erdre",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-lardy": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Essonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Lardy",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-gousse": {
+  "mot": "",
+  "question": "Quel nom de commune des Landes existe réellement ?",
+  "type": "commune",
+  "vraie": "Gousse",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-crach": {
+  "mot": "",
+  "question": "Quel nom de commune du Morbihan existe réellement ?",
+  "type": "commune",
+  "vraie": "Crach",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-vieux-boucau-les-bains": {
+  "mot": "",
+  "question": "Quel nom de commune des Landes existe réellement ?",
+  "type": "commune",
+  "vraie": "Vieux-Boucau-les-Bains",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-poupry": {
+  "mot": "",
+  "question": "Quel nom de commune d'Eure-et-Loir existe réellement ?",
+  "type": "commune",
+  "vraie": "Poupry",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-brulon": {
+  "mot": "",
+  "question": "Quel nom de commune de la Sarthe existe réellement ?",
+  "type": "commune",
+  "vraie": "Brûlon",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-lacave": {
+  "mot": "",
+  "question": "Quel nom de commune du Lot existe réellement ?",
+  "type": "commune",
+  "vraie": "Lacave",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-grosbliederstroff": {
+  "mot": "",
+  "question": "Quel nom de commune de la Moselle existe réellement ?",
+  "type": "commune",
+  "vraie": "Grosbliederstroff",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-gargilesse-dampierre": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Indre existe réellement ?",
+  "type": "commune",
+  "vraie": "Gargilesse-Dampierre",
+  "source": "geo.api.gouv.fr"
+ },
+ "barguigner": {
+  "mot": "barguigner",
+  "vraie": "Hésiter, avoir du mal à se décider.",
+  "categorie": "v.",
+  "source": "wiktionary:barguigner"
+ },
+ "ebaubi": {
+  "mot": "ébaubi",
+  "vraie": "Très étonné, stupéfait.",
+  "categorie": "adj.",
+  "source": "wiktionary:ébaubi"
+ },
+ "baguenauder": {
+  "mot": "baguenauder",
+  "vraie": "Flâner, s'amuser à des riens.",
+  "categorie": "v.",
+  "source": "wiktionary:baguenauder"
+ },
+ "godelureau": {
+  "mot": "godelureau",
+  "vraie": "Jeune homme qui fait le joli cœur auprès des femmes.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:godelureau"
+ },
+ "pignouf": {
+  "mot": "pignouf",
+  "vraie": "Homme grossier, mal élevé.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:pignouf"
+ },
+ "pouacre": {
+  "mot": "pouacre",
+  "vraie": "Sale, repoussant, malpropre.",
+  "categorie": "adj.",
+  "source": "wiktionary:pouacre"
+ },
+ "estaminet": {
+  "mot": "estaminet",
+  "vraie": "Petit café populaire, dans le Nord et en Belgique.",
+  "categorie": "n. m.",
+  "source": "wiktionary:estaminet"
+ },
+ "galimafree": {
+  "mot": "galimafrée",
+  "vraie": "Ragoût fait de restes, plat peu appétissant.",
+  "categorie": "n. f.",
+  "source": "wiktionary:galimafrée"
+ },
+ "vertugadin": {
+  "mot": "vertugadin",
+  "vraie": "Bourrelet qui faisait bouffer la jupe autour des hanches.",
+  "categorie": "n. m.",
+  "source": "wiktionary:vertugadin"
+ },
+ "sabouler": {
+  "mot": "sabouler",
+  "vraie": "Malmener, bousculer quelqu'un.",
+  "categorie": "v.",
+  "registre": "familier",
+  "source": "wiktionary:sabouler"
+ },
+ "foutriquet": {
+  "mot": "foutriquet",
+  "vraie": "Petit homme sans importance, sans valeur.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:foutriquet"
+ },
+ "matois": {
+  "mot": "matois",
+  "vraie": "Rusé, qui agit en finesse.",
+  "categorie": "adj.",
+  "source": "wiktionary:matois"
+ },
+ "faquin": {
+  "mot": "faquin",
+  "vraie": "Homme méprisable et impertinent.",
+  "categorie": "n. m.",
+  "source": "wiktionary:faquin"
+ },
+ "rapiat": {
+  "mot": "rapiat",
+  "vraie": "Avare, qui regarde à la dépense.",
+  "categorie": "adj.",
+  "registre": "familier",
+  "source": "wiktionary:rapiat"
+ },
+ "petuner": {
+  "mot": "pétuner",
+  "vraie": "Fumer du tabac, autrefois.",
+  "categorie": "v.",
+  "source": "wiktionary:pétuner"
+ },
+ "lanterner": {
+  "mot": "lanterner",
+  "vraie": "Perdre son temps, traîner en longueur.",
+  "categorie": "v.",
+  "source": "wiktionary:lanterner"
+ },
+ "brouet": {
+  "mot": "brouet",
+  "vraie": "Bouillon léger, soupe peu nourrissante.",
+  "categorie": "n. m.",
+  "source": "wiktionary:brouet"
+ },
+ "e-marrons": {
+  "mot": "tirer les marrons du feu",
+  "type": "expression",
+  "source": "wikipedia:Le Singe et le Chat",
+  "vraie": "D'une fable de La Fontaine : le chat se brûle les pattes à sortir les marrons que le singe mange."
+ },
+ "e-moutons": {
+  "mot": "revenons à nos moutons",
+  "type": "expression",
+  "source": "wiktionary:revenons à nos moutons",
+  "vraie": "De la Farce de maître Pathelin, où le juge ramène sans cesse un procès à des moutons volés."
+ },
+ "e-limoger": {
+  "mot": "être limogé",
+  "type": "expression",
+  "source": "wiktionary:limoger",
+  "vraie": "En 1914, Joffre éloigna à Limoges les généraux qu'il jugeait incapables."
+ },
+ "e-boycott": {
+  "mot": "boycotter",
+  "type": "expression",
+  "source": "wiktionary:boycotter",
+  "vraie": "De Charles Boycott, régisseur irlandais que tout le pays mit en quarantaine en 1880."
+ },
+ "e-gemonies": {
+  "mot": "vouer aux gémonies",
+  "type": "expression",
+  "source": "wiktionary:vouer aux gémonies",
+  "vraie": "À Rome, les corps des condamnés étaient exposés sur l'escalier des Gémonies."
+ },
+ "e-vau": {
+  "mot": "aller à vau-l'eau",
+  "type": "expression",
+  "source": "wiktionary:à vau-l’eau",
+  "vraie": "« À vau-l'eau », c'est « à val l'eau » : en suivant le courant, vers le bas."
+ },
+ "e-benedictin": {
+  "mot": "un travail de bénédictin",
+  "type": "expression",
+  "source": "wiktionary:travail de bénédictin",
+  "vraie": "Des moines bénédictins, célèbres pour leurs immenses travaux d'érudition patients."
+ },
+ "e-coupes": {
+  "mot": "faire des coupes sombres",
+  "type": "expression",
+  "source": "wiktionary:coupe sombre",
+  "vraie": "En forêt, une coupe sombre n'enlevait que peu d'arbres : le sous-bois restait sombre."
+ },
+ "e-cordonbleu": {
+  "mot": "un cordon-bleu",
+  "type": "expression",
+  "source": "wiktionary:cordon bleu",
+  "vraie": "Du ruban bleu des chevaliers de l'ordre du Saint-Esprit, la plus haute distinction."
+ },
+ "e-caudines": {
+  "mot": "passer sous les fourches caudines",
+  "type": "expression",
+  "source": "wikipedia:Bataille des Fourches Caudines",
+  "vraie": "Vaincus par les Samnites, des soldats romains durent passer sous un joug de lances."
+ },
+ "i-schnapsidee": {
+  "mot": "",
+  "question": "En allemand, « Schnapsidee » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:Schnapsidee",
+  "vraie": "Une idée farfelue, comme on en a après quelques verres."
+ },
+ "i-treppenwitz": {
+  "mot": "",
+  "question": "En allemand, « Treppenwitz » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:Treppenwitz",
+  "vraie": "La réplique parfaite, trouvée trop tard, une fois la porte franchie."
+ },
+ "i-kopfkino": {
+  "mot": "",
+  "question": "En allemand, « Kopfkino » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:Kopfkino",
+  "vraie": "Le film qu'on se fait dans la tête en imaginant une scène."
+ },
+ "i-ohrwurm": {
+  "mot": "",
+  "question": "En allemand, « Ohrwurm » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:Ohrwurm",
+  "vraie": "Un air de musique qui reste coincé dans la tête."
+ },
+ "i-feierabend": {
+  "mot": "",
+  "question": "En allemand, « Feierabend » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:Feierabend",
+  "vraie": "Le moment, en fin de journée, où le travail s'arrête."
+ },
+ "i-fremdschamen": {
+  "mot": "",
+  "question": "En allemand, « Fremdschämen » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:fremdschämen",
+  "vraie": "Avoir honte à la place de quelqu'un qui se ridiculise."
+ },
+ "i-estrenar": {
+  "mot": "",
+  "question": "En espagnol, « estrenar » veut dire…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:estrenar",
+  "vraie": "Porter ou utiliser quelque chose pour la première fois."
+ },
+ "i-uitwaaien": {
+  "mot": "",
+  "question": "En néerlandais, « uitwaaien » veut dire…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:uitwaaien",
+  "vraie": "Se promener dans le vent pour se vider la tête."
+ },
+ "i-menefreghista": {
+  "mot": "",
+  "question": "En italien, « menefreghista » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:menefreghista",
+  "vraie": "Une personne qui se moque de tout, que rien ne concerne."
+ },
+ "i-hiraeth": {
+  "mot": "",
+  "question": "En gallois, « hiraeth » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:hiraeth",
+  "vraie": "La nostalgie d'un foyer où l'on ne peut plus revenir."
+ },
+ "x-baeren": {
+  "mot": "",
+  "question": "En allemand, « attacher un ours à quelqu'un » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:einen Bären aufbinden",
+  "vraie": "Lui faire croire une histoire inventée."
+ },
+ "x-senf": {
+  "mot": "",
+  "question": "En allemand, « ajouter sa moutarde » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:seinen Senf dazugeben",
+  "vraie": "Donner son avis sans qu'on le demande."
+ },
+ "x-frutta": {
+  "mot": "",
+  "question": "En italien, « être aux fruits » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:alla frutta",
+  "vraie": "Être à bout de forces ou de ressources."
+ },
+ "x-pasta": {
+  "mot": "",
+  "question": "En italien, « avoir les mains dans la pâte » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:avere le mani in pasta",
+  "vraie": "Être mêlé à une affaire, y avoir de l'influence."
+ },
+ "x-pan": {
+  "mot": "",
+  "question": "En espagnol, « c'est du pain mangé » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:pan comido",
+  "vraie": "C'est très facile."
+ },
+ "x-pelo": {
+  "mot": "",
+  "question": "En espagnol, « prendre le cheveu à quelqu'un » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:tomar el pelo",
+  "vraie": "Se moquer de lui, le faire marcher."
+ },
+ "x-sapos": {
+  "mot": "",
+  "question": "En portugais, « avaler un crapaud » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:engolir sapo",
+  "vraie": "Endurer quelque chose de pénible sans broncher."
+ },
+ "x-mamahuhu": {
+  "mot": "",
+  "question": "En chinois, « cheval cheval tigre tigre » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:馬馬虎虎",
+  "vraie": "Comme ci, comme ça ; à peu près."
+ },
+ "x-beans": {
+  "mot": "",
+  "question": "En anglais, « renverser les haricots » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:spill the beans",
+  "vraie": "Révéler un secret."
+ },
+ "dinandier": {
+  "mot": "dinandier",
+  "type": "metier",
+  "source": "wiktionary:dinandier",
+  "vraie": "Artisan qui fabriquait des objets en cuivre jaune."
+ },
+ "gabelou": {
+  "mot": "gabelou",
+  "type": "metier",
+  "source": "wiktionary:gabelou",
+  "vraie": "Commis chargé de percevoir l'impôt sur le sel."
+ },
+ "passementier": {
+  "mot": "passementier",
+  "type": "metier",
+  "source": "wiktionary:passementier",
+  "vraie": "Artisan qui fabriquait galons, franges et cordons."
+ },
+ "ciergier": {
+  "mot": "ciergier",
+  "type": "metier",
+  "source": "wiktionary:ciergier",
+  "vraie": "Fabricant ou marchand de cierges."
+ },
+ "boisselier": {
+  "mot": "boisselier",
+  "type": "metier",
+  "source": "wiktionary:boisselier",
+  "vraie": "Artisan qui fabriquait boisseaux et ustensiles de bois."
+ },
+ "chaufournier": {
+  "mot": "chaufournier",
+  "type": "metier",
+  "source": "wiktionary:chaufournier",
+  "vraie": "Ouvrier qui cuisait la pierre calcaire dans un four à chaux."
+ },
+ "saulnier": {
+  "mot": "saulnier",
+  "type": "metier",
+  "source": "wiktionary:saulnier",
+  "vraie": "Ouvrier qui récoltait ou vendait le sel."
+ },
+ "goemonier": {
+  "mot": "goémonier",
+  "type": "metier",
+  "source": "wiktionary:goémonier",
+  "vraie": "Récolteur d'algues sur les côtes bretonnes."
+ },
+ "chamoiseur": {
+  "mot": "chamoiseur",
+  "type": "metier",
+  "source": "wiktionary:chamoiseur",
+  "vraie": "Ouvrier qui préparait les peaux à la façon du chamois."
+ },
+ "toucheur": {
+  "mot": "toucheur",
+  "type": "metier",
+  "source": "wiktionary:toucheur",
+  "vraie": "Conducteur de bestiaux, qui menait les bêtes aux foires."
+ },
+ "nautonier": {
+  "mot": "nautonier",
+  "type": "metier",
+  "source": "wiktionary:nautonier",
+  "vraie": "Celui qui conduisait une barque ou un navire."
+ },
+ "eventailliste": {
+  "mot": "éventailliste",
+  "type": "metier",
+  "source": "wiktionary:éventailliste",
+  "vraie": "Artisan qui fabriquait ou peignait des éventails."
+ },
+ "ecailler": {
+  "mot": "écailler",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:écailler",
+  "vraie": "Huîtres ouvertes devant vous, d'un seul coup de couteau !"
+ },
+ "falotier": {
+  "mot": "falotier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:falotier",
+  "vraie": "Rues obscures ? Je porte et je place vos lanternes chaque soir !"
+ },
+ "taupier": {
+  "mot": "taupier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:taupier",
+  "vraie": "Taupes capturées dans vos prés et vos jardins, payé à la pièce !"
+ },
+ "merlan": {
+  "mot": "merlan",
+  "type": "metier",
+  "ouvrage": "carte",
+  "registre": "familier",
+  "source": "wiktionary:merlan",
+  "vraie": "Perruques poudrées et barbes rasées de près, à domicile !"
+ },
+ "poissarde": {
+  "mot": "poissarde",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:poissarde",
+  "vraie": "Harengs et maquereaux tout frais des Halles, à la criée !"
+ },
+ "claqueur": {
+  "mot": "claqueur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:claqueur",
+  "vraie": "Votre pièce mérite un triomphe : j'applaudis pour vous, chaque soir !"
+ },
+ "pleureuse": {
+  "mot": "pleureuse",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:pleureuse",
+  "vraie": "Funérailles dignes : larmes et sanglots fournis au cortège !"
+ },
+ "reveilleur": {
+  "mot": "réveilleur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wikipedia-en:Knocker-up",
+  "vraie": "Plus de retard à l'usine : je frappe à votre fenêtre avant l'aube !"
+ },
+ "moucheur": {
+  "mot": "moucheur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:moucheur",
+  "vraie": "Chandelles de la scène mouchées pendant la pièce, sans fumée !"
+ },
+ "ratier": {
+  "mot": "ratier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:ratier",
+  "vraie": "Greniers infestés ? Mes chiens et moi chassons vos rats !"
+ },
+ "souffleur": {
+  "mot": "souffleur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:souffleur",
+  "vraie": "Trou de mémoire sur scène ? Je vous chuchote votre texte !"
+ },
+ "lampiste": {
+  "mot": "lampiste",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:lampiste",
+  "vraie": "Lampes de la gare nettoyées, remplies et allumées chaque soir !"
+ },
+ "rebouteux": {
+  "mot": "rebouteux",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:rebouteux",
+  "vraie": "Entorses et os démis remis en place, sans passer par le médecin !"
+ },
+ "a-chaines": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Chained library",
+  "question": "Dans les bibliothèques du Moyen Âge, pour éviter les vols, les livres étaient ___.",
+  "vraie": "enchaînés aux pupitres"
+ },
+ "a-mike": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Mike the Headless Chicken",
+  "question": "En 1945, au Colorado, le poulet Mike a vécu dix-huit mois ___.",
+  "vraie": "sans tête"
+ },
+ "a-tulipe": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Tulipomanie",
+  "question": "En 1637, aux Pays-Bas, un seul bulbe de tulipe rare pouvait valoir ___.",
+  "vraie": "une demeure bourgeoise"
+ },
+ "a-byron": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Lord Byron",
+  "question": "Étudiant à Cambridge, où les chiens étaient interdits, Lord Byron garda dans sa chambre ___.",
+  "vraie": "un ours apprivoisé"
+ },
+ "a-coolidge": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Rebecca (raccoon)",
+  "question": "Le raton laveur offert au président Coolidge pour son repas de Thanksgiving ___.",
+  "vraie": "devint son animal de compagnie"
+ },
+ "a-liberte": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Statue de la Liberté",
+  "question": "Avant la statue de la Liberté, Bartholdi avait imaginé une statue géante semblable pour ___.",
+  "vraie": "l'entrée du canal de Suez"
+ },
+ "a-nobel": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Alfred Nobel",
+  "question": "Alfred Nobel aurait décidé de créer ses prix après avoir lu ___.",
+  "vraie": "sa propre nécrologie, publiée par erreur"
+ },
+ "a-ok": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:OK",
+  "question": "Le sigle « OK » viendrait d'une blague de journalistes de Boston, qui écrivaient ___.",
+  "vraie": "« oll korrect » pour « all correct »"
+ },
+ "a-bug": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Software bug",
+  "question": "En 1947, le premier « bug » informatique consigné dans un cahier de bord était ___.",
+  "vraie": "une mite coincée dans un relais"
+ },
+ "a-sandwich": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Sandwich",
+  "question": "Le sandwich doit son nom à un comte anglais qui ___.",
+  "vraie": "ne voulait pas quitter sa table de jeu"
+ },
+ "a-corbeaux": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Tour de Londres",
+  "question": "Selon la légende, si les corbeaux quittent la tour de Londres, ___.",
+  "vraie": "le royaume tombera"
+ },
+ "a-crayon": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Crayon à papier",
+  "question": "La « mine de plomb » d'un crayon à papier contient ___.",
+  "vraie": "du graphite, sans plomb"
+ },
+ "a-paresseux": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Sloth",
+  "question": "Le paresseux ne descend de son arbre qu'environ une fois par semaine, pour ___.",
+  "vraie": "faire ses besoins au pied du tronc"
+ },
+ "a-axolotl": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Axolotl",
+  "question": "L'axolotl, une salamandre du Mexique, est capable de ___.",
+  "vraie": "faire repousser ses pattes coupées"
+ },
+ "a-narval": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Narval",
+  "question": "La longue corne torsadée du narval est en réalité ___.",
+  "vraie": "une dent qui lui traverse la lèvre"
+ },
+ "a-caligula": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Incitatus",
+  "question": "Selon Suétone, l'empereur Caligula aurait voulu nommer consul ___.",
+  "vraie": "son cheval Incitatus"
+ },
+ "a-lune": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Great Moon Hoax",
+  "question": "En 1835, un journal de New York annonça qu'un astronome avait vu sur la Lune ___.",
+  "vraie": "des hommes à ailes de chauve-souris"
+ },
+ "a-hans": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Hans le Malin",
+  "question": "Vers 1904, le cheval Hans le Malin semblait savoir compter ; en fait, il ___.",
+  "vraie": "lisait les réactions de ceux qui le regardaient"
+ },
+ "a-spaghetti": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Spaghetti-tree hoax",
+  "question": "Le 1er avril 1957, la BBC montra des paysans suisses en train de récolter ___.",
+  "vraie": "des spaghettis sur les arbres"
+ },
+ "a-mozart": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Mozart's starling",
+  "question": "À la mort de son étourneau apprivoisé, Mozart ___.",
+  "vraie": "lui organisa des funérailles et écrivit un poème"
+ },
+ "a-okunoshima": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Ōkunoshima",
+  "question": "Sur l'île japonaise d'Ōkunoshima vivent aujourd'hui ___.",
+  "vraie": "des centaines de lapins en liberté"
+ },
+ "a-bigben": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Big Ben",
+  "question": "À Londres, « Big Ben » est à l'origine le surnom ___.",
+  "vraie": "de la grosse cloche, pas de la tour"
+ },
+ "a-sourcils": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:La Joconde",
+  "question": "Quand on la regarde de près, la Joconde n'a pas ___.",
+  "vraie": "de sourcils"
+ },
+ "a-pringles": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Fredric Baur",
+  "question": "À sa mort, en 2008, l'inventeur de la boîte des chips Pringles a été enterré ___.",
+  "vraie": "en partie dans une boîte de Pringles"
+ },
+ "a-tomate": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Tomate",
+  "question": "Arrivée d'Amérique au XVIe siècle, la tomate fut d'abord cultivée en Europe ___.",
+  "vraie": "comme plante d'ornement"
+ },
+ "k-oranges": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Ivrée, Italie",
+  "timbre": "Italia",
+  "source": "wikipedia-en:Battle of the Oranges",
+  "question": "Ici, chaque année au carnaval, les habitants ___.",
+  "vraie": "se livrent une bataille à coups d'oranges"
+ },
+ "k-epouse": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Sonkajärvi, Finlande",
+  "timbre": "Suomi",
+  "source": "wikipedia-en:Wife-carrying",
+  "question": "Ici, chaque été, des hommes font une course d'obstacles ___.",
+  "vraie": "en portant leur femme sur le dos"
+ },
+ "k-tourbiere": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Llanwrtyd Wells, pays de Galles",
+  "timbre": "Cymru",
+  "source": "wikipedia-en:Bog snorkelling",
+  "question": "Ici, chaque été, des concurrents ___.",
+  "vraie": "nagent au tuba dans une tranchée de tourbière"
+ },
+ "k-krampus": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Salzbourg, Autriche",
+  "timbre": "Österreich",
+  "source": "wikipedia:Krampus",
+  "question": "Ici, début décembre, aux côtés de saint Nicolas, ___.",
+  "vraie": "un démon cornu poursuit les enfants pas sages"
+ },
+ "k-befana": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Rome, Italie",
+  "timbre": "Italia",
+  "source": "wikipedia:Befana",
+  "question": "Ici, le 6 janvier, les cadeaux des enfants sont apportés par ___.",
+  "vraie": "une vieille sorcière sur son balai"
+ },
+ "k-caganer": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Barcelone, Catalogne",
+  "timbre": "España",
+  "source": "wikipedia:Caganer",
+  "question": "Ici, dans la crèche de Noël, on cache toujours ___.",
+  "vraie": "un petit paysan accroupi qui fait ses besoins"
+ },
+ "k-tio": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Gérone, Catalogne",
+  "timbre": "España",
+  "source": "wikipedia:Tió de Nadal",
+  "question": "Ici, à Noël, les enfants obtiennent leurs cadeaux ___.",
+  "vraie": "en frappant une bûche à coups de bâton"
+ },
+ "k-polterabend": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Hambourg, Allemagne",
+  "timbre": "Deutschland",
+  "source": "wikipedia:Polterabend",
+  "question": "Ici, la veille d'un mariage, les invités ___.",
+  "vraie": "cassent de la porcelaine devant la maison"
+ },
+ "k-firstfoot": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Édimbourg, Écosse",
+  "timbre": "Scotland",
+  "source": "wikipedia-en:First-foot",
+  "question": "Ici, pour porter chance, le premier visiteur de l'année doit apporter ___.",
+  "vraie": "un morceau de charbon"
+ },
+ "k-raisins": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Madrid, Espagne",
+  "timbre": "España",
+  "source": "wikipedia-en:Twelve Grapes",
+  "question": "Ici, au Nouvel An, il faut ___ pour avoir de la chance.",
+  "vraie": "avaler un grain de raisin à chaque coup de minuit"
+ },
+ "k-kfc": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Tokyo, Japon",
+  "timbre": "Nippon",
+  "source": "wikipedia-en:Christmas in Japan",
+  "question": "Ici, le soir de Noël, des millions de familles ___.",
+  "vraie": "mangent du poulet frit commandé à l'avance"
+ },
+ "k-schultute": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Leipzig, Allemagne",
+  "timbre": "Deutschland",
+  "source": "wikipedia-en:Schultüte",
+  "question": "Ici, le premier jour d'école, chaque enfant reçoit ___.",
+  "vraie": "un grand cornet de carton rempli de bonbons"
+ },
+ "k-marilwyd": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Llangynwyd, pays de Galles",
+  "timbre": "Cymru",
+  "source": "wikipedia:Mari Lwyd",
+  "question": "Ici, à Noël, on promène de porte en porte ___.",
+  "vraie": "un crâne de cheval drapé d'un drap blanc"
+ },
+ "k-boogg": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Zurich, Suisse",
+  "timbre": "Helvetia",
+  "source": "wikipedia:Sechseläuten",
+  "question": "Ici, au printemps, on prédit l'été ___.",
+  "vraie": "en brûlant un bonhomme de neige bourré de pétards"
+ },
+ "k-crepes": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Olney, Angleterre",
+  "timbre": "England",
+  "source": "wikipedia-en:Pancake race",
+  "question": "Ici, le jour de Mardi gras, les femmes du village ___.",
+  "vraie": "courent en faisant sauter une crêpe dans une poêle"
+ },
+ "k-radis": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Oaxaca, Mexique",
+  "timbre": "México",
+  "source": "wikipedia-en:Night of the Radishes",
+  "question": "Ici, le 23 décembre, un grand concours récompense ___.",
+  "vraie": "les plus belles scènes sculptées dans des radis"
+ },
+ "k-songkran": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Chiang Mai, Thaïlande",
+  "timbre": "Thailand",
+  "source": "wikipedia:Songkran",
+  "question": "Ici, pour le Nouvel An d'avril, toute la ville ___.",
+  "vraie": "s'asperge d'eau dans la rue"
+ },
+ "k-tomatina": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Buñol, Espagne",
+  "timbre": "España",
+  "source": "wikipedia:Tomatina",
+  "question": "Ici, chaque dernier mercredi d'août, des milliers de gens ___.",
+  "vraie": "se lancent des tonnes de tomates mûres"
+ },
+ "c-petosse": {
+  "mot": "",
+  "question": "Quel nom de commune de la Vendée existe réellement ?",
+  "type": "commune",
+  "vraie": "Petosse",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-laboule": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Ardèche existe réellement ?",
+  "type": "commune",
+  "vraie": "Laboule",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-mamirolle": {
+  "mot": "",
+  "question": "Quel nom de commune du Doubs existe réellement ?",
+  "type": "commune",
+  "vraie": "Mamirolle",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-quarante": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Hérault existe réellement ?",
+  "type": "commune",
+  "vraie": "Quarante",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-les-cent-acres": {
+  "mot": "",
+  "question": "Quel nom de commune de la Seine-Maritime existe réellement ?",
+  "type": "commune",
+  "vraie": "Les Cent-Acres",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-deux-chaises": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Allier existe réellement ?",
+  "type": "commune",
+  "vraie": "Deux-Chaises",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cinq-mars-la-pile": {
+  "mot": "",
+  "question": "Quel nom de commune d'Indre-et-Loire existe réellement ?",
+  "type": "commune",
+  "vraie": "Cinq-Mars-la-Pile",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-trois-puits": {
+  "mot": "",
+  "question": "Quel nom de commune de la Marne existe réellement ?",
+  "type": "commune",
+  "vraie": "Trois-Puits",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-septfonds": {
+  "mot": "",
+  "question": "Quel nom de commune de Tarn-et-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Septfonds",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bouzy": {
+  "mot": "",
+  "question": "Quel nom de commune de la Marne existe réellement ?",
+  "type": "commune",
+  "vraie": "Bouzy",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-saint-pompon": {
+  "mot": "",
+  "question": "Quel nom de commune de la Dordogne existe réellement ?",
+  "type": "commune",
+  "vraie": "Saint-Pompon",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-champignol-lez-mondeville": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Aube existe réellement ?",
+  "type": "commune",
+  "vraie": "Champignol-lez-Mondeville",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-silly-tillard": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Oise existe réellement ?",
+  "type": "commune",
+  "vraie": "Silly-Tillard",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-lapoutroie": {
+  "mot": "",
+  "question": "Quel nom de commune du Haut-Rhin existe réellement ?",
+  "type": "commune",
+  "vraie": "Lapoutroie",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-zuydcoote": {
+  "mot": "",
+  "question": "Quel nom de commune du Nord existe réellement ?",
+  "type": "commune",
+  "vraie": "Zuydcoote",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-boeschepe": {
+  "mot": "",
+  "question": "Quel nom de commune du Nord existe réellement ?",
+  "type": "commune",
+  "vraie": "Boeschepe",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-oye-plage": {
+  "mot": "",
+  "question": "Quel nom de commune du Pas-de-Calais existe réellement ?",
+  "type": "commune",
+  "vraie": "Oye-Plage",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cuisy": {
+  "mot": "",
+  "question": "Quel nom de commune de Seine-et-Marne existe réellement ?",
+  "type": "commune",
+  "vraie": "Cuisy",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-sauve": {
+  "mot": "",
+  "question": "Quel nom de commune du Gard existe réellement ?",
+  "type": "commune",
+  "vraie": "Sauve",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-seix": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Ariège existe réellement ?",
+  "type": "commune",
+  "vraie": "Seix",
+  "source": "geo.api.gouv.fr"
+ },
+ "coquebin": {
+  "mot": "coquebin",
+  "vraie": "Jeune homme niais, sans expérience.",
+  "categorie": "n. m.",
+  "source": "wiktionary:coquebin"
+ },
+ "galapiat": {
+  "mot": "galapiat",
+  "vraie": "Vaurien, homme sans valeur.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:galapiat"
+ },
+ "mamamouchi": {
+  "mot": "mamamouchi",
+  "vraie": "Dignitaire de pacotille, qui se donne de grands airs.",
+  "categorie": "n. m.",
+  "source": "wiktionary:mamamouchi"
+ },
+ "mirliflore": {
+  "mot": "mirliflore",
+  "vraie": "Jeune élégant, fat et prétentieux.",
+  "categorie": "n. m.",
+  "source": "wiktionary:mirliflore"
+ },
+ "rodomont": {
+  "mot": "rodomont",
+  "vraie": "Fanfaron, vantard qui fait le brave.",
+  "categorie": "n. m.",
+  "source": "wiktionary:rodomont"
+ },
+ "fesse-mathieu": {
+  "mot": "fesse-mathieu",
+  "vraie": "Usurier, avare qui prête à gros intérêts.",
+  "categorie": "n. m.",
+  "source": "wiktionary:fesse-mathieu"
+ },
+ "pince-maille": {
+  "mot": "pince-maille",
+  "vraie": "Avare, qui regarde au moindre sou.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:pince-maille"
+ },
+ "tranche-montagne": {
+  "mot": "tranche-montagne",
+  "vraie": "Fanfaron qui se vante d'exploits imaginaires.",
+  "categorie": "n. m.",
+  "source": "wiktionary:tranche-montagne"
+ },
+ "vide-gousset": {
+  "mot": "vide-gousset",
+  "vraie": "Voleur qui fait les poches.",
+  "categorie": "n. m.",
+  "source": "wiktionary:vide-gousset"
+ },
+ "tire-laine": {
+  "mot": "tire-laine",
+  "vraie": "Voleur qui détroussait les passants la nuit.",
+  "categorie": "n. m.",
+  "source": "wiktionary:tire-laine"
+ },
+ "boit-sans-soif": {
+  "mot": "boit-sans-soif",
+  "vraie": "Ivrogne, qui boit sans arrêt.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:boit-sans-soif"
+ },
+ "ostrogoth": {
+  "mot": "ostrogoth",
+  "vraie": "Homme grossier, qui ignore les usages.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:ostrogoth"
+ },
+ "frichti": {
+  "mot": "frichti",
+  "vraie": "Repas préparé simplement, petit plat.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:frichti"
+ },
+ "bectance": {
+  "mot": "bectance",
+  "vraie": "Nourriture, ce qu'on mange.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:bectance"
+ },
+ "bibine": {
+  "mot": "bibine",
+  "vraie": "Boisson de mauvaise qualité, surtout la bière.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:bibine"
+ },
+ "picrate": {
+  "mot": "picrate",
+  "vraie": "Vin de mauvaise qualité.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:picrate"
+ },
+ "trublion": {
+  "mot": "trublion",
+  "vraie": "Personne qui sème le désordre, agitateur.",
+  "categorie": "n. m.",
+  "source": "wiktionary:trublion"
+ },
+ "bejaune": {
+  "mot": "béjaune",
+  "vraie": "Jeune homme sot et sans expérience.",
+  "categorie": "n. m.",
+  "source": "wiktionary:béjaune"
+ },
+ "rata": {
+  "mot": "rata",
+  "vraie": "Ragoût grossier, servi à la caserne.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:rata"
+ },
+ "i-kuidaore": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En japonais, « kuidaore » désigne…",
+  "source": "wiktionary-en:食い倒れ",
+  "vraie": "Le fait de se ruiner à force de bien manger."
+ },
+ "i-sitzfleisch": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En allemand, « Sitzfleisch » désigne…",
+  "source": "wiktionary-en:Sitzfleisch",
+  "vraie": "La patience de rester assis longtemps sur un travail."
+ },
+ "i-fingerspitzengefuhl": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En allemand, « Fingerspitzengefühl » désigne…",
+  "source": "wiktionary-en:Fingerspitzengefühl",
+  "vraie": "Le doigté, le sens instinctif de ce qu'il faut faire."
+ },
+ "i-warmduscher": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En allemand, « Warmduscher » désigne…",
+  "source": "wiktionary-en:Warmduscher",
+  "vraie": "Une mauviette, quelqu'un qui fuit le moindre inconfort."
+ },
+ "i-fika": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En suédois, « fika » désigne…",
+  "source": "wiktionary-en:fika",
+  "vraie": "Une pause café avec une pâtisserie, entre amis ou collègues."
+ },
+ "i-gluggavedur": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En islandais, « gluggaveður » désigne…",
+  "source": "wiktionary-en:gluggaveður",
+  "vraie": "Un temps beau à regarder par la fenêtre, mais glacial dehors."
+ },
+ "i-friolero": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En espagnol, « friolero » désigne…",
+  "source": "wiktionary-en:friolero",
+  "vraie": "Une personne particulièrement sensible au froid."
+ },
+ "i-desenrascanco": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En portugais, « desenrascanço » désigne…",
+  "source": "wiktionary-en:desenrascanço",
+  "vraie": "L'art de se tirer d'affaire au dernier moment avec trois fois rien."
+ },
+ "i-nekojita": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En japonais, « nekojita » désigne…",
+  "source": "wiktionary-en:猫舌",
+  "vraie": "Le fait de ne pas supporter les boissons ou plats trop chauds."
+ },
+ "i-prozvonit": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En tchèque, « prozvonit » veut dire…",
+  "source": "wiktionary-en:prozvonit",
+  "vraie": "Appeler et raccrocher aussitôt, pour se faire rappeler."
+ },
+ "i-cwtch": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En gallois, « cwtch » désigne…",
+  "source": "wiktionary-en:cwtch",
+  "vraie": "Un câlin réconfortant, ou un petit coin douillet."
+ },
+ "i-kabelsalat": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En allemand, « Kabelsalat » désigne…",
+  "source": "wiktionary-en:Kabelsalat",
+  "vraie": "Un enchevêtrement de fils électriques emmêlés."
+ },
+ "x-hals": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En allemand, « cou et jambe cassés ! » se dit pour…",
+  "source": "wiktionary-en:Hals- und Beinbruch",
+  "vraie": "Souhaiter bonne chance à quelqu'un."
+ },
+ "x-daumen": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En allemand, « presser les pouces à quelqu'un » veut dire…",
+  "source": "wiktionary-en:Daumen drücken",
+  "vraie": "Lui souhaiter de réussir, croiser les doigts pour lui."
+ },
+ "x-holzweg": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En allemand, « être sur le chemin de bois » veut dire…",
+  "source": "wiktionary-en:auf dem Holzweg sein",
+  "vraie": "Se tromper complètement."
+ },
+ "x-coda": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En italien, « avoir la queue de paille » veut dire…",
+  "source": "wiktionary-en:coda di paglia",
+  "vraie": "Se sentir coupable et se trahir en se défendant trop vite."
+ },
+ "x-cabra": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En espagnol, « être comme une chèvre » veut dire…",
+  "source": "wiktionary-en:como una cabra",
+  "vraie": "Être complètement fou."
+ },
+ "x-calabazas": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En espagnol, « donner des citrouilles à quelqu'un » veut dire…",
+  "source": "wiktionary-en:dar calabazas",
+  "vraie": "Repousser ses avances, ou le recaler à un examen."
+ },
+ "x-una": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En espagnol, « être ongle et chair » veut dire…",
+  "source": "wiktionary-en:ser uña y carne",
+  "vraie": "Être inséparables, amis très proches."
+ },
+ "x-chip": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En anglais, « avoir un copeau sur l'épaule » veut dire…",
+  "source": "wiktionary-en:chip on one's shoulder",
+  "vraie": "Garder une rancune et se vexer d'un rien."
+ },
+ "x-weather": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En anglais, « être sous le temps » veut dire…",
+  "source": "wiktionary-en:under the weather",
+  "vraie": "Être un peu malade, patraque."
+ },
+ "x-elephant": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En anglais, « un éléphant blanc » désigne…",
+  "source": "wiktionary-en:white elephant",
+  "vraie": "Un bien coûteux et encombrant dont on ne sait que faire."
+ },
+ "x-cheval": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En japonais, « une prière à l'oreille d'un cheval » veut dire…",
+  "source": "wiktionary-en:馬の耳に念仏",
+  "vraie": "Des conseils donnés en pure perte."
+ },
+ "x-vache": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En chinois, « jouer du luth pour une vache » veut dire…",
+  "source": "wiktionary-en:對牛彈琴",
+  "vraie": "Parler à quelqu'un qui ne peut pas comprendre."
+ },
+ "x-gamba": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En italien, « être en jambe » veut dire…",
+  "source": "wiktionary-en:in gamba",
+  "vraie": "Être doué, capable, débrouillard."
+ },
+ "lormier": {
+  "mot": "lormier",
+  "type": "metier",
+  "source": "wiktionary:lormier",
+  "vraie": "Artisan qui fabriquait mors, éperons et boucles de harnais."
+ },
+ "fourbisseur": {
+  "mot": "fourbisseur",
+  "type": "metier",
+  "source": "wiktionary:fourbisseur",
+  "vraie": "Artisan qui polissait et montait les épées."
+ },
+ "heaumier": {
+  "mot": "heaumier",
+  "type": "metier",
+  "source": "wiktionary:heaumier",
+  "vraie": "Artisan qui forgeait les casques des chevaliers."
+ },
+ "taillandier": {
+  "mot": "taillandier",
+  "type": "metier",
+  "source": "wiktionary:taillandier",
+  "vraie": "Artisan qui forgeait des outils tranchants."
+ },
+ "chasublier": {
+  "mot": "chasublier",
+  "type": "metier",
+  "source": "wiktionary:chasublier",
+  "vraie": "Artisan qui confectionnait les vêtements des prêtres."
+ },
+ "gainier": {
+  "mot": "gainier",
+  "type": "metier",
+  "source": "wiktionary:gainier",
+  "vraie": "Artisan qui fabriquait des étuis et des fourreaux."
+ },
+ "cirier": {
+  "mot": "cirier",
+  "type": "metier",
+  "source": "wiktionary:cirier",
+  "vraie": "Artisan qui travaillait la cire et fabriquait les bougies."
+ },
+ "fustier": {
+  "mot": "fustier",
+  "type": "metier",
+  "source": "wiktionary:fustier",
+  "vraie": "Charpentier, artisan qui travaillait le bois."
+ },
+ "trefileur": {
+  "mot": "tréfileur",
+  "type": "metier",
+  "source": "wiktionary:tréfileur",
+  "vraie": "Ouvrier qui étirait le métal pour en faire du fil."
+ },
+ "corroyeur": {
+  "mot": "corroyeur",
+  "type": "metier",
+  "source": "wiktionary:corroyeur",
+  "vraie": "Ouvrier qui apprêtait le cuir après le tannage."
+ },
+ "foulon": {
+  "mot": "foulon",
+  "type": "metier",
+  "source": "wiktionary:foulon",
+  "vraie": "Ouvrier qui foulait les draps pour les resserrer."
+ },
+ "pelletier": {
+  "mot": "pelletier",
+  "type": "metier",
+  "source": "wiktionary:pelletier",
+  "vraie": "Artisan qui préparait et vendait les fourrures."
+ },
+ "decrotteur": {
+  "mot": "décrotteur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:décrotteur",
+  "vraie": "Souliers boueux ? Brossés et cirés sur le trottoir, en un clin d'œil !"
+ },
+ "etameur": {
+  "mot": "étameur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:étameur",
+  "vraie": "Casseroles et chaudrons usés ? Je les recouvre d'étain, comme neufs !"
+ },
+ "matelassier": {
+  "mot": "matelassier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:matelassier",
+  "vraie": "Vos matelas défaits, cardés et recousus dans votre cour !"
+ },
+ "savetier": {
+  "mot": "savetier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:savetier",
+  "vraie": "Vieux souliers ressemelés et rapiécés, pour quelques sous !"
+ },
+ "boueur": {
+  "mot": "boueur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:boueur",
+  "vraie": "Rues sales ? Je ramasse les boues et les ordures chaque matin !"
+ },
+ "gadouard": {
+  "mot": "gadouard",
+  "type": "metier",
+  "ouvrage": "carte",
+  "registre": "familier",
+  "source": "wiktionary:gadouard",
+  "vraie": "Fosses d'aisance vidées de nuit, sans gêner le voisinage !"
+ },
+ "gagne-denier": {
+  "mot": "gagne-denier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:gagne-denier",
+  "vraie": "Commissions et courses en ville, payées à la tâche, à votre service !"
+ },
+ "limonadier": {
+  "mot": "limonadier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:limonadier",
+  "vraie": "Café, liqueurs et billard : entrez donc, la salle est chauffée !"
+ },
+ "etuviste": {
+  "mot": "étuviste",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:étuviste",
+  "vraie": "Bains chauds et étuves : décrassage complet, barbe en sus !"
+ },
+ "gargotier": {
+  "mot": "gargotier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:gargotier",
+  "vraie": "Soupe, ragoût et pain pour trois sous, servis à toute heure !"
+ },
+ "chaussetier": {
+  "mot": "chaussetier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:chaussetier",
+  "vraie": "Bas et chausses de laine taillés à vos mesures !"
+ },
+ "vielleux": {
+  "mot": "vielleux",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:vielleux",
+  "vraie": "Bourrées et chansons à la vielle, pour vos noces et vos fêtes !"
+ },
+ "oiselier": {
+  "mot": "oiselier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:oiselier",
+  "vraie": "Serins, pinsons et rossignols en cage, chanteurs garantis !"
+ },
+ "a-stubby": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Sergeant Stubby",
+  "question": "Pendant la Première Guerre mondiale, Stubby, un chien errant recueilli par des soldats américains, a fini ___.",
+  "vraie": "sergent de l'armée"
+ },
+ "a-tour1904": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:1904 Tour de France",
+  "question": "Au Tour de France 1904, plusieurs coureurs ont été disqualifiés pour avoir ___.",
+  "vraie": "pris le train pendant une étape"
+ },
+ "a-lorz": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Fred Lorz",
+  "question": "Au marathon olympique de 1904, le premier arrivé, Fred Lorz, avait ___.",
+  "vraie": "fait une partie du trajet en voiture"
+ },
+ "a-kaldi": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Kaldi",
+  "question": "Selon la légende, le café fut découvert par un berger d'Éthiopie qui remarqua ___.",
+  "vraie": "ses chèvres excitées par des baies rouges"
+ },
+ "a-cherami": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Cher Ami",
+  "question": "En 1918, Cher Ami, qui sauva près de deux cents soldats américains encerclés, était ___.",
+  "vraie": "un pigeon voyageur"
+ },
+ "a-peugeot": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Peugeot",
+  "question": "Avant les automobiles, la marque Peugeot était connue pour ___.",
+  "vraie": "ses moulins à poivre et à café"
+ },
+ "a-lamborghini": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Ferruccio Lamborghini",
+  "question": "Avant ses voitures de sport, Ferruccio Lamborghini fabriquait ___.",
+  "vraie": "des tracteurs agricoles"
+ },
+ "a-nokia": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Nokia",
+  "question": "Avant les téléphones, Nokia a commencé en 1865 en fabriquant ___.",
+  "vraie": "du papier"
+ },
+ "a-michelin": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Guide Michelin",
+  "question": "Le guide Michelin a été lancé en 1900 pour ___.",
+  "vraie": "donner envie de rouler et d'user ses pneus"
+ },
+ "a-cocacola": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Coca-Cola",
+  "question": "À sa création en 1886, le Coca-Cola était vendu ___.",
+  "vraie": "en pharmacie, comme un remède"
+ },
+ "a-lego": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Lego",
+  "question": "Le nom « Lego » vient du danois et veut dire ___.",
+  "vraie": "« joue bien »"
+ },
+ "a-vaccin": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wiktionary:vaccin",
+  "question": "Le mot « vaccin » vient du latin et rappelle ___.",
+  "vraie": "la vache"
+ },
+ "a-muscle": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wiktionary:muscle",
+  "question": "Le mot « muscle » vient d'un mot latin qui veut dire ___.",
+  "vraie": "« petite souris »"
+ },
+ "a-pise": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Tour de Pise",
+  "question": "La tour de Pise a commencé à pencher ___.",
+  "vraie": "pendant sa construction"
+ },
+ "a-cuivre": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Statue de la Liberté",
+  "question": "À son inauguration en 1886, la statue de la Liberté était ___.",
+  "vraie": "couleur cuivre brillant"
+ },
+ "a-hamster": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Golden hamster",
+  "question": "Presque tous les hamsters dorés de compagnie descendent ___.",
+  "vraie": "d'une seule portée capturée en Syrie en 1930"
+ },
+ "a-dauphin": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia-en:Unihemispheric slow-wave sleep",
+  "question": "Pour dormir sans se noyer, le dauphin ___.",
+  "vraie": "garde une moitié du cerveau éveillée"
+ },
+ "a-eiffelradio": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Tour Eiffel",
+  "question": "Prévue pour être démontée après vingt ans, la tour Eiffel a été sauvée grâce ___.",
+  "vraie": "à son utilité pour la radio"
+ },
+ "a-marseillaise": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:La Marseillaise",
+  "question": "La Marseillaise a été composée en 1792 ___.",
+  "vraie": "à Strasbourg, pour l'armée du Rhin"
+ },
+ "a-croissant": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Croissant (viennoiserie)",
+  "question": "Le croissant est l'héritier ___.",
+  "vraie": "d'une viennoiserie autrichienne, le kipferl"
+ },
+ "a-monopoly": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Monopoly",
+  "question": "L'ancêtre du Monopoly a été inventé en 1903 pour ___.",
+  "vraie": "dénoncer l'avidité des propriétaires"
+ },
+ "a-candidat": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wiktionary:candidat",
+  "question": "À Rome, les candidats doivent leur nom au fait qu'ils portaient ___.",
+  "vraie": "une toge blanchie"
+ },
+ "a-denim": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Denim",
+  "question": "Le mot « denim », la toile des jeans, vient ___.",
+  "vraie": "de l'expression « serge de Nîmes »"
+ },
+ "a-guillotin": {
+  "mot": "",
+  "type": "anecdote",
+  "source": "wikipedia:Joseph-Ignace Guillotin",
+  "question": "Le docteur Guillotin, dont la machine porte le nom, ___.",
+  "vraie": "était opposé à la peine de mort"
+ },
+ "k-fallas": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Valence, Espagne",
+  "timbre": "España",
+  "source": "wikipedia:Fallas",
+  "question": "Ici, chaque mois de mars, on ___.",
+  "vraie": "brûle d'immenses statues de carton-pâte dans les rues"
+ },
+ "k-setsubun": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Kyoto, Japon",
+  "timbre": "Nippon",
+  "source": "wikipedia:Setsubun",
+  "question": "Ici, à la veille du printemps, on chasse les démons de la maison ___.",
+  "vraie": "en leur lançant des graines de soja"
+ },
+ "k-sinterklaas": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Amsterdam, Pays-Bas",
+  "timbre": "Nederland",
+  "source": "wikipedia-en:Sinterklaas",
+  "question": "Ici, chaque mois de novembre, saint Nicolas arrive ___.",
+  "vraie": "en bateau, venu d'Espagne"
+ },
+ "k-martenitsa": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Sofia, Bulgarie",
+  "timbre": "България",
+  "source": "wikipedia:Martenitsa",
+  "question": "Ici, à partir du 1er mars, on porte un bracelet rouge et blanc ___.",
+  "vraie": "jusqu'à voir la première cigogne"
+ },
+ "k-caber": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Braemar, Écosse",
+  "timbre": "Scotland",
+  "source": "wikipedia-en:Caber toss",
+  "question": "Ici, aux jeux des Highlands, des hommes en kilt ___.",
+  "vraie": "lancent un tronc d'arbre pour le faire basculer"
+ },
+ "k-shrovetide": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Ashbourne, Angleterre",
+  "timbre": "England",
+  "source": "wikipedia-en:Royal Shrovetide Football",
+  "question": "Ici, à Mardi gras, toute la ville joue un match de football ___.",
+  "vraie": "dont les buts sont à cinq kilomètres l'un de l'autre"
+ },
+ "k-cygnes": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Windsor, Angleterre",
+  "timbre": "England",
+  "source": "wikipedia-en:Swan Upping",
+  "question": "Ici, chaque été, des bateliers en uniforme remontent la Tamise pour ___.",
+  "vraie": "recenser les cygnes du souverain"
+ },
+ "k-enfarinats": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Ibi, Espagne",
+  "timbre": "España",
+  "source": "wikipedia-en:Els Enfarinats",
+  "question": "Ici, chaque 28 décembre, les habitants se livrent une bataille ___.",
+  "vraie": "à coups de farine, d'œufs et de pétards"
+ },
+ "k-castells": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Tarragone, Catalogne",
+  "timbre": "España",
+  "source": "wikipedia:Castell",
+  "question": "Ici, lors des fêtes, des équipes rivalisent pour ___.",
+  "vraie": "bâtir les plus hautes tours humaines"
+ },
+ "k-binche": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Binche, Belgique",
+  "timbre": "Belgique",
+  "source": "wikipedia-en:Gilles",
+  "question": "Ici, au carnaval, des hommes masqués coiffés de plumes d'autruche ___.",
+  "vraie": "lancent des oranges à la foule"
+ },
+ "k-dunkerque": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Dunkerque, France",
+  "timbre": "France",
+  "source": "wikipedia:Carnaval de Dunkerque",
+  "question": "Ici, au carnaval, le maire lance à la foule, depuis le balcon de la mairie, ___.",
+  "vraie": "des harengs fumés"
+ },
+ "k-chalandamarz": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Engadine, Suisse",
+  "timbre": "Helvetia",
+  "source": "wikipedia-en:Chalandamarz",
+  "question": "Ici, le 1er mars, les enfants chassent l'hiver ___.",
+  "vraie": "en parcourant les rues avec de grosses cloches"
+ },
+ "k-takanakuy": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Chumbivilcas, Pérou",
+  "timbre": "Perú",
+  "source": "wikipedia-en:Takanakuy",
+  "question": "Ici, le jour de Noël, les villageois règlent leurs querelles de l'année ___.",
+  "vraie": "en se battant à coups de poing devant tous"
+ },
+ "k-roitelet": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Dingle, Irlande",
+  "timbre": "Éire",
+  "source": "wikipedia-en:Wren Day",
+  "question": "Ici, le 26 décembre, des jeunes déguisés en paille vont de maison en maison ___.",
+  "vraie": "avec un faux roitelet au bout d'un bâton"
+ },
+ "k-lucia": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Stockholm, Suède",
+  "timbre": "Sverige",
+  "source": "wikipedia:Sainte-Lucie (fête)",
+  "question": "Ici, le 13 décembre, une jeune fille en blanc défile ___.",
+  "vraie": "avec une couronne de bougies allumées"
+ },
+ "k-palio": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Sienne, Italie",
+  "timbre": "Italia",
+  "source": "wikipedia:Palio de Sienne",
+  "question": "Ici, deux fois par été, les quartiers de la ville s'affrontent ___.",
+  "vraie": "dans une course de chevaux montés à cru sur la place"
+ },
+ "k-baumstamm": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Bavière, Allemagne",
+  "timbre": "Deutschland",
+  "source": "wikipedia-de:Hochzeitsbrauch",
+  "question": "Ici, à la sortie de l'église, les jeunes mariés doivent ___.",
+  "vraie": "scier ensemble un tronc d'arbre"
+ },
+ "c-lagrasse": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Aude existe réellement ?",
+  "type": "commune",
+  "vraie": "Lagrasse",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-rouge": {
+  "mot": "",
+  "question": "Quel nom de commune de la Loire-Atlantique existe réellement ?",
+  "type": "commune",
+  "vraie": "Rougé",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-patay": {
+  "mot": "",
+  "question": "Quel nom de commune du Loiret existe réellement ?",
+  "type": "commune",
+  "vraie": "Patay",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bouloire": {
+  "mot": "",
+  "question": "Quel nom de commune de la Sarthe existe réellement ?",
+  "type": "commune",
+  "vraie": "Bouloire",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cramant": {
+  "mot": "",
+  "question": "Quel nom de commune de la Marne existe réellement ?",
+  "type": "commune",
+  "vraie": "Cramant",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bourrou": {
+  "mot": "",
+  "question": "Quel nom de commune de la Dordogne existe réellement ?",
+  "type": "commune",
+  "vraie": "Bourrou",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-mieussy": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Savoie existe réellement ?",
+  "type": "commune",
+  "vraie": "Mieussy",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-boulbon": {
+  "mot": "",
+  "question": "Quel nom de commune des Bouches-du-Rhône existe réellement ?",
+  "type": "commune",
+  "vraie": "Boulbon",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-tourbes": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Hérault existe réellement ?",
+  "type": "commune",
+  "vraie": "Tourbes",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-marbache": {
+  "mot": "",
+  "question": "Quel nom de commune de Meurthe-et-Moselle existe réellement ?",
+  "type": "commune",
+  "vraie": "Marbache",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-avanne-aveney": {
+  "mot": "",
+  "question": "Quel nom de commune du Doubs existe réellement ?",
+  "type": "commune",
+  "vraie": "Avanne-Aveney",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-gaillard": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Savoie existe réellement ?",
+  "type": "commune",
+  "vraie": "Gaillard",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-pinsac": {
+  "mot": "",
+  "question": "Quel nom de commune du Lot existe réellement ?",
+  "type": "commune",
+  "vraie": "Pinsac",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-mouleydier": {
+  "mot": "",
+  "question": "Quel nom de commune de la Dordogne existe réellement ?",
+  "type": "commune",
+  "vraie": "Mouleydier",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-fumel": {
+  "mot": "",
+  "question": "Quel nom de commune de Lot-et-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Fumel",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-sougraigne": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Aude existe réellement ?",
+  "type": "commune",
+  "vraie": "Sougraigne",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-moussy": {
+  "mot": "",
+  "question": "Quel nom de commune du Val-d'Oise existe réellement ?",
+  "type": "commune",
+  "vraie": "Moussy",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-plumelec": {
+  "mot": "",
+  "question": "Quel nom de commune du Morbihan existe réellement ?",
+  "type": "commune",
+  "vraie": "Plumelec",
+  "source": "geo.api.gouv.fr"
+ },
+ "accorte": {
+  "mot": "accorte",
+  "vraie": "Gracieuse, avenante et aimable.",
+  "categorie": "adj.",
+  "source": "wiktionary:accorte"
+ },
+ "bamboche": {
+  "mot": "bamboche",
+  "vraie": "Partie de plaisir, fête où l'on boit et mange.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:bamboche"
+ },
+ "gandin": {
+  "mot": "gandin",
+  "vraie": "Jeune homme élégant et ridicule.",
+  "categorie": "n. m.",
+  "source": "wiktionary:gandin"
+ },
+ "grigou": {
+  "mot": "grigou",
+  "vraie": "Homme avare, pingre.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:grigou"
+ },
+ "hableur": {
+  "mot": "hâbleur",
+  "vraie": "Qui aime se vanter, exagérer.",
+  "categorie": "adj.",
+  "source": "wiktionary:hâbleur"
+ },
+ "jobard": {
+  "mot": "jobard",
+  "vraie": "Naïf qui se laisse duper facilement.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:jobard"
+ },
+ "lambrequin": {
+  "mot": "lambrequin",
+  "vraie": "Bande d'étoffe découpée qui orne le haut d'une fenêtre.",
+  "categorie": "n. m.",
+  "source": "wiktionary:lambrequin"
+ },
+ "maraud": {
+  "mot": "maraud",
+  "vraie": "Coquin, homme sans scrupules.",
+  "categorie": "n. m.",
+  "source": "wiktionary:maraud"
+ },
+ "parangon": {
+  "mot": "parangon",
+  "vraie": "Modèle, exemple parfait.",
+  "categorie": "n. m.",
+  "source": "wiktionary:parangon"
+ },
+ "patache": {
+  "mot": "patache",
+  "vraie": "Vieille voiture publique, lente et inconfortable.",
+  "categorie": "n. f.",
+  "source": "wiktionary:patache"
+ },
+ "peronnelle": {
+  "mot": "péronnelle",
+  "vraie": "Jeune femme sotte et bavarde.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:péronnelle"
+ },
+ "pied-plat": {
+  "mot": "pied-plat",
+  "vraie": "Homme lâche, sans courage.",
+  "categorie": "n. m.",
+  "source": "wiktionary:pied-plat"
+ },
+ "ribote": {
+  "mot": "ribote",
+  "vraie": "Excès de table et de boisson.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:ribote"
+ },
+ "sacripant": {
+  "mot": "sacripant",
+  "vraie": "Vaurien, mauvais sujet.",
+  "categorie": "n. m.",
+  "source": "wiktionary:sacripant"
+ },
+ "tarabuster": {
+  "mot": "tarabuster",
+  "vraie": "Importuner, tracasser quelqu'un.",
+  "categorie": "v.",
+  "source": "wiktionary:tarabuster"
+ },
+ "turlupin": {
+  "mot": "turlupin",
+  "vraie": "Mauvais plaisant qui fait des farces grossières.",
+  "categorie": "n. m.",
+  "source": "wiktionary:turlupin"
+ },
+ "vasouiller": {
+  "mot": "vasouiller",
+  "vraie": "S'embrouiller, hésiter, être hésitant.",
+  "categorie": "v.",
+  "registre": "familier",
+  "source": "wiktionary:vasouiller"
+ },
+ "zozo": {
+  "mot": "zozo",
+  "vraie": "Naïf, niais.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:zozo"
+ },
+ "begueule": {
+  "mot": "bégueule",
+  "vraie": "D'une pruderie excessive, faussement scrupuleuse.",
+  "categorie": "adj.",
+  "source": "wiktionary:bégueule"
+ },
+ "cagot": {
+  "mot": "cagot",
+  "vraie": "Faux dévot, hypocrite.",
+  "categorie": "n. m.",
+  "source": "wiktionary:cagot"
+ },
+ "faraud": {
+  "mot": "faraud",
+  "vraie": "Fier de son allure, un peu fanfaron.",
+  "categorie": "adj.",
+  "source": "wiktionary:faraud"
+ },
+ "grimaud": {
+  "mot": "grimaud",
+  "vraie": "Mauvais écrivain, écrivailleur.",
+  "categorie": "n. m.",
+  "source": "wiktionary:grimaud"
+ },
+ "carabin": {
+  "mot": "carabin",
+  "vraie": "Étudiant en médecine.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:carabin"
+ },
+ "gate-sauce": {
+  "mot": "gâte-sauce",
+  "vraie": "Mauvais cuisinier, ou marmiton.",
+  "categorie": "n. m.",
+  "source": "wiktionary:gâte-sauce"
+ },
+ "c-allemagne-en-provence": {
+  "mot": "",
+  "question": "Quel nom de commune des Alpes-de-Haute-Provence existe réellement ?",
+  "type": "commune",
+  "vraie": "Allemagne-en-Provence",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-pissotte": {
+  "mot": "",
+  "question": "Quel nom de commune de la Vendée existe réellement ?",
+  "type": "commune",
+  "vraie": "Pissotte",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bouzigues": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Hérault existe réellement ?",
+  "type": "commune",
+  "vraie": "Bouzigues",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-gigondas": {
+  "mot": "",
+  "question": "Quel nom de commune du Vaucluse existe réellement ?",
+  "type": "commune",
+  "vraie": "Gigondas",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-rognes": {
+  "mot": "",
+  "question": "Quel nom de commune des Bouches-du-Rhône existe réellement ?",
+  "type": "commune",
+  "vraie": "Rognes",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-agonges": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Allier existe réellement ?",
+  "type": "commune",
+  "vraie": "Agonges",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-ennordres": {
+  "mot": "",
+  "question": "Quel nom de commune du Cher existe réellement ?",
+  "type": "commune",
+  "vraie": "Ennordres",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-sorbets": {
+  "mot": "",
+  "question": "Quel nom de commune du Gers existe réellement ?",
+  "type": "commune",
+  "vraie": "Sorbets",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-gratot": {
+  "mot": "",
+  "question": "Quel nom de commune de la Manche existe réellement ?",
+  "type": "commune",
+  "vraie": "Gratot",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-chamboulive": {
+  "mot": "",
+  "question": "Quel nom de commune de la Corrèze existe réellement ?",
+  "type": "commune",
+  "vraie": "Chamboulive",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-chaudes-aigues": {
+  "mot": "",
+  "question": "Quel nom de commune du Cantal existe réellement ?",
+  "type": "commune",
+  "vraie": "Chaudes-Aigues",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-sermamagny": {
+  "mot": "",
+  "question": "Quel nom de commune du Territoire de Belfort existe réellement ?",
+  "type": "commune",
+  "vraie": "Sermamagny",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-moustoir-ac": {
+  "mot": "",
+  "question": "Quel nom de commune du Morbihan existe réellement ?",
+  "type": "commune",
+  "vraie": "Moustoir-Ac",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-ploufragan": {
+  "mot": "",
+  "question": "Quel nom de commune des Côtes-d'Armor existe réellement ?",
+  "type": "commune",
+  "vraie": "Ploufragan",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-grignols": {
+  "mot": "",
+  "question": "Quel nom de commune de la Dordogne existe réellement ?",
+  "type": "commune",
+  "vraie": "Grignols",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-lupcourt": {
+  "mot": "",
+  "question": "Quel nom de commune de Meurthe-et-Moselle existe réellement ?",
+  "type": "commune",
+  "vraie": "Lupcourt",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-mouillac": {
+  "mot": "",
+  "question": "Quel nom de commune de Tarn-et-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Mouillac",
+  "source": "geo.api.gouv.fr"
+ },
+ "aigrefin": {
+  "mot": "aigrefin",
+  "vraie": "Escroc qui vit d'expédients.",
+  "categorie": "n. m.",
+  "source": "wiktionary:aigrefin"
+ },
+ "argousin": {
+  "mot": "argousin",
+  "vraie": "Agent de police, péjorativement.",
+  "categorie": "n. m.",
+  "source": "wiktionary:argousin"
+ },
+ "baderne": {
+  "mot": "baderne",
+  "vraie": "Homme âgé, aux idées dépassées.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:baderne"
+ },
+ "boustifaille": {
+  "mot": "boustifaille",
+  "vraie": "Nourriture, repas copieux.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:boustifaille"
+ },
+ "calembredaine": {
+  "mot": "calembredaine",
+  "vraie": "Propos extravagant, plaisanterie sans valeur.",
+  "categorie": "n. f.",
+  "source": "wiktionary:calembredaine"
+ },
+ "bisquer": {
+  "mot": "bisquer",
+  "vraie": "Éprouver du dépit, enrager.",
+  "categorie": "v.",
+  "registre": "familier",
+  "source": "wiktionary:bisquer"
+ },
+ "estourbir": {
+  "mot": "estourbir",
+  "vraie": "Assommer, voire tuer.",
+  "categorie": "v.",
+  "registre": "familier",
+  "source": "wiktionary:estourbir"
+ },
+ "fifrelin": {
+  "mot": "fifrelin",
+  "vraie": "Chose sans aucune valeur.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:fifrelin"
+ },
+ "loupiot": {
+  "mot": "loupiot",
+  "vraie": "Enfant, gamin.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:loupiot"
+ },
+ "margouillis": {
+  "mot": "margouillis",
+  "vraie": "Bourbier, lieu plein de boue.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:margouillis"
+ },
+ "mistoufle": {
+  "mot": "mistoufle",
+  "vraie": "Misère, pauvreté.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:mistoufle"
+ },
+ "pandore": {
+  "mot": "pandore",
+  "vraie": "Gendarme.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:pandore"
+ },
+ "pioupiou": {
+  "mot": "pioupiou",
+  "vraie": "Jeune soldat d'infanterie.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:pioupiou"
+ },
+ "potache": {
+  "mot": "potache",
+  "vraie": "Collégien, lycéen.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:potache"
+ },
+ "zigoto": {
+  "mot": "zigoto",
+  "vraie": "Individu bizarre, original.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:zigoto"
+ },
+ "chaland": {
+  "mot": "chaland",
+  "vraie": "Client d'un marchand.",
+  "categorie": "n. m.",
+  "source": "wiktionary:chaland"
+ },
+ "gargamelle": {
+  "mot": "gargamelle",
+  "vraie": "Gorge, gosier.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:gargamelle"
+ },
+ "gibus": {
+  "mot": "gibus",
+  "vraie": "Chapeau haut de forme pliable, à ressorts.",
+  "categorie": "n. m.",
+  "source": "wiktionary:gibus"
+ },
+ "godiche": {
+  "mot": "godiche",
+  "vraie": "Gauche, maladroit, niais.",
+  "categorie": "adj.",
+  "registre": "familier",
+  "source": "wiktionary:godiche"
+ },
+ "roquentin": {
+  "mot": "roquentin",
+  "vraie": "Vieillard ridicule qui joue au jeune homme.",
+  "categorie": "n. m.",
+  "source": "wiktionary:roquentin"
+ },
+ "panouille": {
+  "mot": "panouille",
+  "vraie": "Personne maladroite, bonne à rien.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:panouille"
+ },
+ "craque": {
+  "mot": "craque",
+  "vraie": "Mensonge, histoire inventée.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:craque"
+ },
+ "falot": {
+  "mot": "falot",
+  "vraie": "Terne, insignifiant, sans personnalité.",
+  "categorie": "adj.",
+  "source": "wiktionary:falot"
+ },
+ "ripaton": {
+  "mot": "ripaton",
+  "vraie": "Pied.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:ripaton"
+ },
+ "frusques": {
+  "mot": "frusques",
+  "vraie": "Vêtements, souvent usés.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:frusques"
+ },
+ "myrmidon": {
+  "mot": "myrmidon",
+  "vraie": "Petit homme insignifiant.",
+  "categorie": "n. m.",
+  "source": "wiktionary:myrmidon"
+ },
+ "o-tuyauter": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/fer-tuyauter.jpg",
+  "source": "wiktionary:tuyauter",
+  "rubrique": "Usage",
+  "credit": "Fer anglais de 1845 environ · Auckland War Memorial Museum · CC BY 4.0 (Wikimedia Commons)",
+  "alt": "Un cône de métal noir sur un pied en spirale, à côté d'une tige à poignée",
+  "legende": "Cône de métal sur un pied en spirale",
+  "question": "À quoi servait ce cône de métal monté sur un pied ?",
+  "vraie": "à plisser en tuyaux la dentelle des bonnets, une fois chauffé."
+ },
+ "o-tastevin": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/tastevin.jpg",
+  "source": "wikipedia:Tastevin",
+  "rubrique": "Usage",
+  "credit": "Tastevin en argent · Copyleft · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Une petite coupe d'argent ronde et plate, au fond bosselé, avec une anse pour le pouce",
+  "legende": "Petite coupe d'argent au fond bosselé",
+  "question": "À quoi servait cette petite coupe d'argent au fond bosselé ?",
+  "vraie": "à goûter le vin à la cave : ses bosses font jouer la lumière."
+ },
+ "o-absinthe": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/cuillere-absinthe.jpg",
+  "source": "wikipedia:Cuillère à absinthe",
+  "rubrique": "Usage",
+  "ouvrage": "brevet",
+  "credit": "Cuillère à absinthe · Viktor Fiala · domaine public (Wikimedia Commons)",
+  "alt": "Une cuillère plate et ajourée de motifs, sans creux",
+  "legende": "Cuillère plate et ajourée",
+  "question": "À quoi servait cette cuillère plate et percée ?",
+  "vraie": "cuillère ajourée tenant un sucre au-dessus du verre, pour y faire couler l'eau."
+ },
+ "o-mouchettes": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/mouchettes.jpg",
+  "source": "wiktionary:mouchettes",
+  "rubrique": "Usage",
+  "ouvrage": "brevet",
+  "credit": "Mouchettes anciennes · Auckland War Memorial Museum · CC BY 4.0 (Wikimedia Commons)",
+  "alt": "Des ciseaux de métal portant une petite boîte sur l'une de leurs lames",
+  "legende": "Ciseaux munis d'une petite boîte",
+  "question": "À quoi servaient ces ciseaux munis d'une petite boîte ?",
+  "vraie": "ciseaux perfectionnés coupant la mèche des chandelles, le bout fumant gardé dans la boîte."
+ },
+ "o-baratte": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/baratte.jpg",
+  "source": "wikipedia:Baratte",
+  "rubrique": "Usage",
+  "credit": "Baratte de Lanhydrock · Geertivp · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Un tonneau de bois cerclé de métal, monté sur un support à pieds",
+  "legende": "Tonneau de bois monté sur un support",
+  "question": "À quoi servait ce tonneau de bois monté sur un support ?",
+  "vraie": "à battre la crème jusqu'à ce qu'elle devienne du beurre."
+ },
+ "p-avignon": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/pont-avignon.jpg",
+  "source": "wikipedia:Pont Saint-Bénézet",
+  "rubrique": "Particularité",
+  "credit": "Pont Saint-Bénézet, Avignon · John Samuel · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Un vieux pont de pierre à arches, avec une petite chapelle",
+  "legende": "Pont Saint-Bénézet, Avignon",
+  "question": "Avignon. Quelle est la particularité de ce pont ?",
+  "vraie": "il s'arrête au milieu du Rhône : il ne reste que quatre arches."
+ },
+ "p-cordouan": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/cordouan.jpg",
+  "source": "wikipedia:Phare de Cordouan",
+  "rubrique": "Particularité",
+  "credit": "Phare de Cordouan · Lesnas ättling · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Un grand phare de pierre richement orné, en pleine mer",
+  "legende": "Phare de Cordouan, estuaire de la Gironde",
+  "question": "Estuaire de la Gironde. Quelle est la particularité de ce phare ?",
+  "vraie": "avec sa chapelle et ses appartements, on l'appelle le « Versailles de la mer »."
+ },
+ "p-zouave": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/zouave.jpg",
+  "source": "wikipedia:Zouave du pont de l'Alma",
+  "rubrique": "Usage",
+  "credit": "Zouave du pont de l'Alma · Ibex73 · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Une statue de soldat en pierre contre la pile d'un pont, au-dessus de l'eau",
+  "legende": "Zouave du pont de l'Alma, Paris",
+  "question": "Paris, pont de l'Alma. À quoi sert cette statue de soldat ?",
+  "vraie": "les Parisiens y mesurent les crues de la Seine."
+ },
+ "p-obelisque": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/obelisque.jpg",
+  "source": "wikipedia:Obélisque de Louxor",
+  "rubrique": "Événement",
+  "credit": "Obélisque de Louxor, place de la Concorde · DiscoA340 · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Un haut obélisque de pierre gravée, au sommet doré, sur une grande place",
+  "legende": "Obélisque de la place de la Concorde, Paris",
+  "question": "Paris, place de la Concorde. Comment cet obélisque est-il arrivé là ?",
+  "vraie": "il a voyagé depuis l'Égypte sur un navire construit exprès pour lui."
+ },
+ "p-saintjacques": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/tour-saint-jacques.jpg",
+  "source": "wikipedia-en:Saint-Jacques Tower",
+  "rubrique": "Particularité",
+  "credit": "Tour Saint-Jacques, Paris · Wilfredor · CC0 (Wikimedia Commons)",
+  "alt": "Une haute tour gothique de pierre claire, seule au milieu d'un square",
+  "legende": "Tour Saint-Jacques, Paris",
+  "question": "Paris. Qu'abrite le sommet de cette tour gothique ?",
+  "vraie": "une petite station de météorologie."
+ },
+ "p-carnac": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/carnac.jpg",
+  "source": "wikipedia:Alignements de Carnac",
+  "rubrique": "Légende",
+  "credit": "Alignement de Kermario, Carnac · Pinpin · CC BY-SA 3.0 (Wikimedia Commons)",
+  "alt": "De longues rangées de pierres dressées dans un champ, devant des arbres",
+  "legende": "Alignements de Carnac, Bretagne",
+  "question": "Carnac, Bretagne. Que raconte la légende sur ces pierres ?",
+  "vraie": "ce sont des soldats romains changés en pierre par saint Cornély."
+ },
+ "p-lion": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/lion-belfort.jpg",
+  "source": "wikipedia:Lion de Belfort",
+  "rubrique": "Particularité",
+  "credit": "Lion de Belfort · 0x010C · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Une tête de lion géante sculptée dans le grès rouge",
+  "legende": "Lion de Belfort",
+  "question": "Belfort. Quelle est la particularité de ce lion ?",
+  "vraie": "il est l'œuvre de Bartholdi, l'auteur de la statue de la Liberté."
+ },
+ "o-oublies": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/fer-oublies.jpg",
+  "source": "wiktionary:oublie",
+  "rubrique": "Usage",
+  "credit": "Fer à oublies, musée de la Gourmandise, Hermalle-sous-Huy · Égoïté · CC BY-SA 3.0 (Wikimedia Commons)",
+  "alt": "Un disque de fer sombre gravé de fleurs et de rinceaux",
+  "legende": "Disque de fer gravé de fleurs",
+  "question": "À quoi servait ce disque de fer gravé de fleurs ?",
+  "vraie": "à cuire les oublies, de fines gaufres, entre deux disques chauffés."
+ },
+ "o-peselettre": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/pese-lettre.jpg",
+  "source": "wiktionary:pèse-lettre",
+  "rubrique": "Usage",
+  "ouvrage": "brevet",
+  "credit": "Balance de la poste de Mangonui · Auckland War Memorial Museum · CC BY 4.0 (Wikimedia Commons)",
+  "alt": "Une petite balance de laiton à deux plateaux, sur un socle de bois, avec une rangée de poids",
+  "legende": "Petite balance de laiton et ses poids",
+  "question": "À quoi servait cette petite balance de laiton et ses poids ?",
+  "vraie": "balance perfectionnée pesant le courrier, pour en calculer l'affranchissement."
+ },
+ "o-poirepoudre": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/poire-poudre.jpg",
+  "source": "wikipedia-en:Powder flask",
+  "rubrique": "Usage",
+  "credit": "Flacon allemand, Metropolitan Museum of Art · CC0 (Wikimedia Commons)",
+  "alt": "Un flacon rond et plat d'ivoire sculpté, surmonté d'un bec de laiton",
+  "legende": "Flacon rond d'ivoire sculpté, au bec de laiton",
+  "question": "À quoi servait ce flacon rond d'ivoire sculpté, au bec de laiton ?",
+  "vraie": "à porter la poudre noire du chasseur et à en doser chaque charge."
+ },
+ "o-mouches": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/boite-mouches.jpg",
+  "source": "wiktionary:mouche",
+  "rubrique": "Usage",
+  "credit": "Boîte en émail de Battersea · Auckland War Memorial Museum · CC BY 4.0 (Wikimedia Commons)",
+  "alt": "Une petite boîte rectangulaire en émail blanc, peinte de fleurs, au couvercle à charnière",
+  "legende": "Petite boîte émaillée, peinte de fleurs",
+  "question": "À quoi servait cette petite boîte émaillée ?",
+  "vraie": "à ranger les mouches, ces faux grains de beauté qu'on se collait au visage."
+ },
+ "p-vendome": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/colonne-vendome.jpg",
+  "source": "wikipedia:Colonne Vendôme",
+  "rubrique": "Particularité",
+  "credit": "Colonne Vendôme, Paris · Chabe01 · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Le sommet d'une colonne de bronze vert-de-gris surmontée de la statue d'un empereur",
+  "legende": "Colonne Vendôme, Paris",
+  "question": "Paris, place Vendôme. Avec quoi a-t-on coulé le bronze de cette colonne ?",
+  "vraie": "avec les canons pris à l'ennemi à Austerlitz."
+ },
+ "p-strasbourg": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/cathedrale-strasbourg.jpg",
+  "source": "wikipedia:Cathédrale Notre-Dame de Strasbourg",
+  "rubrique": "Particularité",
+  "credit": "Cathédrale de Strasbourg vue de la rue Mercière · Diliff · CC BY-SA 3.0 (Wikimedia Commons)",
+  "alt": "La façade de grès rose d'une cathédrale gothique, à une seule flèche",
+  "legende": "Cathédrale Notre-Dame de Strasbourg",
+  "question": "Strasbourg. Quel record cette cathédrale a-t-elle détenu ?",
+  "vraie": "elle fut le plus haut édifice du monde."
+ },
+ "p-garabit": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/garabit.jpg",
+  "source": "wikipedia:Viaduc de Garabit",
+  "rubrique": "Particularité",
+  "credit": "Viaduc de Garabit et vallée de la Truyère · Pemberlaid · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Un grand viaduc ferroviaire de métal rouge, à une seule arche, au-dessus d'une vallée",
+  "legende": "Viaduc de Garabit, Cantal",
+  "question": "Cantal. Quelle est la particularité de ce viaduc de métal rouge ?",
+  "vraie": "il a été construit par l'entreprise de Gustave Eiffel."
+ },
+ "p-transbordeur": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/transbordeur.jpg",
+  "source": "wikipedia:Pont transbordeur du Martrou",
+  "rubrique": "Particularité",
+  "credit": "Pont transbordeur de Rochefort · Wolfgang Moroder · CC BY-SA 3.0 (Wikimedia Commons)",
+  "alt": "Deux hauts pylônes métalliques reliés par un tablier, au-dessus d'une rivière et de prés",
+  "legende": "Pont transbordeur, Rochefort",
+  "question": "Rochefort. Comment ce pont fait-il traverser la Charente ?",
+  "vraie": "une nacelle suspendue glisse d'une rive à l'autre."
+ },
+ "k-namahage": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Oga, Japon",
+  "timbre": "Nippon",
+  "source": "wikipedia:Namahage",
+  "question": "Ici, au Nouvel An, des hommes déguisés en démons ___.",
+  "vraie": "font peur aux enfants paresseux dans les maisons"
+ },
+ "k-ceri": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Gubbio, Italie",
+  "timbre": "Italia",
+  "source": "wikipedia-en:Corsa dei Ceri",
+  "question": "Ici, chaque 15 mai, trois équipes gravissent la montagne en courant ___.",
+  "vraie": "avec d'énormes cierges de bois sur les épaules"
+ },
+ "k-haro": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Haro, Espagne",
+  "timbre": "España",
+  "source": "wikipedia-en:Haro Wine Festival",
+  "question": "Ici, chaque 29 juin, les habitants se livrent une bataille ___.",
+  "vraie": "à coups de vin rouge"
+ },
+ "k-grimaces": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Egremont, Angleterre",
+  "timbre": "England",
+  "source": "wikipedia-en:Gurning",
+  "question": "Ici, chaque année, on désigne un champion du monde ___.",
+  "vraie": "de la grimace, la tête passée dans un collier de cheval"
+ },
+ "k-cravates": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Cologne, Allemagne",
+  "timbre": "Deutschland",
+  "source": "wikipedia-en:Weiberfastnacht",
+  "question": "Ici, le jeudi du carnaval, les femmes ___.",
+  "vraie": "coupent la cravate des hommes qu'elles croisent"
+ },
+ "x-keks": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En allemand, « aller sur le biscuit de quelqu'un » veut dire…",
+  "source": "wiktionary-en:auf den Keks gehen",
+  "vraie": "Lui taper sur les nerfs."
+ },
+ "x-leche": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En espagnol, « être le lait » veut dire…",
+  "source": "wiktionary-en:ser la leche",
+  "vraie": "Être génial, incroyable."
+ },
+ "x-paoduro": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "Au Brésil, « un pain dur » désigne…",
+  "source": "wiktionary-en:pão-duro",
+  "vraie": "Un avare, un grippe-sou."
+ },
+ "x-kogel": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En néerlandais, « la balle a traversé l'église » veut dire…",
+  "source": "wiktionary-en:de kogel is door de kerk",
+  "vraie": "La décision est enfin prise."
+ },
+ "x-haar": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En néerlandais, « être assis les mains dans les cheveux » veut dire…",
+  "source": "wiktionary-en:met de handen in het haar zitten",
+  "vraie": "Être désemparé, à bout d'idées."
+ },
+ "d-montpellier": {
+  "mot": "Montpellier",
+  "type": "devise",
+  "email": "azur",
+  "meuble": "etoile",
+  "vraie": "Virgo Mater, natum ora, ut nos juvet omni hora",
+  "source": "wikipedia:Montpellier"
+ },
+ "d-nancy": {
+  "mot": "Nancy",
+  "type": "devise",
+  "email": "or",
+  "meuble": "chene",
+  "vraie": "Non inultus premor",
+  "source": "wikipedia:Nancy"
+ },
+ "d-bordeaux": {
+  "mot": "Bordeaux",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "nef",
+  "vraie": "Lilia sola regunt lunam undas castra leonem",
+  "source": "wikipedia:Bordeaux"
+ },
+ "d-marseille": {
+  "mot": "Marseille",
+  "type": "devise",
+  "email": "argent",
+  "meuble": "croix",
+  "vraie": "Actibus immensis urbs fulget Massiliensis",
+  "source": "wikipedia:Marseille"
+ },
+ "d-toulouse": {
+  "mot": "Toulouse",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "croix",
+  "vraie": "Per Tolosa totjorn mai",
+  "source": "wikipedia:Toulouse"
+ },
+ "d-orleans": {
+  "mot": "Orléans",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "lys",
+  "vraie": "Hoc vernant lilia corde",
+  "source": "wikipedia:Orléans"
+ },
+ "d-bayonne": {
+  "mot": "Bayonne",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "tour",
+  "vraie": "Nunquam polluta",
+  "source": "wikipedia:Bayonne"
+ },
+ "d-la-rochelle": {
+  "mot": "La Rochelle",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "nef",
+  "vraie": "Servabor rectore Deo",
+  "source": "wikipedia:La Rochelle"
+ },
+ "d-pau": {
+  "mot": "Pau",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "tour",
+  "vraie": "Urbis palladium et gentis",
+  "source": "wikipedia:Pau"
+ },
+ "d-chambery": {
+  "mot": "Chambéry",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "croix",
+  "vraie": "Custodibus istis",
+  "source": "wikipedia:Chambéry"
+ },
+ "m-financiere": {
+  "mot": "Poularde à la financière",
+  "type": "plat",
+  "vraie": "crêtes et rognons de coq, quenelles, ris d'agneau, champignons, olives et lames de truffe",
+  "source": "Escoffier, Le Guide culinaire, 1903, « Garniture à la Financière »"
+ },
+ "m-royale": {
+  "mot": "Lièvre à la royale",
+  "type": "plat",
+  "vraie": "sept heures de cuisson jusqu'à tomber en effiloché, ail et échalote, sauce liée au sang",
+  "source": "wikipedia:Lièvre à la royale"
+ },
+ "m-tripe": {
+  "mot": "Œufs à la tripe",
+  "type": "plat",
+  "vraie": "œufs durs en rondelles et oignons fondus, liés d'une béchamel, sans une once de tripe",
+  "source": "wikipedia:Œufs à la tripe"
+ },
+ "m-demi-deuil": {
+  "mot": "Poularde demi-deuil",
+  "type": "plat",
+  "vraie": "lames de truffe noire glissées sous la peau avant de pocher la volaille au bouillon",
+  "source": "wikipedia:Poularde demi-deuil"
+ },
+ "m-soubise": {
+  "mot": "Sauce Soubise",
+  "type": "plat",
+  "vraie": "oignons étuvés au beurre sans coloration, passés au tamis et liés d'une béchamel",
+  "source": "wikipedia:Sauce Soubise"
+ },
+ "m-salmis": {
+  "mot": "Salmis de palombes",
+  "type": "plat",
+  "vraie": "gibier rôti à moitié puis découpé, achevé dans une sauce tirée de ses propres carcasses",
+  "source": "wikipedia:Salmis"
+ },
+ "m-hochepot": {
+  "mot": "Hochepot de queue de bœuf",
+  "type": "plat",
+  "vraie": "queue de bœuf, oreilles et pieds de cochon, épaule de mouton et légumes d'hiver dans un seul pot",
+  "source": "wikipedia:Hochepot"
+ },
+ "m-chaud-froid": {
+  "mot": "Chaud-froid de volaille",
+  "type": "plat",
+  "vraie": "une pièce cuite à chaud puis refroidie, nappée d'une sauce prise en gelée et lustrée au service",
+  "source": "wikipedia:Chaud-froid"
+ },
+ "m-nantua": {
+  "mot": "Quenelles sauce Nantua",
+  "type": "plat",
+  "vraie": "un beurre d'écrevisses pilées au mortier, monté dans une béchamel crémée, relevé de cognac",
+  "source": "wikipedia:Sauce Nantua"
+ }
+}

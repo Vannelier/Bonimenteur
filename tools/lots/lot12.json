@@ -1,0 +1,470 @@
+{
+ "communes": [
+  [
+   "Lagrasse",
+   "11",
+   [
+    "Lagraisse",
+    "Lemaigre",
+    "Lagrasse-Matinée"
+   ]
+  ],
+  [
+   "Rougé",
+   "44",
+   [
+    "Vermeil",
+    "Écarlate",
+    "Rougeaud"
+   ]
+  ],
+  [
+   "Patay",
+   "45",
+   [
+    "Pâtée",
+    "Purée-sur-Loir",
+    "Bouillie-en-Beauce"
+   ]
+  ],
+  [
+   "Bouloire",
+   "72",
+   [
+    "Bouillotte",
+    "Boulimie-sur-Sarthe",
+    "Bouilloire"
+   ]
+  ],
+  [
+   "Cramant",
+   "51",
+   [
+    "Cramé",
+    "Brûlant",
+    "Cuit-sur-Marne"
+   ]
+  ],
+  [
+   "Bourrou",
+   "24",
+   [
+    "Bourricot",
+    "Bouriquet",
+    "Ânon-le-Bas"
+   ]
+  ],
+  [
+   "Mieussy",
+   "74",
+   [
+    "Mieux-Encore",
+    "Pirey-sur-Arve",
+    "Bien-Mieux"
+   ]
+  ],
+  [
+   "Boulbon",
+   "13",
+   [
+    "Bonbon",
+    "Berlingot-sur-Rhône",
+    "Calisson"
+   ]
+  ],
+  [
+   "Tourbes",
+   "34",
+   [
+    "Vasières",
+    "Bourbiers",
+    "Marécage"
+   ]
+  ],
+  [
+   "Marbache",
+   "54",
+   [
+    "Marmouille",
+    "Bâchemont",
+    "Marbâche-la-Bâche"
+   ]
+  ],
+  [
+   "Avanne-Aveney",
+   "25",
+   [
+    "Arrière-Avenay",
+    "Avant-Avenne",
+    "Avoine-Aveney"
+   ]
+  ],
+  [
+   "Gaillard",
+   "74",
+   [
+    "Costaud",
+    "Robuste-sur-Arve",
+    "Musclé"
+   ]
+  ],
+  [
+   "Pinsac",
+   "46",
+   [
+    "Pinson",
+    "Moineau-sur-Dordogne",
+    "Fauvettes"
+   ]
+  ],
+  [
+   "Mouleydier",
+   "24",
+   [
+    "Moulinier",
+    "Mouleboeuf",
+    "Moulecuisse"
+   ]
+  ],
+  [
+   "Fumel",
+   "47",
+   [
+    "Fumée-sur-Lot",
+    "Brumel",
+    "Vapeur"
+   ]
+  ],
+  [
+   "Sougraigne",
+   "11",
+   [
+    "Sougraisse",
+    "Grigneuse",
+    "Sougrogne"
+   ]
+  ],
+  [
+   "Moussy",
+   "95",
+   [
+    "Mousserie",
+    "Écumy",
+    "Pétilly"
+   ]
+  ],
+  [
+   "Plumelec",
+   "56",
+   [
+    "Plumeau",
+    "Duvetec",
+    "Plumoc"
+   ]
+  ]
+ ],
+ "questions": [
+  {
+   "id": "accorte",
+   "mot": "accorte",
+   "vraie": "Gracieuse, avenante et aimable.",
+   "categorie": "adj.",
+   "source": "wiktionary:accorte",
+   "faux": [
+    "Pressée d'en finir au plus vite.",
+    "Qui joue de l'accordéon.",
+    "Habile à faire des nœuds."
+   ]
+  },
+  {
+   "id": "bamboche",
+   "mot": "bamboche",
+   "vraie": "Partie de plaisir, fête où l'on boit et mange.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:bamboche",
+   "cle": "débauche",
+   "faux": [
+    "Canne de bambou des marcheurs anglais.",
+    "Corbeille d'osier pour les fruits du marché.",
+    "Coiffure bouffante à la mode du Directoire."
+   ]
+  },
+  {
+   "id": "gandin",
+   "mot": "gandin",
+   "vraie": "Jeune homme élégant et ridicule.",
+   "categorie": "n. m.",
+   "source": "wiktionary:gandin",
+   "faux": [
+    "Petit gant de laine sans doigts.",
+    "Chien de chasse au poil frisé.",
+    "Pain de seigle cuit sous la cendre."
+   ]
+  },
+  {
+   "id": "grigou",
+   "mot": "grigou",
+   "vraie": "Homme avare, pingre.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:grigou",
+   "faux": [
+    "Petit grillon des prés.",
+    "Ragoût de porc au cidre.",
+    "Enfant grognon et boudeur."
+   ]
+  },
+  {
+   "id": "hableur",
+   "mot": "hâbleur",
+   "vraie": "Qui aime se vanter, exagérer.",
+   "categorie": "adj.",
+   "source": "wiktionary:hâbleur",
+   "faux": [
+    "Qui sent le hâle et le grand air.",
+    "Qui respire bruyamment en dormant.",
+    "Qui se lève toujours de mauvaise humeur."
+   ]
+  },
+  {
+   "id": "jobard",
+   "mot": "jobard",
+   "vraie": "Naïf qui se laisse duper facilement.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:jobard",
+   "faux": [
+    "Ouvrier payé à la tâche sur le port.",
+    "Petit chien de manchon à poils longs.",
+    "Bonnet à oreillettes des postillons."
+   ]
+  },
+  {
+   "id": "lambrequin",
+   "mot": "lambrequin",
+   "vraie": "Bande d'étoffe découpée qui orne le haut d'une fenêtre.",
+   "categorie": "n. m.",
+   "source": "wiktionary:lambrequin",
+   "faux": [
+    "Petit agneau de lait qu'on engraisse pour Pâques.",
+    "Vin rouge léger des coteaux de la Loire, bu frais.",
+    "Petite lampe à huile qu'on suspendait dans les caves."
+   ],
+   "cle": "fenêtre"
+  },
+  {
+   "id": "maraud",
+   "mot": "maraud",
+   "vraie": "Coquin, homme sans scrupules.",
+   "categorie": "n. m.",
+   "source": "wiktionary:maraud",
+   "faux": [
+    "Jardinier des marais salants.",
+    "Marin qui pêche à la marée.",
+    "Gros chat de gouttière roux."
+   ]
+  },
+  {
+   "id": "parangon",
+   "mot": "parangon",
+   "vraie": "Modèle, exemple parfait.",
+   "categorie": "n. m.",
+   "source": "wiktionary:parangon",
+   "faux": [
+    "Parapluie de berger.",
+    "Grand perroquet vert.",
+    "Querelle d'héritiers."
+   ]
+  },
+  {
+   "id": "patache",
+   "mot": "patache",
+   "vraie": "Vieille voiture publique, lente et inconfortable.",
+   "categorie": "n. f.",
+   "source": "wiktionary:patache",
+   "cle": "voiture",
+   "faux": [
+    "Purée de pommes de terre au lard fumé.",
+    "Tache de graisse sur un vêtement du dimanche.",
+    "Petite pâte en forme d'étoile pour la soupe."
+   ]
+  },
+  {
+   "id": "peronnelle",
+   "mot": "péronnelle",
+   "vraie": "Jeune femme sotte et bavarde.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:péronnelle",
+   "faux": [
+    "Petite poire sauvage des haies.",
+    "Perruche d'Afrique à ventre rose.",
+    "Chaise basse des repasseuses."
+   ]
+  },
+  {
+   "id": "pied-plat",
+   "mot": "pied-plat",
+   "vraie": "Homme lâche, sans courage.",
+   "categorie": "n. m.",
+   "source": "wiktionary:pied-plat",
+   "faux": [
+    "Danseur qui frappe du talon.",
+    "Fromage de chèvre moulé.",
+    "Valet chargé des écuries."
+   ]
+  },
+  {
+   "id": "ribote",
+   "mot": "ribote",
+   "vraie": "Excès de table et de boisson.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:ribote",
+   "faux": [
+    "Petite robe d'été en cotonnade.",
+    "Côte de bœuf grillée à la braise.",
+    "Danse villageoise en ronde."
+   ]
+  },
+  {
+   "id": "sacripant",
+   "mot": "sacripant",
+   "vraie": "Vaurien, mauvais sujet.",
+   "categorie": "n. m.",
+   "source": "wiktionary:sacripant",
+   "faux": [
+    "Sac de toile des pèlerins.",
+    "Prêtre chargé des sacrements.",
+    "Bouc de tête d'un troupeau."
+   ]
+  },
+  {
+   "id": "tarabuster",
+   "mot": "tarabuster",
+   "vraie": "Importuner, tracasser quelqu'un.",
+   "categorie": "v.",
+   "source": "wiktionary:tarabuster",
+   "faux": [
+    "Jouer du tambour en cadence.",
+    "Remplir un tonneau à ras bord.",
+    "Tailler une haie en boule."
+   ]
+  },
+  {
+   "id": "turlupin",
+   "mot": "turlupin",
+   "vraie": "Mauvais plaisant qui fait des farces grossières.",
+   "categorie": "n. m.",
+   "source": "wiktionary:turlupin",
+   "faux": [
+    "Petit lapin sauvage des dunes de Vendée.",
+    "Gâteau roulé à la confiture de framboises.",
+    "Bonnet pointu des bergers de la Camargue."
+   ]
+  },
+  {
+   "id": "vasouiller",
+   "mot": "vasouiller",
+   "vraie": "S'embrouiller, hésiter, être hésitant.",
+   "categorie": "v.",
+   "registre": "familier",
+   "source": "wiktionary:vasouiller",
+   "faux": [
+    "Nager dans une mare boueuse.",
+    "Remuer la vase d'un étang pour pêcher.",
+    "Laver le linge à grande eau."
+   ]
+  },
+  {
+   "id": "zozo",
+   "mot": "zozo",
+   "vraie": "Naïf, niais.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:zozo",
+   "faux": [
+    "Petit oiseau.",
+    "Cheval nain.",
+    "Gros bisou."
+   ]
+  },
+  {
+   "id": "begueule",
+   "mot": "bégueule",
+   "vraie": "D'une pruderie excessive, faussement scrupuleuse.",
+   "categorie": "adj.",
+   "source": "wiktionary:bégueule",
+   "faux": [
+    "Qui bégaie quand il se met en colère.",
+    "Qui mange goulûment, la bouche grande ouverte.",
+    "Qui parle haut et fort pour ne rien dire."
+   ]
+  },
+  {
+   "id": "cagot",
+   "mot": "cagot",
+   "vraie": "Faux dévot, hypocrite.",
+   "categorie": "n. m.",
+   "source": "wiktionary:cagot",
+   "cle": "dévot",
+   "faux": [
+    "Petit chien de berger.",
+    "Panier à huîtres en osier.",
+    "Bonnet de laine du marin."
+   ]
+  },
+  {
+   "id": "faraud",
+   "mot": "faraud",
+   "vraie": "Fier de son allure, un peu fanfaron.",
+   "categorie": "adj.",
+   "source": "wiktionary:faraud",
+   "faux": [
+    "Qui éclaire au loin comme un phare.",
+    "Qui sent la farine tout juste moulue.",
+    "Qui a les cheveux d'un roux flamboyant."
+   ]
+  },
+  {
+   "id": "grimaud",
+   "mot": "grimaud",
+   "vraie": "Mauvais écrivain, écrivailleur.",
+   "categorie": "n. m.",
+   "source": "wiktionary:grimaud",
+   "cle": "écrivain",
+   "faux": [
+    "Clown qui se grime le visage.",
+    "Chat qui fait des grimaces.",
+    "Montagnard qui grimpe pieds nus."
+   ]
+  },
+  {
+   "id": "carabin",
+   "mot": "carabin",
+   "vraie": "Étudiant en médecine.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:carabin",
+   "cle": "médecine",
+   "faux": [
+    "Petit fusil de chasse.",
+    "Chapeau de feutre des bergers.",
+    "Gâteau sec aux amandes."
+   ]
+  },
+  {
+   "id": "gate-sauce",
+   "mot": "gâte-sauce",
+   "vraie": "Mauvais cuisinier, ou marmiton.",
+   "categorie": "n. m.",
+   "source": "wiktionary:gâte-sauce",
+   "faux": [
+    "Enfant gourmand qui tout lèche.",
+    "Petit pot pour garder le jus.",
+    "Fouet en osier pour la crème."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,365 @@
+"""API du serveur : identité par cookie, gain décidé par le serveur, solde, un faux par question."""
+import importlib
+import json
+
+import pytest
+from fastapi.testclient import TestClient
+
+
+@pytest.fixture()
+def client(tmp_path, monkeypatch):
+    monkeypatch.setenv("BONIMENTEUR_DATA_DIR", str(tmp_path))
+    import app.main as m
+    importlib.reload(m)
+    with TestClient(m.app) as c:
+        yield c
+
+
+def _faux_de(client, mot):
+    return [p["id"] for p in client.get("/api/etat").json()["pieges"] if p["mot"] == mot]
+
+
+def _jouer(client, mot, piege, erreur):
+    """Un duel comme la page le joue : la donne du serveur, puis la pièce certifiée (la vraie si
+    erreur est faux). Renvoie la réponse de /api/choix, ou celle de /api/donne si elle échoue."""
+    import app.main as m
+    d = client.post("/api/donne", json={"mot": mot, "piege": piege})
+    if d.status_code != 200:
+        return d
+    vraie = [i for i, p in enumerate(d.json()["pieces"]) if p["texte"] == m.QUESTIONS[mot]["vraie"]][0]
+    return client.post("/api/choix", json={"mot": mot, "k": 1 - vraie if erreur else vraie})
+
+
+def _authentifier(client, mot):
+    """Expertise juste du lot : la pièce est authentifiée, le joueur peut la contrefaire (+1 écu)."""
+    f = _faux_de(client, mot)[0]
+    assert _jouer(client, mot, f, False).status_code == 200
+    return f
+
+
+def test_page_et_donnees_servies(client):
+    assert "Bonimenteur" in client.get("/").text
+    assert client.get("/serveur.js").status_code == 200
+    index = client.get("/proches/index.json").json()
+    assert index["vides"] and client.get("/proches/p0.json").json()
+    assert client.get("/photos/bassinoire.jpg").status_code == 200
+    # Icônes (tools/icones.py) : servies et déclarées dans la page.
+    for chemin in ("/favicon.ico", "/favicon.svg", "/img/apple-touch-icon.png", "/img/icon-192.png", "/manifest.webmanifest"):
+        assert client.get(chemin).status_code == 200, chemin
+    assert 'href="favicon.ico"' in client.get("/").text
+
+
+def test_le_cookie_fait_le_joueur(client):
+    a = client.get("/api/moi").json()
+    assert a["id"].startswith("j_") and a["solde"] == 20
+    assert client.get("/api/moi").json()["id"] == a["id"]
+
+
+def test_ecrire_sans_cookie_refuse(tmp_path, monkeypatch):
+    monkeypatch.setenv("BONIMENTEUR_DATA_DIR", str(tmp_path))
+    import app.main as m
+    importlib.reload(m)
+    with TestClient(m.app) as c:
+        assert c.post("/api/pieges", json={"mot": "sapajou", "texte": "Un faux."}).status_code == 401
+
+
+def test_gain_decide_par_le_serveur(client):
+    client.get("/api/moi")
+    f = _faux_de(client, "sapajou")[0]
+    assert _jouer(client, "sapajou", f, False).json()["gain"] == 1
+    assert client.get("/api/moi").json()["solde"] == 21
+    # Une question ne se rejoue pas.
+    assert _jouer(client, "sapajou", f, True).status_code == 409
+
+
+def test_faux_inconnu_refuse(client):
+    client.get("/api/moi")
+    assert _jouer(client, "sapajou", "invente", True).status_code == 422
+
+
+def test_poser_un_faux_paye_et_rapporte(client, tmp_path):
+    client.get("/api/moi")
+    _authentifier(client, "sapajou"); _authentifier(client, "cacochyme")
+    # 20 au départ + 2 expertises justes : un faux en direct (15) passe, le suivant à 10 n'a plus de quoi payer.
+    r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15})
+    assert r.status_code == 200
+    assert client.get("/api/moi").json()["solde"] == 7
+    assert client.post("/api/pieges", json={"mot": "cacochyme", "texte": "Plat mijoté."}).status_code == 402
+    assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "Autre."}).status_code in (402, 409)
+    # Un autre joueur tombe dans le faux : l'auteur gagne 1 écu.
+    import app.main as m
+    with TestClient(m.app) as autre:
+        autre.get("/api/moi")
+        assert _jouer(autre, "sapajou", r.json()["id"], True).json()["gain"] == 0
+    assert client.get("/api/moi").json()["solde"] == 8
+
+
+def test_seulement_les_pieces_authentifiees(client):
+    """On ne contrefait que la pièce authentifiée : ni un lot jamais joué, ni un lot où l'on a été floué."""
+    client.get("/api/moi")
+    texte = {"texte": "Ragoût de fèves.", "prix": 15}
+    assert client.post("/api/pieges", json={"mot": "sapajou", **texte}).status_code == 403
+    f = _faux_de(client, "cacochyme")[0]
+    _jouer(client, "cacochyme", f, True)
+    assert client.post("/api/pieges", json={"mot": "cacochyme", **texte}).status_code == 403
+    _authentifier(client, "sapajou")
+    assert client.post("/api/pieges", json={"mot": "sapajou", **texte}).status_code == 200
+
+
+def test_pseudo(client):
+    j = client.get("/api/moi").json()["id"]
+    assert client.put("/api/pseudo", json={"pseudo": "  Le   Faussaire "}).json()["pseudo"] == "Le Faussaire"
+    assert client.get("/api/etat").json()["joueurs"][j] == "Le Faussaire"
+    assert client.put("/api/pseudo", json={"pseudo": "x"}).status_code == 422
+
+
+def test_donnees_coherentes():
+    racine = __import__("pathlib").Path(__file__).resolve().parent.parent
+    questions = json.loads((racine / "data" / "questions.json").read_text())
+    faux = json.loads((racine / "data" / "faux-de-depart.json").read_text())
+    assert {f["mot"] for f in faux} <= set(questions)
+    assert len({f["id"] for f in faux}) == len(faux)
+    for q in questions.values():
+        if q.get("type") == "photo":
+            assert (racine / "prototype" / q["image"]).exists()
+    # Forme d'affichage (docs/questions.md) : la page n'y touche plus. Anecdote : un bout de phrase,
+    # sans majuscule ni point ; photo : la suite de « Usage : », sans majuscule.
+    type_de = {k: q.get("type") for k, q in questions.items()}
+    textes = [(q.get("type"), q["vraie"]) for q in questions.values()] + [(type_de[x["mot"]], x["texte"]) for x in faux]
+    for typ, t in textes:
+        if typ in ("anecdote", "coutume", "photo", "plat"):
+            assert not t[:1].isupper() or t[1:2].isupper(), t
+        if typ in ("anecdote", "coutume", "plat"):
+            assert not t.endswith("."), t
+        # Devise : formule lapidaire de la banderole (majuscule, pas de point).
+        if typ == "devise":
+            assert t[:1].isupper() and not t.endswith("."), t
+
+
+def test_ration_du_jour(client, monkeypatch):
+    """Ration active : 15 duels par jour, pas un de plus ; le 16e est refusé jusqu'à minuit (Paris).
+    Coupée (RATION_ACTIVE = False, réglage actuel), le 16e passe."""
+    import app.main as m
+    monkeypatch.setattr(m, "RATION_ACTIVE", True)
+    assert client.get("/api/moi").json()["ration"] == 15
+    etat = client.get("/api/etat").json()
+    faux = {}
+    for p in etat["pieges"]:
+        faux.setdefault(p["mot"], p["id"])
+    mots = list(faux)[:16]
+    for mot in mots[:15]:
+        r = _jouer(client, mot, faux[mot], False)
+        assert r.status_code == 200
+    assert client.get("/api/moi").json()["ration"] == 0
+    r = _jouer(client, mots[15], faux[mots[15]], True)
+    assert r.status_code == 429
+    monkeypatch.setattr(m, "RATION_ACTIVE", False)
+    r = _jouer(client, mots[15], faux[mots[15]], True)
+    assert r.status_code == 200
+
+
+def test_categorie_du_faux(client):
+    """Le faussaire peut fausser la catégorie d'une définition ; une catégorie inventée est refusée."""
+    client.get("/api/moi")
+    _authentifier(client, "sapajou")
+    assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "D'un rouge sombre.", "categorie": "nom propre"}).status_code == 422
+    r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "D'un rouge sombre.", "categorie": "adj."})
+    assert r.status_code == 200
+    faux = [p for p in client.get("/api/etat").json()["pieges"] if p["id"] == r.json()["id"]][0]
+    assert faux["categorie"] == "adj."
+
+
+def test_contestation_controlee(client):
+    """On ne conteste qu'un faux de ce lot, déjà eu en duel, et pas le sien."""
+    client.get("/api/moi")
+    f = _faux_de(client, "sapajou")[0]
+    assert client.post("/api/contestations", json={"piege": "invente", "mot": "sapajou"}).status_code == 404
+    assert client.post("/api/contestations", json={"piege": f, "mot": "sapajou"}).status_code == 403
+    _jouer(client, "sapajou", f, False)
+    assert client.post("/api/contestations", json={"piege": f, "mot": "sapajou"}).status_code == 200
+
+
+def test_pseudo_reserve_et_unique(client, tmp_path):
+    client.get("/api/moi")
+    assert client.put("/api/pseudo", json={"pseudo": "Truffe"}).status_code == 409
+    assert client.put("/api/pseudo", json={"pseudo": "Mr Halifax"}).status_code == 409
+    assert client.put("/api/pseudo", json={"pseudo": "Le Faussaire"}).status_code == 200
+    import app.main as m
+    with TestClient(m.app) as autre:
+        autre.get("/api/moi")
+        assert autre.put("/api/pseudo", json={"pseudo": "le  faussaire"}).status_code == 409
+
+
+def test_faux_identique_a_l_original_refuse(client):
+    client.get("/api/moi")
+    import app.main as m
+    vraie = m.QUESTIONS["sapajou"]["vraie"]
+    assert client.post("/api/pieges", json={"mot": "sapajou", "texte": vraie.upper()}).status_code == 422
+
+
+def test_signalement_controle(client):
+    client.get("/api/moi")
+    assert client.post("/api/signalements", json={"mot": "sapajou", "raison": "spam"}).status_code == 422
+    assert client.post("/api/signalements", json={"mot": "sapajou", "raison": "choquant"}).status_code == 200
+
+
+def test_compression(client):
+    r = client.get("/proches/p0.json", headers={"Accept-Encoding": "gzip"})
+    assert r.headers.get("content-encoding") == "gzip"
+
+
+def test_filtre_commun(client):
+    """Pseudo offensant neutralisé en « Joueur » ; faux offensant refusé."""
+    j = client.get("/api/moi").json()["id"]
+    assert client.put("/api/pseudo", json={"pseudo": "Gros connard"}).json()["pseudo"] == "Joueur"
+    assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "Un vrai salopard."}).status_code == 422
+
+
+def test_etat_allege(client):
+    """L'état ne renvoie que les duels du joueur et ceux où son faux a trompé ; les compteurs par faux
+    viennent du serveur."""
+    client.get("/api/moi")
+    _authentifier(client, "sapajou")
+    r = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15}).json()["id"]
+    import app.main as m
+    autres = []
+    for _ in range(2):
+        a = TestClient(m.app); a.__enter__(); a.get("/api/moi"); autres.append(a)
+    t = _faux_de(client, "cacochyme")[0]
+    _jouer(autres[0], "sapajou", r, True)
+    _jouer(autres[1], "cacochyme", t, False)
+    e = client.get("/api/etat").json()
+    # Sa propre expertise et le duel où son faux a trompé ; pas le duel de cacochyme.
+    assert sorted((c["mot"], c["erreur"]) for c in e["choix"]) == [("sapajou", False), ("sapajou", True)]
+    assert e["stats"][r] == [1, 1, 0] and e["stats"][t] == [1, 0, 1]
+    assert len(autres[1].get("/api/etat").json()["choix"]) == 1   # ses propres duels seulement
+    for a in autres: a.__exit__(None, None, None)
+
+
+def test_classement_des_faussaires(client):
+    """Faussaires : un joueur dupé par le faux de A compte pour A cette semaine ; les faux de Truffe ne comptent pas.
+    La jauge compte les joueurs qui ont joué."""
+    a = client.get("/api/moi").json()["id"]
+    _authentifier(client, "sapajou")
+    faux_a = client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves.", "prix": 15}).json()["id"]
+    import app.main as m
+    with TestClient(m.app) as b:
+        b.get("/api/moi")
+        _jouer(b, "sapajou", faux_a, True)
+        t = _faux_de(b, "cacochyme")[0]
+        _jouer(b, "cacochyme", t, True)   # dupé par Truffe
+    c = client.get("/api/etat").json()
+    assert c["classement"]["faussaires"]["semaine"] == [{"id": a, "n": 1}]
+    assert c["classement"]["faussaires"]["moi"] == {"rang": 1, "n": 1}
+    assert c["classement"]["faussaires"]["passee"] is None
+    # Experts : pièces authentifiées de la semaine (A en a une, B aucune : il s'est trompé deux fois).
+    assert c["classement"]["experts"]["semaine"] == [{"id": a, "n": 1}]
+    assert c["classement"]["experts"]["moi"] == {"rang": 1, "n": 1}
+    assert c["communaute"] == {"joueurs": 2, "objectif": 10}
+
+
+def test_defi_par_lien(client):
+    """Un défi demande DEFI_MIN faux en vente ; le lien ne renvoie que son défi, avec son auteur."""
+    a = client.get("/api/moi").json()["id"]
+    assert client.post("/api/defis", json={"code": "abc12345"}).status_code == 403   # aucun faux
+    mots = ["sapajou", "cacochyme", "cuistre"]
+    for m in mots:
+        _authentifier(client, m)
+    import app.main as m
+    for mot in mots[:2]:   # 20 écus de départ + 3 expertises justes : deux faux à 10
+        assert client.post("/api/pieges", json={"mot": mot, "texte": "Ragoût de fèves au lard.", "prix": 10}).status_code == 200
+    assert client.post("/api/defis", json={"code": "abc12345"}).status_code == 403   # deux faux seulement
+    # Le troisième faux, payé par quelques expertises justes de plus.
+    for mot in ["degun", "drache", "falbala", "faribole", "goguenard", "hurluberlu", "margoulin"]:
+        _authentifier(client, mot)
+    assert client.post("/api/pieges", json={"mot": "cuistre", "texte": "Ragoût de fèves au lard.", "prix": 10}).status_code == 200
+    assert client.post("/api/defis", json={"code": "Pas bon!"}).status_code == 422
+    assert client.post("/api/defis", json={"code": "abc12345"}).status_code == 200
+    assert client.post("/api/defis", json={"code": "abc12345"}).status_code == 409
+    with TestClient(m.app) as ami:
+        ami.get("/api/moi")
+        assert ami.get("/api/etat?defi=abc12345").json()["defis"]["abc12345"]["auteur"] == a
+        assert ami.get("/api/etat").json()["defis"] == {}
+        assert ami.get("/api/etat?defi=inconnu1").json()["defis"] == {}
+
+
+def test_edition_et_etal(client):
+    """Édition de 10 exemplaires, réédition, étal de places, rangement et retouche (docs/conception.md,
+    « Édition et étal ») : prix, auteur et places décidés par le serveur."""
+    import app.main as m
+    m.ECUS_DEPART, m.ETAL = 500, 1
+    client.get("/api/moi")
+    _authentifier(client, "sapajou"); _authentifier(client, "cacochyme")
+    assert client.post("/api/pieges", json={"mot": "sapajou", "texte": "Ragoût de fèves."}).status_code == 200
+    fid = next(p["id"] for p in client.get("/api/etat").json()["pieges"] if p.get("texte") == "Ragoût de fèves.")
+    # Étal d'une place, plein : pas de faux neuf ; une place de plus (20 écus), et il passe.
+    assert client.post("/api/pieges", json={"mot": "cacochyme", "texte": "Plat mijoté."}).status_code == 423
+    solde = client.get("/api/moi").json()["solde"]
+    assert client.post("/api/actes", json={"sorte": "place"}).status_code == 200
+    assert client.get("/api/moi").json()["solde"] == solde - 20
+    assert client.post("/api/pieges", json={"mot": "cacochyme", "texte": "Plat mijoté."}).status_code == 200
+    # Ranger libère une place ; remettre en vente en demande une.
+    assert client.post("/api/actes", json={"sorte": "retrait", "faux": fid}).status_code == 200
+    assert client.post("/api/actes", json={"sorte": "retrait", "faux": fid}).status_code == 422
+    assert m._places(m.db.execute("SELECT auteur FROM faux WHERE id = ?", (fid,)).fetchone()[0]) == (1, 2)
+    assert client.post("/api/actes", json={"sorte": "remise", "faux": fid}).status_code == 200
+    # Retouche : payée, appliquée au faux, refusée si c'est la vraie réponse.
+    assert client.post("/api/actes", json={"sorte": "retouche", "faux": fid, "texte": "Ragoût de lentilles."}).status_code == 200
+    assert any(p.get("texte") == "Ragoût de lentilles." for p in client.get("/api/etat").json()["pieges"])
+    vraie = m.QUESTIONS["sapajou"]["vraie"]
+    assert client.post("/api/actes", json={"sorte": "retouche", "faux": fid, "texte": vraie}).status_code == 422
+    # Pas de réédition avant épuisement ; 10 duels l'épuisent (vendus ou saisis).
+    assert client.post("/api/actes", json={"sorte": "reedition", "faux": fid}).status_code == 422
+    for i in range(10):
+        with TestClient(m.app) as autre:
+            autre.get("/api/moi")
+            assert _jouer(autre, "sapajou", fid, i < 3).status_code == 200
+    assert m._situation(fid)["epuise"]
+    solde = client.get("/api/moi").json()["solde"]
+    assert client.post("/api/actes", json={"sorte": "reedition", "faux": fid}).status_code == 200
+    assert client.get("/api/moi").json()["solde"] == solde - 25
+    s = m._situation(fid)
+    assert s["en_vente"] and not s["epuise"]
+    assert next(a for a in client.get("/api/etat").json()["actes"] if a["sorte"] == "reedition")["base"] == [3, 7]
+    # Le faux d'un autre ne se touche pas.
+    with TestClient(m.app) as autre:
+        autre.get("/api/moi")
+        assert autre.post("/api/actes", json={"sorte": "retrait", "faux": fid}).status_code == 403
+
+
+def test_la_vraie_ne_se_trahit_pas_par_sa_longueur():
+    """Vraie entre 0,7 et 1,35 fois la longueur moyenne des faux de Mr Halifax (docs/questions.md,
+    « Ajouter des questions par lots ») : 99 questions sur 236 se trahissaient (26/11/2026)."""
+    from pathlib import Path
+    racine = Path(__file__).resolve().parent.parent
+    q = json.loads((racine / "data" / "questions.json").read_text())
+    faux: dict = {}
+    for f in json.loads((racine / "data" / "faux-de-depart.json").read_text()):
+        faux.setdefault(f["mot"], []).append(len(f["texte"]))
+    hors = [k for k, v in q.items() if v.get("type") != "commune"
+            and not 0.7 <= len(v["vraie"]) / (sum(faux[k]) / len(faux[k])) <= 1.35]
+    assert not hors, hors
+
+
+def test_duel_juge_par_le_serveur(client):
+    """Triche par lecture du réseau (docs/audit.md) : la page ne reçoit ni la vraie réponse ni le
+    texte des faux d'autrui d'une question non jouée ; le serveur distribue le duel, garde la donne
+    (la redemander ne change rien) et juge le choix."""
+    import app.main as m
+    client.get("/api/moi")
+    etat = client.get("/api/etat").json()
+    assert "vraie" not in etat["mots"]["sapajou"]
+    assert all("texte" not in f for f in etat["pieges"] if f["mot"] == "sapajou")
+    faux = [f["id"] for f in etat["pieges"] if f["mot"] == "sapajou"]
+    d1 = client.post("/api/donne", json={"mot": "sapajou", "piege": faux[0]}).json()
+    d2 = client.post("/api/donne", json={"mot": "sapajou", "piege": faux[1]}).json()
+    assert d1 == d2   # même donne : impossible de croiser deux paires pour isoler la vraie
+    # L'ancien format, où la page déclarait elle-même le verdict, est refusé.
+    assert client.post("/api/choix", json={"mot": "sapajou", "montres": [faux[0]], "ordre": [faux[0]], "erreur": False}).status_code == 422
+    vraie = [p["texte"] for p in d1["pieces"]].index(m.QUESTIONS["sapajou"]["vraie"])
+    r = client.post("/api/choix", json={"mot": "sapajou", "k": 1 - vraie}).json()
+    assert r["erreur"] and r["gain"] == 0 and r["vrai"] == vraie and r["vraie"] == m.QUESTIONS["sapajou"]["vraie"]
+    # Jouée, la question revient avec sa vraie réponse.
+    assert client.get("/api/etat").json()["mots"]["sapajou"]["vraie"]
+    # Une question sans donne ne se joue pas.
+    assert client.post("/api/choix", json={"mot": "cacochyme", "k": 0}).status_code == 422

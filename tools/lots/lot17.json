@@ -1,0 +1,270 @@
+{
+ "questions": [
+  {
+   "id": "d-montpellier",
+   "mot": "Montpellier",
+   "type": "devise",
+   "email": "azur",
+   "meuble": "etoile",
+   "vraie": "Virgo Mater, natum ora, ut nos juvet omni hora",
+   "source": "wikipedia:Montpellier",
+   "cle": "Virgo Mater",
+   "faux": [
+    "Sub umbra tua, Domine, mercator quiescit sine metu",
+    "Mater benigna, filios tuos serva per omne tempus",
+    "Vigila, Virgo, super urbem et portus eius omni hora"
+   ]
+  },
+  {
+   "id": "d-nancy",
+   "mot": "Nancy",
+   "type": "devise",
+   "email": "or",
+   "meuble": "chene",
+   "vraie": "Non inultus premor",
+   "source": "wikipedia:Nancy",
+   "cle": "Non inultus premor",
+   "faux": [
+    "Spinis cingor et vinco",
+    "Ferro nec igne cedo",
+    "Sub cardo quiesco"
+   ]
+  },
+  {
+   "id": "d-bordeaux",
+   "mot": "Bordeaux",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "nef",
+   "vraie": "Lilia sola regunt lunam undas castra leonem",
+   "source": "wikipedia:Bordeaux",
+   "cle": "Lilia sola regunt",
+   "faux": [
+    "Fluvius me nutrit, turris me defendit, rex me tenet",
+    "Vina dedit tellus, portum dedit unda, fidem rex",
+    "Luna crescit, flumen manet, civitas numquam cedit"
+   ]
+  },
+  {
+   "id": "d-marseille",
+   "mot": "Marseille",
+   "type": "devise",
+   "email": "argent",
+   "meuble": "croix",
+   "vraie": "Actibus immensis urbs fulget Massiliensis",
+   "source": "wikipedia:Marseille",
+   "cle": "Actibus immensis",
+   "faux": [
+    "Portus ubi terra desinit et spes incipit nautis",
+    "Mare nostrum dedit urbem, urbs dedit orbi mercatum",
+    "Ventis aperta, hostibus clausa, numquam domita manet"
+   ]
+  },
+  {
+   "id": "d-toulouse",
+   "mot": "Toulouse",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "croix",
+   "vraie": "Per Tolosa totjorn mai",
+   "source": "wikipedia:Toulouse",
+   "cle": "Per Tolosa totjorn mai",
+   "faux": [
+    "Tolosa, flor del Miegjorn",
+    "Lo pont tien, la crotz ten",
+    "Peiras roges, còr pus ferm"
+   ]
+  },
+  {
+   "id": "d-orleans",
+   "mot": "Orléans",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "lys",
+   "vraie": "Hoc vernant lilia corde",
+   "source": "wikipedia:Orléans",
+   "cle": "Hoc vernant lilia corde",
+   "faux": [
+    "Sub lilio sine metu",
+    "Cor regis, flos Galliae",
+    "Lilia nostra manent"
+   ]
+  },
+  {
+   "id": "d-bayonne",
+   "mot": "Bayonne",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "tour",
+   "vraie": "Nunquam polluta",
+   "source": "wikipedia:Bayonne",
+   "cle": "Nunquam polluta",
+   "faux": [
+    "Semper intacta",
+    "Numquam capta",
+    "Fide servata"
+   ]
+  },
+  {
+   "id": "d-la-rochelle",
+   "mot": "La Rochelle",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "nef",
+   "vraie": "Servabor rectore Deo",
+   "source": "wikipedia:La Rochelle",
+   "cle": "Servabor rectore Deo",
+   "faux": [
+    "Fide mea semper vivo",
+    "Undis numquam cedam",
+    "Portum Dei teneo"
+   ]
+  },
+  {
+   "id": "d-pau",
+   "mot": "Pau",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "tour",
+   "vraie": "Urbis palladium et gentis",
+   "source": "wikipedia:Pau",
+   "cle": "Urbis palladium",
+   "faux": [
+    "Arx montis et populi",
+    "Clavis regni et vallis",
+    "Lumen patriae et domus"
+   ]
+  },
+  {
+   "id": "d-chambery",
+   "mot": "Chambéry",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "croix",
+   "vraie": "Custodibus istis",
+   "source": "wikipedia:Chambéry",
+   "cle": "Custodibus istis",
+   "faux": [
+    "Montibus istis",
+    "Sub cruce vivo",
+    "Clavibus firmis"
+   ]
+  },
+  {
+   "id": "m-financiere",
+   "mot": "Poularde à la financière",
+   "type": "plat",
+   "vraie": "crêtes et rognons de coq, quenelles, ris d'agneau, champignons, olives et lames de truffe",
+   "source": "Escoffier, Le Guide culinaire, 1903, « Garniture à la Financière »",
+   "faux": [
+    "mousse de foie blond, langues de carpe, morilles et pointes d'asperges au madère",
+    "coulis de homard, laitances de hareng, pistaches vertes et rondelles de citron confit",
+    "billes de pommes de terre, lard fumé, oignons glacés et cœurs d'artichaut poivrés"
+   ]
+  },
+  {
+   "id": "m-royale",
+   "mot": "Lièvre à la royale",
+   "type": "plat",
+   "vraie": "sept heures de cuisson jusqu'à tomber en effiloché, ail et échalote, sauce liée au sang",
+   "source": "wikipedia:Lièvre à la royale",
+   "cle": "sang",
+   "faux": [
+    "rôti rose sur le coffre, flambé à l'armagnac, sauce aux airelles et au genièvre",
+    "désossé et roulé autour d'un boudin de foie gras, cuit en croûte, sauce au porto",
+    "mariné trois jours au vin de Cahors, braisé aux pruneaux, sauce liée à la mie dorée"
+   ]
+  },
+  {
+   "id": "m-tripe",
+   "mot": "Œufs à la tripe",
+   "type": "plat",
+   "vraie": "œufs durs en rondelles et oignons fondus, liés d'une béchamel, sans une once de tripe",
+   "source": "wikipedia:Œufs à la tripe",
+   "cle": "oignon",
+   "faux": [
+    "gras-double blanchi longuement, œufs pochés dessus, le tout gratiné à la chapelure",
+    "œufs brouillés mêlés de tripes de morue, relevés au safran et aux herbes fraîches",
+    "tripes de veau en lanières, montées au beurre, servies sur des œufs mollets tièdes"
+   ]
+  },
+  {
+   "id": "m-demi-deuil",
+   "mot": "Poularde demi-deuil",
+   "type": "plat",
+   "vraie": "lames de truffe noire glissées sous la peau avant de pocher la volaille au bouillon",
+   "source": "wikipedia:Poularde demi-deuil",
+   "cle": "truffe",
+   "faux": [
+    "volaille rôtie à moitié puis noircie au four, servie entre deux sauces, l'une blanche",
+    "poularde cuite dans une vessie, la peau badigeonnée d'encre de seiche avant le service",
+    "chair blanche et chair brune dressées en damier sur le plat, nappées d'un jus réduit"
+   ]
+  },
+  {
+   "id": "m-soubise",
+   "mot": "Sauce Soubise",
+   "type": "plat",
+   "vraie": "oignons étuvés au beurre sans coloration, passés au tamis et liés d'une béchamel",
+   "source": "wikipedia:Sauce Soubise",
+   "cle": "oignon",
+   "faux": [
+    "échalotes grises confites au vin blanc, passées au tamis et montées au beurre froid",
+    "crème réduite parfumée au cerfeuil, liée de jaunes d'œufs, relevée d'un filet de verjus",
+    "fonds de volaille réduit à glace, monté d'une purée d'amandes et d'un peu de muscade"
+   ]
+  },
+  {
+   "id": "m-salmis",
+   "mot": "Salmis de palombes",
+   "type": "plat",
+   "vraie": "gibier rôti à moitié puis découpé, achevé dans une sauce tirée de ses propres carcasses",
+   "source": "wikipedia:Salmis",
+   "cle": "gibier",
+   "faux": [
+    "gibier confit dans sa graisse un mois durant, puis réchauffé au four avec des cèpes",
+    "gibier pilé au mortier avec son foie, monté en pâté et cuit sous une croûte de seigle",
+    "gibier mis au sel trois jours, dessalé puis poché au vin blanc avec un bouquet garni"
+   ]
+  },
+  {
+   "id": "m-hochepot",
+   "mot": "Hochepot de queue de bœuf",
+   "type": "plat",
+   "vraie": "queue de bœuf, oreilles et pieds de cochon, épaule de mouton et légumes d'hiver dans un seul pot",
+   "source": "wikipedia:Hochepot",
+   "cle": "queue de bœuf",
+   "faux": [
+    "poitrine de veau désossée, roulée autour d'un hachis d'herbes, pochée au bouillon de poule",
+    "morçeaux de bœuf saisis au saindoux, mouillés à la bière brune, pain d'épices pour lier la sauce",
+    "jarret de porc demi-sel, pois cassés, navets et poireaux, le tout passé une nuit au four éteint"
+   ]
+  },
+  {
+   "id": "m-chaud-froid",
+   "mot": "Chaud-froid de volaille",
+   "type": "plat",
+   "vraie": "une pièce cuite à chaud puis refroidie, nappée d'une sauce prise en gelée et lustrée au service",
+   "source": "wikipedia:Chaud-froid",
+   "cle": "nappée",
+   "faux": [
+    "une pièce servie moitié brûlante moitié glacée, les deux parts séparées d'un cordon de gelée",
+    "une pièce saisie au four très vif puis plongée dans la glace, pour que la chair reste nacrée",
+    "une pièce cuite la veille, tranchée froide et remise au bain-marie juste avant de la dresser"
+   ]
+  },
+  {
+   "id": "m-nantua",
+   "mot": "Quenelles sauce Nantua",
+   "type": "plat",
+   "vraie": "un beurre d'écrevisses pilées au mortier, monté dans une béchamel crémée, relevé de cognac",
+   "source": "wikipedia:Sauce Nantua",
+   "cle": "écrevisse",
+   "faux": [
+    "un fumet de brochet réduit à glace, lié de jaunes d'œufs, parfumé au vin jaune du Jura",
+    "une purée de tomates confites au four, détendue de crème aigre, relevée de paprika doux",
+    "un coulis de cresson blanchi, monté au beurre noisette, relevé d'un trait de vinaigre de cidre"
+   ]
+  }
+ ]
+}

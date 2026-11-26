@@ -1,0 +1,276 @@
+{
+ "questions": [
+  {
+   "id": "k-fallas",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Valence, Espagne",
+   "timbre": "España",
+   "source": "wikipedia:Fallas",
+   "cle": "brûl",
+   "question": "Ici, chaque mois de mars, on ___.",
+   "vraie": "brûle d'immenses statues de carton-pâte dans les rues",
+   "faux": [
+    "promène une baleine de bois jusqu'à la mer en chantant",
+    "lâche des taureaux couverts de fleurs sur la plage",
+    "plonge tout habillé dans le port pour fêter le printemps"
+   ]
+  },
+  {
+   "id": "k-setsubun",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Kyoto, Japon",
+   "timbre": "Nippon",
+   "source": "wikipedia:Setsubun",
+   "cle": "démon",
+   "question": "Ici, à la veille du printemps, on chasse les démons de la maison ___.",
+   "vraie": "en leur lançant des graines de soja",
+   "faux": [
+    "en faisant sonner des clochettes",
+    "en brûlant des branches de pin",
+    "en balayant le seuil à l'envers"
+   ]
+  },
+  {
+   "id": "k-sinterklaas",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Amsterdam, Pays-Bas",
+   "timbre": "Nederland",
+   "source": "wikipedia-en:Sinterklaas",
+   "cle": "Spain",
+   "question": "Ici, chaque mois de novembre, saint Nicolas arrive ___.",
+   "vraie": "en bateau, venu d'Espagne",
+   "faux": [
+    "sur un âne, venu de Laponie",
+    "en traîneau tiré par des chèvres",
+    "à vélo, par la digue du nord"
+   ]
+  },
+  {
+   "id": "k-martenitsa",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Sofia, Bulgarie",
+   "timbre": "България",
+   "source": "wikipedia:Martenitsa",
+   "cle": "cigogne",
+   "question": "Ici, à partir du 1er mars, on porte un bracelet rouge et blanc ___.",
+   "vraie": "jusqu'à voir la première cigogne",
+   "faux": [
+    "jusqu'à la première pluie d'orage",
+    "pendant les trois jours de la fonte",
+    "jusqu'à la floraison des pommiers"
+   ]
+  },
+  {
+   "id": "k-caber",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Braemar, Écosse",
+   "timbre": "Scotland",
+   "source": "wikipedia-en:Caber toss",
+   "cle": "tree",
+   "question": "Ici, aux jeux des Highlands, des hommes en kilt ___.",
+   "vraie": "lancent un tronc d'arbre pour le faire basculer",
+   "faux": [
+    "tirent un bateau de pêche sur la lande",
+    "portent une vache sur les épaules au sommet",
+    "font rouler un tonneau de whisky dans le loch"
+   ]
+  },
+  {
+   "id": "k-shrovetide",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Ashbourne, Angleterre",
+   "timbre": "England",
+   "source": "wikipedia-en:Royal Shrovetide Football",
+   "cle": "Ashbourne",
+   "question": "Ici, à Mardi gras, toute la ville joue un match de football ___.",
+   "vraie": "dont les buts sont à cinq kilomètres l'un de l'autre",
+   "faux": [
+    "avec un ballon rempli de pièces de monnaie anciennes",
+    "où les joueurs ont les chevilles attachées deux par deux",
+    "qui ne s'arrête qu'au premier but marqué de la tête"
+   ]
+  },
+  {
+   "id": "k-cygnes",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Windsor, Angleterre",
+   "timbre": "England",
+   "source": "wikipedia-en:Swan Upping",
+   "cle": "swan",
+   "question": "Ici, chaque été, des bateliers en uniforme remontent la Tamise pour ___.",
+   "vraie": "recenser les cygnes du souverain",
+   "faux": [
+    "repêcher les chapeaux perdus",
+    "bénir les écluses du fleuve",
+    "compter les saumons de l'année"
+   ]
+  },
+  {
+   "id": "k-enfarinats",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Ibi, Espagne",
+   "timbre": "España",
+   "source": "wikipedia-en:Els Enfarinats",
+   "cle": "flour",
+   "question": "Ici, chaque 28 décembre, les habitants se livrent une bataille ___.",
+   "vraie": "à coups de farine, d'œufs et de pétards",
+   "faux": [
+    "à coups d'éponges trempées de vin rouge",
+    "à coups de coussins remplis de paille",
+    "à coups d'oranges amères et de citrons"
+   ]
+  },
+  {
+   "id": "k-castells",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Tarragone, Catalogne",
+   "timbre": "España",
+   "source": "wikipedia:Castell",
+   "cle": "humain",
+   "question": "Ici, lors des fêtes, des équipes rivalisent pour ___.",
+   "vraie": "bâtir les plus hautes tours humaines",
+   "faux": [
+    "porter la plus lourde statue",
+    "danser la plus longue sardane",
+    "sonner la plus grosse cloche"
+   ]
+  },
+  {
+   "id": "k-binche",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Binche, Belgique",
+   "timbre": "Belgique",
+   "source": "wikipedia-en:Gilles",
+   "cle": "oranges",
+   "question": "Ici, au carnaval, des hommes masqués coiffés de plumes d'autruche ___.",
+   "vraie": "lancent des oranges à la foule",
+   "faux": [
+    "jettent des frites aux enfants",
+    "soufflent dans des cornets de bière",
+    "distribuent des œufs en chocolat"
+   ]
+  },
+  {
+   "id": "k-dunkerque",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Dunkerque, France",
+   "timbre": "France",
+   "source": "wikipedia:Carnaval de Dunkerque",
+   "cle": "harengs",
+   "question": "Ici, au carnaval, le maire lance à la foule, depuis le balcon de la mairie, ___.",
+   "vraie": "des harengs fumés",
+   "faux": [
+    "des gaufres sucrées",
+    "des moules marinières",
+    "des sabots de bois"
+   ]
+  },
+  {
+   "id": "k-chalandamarz",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Engadine, Suisse",
+   "timbre": "Helvetia",
+   "source": "wikipedia-en:Chalandamarz",
+   "cle": "bells",
+   "question": "Ici, le 1er mars, les enfants chassent l'hiver ___.",
+   "vraie": "en parcourant les rues avec de grosses cloches",
+   "faux": [
+    "en brûlant un bonhomme de paille sur le lac",
+    "en lançant des boules de neige sur le clocher",
+    "en dévalant les pentes sur des luges de bois"
+   ]
+  },
+  {
+   "id": "k-takanakuy",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Chumbivilcas, Pérou",
+   "timbre": "Perú",
+   "source": "wikipedia-en:Takanakuy",
+   "cle": "fight",
+   "question": "Ici, le jour de Noël, les villageois règlent leurs querelles de l'année ___.",
+   "vraie": "en se battant à coups de poing devant tous",
+   "faux": [
+    "en partageant un repas de cochon d'Inde",
+    "en échangeant des lamas devant l'église",
+    "en dansant jusqu'à ce que l'un s'écroule"
+   ]
+  },
+  {
+   "id": "k-roitelet",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Dingle, Irlande",
+   "timbre": "Éire",
+   "source": "wikipedia-en:Wren Day",
+   "cle": "wren",
+   "question": "Ici, le 26 décembre, des jeunes déguisés en paille vont de maison en maison ___.",
+   "vraie": "avec un faux roitelet au bout d'un bâton",
+   "faux": [
+    "avec une oie rôtie à partager au pub",
+    "avec un violon pour faire danser chacun",
+    "avec un mouton qui porte des clochettes"
+   ]
+  },
+  {
+   "id": "k-lucia",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Stockholm, Suède",
+   "timbre": "Sverige",
+   "source": "wikipedia:Sainte-Lucie (fête)",
+   "cle": "bougies",
+   "question": "Ici, le 13 décembre, une jeune fille en blanc défile ___.",
+   "vraie": "avec une couronne de bougies allumées",
+   "faux": [
+    "avec un plateau de harengs marinés",
+    "avec un renne tenu par un ruban",
+    "avec une lanterne en forme d'étoile"
+   ]
+  },
+  {
+   "id": "k-palio",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Sienne, Italie",
+   "timbre": "Italia",
+   "source": "wikipedia:Palio de Sienne",
+   "cle": "cheval",
+   "question": "Ici, deux fois par été, les quartiers de la ville s'affrontent ___.",
+   "vraie": "dans une course de chevaux montés à cru sur la place",
+   "faux": [
+    "dans une course de barques à rames sur la rivière",
+    "dans un tournoi de lancer de drapeaux du clocher",
+    "dans une course de garçons portant un tonneau"
+   ]
+  },
+  {
+   "id": "k-baumstamm",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Bavière, Allemagne",
+   "timbre": "Deutschland",
+   "source": "wikipedia-de:Hochzeitsbrauch",
+   "cle": "Baumstamm",
+   "question": "Ici, à la sortie de l'église, les jeunes mariés doivent ___.",
+   "vraie": "scier ensemble un tronc d'arbre",
+   "faux": [
+    "porter un tonneau de bière vide",
+    "traire une vache devant la noce",
+    "casser une cruche à coups de pied"
+   ]
+  }
+ ]
+}

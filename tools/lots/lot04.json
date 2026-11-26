@@ -1,0 +1,328 @@
+{
+ "questions": [
+  {
+   "id": "dinandier",
+   "mot": "dinandier",
+   "type": "metier",
+   "source": "wiktionary:dinandier",
+   "vraie": "Artisan qui fabriquait des objets en cuivre jaune.",
+   "faux": [
+    "Cuisinier chargé du dîner des moines.",
+    "Marchand de dindes sur les foires d'hiver.",
+    "Valet qui servait à table chez les nobles."
+   ]
+  },
+  {
+   "id": "gabelou",
+   "mot": "gabelou",
+   "type": "metier",
+   "source": "wiktionary:gabelou",
+   "vraie": "Commis chargé de percevoir l'impôt sur le sel.",
+   "faux": [
+    "Ouvrier qui taillait les gabarits des charpentes.",
+    "Marin qui halait les gabares sur la Garonne.",
+    "Bouffon qui amusait la foule par ses gabegies."
+   ]
+  },
+  {
+   "id": "passementier",
+   "mot": "passementier",
+   "type": "metier",
+   "source": "wiktionary:passementier",
+   "vraie": "Artisan qui fabriquait galons, franges et cordons.",
+   "faux": [
+    "Passeur qui faisait traverser le fleuve en barque.",
+    "Garde chargé des laissez-passer aux portes d'une ville.",
+    "Brodeur qui ornait les vêtements des prêtres."
+   ]
+  },
+  {
+   "id": "ciergier",
+   "mot": "ciergier",
+   "type": "metier",
+   "source": "wiktionary:ciergier",
+   "vraie": "Fabricant ou marchand de cierges.",
+   "faux": [
+    "Gardien des grilles d'un cimetière.",
+    "Scieur de long dans les forêts.",
+    "Sacristain chargé des cloches."
+   ]
+  },
+  {
+   "id": "boisselier",
+   "mot": "boisselier",
+   "type": "metier",
+   "source": "wiktionary:boisselier",
+   "vraie": "Artisan qui fabriquait boisseaux et ustensiles de bois.",
+   "faux": [
+    "Garde forestier chargé de marquer les arbres à abattre.",
+    "Marchand de boissons fraîches sur les champs de foire.",
+    "Paysan qui vendait le grain au poids sur les marchés."
+   ]
+  },
+  {
+   "id": "chaufournier",
+   "mot": "chaufournier",
+   "type": "metier",
+   "source": "wiktionary:chaufournier",
+   "vraie": "Ouvrier qui cuisait la pierre calcaire dans un four à chaux.",
+   "faux": [
+    "Garçon d'écurie qui ferrait les chevaux de la poste.",
+    "Ouvrier qui taillait les ardoises au fond de la carrière.",
+    "Domestique qui chauffait les lits avec une bassinoire."
+   ]
+  },
+  {
+   "id": "saulnier",
+   "mot": "saulnier",
+   "type": "metier",
+   "source": "wiktionary:saulnier",
+   "vraie": "Ouvrier qui récoltait ou vendait le sel.",
+   "faux": [
+    "Vannier qui tressait l'osier des saules.",
+    "Sonneur de cloches d'une paroisse de campagne.",
+    "Garde chargé des digues des marais."
+   ]
+  },
+  {
+   "id": "goemonier",
+   "mot": "goémonier",
+   "type": "metier",
+   "source": "wiktionary:goémonier",
+   "vraie": "Récolteur d'algues sur les côtes bretonnes.",
+   "faux": [
+    "Tisserand de filets pour la pêche au homard.",
+    "Guetteur qui annonçait les tempêtes au port.",
+    "Sculpteur de figures de proue pour les navires."
+   ],
+   "cle": "goémon"
+  },
+  {
+   "id": "chamoiseur",
+   "mot": "chamoiseur",
+   "type": "metier",
+   "source": "wiktionary:chamoiseur",
+   "vraie": "Ouvrier qui préparait les peaux à la façon du chamois.",
+   "faux": [
+    "Guide qui menait les chasseurs de chamois en montagne.",
+    "Berger qui gardait les chèvres sur les alpages d'été.",
+    "Marchand de chemises de toile sur les foires du Midi."
+   ]
+  },
+  {
+   "id": "toucheur",
+   "mot": "toucheur",
+   "type": "metier",
+   "source": "wiktionary:toucheur",
+   "vraie": "Conducteur de bestiaux, qui menait les bêtes aux foires.",
+   "faux": [
+    "Guérisseur qui soignait les verrues en les effleurant.",
+    "Musicien qui accordait les claviers des églises.",
+    "Employé qui encaissait les loyers d'une seigneurie."
+   ],
+   "cle": "bestiaux"
+  },
+  {
+   "id": "nautonier",
+   "mot": "nautonier",
+   "type": "metier",
+   "source": "wiktionary:nautonier",
+   "vraie": "Celui qui conduisait une barque ou un navire.",
+   "faux": [
+    "Marchand de noix et de noisettes sur les quais.",
+    "Fabricant de lanternes pour les processions.",
+    "Astronome qui dressait les cartes du ciel."
+   ]
+  },
+  {
+   "id": "eventailliste",
+   "mot": "éventailliste",
+   "type": "metier",
+   "source": "wiktionary:éventailliste",
+   "vraie": "Artisan qui fabriquait ou peignait des éventails.",
+   "faux": [
+    "Domestique qui éventait les dames pendant le bal.",
+    "Marchand de soufflets pour attiser le feu.",
+    "Employé qui aérait les salles des théâtres."
+   ]
+  },
+  {
+   "id": "ecailler",
+   "mot": "écailler",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:écailler",
+   "vraie": "Huîtres ouvertes devant vous, d'un seul coup de couteau !",
+   "faux": [
+    "Poissons écaillés et vidés sur le quai, prêts à cuire !",
+    "Chaises cannées et rempaillées sur le trottoir !",
+    "Toitures d'ardoise réparées avant les grandes pluies !"
+   ],
+   "cle": "huîtres"
+  },
+  {
+   "id": "falotier",
+   "mot": "falotier",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:falotier",
+   "vraie": "Rues obscures ? Je porte et je place vos lanternes chaque soir !",
+   "faux": [
+    "Fêtes tristes ? Farces et pitreries pour égayer vos noces et banquets !",
+    "Barques à quai ? Je rame pour vous jusqu'à l'autre rive, nuit et jour !",
+    "Chapeaux défraîchis ? Je les remets en forme à la vapeur, sur le pas de la porte !"
+   ],
+   "cle": "falots"
+  },
+  {
+   "id": "taupier",
+   "mot": "taupier",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:taupier",
+   "vraie": "Taupes capturées dans vos prés et vos jardins, payé à la pièce !",
+   "faux": [
+    "Toiles de tente réparées pour les foires et les cirques ambulants !",
+    "Tapis battus et dépoussiérés au grand air, livrés le jour même !",
+    "Tonneaux cerclés et remis à neuf avant les prochaines vendanges !"
+   ]
+  },
+  {
+   "id": "merlan",
+   "mot": "merlan",
+   "type": "metier",
+   "ouvrage": "carte",
+   "registre": "familier",
+   "source": "wiktionary:merlan",
+   "vraie": "Perruques poudrées et barbes rasées de près, à domicile !",
+   "faux": [
+    "Poissons frais de la marée du matin, livrés à domicile !",
+    "Merles et pinsons en cage, siffleurs garantis sur facture !",
+    "Lettres d'amour écrites à la plume, cachetées de cire rouge !"
+   ],
+   "cle": "coiffeur"
+  },
+  {
+   "id": "poissarde",
+   "mot": "poissarde",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:poissarde",
+   "vraie": "Harengs et maquereaux tout frais des Halles, à la criée !",
+   "faux": [
+    "Pois cassés et lentilles au détail, pesés devant vous !",
+    "Poix et goudron pour calfater vos barques avant l'été !",
+    "Poisons à rats et à cafards, efficaces dès la première nuit !"
+   ],
+   "cle": "poisson"
+  },
+  {
+   "id": "claqueur",
+   "mot": "claqueur",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:claqueur",
+   "vraie": "Votre pièce mérite un triomphe : j'applaudis pour vous, chaque soir !",
+   "faux": [
+    "Fouets de cocher claquants, tressés en cuir de Hongrie, à prix d'ami !",
+    "Volets et portes qui claquent ? Je les cale pour de bon, sans bruit !",
+    "Sabots de bois ferrés pour danser la bourrée jusqu'au petit matin !"
+   ]
+  },
+  {
+   "id": "pleureuse",
+   "mot": "pleureuse",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:pleureuse",
+   "vraie": "Funérailles dignes : larmes et sanglots fournis au cortège !",
+   "faux": [
+    "Oignons épluchés et hachés pour vos cuisines, sans une larme !",
+    "Saules taillés et entretenus au bord de vos étangs et bassins !",
+    "Bébés bercés et consolés toute la nuit, sommeil garanti aux parents !"
+   ]
+  },
+  {
+   "id": "reveilleur",
+   "mot": "réveilleur",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wikipedia-en:Knocker-up",
+   "cle": "window",
+   "vraie": "Plus de retard à l'usine : je frappe à votre fenêtre avant l'aube !",
+   "faux": [
+    "Pendules et réveils réparés en un jour, avec sonnerie garantie !",
+    "Coqs de basse-cour dressés à chanter à l'heure que vous voulez !",
+    "Rêves expliqués et mauvais songes chassés, consultation au réveil !"
+   ]
+  },
+  {
+   "id": "moucheur",
+   "mot": "moucheur",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:moucheur",
+   "vraie": "Chandelles de la scène mouchées pendant la pièce, sans fumée !",
+   "faux": [
+    "Cheminées ramonées avant l'hiver, suie emportée avec soin !",
+    "Mouchoirs brodés à vos initiales, livrés pour le jour de la noce !",
+    "Nez de clowns et faux nez de carnaval, fabriqués en carton peint !"
+   ],
+   "cle": "chandelle"
+  },
+  {
+   "id": "ratier",
+   "mot": "ratier",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:ratier",
+   "vraie": "Greniers infestés ? Mes chiens et moi chassons vos rats !",
+   "faux": [
+    "Râteaux et fourches réparés avant la saison des foins !",
+    "Ratures effacées sur vos actes, sans laisser de trace !",
+    "Rations de soupe servies chaudes aux ouvriers du port !"
+   ]
+  },
+  {
+   "id": "souffleur",
+   "mot": "souffleur",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:souffleur",
+   "vraie": "Trou de mémoire sur scène ? Je vous chuchote votre texte !",
+   "faux": [
+    "Bougies d'anniversaire éteintes d'un seul souffle, garanti !",
+    "Feu de cheminée ranimé au soufflet en un rien de temps !",
+    "Bulles de savon géantes pour vos fêtes d'enfants !"
+   ],
+   "cle": "théâtre"
+  },
+  {
+   "id": "lampiste",
+   "mot": "lampiste",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:lampiste",
+   "vraie": "Lampes de la gare nettoyées, remplies et allumées chaque soir !",
+   "faux": [
+    "Lampions de papier pour vos bals du 14 Juillet, à la douzaine !",
+    "Lames de rasoir affûtées au cuir, rendues le lendemain matin !",
+    "Lampadaires de salon dorés à la feuille, comme au château !"
+   ],
+   "cle": "gare"
+  },
+  {
+   "id": "rebouteux",
+   "mot": "rebouteux",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:rebouteux",
+   "vraie": "Entorses et os démis remis en place, sans passer par le médecin !",
+   "faux": [
+    "Bouteilles rebouchées à la cire, vin gardé dix ans sans tourner !",
+    "Bouts de chandelle refondus en cierges neufs, à moitié prix !",
+    "Boutons recousus sur vos habits du dimanche, pendant que vous attendez !"
+   ]
+  }
+ ]
+}

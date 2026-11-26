@@ -1,0 +1,22 @@
+{
+ "name": "Bonimenteur",
+ "short_name": "Bonimenteur",
+ "description": "Jeu de bluff : démasque les faux des autres joueurs et fabrique les tiens pour les duper.",
+ "lang": "fr",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#15281f",
+ "theme_color": "#15281f",
+ "icons": [
+  {
+   "src": "img/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "img/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
