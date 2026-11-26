@@ -61,7 +61,8 @@ QUESTIONS = json.loads((RACINE / "data" / "questions.json").read_text())
 FAUX_DE_DEPART = [{**f, "auteur": "truffe", "cree": 0} for f in json.loads((RACINE / "data" / "faux-de-depart.json").read_text())]
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
-# Compression : proches.json passe de 2,7 Mo à 0,6 Mo (audit du 23/11/2026, docs/audit.md).
+# Compression : un paquet de l'arbitre (prototype/proches/) passe d'environ 0,3 Mo à 0,08 Mo ; l'ancien
+# proches.json d'un bloc, de 2,7 Mo à 0,6 Mo (audit du 23/11/2026, docs/audit.md).
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 # Un seul accès à la fois à la connexion SQLite, partagée entre les fils de FastAPI : sans ce
 # verrou, lectures et écritures de fils différents pouvaient se croiser (audit du 23/11/2026).

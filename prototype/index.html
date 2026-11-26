@@ -1063,13 +1063,22 @@ const EXEMPLAIRES = 10, ETAL = 10, ETAL_MAX = 20, PRIX_REEDITION = 25, PRIX_RETO
    Score = max(moyenne des proximités des mots du piège, mot du piège le plus proche du mot).
    Mesure : 25 reformulations de vraies définitions et 75 pièges de Mr Halifax, seuil 0,5 :
    22 reformulations refusées, 1 piège honnête refusé à tort. */
+/* En paquets (tools/proches.py) : l'index au chargement, puis le paquet de la question quand on la
+   contrefait (10 Mo d'un bloc pour 472 questions, 0,3 Mo par paquet). */
 let PROCHES = null, COMMUNES = null;
-fetch("proches.json").then(r => r.json()).then(d => { PROCHES = d; d.videsSet = new Set(d.vides); }).catch(() => {});
+const PRET_PROCHES = fetch("proches/index.json").then(r => r.json()).then(d => { PROCHES = d; d.videsSet = new Set(d.vides); return d; }).catch(() => null);
+const PAQUETS_PROCHES = new Map();
+async function listeProches(motId) {
+  const d = await PRET_PROCHES; if (!d) return null;
+  const k = [...motId].reduce((s, c) => s + c.codePointAt(0), 0) % d.paquets;
+  if (!PAQUETS_PROCHES.has(k)) PAQUETS_PROCHES.set(k, fetch(`proches/p${k}.json`).then(r => r.json()).catch(() => { PAQUETS_PROCHES.delete(k); return {}; }));
+  return (await PAQUETS_PROCHES.get(k))[motId] || null;
+}
 fetch("communes.txt").then(r => r.text()).then(t => { COMMUNES = new Set(t.split("\n")); }).catch(() => {});
 // cadre : mots communs à toutes les définitions d'une série (« Collectionneur de… », « Peur de… »),
 // ignorés des deux côtés : sans ça, 19 pièges honnêtes sur 48 étaient refusés.
 async function memeSens(motId, piege, seuil, cadre) {
-  const L = PROCHES && PROCHES.mots[motId]; if (!L) return false;
+  const L = await listeProches(motId); if (!L) return false;
   const C = new Set(cadre || []);
   const ws = (piege.toLowerCase().match(/[a-zàâäéèêëîïôöùûüçœ-]+/g) || []).filter(w => !PROCHES.videsSet.has(w) && !C.has(w));
   if (!ws.length) return false;
@@ -1630,6 +1639,7 @@ function choixFamille(retour) {
 /* Retouche (retouche = le faux) : même écran, texte du faux à reprendre ; l'arbitre repasse,
    l'édition en cours et ses compteurs restent. */
 function cartePiege(motId, retour, prix = PRIX_PIEGE, retouche = null) {
+  listeProches(motId);   // le paquet de l'arbitre arrive pendant que le joueur écrit
   const m = S.mots.get(motId), F = FAMILLES[famille(m)], direct = prix !== PRIX_PIEGE && !retouche;
   const catDefaut = (retouche && retouche.categorie) || m.categorie || "n. m.";
   $e.innerHTML = `${enteteEcus(solde(index()), prix)}

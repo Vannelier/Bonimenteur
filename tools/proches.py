@@ -1,4 +1,4 @@
-"""Données de l'arbitre du sens : prototype/proches.json.
+"""Données de l'arbitre du sens : prototype/proches/ (index.json et un paquet par groupe de questions).
 
 Pour chaque question (sauf les communes, jugées sur la liste officielle), les mots
 du vocabulaire dont la proximité atteint SEUIL_LISTE, avec deux nombres :
@@ -38,6 +38,13 @@ CADRAGE = set("personne personnes quelqu quelqu'un quelque chose choses celui ce
 # deux côtés, sinon 19 faux honnêtes sur 48 étaient refusés.
 CADRE = set(json.loads((RACINE / "tools" / "cadre.json").read_text()))
 SERIES = ("Collectionneur", "Peur", "Attirance")
+PAQUETS = 32
+
+
+def paquet(qid: str) -> int:
+    """Paquet d'une question : somme des points de code de l'identifiant, modulo PAQUETS (même
+    calcul dans la page, paquetDe)."""
+    return sum(ord(c) for c in qid) % PAQUETS
 
 
 def main():
@@ -71,11 +78,23 @@ def main():
         if not vt:
             print(f"attention : {qid}, aucun mot de la vraie réponse n'est connu des vecteurs", file=sys.stderr)
 
-    cible = RACINE / "prototype" / "proches.json"
-    cible.write_text(json.dumps({"vides": sorted(vides), "inconnu": INCONNU, "mots": sortie},
-                                ensure_ascii=False, separators=(",", ":")))
-    print(f"{cible.relative_to(RACINE)} : {len(sortie)} questions, "
-          f"{sum(len(v) for v in sortie.values())} mots, {cible.stat().st_size / 1e6:.1f} Mo")
+    # En PAQUETS fichiers (prototype/proches/) : la page ne charge que l'index et le paquet de la
+    # question en cours (10,4 Mo d'un bloc pour 472 questions le 26/11/2026, 0,3 Mo par paquet).
+    dossier = RACINE / "prototype" / "proches"
+    dossier.mkdir(exist_ok=True)
+    for vieux in dossier.glob("p*.json"):
+        vieux.unlink()
+    (RACINE / "prototype" / "proches.json").unlink(missing_ok=True)
+    paquets: dict = {}
+    for qid, liste in sortie.items():
+        paquets.setdefault(paquet(qid), {})[qid] = liste
+    for k, contenu in paquets.items():
+        (dossier / f"p{k}.json").write_text(json.dumps(contenu, ensure_ascii=False, separators=(",", ":")))
+    (dossier / "index.json").write_text(json.dumps({"vides": sorted(vides), "inconnu": INCONNU, "paquets": PAQUETS},
+                                                   ensure_ascii=False, separators=(",", ":")))
+    tailles = [f.stat().st_size for f in dossier.glob("p*.json")]
+    print(f"prototype/proches/ : {len(sortie)} questions, {sum(len(v) for v in sortie.values())} mots, "
+          f"{len(tailles)} paquets, {sum(tailles) / 1e6:.1f} Mo en tout, {max(tailles) / 1e6:.2f} Mo au plus")
 
 
 if __name__ == "__main__":

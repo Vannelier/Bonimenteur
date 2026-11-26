@@ -29,7 +29,8 @@ def _authentifier(client, mot):
 def test_page_et_donnees_servies(client):
     assert "Bonimenteur" in client.get("/").text
     assert client.get("/serveur.js").status_code == 200
-    assert client.get("/proches.json").json()["mots"]
+    index = client.get("/proches/index.json").json()
+    assert index["vides"] and client.get("/proches/p0.json").json()
     assert client.get("/photos/bassinoire.jpg").status_code == 200
     # Icônes (tools/icones.py) : servies et déclarées dans la page.
     for chemin in ("/favicon.ico", "/favicon.svg", "/img/apple-touch-icon.png", "/img/icon-192.png", "/manifest.webmanifest"):
@@ -189,7 +190,7 @@ def test_signalement_controle(client):
 
 
 def test_compression(client):
-    r = client.get("/proches.json", headers={"Accept-Encoding": "gzip"})
+    r = client.get("/proches/p0.json", headers={"Accept-Encoding": "gzip"})
     assert r.headers.get("content-encoding") == "gzip"
 
 

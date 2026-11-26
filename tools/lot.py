@@ -31,7 +31,7 @@ RACINE = Path(__file__).resolve().parent.parent
 QUESTIONS = RACINE / "data" / "questions.json"
 FAUX = RACINE / "data" / "faux-de-depart.json"
 COMMUNES = RACINE / "prototype" / "communes.txt"
-PROCHES = RACINE / "prototype" / "proches.json"
+PROCHES = RACINE / "prototype" / "proches"
 CACHE = RACINE / "tools" / "cache"
 AGENT = "bonimenteur-outils/1.0 (jeu de mots ; import de questions)"
 
@@ -220,7 +220,10 @@ def controler(lot: dict, questions: dict, faux: list):
 
 def arbitre():
     """Faux de Mr Halifax que l'arbitre de la page refuserait (memeSens : score ≥ seuil du thème)."""
-    d = json.loads(PROCHES.read_text())
+    d = json.loads((PROCHES / "index.json").read_text())
+    d["mots"] = {}
+    for f in PROCHES.glob("p*.json"):
+        d["mots"].update(json.loads(f.read_text()))
     vides, inconnu = set(d["vides"]), d["inconnu"]
     questions = json.loads(QUESTIONS.read_text())
     n = 0

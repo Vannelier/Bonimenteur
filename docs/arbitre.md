@@ -10,7 +10,7 @@ modèle de langue (coût) : vecteurs de mots et contrôle de forme.
    ou si toute la vérité est reprise. Mots de cadrage ignorés des deux côtés
    (collectionneur, peur, attirance…).
 2. **Sens** (`memeSens`) : vecteurs ConceptNet Numberbatch FR de Vocabulium
-   (et ses mots rares). `prototype/proches.json` donne, pour chaque question,
+   (et ses mots rares). `prototype/proches/` (index et 32 paquets, chargés à la demande depuis le 26/11/2026) donne, pour chaque question,
    les mots proches à 0,45 ou plus : proximité à la vérité, proximité au mot
    de la question. Score d'un faux = max(moyenne des proximités de ses mots,
    la plus forte proximité au mot de la question). Un mot hors liste vaut
