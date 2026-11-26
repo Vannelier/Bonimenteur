@@ -158,9 +158,13 @@ répond 429 à urllib).
   la confond avec Grossouvre, Cher). « turlutaine » : propos frivole, pas
   idée fixe (Wiktionnaire). Vraies d'« escarbille » et de « pataquès »
   raccourcies, deux fois plus longues que leurs faux.
-- Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) ont une
-  vraie plus longue que 1,35 fois la moyenne de leurs faux (huchier : 76
-  signes contre 33). À corriger en allongeant les faux de Mr Halifax.
+- Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
+  une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
+  signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux
+  de Mr Halifax réécrits à la longueur de la vraie, six vraies resserrées
+  (eschatologie, bassinoire, tire-botte, pareidolie, haut du pavé,
+  zigouiller) ; quatre faux réécrits trop proches pour l'arbitre (girafe,
+  brimbelle, lunule, pareidolie). Gardé par `test_la_vraie_ne_se_trahit_pas_par_sa_longueur`.
 
 ## Ajouter une question
 

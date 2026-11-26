@@ -395,7 +395,7 @@
  "eschatologie": {
   "mot": "eschatologie",
   "source": "https://www.cnrtl.fr/definition/eschatologie",
-  "vraie": "Doctrine sur la fin des temps : le jugement dernier et le sort de l'homme et du monde après la mort.",
+  "vraie": "Doctrine sur la fin des temps et le sort de l'homme après la mort.",
   "categorie": "n. f."
  },
  "esperluette": {
@@ -584,7 +584,7 @@
   "mot": "",
   "question": "À quoi servait cette poêle en laiton percée, au très long manche ?",
   "type": "photo",
-  "vraie": "à réchauffer le lit avant de s'y coucher : on la remplissait de braises et on la passait entre les draps.",
+  "vraie": "à réchauffer le lit : on la remplissait de braises et on la passait entre les draps.",
   "legende": "Poêle en laiton percée, au très long manche",
   "rubrique": "Usage"
  },
@@ -619,7 +619,7 @@
   "mot": "",
   "question": "À quoi servait cet objet en fonte, en forme d'insecte ?",
   "type": "photo",
-  "vraie": "appareil permettant de se débotter sans les mains, le talon coincé entre ses deux pattes.",
+  "vraie": "appareil pour se débotter sans les mains, le talon coincé entre ses deux pattes.",
   "legende": "Objet en fonte en forme d'insecte",
   "rubrique": "Usage",
   "ouvrage": "brevet"
@@ -936,7 +936,7 @@
  "zigouiller": {
   "mot": "zigouiller",
   "registre": "familier",
-  "vraie": "Tuer.",
+  "vraie": "Tuer quelqu'un.",
   "categorie": "v.",
   "source": "wiktionary:zigouiller"
  },
@@ -1038,7 +1038,7 @@
  },
  "pareidolie": {
   "mot": "paréidolie",
-  "vraie": "Tendance à voir des visages ou des formes familières dans les nuages, les objets, les taches.",
+  "vraie": "Tendance à voir des visages dans les nuages, les objets ou les taches.",
   "categorie": "n. f.",
   "source": "wiktionary:paréidolie"
  },
@@ -1398,7 +1398,7 @@
   "mot": "tenir le haut du pavé",
   "source": "wiktionary:tenir le haut du pavé",
   "type": "expression",
-  "vraie": "Les eaux sales coulaient au milieu de la rue : les gens importants marchaient le long des maisons, au sec."
+  "vraie": "L'eau sale coulait au milieu de la rue : les gens importants marchaient au sec, le long des murs."
  },
  "e-pou": {
   "mot": "fier comme un pou",

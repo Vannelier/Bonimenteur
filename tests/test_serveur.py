@@ -310,3 +310,17 @@ def test_edition_et_etal(client):
     with TestClient(m.app) as autre:
         autre.get("/api/moi")
         assert autre.post("/api/actes", json={"sorte": "retrait", "faux": fid}).status_code == 403
+
+
+def test_la_vraie_ne_se_trahit_pas_par_sa_longueur():
+    """Vraie entre 0,7 et 1,35 fois la longueur moyenne des faux de Mr Halifax (docs/questions.md,
+    « Ajouter des questions par lots ») : 99 questions sur 236 se trahissaient (26/11/2026)."""
+    from pathlib import Path
+    racine = Path(__file__).resolve().parent.parent
+    q = json.loads((racine / "data" / "questions.json").read_text())
+    faux: dict = {}
+    for f in json.loads((racine / "data" / "faux-de-depart.json").read_text()):
+        faux.setdefault(f["mot"], []).append(len(f["texte"]))
+    hors = [k for k, v in q.items() if v.get("type") != "commune"
+            and not 0.7 <= len(v["vraie"]) / (sum(faux[k]) / len(faux[k])) <= 1.35]
+    assert not hors, hors
