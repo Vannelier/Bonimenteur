@@ -8368,5 +8368,650 @@
   "id": "t-gate-sauce-3",
   "mot": "gate-sauce",
   "texte": "Fouet en osier pour la crème."
+ },
+ {
+  "id": "t-c-allemagne-en-provence-1",
+  "mot": "c-allemagne-en-provence",
+  "texte": "Angleterre-en-Provence"
+ },
+ {
+  "id": "t-c-allemagne-en-provence-2",
+  "mot": "c-allemagne-en-provence",
+  "texte": "Hollande-sur-Verdon"
+ },
+ {
+  "id": "t-c-allemagne-en-provence-3",
+  "mot": "c-allemagne-en-provence",
+  "texte": "Suède-en-Lubéron"
+ },
+ {
+  "id": "t-c-pissotte-1",
+  "mot": "c-pissotte",
+  "texte": "Pipiotte"
+ },
+ {
+  "id": "t-c-pissotte-2",
+  "mot": "c-pissotte",
+  "texte": "Rigolette"
+ },
+ {
+  "id": "t-c-pissotte-3",
+  "mot": "c-pissotte",
+  "texte": "Fontainotte"
+ },
+ {
+  "id": "t-c-bouzigues-1",
+  "mot": "c-bouzigues",
+  "texte": "Bouziques"
+ },
+ {
+  "id": "t-c-bouzigues-2",
+  "mot": "c-bouzigues",
+  "texte": "Moulignac"
+ },
+ {
+  "id": "t-c-bouzigues-3",
+  "mot": "c-bouzigues",
+  "texte": "Huîtrigues"
+ },
+ {
+  "id": "t-c-gigondas-1",
+  "mot": "c-gigondas",
+  "texte": "Gigotas"
+ },
+ {
+  "id": "t-c-gigondas-2",
+  "mot": "c-gigondas",
+  "texte": "Rôtigonde"
+ },
+ {
+  "id": "t-c-gigondas-3",
+  "mot": "c-gigondas",
+  "texte": "Gigolas"
+ },
+ {
+  "id": "t-c-rognes-1",
+  "mot": "c-rognes",
+  "texte": "Grognes"
+ },
+ {
+  "id": "t-c-rognes-2",
+  "mot": "c-rognes",
+  "texte": "Bougonnes"
+ },
+ {
+  "id": "t-c-rognes-3",
+  "mot": "c-rognes",
+  "texte": "Ronchons"
+ },
+ {
+  "id": "t-c-agonges-1",
+  "mot": "c-agonges",
+  "texte": "Aronges"
+ },
+ {
+  "id": "t-c-agonges-2",
+  "mot": "c-agonges",
+  "texte": "Agonie-sur-Allier"
+ },
+ {
+  "id": "t-c-agonges-3",
+  "mot": "c-agonges",
+  "texte": "Ogonges"
+ },
+ {
+  "id": "t-c-ennordres-1",
+  "mot": "c-ennordres",
+  "texte": "Endésordre"
+ },
+ {
+  "id": "t-c-ennordres-2",
+  "mot": "c-ennordres",
+  "texte": "Enrangées"
+ },
+ {
+  "id": "t-c-ennordres-3",
+  "mot": "c-ennordres",
+  "texte": "Biendordre"
+ },
+ {
+  "id": "t-c-sorbets-1",
+  "mot": "c-sorbets",
+  "texte": "Granités"
+ },
+ {
+  "id": "t-c-sorbets-2",
+  "mot": "c-sorbets",
+  "texte": "Glacières"
+ },
+ {
+  "id": "t-c-sorbets-3",
+  "mot": "c-sorbets",
+  "texte": "Sorbetière"
+ },
+ {
+  "id": "t-c-gratot-1",
+  "mot": "c-gratot",
+  "texte": "Grattoir"
+ },
+ {
+  "id": "t-c-gratot-2",
+  "mot": "c-gratot",
+  "texte": "Démangeot"
+ },
+ {
+  "id": "t-c-gratot-3",
+  "mot": "c-gratot",
+  "texte": "Gratteville"
+ },
+ {
+  "id": "t-c-chamboulive-1",
+  "mot": "c-chamboulive",
+  "texte": "Chambouletout"
+ },
+ {
+  "id": "t-c-chamboulive-2",
+  "mot": "c-chamboulive",
+  "texte": "Renversac"
+ },
+ {
+  "id": "t-c-chamboulive-3",
+  "mot": "c-chamboulive",
+  "texte": "Chamboulade"
+ },
+ {
+  "id": "t-c-chaudes-aigues-1",
+  "mot": "c-chaudes-aigues",
+  "texte": "Tièdes-Aigues"
+ },
+ {
+  "id": "t-c-chaudes-aigues-2",
+  "mot": "c-chaudes-aigues",
+  "texte": "Froides-Fontaines"
+ },
+ {
+  "id": "t-c-chaudes-aigues-3",
+  "mot": "c-chaudes-aigues",
+  "texte": "Bouillantes-Eaux"
+ },
+ {
+  "id": "t-c-sermamagny-1",
+  "mot": "c-sermamagny",
+  "texte": "Sermonagny"
+ },
+ {
+  "id": "t-c-sermamagny-2",
+  "mot": "c-sermamagny",
+  "texte": "Sermadamy"
+ },
+ {
+  "id": "t-c-sermamagny-3",
+  "mot": "c-sermamagny",
+  "texte": "Homélie-sur-Savoureuse"
+ },
+ {
+  "id": "t-c-moustoir-ac-1",
+  "mot": "c-moustoir-ac",
+  "texte": "Moutardoir-Ac"
+ },
+ {
+  "id": "t-c-moustoir-ac-2",
+  "mot": "c-moustoir-ac",
+  "texte": "Moustique-Ac"
+ },
+ {
+  "id": "t-c-moustoir-ac-3",
+  "mot": "c-moustoir-ac",
+  "texte": "Mousseron-Ac"
+ },
+ {
+  "id": "t-c-ploufragan-1",
+  "mot": "c-ploufragan",
+  "texte": "Plouffragon"
+ },
+ {
+  "id": "t-c-ploufragan-2",
+  "mot": "c-ploufragan",
+  "texte": "Plongeagan"
+ },
+ {
+  "id": "t-c-ploufragan-3",
+  "mot": "c-ploufragan",
+  "texte": "Plouf-sur-Gouët"
+ },
+ {
+  "id": "t-c-grignols-1",
+  "mot": "c-grignols",
+  "texte": "Grignotte"
+ },
+ {
+  "id": "t-c-grignols-2",
+  "mot": "c-grignols",
+  "texte": "Croquignols"
+ },
+ {
+  "id": "t-c-grignols-3",
+  "mot": "c-grignols",
+  "texte": "Mâchouls"
+ },
+ {
+  "id": "t-c-lupcourt-1",
+  "mot": "c-lupcourt",
+  "texte": "Loupcourt"
+ },
+ {
+  "id": "t-c-lupcourt-2",
+  "mot": "c-lupcourt",
+  "texte": "Renardcourt"
+ },
+ {
+  "id": "t-c-lupcourt-3",
+  "mot": "c-lupcourt",
+  "texte": "Louvecourt-sur-Meurthe"
+ },
+ {
+  "id": "t-c-mouillac-1",
+  "mot": "c-mouillac",
+  "texte": "Trempac"
+ },
+ {
+  "id": "t-c-mouillac-2",
+  "mot": "c-mouillac",
+  "texte": "Arrosac"
+ },
+ {
+  "id": "t-c-mouillac-3",
+  "mot": "c-mouillac",
+  "texte": "Ruisselac"
+ },
+ {
+  "id": "t-aigrefin-1",
+  "mot": "aigrefin",
+  "texte": "Couteau à lame courbe."
+ },
+ {
+  "id": "t-aigrefin-2",
+  "mot": "aigrefin",
+  "texte": "Vin blanc trop acide."
+ },
+ {
+  "id": "t-aigrefin-3",
+  "mot": "aigrefin",
+  "texte": "Héron cendré des marais."
+ },
+ {
+  "id": "t-argousin-1",
+  "mot": "argousin",
+  "texte": "Arbuste épineux des dunes."
+ },
+ {
+  "id": "t-argousin-2",
+  "mot": "argousin",
+  "texte": "Marchand de ferraille ambulant."
+ },
+ {
+  "id": "t-argousin-3",
+  "mot": "argousin",
+  "texte": "Petit lézard vert des murets."
+ },
+ {
+  "id": "t-baderne-1",
+  "mot": "baderne",
+  "texte": "Taverne mal famée du port."
+ },
+ {
+  "id": "t-baderne-2",
+  "mot": "baderne",
+  "texte": "Petite barque à fond plat."
+ },
+ {
+  "id": "t-baderne-3",
+  "mot": "baderne",
+  "texte": "Danse lente des campagnes."
+ },
+ {
+  "id": "t-boustifaille-1",
+  "mot": "boustifaille",
+  "texte": "Bousculade à l'entrée d'un bal."
+ },
+ {
+  "id": "t-boustifaille-2",
+  "mot": "boustifaille",
+  "texte": "Petite boutique de quartier."
+ },
+ {
+  "id": "t-boustifaille-3",
+  "mot": "boustifaille",
+  "texte": "Querelle bruyante en famille."
+ },
+ {
+  "id": "t-calembredaine-1",
+  "mot": "calembredaine",
+  "texte": "Petite calèche à deux roues, tirée par un poney."
+ },
+ {
+  "id": "t-calembredaine-2",
+  "mot": "calembredaine",
+  "texte": "Chanson à boire des marins de la Méditerranée."
+ },
+ {
+  "id": "t-calembredaine-3",
+  "mot": "calembredaine",
+  "texte": "Pâtisserie feuilletée aux amandes et au miel."
+ },
+ {
+  "id": "t-bisquer-1",
+  "mot": "bisquer",
+  "texte": "Cuire au four deux fois."
+ },
+ {
+  "id": "t-bisquer-2",
+  "mot": "bisquer",
+  "texte": "Faire une soupe de homard."
+ },
+ {
+  "id": "t-bisquer-3",
+  "mot": "bisquer",
+  "texte": "Embrasser sur les deux joues."
+ },
+ {
+  "id": "t-estourbir-1",
+  "mot": "estourbir",
+  "texte": "Faire mijoter à feu doux."
+ },
+ {
+  "id": "t-estourbir-2",
+  "mot": "estourbir",
+  "texte": "Écosser des fèves fraîches."
+ },
+ {
+  "id": "t-estourbir-3",
+  "mot": "estourbir",
+  "texte": "Cirer ses bottes à la brosse."
+ },
+ {
+  "id": "t-fifrelin-1",
+  "mot": "fifrelin",
+  "texte": "Petite flûte des fanfares."
+ },
+ {
+  "id": "t-fifrelin-2",
+  "mot": "fifrelin",
+  "texte": "Garçon tambour des régiments."
+ },
+ {
+  "id": "t-fifrelin-3",
+  "mot": "fifrelin",
+  "texte": "Pinson des forêts de l'Est."
+ },
+ {
+  "id": "t-loupiot-1",
+  "mot": "loupiot",
+  "texte": "Jeune loup."
+ },
+ {
+  "id": "t-loupiot-2",
+  "mot": "loupiot",
+  "texte": "Petite loupe."
+ },
+ {
+  "id": "t-loupiot-3",
+  "mot": "loupiot",
+  "texte": "Lampe torche."
+ },
+ {
+  "id": "t-margouillis-1",
+  "mot": "margouillis",
+  "texte": "Gros lézard des tropiques."
+ },
+ {
+  "id": "t-margouillis-2",
+  "mot": "margouillis",
+  "texte": "Cri des grenouilles le soir."
+ },
+ {
+  "id": "t-margouillis-3",
+  "mot": "margouillis",
+  "texte": "Ragoût de mouton aux navets."
+ },
+ {
+  "id": "t-mistoufle-1",
+  "mot": "mistoufle",
+  "texte": "Petite moufle."
+ },
+ {
+  "id": "t-mistoufle-2",
+  "mot": "mistoufle",
+  "texte": "Chat de gouttière."
+ },
+ {
+  "id": "t-mistoufle-3",
+  "mot": "mistoufle",
+  "texte": "Pâte feuilletée."
+ },
+ {
+  "id": "t-pandore-1",
+  "mot": "pandore",
+  "texte": "Mandoline."
+ },
+ {
+  "id": "t-pandore-2",
+  "mot": "pandore",
+  "texte": "Panier rond."
+ },
+ {
+  "id": "t-pandore-3",
+  "mot": "pandore",
+  "texte": "Gros pain."
+ },
+ {
+  "id": "t-pioupiou-1",
+  "mot": "pioupiou",
+  "texte": "Toupie en bois des enfants."
+ },
+ {
+  "id": "t-pioupiou-2",
+  "mot": "pioupiou",
+  "texte": "Petit sifflet en terre cuite."
+ },
+ {
+  "id": "t-pioupiou-3",
+  "mot": "pioupiou",
+  "texte": "Enfant qui pleure sans cesse."
+ },
+ {
+  "id": "t-potache-1",
+  "mot": "potache",
+  "texte": "Petit pot de terre."
+ },
+ {
+  "id": "t-potache-2",
+  "mot": "potache",
+  "texte": "Cuisinier de cantine."
+ },
+ {
+  "id": "t-potache-3",
+  "mot": "potache",
+  "texte": "Jardinier potager."
+ },
+ {
+  "id": "t-zigoto-1",
+  "mot": "zigoto",
+  "texte": "Fermier qui élève des oies."
+ },
+ {
+  "id": "t-zigoto-2",
+  "mot": "zigoto",
+  "texte": "Petit zèbre en peluche."
+ },
+ {
+  "id": "t-zigoto-3",
+  "mot": "zigoto",
+  "texte": "Danse en zigzag des foires."
+ },
+ {
+  "id": "t-chaland-1",
+  "mot": "chaland",
+  "texte": "Chaudron de cuivre."
+ },
+ {
+  "id": "t-chaland-2",
+  "mot": "chaland",
+  "texte": "Feu de la Saint-Jean."
+ },
+ {
+  "id": "t-chaland-3",
+  "mot": "chaland",
+  "texte": "Gros chat de ferme."
+ },
+ {
+  "id": "t-gargamelle-1",
+  "mot": "gargamelle",
+  "texte": "Gargouille."
+ },
+ {
+  "id": "t-gargamelle-2",
+  "mot": "gargamelle",
+  "texte": "Gamelle."
+ },
+ {
+  "id": "t-gargamelle-3",
+  "mot": "gargamelle",
+  "texte": "Grosse cloche."
+ },
+ {
+  "id": "t-gibus-1",
+  "mot": "gibus",
+  "texte": "Petit gibier à plumes des haies et des prés."
+ },
+ {
+  "id": "t-gibus-2",
+  "mot": "gibus",
+  "texte": "Sac de cuir du chasseur, porté en bandoulière."
+ },
+ {
+  "id": "t-gibus-3",
+  "mot": "gibus",
+  "texte": "Bossu des contes populaires qui exauce les vœux."
+ },
+ {
+  "id": "t-godiche-1",
+  "mot": "godiche",
+  "texte": "Gourmand de sucreries."
+ },
+ {
+  "id": "t-godiche-2",
+  "mot": "godiche",
+  "texte": "Bavard comme une pie."
+ },
+ {
+  "id": "t-godiche-3",
+  "mot": "godiche",
+  "texte": "Frileux en toute saison."
+ },
+ {
+  "id": "t-roquentin-1",
+  "mot": "roquentin",
+  "texte": "Fromage de brebis affiné dans des grottes."
+ },
+ {
+  "id": "t-roquentin-2",
+  "mot": "roquentin",
+  "texte": "Petit rocher qui affleure à marée basse."
+ },
+ {
+  "id": "t-roquentin-3",
+  "mot": "roquentin",
+  "texte": "Moine ermite qui vit seul dans la montagne."
+ },
+ {
+  "id": "t-panouille-1",
+  "mot": "panouille",
+  "texte": "Petit pain rond de seigle noir."
+ },
+ {
+  "id": "t-panouille-2",
+  "mot": "panouille",
+  "texte": "Grande poêle pour la paella."
+ },
+ {
+  "id": "t-panouille-3",
+  "mot": "panouille",
+  "texte": "Chemise de nuit en grosse toile."
+ },
+ {
+  "id": "t-craque-1",
+  "mot": "craque",
+  "texte": "Biscuit sec qui croustille."
+ },
+ {
+  "id": "t-craque-2",
+  "mot": "craque",
+  "texte": "Fente dans un mur de pierre."
+ },
+ {
+  "id": "t-craque-3",
+  "mot": "craque",
+  "texte": "Petite fêlure dans la glace."
+ },
+ {
+  "id": "t-falot-1",
+  "mot": "falot",
+  "texte": "Qui aime les feux d'artifice."
+ },
+ {
+  "id": "t-falot-2",
+  "mot": "falot",
+  "texte": "Qui aime les fêtes et les bals."
+ },
+ {
+  "id": "t-falot-3",
+  "mot": "falot",
+  "texte": "Qui parle haut et fort à table."
+ },
+ {
+  "id": "t-ripaton-1",
+  "mot": "ripaton",
+  "texte": "Repas."
+ },
+ {
+  "id": "t-ripaton-2",
+  "mot": "ripaton",
+  "texte": "Râteau."
+ },
+ {
+  "id": "t-ripaton-3",
+  "mot": "ripaton",
+  "texte": "Rapin."
+ },
+ {
+  "id": "t-frusques-1",
+  "mot": "frusques",
+  "texte": "Fruits tombés de l'arbre."
+ },
+ {
+  "id": "t-frusques-2",
+  "mot": "frusques",
+  "texte": "Branches mortes du sous-bois."
+ },
+ {
+  "id": "t-frusques-3",
+  "mot": "frusques",
+  "texte": "Miettes au fond d'un sac."
+ },
+ {
+  "id": "t-myrmidon-1",
+  "mot": "myrmidon",
+  "texte": "Fourmi rousse des dunes."
+ },
+ {
+  "id": "t-myrmidon-2",
+  "mot": "myrmidon",
+  "texte": "Myrtille sauvage des bois."
+ },
+ {
+  "id": "t-myrmidon-3",
+  "mot": "myrmidon",
+  "texte": "Mirliton des fêtes foraines."
  }
 ]

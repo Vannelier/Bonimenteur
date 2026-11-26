@@ -3953,5 +3953,298 @@
   "vraie": "Mauvais cuisinier, ou marmiton.",
   "categorie": "n. m.",
   "source": "wiktionary:gâte-sauce"
+ },
+ "c-allemagne-en-provence": {
+  "mot": "",
+  "question": "Quel nom de commune des Alpes-de-Haute-Provence existe réellement ?",
+  "type": "commune",
+  "vraie": "Allemagne-en-Provence",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-pissotte": {
+  "mot": "",
+  "question": "Quel nom de commune de la Vendée existe réellement ?",
+  "type": "commune",
+  "vraie": "Pissotte",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bouzigues": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Hérault existe réellement ?",
+  "type": "commune",
+  "vraie": "Bouzigues",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-gigondas": {
+  "mot": "",
+  "question": "Quel nom de commune du Vaucluse existe réellement ?",
+  "type": "commune",
+  "vraie": "Gigondas",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-rognes": {
+  "mot": "",
+  "question": "Quel nom de commune des Bouches-du-Rhône existe réellement ?",
+  "type": "commune",
+  "vraie": "Rognes",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-agonges": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Allier existe réellement ?",
+  "type": "commune",
+  "vraie": "Agonges",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-ennordres": {
+  "mot": "",
+  "question": "Quel nom de commune du Cher existe réellement ?",
+  "type": "commune",
+  "vraie": "Ennordres",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-sorbets": {
+  "mot": "",
+  "question": "Quel nom de commune du Gers existe réellement ?",
+  "type": "commune",
+  "vraie": "Sorbets",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-gratot": {
+  "mot": "",
+  "question": "Quel nom de commune de la Manche existe réellement ?",
+  "type": "commune",
+  "vraie": "Gratot",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-chamboulive": {
+  "mot": "",
+  "question": "Quel nom de commune de la Corrèze existe réellement ?",
+  "type": "commune",
+  "vraie": "Chamboulive",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-chaudes-aigues": {
+  "mot": "",
+  "question": "Quel nom de commune du Cantal existe réellement ?",
+  "type": "commune",
+  "vraie": "Chaudes-Aigues",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-sermamagny": {
+  "mot": "",
+  "question": "Quel nom de commune du Territoire de Belfort existe réellement ?",
+  "type": "commune",
+  "vraie": "Sermamagny",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-moustoir-ac": {
+  "mot": "",
+  "question": "Quel nom de commune du Morbihan existe réellement ?",
+  "type": "commune",
+  "vraie": "Moustoir-Ac",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-ploufragan": {
+  "mot": "",
+  "question": "Quel nom de commune des Côtes-d'Armor existe réellement ?",
+  "type": "commune",
+  "vraie": "Ploufragan",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-grignols": {
+  "mot": "",
+  "question": "Quel nom de commune de la Dordogne existe réellement ?",
+  "type": "commune",
+  "vraie": "Grignols",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-lupcourt": {
+  "mot": "",
+  "question": "Quel nom de commune de Meurthe-et-Moselle existe réellement ?",
+  "type": "commune",
+  "vraie": "Lupcourt",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-mouillac": {
+  "mot": "",
+  "question": "Quel nom de commune de Tarn-et-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Mouillac",
+  "source": "geo.api.gouv.fr"
+ },
+ "aigrefin": {
+  "mot": "aigrefin",
+  "vraie": "Escroc qui vit d'expédients.",
+  "categorie": "n. m.",
+  "source": "wiktionary:aigrefin"
+ },
+ "argousin": {
+  "mot": "argousin",
+  "vraie": "Agent de police, péjorativement.",
+  "categorie": "n. m.",
+  "source": "wiktionary:argousin"
+ },
+ "baderne": {
+  "mot": "baderne",
+  "vraie": "Homme âgé, aux idées dépassées.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:baderne"
+ },
+ "boustifaille": {
+  "mot": "boustifaille",
+  "vraie": "Nourriture, repas copieux.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:boustifaille"
+ },
+ "calembredaine": {
+  "mot": "calembredaine",
+  "vraie": "Propos extravagant, plaisanterie sans valeur.",
+  "categorie": "n. f.",
+  "source": "wiktionary:calembredaine"
+ },
+ "bisquer": {
+  "mot": "bisquer",
+  "vraie": "Éprouver du dépit, enrager.",
+  "categorie": "v.",
+  "registre": "familier",
+  "source": "wiktionary:bisquer"
+ },
+ "estourbir": {
+  "mot": "estourbir",
+  "vraie": "Assommer, voire tuer.",
+  "categorie": "v.",
+  "registre": "familier",
+  "source": "wiktionary:estourbir"
+ },
+ "fifrelin": {
+  "mot": "fifrelin",
+  "vraie": "Chose sans aucune valeur.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:fifrelin"
+ },
+ "loupiot": {
+  "mot": "loupiot",
+  "vraie": "Enfant, gamin.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:loupiot"
+ },
+ "margouillis": {
+  "mot": "margouillis",
+  "vraie": "Bourbier, lieu plein de boue.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:margouillis"
+ },
+ "mistoufle": {
+  "mot": "mistoufle",
+  "vraie": "Misère, pauvreté.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:mistoufle"
+ },
+ "pandore": {
+  "mot": "pandore",
+  "vraie": "Gendarme.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:pandore"
+ },
+ "pioupiou": {
+  "mot": "pioupiou",
+  "vraie": "Jeune soldat d'infanterie.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:pioupiou"
+ },
+ "potache": {
+  "mot": "potache",
+  "vraie": "Collégien, lycéen.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:potache"
+ },
+ "zigoto": {
+  "mot": "zigoto",
+  "vraie": "Individu bizarre, original.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:zigoto"
+ },
+ "chaland": {
+  "mot": "chaland",
+  "vraie": "Client d'un marchand.",
+  "categorie": "n. m.",
+  "source": "wiktionary:chaland"
+ },
+ "gargamelle": {
+  "mot": "gargamelle",
+  "vraie": "Gorge, gosier.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:gargamelle"
+ },
+ "gibus": {
+  "mot": "gibus",
+  "vraie": "Chapeau haut de forme pliable, à ressorts.",
+  "categorie": "n. m.",
+  "source": "wiktionary:gibus"
+ },
+ "godiche": {
+  "mot": "godiche",
+  "vraie": "Gauche, maladroit, niais.",
+  "categorie": "adj.",
+  "registre": "familier",
+  "source": "wiktionary:godiche"
+ },
+ "roquentin": {
+  "mot": "roquentin",
+  "vraie": "Vieillard ridicule qui joue au jeune homme.",
+  "categorie": "n. m.",
+  "source": "wiktionary:roquentin"
+ },
+ "panouille": {
+  "mot": "panouille",
+  "vraie": "Personne maladroite, bonne à rien.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:panouille"
+ },
+ "craque": {
+  "mot": "craque",
+  "vraie": "Mensonge, histoire inventée.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:craque"
+ },
+ "falot": {
+  "mot": "falot",
+  "vraie": "Terne, insignifiant, sans personnalité.",
+  "categorie": "adj.",
+  "source": "wiktionary:falot"
+ },
+ "ripaton": {
+  "mot": "ripaton",
+  "vraie": "Pied.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:ripaton"
+ },
+ "frusques": {
+  "mot": "frusques",
+  "vraie": "Vêtements, souvent usés.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:frusques"
+ },
+ "myrmidon": {
+  "mot": "myrmidon",
+  "vraie": "Petit homme insignifiant.",
+  "categorie": "n. m.",
+  "source": "wiktionary:myrmidon"
  }
 }

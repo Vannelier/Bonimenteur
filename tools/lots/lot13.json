@@ -1,75 +1,500 @@
 {
  "communes": [
-  ["Allemagne-en-Provence", "04", ["Angleterre-en-Provence", "Hollande-sur-Verdon", "Suède-en-Lubéron"]],
-  ["Pissotte", "85", ["Pipiotte", "Rigolette", "Fontainotte"]],
-  ["Bouzigues", "34", ["Bouziques", "Moulignac", "Huîtrigues"]],
-  ["Gigondas", "84", ["Gigotas", "Rôtigonde", "Gigolas"]],
-  ["Rognes", "13", ["Grognes", "Bougonnes", "Ronchons"]],
-  ["Agonges", "03", ["Aronges", "Agonie-sur-Allier", "Ogonges"]],
-  ["Ennordres", "18", ["Endésordre", "Enrangées", "Biendordre"]],
-  ["Sorbets", "32", ["Granités", "Glacières", "Sorbetière"]],
-  ["Gratot", "50", ["Grattoir", "Démangeot", "Gratteville"]],
-  ["Chamboulive", "19", ["Chambouletout", "Renversac", "Chamboulade"]],
-  ["Chaudes-Aigues", "15", ["Tièdes-Aigues", "Froides-Fontaines", "Bouillantes-Eaux"]],
-  ["Sermamagny", "90", ["Sermonagny", "Sermadamy", "Homélie-sur-Savoureuse"]],
-  ["Moustoir-Ac", "56", ["Moutardoir-Ac", "Moustique-Ac", "Mousseron-Ac"]],
-  ["Ploufragan", "22", ["Plouffragon", "Plongeagan", "Plouf-sur-Gouët"]],
-  ["Grignols", "24", ["Grignotte", "Croquignols", "Mâchouls"]],
-  ["Lupcourt", "54", ["Loupcourt", "Renardcourt", "Louvecourt-sur-Meurthe"]],
-  ["Mouillac", "82", ["Trempac", "Arrosac", "Ruisselac"]]
+  [
+   "Allemagne-en-Provence",
+   "04",
+   [
+    "Angleterre-en-Provence",
+    "Hollande-sur-Verdon",
+    "Suède-en-Lubéron"
+   ]
+  ],
+  [
+   "Pissotte",
+   "85",
+   [
+    "Pipiotte",
+    "Rigolette",
+    "Fontainotte"
+   ]
+  ],
+  [
+   "Bouzigues",
+   "34",
+   [
+    "Bouziques",
+    "Moulignac",
+    "Huîtrigues"
+   ]
+  ],
+  [
+   "Gigondas",
+   "84",
+   [
+    "Gigotas",
+    "Rôtigonde",
+    "Gigolas"
+   ]
+  ],
+  [
+   "Rognes",
+   "13",
+   [
+    "Grognes",
+    "Bougonnes",
+    "Ronchons"
+   ]
+  ],
+  [
+   "Agonges",
+   "03",
+   [
+    "Aronges",
+    "Agonie-sur-Allier",
+    "Ogonges"
+   ]
+  ],
+  [
+   "Ennordres",
+   "18",
+   [
+    "Endésordre",
+    "Enrangées",
+    "Biendordre"
+   ]
+  ],
+  [
+   "Sorbets",
+   "32",
+   [
+    "Granités",
+    "Glacières",
+    "Sorbetière"
+   ]
+  ],
+  [
+   "Gratot",
+   "50",
+   [
+    "Grattoir",
+    "Démangeot",
+    "Gratteville"
+   ]
+  ],
+  [
+   "Chamboulive",
+   "19",
+   [
+    "Chambouletout",
+    "Renversac",
+    "Chamboulade"
+   ]
+  ],
+  [
+   "Chaudes-Aigues",
+   "15",
+   [
+    "Tièdes-Aigues",
+    "Froides-Fontaines",
+    "Bouillantes-Eaux"
+   ]
+  ],
+  [
+   "Sermamagny",
+   "90",
+   [
+    "Sermonagny",
+    "Sermadamy",
+    "Homélie-sur-Savoureuse"
+   ]
+  ],
+  [
+   "Moustoir-Ac",
+   "56",
+   [
+    "Moutardoir-Ac",
+    "Moustique-Ac",
+    "Mousseron-Ac"
+   ]
+  ],
+  [
+   "Ploufragan",
+   "22",
+   [
+    "Plouffragon",
+    "Plongeagan",
+    "Plouf-sur-Gouët"
+   ]
+  ],
+  [
+   "Grignols",
+   "24",
+   [
+    "Grignotte",
+    "Croquignols",
+    "Mâchouls"
+   ]
+  ],
+  [
+   "Lupcourt",
+   "54",
+   [
+    "Loupcourt",
+    "Renardcourt",
+    "Louvecourt-sur-Meurthe"
+   ]
+  ],
+  [
+   "Mouillac",
+   "82",
+   [
+    "Trempac",
+    "Arrosac",
+    "Ruisselac"
+   ]
+  ]
  ],
  "questions": [
-  {"id":"aigrefin","mot":"aigrefin","vraie":"Escroc qui vit d'expédients.","categorie":"n. m.","source":"wiktionary:aigrefin","cle":"escroc",
-   "faux":["Petit poisson des étangs.","Vin blanc trop acide.","Héron cendré des marais."]},
-  {"id":"argousin","mot":"argousin","vraie":"Agent de police, péjorativement.","categorie":"n. m.","source":"wiktionary:argousin","cle":"police",
-   "faux":["Arbuste épineux des dunes.","Marchand de ferraille ambulant.","Petit lézard vert des murets."]},
-  {"id":"baderne","mot":"baderne","vraie":"Homme âgé, aux idées dépassées.","categorie":"n. f.","registre":"familier","source":"wiktionary:baderne","cle":"vieil",
-   "faux":["Taverne mal famée du port.","Petite barque à fond plat.","Danse lente des campagnes."]},
-  {"id":"boustifaille","mot":"boustifaille","vraie":"Nourriture, repas copieux.","categorie":"n. f.","registre":"familier","source":"wiktionary:boustifaille",
-   "faux":["Bousculade à l'entrée d'un bal.","Petite boutique de quartier.","Querelle bruyante en famille."]},
-  {"id":"calembredaine","mot":"calembredaine","vraie":"Propos extravagant, plaisanterie sans valeur.","categorie":"n. f.","source":"wiktionary:calembredaine",
-   "faux":["Petite calèche à deux roues, tirée par un poney.","Chanson à boire des marins de la Méditerranée.","Pâtisserie feuilletée aux amandes et au miel."]},
-  {"id":"bisquer","mot":"bisquer","vraie":"Éprouver du dépit, enrager.","categorie":"v.","registre":"familier","source":"wiktionary:bisquer",
-   "faux":["Cuire au four deux fois.","Faire une soupe de homard.","Embrasser sur les deux joues."]},
-  {"id":"estourbir","mot":"estourbir","vraie":"Assommer, étourdir d'un coup.","categorie":"v.","registre":"familier","source":"wiktionary:estourbir",
-   "faux":["Faire mijoter à feu très doux.","Écosser des fèves fraîches.","Cirer ses bottes à la brosse."]},
-  {"id":"fifrelin","mot":"fifrelin","vraie":"Chose sans aucune valeur.","categorie":"n. m.","registre":"familier","source":"wiktionary:fifrelin",
-   "faux":["Petite flûte des fanfares.","Garçon tambour des régiments.","Pinson des forêts de l'Est."]},
-  {"id":"loupiot","mot":"loupiot","vraie":"Enfant, gamin.","categorie":"n. m.","registre":"familier","source":"wiktionary:loupiot",
-   "faux":["Jeune loup.","Petite loupe.","Lampe torche."]},
-  {"id":"margouillis","mot":"margouillis","vraie":"Gâchis, mélange boueux.","categorie":"n. m.","registre":"familier","source":"wiktionary:margouillis",
-   "faux":["Gros lézard des tropiques.","Cri des grenouilles le soir.","Ragoût de mouton aux navets."]},
-  {"id":"mistoufle","mot":"mistoufle","vraie":"Misère, pauvreté.","categorie":"n. f.","registre":"familier","source":"wiktionary:mistoufle",
-   "faux":["Petite moufle.","Chat de gouttière.","Pâte feuilletée."]},
-  {"id":"pandore","mot":"pandore","vraie":"Gendarme.","categorie":"n. m.","registre":"familier","source":"wiktionary:pandore","cle":"gendarme",
-   "faux":["Mandoline.","Panier rond.","Gros pain."]},
-  {"id":"pioupiou","mot":"pioupiou","vraie":"Jeune soldat d'infanterie.","categorie":"n. m.","registre":"familier","source":"wiktionary:pioupiou",
-   "faux":["Poussin tout juste éclos.","Petit sifflet en terre cuite.","Enfant qui pleure sans cesse."]},
-  {"id":"potache","mot":"potache","vraie":"Collégien, lycéen.","categorie":"n. m.","registre":"familier","source":"wiktionary:potache",
-   "faux":["Petit pot de terre.","Cuisinier de cantine.","Jardinier potager."]},
-  {"id":"zigoto","mot":"zigoto","vraie":"Individu bizarre, original.","categorie":"n. m.","registre":"familier","source":"wiktionary:zigoto",
-   "faux":["Fermier qui élève des oies.","Petit zèbre en peluche.","Danse en zigzag des foires."]},
-  {"id":"chaland","mot":"chaland","vraie":"Client d'un marchand.","categorie":"n. m.","source":"wiktionary:chaland","cle":"client",
-   "faux":["Chaudron de cuivre.","Feu de la Saint-Jean.","Gros chat de ferme."]},
-  {"id":"gargamelle","mot":"gargamelle","vraie":"Gorge, gosier.","categorie":"n. f.","registre":"familier","source":"wiktionary:gargamelle","cle":"gorge",
-   "faux":["Gargouille.","Gamelle.","Grosse cloche."]},
-  {"id":"gibus","mot":"gibus","vraie":"Chapeau haut de forme pliable, à ressorts.","categorie":"n. m.","source":"wiktionary:gibus",
-   "faux":["Petit gibier à plumes des haies et des prés.","Sac de cuir du chasseur, porté en bandoulière.","Bossu des contes populaires qui exauce les vœux."]},
-  {"id":"godiche","mot":"godiche","vraie":"Gauche, maladroit, niais.","categorie":"adj.","registre":"familier","source":"wiktionary:godiche",
-   "faux":["Gourmand de sucreries.","Bavard comme une pie.","Frileux en toute saison."]},
-  {"id":"roquentin","mot":"roquentin","vraie":"Vieillard ridicule qui joue au jeune homme.","categorie":"n. m.","source":"wiktionary:roquentin",
-   "faux":["Fromage de brebis affiné dans des grottes.","Petit rocher qui affleure à marée basse.","Moine ermite qui vit seul dans la montagne."]},
-  {"id":"panouille","mot":"panouille","vraie":"Personne maladroite, bonne à rien.","categorie":"n. f.","registre":"familier","source":"wiktionary:panouille","cle":"maladroit",
-   "faux":["Petit pain rond de seigle noir.","Grande poêle pour la paella.","Chemise de nuit en grosse toile."]},
-  {"id":"craque","mot":"craque","vraie":"Mensonge, histoire inventée.","categorie":"n. f.","registre":"familier","source":"wiktionary:craque","cle":"mensonge",
-   "faux":["Biscuit sec qui croustille.","Fente dans un mur de pierre.","Petite fêlure dans la glace."]},
-  {"id":"falot","mot":"falot","vraie":"Terne, insignifiant, sans personnalité.","categorie":"adj.","source":"wiktionary:falot","cle":"terne",
-   "faux":["Qui brille à la nuit tombée.","Qui aime les fêtes et les bals.","Qui parle haut et fort à table."]},
-  {"id":"ripaton","mot":"ripaton","vraie":"Pied.","categorie":"n. m.","registre":"familier","source":"wiktionary:ripaton",
-   "faux":["Repas.","Râteau.","Rapin."]},
-  {"id":"frusques","mot":"frusques","vraie":"Vêtements, souvent usés.","categorie":"n. f.","registre":"familier","source":"wiktionary:frusques",
-   "faux":["Fruits tombés de l'arbre.","Branches mortes du sous-bois.","Miettes au fond d'un sac."]},
-  {"id":"myrmidon","mot":"myrmidon","vraie":"Petit homme insignifiant.","categorie":"n. m.","source":"wiktionary:myrmidon","cle":"insignifiant",
-   "faux":["Fourmi des dunes.","Myrtille sauvage.","Mirliton de foire."]}
+  {
+   "id": "aigrefin",
+   "mot": "aigrefin",
+   "vraie": "Escroc qui vit d'expédients.",
+   "categorie": "n. m.",
+   "source": "wiktionary:aigrefin",
+   "cle": "escroc",
+   "faux": [
+    "Couteau à lame courbe.",
+    "Vin blanc trop acide.",
+    "Héron cendré des marais."
+   ]
+  },
+  {
+   "id": "argousin",
+   "mot": "argousin",
+   "vraie": "Agent de police, péjorativement.",
+   "categorie": "n. m.",
+   "source": "wiktionary:argousin",
+   "cle": "police",
+   "faux": [
+    "Arbuste épineux des dunes.",
+    "Marchand de ferraille ambulant.",
+    "Petit lézard vert des murets."
+   ]
+  },
+  {
+   "id": "baderne",
+   "mot": "baderne",
+   "vraie": "Homme âgé, aux idées dépassées.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:baderne",
+   "cle": "vieil",
+   "faux": [
+    "Taverne mal famée du port.",
+    "Petite barque à fond plat.",
+    "Danse lente des campagnes."
+   ]
+  },
+  {
+   "id": "boustifaille",
+   "mot": "boustifaille",
+   "vraie": "Nourriture, repas copieux.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:boustifaille",
+   "faux": [
+    "Bousculade à l'entrée d'un bal.",
+    "Petite boutique de quartier.",
+    "Querelle bruyante en famille."
+   ]
+  },
+  {
+   "id": "calembredaine",
+   "mot": "calembredaine",
+   "vraie": "Propos extravagant, plaisanterie sans valeur.",
+   "categorie": "n. f.",
+   "source": "wiktionary:calembredaine",
+   "faux": [
+    "Petite calèche à deux roues, tirée par un poney.",
+    "Chanson à boire des marins de la Méditerranée.",
+    "Pâtisserie feuilletée aux amandes et au miel."
+   ]
+  },
+  {
+   "id": "bisquer",
+   "mot": "bisquer",
+   "vraie": "Éprouver du dépit, enrager.",
+   "categorie": "v.",
+   "registre": "familier",
+   "source": "wiktionary:bisquer",
+   "faux": [
+    "Cuire au four deux fois.",
+    "Faire une soupe de homard.",
+    "Embrasser sur les deux joues."
+   ]
+  },
+  {
+   "id": "estourbir",
+   "mot": "estourbir",
+   "vraie": "Assommer, voire tuer.",
+   "categorie": "v.",
+   "registre": "familier",
+   "source": "wiktionary:estourbir",
+   "faux": [
+    "Faire mijoter à feu doux.",
+    "Écosser des fèves fraîches.",
+    "Cirer ses bottes à la brosse."
+   ]
+  },
+  {
+   "id": "fifrelin",
+   "mot": "fifrelin",
+   "vraie": "Chose sans aucune valeur.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:fifrelin",
+   "faux": [
+    "Petite flûte des fanfares.",
+    "Garçon tambour des régiments.",
+    "Pinson des forêts de l'Est."
+   ]
+  },
+  {
+   "id": "loupiot",
+   "mot": "loupiot",
+   "vraie": "Enfant, gamin.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:loupiot",
+   "faux": [
+    "Jeune loup.",
+    "Petite loupe.",
+    "Lampe torche."
+   ]
+  },
+  {
+   "id": "margouillis",
+   "mot": "margouillis",
+   "vraie": "Bourbier, lieu plein de boue.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:margouillis",
+   "faux": [
+    "Gros lézard des tropiques.",
+    "Cri des grenouilles le soir.",
+    "Ragoût de mouton aux navets."
+   ]
+  },
+  {
+   "id": "mistoufle",
+   "mot": "mistoufle",
+   "vraie": "Misère, pauvreté.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:mistoufle",
+   "faux": [
+    "Petite moufle.",
+    "Chat de gouttière.",
+    "Pâte feuilletée."
+   ]
+  },
+  {
+   "id": "pandore",
+   "mot": "pandore",
+   "vraie": "Gendarme.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:pandore",
+   "cle": "gendarme",
+   "faux": [
+    "Mandoline.",
+    "Panier rond.",
+    "Gros pain."
+   ]
+  },
+  {
+   "id": "pioupiou",
+   "mot": "pioupiou",
+   "vraie": "Jeune soldat d'infanterie.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:pioupiou",
+   "faux": [
+    "Toupie en bois des enfants.",
+    "Petit sifflet en terre cuite.",
+    "Enfant qui pleure sans cesse."
+   ]
+  },
+  {
+   "id": "potache",
+   "mot": "potache",
+   "vraie": "Collégien, lycéen.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:potache",
+   "faux": [
+    "Petit pot de terre.",
+    "Cuisinier de cantine.",
+    "Jardinier potager."
+   ]
+  },
+  {
+   "id": "zigoto",
+   "mot": "zigoto",
+   "vraie": "Individu bizarre, original.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:zigoto",
+   "faux": [
+    "Fermier qui élève des oies.",
+    "Petit zèbre en peluche.",
+    "Danse en zigzag des foires."
+   ]
+  },
+  {
+   "id": "chaland",
+   "mot": "chaland",
+   "vraie": "Client d'un marchand.",
+   "categorie": "n. m.",
+   "source": "wiktionary:chaland",
+   "cle": "client",
+   "faux": [
+    "Chaudron de cuivre.",
+    "Feu de la Saint-Jean.",
+    "Gros chat de ferme."
+   ]
+  },
+  {
+   "id": "gargamelle",
+   "mot": "gargamelle",
+   "vraie": "Gorge, gosier.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:gargamelle",
+   "cle": "Gosier",
+   "faux": [
+    "Gargouille.",
+    "Gamelle.",
+    "Grosse cloche."
+   ]
+  },
+  {
+   "id": "gibus",
+   "mot": "gibus",
+   "vraie": "Chapeau haut de forme pliable, à ressorts.",
+   "categorie": "n. m.",
+   "source": "wiktionary:gibus",
+   "faux": [
+    "Petit gibier à plumes des haies et des prés.",
+    "Sac de cuir du chasseur, porté en bandoulière.",
+    "Bossu des contes populaires qui exauce les vœux."
+   ]
+  },
+  {
+   "id": "godiche",
+   "mot": "godiche",
+   "vraie": "Gauche, maladroit, niais.",
+   "categorie": "adj.",
+   "registre": "familier",
+   "source": "wiktionary:godiche",
+   "faux": [
+    "Gourmand de sucreries.",
+    "Bavard comme une pie.",
+    "Frileux en toute saison."
+   ]
+  },
+  {
+   "id": "roquentin",
+   "mot": "roquentin",
+   "vraie": "Vieillard ridicule qui joue au jeune homme.",
+   "categorie": "n. m.",
+   "source": "wiktionary:roquentin",
+   "faux": [
+    "Fromage de brebis affiné dans des grottes.",
+    "Petit rocher qui affleure à marée basse.",
+    "Moine ermite qui vit seul dans la montagne."
+   ],
+   "cle": "ridicule"
+  },
+  {
+   "id": "panouille",
+   "mot": "panouille",
+   "vraie": "Personne maladroite, bonne à rien.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:panouille",
+   "cle": "maladroit",
+   "faux": [
+    "Petit pain rond de seigle noir.",
+    "Grande poêle pour la paella.",
+    "Chemise de nuit en grosse toile."
+   ]
+  },
+  {
+   "id": "craque",
+   "mot": "craque",
+   "vraie": "Mensonge, histoire inventée.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:craque",
+   "cle": "mensonge",
+   "faux": [
+    "Biscuit sec qui croustille.",
+    "Fente dans un mur de pierre.",
+    "Petite fêlure dans la glace."
+   ]
+  },
+  {
+   "id": "falot",
+   "mot": "falot",
+   "vraie": "Terne, insignifiant, sans personnalité.",
+   "categorie": "adj.",
+   "source": "wiktionary:falot",
+   "cle": "terne",
+   "faux": [
+    "Qui aime les feux d'artifice.",
+    "Qui aime les fêtes et les bals.",
+    "Qui parle haut et fort à table."
+   ]
+  },
+  {
+   "id": "ripaton",
+   "mot": "ripaton",
+   "vraie": "Pied.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:ripaton",
+   "faux": [
+    "Repas.",
+    "Râteau.",
+    "Rapin."
+   ]
+  },
+  {
+   "id": "frusques",
+   "mot": "frusques",
+   "vraie": "Vêtements, souvent usés.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:frusques",
+   "faux": [
+    "Fruits tombés de l'arbre.",
+    "Branches mortes du sous-bois.",
+    "Miettes au fond d'un sac."
+   ]
+  },
+  {
+   "id": "myrmidon",
+   "mot": "myrmidon",
+   "vraie": "Petit homme insignifiant.",
+   "categorie": "n. m.",
+   "source": "wiktionary:myrmidon",
+   "cle": "insignifiant",
+   "faux": [
+    "Fourmi rousse des dunes.",
+    "Myrtille sauvage des bois.",
+    "Mirliton des fêtes foraines."
+   ]
+  }
  ]
 }

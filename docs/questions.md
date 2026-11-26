@@ -214,6 +214,10 @@ répond 429 à urllib).
   une marionnette, le faux « marionnette » écarté. Pied-plat : « lâche »
   (Wiktionnaire), pas « grossier ». Carabin : premier sens, un cavalier ; le
   faux « garde de la maréchaussée » écarté.
+- Lot 13 : 17 communes, 26 définitions. Faux trop proches du premier sens
+  écartés : aigrefin (un poisson), pioupiou (cri des poussins). Mot-clé
+  exigé quand le sens retenu n'est pas le premier (argousin, baderne,
+  pandore, roquentin, panouille, falot…).
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux
