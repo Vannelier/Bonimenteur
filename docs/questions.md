@@ -158,6 +158,10 @@ répond 429 à urllib).
   la confond avec Grossouvre, Cher). « turlutaine » : propos frivole, pas
   idée fixe (Wiktionnaire). Vraies d'« escarbille » et de « pataquès »
   raccourcies, deux fois plus longues que leurs faux.
+- Lot 02 : 18 communes, 17 définitions. « Crac'h » s'écrit « Crach » dans la
+  base officielle. « pouacre » sans « avare », « baguenauder » sans
+  « promener » (premiers sens du Wiktionnaire). Un faux de « pignouf » trop
+  proche pour l'arbitre, réécrit.
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux

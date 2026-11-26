@@ -1825,5 +1825,238 @@
   "vraie": "Absence de volonté, incapacité à se décider.",
   "categorie": "n. f.",
   "source": "wiktionary:aboulie"
+ },
+ "c-vatan": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Indre existe réellement ?",
+  "type": "commune",
+  "vraie": "Vatan",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-martignargues": {
+  "mot": "",
+  "question": "Quel nom de commune du Gard existe réellement ?",
+  "type": "commune",
+  "vraie": "Martignargues",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-chatuzange-le-goubet": {
+  "mot": "",
+  "question": "Quel nom de commune de la Drôme existe réellement ?",
+  "type": "commune",
+  "vraie": "Chatuzange-le-Goubet",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-glandage": {
+  "mot": "",
+  "question": "Quel nom de commune de la Drôme existe réellement ?",
+  "type": "commune",
+  "vraie": "Glandage",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-moncrabeau": {
+  "mot": "",
+  "question": "Quel nom de commune de Lot-et-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Moncrabeau",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cucq": {
+  "mot": "",
+  "question": "Quel nom de commune du Pas-de-Calais existe réellement ?",
+  "type": "commune",
+  "vraie": "Cucq",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bouc-bel-air": {
+  "mot": "",
+  "question": "Quel nom de commune des Bouches-du-Rhône existe réellement ?",
+  "type": "commune",
+  "vraie": "Bouc-Bel-Air",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-la-bourboule": {
+  "mot": "",
+  "question": "Quel nom de commune du Puy-de-Dôme existe réellement ?",
+  "type": "commune",
+  "vraie": "La Bourboule",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-suce-sur-erdre": {
+  "mot": "",
+  "question": "Quel nom de commune de la Loire-Atlantique existe réellement ?",
+  "type": "commune",
+  "vraie": "Sucé-sur-Erdre",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-lardy": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Essonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Lardy",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-gousse": {
+  "mot": "",
+  "question": "Quel nom de commune des Landes existe réellement ?",
+  "type": "commune",
+  "vraie": "Gousse",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-crach": {
+  "mot": "",
+  "question": "Quel nom de commune du Morbihan existe réellement ?",
+  "type": "commune",
+  "vraie": "Crach",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-vieux-boucau-les-bains": {
+  "mot": "",
+  "question": "Quel nom de commune des Landes existe réellement ?",
+  "type": "commune",
+  "vraie": "Vieux-Boucau-les-Bains",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-poupry": {
+  "mot": "",
+  "question": "Quel nom de commune d'Eure-et-Loir existe réellement ?",
+  "type": "commune",
+  "vraie": "Poupry",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-brulon": {
+  "mot": "",
+  "question": "Quel nom de commune de la Sarthe existe réellement ?",
+  "type": "commune",
+  "vraie": "Brûlon",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-lacave": {
+  "mot": "",
+  "question": "Quel nom de commune du Lot existe réellement ?",
+  "type": "commune",
+  "vraie": "Lacave",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-grosbliederstroff": {
+  "mot": "",
+  "question": "Quel nom de commune de la Moselle existe réellement ?",
+  "type": "commune",
+  "vraie": "Grosbliederstroff",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-gargilesse-dampierre": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Indre existe réellement ?",
+  "type": "commune",
+  "vraie": "Gargilesse-Dampierre",
+  "source": "geo.api.gouv.fr"
+ },
+ "barguigner": {
+  "mot": "barguigner",
+  "vraie": "Hésiter, avoir du mal à se décider.",
+  "categorie": "v.",
+  "source": "wiktionary:barguigner"
+ },
+ "ebaubi": {
+  "mot": "ébaubi",
+  "vraie": "Très étonné, stupéfait.",
+  "categorie": "adj.",
+  "source": "wiktionary:ébaubi"
+ },
+ "baguenauder": {
+  "mot": "baguenauder",
+  "vraie": "Flâner, s'amuser à des riens.",
+  "categorie": "v.",
+  "source": "wiktionary:baguenauder"
+ },
+ "godelureau": {
+  "mot": "godelureau",
+  "vraie": "Jeune homme qui fait le joli cœur auprès des femmes.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:godelureau"
+ },
+ "pignouf": {
+  "mot": "pignouf",
+  "vraie": "Homme grossier, mal élevé.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:pignouf"
+ },
+ "pouacre": {
+  "mot": "pouacre",
+  "vraie": "Sale, repoussant, malpropre.",
+  "categorie": "adj.",
+  "source": "wiktionary:pouacre"
+ },
+ "estaminet": {
+  "mot": "estaminet",
+  "vraie": "Petit café populaire, dans le Nord et en Belgique.",
+  "categorie": "n. m.",
+  "source": "wiktionary:estaminet"
+ },
+ "galimafree": {
+  "mot": "galimafrée",
+  "vraie": "Ragoût fait de restes, plat peu appétissant.",
+  "categorie": "n. f.",
+  "source": "wiktionary:galimafrée"
+ },
+ "vertugadin": {
+  "mot": "vertugadin",
+  "vraie": "Bourrelet qui faisait bouffer la jupe autour des hanches.",
+  "categorie": "n. m.",
+  "source": "wiktionary:vertugadin"
+ },
+ "sabouler": {
+  "mot": "sabouler",
+  "vraie": "Malmener, bousculer quelqu'un.",
+  "categorie": "v.",
+  "registre": "familier",
+  "source": "wiktionary:sabouler"
+ },
+ "foutriquet": {
+  "mot": "foutriquet",
+  "vraie": "Petit homme sans importance, sans valeur.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:foutriquet"
+ },
+ "matois": {
+  "mot": "matois",
+  "vraie": "Rusé, qui agit en finesse.",
+  "categorie": "adj.",
+  "source": "wiktionary:matois"
+ },
+ "faquin": {
+  "mot": "faquin",
+  "vraie": "Homme méprisable et impertinent.",
+  "categorie": "n. m.",
+  "source": "wiktionary:faquin"
+ },
+ "rapiat": {
+  "mot": "rapiat",
+  "vraie": "Avare, qui regarde à la dépense.",
+  "categorie": "adj.",
+  "registre": "familier",
+  "source": "wiktionary:rapiat"
+ },
+ "petuner": {
+  "mot": "pétuner",
+  "vraie": "Fumer du tabac, autrefois.",
+  "categorie": "v.",
+  "source": "wiktionary:pétuner"
+ },
+ "lanterner": {
+  "mot": "lanterner",
+  "vraie": "Perdre son temps, traîner en longueur.",
+  "categorie": "v.",
+  "source": "wiktionary:lanterner"
+ },
+ "brouet": {
+  "mot": "brouet",
+  "vraie": "Bouillon léger, soupe peu nourrissante.",
+  "categorie": "n. m.",
+  "source": "wiktionary:brouet"
  }
 }

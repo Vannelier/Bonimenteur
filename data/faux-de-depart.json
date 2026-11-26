@@ -3808,5 +3808,530 @@
   "id": "t-aboulie-3",
   "mot": "aboulie",
   "texte": "Sommeil profond des marmottes."
+ },
+ {
+  "id": "t-c-vatan-1",
+  "mot": "c-vatan",
+  "texte": "Revatan"
+ },
+ {
+  "id": "t-c-vatan-2",
+  "mot": "c-vatan",
+  "texte": "Allevatan"
+ },
+ {
+  "id": "t-c-vatan-3",
+  "mot": "c-vatan",
+  "texte": "Partan"
+ },
+ {
+  "id": "t-c-martignargues-1",
+  "mot": "c-martignargues",
+  "texte": "Marteaugues"
+ },
+ {
+  "id": "t-c-martignargues-2",
+  "mot": "c-martignargues",
+  "texte": "Martinvalgues"
+ },
+ {
+  "id": "t-c-martignargues-3",
+  "mot": "c-martignargues",
+  "texte": "Clouargues"
+ },
+ {
+  "id": "t-c-chatuzange-le-goubet-1",
+  "mot": "c-chatuzange-le-goubet",
+  "texte": "Chabouzange-le-Gobelet"
+ },
+ {
+  "id": "t-c-chatuzange-le-goubet-2",
+  "mot": "c-chatuzange-le-goubet",
+  "texte": "Matouzange-le-Goupil"
+ },
+ {
+  "id": "t-c-chatuzange-le-goubet-3",
+  "mot": "c-chatuzange-le-goubet",
+  "texte": "Chaterange-le-Bouquet"
+ },
+ {
+  "id": "t-c-glandage-1",
+  "mot": "c-glandage",
+  "texte": "Flânage"
+ },
+ {
+  "id": "t-c-glandage-2",
+  "mot": "c-glandage",
+  "texte": "Paressac"
+ },
+ {
+  "id": "t-c-glandage-3",
+  "mot": "c-glandage",
+  "texte": "Traînage"
+ },
+ {
+  "id": "t-c-moncrabeau-1",
+  "mot": "c-moncrabeau",
+  "texte": "Monhomard"
+ },
+ {
+  "id": "t-c-moncrabeau-2",
+  "mot": "c-moncrabeau",
+  "texte": "Moncrevette"
+ },
+ {
+  "id": "t-c-moncrabeau-3",
+  "mot": "c-moncrabeau",
+  "texte": "Monlangouste"
+ },
+ {
+  "id": "t-c-cucq-1",
+  "mot": "c-cucq",
+  "texte": "Cuqs"
+ },
+ {
+  "id": "t-c-cucq-2",
+  "mot": "c-cucq",
+  "texte": "Couicq"
+ },
+ {
+  "id": "t-c-cucq-3",
+  "mot": "c-cucq",
+  "texte": "Pucq"
+ },
+ {
+  "id": "t-c-bouc-bel-air-1",
+  "mot": "c-bouc-bel-air",
+  "texte": "Chèvre-Bon-Vent"
+ },
+ {
+  "id": "t-c-bouc-bel-air-2",
+  "mot": "c-bouc-bel-air",
+  "texte": "Bélier-Bel-Air"
+ },
+ {
+  "id": "t-c-bouc-bel-air-3",
+  "mot": "c-bouc-bel-air",
+  "texte": "Mouton-Beau-Ciel"
+ },
+ {
+  "id": "t-c-la-bourboule-1",
+  "mot": "c-la-bourboule",
+  "texte": "La Barbouille"
+ },
+ {
+  "id": "t-c-la-bourboule-2",
+  "mot": "c-la-bourboule",
+  "texte": "La Gribouille"
+ },
+ {
+  "id": "t-c-la-bourboule-3",
+  "mot": "c-la-bourboule",
+  "texte": "La Bourbouille"
+ },
+ {
+  "id": "t-c-suce-sur-erdre-1",
+  "mot": "c-suce-sur-erdre",
+  "texte": "Salé-sur-Erdre"
+ },
+ {
+  "id": "t-c-suce-sur-erdre-2",
+  "mot": "c-suce-sur-erdre",
+  "texte": "Poivré-sur-Erdre"
+ },
+ {
+  "id": "t-c-suce-sur-erdre-3",
+  "mot": "c-suce-sur-erdre",
+  "texte": "Sucré-sur-Loire"
+ },
+ {
+  "id": "t-c-lardy-1",
+  "mot": "c-lardy",
+  "texte": "Saindoux"
+ },
+ {
+  "id": "t-c-lardy-2",
+  "mot": "c-lardy",
+  "texte": "Graissy"
+ },
+ {
+  "id": "t-c-lardy-3",
+  "mot": "c-lardy",
+  "texte": "Couenny"
+ },
+ {
+  "id": "t-c-gousse-1",
+  "mot": "c-gousse",
+  "texte": "Cosse"
+ },
+ {
+  "id": "t-c-gousse-2",
+  "mot": "c-gousse",
+  "texte": "Pépinas"
+ },
+ {
+  "id": "t-c-gousse-3",
+  "mot": "c-gousse",
+  "texte": "Graine-sur-Adour"
+ },
+ {
+  "id": "t-c-crach-1",
+  "mot": "c-crach",
+  "texte": "Ploufec"
+ },
+ {
+  "id": "t-c-crach-2",
+  "mot": "c-crach",
+  "texte": "Bamoc"
+ },
+ {
+  "id": "t-c-crach-3",
+  "mot": "c-crach",
+  "texte": "Clacour"
+ },
+ {
+  "id": "t-c-vieux-boucau-les-bains-1",
+  "mot": "c-vieux-boucau-les-bains",
+  "texte": "Vieux-Biscuit-les-Bains"
+ },
+ {
+  "id": "t-c-vieux-boucau-les-bains-2",
+  "mot": "c-vieux-boucau-les-bains",
+  "texte": "Vieux-Bocal-les-Bains"
+ },
+ {
+  "id": "t-c-vieux-boucau-les-bains-3",
+  "mot": "c-vieux-boucau-les-bains",
+  "texte": "Jeune-Boucau-les-Pins"
+ },
+ {
+  "id": "t-c-poupry-1",
+  "mot": "c-poupry",
+  "texte": "Poupette"
+ },
+ {
+  "id": "t-c-poupry-2",
+  "mot": "c-poupry",
+  "texte": "Bébéry"
+ },
+ {
+  "id": "t-c-poupry-3",
+  "mot": "c-poupry",
+  "texte": "Poupinville"
+ },
+ {
+  "id": "t-c-brulon-1",
+  "mot": "c-brulon",
+  "texte": "Cramon"
+ },
+ {
+  "id": "t-c-brulon-2",
+  "mot": "c-brulon",
+  "texte": "Roussy-le-Brûlé"
+ },
+ {
+  "id": "t-c-brulon-3",
+  "mot": "c-brulon",
+  "texte": "Grillon-sur-Sarthe"
+ },
+ {
+  "id": "t-c-lacave-1",
+  "mot": "c-lacave",
+  "texte": "Legrenier"
+ },
+ {
+  "id": "t-c-lacave-2",
+  "mot": "c-lacave",
+  "texte": "Lacuisine"
+ },
+ {
+  "id": "t-c-lacave-3",
+  "mot": "c-lacave",
+  "texte": "Laterrasse"
+ },
+ {
+  "id": "t-c-grosbliederstroff-1",
+  "mot": "c-grosbliederstroff",
+  "texte": "Petitbliederstroff"
+ },
+ {
+  "id": "t-c-grosbliederstroff-2",
+  "mot": "c-grosbliederstroff",
+  "texte": "Kleinbiergarten"
+ },
+ {
+  "id": "t-c-grosbliederstroff-3",
+  "mot": "c-grosbliederstroff",
+  "texte": "Grosschnauzerdorf"
+ },
+ {
+  "id": "t-c-gargilesse-dampierre-1",
+  "mot": "c-gargilesse-dampierre",
+  "texte": "Gargouille-Dampierre"
+ },
+ {
+  "id": "t-c-gargilesse-dampierre-2",
+  "mot": "c-gargilesse-dampierre",
+  "texte": "Gargarisse-Dampierre"
+ },
+ {
+  "id": "t-c-gargilesse-dampierre-3",
+  "mot": "c-gargilesse-dampierre",
+  "texte": "Gazouillesse-Dampierre"
+ },
+ {
+  "id": "t-barguigner-1",
+  "mot": "barguigner",
+  "texte": "Marchander un bateau au port."
+ },
+ {
+  "id": "t-barguigner-2",
+  "mot": "barguigner",
+  "texte": "Ronfler bruyamment en dormant."
+ },
+ {
+  "id": "t-barguigner-3",
+  "mot": "barguigner",
+  "texte": "Chanter faux à la messe du dimanche."
+ },
+ {
+  "id": "t-ebaubi-1",
+  "mot": "ebaubi",
+  "texte": "Couvert de boue séchée."
+ },
+ {
+  "id": "t-ebaubi-2",
+  "mot": "ebaubi",
+  "texte": "Ivre au point de bégayer."
+ },
+ {
+  "id": "t-ebaubi-3",
+  "mot": "ebaubi",
+  "texte": "Vêtu de neuf, endimanché."
+ },
+ {
+  "id": "t-baguenauder-1",
+  "mot": "baguenauder",
+  "texte": "Enfiler des bagues à chaque doigt."
+ },
+ {
+  "id": "t-baguenauder-2",
+  "mot": "baguenauder",
+  "texte": "Pêcher l'anguille à la nasse."
+ },
+ {
+  "id": "t-baguenauder-3",
+  "mot": "baguenauder",
+  "texte": "Ronchonner dans sa barbe."
+ },
+ {
+  "id": "t-godelureau-1",
+  "mot": "godelureau",
+  "texte": "Petit verre à pied pour goûter le vin nouveau."
+ },
+ {
+  "id": "t-godelureau-2",
+  "mot": "godelureau",
+  "texte": "Apprenti du cordonnier chargé de cirer les bottes."
+ },
+ {
+  "id": "t-godelureau-3",
+  "mot": "godelureau",
+  "texte": "Gros oiseau des marais qui gobe les grenouilles."
+ },
+ {
+  "id": "t-pignouf-1",
+  "mot": "pignouf",
+  "texte": "Petit pain rond aux raisins."
+ },
+ {
+  "id": "t-pignouf-2",
+  "mot": "pignouf",
+  "texte": "Chien de chasse au poil ras."
+ },
+ {
+  "id": "t-pignouf-3",
+  "mot": "pignouf",
+  "texte": "Bonnet de nuit à mèche."
+ },
+ {
+  "id": "t-pouacre-1",
+  "mot": "pouacre",
+  "texte": "Qui pique comme une ortie."
+ },
+ {
+  "id": "t-pouacre-2",
+  "mot": "pouacre",
+  "texte": "Bavard et un peu menteur."
+ },
+ {
+  "id": "t-pouacre-3",
+  "mot": "pouacre",
+  "texte": "Pâle comme un navet."
+ },
+ {
+  "id": "t-estaminet-1",
+  "mot": "estaminet",
+  "texte": "Petite cloche qui sonne l'angélus du soir."
+ },
+ {
+  "id": "t-estaminet-2",
+  "mot": "estaminet",
+  "texte": "Étameur ambulant qui réparait les casseroles."
+ },
+ {
+  "id": "t-estaminet-3",
+  "mot": "estaminet",
+  "texte": "Coffret de bois où l'on range les estampes."
+ },
+ {
+  "id": "t-galimafree-1",
+  "mot": "galimafree",
+  "texte": "Galère à deux mâts de la flotte royale."
+ },
+ {
+  "id": "t-galimafree-2",
+  "mot": "galimafree",
+  "texte": "Querelle de femmes au lavoir du village."
+ },
+ {
+  "id": "t-galimafree-3",
+  "mot": "galimafree",
+  "texte": "Coiffe de dentelle des Normandes."
+ },
+ {
+  "id": "t-vertugadin-1",
+  "mot": "vertugadin",
+  "texte": "Petit jardin de buis taillé devant une maison de maître."
+ },
+ {
+  "id": "t-vertugadin-2",
+  "mot": "vertugadin",
+  "texte": "Liqueur verte des moines, servie après le repas."
+ },
+ {
+  "id": "t-vertugadin-3",
+  "mot": "vertugadin",
+  "texte": "Garde champêtre chargé de surveiller les vignes."
+ },
+ {
+  "id": "t-sabouler-1",
+  "mot": "sabouler",
+  "texte": "Danser en sabots sur le parquet."
+ },
+ {
+  "id": "t-sabouler-2",
+  "mot": "sabouler",
+  "texte": "Saupoudrer de sable un sol mouillé."
+ },
+ {
+  "id": "t-sabouler-3",
+  "mot": "sabouler",
+  "texte": "Boire à la régalade, la tête en arrière."
+ },
+ {
+  "id": "t-foutriquet-1",
+  "mot": "foutriquet",
+  "texte": "Fouet court des cochers de fiacre."
+ },
+ {
+  "id": "t-foutriquet-2",
+  "mot": "foutriquet",
+  "texte": "Petit verre d'eau-de-vie bu d'un trait."
+ },
+ {
+  "id": "t-foutriquet-3",
+  "mot": "foutriquet",
+  "texte": "Jeu de cartes des tripots de faubourg."
+ },
+ {
+  "id": "t-matois-1",
+  "mot": "matois",
+  "texte": "Terne, sans éclat, mat."
+ },
+ {
+  "id": "t-matois-2",
+  "mot": "matois",
+  "texte": "Qui se lève avant l'aube."
+ },
+ {
+  "id": "t-matois-3",
+  "mot": "matois",
+  "texte": "Né sous le signe du bélier."
+ },
+ {
+  "id": "t-faquin-1",
+  "mot": "faquin",
+  "texte": "Porteur de lanterne des rues la nuit."
+ },
+ {
+  "id": "t-faquin-2",
+  "mot": "faquin",
+  "texte": "Mannequin d'osier pour les tailleurs."
+ },
+ {
+  "id": "t-faquin-3",
+  "mot": "faquin",
+  "texte": "Petit faucon dressé pour la chasse."
+ },
+ {
+  "id": "t-rapiat-1",
+  "mot": "rapiat",
+  "texte": "Rapide comme un lièvre."
+ },
+ {
+  "id": "t-rapiat-2",
+  "mot": "rapiat",
+  "texte": "Couvert de petites croûtes."
+ },
+ {
+  "id": "t-rapiat-3",
+  "mot": "rapiat",
+  "texte": "Qui parle avec un fort accent."
+ },
+ {
+  "id": "t-petuner-1",
+  "mot": "petuner",
+  "texte": "Péter de rire, s'esclaffer."
+ },
+ {
+  "id": "t-petuner-2",
+  "mot": "petuner",
+  "texte": "Faire des petits pâtés de sable."
+ },
+ {
+  "id": "t-petuner-3",
+  "mot": "petuner",
+  "texte": "Tricoter un gilet de laine."
+ },
+ {
+  "id": "t-lanterner-1",
+  "mot": "lanterner",
+  "texte": "Pendre un voleur à un réverbère."
+ },
+ {
+  "id": "t-lanterner-2",
+  "mot": "lanterner",
+  "texte": "Allumer les lampes à huile de la rue."
+ },
+ {
+  "id": "t-lanterner-3",
+  "mot": "lanterner",
+  "texte": "Surveiller un troupeau la nuit venue."
+ },
+ {
+  "id": "t-brouet-1",
+  "mot": "brouet",
+  "texte": "Petite brouette à une seule roue."
+ },
+ {
+  "id": "t-brouet-2",
+  "mot": "brouet",
+  "texte": "Brume légère du matin sur les prés."
+ },
+ {
+  "id": "t-brouet-3",
+  "mot": "brouet",
+  "texte": "Jeune bœuf qui n'a pas encore labouré."
  }
 ]
