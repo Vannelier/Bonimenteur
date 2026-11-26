@@ -162,6 +162,11 @@ répond 429 à urllib).
   base officielle. « pouacre » sans « avare », « baguenauder » sans
   « promener » (premiers sens du Wiktionnaire). Un faux de « pignouf » trop
   proche pour l'arbitre, réécrit.
+- Lot 03 : 10 expressions (origine), 10 mots étrangers, 9 expressions
+  étrangères. Contrôle des sources (`cle` du lot : la page existe et contient
+  le mot-clé). Cordon-bleu sourcé par « cordon bleu », qui porte l'ordre du
+  Saint-Esprit. Écartée faute de page : « montrer où les écrevisses passent
+  l'hiver » (russe).
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux

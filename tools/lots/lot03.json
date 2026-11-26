@@ -1,0 +1,400 @@
+{
+ "questions": [
+  {
+   "id": "e-marrons",
+   "mot": "tirer les marrons du feu",
+   "type": "expression",
+   "source": "wikipedia:Le Singe et le Chat",
+   "cle": "marrons",
+   "vraie": "D'une fable de La Fontaine : le chat se brûle les pattes à sortir les marrons que le singe mange.",
+   "faux": [
+    "Des marchands de marrons chauds de Paris, qui louaient des enfants pour surveiller leur brasero.",
+    "D'un jeu de foire où l'on gagnait un sou en sortant un marron des braises à mains nues.",
+    "Des soldats en campagne qui volaient les châtaignes grillées au feu des paysans la nuit."
+   ]
+  },
+  {
+   "id": "e-moutons",
+   "mot": "revenons à nos moutons",
+   "type": "expression",
+   "source": "wiktionary:revenons à nos moutons",
+   "cle": "Pathelin",
+   "vraie": "De la Farce de maître Pathelin, où le juge ramène sans cesse un procès à des moutons volés.",
+   "faux": [
+    "Des bergers des Causses, qui finissaient toute veillée en comptant leurs bêtes pour dormir.",
+    "D'un sermon de curé de campagne qui revenait toujours à la parabole de la brebis égarée.",
+    "Des tondeurs de laine, payés au mouton, qui coupaient court à tout bavardage sur le pré."
+   ]
+  },
+  {
+   "id": "e-limoger",
+   "mot": "être limogé",
+   "type": "expression",
+   "source": "wiktionary:limoger",
+   "cle": "Limoges",
+   "vraie": "En 1914, Joffre éloigna à Limoges les généraux qu'il jugeait incapables.",
+   "faux": [
+    "Des porcelainiers de Limoges, qui brisaient les pièces ratées au sortir du four.",
+    "D'une prison de Limoges où l'on enfermait les fonctionnaires en disgrâce.",
+    "Des limousins, ces grands manteaux qu'on retirait aux cochers renvoyés."
+   ]
+  },
+  {
+   "id": "e-boycott",
+   "mot": "boycotter",
+   "type": "expression",
+   "source": "wiktionary:boycotter",
+   "cle": "Boycott",
+   "vraie": "De Charles Boycott, régisseur irlandais que tout le pays mit en quarantaine en 1880.",
+   "faux": [
+    "D'un jeu de garçons anglais où l'on chassait du terrain le joueur qui trichait.",
+    "Des marins hollandais qui refusaient de monter à bord d'un bateau jugé maudit.",
+    "D'un marchand de coton de Boston, ruiné par ses clients après un scandale."
+   ]
+  },
+  {
+   "id": "e-gemonies",
+   "mot": "vouer aux gémonies",
+   "type": "expression",
+   "source": "wiktionary:vouer aux gémonies",
+   "cle": "Rome",
+   "vraie": "À Rome, les corps des condamnés étaient exposés sur l'escalier des Gémonies.",
+   "faux": [
+    "Des jumeaux de la mythologie grecque, chargés de punir les menteurs aux Enfers.",
+    "D'un monastère où les moines pénitents gémissaient toute la nuit en priant.",
+    "Des Gémonies, ces pierres précieuses qu'on jetait au fleuve pour conjurer le sort."
+   ]
+  },
+  {
+   "id": "e-vau",
+   "mot": "aller à vau-l'eau",
+   "type": "expression",
+   "source": "wiktionary:à vau-l’eau",
+   "cle": "val",
+   "vraie": "« À vau-l'eau », c'est « à val l'eau » : en suivant le courant, vers le bas.",
+   "faux": [
+    "D'un vieux jeu de veau, qu'on lâchait sur la glace d'un étang gelé, pour rire.",
+    "Des lavandières dont le linge mal battu partait avec le courant de la rivière.",
+    "D'un chemin de halage de la Loire, appelé Vau, qui finissait dans le fleuve."
+   ]
+  },
+  {
+   "id": "e-benedictin",
+   "mot": "un travail de bénédictin",
+   "type": "expression",
+   "source": "wiktionary:travail de bénédictin",
+   "cle": "bénédictin",
+   "vraie": "Des moines bénédictins, célèbres pour leurs immenses travaux d'érudition patients.",
+   "faux": [
+    "Des bénédictines, ces liqueurs dont la recette exigeait des mois de macération.",
+    "D'un pape Benoît qui fit recopier toute la Bible à la main par un seul moine.",
+    "Des tailleurs de pierre de Saint-Benoît, qui sculptaient un chapiteau par an."
+   ]
+  },
+  {
+   "id": "e-coupes",
+   "mot": "faire des coupes sombres",
+   "type": "expression",
+   "source": "wiktionary:coupe sombre",
+   "cle": "forest",
+   "vraie": "En forêt, une coupe sombre n'enlevait que peu d'arbres : le sous-bois restait sombre.",
+   "faux": [
+    "Des barbiers de régiment, qui rasaient les recrues dans des baraques sans fenêtres.",
+    "Des vignerons de Bourgogne, qui taillaient la vigne à la lanterne avant l'aube.",
+    "Des couturières des pompes funèbres, qui coupaient le noir des habits de deuil."
+   ]
+  },
+  {
+   "id": "e-cordonbleu",
+   "mot": "un cordon-bleu",
+   "type": "expression",
+   "source": "wiktionary:cordon bleu",
+   "cle": "Saint-Esprit",
+   "vraie": "Du ruban bleu des chevaliers de l'ordre du Saint-Esprit, la plus haute distinction.",
+   "faux": [
+    "Du tablier à liseré bleu que portaient les chefs des cuisines du château de Versailles.",
+    "D'une école de cuisine de Lyon dont les élèves nouaient leur toque d'un ruban bleu.",
+    "Des bouchers de la Villette, qui ficelaient leurs meilleurs rôtis d'un cordon bleu."
+   ]
+  },
+  {
+   "id": "e-caudines",
+   "mot": "passer sous les fourches caudines",
+   "type": "expression",
+   "source": "wikipedia:Bataille des Fourches Caudines",
+   "cle": "Samnites",
+   "vraie": "Vaincus par les Samnites, des soldats romains durent passer sous un joug de lances.",
+   "faux": [
+    "Des paysans de Caudie, qui devaient s'agenouiller sous la fourche du seigneur.",
+    "D'une porte basse de Rome où les condamnés passaient courbés sous des fourches.",
+    "Des pèlerins qui rampaient sous une arche de bois pour obtenir le pardon."
+   ]
+  },
+  {
+   "id": "i-schnapsidee",
+   "mot": "",
+   "question": "En allemand, « Schnapsidee » désigne…",
+   "type": "intraduisible",
+   "source": "wiktionary-en:Schnapsidee",
+   "cle": "idea",
+   "vraie": "Une idée farfelue, comme on en a après quelques verres.",
+   "faux": [
+    "Une boisson forte offerte pour fêter une bonne nouvelle.",
+    "La première gorgée de bière, la meilleure de la soirée.",
+    "Une recette de grand-mère pour soigner le rhume."
+   ]
+  },
+  {
+   "id": "i-treppenwitz",
+   "mot": "",
+   "question": "En allemand, « Treppenwitz » désigne…",
+   "type": "intraduisible",
+   "source": "wiktionary-en:Treppenwitz",
+   "cle": "staircase",
+   "vraie": "La réplique parfaite, trouvée trop tard, une fois la porte franchie.",
+   "faux": [
+    "Une blague si vieille qu'on la racontait déjà à nos grands-parents.",
+    "Le fou rire qui prend dans les escaliers d'un immeuble silencieux.",
+    "Une plaisanterie qu'on répète à chaque étage pour faire rire."
+   ]
+  },
+  {
+   "id": "i-kopfkino",
+   "mot": "",
+   "question": "En allemand, « Kopfkino » désigne…",
+   "type": "intraduisible",
+   "source": "wiktionary-en:Kopfkino",
+   "cle": "mind",
+   "vraie": "Le film qu'on se fait dans la tête en imaginant une scène.",
+   "faux": [
+    "Le mal de tête qu'on a en sortant d'une séance de cinéma.",
+    "Une salle de cinéma minuscule, installée dans un grenier.",
+    "Un rêve dont on se souvient parfaitement au réveil."
+   ]
+  },
+  {
+   "id": "i-ohrwurm",
+   "mot": "",
+   "question": "En allemand, « Ohrwurm » désigne…",
+   "type": "intraduisible",
+   "source": "wiktionary-en:Ohrwurm",
+   "cle": "song",
+   "vraie": "Un air de musique qui reste coincé dans la tête.",
+   "faux": [
+    "Une personne qui écoute aux portes des voisins.",
+    "Un bourdonnement d'oreille après un concert.",
+    "Un secret qu'on chuchote d'oreille en oreille."
+   ]
+  },
+  {
+   "id": "i-feierabend",
+   "mot": "",
+   "question": "En allemand, « Feierabend » désigne…",
+   "type": "intraduisible",
+   "source": "wiktionary-en:Feierabend",
+   "cle": "work",
+   "vraie": "Le moment, en fin de journée, où le travail s'arrête.",
+   "faux": [
+    "Une fête de village qui dure jusqu'au lever du jour.",
+    "La veille de Noël, passée en famille autour du feu.",
+    "Un repas de fête servi le dimanche soir, à la ferme."
+   ]
+  },
+  {
+   "id": "i-fremdschamen",
+   "mot": "",
+   "question": "En allemand, « Fremdschämen » désigne…",
+   "type": "intraduisible",
+   "source": "wiktionary-en:fremdschämen",
+   "cle": "embarrass",
+   "vraie": "Avoir honte à la place de quelqu'un qui se ridiculise.",
+   "faux": [
+    "Être intimidé devant un inconnu qu'on trouve beau.",
+    "Rougir en parlant une langue qu'on maîtrise mal.",
+    "Regretter un voyage à l'étranger dès le retour."
+   ]
+  },
+  {
+   "id": "i-estrenar",
+   "mot": "",
+   "question": "En espagnol, « estrenar » veut dire…",
+   "type": "intraduisible",
+   "source": "wiktionary-en:estrenar",
+   "cle": "first time",
+   "vraie": "Porter ou utiliser quelque chose pour la première fois.",
+   "faux": [
+    "Éternuer trois fois de suite, ce qui porte bonheur.",
+    "Serrer quelqu'un dans ses bras pour lui dire adieu.",
+    "Se lever avant l'aube pour profiter de la fraîcheur."
+   ]
+  },
+  {
+   "id": "i-uitwaaien",
+   "mot": "",
+   "question": "En néerlandais, « uitwaaien » veut dire…",
+   "type": "intraduisible",
+   "source": "wiktionary-en:uitwaaien",
+   "cle": "wind",
+   "vraie": "Se promener dans le vent pour se vider la tête.",
+   "faux": [
+    "Faire sécher son linge dehors, même l'hiver.",
+    "Souffler les bougies d'un gâteau d'anniversaire.",
+    "Faire voler un cerf-volant sur la plage."
+   ]
+  },
+  {
+   "id": "i-menefreghista",
+   "mot": "",
+   "question": "En italien, « menefreghista » désigne…",
+   "type": "intraduisible",
+   "source": "wiktionary-en:menefreghista",
+   "cle": "care",
+   "vraie": "Une personne qui se moque de tout, que rien ne concerne.",
+   "faux": [
+    "Un homme qui passe ses journées à frotter son scooter.",
+    "Quelqu'un qui se plaint toujours du froid, même l'été.",
+    "Un convive qui finit les assiettes de toute la tablée."
+   ]
+  },
+  {
+   "id": "i-hiraeth",
+   "mot": "",
+   "question": "En gallois, « hiraeth » désigne…",
+   "type": "intraduisible",
+   "source": "wiktionary-en:hiraeth",
+   "cle": "home",
+   "vraie": "La nostalgie d'un foyer où l'on ne peut plus revenir.",
+   "faux": [
+    "Le chant des moutons qu'on entend de loin dans la brume.",
+    "Une pluie fine qui dure toute une journée sans s'arrêter.",
+    "La fierté d'avoir gravi la plus haute colline du pays."
+   ]
+  },
+  {
+   "id": "x-baeren",
+   "mot": "",
+   "question": "En allemand, « attacher un ours à quelqu'un » veut dire…",
+   "type": "etrangere",
+   "source": "wiktionary-en:einen Bären aufbinden",
+   "cle": "trick",
+   "vraie": "Lui faire croire une histoire inventée.",
+   "faux": [
+    "Lui confier une tâche très pénible.",
+    "Le serrer fort dans ses bras.",
+    "Le forcer à danser en public."
+   ]
+  },
+  {
+   "id": "x-senf",
+   "mot": "",
+   "question": "En allemand, « ajouter sa moutarde » veut dire…",
+   "type": "etrangere",
+   "source": "wiktionary-en:seinen Senf dazugeben",
+   "cle": "opinion",
+   "vraie": "Donner son avis sans qu'on le demande.",
+   "faux": [
+    "Rendre un repas plus épicé qu'il ne faut.",
+    "Se mettre en colère pour un rien.",
+    "Payer sa part au restaurant."
+   ]
+  },
+  {
+   "id": "x-frutta",
+   "mot": "",
+   "question": "En italien, « être aux fruits » veut dire…",
+   "type": "etrangere",
+   "source": "wiktionary-en:alla frutta",
+   "cle": "rock bottom",
+   "vraie": "Être à bout de forces ou de ressources.",
+   "faux": [
+    "Être en pleine forme, plein d'énergie.",
+    "Être amoureux pour la première fois.",
+    "Être sur le point de partir en vacances."
+   ]
+  },
+  {
+   "id": "x-pasta",
+   "mot": "",
+   "question": "En italien, « avoir les mains dans la pâte » veut dire…",
+   "type": "etrangere",
+   "source": "wiktionary-en:avere le mani in pasta",
+   "cle": "",
+   "vraie": "Être mêlé à une affaire, y avoir de l'influence.",
+   "faux": [
+    "Être très doué pour la cuisine, surtout les pâtes.",
+    "Être pris en flagrant délit de gourmandise.",
+    "Travailler dur pour un salaire de misère."
+   ]
+  },
+  {
+   "id": "x-pan",
+   "mot": "",
+   "question": "En espagnol, « c'est du pain mangé » veut dire…",
+   "type": "etrangere",
+   "source": "wiktionary-en:pan comido",
+   "cle": "piece of cake",
+   "vraie": "C'est très facile.",
+   "faux": [
+    "C'est trop tard.",
+    "C'est déjà payé.",
+    "C'est un mensonge."
+   ]
+  },
+  {
+   "id": "x-pelo",
+   "mot": "",
+   "question": "En espagnol, « prendre le cheveu à quelqu'un » veut dire…",
+   "type": "etrangere",
+   "source": "wiktionary-en:tomar el pelo",
+   "cle": "",
+   "vraie": "Se moquer de lui, le faire marcher.",
+   "faux": [
+    "Lui faire une grande peur.",
+    "Lui voler sa petite amie.",
+    "Le battre aux cartes sans pitié."
+   ]
+  },
+  {
+   "id": "x-sapos",
+   "mot": "",
+   "question": "En portugais, « avaler un crapaud » veut dire…",
+   "type": "etrangere",
+   "source": "wiktionary-en:engolir sapo",
+   "cle": "endure",
+   "vraie": "Endurer quelque chose de pénible sans broncher.",
+   "faux": [
+    "Dire une énorme bêtise devant tout le monde.",
+    "Manger n'importe quoi quand on a très faim.",
+    "Avoir une voix rauque à force de crier."
+   ]
+  },
+  {
+   "id": "x-mamahuhu",
+   "mot": "",
+   "question": "En chinois, « cheval cheval tigre tigre » veut dire…",
+   "type": "etrangere",
+   "source": "wiktionary-en:馬馬虎虎",
+   "cle": "",
+   "vraie": "Comme ci, comme ça ; à peu près.",
+   "faux": [
+    "Vite, très vite ; au galop.",
+    "Fort et courageux ; sans peur.",
+    "Toujours en dispute ; ennemis."
+   ]
+  },
+  {
+   "id": "x-beans",
+   "mot": "",
+   "question": "En anglais, « renverser les haricots » veut dire…",
+   "type": "etrangere",
+   "source": "wiktionary-en:spill the beans",
+   "cle": "secret",
+   "vraie": "Révéler un secret.",
+   "faux": [
+    "Rater sa cuisine.",
+    "Faire une gaffe.",
+    "Perdre son argent."
+   ]
+  }
+ ]
+}

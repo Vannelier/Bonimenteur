@@ -116,6 +116,26 @@ def premiere_definition(mot: str) -> str:
     return "?"
 
 
+SOURCES = {"wiktionary": "https://fr.wiktionary.org/w/index.php?", "wiktionary-en": "https://en.wiktionary.org/w/index.php?",
+           "wikipedia": "https://fr.wikipedia.org/w/index.php?", "wikipedia-en": "https://en.wikipedia.org/w/index.php?"}
+
+
+def source_contient(source: str, cle: str) -> str:
+    """'' si la page de la source existe et contient le mot-clé ; sinon, ce qui cloche."""
+    site, _, titre = source.partition(":")
+    if site not in SOURCES:
+        return f"source {source!r} : site inconnu"
+    url = SOURCES[site] + urllib.parse.urlencode({"title": titre, "action": "raw"})
+    texte = lire(url, CACHE / site / (urllib.parse.quote(titre, safe="") + ".txt"))
+    if not texte:
+        return f"source {source} : page absente"
+    if texte.lstrip().upper().startswith("#REDIRECT"):
+        return f"source {source} : redirection, citer la page d'arrivée"
+    if cle.lower() not in texte.lower():
+        return f"source {source} : « {cle} » introuvable"
+    return ""
+
+
 def famille(q):
     return q.get("type") or "definition"
 
@@ -141,6 +161,7 @@ def controler(lot: dict, questions: dict, faux: list):
         q = dict(q)
         qid = q.pop("id")
         q["_faux"] = q.pop("faux")
+        q["_cle"] = q.pop("cle", None)
         nouvelles[qid] = q
     deja_vrais = {plat(q["vraie"]) for q in questions.values()}
     for qid, q in nouvelles.items():
@@ -167,6 +188,10 @@ def controler(lot: dict, questions: dict, faux: list):
         moy = sum(len(f) for f in fx) / max(len(fx), 1)
         if fam != "commune" and moy and not 0.7 <= len(q["vraie"]) / moy <= 1.35:
             erreurs.append(f"{qid} : vraie de {len(q['vraie'])} signes, faux de {moy:.0f} en moyenne")
+        if q.get("_cle") is not None:
+            pb = source_contient(q["source"], q["_cle"])
+            if pb:
+                erreurs.append(f"{qid} : {pb}")
         for i, f in enumerate(fx, 1):
             nouveaux.append({"id": f"t-{qid}-{i}", "mot": qid, "texte": f})
     return nouvelles, nouveaux, erreurs, notes
@@ -208,7 +233,7 @@ def main():
     if erreurs or "--fusionner" not in sys.argv:
         return
     for qid, q in nouvelles.items():
-        q.pop("_faux")
+        q.pop("_faux"); q.pop("_cle", None)
         questions[qid] = q
     QUESTIONS.write_text(json.dumps(questions, ensure_ascii=False, indent=1) + "\n")
     FAUX.write_text(json.dumps(faux + nouveaux, ensure_ascii=False, indent=1) + "\n")

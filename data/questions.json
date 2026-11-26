@@ -2058,5 +2058,198 @@
   "vraie": "Bouillon léger, soupe peu nourrissante.",
   "categorie": "n. m.",
   "source": "wiktionary:brouet"
+ },
+ "e-marrons": {
+  "mot": "tirer les marrons du feu",
+  "type": "expression",
+  "source": "wikipedia:Le Singe et le Chat",
+  "vraie": "D'une fable de La Fontaine : le chat se brûle les pattes à sortir les marrons que le singe mange."
+ },
+ "e-moutons": {
+  "mot": "revenons à nos moutons",
+  "type": "expression",
+  "source": "wiktionary:revenons à nos moutons",
+  "vraie": "De la Farce de maître Pathelin, où le juge ramène sans cesse un procès à des moutons volés."
+ },
+ "e-limoger": {
+  "mot": "être limogé",
+  "type": "expression",
+  "source": "wiktionary:limoger",
+  "vraie": "En 1914, Joffre éloigna à Limoges les généraux qu'il jugeait incapables."
+ },
+ "e-boycott": {
+  "mot": "boycotter",
+  "type": "expression",
+  "source": "wiktionary:boycotter",
+  "vraie": "De Charles Boycott, régisseur irlandais que tout le pays mit en quarantaine en 1880."
+ },
+ "e-gemonies": {
+  "mot": "vouer aux gémonies",
+  "type": "expression",
+  "source": "wiktionary:vouer aux gémonies",
+  "vraie": "À Rome, les corps des condamnés étaient exposés sur l'escalier des Gémonies."
+ },
+ "e-vau": {
+  "mot": "aller à vau-l'eau",
+  "type": "expression",
+  "source": "wiktionary:à vau-l’eau",
+  "vraie": "« À vau-l'eau », c'est « à val l'eau » : en suivant le courant, vers le bas."
+ },
+ "e-benedictin": {
+  "mot": "un travail de bénédictin",
+  "type": "expression",
+  "source": "wiktionary:travail de bénédictin",
+  "vraie": "Des moines bénédictins, célèbres pour leurs immenses travaux d'érudition patients."
+ },
+ "e-coupes": {
+  "mot": "faire des coupes sombres",
+  "type": "expression",
+  "source": "wiktionary:coupe sombre",
+  "vraie": "En forêt, une coupe sombre n'enlevait que peu d'arbres : le sous-bois restait sombre."
+ },
+ "e-cordonbleu": {
+  "mot": "un cordon-bleu",
+  "type": "expression",
+  "source": "wiktionary:cordon bleu",
+  "vraie": "Du ruban bleu des chevaliers de l'ordre du Saint-Esprit, la plus haute distinction."
+ },
+ "e-caudines": {
+  "mot": "passer sous les fourches caudines",
+  "type": "expression",
+  "source": "wikipedia:Bataille des Fourches Caudines",
+  "vraie": "Vaincus par les Samnites, des soldats romains durent passer sous un joug de lances."
+ },
+ "i-schnapsidee": {
+  "mot": "",
+  "question": "En allemand, « Schnapsidee » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:Schnapsidee",
+  "vraie": "Une idée farfelue, comme on en a après quelques verres."
+ },
+ "i-treppenwitz": {
+  "mot": "",
+  "question": "En allemand, « Treppenwitz » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:Treppenwitz",
+  "vraie": "La réplique parfaite, trouvée trop tard, une fois la porte franchie."
+ },
+ "i-kopfkino": {
+  "mot": "",
+  "question": "En allemand, « Kopfkino » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:Kopfkino",
+  "vraie": "Le film qu'on se fait dans la tête en imaginant une scène."
+ },
+ "i-ohrwurm": {
+  "mot": "",
+  "question": "En allemand, « Ohrwurm » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:Ohrwurm",
+  "vraie": "Un air de musique qui reste coincé dans la tête."
+ },
+ "i-feierabend": {
+  "mot": "",
+  "question": "En allemand, « Feierabend » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:Feierabend",
+  "vraie": "Le moment, en fin de journée, où le travail s'arrête."
+ },
+ "i-fremdschamen": {
+  "mot": "",
+  "question": "En allemand, « Fremdschämen » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:fremdschämen",
+  "vraie": "Avoir honte à la place de quelqu'un qui se ridiculise."
+ },
+ "i-estrenar": {
+  "mot": "",
+  "question": "En espagnol, « estrenar » veut dire…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:estrenar",
+  "vraie": "Porter ou utiliser quelque chose pour la première fois."
+ },
+ "i-uitwaaien": {
+  "mot": "",
+  "question": "En néerlandais, « uitwaaien » veut dire…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:uitwaaien",
+  "vraie": "Se promener dans le vent pour se vider la tête."
+ },
+ "i-menefreghista": {
+  "mot": "",
+  "question": "En italien, « menefreghista » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:menefreghista",
+  "vraie": "Une personne qui se moque de tout, que rien ne concerne."
+ },
+ "i-hiraeth": {
+  "mot": "",
+  "question": "En gallois, « hiraeth » désigne…",
+  "type": "intraduisible",
+  "source": "wiktionary-en:hiraeth",
+  "vraie": "La nostalgie d'un foyer où l'on ne peut plus revenir."
+ },
+ "x-baeren": {
+  "mot": "",
+  "question": "En allemand, « attacher un ours à quelqu'un » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:einen Bären aufbinden",
+  "vraie": "Lui faire croire une histoire inventée."
+ },
+ "x-senf": {
+  "mot": "",
+  "question": "En allemand, « ajouter sa moutarde » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:seinen Senf dazugeben",
+  "vraie": "Donner son avis sans qu'on le demande."
+ },
+ "x-frutta": {
+  "mot": "",
+  "question": "En italien, « être aux fruits » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:alla frutta",
+  "vraie": "Être à bout de forces ou de ressources."
+ },
+ "x-pasta": {
+  "mot": "",
+  "question": "En italien, « avoir les mains dans la pâte » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:avere le mani in pasta",
+  "vraie": "Être mêlé à une affaire, y avoir de l'influence."
+ },
+ "x-pan": {
+  "mot": "",
+  "question": "En espagnol, « c'est du pain mangé » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:pan comido",
+  "vraie": "C'est très facile."
+ },
+ "x-pelo": {
+  "mot": "",
+  "question": "En espagnol, « prendre le cheveu à quelqu'un » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:tomar el pelo",
+  "vraie": "Se moquer de lui, le faire marcher."
+ },
+ "x-sapos": {
+  "mot": "",
+  "question": "En portugais, « avaler un crapaud » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:engolir sapo",
+  "vraie": "Endurer quelque chose de pénible sans broncher."
+ },
+ "x-mamahuhu": {
+  "mot": "",
+  "question": "En chinois, « cheval cheval tigre tigre » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:馬馬虎虎",
+  "vraie": "Comme ci, comme ça ; à peu près."
+ },
+ "x-beans": {
+  "mot": "",
+  "question": "En anglais, « renverser les haricots » veut dire…",
+  "type": "etrangere",
+  "source": "wiktionary-en:spill the beans",
+  "vraie": "Révéler un secret."
  }
 }

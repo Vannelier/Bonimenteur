@@ -4333,5 +4333,440 @@
   "id": "t-brouet-3",
   "mot": "brouet",
   "texte": "Jeune bœuf qui n'a pas encore labouré."
+ },
+ {
+  "id": "t-e-marrons-1",
+  "mot": "e-marrons",
+  "texte": "Des marchands de marrons chauds de Paris, qui louaient des enfants pour surveiller leur brasero."
+ },
+ {
+  "id": "t-e-marrons-2",
+  "mot": "e-marrons",
+  "texte": "D'un jeu de foire où l'on gagnait un sou en sortant un marron des braises à mains nues."
+ },
+ {
+  "id": "t-e-marrons-3",
+  "mot": "e-marrons",
+  "texte": "Des soldats en campagne qui volaient les châtaignes grillées au feu des paysans la nuit."
+ },
+ {
+  "id": "t-e-moutons-1",
+  "mot": "e-moutons",
+  "texte": "Des bergers des Causses, qui finissaient toute veillée en comptant leurs bêtes pour dormir."
+ },
+ {
+  "id": "t-e-moutons-2",
+  "mot": "e-moutons",
+  "texte": "D'un sermon de curé de campagne qui revenait toujours à la parabole de la brebis égarée."
+ },
+ {
+  "id": "t-e-moutons-3",
+  "mot": "e-moutons",
+  "texte": "Des tondeurs de laine, payés au mouton, qui coupaient court à tout bavardage sur le pré."
+ },
+ {
+  "id": "t-e-limoger-1",
+  "mot": "e-limoger",
+  "texte": "Des porcelainiers de Limoges, qui brisaient les pièces ratées au sortir du four."
+ },
+ {
+  "id": "t-e-limoger-2",
+  "mot": "e-limoger",
+  "texte": "D'une prison de Limoges où l'on enfermait les fonctionnaires en disgrâce."
+ },
+ {
+  "id": "t-e-limoger-3",
+  "mot": "e-limoger",
+  "texte": "Des limousins, ces grands manteaux qu'on retirait aux cochers renvoyés."
+ },
+ {
+  "id": "t-e-boycott-1",
+  "mot": "e-boycott",
+  "texte": "D'un jeu de garçons anglais où l'on chassait du terrain le joueur qui trichait."
+ },
+ {
+  "id": "t-e-boycott-2",
+  "mot": "e-boycott",
+  "texte": "Des marins hollandais qui refusaient de monter à bord d'un bateau jugé maudit."
+ },
+ {
+  "id": "t-e-boycott-3",
+  "mot": "e-boycott",
+  "texte": "D'un marchand de coton de Boston, ruiné par ses clients après un scandale."
+ },
+ {
+  "id": "t-e-gemonies-1",
+  "mot": "e-gemonies",
+  "texte": "Des jumeaux de la mythologie grecque, chargés de punir les menteurs aux Enfers."
+ },
+ {
+  "id": "t-e-gemonies-2",
+  "mot": "e-gemonies",
+  "texte": "D'un monastère où les moines pénitents gémissaient toute la nuit en priant."
+ },
+ {
+  "id": "t-e-gemonies-3",
+  "mot": "e-gemonies",
+  "texte": "Des Gémonies, ces pierres précieuses qu'on jetait au fleuve pour conjurer le sort."
+ },
+ {
+  "id": "t-e-vau-1",
+  "mot": "e-vau",
+  "texte": "D'un vieux jeu de veau, qu'on lâchait sur la glace d'un étang gelé, pour rire."
+ },
+ {
+  "id": "t-e-vau-2",
+  "mot": "e-vau",
+  "texte": "Des lavandières dont le linge mal battu partait avec le courant de la rivière."
+ },
+ {
+  "id": "t-e-vau-3",
+  "mot": "e-vau",
+  "texte": "D'un chemin de halage de la Loire, appelé Vau, qui finissait dans le fleuve."
+ },
+ {
+  "id": "t-e-benedictin-1",
+  "mot": "e-benedictin",
+  "texte": "Des bénédictines, ces liqueurs dont la recette exigeait des mois de macération."
+ },
+ {
+  "id": "t-e-benedictin-2",
+  "mot": "e-benedictin",
+  "texte": "D'un pape Benoît qui fit recopier toute la Bible à la main par un seul moine."
+ },
+ {
+  "id": "t-e-benedictin-3",
+  "mot": "e-benedictin",
+  "texte": "Des tailleurs de pierre de Saint-Benoît, qui sculptaient un chapiteau par an."
+ },
+ {
+  "id": "t-e-coupes-1",
+  "mot": "e-coupes",
+  "texte": "Des barbiers de régiment, qui rasaient les recrues dans des baraques sans fenêtres."
+ },
+ {
+  "id": "t-e-coupes-2",
+  "mot": "e-coupes",
+  "texte": "Des vignerons de Bourgogne, qui taillaient la vigne à la lanterne avant l'aube."
+ },
+ {
+  "id": "t-e-coupes-3",
+  "mot": "e-coupes",
+  "texte": "Des couturières des pompes funèbres, qui coupaient le noir des habits de deuil."
+ },
+ {
+  "id": "t-e-cordonbleu-1",
+  "mot": "e-cordonbleu",
+  "texte": "Du tablier à liseré bleu que portaient les chefs des cuisines du château de Versailles."
+ },
+ {
+  "id": "t-e-cordonbleu-2",
+  "mot": "e-cordonbleu",
+  "texte": "D'une école de cuisine de Lyon dont les élèves nouaient leur toque d'un ruban bleu."
+ },
+ {
+  "id": "t-e-cordonbleu-3",
+  "mot": "e-cordonbleu",
+  "texte": "Des bouchers de la Villette, qui ficelaient leurs meilleurs rôtis d'un cordon bleu."
+ },
+ {
+  "id": "t-e-caudines-1",
+  "mot": "e-caudines",
+  "texte": "Des paysans de Caudie, qui devaient s'agenouiller sous la fourche du seigneur."
+ },
+ {
+  "id": "t-e-caudines-2",
+  "mot": "e-caudines",
+  "texte": "D'une porte basse de Rome où les condamnés passaient courbés sous des fourches."
+ },
+ {
+  "id": "t-e-caudines-3",
+  "mot": "e-caudines",
+  "texte": "Des pèlerins qui rampaient sous une arche de bois pour obtenir le pardon."
+ },
+ {
+  "id": "t-i-schnapsidee-1",
+  "mot": "i-schnapsidee",
+  "texte": "Une boisson forte offerte pour fêter une bonne nouvelle."
+ },
+ {
+  "id": "t-i-schnapsidee-2",
+  "mot": "i-schnapsidee",
+  "texte": "La première gorgée de bière, la meilleure de la soirée."
+ },
+ {
+  "id": "t-i-schnapsidee-3",
+  "mot": "i-schnapsidee",
+  "texte": "Une recette de grand-mère pour soigner le rhume."
+ },
+ {
+  "id": "t-i-treppenwitz-1",
+  "mot": "i-treppenwitz",
+  "texte": "Une blague si vieille qu'on la racontait déjà à nos grands-parents."
+ },
+ {
+  "id": "t-i-treppenwitz-2",
+  "mot": "i-treppenwitz",
+  "texte": "Le fou rire qui prend dans les escaliers d'un immeuble silencieux."
+ },
+ {
+  "id": "t-i-treppenwitz-3",
+  "mot": "i-treppenwitz",
+  "texte": "Une plaisanterie qu'on répète à chaque étage pour faire rire."
+ },
+ {
+  "id": "t-i-kopfkino-1",
+  "mot": "i-kopfkino",
+  "texte": "Le mal de tête qu'on a en sortant d'une séance de cinéma."
+ },
+ {
+  "id": "t-i-kopfkino-2",
+  "mot": "i-kopfkino",
+  "texte": "Une salle de cinéma minuscule, installée dans un grenier."
+ },
+ {
+  "id": "t-i-kopfkino-3",
+  "mot": "i-kopfkino",
+  "texte": "Un rêve dont on se souvient parfaitement au réveil."
+ },
+ {
+  "id": "t-i-ohrwurm-1",
+  "mot": "i-ohrwurm",
+  "texte": "Une personne qui écoute aux portes des voisins."
+ },
+ {
+  "id": "t-i-ohrwurm-2",
+  "mot": "i-ohrwurm",
+  "texte": "Un bourdonnement d'oreille après un concert."
+ },
+ {
+  "id": "t-i-ohrwurm-3",
+  "mot": "i-ohrwurm",
+  "texte": "Un secret qu'on chuchote d'oreille en oreille."
+ },
+ {
+  "id": "t-i-feierabend-1",
+  "mot": "i-feierabend",
+  "texte": "Une fête de village qui dure jusqu'au lever du jour."
+ },
+ {
+  "id": "t-i-feierabend-2",
+  "mot": "i-feierabend",
+  "texte": "La veille de Noël, passée en famille autour du feu."
+ },
+ {
+  "id": "t-i-feierabend-3",
+  "mot": "i-feierabend",
+  "texte": "Un repas de fête servi le dimanche soir, à la ferme."
+ },
+ {
+  "id": "t-i-fremdschamen-1",
+  "mot": "i-fremdschamen",
+  "texte": "Être intimidé devant un inconnu qu'on trouve beau."
+ },
+ {
+  "id": "t-i-fremdschamen-2",
+  "mot": "i-fremdschamen",
+  "texte": "Rougir en parlant une langue qu'on maîtrise mal."
+ },
+ {
+  "id": "t-i-fremdschamen-3",
+  "mot": "i-fremdschamen",
+  "texte": "Regretter un voyage à l'étranger dès le retour."
+ },
+ {
+  "id": "t-i-estrenar-1",
+  "mot": "i-estrenar",
+  "texte": "Éternuer trois fois de suite, ce qui porte bonheur."
+ },
+ {
+  "id": "t-i-estrenar-2",
+  "mot": "i-estrenar",
+  "texte": "Serrer quelqu'un dans ses bras pour lui dire adieu."
+ },
+ {
+  "id": "t-i-estrenar-3",
+  "mot": "i-estrenar",
+  "texte": "Se lever avant l'aube pour profiter de la fraîcheur."
+ },
+ {
+  "id": "t-i-uitwaaien-1",
+  "mot": "i-uitwaaien",
+  "texte": "Faire sécher son linge dehors, même l'hiver."
+ },
+ {
+  "id": "t-i-uitwaaien-2",
+  "mot": "i-uitwaaien",
+  "texte": "Souffler les bougies d'un gâteau d'anniversaire."
+ },
+ {
+  "id": "t-i-uitwaaien-3",
+  "mot": "i-uitwaaien",
+  "texte": "Faire voler un cerf-volant sur la plage."
+ },
+ {
+  "id": "t-i-menefreghista-1",
+  "mot": "i-menefreghista",
+  "texte": "Un homme qui passe ses journées à frotter son scooter."
+ },
+ {
+  "id": "t-i-menefreghista-2",
+  "mot": "i-menefreghista",
+  "texte": "Quelqu'un qui se plaint toujours du froid, même l'été."
+ },
+ {
+  "id": "t-i-menefreghista-3",
+  "mot": "i-menefreghista",
+  "texte": "Un convive qui finit les assiettes de toute la tablée."
+ },
+ {
+  "id": "t-i-hiraeth-1",
+  "mot": "i-hiraeth",
+  "texte": "Le chant des moutons qu'on entend de loin dans la brume."
+ },
+ {
+  "id": "t-i-hiraeth-2",
+  "mot": "i-hiraeth",
+  "texte": "Une pluie fine qui dure toute une journée sans s'arrêter."
+ },
+ {
+  "id": "t-i-hiraeth-3",
+  "mot": "i-hiraeth",
+  "texte": "La fierté d'avoir gravi la plus haute colline du pays."
+ },
+ {
+  "id": "t-x-baeren-1",
+  "mot": "x-baeren",
+  "texte": "Lui confier une tâche très pénible."
+ },
+ {
+  "id": "t-x-baeren-2",
+  "mot": "x-baeren",
+  "texte": "Le serrer fort dans ses bras."
+ },
+ {
+  "id": "t-x-baeren-3",
+  "mot": "x-baeren",
+  "texte": "Le forcer à danser en public."
+ },
+ {
+  "id": "t-x-senf-1",
+  "mot": "x-senf",
+  "texte": "Rendre un repas plus épicé qu'il ne faut."
+ },
+ {
+  "id": "t-x-senf-2",
+  "mot": "x-senf",
+  "texte": "Se mettre en colère pour un rien."
+ },
+ {
+  "id": "t-x-senf-3",
+  "mot": "x-senf",
+  "texte": "Payer sa part au restaurant."
+ },
+ {
+  "id": "t-x-frutta-1",
+  "mot": "x-frutta",
+  "texte": "Être en pleine forme, plein d'énergie."
+ },
+ {
+  "id": "t-x-frutta-2",
+  "mot": "x-frutta",
+  "texte": "Être amoureux pour la première fois."
+ },
+ {
+  "id": "t-x-frutta-3",
+  "mot": "x-frutta",
+  "texte": "Être sur le point de partir en vacances."
+ },
+ {
+  "id": "t-x-pasta-1",
+  "mot": "x-pasta",
+  "texte": "Être très doué pour la cuisine, surtout les pâtes."
+ },
+ {
+  "id": "t-x-pasta-2",
+  "mot": "x-pasta",
+  "texte": "Être pris en flagrant délit de gourmandise."
+ },
+ {
+  "id": "t-x-pasta-3",
+  "mot": "x-pasta",
+  "texte": "Travailler dur pour un salaire de misère."
+ },
+ {
+  "id": "t-x-pan-1",
+  "mot": "x-pan",
+  "texte": "C'est trop tard."
+ },
+ {
+  "id": "t-x-pan-2",
+  "mot": "x-pan",
+  "texte": "C'est déjà payé."
+ },
+ {
+  "id": "t-x-pan-3",
+  "mot": "x-pan",
+  "texte": "C'est un mensonge."
+ },
+ {
+  "id": "t-x-pelo-1",
+  "mot": "x-pelo",
+  "texte": "Lui faire une grande peur."
+ },
+ {
+  "id": "t-x-pelo-2",
+  "mot": "x-pelo",
+  "texte": "Lui voler sa petite amie."
+ },
+ {
+  "id": "t-x-pelo-3",
+  "mot": "x-pelo",
+  "texte": "Le battre aux cartes sans pitié."
+ },
+ {
+  "id": "t-x-sapos-1",
+  "mot": "x-sapos",
+  "texte": "Dire une énorme bêtise devant tout le monde."
+ },
+ {
+  "id": "t-x-sapos-2",
+  "mot": "x-sapos",
+  "texte": "Manger n'importe quoi quand on a très faim."
+ },
+ {
+  "id": "t-x-sapos-3",
+  "mot": "x-sapos",
+  "texte": "Avoir une voix rauque à force de crier."
+ },
+ {
+  "id": "t-x-mamahuhu-1",
+  "mot": "x-mamahuhu",
+  "texte": "Vite, très vite ; au galop."
+ },
+ {
+  "id": "t-x-mamahuhu-2",
+  "mot": "x-mamahuhu",
+  "texte": "Fort et courageux ; sans peur."
+ },
+ {
+  "id": "t-x-mamahuhu-3",
+  "mot": "x-mamahuhu",
+  "texte": "Toujours en dispute ; ennemis."
+ },
+ {
+  "id": "t-x-beans-1",
+  "mot": "x-beans",
+  "texte": "Rater sa cuisine."
+ },
+ {
+  "id": "t-x-beans-2",
+  "mot": "x-beans",
+  "texte": "Faire une gaffe."
+ },
+ {
+  "id": "t-x-beans-3",
+  "mot": "x-beans",
+  "texte": "Perdre son argent."
  }
 ]
