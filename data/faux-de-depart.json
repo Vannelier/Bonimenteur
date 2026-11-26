@@ -5518,5 +5518,275 @@
   "id": "t-a-tomate-3",
   "mot": "a-tomate",
   "texte": "pour nourrir les cochons"
+ },
+ {
+  "id": "t-k-oranges-1",
+  "mot": "k-oranges",
+  "texte": "promènent un âne couronné dans les rues"
+ },
+ {
+  "id": "t-k-oranges-2",
+  "mot": "k-oranges",
+  "texte": "plongent tout habillés dans la fontaine"
+ },
+ {
+  "id": "t-k-oranges-3",
+  "mot": "k-oranges",
+  "texte": "se jettent de la farine depuis les balcons"
+ },
+ {
+  "id": "t-k-epouse-1",
+  "mot": "k-epouse",
+  "texte": "en tirant un traîneau de bois"
+ },
+ {
+  "id": "t-k-epouse-2",
+  "mot": "k-epouse",
+  "texte": "les pieds attachés à des skis"
+ },
+ {
+  "id": "t-k-epouse-3",
+  "mot": "k-epouse",
+  "texte": "avec un seau d'eau sur la tête"
+ },
+ {
+  "id": "t-k-tourbiere-1",
+  "mot": "k-tourbiere",
+  "texte": "lancent des bottes en caoutchouc le plus loin possible"
+ },
+ {
+  "id": "t-k-tourbiere-2",
+  "mot": "k-tourbiere",
+  "texte": "portent un mouton jusqu'au sommet de la colline"
+ },
+ {
+  "id": "t-k-tourbiere-3",
+  "mot": "k-tourbiere",
+  "texte": "font rouler un fromage dans la boue de la rivière"
+ },
+ {
+  "id": "t-k-krampus-1",
+  "mot": "k-krampus",
+  "texte": "un âne vole les bonbons des enfants gourmands"
+ },
+ {
+  "id": "t-k-krampus-2",
+  "mot": "k-krampus",
+  "texte": "une vieille fée récompense les enfants polis"
+ },
+ {
+  "id": "t-k-krampus-3",
+  "mot": "k-krampus",
+  "texte": "un ours de paille garde les cadeaux sur la place"
+ },
+ {
+  "id": "t-k-befana-1",
+  "mot": "k-befana",
+  "texte": "trois chèvres guidées par une étoile"
+ },
+ {
+  "id": "t-k-befana-2",
+  "mot": "k-befana",
+  "texte": "un pêcheur qui arrive en barque"
+ },
+ {
+  "id": "t-k-befana-3",
+  "mot": "k-befana",
+  "texte": "un ange caché dans la galette"
+ },
+ {
+  "id": "t-k-caganer-1",
+  "mot": "k-caganer",
+  "texte": "un berger endormi qui ronfle contre un mouton"
+ },
+ {
+  "id": "t-k-caganer-2",
+  "mot": "k-caganer",
+  "texte": "un âne qui a mangé la paille de l'Enfant Jésus"
+ },
+ {
+  "id": "t-k-caganer-3",
+  "mot": "k-caganer",
+  "texte": "un pêcheur qui tend sa ligne dans le lavoir"
+ },
+ {
+  "id": "t-k-tio-1",
+  "mot": "k-tio",
+  "texte": "en chantant devant la porte du voisin"
+ },
+ {
+  "id": "t-k-tio-2",
+  "mot": "k-tio",
+  "texte": "en cherchant des œufs dans la neige"
+ },
+ {
+  "id": "t-k-tio-3",
+  "mot": "k-tio",
+  "texte": "en sautant par-dessus un feu de joie"
+ },
+ {
+  "id": "t-k-polterabend-1",
+  "mot": "k-polterabend",
+  "texte": "cachent les chaussures de la mariée"
+ },
+ {
+  "id": "t-k-polterabend-2",
+  "mot": "k-polterabend",
+  "texte": "plantent un sapin devant la mairie"
+ },
+ {
+  "id": "t-k-polterabend-3",
+  "mot": "k-polterabend",
+  "texte": "dorment tous dans la grange du marié"
+ },
+ {
+  "id": "t-k-firstfoot-1",
+  "mot": "k-firstfoot",
+  "texte": "une bouteille de lait"
+ },
+ {
+  "id": "t-k-firstfoot-2",
+  "mot": "k-firstfoot",
+  "texte": "une pièce trouée"
+ },
+ {
+  "id": "t-k-firstfoot-3",
+  "mot": "k-firstfoot",
+  "texte": "un hareng fumé"
+ },
+ {
+  "id": "t-k-raisins-1",
+  "mot": "k-raisins",
+  "texte": "embrasser douze inconnus dans la rue avant l'aube"
+ },
+ {
+  "id": "t-k-raisins-2",
+  "mot": "k-raisins",
+  "texte": "porter un chapeau de paille pendant tout le repas"
+ },
+ {
+  "id": "t-k-raisins-3",
+  "mot": "k-raisins",
+  "texte": "jeter une pièce dans la première fontaine venue"
+ },
+ {
+  "id": "t-k-kfc-1",
+  "mot": "k-kfc",
+  "texte": "mangent une soupe de nouilles très longues"
+ },
+ {
+  "id": "t-k-kfc-2",
+  "mot": "k-kfc",
+  "texte": "se baignent dans des sources chaudes"
+ },
+ {
+  "id": "t-k-kfc-3",
+  "mot": "k-kfc",
+  "texte": "envoient des lettres aux esprits du foyer"
+ },
+ {
+  "id": "t-k-schultute-1",
+  "mot": "k-schultute",
+  "texte": "une pomme à offrir à la maîtresse"
+ },
+ {
+  "id": "t-k-schultute-2",
+  "mot": "k-schultute",
+  "texte": "un petit cochon en pâte d'amande"
+ },
+ {
+  "id": "t-k-schultute-3",
+  "mot": "k-schultute",
+  "texte": "une plume d'oie taillée par son grand-père"
+ },
+ {
+  "id": "t-k-marilwyd-1",
+  "mot": "k-marilwyd",
+  "texte": "une oie vivante coiffée d'une couronne"
+ },
+ {
+  "id": "t-k-marilwyd-2",
+  "mot": "k-marilwyd",
+  "texte": "un tonneau de bière monté sur des roues"
+ },
+ {
+  "id": "t-k-marilwyd-3",
+  "mot": "k-marilwyd",
+  "texte": "une harpe que chacun doit accorder"
+ },
+ {
+  "id": "t-k-boogg-1",
+  "mot": "k-boogg",
+  "texte": "en lâchant une vache sur la place de l'hôtel de ville"
+ },
+ {
+  "id": "t-k-boogg-2",
+  "mot": "k-boogg",
+  "texte": "en comptant les cloches sonnées par les corporations"
+ },
+ {
+  "id": "t-k-boogg-3",
+  "mot": "k-boogg",
+  "texte": "en pesant le plus gros fromage de la saison"
+ },
+ {
+  "id": "t-k-crepes-1",
+  "mot": "k-crepes",
+  "texte": "dansent autour d'un mât en se tenant par des rubans"
+ },
+ {
+  "id": "t-k-crepes-2",
+  "mot": "k-crepes",
+  "texte": "se disputent un jambon en tirant sur une corde"
+ },
+ {
+  "id": "t-k-crepes-3",
+  "mot": "k-crepes",
+  "texte": "portent un œuf dans une cuillère d'un pub à l'autre"
+ },
+ {
+  "id": "t-k-radis-1",
+  "mot": "k-radis",
+  "texte": "le plus gros piment cultivé dans la vallée"
+ },
+ {
+  "id": "t-k-radis-2",
+  "mot": "k-radis",
+  "texte": "les plus belles crèches faites en chocolat"
+ },
+ {
+  "id": "t-k-radis-3",
+  "mot": "k-radis",
+  "texte": "le chant de Noël le plus aigu de la ville"
+ },
+ {
+  "id": "t-k-songkran-1",
+  "mot": "k-songkran",
+  "texte": "se peint le visage en jaune"
+ },
+ {
+  "id": "t-k-songkran-2",
+  "mot": "k-songkran",
+  "texte": "lâche des milliers de grillons"
+ },
+ {
+  "id": "t-k-songkran-3",
+  "mot": "k-songkran",
+  "texte": "dort sur le toit des maisons"
+ },
+ {
+  "id": "t-k-tomatina-1",
+  "mot": "k-tomatina",
+  "texte": "courent devant des moutons lâchés"
+ },
+ {
+  "id": "t-k-tomatina-2",
+  "mot": "k-tomatina",
+  "texte": "se battent à coups de coussins"
+ },
+ {
+  "id": "t-k-tomatina-3",
+  "mot": "k-tomatina",
+  "texte": "grimpent à un mât savonné de lard"
  }
 ]

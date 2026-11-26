@@ -178,6 +178,11 @@ répond 429 à urllib).
   d'Ōkunoshima et de Coolidge raccourcies : 584 px à 375 × 553 ; 543 px au
   plus ensuite. Vraies de la tulipe et du canular lunaire réécrites : aucun
   de leurs mots n'était connu de l'arbitre.
+- Lot 06 : 18 coutumes (Italie, Finlande, pays de Galles, Autriche,
+  Catalogne, Allemagne, Écosse, Espagne, Japon, Suisse, Angleterre, Mexique,
+  Thaïlande). Écartée faute de source dans la page : les balais cachés de
+  Noël en Norvège. Polterabend : « porcelaine », le mot de la page. Question
+  de la tourbière raccourcie (551 px à 375 × 553, 509 ensuite).
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux

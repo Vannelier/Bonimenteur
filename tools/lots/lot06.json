@@ -1,0 +1,292 @@
+{
+ "questions": [
+  {
+   "id": "k-oranges",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Ivrée, Italie",
+   "timbre": "Italia",
+   "source": "wikipedia-en:Battle of the Oranges",
+   "cle": "orange",
+   "question": "Ici, chaque année au carnaval, les habitants ___.",
+   "vraie": "se livrent une bataille à coups d'oranges",
+   "faux": [
+    "promènent un âne couronné dans les rues",
+    "plongent tout habillés dans la fontaine",
+    "se jettent de la farine depuis les balcons"
+   ]
+  },
+  {
+   "id": "k-epouse",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Sonkajärvi, Finlande",
+   "timbre": "Suomi",
+   "source": "wikipedia-en:Wife-carrying",
+   "cle": "Sonkajärvi",
+   "question": "Ici, chaque été, des hommes font une course d'obstacles ___.",
+   "vraie": "en portant leur femme sur le dos",
+   "faux": [
+    "en tirant un traîneau de bois",
+    "les pieds attachés à des skis",
+    "avec un seau d'eau sur la tête"
+   ]
+  },
+  {
+   "id": "k-tourbiere",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Llanwrtyd Wells, pays de Galles",
+   "timbre": "Cymru",
+   "source": "wikipedia-en:Bog snorkelling",
+   "cle": "Llanwrtyd",
+   "question": "Ici, chaque été, des concurrents ___.",
+   "vraie": "nagent au tuba dans une tranchée de tourbière",
+   "faux": [
+    "lancent des bottes en caoutchouc le plus loin possible",
+    "portent un mouton jusqu'au sommet de la colline",
+    "font rouler un fromage dans la boue de la rivière"
+   ]
+  },
+  {
+   "id": "k-krampus",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Salzbourg, Autriche",
+   "timbre": "Österreich",
+   "source": "wikipedia:Krampus",
+   "cle": "Nicolas",
+   "question": "Ici, début décembre, aux côtés de saint Nicolas, ___.",
+   "vraie": "un démon cornu poursuit les enfants pas sages",
+   "faux": [
+    "un âne vole les bonbons des enfants gourmands",
+    "une vieille fée récompense les enfants polis",
+    "un ours de paille garde les cadeaux sur la place"
+   ]
+  },
+  {
+   "id": "k-befana",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Rome, Italie",
+   "timbre": "Italia",
+   "source": "wikipedia:Befana",
+   "cle": "Épiphanie",
+   "question": "Ici, le 6 janvier, les cadeaux des enfants sont apportés par ___.",
+   "vraie": "une vieille sorcière sur son balai",
+   "faux": [
+    "trois chèvres guidées par une étoile",
+    "un pêcheur qui arrive en barque",
+    "un ange caché dans la galette"
+   ]
+  },
+  {
+   "id": "k-caganer",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Barcelone, Catalogne",
+   "timbre": "España",
+   "source": "wikipedia:Caganer",
+   "cle": "crèche",
+   "question": "Ici, dans la crèche de Noël, on cache toujours ___.",
+   "vraie": "un petit paysan accroupi qui fait ses besoins",
+   "faux": [
+    "un berger endormi qui ronfle contre un mouton",
+    "un âne qui a mangé la paille de l'Enfant Jésus",
+    "un pêcheur qui tend sa ligne dans le lavoir"
+   ]
+  },
+  {
+   "id": "k-tio",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Gérone, Catalogne",
+   "timbre": "España",
+   "source": "wikipedia:Tió de Nadal",
+   "cle": "bâton",
+   "question": "Ici, à Noël, les enfants obtiennent leurs cadeaux ___.",
+   "vraie": "en frappant une bûche à coups de bâton",
+   "faux": [
+    "en chantant devant la porte du voisin",
+    "en cherchant des œufs dans la neige",
+    "en sautant par-dessus un feu de joie"
+   ]
+  },
+  {
+   "id": "k-polterabend",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Hambourg, Allemagne",
+   "timbre": "Deutschland",
+   "source": "wikipedia:Polterabend",
+   "cle": "porcelaine",
+   "question": "Ici, la veille d'un mariage, les invités ___.",
+   "vraie": "cassent de la porcelaine devant la maison",
+   "faux": [
+    "cachent les chaussures de la mariée",
+    "plantent un sapin devant la mairie",
+    "dorment tous dans la grange du marié"
+   ]
+  },
+  {
+   "id": "k-firstfoot",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Édimbourg, Écosse",
+   "timbre": "Scotland",
+   "source": "wikipedia-en:First-foot",
+   "cle": "coal",
+   "question": "Ici, pour porter chance, le premier visiteur de l'année doit apporter ___.",
+   "vraie": "un morceau de charbon",
+   "faux": [
+    "une bouteille de lait",
+    "une pièce trouée",
+    "un hareng fumé"
+   ]
+  },
+  {
+   "id": "k-raisins",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Madrid, Espagne",
+   "timbre": "España",
+   "source": "wikipedia-en:Twelve Grapes",
+   "cle": "midnight",
+   "question": "Ici, au Nouvel An, il faut ___ pour avoir de la chance.",
+   "vraie": "avaler un grain de raisin à chaque coup de minuit",
+   "faux": [
+    "embrasser douze inconnus dans la rue avant l'aube",
+    "porter un chapeau de paille pendant tout le repas",
+    "jeter une pièce dans la première fontaine venue"
+   ]
+  },
+  {
+   "id": "k-kfc",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Tokyo, Japon",
+   "timbre": "Nippon",
+   "source": "wikipedia-en:Christmas in Japan",
+   "cle": "KFC",
+   "question": "Ici, le soir de Noël, des millions de familles ___.",
+   "vraie": "mangent du poulet frit commandé à l'avance",
+   "faux": [
+    "mangent une soupe de nouilles très longues",
+    "se baignent dans des sources chaudes",
+    "envoient des lettres aux esprits du foyer"
+   ]
+  },
+  {
+   "id": "k-schultute",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Leipzig, Allemagne",
+   "timbre": "Deutschland",
+   "source": "wikipedia-en:Schultüte",
+   "cle": "cone",
+   "question": "Ici, le premier jour d'école, chaque enfant reçoit ___.",
+   "vraie": "un grand cornet de carton rempli de bonbons",
+   "faux": [
+    "une pomme à offrir à la maîtresse",
+    "un petit cochon en pâte d'amande",
+    "une plume d'oie taillée par son grand-père"
+   ]
+  },
+  {
+   "id": "k-marilwyd",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Llangynwyd, pays de Galles",
+   "timbre": "Cymru",
+   "source": "wikipedia:Mari Lwyd",
+   "cle": "cheval",
+   "question": "Ici, à Noël, on promène de porte en porte ___.",
+   "vraie": "un crâne de cheval drapé d'un drap blanc",
+   "faux": [
+    "une oie vivante coiffée d'une couronne",
+    "un tonneau de bière monté sur des roues",
+    "une harpe que chacun doit accorder"
+   ]
+  },
+  {
+   "id": "k-boogg",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Zurich, Suisse",
+   "timbre": "Helvetia",
+   "source": "wikipedia:Sechseläuten",
+   "cle": "Böögg",
+   "question": "Ici, au printemps, on prédit l'été ___.",
+   "vraie": "en brûlant un bonhomme de neige bourré de pétards",
+   "faux": [
+    "en lâchant une vache sur la place de l'hôtel de ville",
+    "en comptant les cloches sonnées par les corporations",
+    "en pesant le plus gros fromage de la saison"
+   ]
+  },
+  {
+   "id": "k-crepes",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Olney, Angleterre",
+   "timbre": "England",
+   "source": "wikipedia-en:Pancake race",
+   "cle": "Olney",
+   "question": "Ici, le jour de Mardi gras, les femmes du village ___.",
+   "vraie": "courent en faisant sauter une crêpe dans une poêle",
+   "faux": [
+    "dansent autour d'un mât en se tenant par des rubans",
+    "se disputent un jambon en tirant sur une corde",
+    "portent un œuf dans une cuillère d'un pub à l'autre"
+   ]
+  },
+  {
+   "id": "k-radis",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Oaxaca, Mexique",
+   "timbre": "México",
+   "source": "wikipedia-en:Night of the Radishes",
+   "cle": "radish",
+   "question": "Ici, le 23 décembre, un grand concours récompense ___.",
+   "vraie": "les plus belles scènes sculptées dans des radis",
+   "faux": [
+    "le plus gros piment cultivé dans la vallée",
+    "les plus belles crèches faites en chocolat",
+    "le chant de Noël le plus aigu de la ville"
+   ]
+  },
+  {
+   "id": "k-songkran",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Chiang Mai, Thaïlande",
+   "timbre": "Thailand",
+   "source": "wikipedia:Songkran",
+   "cle": "eau",
+   "question": "Ici, pour le Nouvel An d'avril, toute la ville ___.",
+   "vraie": "s'asperge d'eau dans la rue",
+   "faux": [
+    "se peint le visage en jaune",
+    "lâche des milliers de grillons",
+    "dort sur le toit des maisons"
+   ]
+  },
+  {
+   "id": "k-tomatina",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Buñol, Espagne",
+   "timbre": "España",
+   "source": "wikipedia:Tomatina",
+   "cle": "tomates",
+   "question": "Ici, chaque dernier mercredi d'août, des milliers de gens ___.",
+   "vraie": "se lancent des tonnes de tomates mûres",
+   "faux": [
+    "courent devant des moutons lâchés",
+    "se battent à coups de coussins",
+    "grimpent à un mât savonné de lard"
+   ]
+  }
+ ]
+}

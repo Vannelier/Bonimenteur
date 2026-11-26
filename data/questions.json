@@ -2590,5 +2590,167 @@
   "source": "wikipedia:Tomate",
   "question": "Arrivée d'Amérique au XVIe siècle, la tomate fut d'abord cultivée en Europe ___.",
   "vraie": "comme plante d'ornement"
+ },
+ "k-oranges": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Ivrée, Italie",
+  "timbre": "Italia",
+  "source": "wikipedia-en:Battle of the Oranges",
+  "question": "Ici, chaque année au carnaval, les habitants ___.",
+  "vraie": "se livrent une bataille à coups d'oranges"
+ },
+ "k-epouse": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Sonkajärvi, Finlande",
+  "timbre": "Suomi",
+  "source": "wikipedia-en:Wife-carrying",
+  "question": "Ici, chaque été, des hommes font une course d'obstacles ___.",
+  "vraie": "en portant leur femme sur le dos"
+ },
+ "k-tourbiere": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Llanwrtyd Wells, pays de Galles",
+  "timbre": "Cymru",
+  "source": "wikipedia-en:Bog snorkelling",
+  "question": "Ici, chaque été, des concurrents ___.",
+  "vraie": "nagent au tuba dans une tranchée de tourbière"
+ },
+ "k-krampus": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Salzbourg, Autriche",
+  "timbre": "Österreich",
+  "source": "wikipedia:Krampus",
+  "question": "Ici, début décembre, aux côtés de saint Nicolas, ___.",
+  "vraie": "un démon cornu poursuit les enfants pas sages"
+ },
+ "k-befana": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Rome, Italie",
+  "timbre": "Italia",
+  "source": "wikipedia:Befana",
+  "question": "Ici, le 6 janvier, les cadeaux des enfants sont apportés par ___.",
+  "vraie": "une vieille sorcière sur son balai"
+ },
+ "k-caganer": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Barcelone, Catalogne",
+  "timbre": "España",
+  "source": "wikipedia:Caganer",
+  "question": "Ici, dans la crèche de Noël, on cache toujours ___.",
+  "vraie": "un petit paysan accroupi qui fait ses besoins"
+ },
+ "k-tio": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Gérone, Catalogne",
+  "timbre": "España",
+  "source": "wikipedia:Tió de Nadal",
+  "question": "Ici, à Noël, les enfants obtiennent leurs cadeaux ___.",
+  "vraie": "en frappant une bûche à coups de bâton"
+ },
+ "k-polterabend": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Hambourg, Allemagne",
+  "timbre": "Deutschland",
+  "source": "wikipedia:Polterabend",
+  "question": "Ici, la veille d'un mariage, les invités ___.",
+  "vraie": "cassent de la porcelaine devant la maison"
+ },
+ "k-firstfoot": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Édimbourg, Écosse",
+  "timbre": "Scotland",
+  "source": "wikipedia-en:First-foot",
+  "question": "Ici, pour porter chance, le premier visiteur de l'année doit apporter ___.",
+  "vraie": "un morceau de charbon"
+ },
+ "k-raisins": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Madrid, Espagne",
+  "timbre": "España",
+  "source": "wikipedia-en:Twelve Grapes",
+  "question": "Ici, au Nouvel An, il faut ___ pour avoir de la chance.",
+  "vraie": "avaler un grain de raisin à chaque coup de minuit"
+ },
+ "k-kfc": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Tokyo, Japon",
+  "timbre": "Nippon",
+  "source": "wikipedia-en:Christmas in Japan",
+  "question": "Ici, le soir de Noël, des millions de familles ___.",
+  "vraie": "mangent du poulet frit commandé à l'avance"
+ },
+ "k-schultute": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Leipzig, Allemagne",
+  "timbre": "Deutschland",
+  "source": "wikipedia-en:Schultüte",
+  "question": "Ici, le premier jour d'école, chaque enfant reçoit ___.",
+  "vraie": "un grand cornet de carton rempli de bonbons"
+ },
+ "k-marilwyd": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Llangynwyd, pays de Galles",
+  "timbre": "Cymru",
+  "source": "wikipedia:Mari Lwyd",
+  "question": "Ici, à Noël, on promène de porte en porte ___.",
+  "vraie": "un crâne de cheval drapé d'un drap blanc"
+ },
+ "k-boogg": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Zurich, Suisse",
+  "timbre": "Helvetia",
+  "source": "wikipedia:Sechseläuten",
+  "question": "Ici, au printemps, on prédit l'été ___.",
+  "vraie": "en brûlant un bonhomme de neige bourré de pétards"
+ },
+ "k-crepes": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Olney, Angleterre",
+  "timbre": "England",
+  "source": "wikipedia-en:Pancake race",
+  "question": "Ici, le jour de Mardi gras, les femmes du village ___.",
+  "vraie": "courent en faisant sauter une crêpe dans une poêle"
+ },
+ "k-radis": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Oaxaca, Mexique",
+  "timbre": "México",
+  "source": "wikipedia-en:Night of the Radishes",
+  "question": "Ici, le 23 décembre, un grand concours récompense ___.",
+  "vraie": "les plus belles scènes sculptées dans des radis"
+ },
+ "k-songkran": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Chiang Mai, Thaïlande",
+  "timbre": "Thailand",
+  "source": "wikipedia:Songkran",
+  "question": "Ici, pour le Nouvel An d'avril, toute la ville ___.",
+  "vraie": "s'asperge d'eau dans la rue"
+ },
+ "k-tomatina": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Buñol, Espagne",
+  "timbre": "España",
+  "source": "wikipedia:Tomatina",
+  "question": "Ici, chaque dernier mercredi d'août, des milliers de gens ___.",
+  "vraie": "se lancent des tonnes de tomates mûres"
  }
 }
