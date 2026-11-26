@@ -4392,5 +4392,102 @@
   "legende": "Lion de Belfort",
   "question": "Belfort. Quelle est la particularité de ce lion ?",
   "vraie": "il est l'œuvre de Bartholdi, l'auteur de la statue de la Liberté."
+ },
+ "o-oublies": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/fer-oublies.jpg",
+  "source": "wiktionary:oublie",
+  "rubrique": "Usage",
+  "credit": "Fer à oublies, musée de la Gourmandise, Hermalle-sous-Huy · Égoïté · CC BY-SA 3.0 (Wikimedia Commons)",
+  "alt": "Un disque de fer sombre gravé de fleurs et de rinceaux",
+  "legende": "Disque de fer gravé de fleurs",
+  "question": "À quoi servait ce disque de fer gravé de fleurs ?",
+  "vraie": "à cuire les oublies, de fines gaufres, entre deux disques chauffés."
+ },
+ "o-peselettre": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/pese-lettre.jpg",
+  "source": "wiktionary:pèse-lettre",
+  "rubrique": "Usage",
+  "ouvrage": "brevet",
+  "credit": "Balance de la poste de Mangonui · Auckland War Memorial Museum · CC BY 4.0 (Wikimedia Commons)",
+  "alt": "Une petite balance de laiton à deux plateaux, sur un socle de bois, avec une rangée de poids",
+  "legende": "Petite balance de laiton et ses poids",
+  "question": "À quoi servait cette petite balance de laiton et ses poids ?",
+  "vraie": "balance perfectionnée pesant le courrier, pour en calculer l'affranchissement."
+ },
+ "o-poirepoudre": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/poire-poudre.jpg",
+  "source": "wikipedia-en:Powder flask",
+  "rubrique": "Usage",
+  "credit": "Flacon allemand, Metropolitan Museum of Art · CC0 (Wikimedia Commons)",
+  "alt": "Un flacon rond et plat d'ivoire sculpté, surmonté d'un bec de laiton",
+  "legende": "Flacon rond d'ivoire sculpté, au bec de laiton",
+  "question": "À quoi servait ce flacon rond d'ivoire sculpté, au bec de laiton ?",
+  "vraie": "à porter la poudre noire du chasseur et à en doser chaque charge."
+ },
+ "o-mouches": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/boite-mouches.jpg",
+  "source": "wiktionary:mouche",
+  "rubrique": "Usage",
+  "credit": "Boîte en émail de Battersea · Auckland War Memorial Museum · CC BY 4.0 (Wikimedia Commons)",
+  "alt": "Une petite boîte rectangulaire en émail blanc, peinte de fleurs, au couvercle à charnière",
+  "legende": "Petite boîte émaillée, peinte de fleurs",
+  "question": "À quoi servait cette petite boîte émaillée ?",
+  "vraie": "à ranger les mouches, ces faux grains de beauté qu'on se collait au visage."
+ },
+ "p-vendome": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/colonne-vendome.jpg",
+  "source": "wikipedia:Colonne Vendôme",
+  "rubrique": "Particularité",
+  "credit": "Colonne Vendôme, Paris · Chabe01 · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Le sommet d'une colonne de bronze vert-de-gris surmontée de la statue d'un empereur",
+  "legende": "Colonne Vendôme, Paris",
+  "question": "Paris, place Vendôme. Avec quoi a-t-on coulé le bronze de cette colonne ?",
+  "vraie": "avec les canons pris à l'ennemi à Austerlitz."
+ },
+ "p-strasbourg": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/cathedrale-strasbourg.jpg",
+  "source": "wikipedia:Cathédrale Notre-Dame de Strasbourg",
+  "rubrique": "Particularité",
+  "credit": "Cathédrale de Strasbourg vue de la rue Mercière · Diliff · CC BY-SA 3.0 (Wikimedia Commons)",
+  "alt": "La façade de grès rose d'une cathédrale gothique, à une seule flèche",
+  "legende": "Cathédrale Notre-Dame de Strasbourg",
+  "question": "Strasbourg. Quel record cette cathédrale a-t-elle détenu ?",
+  "vraie": "elle fut le plus haut édifice du monde."
+ },
+ "p-garabit": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/garabit.jpg",
+  "source": "wikipedia:Viaduc de Garabit",
+  "rubrique": "Particularité",
+  "credit": "Viaduc de Garabit et vallée de la Truyère · Pemberlaid · CC BY-SA 4.0 (Wikimedia Commons)",
+  "alt": "Un grand viaduc ferroviaire de métal rouge, à une seule arche, au-dessus d'une vallée",
+  "legende": "Viaduc de Garabit, Cantal",
+  "question": "Cantal. Quelle est la particularité de ce viaduc de métal rouge ?",
+  "vraie": "il a été construit par l'entreprise de Gustave Eiffel."
+ },
+ "p-transbordeur": {
+  "mot": "",
+  "type": "photo",
+  "image": "photos/transbordeur.jpg",
+  "source": "wikipedia:Pont transbordeur du Martrou",
+  "rubrique": "Particularité",
+  "credit": "Pont transbordeur de Rochefort · Wolfgang Moroder · CC BY-SA 3.0 (Wikimedia Commons)",
+  "alt": "Deux hauts pylônes métalliques reliés par un tablier, au-dessus d'une rivière et de prés",
+  "legende": "Pont transbordeur, Rochefort",
+  "question": "Rochefort. Comment ce pont fait-il traverser la Charente ?",
+  "vraie": "une nacelle suspendue glisse d'une rive à l'autre."
  }
 }

@@ -9193,5 +9193,125 @@
   "id": "t-p-lion-3",
   "mot": "p-lion",
   "texte": "il est creux, et l'on peut monter dans sa tête par un escalier."
+ },
+ {
+  "id": "t-o-oublies-1",
+  "mot": "o-oublies",
+  "texte": "à marquer le beurre des fermes avant de le vendre au marché."
+ },
+ {
+  "id": "t-o-oublies-2",
+  "mot": "o-oublies",
+  "texte": "à imprimer à la main les motifs des papiers peints."
+ },
+ {
+  "id": "t-o-oublies-3",
+  "mot": "o-oublies",
+  "texte": "à chauffer les draps, glissé brûlant sous l'édredon."
+ },
+ {
+  "id": "t-o-peselettre-1",
+  "mot": "o-peselettre",
+  "texte": "balance perfectionnée pesant les épices rares au grain près, chez l'apothicaire."
+ },
+ {
+  "id": "t-o-peselettre-2",
+  "mot": "o-peselettre",
+  "texte": "balance de bijoutier pesant les pierres précieuses avant leur taille."
+ },
+ {
+  "id": "t-o-peselettre-3",
+  "mot": "o-peselettre",
+  "texte": "balance de cuisine dosant la farine des pâtisseries les plus fines."
+ },
+ {
+  "id": "t-o-poirepoudre-1",
+  "mot": "o-poirepoudre",
+  "texte": "à garder le parfum des dames, versé goutte à goutte."
+ },
+ {
+  "id": "t-o-poirepoudre-2",
+  "mot": "o-poirepoudre",
+  "texte": "à emporter l'eau bénite des pèlerins sur les chemins."
+ },
+ {
+  "id": "t-o-poirepoudre-3",
+  "mot": "o-poirepoudre",
+  "texte": "à servir le sel fin à la table des voyageurs."
+ },
+ {
+  "id": "t-o-mouches-1",
+  "mot": "o-mouches",
+  "texte": "à ranger les pastilles contre la toux, à sucer discrètement pendant la messe."
+ },
+ {
+  "id": "t-o-mouches-2",
+  "mot": "o-mouches",
+  "texte": "à garder une mèche de cheveux de l'être aimé, à l'abri des regards."
+ },
+ {
+  "id": "t-o-mouches-3",
+  "mot": "o-mouches",
+  "texte": "à offrir du tabac à priser aux invités, après le dîner, au salon."
+ },
+ {
+  "id": "t-p-vendome-1",
+  "mot": "p-vendome",
+  "texte": "avec les cloches fondues des églises de Paris."
+ },
+ {
+  "id": "t-p-vendome-2",
+  "mot": "p-vendome",
+  "texte": "avec la vaisselle offerte par les dames de la cour."
+ },
+ {
+  "id": "t-p-vendome-3",
+  "mot": "p-vendome",
+  "texte": "avec les grilles arrachées au château des Tuileries."
+ },
+ {
+  "id": "t-p-strasbourg-1",
+  "mot": "p-strasbourg",
+  "texte": "elle fut bâtie plus vite que toutes les autres."
+ },
+ {
+  "id": "t-p-strasbourg-2",
+  "mot": "p-strasbourg",
+  "texte": "ses cloches s'entendaient jusqu'à Paris."
+ },
+ {
+  "id": "t-p-strasbourg-3",
+  "mot": "p-strasbourg",
+  "texte": "elle fut la seule église peinte en blanc."
+ },
+ {
+  "id": "t-p-garabit-1",
+  "mot": "p-garabit",
+  "texte": "il a été démonté en Belgique et remonté ici pièce à pièce."
+ },
+ {
+  "id": "t-p-garabit-2",
+  "mot": "p-garabit",
+  "texte": "aucun train n'a jamais osé le traverser à pleine vitesse."
+ },
+ {
+  "id": "t-p-garabit-3",
+  "mot": "p-garabit",
+  "texte": "il a été peint en rouge pour effrayer les aigles du Cantal."
+ },
+ {
+  "id": "t-p-transbordeur-1",
+  "mot": "p-transbordeur",
+  "texte": "son tablier pivote comme une porte sur un pilier."
+ },
+ {
+  "id": "t-p-transbordeur-2",
+  "mot": "p-transbordeur",
+  "texte": "on monte en haut et on redescend par un toboggan."
+ },
+ {
+  "id": "t-p-transbordeur-3",
+  "mot": "p-transbordeur",
+  "texte": "un bac à voile est guidé par des câbles tendus."
  }
 ]

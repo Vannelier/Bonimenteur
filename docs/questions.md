@@ -225,6 +225,12 @@ répond 429 à urllib).
   Carnac, lion de Belfort. Écartée : l'expérience de Pascal à la tour
   Saint-Jacques (lieu débattu, Wikipédia anglais) ; la question porte sur sa
   station météo. Descriptions corrigées après examen des images.
+- Lot 15 : 8 photos (fer à oublies, pèse-lettre, poire à poudre, boîte à
+  mouches, colonne Vendôme, cathédrale de Strasbourg, viaduc de Garabit,
+  pont transbordeur de Rochefort). Commons répond 429 à urllib : interrogé
+  par curl. Écartés faute d'image : le « moine » chauffe-lit, la chancelière,
+  le porte-bouteilles. Cathédrale : vue d'ensemble, la première image ne
+  montrait que des statues du portail.
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux
