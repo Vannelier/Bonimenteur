@@ -7483,5 +7483,260 @@
   "id": "t-a-guillotin-3",
   "mot": "a-guillotin",
   "texte": "en tira une immense fortune"
+ },
+ {
+  "id": "t-k-fallas-1",
+  "mot": "k-fallas",
+  "texte": "promène une baleine de bois jusqu'à la mer en chantant"
+ },
+ {
+  "id": "t-k-fallas-2",
+  "mot": "k-fallas",
+  "texte": "lâche des taureaux couverts de fleurs sur la plage"
+ },
+ {
+  "id": "t-k-fallas-3",
+  "mot": "k-fallas",
+  "texte": "plonge tout habillé dans le port pour fêter le printemps"
+ },
+ {
+  "id": "t-k-setsubun-1",
+  "mot": "k-setsubun",
+  "texte": "en faisant sonner des clochettes"
+ },
+ {
+  "id": "t-k-setsubun-2",
+  "mot": "k-setsubun",
+  "texte": "en brûlant des branches de pin"
+ },
+ {
+  "id": "t-k-setsubun-3",
+  "mot": "k-setsubun",
+  "texte": "en balayant le seuil à l'envers"
+ },
+ {
+  "id": "t-k-sinterklaas-1",
+  "mot": "k-sinterklaas",
+  "texte": "sur un âne, venu de Laponie"
+ },
+ {
+  "id": "t-k-sinterklaas-2",
+  "mot": "k-sinterklaas",
+  "texte": "en traîneau tiré par des chèvres"
+ },
+ {
+  "id": "t-k-sinterklaas-3",
+  "mot": "k-sinterklaas",
+  "texte": "à vélo, par la digue du nord"
+ },
+ {
+  "id": "t-k-martenitsa-1",
+  "mot": "k-martenitsa",
+  "texte": "jusqu'à la première pluie d'orage"
+ },
+ {
+  "id": "t-k-martenitsa-2",
+  "mot": "k-martenitsa",
+  "texte": "pendant les trois jours de la fonte"
+ },
+ {
+  "id": "t-k-martenitsa-3",
+  "mot": "k-martenitsa",
+  "texte": "jusqu'à la floraison des pommiers"
+ },
+ {
+  "id": "t-k-caber-1",
+  "mot": "k-caber",
+  "texte": "tirent un bateau de pêche sur la lande"
+ },
+ {
+  "id": "t-k-caber-2",
+  "mot": "k-caber",
+  "texte": "portent une vache sur les épaules au sommet"
+ },
+ {
+  "id": "t-k-caber-3",
+  "mot": "k-caber",
+  "texte": "font rouler un tonneau de whisky dans le loch"
+ },
+ {
+  "id": "t-k-shrovetide-1",
+  "mot": "k-shrovetide",
+  "texte": "avec un ballon rempli de pièces de monnaie anciennes"
+ },
+ {
+  "id": "t-k-shrovetide-2",
+  "mot": "k-shrovetide",
+  "texte": "où les joueurs ont les chevilles attachées deux par deux"
+ },
+ {
+  "id": "t-k-shrovetide-3",
+  "mot": "k-shrovetide",
+  "texte": "qui ne s'arrête qu'au premier but marqué de la tête"
+ },
+ {
+  "id": "t-k-cygnes-1",
+  "mot": "k-cygnes",
+  "texte": "repêcher les chapeaux perdus"
+ },
+ {
+  "id": "t-k-cygnes-2",
+  "mot": "k-cygnes",
+  "texte": "bénir les écluses du fleuve"
+ },
+ {
+  "id": "t-k-cygnes-3",
+  "mot": "k-cygnes",
+  "texte": "compter les saumons de l'année"
+ },
+ {
+  "id": "t-k-enfarinats-1",
+  "mot": "k-enfarinats",
+  "texte": "à coups d'éponges trempées de vin rouge"
+ },
+ {
+  "id": "t-k-enfarinats-2",
+  "mot": "k-enfarinats",
+  "texte": "à coups de coussins remplis de paille"
+ },
+ {
+  "id": "t-k-enfarinats-3",
+  "mot": "k-enfarinats",
+  "texte": "à coups d'oranges amères et de citrons"
+ },
+ {
+  "id": "t-k-castells-1",
+  "mot": "k-castells",
+  "texte": "porter la plus lourde statue"
+ },
+ {
+  "id": "t-k-castells-2",
+  "mot": "k-castells",
+  "texte": "danser la plus longue sardane"
+ },
+ {
+  "id": "t-k-castells-3",
+  "mot": "k-castells",
+  "texte": "sonner la plus grosse cloche"
+ },
+ {
+  "id": "t-k-binche-1",
+  "mot": "k-binche",
+  "texte": "jettent des frites aux enfants"
+ },
+ {
+  "id": "t-k-binche-2",
+  "mot": "k-binche",
+  "texte": "soufflent dans des cornets de bière"
+ },
+ {
+  "id": "t-k-binche-3",
+  "mot": "k-binche",
+  "texte": "distribuent des œufs en chocolat"
+ },
+ {
+  "id": "t-k-dunkerque-1",
+  "mot": "k-dunkerque",
+  "texte": "des gaufres sucrées"
+ },
+ {
+  "id": "t-k-dunkerque-2",
+  "mot": "k-dunkerque",
+  "texte": "des moules marinières"
+ },
+ {
+  "id": "t-k-dunkerque-3",
+  "mot": "k-dunkerque",
+  "texte": "des sabots de bois"
+ },
+ {
+  "id": "t-k-chalandamarz-1",
+  "mot": "k-chalandamarz",
+  "texte": "en brûlant un bonhomme de paille sur le lac"
+ },
+ {
+  "id": "t-k-chalandamarz-2",
+  "mot": "k-chalandamarz",
+  "texte": "en lançant des boules de neige sur le clocher"
+ },
+ {
+  "id": "t-k-chalandamarz-3",
+  "mot": "k-chalandamarz",
+  "texte": "en dévalant les pentes sur des luges de bois"
+ },
+ {
+  "id": "t-k-takanakuy-1",
+  "mot": "k-takanakuy",
+  "texte": "en partageant un repas de cochon d'Inde"
+ },
+ {
+  "id": "t-k-takanakuy-2",
+  "mot": "k-takanakuy",
+  "texte": "en échangeant des lamas devant l'église"
+ },
+ {
+  "id": "t-k-takanakuy-3",
+  "mot": "k-takanakuy",
+  "texte": "en dansant jusqu'à ce que l'un s'écroule"
+ },
+ {
+  "id": "t-k-roitelet-1",
+  "mot": "k-roitelet",
+  "texte": "avec une oie rôtie à partager au pub"
+ },
+ {
+  "id": "t-k-roitelet-2",
+  "mot": "k-roitelet",
+  "texte": "avec un violon pour faire danser chacun"
+ },
+ {
+  "id": "t-k-roitelet-3",
+  "mot": "k-roitelet",
+  "texte": "avec un mouton qui porte des clochettes"
+ },
+ {
+  "id": "t-k-lucia-1",
+  "mot": "k-lucia",
+  "texte": "avec un plateau de harengs marinés"
+ },
+ {
+  "id": "t-k-lucia-2",
+  "mot": "k-lucia",
+  "texte": "avec un renne tenu par un ruban"
+ },
+ {
+  "id": "t-k-lucia-3",
+  "mot": "k-lucia",
+  "texte": "avec une lanterne en forme d'étoile"
+ },
+ {
+  "id": "t-k-palio-1",
+  "mot": "k-palio",
+  "texte": "dans une course de barques à rames sur la rivière"
+ },
+ {
+  "id": "t-k-palio-2",
+  "mot": "k-palio",
+  "texte": "dans un tournoi de lancer de drapeaux du clocher"
+ },
+ {
+  "id": "t-k-palio-3",
+  "mot": "k-palio",
+  "texte": "dans une course de garçons portant un tonneau"
+ },
+ {
+  "id": "t-k-baumstamm-1",
+  "mot": "k-baumstamm",
+  "texte": "porter un tonneau de bière vide"
+ },
+ {
+  "id": "t-k-baumstamm-2",
+  "mot": "k-baumstamm",
+  "texte": "traire une vache devant la noce"
+ },
+ {
+  "id": "t-k-baumstamm-3",
+  "mot": "k-baumstamm",
+  "texte": "casser une cruche à coups de pied"
  }
 ]

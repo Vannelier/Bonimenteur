@@ -3522,5 +3522,158 @@
   "source": "wikipedia:Joseph-Ignace Guillotin",
   "question": "Le docteur Guillotin, dont la machine porte le nom, ___.",
   "vraie": "était opposé à la peine de mort"
+ },
+ "k-fallas": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Valence, Espagne",
+  "timbre": "España",
+  "source": "wikipedia:Fallas",
+  "question": "Ici, chaque mois de mars, on ___.",
+  "vraie": "brûle d'immenses statues de carton-pâte dans les rues"
+ },
+ "k-setsubun": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Kyoto, Japon",
+  "timbre": "Nippon",
+  "source": "wikipedia:Setsubun",
+  "question": "Ici, à la veille du printemps, on chasse les démons de la maison ___.",
+  "vraie": "en leur lançant des graines de soja"
+ },
+ "k-sinterklaas": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Amsterdam, Pays-Bas",
+  "timbre": "Nederland",
+  "source": "wikipedia-en:Sinterklaas",
+  "question": "Ici, chaque mois de novembre, saint Nicolas arrive ___.",
+  "vraie": "en bateau, venu d'Espagne"
+ },
+ "k-martenitsa": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Sofia, Bulgarie",
+  "timbre": "България",
+  "source": "wikipedia:Martenitsa",
+  "question": "Ici, à partir du 1er mars, on porte un bracelet rouge et blanc ___.",
+  "vraie": "jusqu'à voir la première cigogne"
+ },
+ "k-caber": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Braemar, Écosse",
+  "timbre": "Scotland",
+  "source": "wikipedia-en:Caber toss",
+  "question": "Ici, aux jeux des Highlands, des hommes en kilt ___.",
+  "vraie": "lancent un tronc d'arbre pour le faire basculer"
+ },
+ "k-shrovetide": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Ashbourne, Angleterre",
+  "timbre": "England",
+  "source": "wikipedia-en:Royal Shrovetide Football",
+  "question": "Ici, à Mardi gras, toute la ville joue un match de football ___.",
+  "vraie": "dont les buts sont à cinq kilomètres l'un de l'autre"
+ },
+ "k-cygnes": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Windsor, Angleterre",
+  "timbre": "England",
+  "source": "wikipedia-en:Swan Upping",
+  "question": "Ici, chaque été, des bateliers en uniforme remontent la Tamise pour ___.",
+  "vraie": "recenser les cygnes du souverain"
+ },
+ "k-enfarinats": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Ibi, Espagne",
+  "timbre": "España",
+  "source": "wikipedia-en:Els Enfarinats",
+  "question": "Ici, chaque 28 décembre, les habitants se livrent une bataille ___.",
+  "vraie": "à coups de farine, d'œufs et de pétards"
+ },
+ "k-castells": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Tarragone, Catalogne",
+  "timbre": "España",
+  "source": "wikipedia:Castell",
+  "question": "Ici, lors des fêtes, des équipes rivalisent pour ___.",
+  "vraie": "bâtir les plus hautes tours humaines"
+ },
+ "k-binche": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Binche, Belgique",
+  "timbre": "Belgique",
+  "source": "wikipedia-en:Gilles",
+  "question": "Ici, au carnaval, des hommes masqués coiffés de plumes d'autruche ___.",
+  "vraie": "lancent des oranges à la foule"
+ },
+ "k-dunkerque": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Dunkerque, France",
+  "timbre": "France",
+  "source": "wikipedia:Carnaval de Dunkerque",
+  "question": "Ici, au carnaval, le maire lance à la foule, depuis le balcon de la mairie, ___.",
+  "vraie": "des harengs fumés"
+ },
+ "k-chalandamarz": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Engadine, Suisse",
+  "timbre": "Helvetia",
+  "source": "wikipedia-en:Chalandamarz",
+  "question": "Ici, le 1er mars, les enfants chassent l'hiver ___.",
+  "vraie": "en parcourant les rues avec de grosses cloches"
+ },
+ "k-takanakuy": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Chumbivilcas, Pérou",
+  "timbre": "Perú",
+  "source": "wikipedia-en:Takanakuy",
+  "question": "Ici, le jour de Noël, les villageois règlent leurs querelles de l'année ___.",
+  "vraie": "en se battant à coups de poing devant tous"
+ },
+ "k-roitelet": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Dingle, Irlande",
+  "timbre": "Éire",
+  "source": "wikipedia-en:Wren Day",
+  "question": "Ici, le 26 décembre, des jeunes déguisés en paille vont de maison en maison ___.",
+  "vraie": "avec un faux roitelet au bout d'un bâton"
+ },
+ "k-lucia": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Stockholm, Suède",
+  "timbre": "Sverige",
+  "source": "wikipedia:Sainte-Lucie (fête)",
+  "question": "Ici, le 13 décembre, une jeune fille en blanc défile ___.",
+  "vraie": "avec une couronne de bougies allumées"
+ },
+ "k-palio": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Sienne, Italie",
+  "timbre": "Italia",
+  "source": "wikipedia:Palio de Sienne",
+  "question": "Ici, deux fois par été, les quartiers de la ville s'affrontent ___.",
+  "vraie": "dans une course de chevaux montés à cru sur la place"
+ },
+ "k-baumstamm": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Bavière, Allemagne",
+  "timbre": "Deutschland",
+  "source": "wikipedia-de:Hochzeitsbrauch",
+  "question": "Ici, à la sortie de l'église, les jeunes mariés doivent ___.",
+  "vraie": "scier ensemble un tronc d'arbre"
  }
 }

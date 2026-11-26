@@ -204,6 +204,11 @@ répond 429 à urllib).
   `tools/lot.py` vérifie maintenant la forme des anecdotes, coutumes et photos
   (pas de majuscule, pas de point) : la Marseillaise commençait par
   « Strasbourg ». Bas des pièces à 543 px au plus à 375 × 553.
+- Lot 11 : 17 coutumes (Espagne, Japon, Pays-Bas, Bulgarie, Écosse,
+  Angleterre, Catalogne, Belgique, France, Suisse, Pérou, Irlande, Suède,
+  Italie, Allemagne). Sources possibles en allemand, espagnol, italien
+  (`SOURCES`). Écartés faute de page ou de mot-clé : Kantō Matsuri, le requin
+  du Þorrablót. Bas des pièces à 518 px au plus à 375 × 553.
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux

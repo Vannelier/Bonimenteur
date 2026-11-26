@@ -122,7 +122,9 @@ def premiere_definition(mot: str) -> str:
 
 
 SOURCES = {"wiktionary": "https://fr.wiktionary.org/w/index.php?", "wiktionary-en": "https://en.wiktionary.org/w/index.php?",
-           "wikipedia": "https://fr.wikipedia.org/w/index.php?", "wikipedia-en": "https://en.wikipedia.org/w/index.php?"}
+           "wikipedia": "https://fr.wikipedia.org/w/index.php?", "wikipedia-en": "https://en.wikipedia.org/w/index.php?",
+           "wikipedia-de": "https://de.wikipedia.org/w/index.php?", "wikipedia-es": "https://es.wikipedia.org/w/index.php?",
+           "wikipedia-it": "https://it.wikipedia.org/w/index.php?"}
 
 
 def source_contient(source: str, cle: str) -> str:
