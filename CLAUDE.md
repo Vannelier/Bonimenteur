@@ -23,6 +23,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | `data/questions.json` | Les questions (`docs/questions.md`). |
 | `data/faux-de-depart.json` | Trois faux de Mr Halifax (faussaire maison, identifiant `truffe`) par question, impérissables, en complément tant qu'une question a moins de 3 faux de joueurs en vente (`MELANGE`). |
 | `tools/lot.py` | Import de questions par lots (`tools/lots/*.json`) : contrôle (commune réelle, faux inexistants, forme, source, longueur de la vraie face aux faux), fusion, `--arbitre` (faux de Mr Halifax trop proches). `docs/questions.md`. |
+| `tools/artifact.py` | Construit le dossier de l'artifact claude.ai : page sans `serveur.js`, `donnees.json` (questions et faux de Mr Halifax, lus par la page à la place de la base, `PRET_DONNEES`), paquets de l'arbitre. Photos, icônes et communes publiées à part, quand elles changent. |
 | `tools/proches.py` | Calcule `prototype/proches/` depuis les vecteurs de Vocabulium. |
 | `tools/icones.py` | Favicon et icônes d'application (sceau de cire et plume dorée), sur fond transparent : `prototype/favicon.svg`, `favicon.ico` (frames BMP dont le masque AND porte la même transparence que l'alpha, sans quoi un carré noir entourait le sceau), `img/`. |
 | `tools/categories.py` | Relève dans le Wiktionnaire la catégorie grammaticale des définitions (`categorie`), à relire. |

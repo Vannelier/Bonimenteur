@@ -2152,6 +2152,10 @@ document.querySelectorAll(".onglets button").forEach(b => b.onclick = () => mont
 
 /* Démarrage */
 const pret = () => S.charge.mots && S.charge.pieges && S.charge.choix;
+/* Sur claude.ai, questions et faux de Mr Halifax sont publiés avec la page (donnees.json, construit
+   depuis data/) : ils ne changent jamais en jeu, la base ne garde que ce qu'écrivent les joueurs. Sur
+   Railway, pas de fichier : le serveur les fournit par /api/etat (serveur.js). */
+const PRET_DONNEES = fetch("donnees.json").then(r => r.ok ? r.json() : null).catch(() => null);
 (async () => {
   const minuteur = setTimeout(() => { if (!pret()) { afficher("jeu"); $e.innerHTML = `<p class="alerte">Les mots ne répondent pas encore. Vérifie ta connexion : il faut être connecté à claude.ai pour jouer.</p>`; } }, 10000);
   try { [db, user] = await Promise.all([window.claude?.use?.("db") ?? null, window.claude?.use?.("user") ?? null]); } catch (e) { db = null; }
@@ -2166,8 +2170,12 @@ const pret = () => S.charge.mots && S.charge.pieges && S.charge.choix;
     else if (lance && vue === "accueil") majAccueil();
     else rafraichirAtelier();
   };
-  db.collection("mots").onSnapshot(s => { S.mots = new Map(s.docs.map(d => [d.id, d.data()])); if (!s.metadata.fromCache) S.charge.mots = true; quandPret(); }, () => { S.charge.mots = true; quandPret(); });
-  db.collection("pieges").limit(1000).onSnapshot(s => { S.pieges = s.docs.map(d => ({id: d.id, ...d.data()})); if (!s.metadata.fromCache) S.charge.pieges = true; quandPret(); }, () => { S.charge.pieges = true; quandPret(); });
+  const DONNEES = await PRET_DONNEES;
+  const halifax = DONNEES ? DONNEES.faux.map(f => ({ ...f, auteur: "truffe", cree: 0 })) : [];
+  if (DONNEES) { S.mots = new Map(Object.entries(DONNEES.questions)); S.charge.mots = true; }
+  else db.collection("mots").onSnapshot(s => { S.mots = new Map(s.docs.map(d => [d.id, d.data()])); if (!s.metadata.fromCache) S.charge.mots = true; quandPret(); }, () => { S.charge.mots = true; quandPret(); });
+  // Faux des joueurs de la base, plus ceux de Mr Halifax du fichier (les anciens de la base sont ignorés).
+  db.collection("pieges").limit(5000).onSnapshot(s => { const joueurs = s.docs.map(d => ({id: d.id, ...d.data()})); S.pieges = DONNEES ? [...halifax, ...joueurs.filter(p => p.auteur !== "truffe")] : joueurs; if (!s.metadata.fromCache) S.charge.pieges = true; quandPret(); }, () => { S.pieges = halifax; S.charge.pieges = true; quandPret(); });
   db.collection("joueurs").onSnapshot(s => { S.pseudos = new Map(s.docs.map(d => [d.id, String(d.data().pseudo || "").slice(0, PSEUDO_MAX)]).filter(x => x[1])); rafraichirAtelier(true); if (lance && vue === "accueil" && !document.getElementById("pseudoAcc")) majAccueil(); }, () => {});
   db.collection("defis").limit(1000).onSnapshot(s => { S.defis = new Map(s.docs.map(d => [d.id, d.data()])); }, () => {});
   db.collection("actes").limit(5000).onSnapshot(s => { S.actes = s.docs.map(d => d.data()); actesEnVol.length = 0; rafraichirAtelier(true); }, () => {});
