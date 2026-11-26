@@ -218,6 +218,13 @@ répond 429 à urllib).
   écartés : aigrefin (un poisson), pioupiou (cri des poussins). Mot-clé
   exigé quand le sens retenu n'est pas le premier (argousin, baderne,
   pandore, roquentin, panouille, falot…).
+- Lot 14 : 12 photos (Wikimedia Commons, licences CC BY, CC BY-SA, CC0 ou
+  domaine public, crédit dans `credit`), réduites à 640 px : fer à tuyauter,
+  tastevin, cuillère à absinthe, mouchettes, baratte, pont d'Avignon,
+  Cordouan, zouave de l'Alma, obélisque de la Concorde, tour Saint-Jacques,
+  Carnac, lion de Belfort. Écartée : l'expérience de Pascal à la tour
+  Saint-Jacques (lieu débattu, Wikipédia anglais) ; la question porte sur sa
+  station météo. Descriptions corrigées après examen des images.
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux

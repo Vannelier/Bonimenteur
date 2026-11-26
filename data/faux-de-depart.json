@@ -9013,5 +9013,185 @@
   "id": "t-myrmidon-3",
   "mot": "myrmidon",
   "texte": "Mirliton des fêtes foraines."
+ },
+ {
+  "id": "t-o-tuyauter-1",
+  "mot": "o-tuyauter",
+  "texte": "à enrouler la mèche des lampes à huile, pour la ranger."
+ },
+ {
+  "id": "t-o-tuyauter-2",
+  "mot": "o-tuyauter",
+  "texte": "à presser les feuilles de tabac avant de les rouler."
+ },
+ {
+  "id": "t-o-tuyauter-3",
+  "mot": "o-tuyauter",
+  "texte": "à faire chauffer les fers à cheval avant de les poser."
+ },
+ {
+  "id": "t-o-tastevin-1",
+  "mot": "o-tastevin",
+  "texte": "à recueillir la cire qui coule des cierges pendant la messe."
+ },
+ {
+  "id": "t-o-tastevin-2",
+  "mot": "o-tastevin",
+  "texte": "à mesurer la ration de sel donnée à chaque soldat."
+ },
+ {
+  "id": "t-o-tastevin-3",
+  "mot": "o-tastevin",
+  "texte": "à faire boire les nouveau-nés à la petite cuillère."
+ },
+ {
+  "id": "t-o-absinthe-1",
+  "mot": "o-absinthe",
+  "texte": "cuillère ajourée pour égoutter les cornichons sans se mouiller les doigts."
+ },
+ {
+  "id": "t-o-absinthe-2",
+  "mot": "o-absinthe",
+  "texte": "cuillère perfectionnée pour écumer le bouillon sans en perdre une goutte."
+ },
+ {
+  "id": "t-o-absinthe-3",
+  "mot": "o-absinthe",
+  "texte": "cuillère à graines pour nourrir les serins sans renverser la mangeoire."
+ },
+ {
+  "id": "t-o-mouchettes-1",
+  "mot": "o-mouchettes",
+  "texte": "ciseaux de couturière dont la petite boîte garde les épingles à portée de main."
+ },
+ {
+  "id": "t-o-mouchettes-2",
+  "mot": "o-mouchettes",
+  "texte": "ciseaux de barbier dont la petite boîte recueille la poudre des perruques."
+ },
+ {
+  "id": "t-o-mouchettes-3",
+  "mot": "o-mouchettes",
+  "texte": "ciseaux de notaire dont la petite boîte range la cire à cacheter les actes."
+ },
+ {
+  "id": "t-o-baratte-1",
+  "mot": "o-baratte",
+  "texte": "à fouler le raisin des vendanges sans y mettre les pieds."
+ },
+ {
+  "id": "t-o-baratte-2",
+  "mot": "o-baratte",
+  "texte": "à laver le linge en le frappant dans l'eau savonneuse."
+ },
+ {
+  "id": "t-o-baratte-3",
+  "mot": "o-baratte",
+  "texte": "à pétrir la pâte à pain pour toute une ferme."
+ },
+ {
+  "id": "t-p-avignon-1",
+  "mot": "p-avignon",
+  "texte": "il a été bâti sans une goutte de mortier entre ses pierres."
+ },
+ {
+  "id": "t-p-avignon-2",
+  "mot": "p-avignon",
+  "texte": "il s'ouvrait en deux pour laisser passer les bateaux."
+ },
+ {
+  "id": "t-p-avignon-3",
+  "mot": "p-avignon",
+  "texte": "on y payait le passage en chantant au gardien."
+ },
+ {
+  "id": "t-p-cordouan-1",
+  "mot": "p-cordouan",
+  "texte": "il était allumé avec de l'huile de baleine offerte par chaque navire."
+ },
+ {
+  "id": "t-p-cordouan-2",
+  "mot": "p-cordouan",
+  "texte": "son gardien devait sonner une cloche toutes les heures, nuit et jour."
+ },
+ {
+  "id": "t-p-cordouan-3",
+  "mot": "p-cordouan",
+  "texte": "on y enfermait les marins déserteurs, face à la côte inaccessible."
+ },
+ {
+  "id": "t-p-zouave-1",
+  "mot": "p-zouave",
+  "texte": "les bateliers la saluent pour avoir bon voyage."
+ },
+ {
+  "id": "t-p-zouave-2",
+  "mot": "p-zouave",
+  "texte": "elle marque la limite de la ville ancienne."
+ },
+ {
+  "id": "t-p-zouave-3",
+  "mot": "p-zouave",
+  "texte": "on y affichait les noms des soldats médaillés."
+ },
+ {
+  "id": "t-p-obelisque-1",
+  "mot": "p-obelisque",
+  "texte": "il a été taillé sur place dans un bloc venu des carrières de Bourgogne."
+ },
+ {
+  "id": "t-p-obelisque-2",
+  "mot": "p-obelisque",
+  "texte": "il a été tiré depuis Marseille sur des rondins par des centaines de chevaux."
+ },
+ {
+  "id": "t-p-obelisque-3",
+  "mot": "p-obelisque",
+  "texte": "il a été pris à Rome par les soldats de Napoléon et ramené en pièces."
+ },
+ {
+  "id": "t-p-saintjacques-1",
+  "mot": "p-saintjacques",
+  "texte": "un pigeonnier pour la poste militaire."
+ },
+ {
+  "id": "t-p-saintjacques-2",
+  "mot": "p-saintjacques",
+  "texte": "la plus vieille cloche de toute la ville."
+ },
+ {
+  "id": "t-p-saintjacques-3",
+  "mot": "p-saintjacques",
+  "texte": "un phare qui guidait les bateaux de la Seine."
+ },
+ {
+  "id": "t-p-carnac-1",
+  "mot": "p-carnac",
+  "texte": "ce sont des géants qui jouaient aux quilles et ont oublié de ranger."
+ },
+ {
+  "id": "t-p-carnac-2",
+  "mot": "p-carnac",
+  "texte": "ce sont les menhirs qu'un druide plantait à chaque nouvelle lune."
+ },
+ {
+  "id": "t-p-carnac-3",
+  "mot": "p-carnac",
+  "texte": "ce sont des marins qui attendent encore le retour de leurs navires."
+ },
+ {
+  "id": "t-p-lion-1",
+  "mot": "p-lion",
+  "texte": "il a été taillé par des prisonniers de guerre en un seul hiver."
+ },
+ {
+  "id": "t-p-lion-2",
+  "mot": "p-lion",
+  "texte": "il a été rapporté pierre par pierre d'un temple d'Afrique du Nord."
+ },
+ {
+  "id": "t-p-lion-3",
+  "mot": "p-lion",
+  "texte": "il est creux, et l'on peut monter dans sa tête par un escalier."
  }
 ]
