@@ -3675,5 +3675,283 @@
   "source": "wikipedia-de:Hochzeitsbrauch",
   "question": "Ici, à la sortie de l'église, les jeunes mariés doivent ___.",
   "vraie": "scier ensemble un tronc d'arbre"
+ },
+ "c-lagrasse": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Aude existe réellement ?",
+  "type": "commune",
+  "vraie": "Lagrasse",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-rouge": {
+  "mot": "",
+  "question": "Quel nom de commune de la Loire-Atlantique existe réellement ?",
+  "type": "commune",
+  "vraie": "Rougé",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-patay": {
+  "mot": "",
+  "question": "Quel nom de commune du Loiret existe réellement ?",
+  "type": "commune",
+  "vraie": "Patay",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bouloire": {
+  "mot": "",
+  "question": "Quel nom de commune de la Sarthe existe réellement ?",
+  "type": "commune",
+  "vraie": "Bouloire",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cramant": {
+  "mot": "",
+  "question": "Quel nom de commune de la Marne existe réellement ?",
+  "type": "commune",
+  "vraie": "Cramant",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bourrou": {
+  "mot": "",
+  "question": "Quel nom de commune de la Dordogne existe réellement ?",
+  "type": "commune",
+  "vraie": "Bourrou",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-mieussy": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Savoie existe réellement ?",
+  "type": "commune",
+  "vraie": "Mieussy",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-boulbon": {
+  "mot": "",
+  "question": "Quel nom de commune des Bouches-du-Rhône existe réellement ?",
+  "type": "commune",
+  "vraie": "Boulbon",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-tourbes": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Hérault existe réellement ?",
+  "type": "commune",
+  "vraie": "Tourbes",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-marbache": {
+  "mot": "",
+  "question": "Quel nom de commune de Meurthe-et-Moselle existe réellement ?",
+  "type": "commune",
+  "vraie": "Marbache",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-avanne-aveney": {
+  "mot": "",
+  "question": "Quel nom de commune du Doubs existe réellement ?",
+  "type": "commune",
+  "vraie": "Avanne-Aveney",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-gaillard": {
+  "mot": "",
+  "question": "Quel nom de commune de la Haute-Savoie existe réellement ?",
+  "type": "commune",
+  "vraie": "Gaillard",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-pinsac": {
+  "mot": "",
+  "question": "Quel nom de commune du Lot existe réellement ?",
+  "type": "commune",
+  "vraie": "Pinsac",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-mouleydier": {
+  "mot": "",
+  "question": "Quel nom de commune de la Dordogne existe réellement ?",
+  "type": "commune",
+  "vraie": "Mouleydier",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-fumel": {
+  "mot": "",
+  "question": "Quel nom de commune de Lot-et-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Fumel",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-sougraigne": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Aude existe réellement ?",
+  "type": "commune",
+  "vraie": "Sougraigne",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-moussy": {
+  "mot": "",
+  "question": "Quel nom de commune du Val-d'Oise existe réellement ?",
+  "type": "commune",
+  "vraie": "Moussy",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-plumelec": {
+  "mot": "",
+  "question": "Quel nom de commune du Morbihan existe réellement ?",
+  "type": "commune",
+  "vraie": "Plumelec",
+  "source": "geo.api.gouv.fr"
+ },
+ "accorte": {
+  "mot": "accorte",
+  "vraie": "Gracieuse, avenante et aimable.",
+  "categorie": "adj.",
+  "source": "wiktionary:accorte"
+ },
+ "bamboche": {
+  "mot": "bamboche",
+  "vraie": "Partie de plaisir, fête où l'on boit et mange.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:bamboche"
+ },
+ "gandin": {
+  "mot": "gandin",
+  "vraie": "Jeune homme élégant et ridicule.",
+  "categorie": "n. m.",
+  "source": "wiktionary:gandin"
+ },
+ "grigou": {
+  "mot": "grigou",
+  "vraie": "Homme avare, pingre.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:grigou"
+ },
+ "hableur": {
+  "mot": "hâbleur",
+  "vraie": "Qui aime se vanter, exagérer.",
+  "categorie": "adj.",
+  "source": "wiktionary:hâbleur"
+ },
+ "jobard": {
+  "mot": "jobard",
+  "vraie": "Naïf qui se laisse duper facilement.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:jobard"
+ },
+ "lambrequin": {
+  "mot": "lambrequin",
+  "vraie": "Bande d'étoffe découpée qui orne le haut d'une fenêtre.",
+  "categorie": "n. m.",
+  "source": "wiktionary:lambrequin"
+ },
+ "maraud": {
+  "mot": "maraud",
+  "vraie": "Coquin, homme sans scrupules.",
+  "categorie": "n. m.",
+  "source": "wiktionary:maraud"
+ },
+ "parangon": {
+  "mot": "parangon",
+  "vraie": "Modèle, exemple parfait.",
+  "categorie": "n. m.",
+  "source": "wiktionary:parangon"
+ },
+ "patache": {
+  "mot": "patache",
+  "vraie": "Vieille voiture publique, lente et inconfortable.",
+  "categorie": "n. f.",
+  "source": "wiktionary:patache"
+ },
+ "peronnelle": {
+  "mot": "péronnelle",
+  "vraie": "Jeune femme sotte et bavarde.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:péronnelle"
+ },
+ "pied-plat": {
+  "mot": "pied-plat",
+  "vraie": "Homme lâche, sans courage.",
+  "categorie": "n. m.",
+  "source": "wiktionary:pied-plat"
+ },
+ "ribote": {
+  "mot": "ribote",
+  "vraie": "Excès de table et de boisson.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:ribote"
+ },
+ "sacripant": {
+  "mot": "sacripant",
+  "vraie": "Vaurien, mauvais sujet.",
+  "categorie": "n. m.",
+  "source": "wiktionary:sacripant"
+ },
+ "tarabuster": {
+  "mot": "tarabuster",
+  "vraie": "Importuner, tracasser quelqu'un.",
+  "categorie": "v.",
+  "source": "wiktionary:tarabuster"
+ },
+ "turlupin": {
+  "mot": "turlupin",
+  "vraie": "Mauvais plaisant qui fait des farces grossières.",
+  "categorie": "n. m.",
+  "source": "wiktionary:turlupin"
+ },
+ "vasouiller": {
+  "mot": "vasouiller",
+  "vraie": "S'embrouiller, hésiter, être hésitant.",
+  "categorie": "v.",
+  "registre": "familier",
+  "source": "wiktionary:vasouiller"
+ },
+ "zozo": {
+  "mot": "zozo",
+  "vraie": "Naïf, niais.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:zozo"
+ },
+ "begueule": {
+  "mot": "bégueule",
+  "vraie": "D'une pruderie excessive, faussement scrupuleuse.",
+  "categorie": "adj.",
+  "source": "wiktionary:bégueule"
+ },
+ "cagot": {
+  "mot": "cagot",
+  "vraie": "Faux dévot, hypocrite.",
+  "categorie": "n. m.",
+  "source": "wiktionary:cagot"
+ },
+ "faraud": {
+  "mot": "faraud",
+  "vraie": "Fier de son allure, un peu fanfaron.",
+  "categorie": "adj.",
+  "source": "wiktionary:faraud"
+ },
+ "grimaud": {
+  "mot": "grimaud",
+  "vraie": "Mauvais écrivain, écrivailleur.",
+  "categorie": "n. m.",
+  "source": "wiktionary:grimaud"
+ },
+ "carabin": {
+  "mot": "carabin",
+  "vraie": "Étudiant en médecine.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:carabin"
+ },
+ "gate-sauce": {
+  "mot": "gâte-sauce",
+  "vraie": "Mauvais cuisinier, ou marmiton.",
+  "categorie": "n. m.",
+  "source": "wiktionary:gâte-sauce"
  }
 }

@@ -209,6 +209,11 @@ répond 429 à urllib).
   Italie, Allemagne). Sources possibles en allemand, espagnol, italien
   (`SOURCES`). Écartés faute de page ou de mot-clé : Kantō Matsuri, le requin
   du Þorrablót. Bas des pièces à 518 px au plus à 375 × 553.
+- Lot 12 : 18 communes, 24 définitions. « Rougé » (pas « Rouge »). Faux de
+  commune réels écartés : Grillon, Vaillant. Bamboche : le premier sens est
+  une marionnette, le faux « marionnette » écarté. Pied-plat : « lâche »
+  (Wiktionnaire), pas « grossier ». Carabin : premier sens, un cavalier ; le
+  faux « garde de la maréchaussée » écarté.
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux
