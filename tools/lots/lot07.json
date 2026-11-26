@@ -1,64 +1,427 @@
 {
  "communes": [
-  ["Pétosse", "85", ["Pétarde", "Prouteville", "Ventoux-le-Bas"]],
-  ["Laboule", "07", ["Laquille", "Labille", "Lecochonnet"]],
-  ["Mamirolle", "25", ["Papirolle", "Mamiette", "Grand-Mérolle"]],
-  ["Quarante", "34", ["Trente-Deux", "Cinquante", "Soixante-Six"]],
-  ["Cent-Acres", "76", ["Mille-Arpents", "Vingt-Hectares", "Deux-Cents-Perches"]],
-  ["Deux-Chaises", "03", ["Trois-Tabourets", "Quatre-Bancs", "Une-Table"]],
-  ["Cinq-Mars-la-Pile", "37", ["Six-Avril-la-Face", "Trois-Mai-la-Croix", "Sept-Juin-la-Pierre"]],
-  ["Trois-Puits", "51", ["Quatre-Fontaines", "Deux-Sources", "Sept-Citernes"]],
-  ["Septfonds", "82", ["Neuffonds", "Huitpuits", "Sixvallons"]],
-  ["Bouzy", "51", ["Bulley", "Mousseux", "Pétillac"]],
-  ["Saint-Pompon", "24", ["Saint-Grelot", "Saint-Ruban", "Saint-Bouton"]],
-  ["Champignol-lez-Mondeville", "10", ["Morillon-lez-Mondeville", "Truffignol-sur-Aube", "Cèpeville-lez-Bar"]],
-  ["Silly-Tillard", "60", ["Billy-Tirard", "Sotty-Benêt", "Niaisy-Bêtard"]],
-  ["Lapoutroie", "68", ["Lapoutrelle", "Lachevronne", "Lasolive"]],
-  ["Zuydcoote", "59", ["Noordcoote", "Zuydkerke", "Oostcappelle-Plage"]],
-  ["Boeschepe", "59", ["Boeskerque", "Hondsbrugge", "Wormhoutstede"]],
-  ["Oye-Plage", "62", ["Canard-Plage", "Mouette-sur-Mer", "Goéland-les-Dunes"]],
-  ["Cuisy", "77", ["Rôtissy", "Mijotey", "Fricassy"]],
-  ["Sauve", "30", ["Saine", "Garde", "Sûre"]],
-  ["Seix", "09", ["Sept", "Huix", "Dix"]]
+  [
+   "Pétosse",
+   "85",
+   [
+    "Pétarde",
+    "Prouteville",
+    "Ventoux-le-Bas"
+   ]
+  ],
+  [
+   "Laboule",
+   "07",
+   [
+    "Laquille",
+    "Labille",
+    "Lecochonnet"
+   ]
+  ],
+  [
+   "Mamirolle",
+   "25",
+   [
+    "Papirolle",
+    "Mamiette",
+    "Grand-Mérolle"
+   ]
+  ],
+  [
+   "Quarante",
+   "34",
+   [
+    "Trente-Deux",
+    "Cinquante",
+    "Soixante-Six"
+   ]
+  ],
+  [
+   "Les Cent-Acres",
+   "76",
+   [
+    "Mille-Arpents",
+    "Vingt-Hectares",
+    "Deux-Cents-Perches"
+   ]
+  ],
+  [
+   "Deux-Chaises",
+   "03",
+   [
+    "Trois-Tabourets",
+    "Quatre-Bancs",
+    "Une-Table"
+   ]
+  ],
+  [
+   "Cinq-Mars-la-Pile",
+   "37",
+   [
+    "Six-Avril-la-Face",
+    "Trois-Mai-la-Croix",
+    "Sept-Juin-la-Pierre"
+   ]
+  ],
+  [
+   "Trois-Puits",
+   "51",
+   [
+    "Quatre-Fontaines",
+    "Deux-Sources",
+    "Sept-Citernes"
+   ]
+  ],
+  [
+   "Septfonds",
+   "82",
+   [
+    "Neuffonds",
+    "Huitpuits",
+    "Sixvallons"
+   ]
+  ],
+  [
+   "Bouzy",
+   "51",
+   [
+    "Bulley",
+    "Mousseux",
+    "Pétillac"
+   ]
+  ],
+  [
+   "Saint-Pompon",
+   "24",
+   [
+    "Saint-Grelot",
+    "Saint-Ruban",
+    "Saint-Bouton"
+   ]
+  ],
+  [
+   "Champignol-lez-Mondeville",
+   "10",
+   [
+    "Morillon-lez-Mondeville",
+    "Truffignol-sur-Aube",
+    "Cèpeville-lez-Bar"
+   ]
+  ],
+  [
+   "Silly-Tillard",
+   "60",
+   [
+    "Billy-Tirard",
+    "Sotty-Benêt",
+    "Niaisy-Bêtard"
+   ]
+  ],
+  [
+   "Lapoutroie",
+   "68",
+   [
+    "Lapoutrelle",
+    "Lachevronne",
+    "Lasolive"
+   ]
+  ],
+  [
+   "Zuydcoote",
+   "59",
+   [
+    "Noordcoote",
+    "Zuydkerke",
+    "Oostcappelle-Plage"
+   ]
+  ],
+  [
+   "Boeschepe",
+   "59",
+   [
+    "Boeskerque",
+    "Hondsbrugge",
+    "Wormhoutstede"
+   ]
+  ],
+  [
+   "Oye-Plage",
+   "62",
+   [
+    "Canard-Plage",
+    "Mouette-sur-Mer",
+    "Goéland-les-Dunes"
+   ]
+  ],
+  [
+   "Cuisy",
+   "77",
+   [
+    "Rôtissy",
+    "Mijotey",
+    "Fricassy"
+   ]
+  ],
+  [
+   "Sauve",
+   "30",
+   [
+    "Saine",
+    "Garde",
+    "Paisible"
+   ]
+  ],
+  [
+   "Seix",
+   "09",
+   [
+    "Sept",
+    "Huix",
+    "Dix"
+   ]
+  ]
  ],
  "questions": [
-  {"id": "coquebin", "mot": "coquebin", "vraie": "Jeune homme niais, sans expérience.", "categorie": "n. m.", "source": "wiktionary:coquebin",
-   "faux": ["Petit pot de terre pour cuire l'œuf.", "Coq nain des basses-cours flamandes.", "Bonnet de laine des pêcheurs bretons."]},
-  {"id": "galapiat", "mot": "galapiat", "vraie": "Vaurien, polisson, voyou.", "categorie": "n. m.", "registre": "familier", "source": "wiktionary:galapiat",
-   "faux": ["Plat creux de faïence.", "Petit galop d'un cheval.", "Pâté de lièvre en croûte."]},
-  {"id": "mamamouchi", "mot": "mamamouchi", "vraie": "Personnage ridicule qui se donne de grands airs.", "categorie": "n. m.", "source": "wiktionary:mamamouchi",
-   "faux": ["Poupée de chiffon que l'on offre aux nourrissons.", "Moustique des marais qui pique surtout la nuit.", "Pâtisserie turque au miel et aux pistaches."]},
-  {"id": "mirliflore", "mot": "mirliflore", "vraie": "Jeune élégant, fat et prétentieux.", "categorie": "n. m.", "source": "wiktionary:mirliflore",
-   "faux": ["Petite fleur sauvage des talus.", "Miroir de poche à manche fleuri.", "Air de flûte joué aux mariages."]},
-  {"id": "rodomont", "mot": "rodomont", "vraie": "Fanfaron, vantard qui fait le brave.", "categorie": "n. m.", "source": "wiktionary:rodomont",
-   "faux": ["Rocher arrondi au sommet d'un mont.", "Rôdeur qui détrousse les voyageurs.", "Coussin rond d'une chaise de prière."]},
-  {"id": "fesse-mathieu", "mot": "fesse-mathieu", "vraie": "Usurier, avare qui prête à gros intérêts.", "categorie": "n. m.", "source": "wiktionary:fesse-mathieu",
-   "faux": ["Maître d'école qui punit à coups de règle.", "Moine bavard qui récite l'Évangile à voix haute.", "Valet de ferme chargé de mener les cochons."]},
-  {"id": "pince-maille", "mot": "pince-maille", "vraie": "Avare, qui regarde au moindre sou.", "categorie": "n. m.", "registre": "familier", "source": "wiktionary:pince-maille",
-   "faux": ["Outil de tricoteuse pour rattraper un point.", "Petit crabe des côtes vendéennes.", "Barrette pour retenir les cheveux fins."]},
-  {"id": "tranche-montagne", "mot": "tranche-montagne", "vraie": "Fanfaron qui se vante d'exploits imaginaires.", "categorie": "n. m.", "source": "wiktionary:tranche-montagne",
-   "faux": ["Grand couteau des bergers pour couper le fromage.", "Ouvrier qui perçait les tunnels à la poudre.", "Gâteau de Savoie fourré à la crème de marrons."]},
-  {"id": "vide-gousset", "mot": "vide-gousset", "vraie": "Voleur qui fait les poches.", "categorie": "n. m.", "source": "wiktionary:vide-gousset",
-   "faux": ["Petite pince à écosser les pois.", "Usurier qui prête à la semaine.", "Domestique qui vide les pots."]},
-  {"id": "tire-laine", "mot": "tire-laine", "vraie": "Voleur qui détroussait les passants la nuit.", "categorie": "n. m.", "source": "wiktionary:tire-laine",
-   "faux": ["Ouvrier qui cardait la laine des moutons.", "Peigne de fer pour démêler les toisons.", "Marchand de chaussettes sur les foires."]},
-  {"id": "boit-sans-soif", "mot": "boit-sans-soif", "vraie": "Ivrogne, qui boit sans arrêt.", "categorie": "n. m.", "registre": "familier", "source": "wiktionary:boit-sans-soif",
-   "faux": ["Plante grasse qui vit sans eau.", "Petit verre à liqueur en étain.", "Cheval qui refuse l'abreuvoir."]},
-  {"id": "ostrogoth", "mot": "ostrogoth", "vraie": "Homme grossier, qui ignore les usages.", "categorie": "n. m.", "registre": "familier", "source": "wiktionary:ostrogoth",
-   "faux": ["Grand coquillage plat de l'Atlantique.", "Ancien jeu de dés des soldats suisses.", "Cormoran des rochers de la Baltique."]},
-  {"id": "frichti", "mot": "frichti", "vraie": "Repas préparé simplement, petit plat.", "categorie": "n. m.", "registre": "familier", "source": "wiktionary:frichti",
-   "faux": ["Petit frisson qui vous prend le soir.", "Tas de feuilles mortes dans un fossé.", "Chiffon pour cirer les chaussures."]},
-  {"id": "bectance", "mot": "bectance", "vraie": "Nourriture, ce qu'on mange.", "categorie": "n. f.", "registre": "familier", "source": "wiktionary:bectance",
-   "faux": ["Querelle d'oiseaux au nid.", "Moquerie lancée en passant.", "Visite chez le dentiste."]},
-  {"id": "bibine", "mot": "bibine", "vraie": "Boisson de mauvaise qualité, surtout la bière.", "categorie": "n. f.", "registre": "familier", "source": "wiktionary:bibine",
-   "faux": ["Petite bibliothèque de chambre d'enfant.", "Poupée de chiffon que les fillettes cousent.", "Bonnet de nuit en dentelle des grands-mères."]},
-  {"id": "picrate", "mot": "picrate", "vraie": "Vin de mauvaise qualité.", "categorie": "n. m.", "registre": "familier", "source": "wiktionary:picrate", "cle": "vin",
-   "faux": ["Petit pic de montagne.", "Pirate d'eau douce.", "Rat des greniers à blé."]},
-  {"id": "trublion", "mot": "trublion", "vraie": "Personne qui sème le désordre, agitateur.", "categorie": "n. m.", "source": "wiktionary:trublion",
-   "faux": ["Petit pain brioché fourré de pralines.", "Trompette de cuivre des fanfares rurales.", "Champignon noir qui pousse sous les chênes."]},
-  {"id": "bejaune", "mot": "béjaune", "vraie": "Jeune homme sot et sans expérience.", "categorie": "n. m.", "source": "wiktionary:béjaune",
-   "faux": ["Oiseau des marais au bec orangé.", "Fromage de chèvre roulé au safran.", "Pièce d'or frappée sous Henri IV."]},
-  {"id": "rata", "mot": "rata", "vraie": "Ragoût grossier, servi à la caserne.", "categorie": "n. m.", "registre": "familier", "source": "wiktionary:rata", "cle": "ragoût",
-   "faux": ["Petit rat des champs, tout gris.", "Rangée de vignes au bord du chemin.", "Coup manqué au jeu de quilles."]}
+  {
+   "id": "coquebin",
+   "mot": "coquebin",
+   "vraie": "Jeune homme niais, sans expérience.",
+   "categorie": "n. m.",
+   "source": "wiktionary:coquebin",
+   "faux": [
+    "Petit pot de terre pour cuire l'œuf.",
+    "Coq nain des basses-cours flamandes.",
+    "Bonnet de laine des pêcheurs bretons."
+   ]
+  },
+  {
+   "id": "galapiat",
+   "mot": "galapiat",
+   "vraie": "Vaurien, homme sans valeur.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:galapiat",
+   "faux": [
+    "Plat creux de faïence.",
+    "Petit galop d'un cheval.",
+    "Pâté de lièvre en croûte."
+   ]
+  },
+  {
+   "id": "mamamouchi",
+   "mot": "mamamouchi",
+   "vraie": "Dignitaire de pacotille, qui se donne de grands airs.",
+   "categorie": "n. m.",
+   "source": "wiktionary:mamamouchi",
+   "faux": [
+    "Poupée de chiffon que l'on offre aux nourrissons.",
+    "Moustique des marais qui pique surtout la nuit.",
+    "Pâtisserie turque au miel et aux pistaches."
+   ]
+  },
+  {
+   "id": "mirliflore",
+   "mot": "mirliflore",
+   "vraie": "Jeune élégant, fat et prétentieux.",
+   "categorie": "n. m.",
+   "source": "wiktionary:mirliflore",
+   "faux": [
+    "Petite fleur sauvage des talus.",
+    "Miroir de poche à manche fleuri.",
+    "Air de flûte joué aux mariages."
+   ]
+  },
+  {
+   "id": "rodomont",
+   "mot": "rodomont",
+   "vraie": "Fanfaron, vantard qui fait le brave.",
+   "categorie": "n. m.",
+   "source": "wiktionary:rodomont",
+   "faux": [
+    "Rocher arrondi au sommet d'un mont.",
+    "Rôdeur qui détrousse les voyageurs.",
+    "Coussin rond d'une chaise de prière."
+   ]
+  },
+  {
+   "id": "fesse-mathieu",
+   "mot": "fesse-mathieu",
+   "vraie": "Usurier, avare qui prête à gros intérêts.",
+   "categorie": "n. m.",
+   "source": "wiktionary:fesse-mathieu",
+   "faux": [
+    "Maître d'école qui punit à coups de règle.",
+    "Moine bavard qui récite l'Évangile à voix haute.",
+    "Valet de ferme chargé de mener les cochons."
+   ]
+  },
+  {
+   "id": "pince-maille",
+   "mot": "pince-maille",
+   "vraie": "Avare, qui regarde au moindre sou.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:pince-maille",
+   "faux": [
+    "Outil de tricoteuse pour rattraper un point.",
+    "Petit crabe des côtes vendéennes.",
+    "Barrette pour retenir les cheveux fins."
+   ]
+  },
+  {
+   "id": "tranche-montagne",
+   "mot": "tranche-montagne",
+   "vraie": "Fanfaron qui se vante d'exploits imaginaires.",
+   "categorie": "n. m.",
+   "source": "wiktionary:tranche-montagne",
+   "faux": [
+    "Grand couteau des bergers pour couper le fromage.",
+    "Ouvrier qui perçait les tunnels à la poudre.",
+    "Gâteau de Savoie fourré à la crème de marrons."
+   ]
+  },
+  {
+   "id": "vide-gousset",
+   "mot": "vide-gousset",
+   "vraie": "Voleur qui fait les poches.",
+   "categorie": "n. m.",
+   "source": "wiktionary:vide-gousset",
+   "faux": [
+    "Petite pince à écosser les pois.",
+    "Usurier qui prête à la semaine.",
+    "Domestique qui vide les pots."
+   ]
+  },
+  {
+   "id": "tire-laine",
+   "mot": "tire-laine",
+   "vraie": "Voleur qui détroussait les passants la nuit.",
+   "categorie": "n. m.",
+   "source": "wiktionary:tire-laine",
+   "faux": [
+    "Ouvrier qui cardait la laine des moutons.",
+    "Peigne de fer pour démêler les toisons.",
+    "Marchand de chaussettes sur les foires."
+   ]
+  },
+  {
+   "id": "boit-sans-soif",
+   "mot": "boit-sans-soif",
+   "vraie": "Ivrogne, qui boit sans arrêt.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:boit-sans-soif",
+   "faux": [
+    "Plante grasse qui vit sans eau.",
+    "Petit verre à liqueur en étain.",
+    "Cheval qui refuse l'abreuvoir."
+   ]
+  },
+  {
+   "id": "ostrogoth",
+   "mot": "ostrogoth",
+   "vraie": "Homme grossier, qui ignore les usages.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:ostrogoth",
+   "faux": [
+    "Grand coquillage plat de l'Atlantique.",
+    "Ancien jeu de dés des soldats suisses.",
+    "Cormoran des rochers de la Baltique."
+   ]
+  },
+  {
+   "id": "frichti",
+   "mot": "frichti",
+   "vraie": "Repas préparé simplement, petit plat.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:frichti",
+   "faux": [
+    "Petit frisson qui vous prend le soir.",
+    "Tas de feuilles mortes dans un fossé.",
+    "Chiffon pour cirer les chaussures."
+   ]
+  },
+  {
+   "id": "bectance",
+   "mot": "bectance",
+   "vraie": "Nourriture, ce qu'on mange.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:bectance",
+   "faux": [
+    "Querelle d'oiseaux au nid.",
+    "Moquerie lancée en passant.",
+    "Visite chez le dentiste."
+   ]
+  },
+  {
+   "id": "bibine",
+   "mot": "bibine",
+   "vraie": "Boisson de mauvaise qualité, surtout la bière.",
+   "categorie": "n. f.",
+   "registre": "familier",
+   "source": "wiktionary:bibine",
+   "faux": [
+    "Petite bibliothèque de chambre d'enfant.",
+    "Poupée de chiffon que les fillettes cousent.",
+    "Bonnet de nuit en dentelle des grands-mères."
+   ],
+   "cle": "boisson"
+  },
+  {
+   "id": "picrate",
+   "mot": "picrate",
+   "vraie": "Vin de mauvaise qualité.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:picrate",
+   "cle": "vin",
+   "faux": [
+    "Petit pic de montagne.",
+    "Pirate d'eau douce.",
+    "Rat des greniers à blé."
+   ]
+  },
+  {
+   "id": "trublion",
+   "mot": "trublion",
+   "vraie": "Personne qui sème le désordre, agitateur.",
+   "categorie": "n. m.",
+   "source": "wiktionary:trublion",
+   "faux": [
+    "Petit pain brioché fourré de pralines.",
+    "Trompette de cuivre des fanfares rurales.",
+    "Champignon noir qui pousse sous les chênes."
+   ]
+  },
+  {
+   "id": "bejaune",
+   "mot": "béjaune",
+   "vraie": "Jeune homme sot et sans expérience.",
+   "categorie": "n. m.",
+   "source": "wiktionary:béjaune",
+   "faux": [
+    "Coiffe jaune des dentellières du Puy.",
+    "Fromage de chèvre roulé au safran.",
+    "Pièce d'or frappée sous Henri IV."
+   ],
+   "cle": "sot"
+  },
+  {
+   "id": "rata",
+   "mot": "rata",
+   "vraie": "Ragoût grossier, servi à la caserne.",
+   "categorie": "n. m.",
+   "registre": "familier",
+   "source": "wiktionary:rata",
+   "cle": "ragoût",
+   "faux": [
+    "Petit rat des champs, tout gris.",
+    "Rangée de vignes au bord du chemin.",
+    "Coup manqué au jeu de quilles."
+   ]
+  }
  ]
 }
