@@ -231,6 +231,11 @@ répond 429 à urllib).
   par curl. Écartés faute d'image : le « moine » chauffe-lit, la chancelière,
   le porte-bouteilles. Cathédrale : vue d'ensemble, la première image ne
   montrait que des statues du portail.
+- Lot 16 : 5 coutumes (Namahage, Corsa dei Ceri, bataille de vin de Haro,
+  championnat de grimaces d'Egremont, cravates coupées de Cologne), 5
+  expressions étrangères. Écartées faute de page : « il pleut sur le
+  mouillé », « ce n'est pas ma bière », « la barbe dans la boîte aux
+  lettres ». Fin de la campagne du 26/11/2026 : 631 questions (229 avant).
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux

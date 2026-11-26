@@ -9313,5 +9313,155 @@
   "id": "t-p-transbordeur-3",
   "mot": "p-transbordeur",
   "texte": "un bac à voile est guidé par des câbles tendus."
+ },
+ {
+  "id": "t-k-namahage-1",
+  "mot": "k-namahage",
+  "texte": "volent le riz des familles qui ont mal travaillé"
+ },
+ {
+  "id": "t-k-namahage-2",
+  "mot": "k-namahage",
+  "texte": "dansent sur la glace pour réveiller les poissons"
+ },
+ {
+  "id": "t-k-namahage-3",
+  "mot": "k-namahage",
+  "texte": "balaient les rues pour chasser la malchance"
+ },
+ {
+  "id": "t-k-ceri-1",
+  "mot": "k-ceri",
+  "texte": "avec un tonneau de vin rouge sur le dos"
+ },
+ {
+  "id": "t-k-ceri-2",
+  "mot": "k-ceri",
+  "texte": "en portant chacune une vache décorée de fleurs"
+ },
+ {
+  "id": "t-k-ceri-3",
+  "mot": "k-ceri",
+  "texte": "avec la statue du saint attachée sur une échelle"
+ },
+ {
+  "id": "t-k-haro-1",
+  "mot": "k-haro",
+  "texte": "à coups de pain rassis"
+ },
+ {
+  "id": "t-k-haro-2",
+  "mot": "k-haro",
+  "texte": "à coups d'huile d'olive"
+ },
+ {
+  "id": "t-k-haro-3",
+  "mot": "k-haro",
+  "texte": "à coups de confettis"
+ },
+ {
+  "id": "t-k-grimaces-1",
+  "mot": "k-grimaces",
+  "texte": "du lancer de chaussettes mouillées par-dessus la haie"
+ },
+ {
+  "id": "t-k-grimaces-2",
+  "mot": "k-grimaces",
+  "texte": "du chant du coq, imité au lever du soleil sur la colline"
+ },
+ {
+  "id": "t-k-grimaces-3",
+  "mot": "k-grimaces",
+  "texte": "de la course en sabots de bois sur les pavés de la ville"
+ },
+ {
+  "id": "t-k-cravates-1",
+  "mot": "k-cravates",
+  "texte": "volent la casquette de chaque gendarme"
+ },
+ {
+  "id": "t-k-cravates-2",
+  "mot": "k-cravates",
+  "texte": "servent la bière aux hommes à genoux"
+ },
+ {
+  "id": "t-k-cravates-3",
+  "mot": "k-cravates",
+  "texte": "peignent la moustache des hommes en rouge"
+ },
+ {
+  "id": "t-x-keks-1",
+  "mot": "x-keks",
+  "texte": "Lui voler son goûter."
+ },
+ {
+  "id": "t-x-keks-2",
+  "mot": "x-keks",
+  "texte": "Lui faire un gros câlin."
+ },
+ {
+  "id": "t-x-keks-3",
+  "mot": "x-keks",
+  "texte": "Lui rendre une visite."
+ },
+ {
+  "id": "t-x-leche-1",
+  "mot": "x-leche",
+  "texte": "Être très naïf, candide."
+ },
+ {
+  "id": "t-x-leche-2",
+  "mot": "x-leche",
+  "texte": "Être encore un bébé."
+ },
+ {
+  "id": "t-x-leche-3",
+  "mot": "x-leche",
+  "texte": "Être pâle et fatigué."
+ },
+ {
+  "id": "t-x-paoduro-1",
+  "mot": "x-paoduro",
+  "texte": "Un homme têtu, buté."
+ },
+ {
+  "id": "t-x-paoduro-2",
+  "mot": "x-paoduro",
+  "texte": "Un vieux soldat bourru."
+ },
+ {
+  "id": "t-x-paoduro-3",
+  "mot": "x-paoduro",
+  "texte": "Un élève qui redouble."
+ },
+ {
+  "id": "t-x-kogel-1",
+  "mot": "x-kogel",
+  "texte": "Le scandale a éclaté au grand jour."
+ },
+ {
+  "id": "t-x-kogel-2",
+  "mot": "x-kogel",
+  "texte": "Il est trop tard pour réparer."
+ },
+ {
+  "id": "t-x-kogel-3",
+  "mot": "x-kogel",
+  "texte": "Tout le monde est déjà au courant."
+ },
+ {
+  "id": "t-x-haar-1",
+  "mot": "x-haar",
+  "texte": "Se faire beau pour sortir."
+ },
+ {
+  "id": "t-x-haar-2",
+  "mot": "x-haar",
+  "texte": "Avoir très mal à la tête."
+ },
+ {
+  "id": "t-x-haar-3",
+  "mot": "x-haar",
+  "texte": "Réfléchir à un grand projet."
  }
 ]

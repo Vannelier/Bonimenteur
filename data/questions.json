@@ -4489,5 +4489,85 @@
   "legende": "Pont transbordeur, Rochefort",
   "question": "Rochefort. Comment ce pont fait-il traverser la Charente ?",
   "vraie": "une nacelle suspendue glisse d'une rive à l'autre."
+ },
+ "k-namahage": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Oga, Japon",
+  "timbre": "Nippon",
+  "source": "wikipedia:Namahage",
+  "question": "Ici, au Nouvel An, des hommes déguisés en démons ___.",
+  "vraie": "font peur aux enfants paresseux dans les maisons"
+ },
+ "k-ceri": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Gubbio, Italie",
+  "timbre": "Italia",
+  "source": "wikipedia-en:Corsa dei Ceri",
+  "question": "Ici, chaque 15 mai, trois équipes gravissent la montagne en courant ___.",
+  "vraie": "avec d'énormes cierges de bois sur les épaules"
+ },
+ "k-haro": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Haro, Espagne",
+  "timbre": "España",
+  "source": "wikipedia-en:Haro Wine Festival",
+  "question": "Ici, chaque 29 juin, les habitants se livrent une bataille ___.",
+  "vraie": "à coups de vin rouge"
+ },
+ "k-grimaces": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Egremont, Angleterre",
+  "timbre": "England",
+  "source": "wikipedia-en:Gurning",
+  "question": "Ici, chaque année, on désigne un champion du monde ___.",
+  "vraie": "de la grimace, la tête passée dans un collier de cheval"
+ },
+ "k-cravates": {
+  "mot": "",
+  "type": "coutume",
+  "lieu": "Cologne, Allemagne",
+  "timbre": "Deutschland",
+  "source": "wikipedia-en:Weiberfastnacht",
+  "question": "Ici, le jeudi du carnaval, les femmes ___.",
+  "vraie": "coupent la cravate des hommes qu'elles croisent"
+ },
+ "x-keks": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En allemand, « aller sur le biscuit de quelqu'un » veut dire…",
+  "source": "wiktionary-en:auf den Keks gehen",
+  "vraie": "Lui taper sur les nerfs."
+ },
+ "x-leche": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En espagnol, « être le lait » veut dire…",
+  "source": "wiktionary-en:ser la leche",
+  "vraie": "Être génial, incroyable."
+ },
+ "x-paoduro": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "Au Brésil, « un pain dur » désigne…",
+  "source": "wiktionary-en:pão-duro",
+  "vraie": "Un avare, un grippe-sou."
+ },
+ "x-kogel": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En néerlandais, « la balle a traversé l'église » veut dire…",
+  "source": "wiktionary-en:de kogel is door de kerk",
+  "vraie": "La décision est enfin prise."
+ },
+ "x-haar": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En néerlandais, « être assis les mains dans les cheveux » veut dire…",
+  "source": "wiktionary-en:met de handen in het haar zitten",
+  "vraie": "Être désemparé, à bout d'idées."
  }
 }

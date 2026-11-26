@@ -1,0 +1,154 @@
+{
+ "questions": [
+  {
+   "id": "k-namahage",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Oga, Japon",
+   "timbre": "Nippon",
+   "source": "wikipedia:Namahage",
+   "cle": "paress",
+   "question": "Ici, au Nouvel An, des hommes déguisés en démons ___.",
+   "vraie": "font peur aux enfants paresseux dans les maisons",
+   "faux": [
+    "volent le riz des familles qui ont mal travaillé",
+    "dansent sur la glace pour réveiller les poissons",
+    "balaient les rues pour chasser la malchance"
+   ]
+  },
+  {
+   "id": "k-ceri",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Gubbio, Italie",
+   "timbre": "Italia",
+   "source": "wikipedia-en:Corsa dei Ceri",
+   "cle": "Gubbio",
+   "question": "Ici, chaque 15 mai, trois équipes gravissent la montagne en courant ___.",
+   "vraie": "avec d'énormes cierges de bois sur les épaules",
+   "faux": [
+    "avec un tonneau de vin rouge sur le dos",
+    "en portant chacune une vache décorée de fleurs",
+    "avec la statue du saint attachée sur une échelle"
+   ]
+  },
+  {
+   "id": "k-haro",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Haro, Espagne",
+   "timbre": "España",
+   "source": "wikipedia-en:Haro Wine Festival",
+   "cle": "wine",
+   "question": "Ici, chaque 29 juin, les habitants se livrent une bataille ___.",
+   "vraie": "à coups de vin rouge",
+   "faux": [
+    "à coups de pain rassis",
+    "à coups d'huile d'olive",
+    "à coups de confettis"
+   ]
+  },
+  {
+   "id": "k-grimaces",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Egremont, Angleterre",
+   "timbre": "England",
+   "source": "wikipedia-en:Gurning",
+   "cle": "collar",
+   "question": "Ici, chaque année, on désigne un champion du monde ___.",
+   "vraie": "de la grimace, la tête passée dans un collier de cheval",
+   "faux": [
+    "du lancer de chaussettes mouillées par-dessus la haie",
+    "du chant du coq, imité au lever du soleil sur la colline",
+    "de la course en sabots de bois sur les pavés de la ville"
+   ]
+  },
+  {
+   "id": "k-cravates",
+   "mot": "",
+   "type": "coutume",
+   "lieu": "Cologne, Allemagne",
+   "timbre": "Deutschland",
+   "source": "wikipedia-en:Weiberfastnacht",
+   "cle": "tie",
+   "question": "Ici, le jeudi du carnaval, les femmes ___.",
+   "vraie": "coupent la cravate des hommes qu'elles croisent",
+   "faux": [
+    "volent la casquette de chaque gendarme",
+    "servent la bière aux hommes à genoux",
+    "peignent la moustache des hommes en rouge"
+   ]
+  },
+  {
+   "id": "x-keks",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En allemand, « aller sur le biscuit de quelqu'un » veut dire…",
+   "source": "wiktionary-en:auf den Keks gehen",
+   "cle": "Nerven",
+   "vraie": "Lui taper sur les nerfs.",
+   "faux": [
+    "Lui voler son goûter.",
+    "Lui faire un gros câlin.",
+    "Lui rendre une visite."
+   ]
+  },
+  {
+   "id": "x-leche",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En espagnol, « être le lait » veut dire…",
+   "source": "wiktionary-en:ser la leche",
+   "cle": "awesome",
+   "vraie": "Être génial, incroyable.",
+   "faux": [
+    "Être très naïf, candide.",
+    "Être encore un bébé.",
+    "Être pâle et fatigué."
+   ]
+  },
+  {
+   "id": "x-paoduro",
+   "mot": "",
+   "type": "etrangere",
+   "question": "Au Brésil, « un pain dur » désigne…",
+   "source": "wiktionary-en:pão-duro",
+   "cle": "miser",
+   "vraie": "Un avare, un grippe-sou.",
+   "faux": [
+    "Un homme têtu, buté.",
+    "Un vieux soldat bourru.",
+    "Un élève qui redouble."
+   ]
+  },
+  {
+   "id": "x-kogel",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En néerlandais, « la balle a traversé l'église » veut dire…",
+   "source": "wiktionary-en:de kogel is door de kerk",
+   "cle": "decision",
+   "vraie": "La décision est enfin prise.",
+   "faux": [
+    "Le scandale a éclaté au grand jour.",
+    "Il est trop tard pour réparer.",
+    "Tout le monde est déjà au courant."
+   ]
+  },
+  {
+   "id": "x-haar",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En néerlandais, « être assis les mains dans les cheveux » veut dire…",
+   "source": "wiktionary-en:met de handen in het haar zitten",
+   "cle": "",
+   "vraie": "Être désemparé, à bout d'idées.",
+   "faux": [
+    "Se faire beau pour sortir.",
+    "Avoir très mal à la tête.",
+    "Réfléchir à un grand projet."
+   ]
+  }
+ ]
+}
