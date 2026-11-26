@@ -46,6 +46,8 @@ prix Ig Nobel).
 | `etrangere` | Expression étrangère | une expression traduite mot à mot | 19 |
 | `expression` | Expression | l'origine d'une expression française | 16 |
 | `metier` | Métier | un métier disparu, sa spécialité à deviner (livret d'ouvrier, ou carte de visite réclame : `ouvrage`) | 24 |
+| `devise` | Devise | la devise d'une ville, sur la banderole de son écu (`mot` = la ville, `email` et `meuble` = ses armes) | 10 |
+| `plat` | Plat | la composition d'un plat oublié, sous son nom sur la carte (`mot` = le plat) | 9 |
 
 Familles faibles : celles dont la réponse se sait souvent (expressions
 françaises, anecdotes connues).
@@ -77,6 +79,12 @@ d'affichage, vérifiée par `test_donnees_coherentes` :
 - commune : le nom, sans point ;
 - métier en carte de visite (`ouvrage` : `carte`) : une réclame, ponctuée
   comme une réclame (« … par un professionnel ! ») ;
+- plat : la composition qui suit le nom du plat, sans majuscule ni point final
+  (« crêtes et rognons de coq, quenelles… ») ;
+- devise : la formule de la banderole, majuscule au début, sans point final
+  (« Fluctuat nec mergitur »). Elle est souvent latine : les trois faux de
+  Mr Halifax sont dans la langue de la vraie, pour montrer au faussaire le
+  style à imiter ;
 - autres familles : une phrase, majuscule et point final.
 
 Seuls retouchés à l'affichage : les espaces en trop, et le point final d'une

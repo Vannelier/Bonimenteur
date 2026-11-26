@@ -116,10 +116,13 @@ def test_donnees_coherentes():
     type_de = {k: q.get("type") for k, q in questions.items()}
     textes = [(q.get("type"), q["vraie"]) for q in questions.values()] + [(type_de[x["mot"]], x["texte"]) for x in faux]
     for typ, t in textes:
-        if typ in ("anecdote", "coutume", "photo"):
+        if typ in ("anecdote", "coutume", "photo", "plat"):
             assert not t[:1].isupper() or t[1:2].isupper(), t
-        if typ in ("anecdote", "coutume"):
+        if typ in ("anecdote", "coutume", "plat"):
             assert not t.endswith("."), t
+        # Devise : formule lapidaire de la banderole (majuscule, pas de point).
+        if typ == "devise":
+            assert t[:1].isupper() and not t.endswith("."), t
 
 
 def test_ration_du_jour(client, monkeypatch):

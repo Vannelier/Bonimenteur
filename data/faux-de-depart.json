@@ -9463,5 +9463,290 @@
   "id": "t-x-haar-3",
   "mot": "x-haar",
   "texte": "Réfléchir à un grand projet."
+ },
+ {
+  "id": "t-d-montpellier-1",
+  "mot": "d-montpellier",
+  "texte": "Sub umbra tua, Domine, mercator quiescit sine metu"
+ },
+ {
+  "id": "t-d-montpellier-2",
+  "mot": "d-montpellier",
+  "texte": "Mater benigna, filios tuos serva per omne tempus"
+ },
+ {
+  "id": "t-d-montpellier-3",
+  "mot": "d-montpellier",
+  "texte": "Vigila, Virgo, super urbem et portus eius omni hora"
+ },
+ {
+  "id": "t-d-nancy-1",
+  "mot": "d-nancy",
+  "texte": "Spinis cingor et vinco"
+ },
+ {
+  "id": "t-d-nancy-2",
+  "mot": "d-nancy",
+  "texte": "Ferro nec igne cedo"
+ },
+ {
+  "id": "t-d-nancy-3",
+  "mot": "d-nancy",
+  "texte": "Sub cardo quiesco"
+ },
+ {
+  "id": "t-d-bordeaux-1",
+  "mot": "d-bordeaux",
+  "texte": "Fluvius me nutrit, turris me defendit, rex me tenet"
+ },
+ {
+  "id": "t-d-bordeaux-2",
+  "mot": "d-bordeaux",
+  "texte": "Vina dedit tellus, portum dedit unda, fidem rex"
+ },
+ {
+  "id": "t-d-bordeaux-3",
+  "mot": "d-bordeaux",
+  "texte": "Luna crescit, flumen manet, civitas numquam cedit"
+ },
+ {
+  "id": "t-d-marseille-1",
+  "mot": "d-marseille",
+  "texte": "Portus ubi terra desinit et spes incipit nautis"
+ },
+ {
+  "id": "t-d-marseille-2",
+  "mot": "d-marseille",
+  "texte": "Mare nostrum dedit urbem, urbs dedit orbi mercatum"
+ },
+ {
+  "id": "t-d-marseille-3",
+  "mot": "d-marseille",
+  "texte": "Ventis aperta, hostibus clausa, numquam domita manet"
+ },
+ {
+  "id": "t-d-toulouse-1",
+  "mot": "d-toulouse",
+  "texte": "Tolosa, flor del Miegjorn"
+ },
+ {
+  "id": "t-d-toulouse-2",
+  "mot": "d-toulouse",
+  "texte": "Lo pont tien, la crotz ten"
+ },
+ {
+  "id": "t-d-toulouse-3",
+  "mot": "d-toulouse",
+  "texte": "Peiras roges, còr pus ferm"
+ },
+ {
+  "id": "t-d-orleans-1",
+  "mot": "d-orleans",
+  "texte": "Sub lilio sine metu"
+ },
+ {
+  "id": "t-d-orleans-2",
+  "mot": "d-orleans",
+  "texte": "Cor regis, flos Galliae"
+ },
+ {
+  "id": "t-d-orleans-3",
+  "mot": "d-orleans",
+  "texte": "Lilia nostra manent"
+ },
+ {
+  "id": "t-d-bayonne-1",
+  "mot": "d-bayonne",
+  "texte": "Semper intacta"
+ },
+ {
+  "id": "t-d-bayonne-2",
+  "mot": "d-bayonne",
+  "texte": "Numquam capta"
+ },
+ {
+  "id": "t-d-bayonne-3",
+  "mot": "d-bayonne",
+  "texte": "Fide servata"
+ },
+ {
+  "id": "t-d-la-rochelle-1",
+  "mot": "d-la-rochelle",
+  "texte": "Fide mea semper vivo"
+ },
+ {
+  "id": "t-d-la-rochelle-2",
+  "mot": "d-la-rochelle",
+  "texte": "Undis numquam cedam"
+ },
+ {
+  "id": "t-d-la-rochelle-3",
+  "mot": "d-la-rochelle",
+  "texte": "Portum Dei teneo"
+ },
+ {
+  "id": "t-d-pau-1",
+  "mot": "d-pau",
+  "texte": "Arx montis et populi"
+ },
+ {
+  "id": "t-d-pau-2",
+  "mot": "d-pau",
+  "texte": "Clavis regni et vallis"
+ },
+ {
+  "id": "t-d-pau-3",
+  "mot": "d-pau",
+  "texte": "Lumen patriae et domus"
+ },
+ {
+  "id": "t-d-chambery-1",
+  "mot": "d-chambery",
+  "texte": "Montibus istis"
+ },
+ {
+  "id": "t-d-chambery-2",
+  "mot": "d-chambery",
+  "texte": "Sub cruce vivo"
+ },
+ {
+  "id": "t-d-chambery-3",
+  "mot": "d-chambery",
+  "texte": "Clavibus firmis"
+ },
+ {
+  "id": "t-m-financiere-1",
+  "mot": "m-financiere",
+  "texte": "mousse de foie blond, langues de carpe, morilles et pointes d'asperges au madère"
+ },
+ {
+  "id": "t-m-financiere-2",
+  "mot": "m-financiere",
+  "texte": "coulis de homard, laitances de hareng, pistaches vertes et rondelles de citron confit"
+ },
+ {
+  "id": "t-m-financiere-3",
+  "mot": "m-financiere",
+  "texte": "billes de pommes de terre, lard fumé, oignons glacés et cœurs d'artichaut poivrés"
+ },
+ {
+  "id": "t-m-royale-1",
+  "mot": "m-royale",
+  "texte": "rôti rose sur le coffre, flambé à l'armagnac, sauce aux airelles et au genièvre"
+ },
+ {
+  "id": "t-m-royale-2",
+  "mot": "m-royale",
+  "texte": "désossé et roulé autour d'un boudin de foie gras, cuit en croûte, sauce au porto"
+ },
+ {
+  "id": "t-m-royale-3",
+  "mot": "m-royale",
+  "texte": "mariné trois jours au vin de Cahors, braisé aux pruneaux, sauce liée à la mie dorée"
+ },
+ {
+  "id": "t-m-tripe-1",
+  "mot": "m-tripe",
+  "texte": "gras-double blanchi longuement, œufs pochés dessus, le tout gratiné à la chapelure"
+ },
+ {
+  "id": "t-m-tripe-2",
+  "mot": "m-tripe",
+  "texte": "œufs brouillés mêlés de tripes de morue, relevés au safran et aux herbes fraîches"
+ },
+ {
+  "id": "t-m-tripe-3",
+  "mot": "m-tripe",
+  "texte": "tripes de veau en lanières, montées au beurre, servies sur des œufs mollets tièdes"
+ },
+ {
+  "id": "t-m-demi-deuil-1",
+  "mot": "m-demi-deuil",
+  "texte": "volaille rôtie à moitié puis noircie au four, servie entre deux sauces, l'une blanche"
+ },
+ {
+  "id": "t-m-demi-deuil-2",
+  "mot": "m-demi-deuil",
+  "texte": "poularde cuite dans une vessie, la peau badigeonnée d'encre de seiche avant le service"
+ },
+ {
+  "id": "t-m-demi-deuil-3",
+  "mot": "m-demi-deuil",
+  "texte": "chair blanche et chair brune dressées en damier sur le plat, nappées d'un jus réduit"
+ },
+ {
+  "id": "t-m-soubise-1",
+  "mot": "m-soubise",
+  "texte": "échalotes grises confites au vin blanc, passées au tamis et montées au beurre froid"
+ },
+ {
+  "id": "t-m-soubise-2",
+  "mot": "m-soubise",
+  "texte": "crème réduite parfumée au cerfeuil, liée de jaunes d'œufs, relevée d'un filet de verjus"
+ },
+ {
+  "id": "t-m-soubise-3",
+  "mot": "m-soubise",
+  "texte": "fonds de volaille réduit à glace, monté d'une purée d'amandes et d'un peu de muscade"
+ },
+ {
+  "id": "t-m-salmis-1",
+  "mot": "m-salmis",
+  "texte": "gibier confit dans sa graisse un mois durant, puis réchauffé au four avec des cèpes"
+ },
+ {
+  "id": "t-m-salmis-2",
+  "mot": "m-salmis",
+  "texte": "gibier pilé au mortier avec son foie, monté en pâté et cuit sous une croûte de seigle"
+ },
+ {
+  "id": "t-m-salmis-3",
+  "mot": "m-salmis",
+  "texte": "gibier mis au sel trois jours, dessalé puis poché au vin blanc avec un bouquet garni"
+ },
+ {
+  "id": "t-m-hochepot-1",
+  "mot": "m-hochepot",
+  "texte": "poitrine de veau désossée, roulée autour d'un hachis d'herbes, pochée au bouillon de poule"
+ },
+ {
+  "id": "t-m-hochepot-2",
+  "mot": "m-hochepot",
+  "texte": "morçeaux de bœuf saisis au saindoux, mouillés à la bière brune, pain d'épices pour lier la sauce"
+ },
+ {
+  "id": "t-m-hochepot-3",
+  "mot": "m-hochepot",
+  "texte": "jarret de porc demi-sel, pois cassés, navets et poireaux, le tout passé une nuit au four éteint"
+ },
+ {
+  "id": "t-m-chaud-froid-1",
+  "mot": "m-chaud-froid",
+  "texte": "une pièce servie moitié brûlante moitié glacée, les deux parts séparées d'un cordon de gelée"
+ },
+ {
+  "id": "t-m-chaud-froid-2",
+  "mot": "m-chaud-froid",
+  "texte": "une pièce saisie au four très vif puis plongée dans la glace, pour que la chair reste nacrée"
+ },
+ {
+  "id": "t-m-chaud-froid-3",
+  "mot": "m-chaud-froid",
+  "texte": "une pièce cuite la veille, tranchée froide et remise au bain-marie juste avant de la dresser"
+ },
+ {
+  "id": "t-m-nantua-1",
+  "mot": "m-nantua",
+  "texte": "un fumet de brochet réduit à glace, lié de jaunes d'œufs, parfumé au vin jaune du Jura"
+ },
+ {
+  "id": "t-m-nantua-2",
+  "mot": "m-nantua",
+  "texte": "une purée de tomates confites au four, détendue de crème aigre, relevée de paprika doux"
+ },
+ {
+  "id": "t-m-nantua-3",
+  "mot": "m-nantua",
+  "texte": "un coulis de cresson blanchi, monté au beurre noisette, relevé d'un trait de vinaigre de cidre"
  }
 ]

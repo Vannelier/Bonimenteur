@@ -1,42 +1,270 @@
-{"questions": [
- {"id":"o-oublies","mot":"","type":"photo","image":"photos/fer-oublies.jpg","source":"wiktionary:oublie","cle":"gaufre","rubrique":"Usage",
-  "credit":"Fer à oublies, musée de la Gourmandise, Hermalle-sous-Huy · Égoïté · CC BY-SA 3.0 (Wikimedia Commons)","alt":"Un disque de fer sombre gravé de fleurs et de rinceaux",
-  "legende":"Disque de fer gravé de fleurs","question":"À quoi servait ce disque de fer gravé de fleurs ?",
-  "vraie":"à cuire les oublies, de fines gaufres, entre deux disques chauffés.",
-  "faux":["à marquer le beurre des fermes avant de le vendre au marché.","à imprimer à la main les motifs des papiers peints.","à chauffer les draps, glissé brûlant sous l'édredon."]},
- {"id":"o-peselettre","mot":"","type":"photo","image":"photos/pese-lettre.jpg","source":"wiktionary:pèse-lettre","cle":"lettre","rubrique":"Usage","ouvrage":"brevet",
-  "credit":"Balance de la poste de Mangonui · Auckland War Memorial Museum · CC BY 4.0 (Wikimedia Commons)","alt":"Une petite balance de laiton à deux plateaux, sur un socle de bois, avec une rangée de poids",
-  "legende":"Petite balance de laiton et ses poids","question":"À quoi servait cette petite balance de laiton et ses poids ?",
-  "vraie":"balance perfectionnée pesant le courrier, pour en calculer l'affranchissement.",
-  "faux":["balance perfectionnée pesant les épices rares au grain près, chez l'apothicaire.","balance de bijoutier pesant les pierres précieuses avant leur taille.","balance de cuisine dosant la farine des pâtisseries les plus fines."]},
- {"id":"o-poirepoudre","mot":"","type":"photo","image":"photos/poire-poudre.jpg","source":"wikipedia-en:Powder flask","cle":"gunpowder","rubrique":"Usage",
-  "credit":"Flacon allemand, Metropolitan Museum of Art · CC0 (Wikimedia Commons)","alt":"Un flacon rond et plat d'ivoire sculpté, surmonté d'un bec de laiton",
-  "legende":"Flacon rond d'ivoire sculpté, au bec de laiton","question":"À quoi servait ce flacon rond d'ivoire sculpté, au bec de laiton ?",
-  "vraie":"à porter la poudre noire du chasseur et à en doser chaque charge.",
-  "faux":["à garder le parfum des dames, versé goutte à goutte.","à emporter l'eau bénite des pèlerins sur les chemins.","à servir le sel fin à la table des voyageurs."]},
- {"id":"o-mouches","mot":"","type":"photo","image":"photos/boite-mouches.jpg","source":"wiktionary:mouche","cle":"taffetas","rubrique":"Usage",
-  "credit":"Boîte en émail de Battersea · Auckland War Memorial Museum · CC BY 4.0 (Wikimedia Commons)","alt":"Une petite boîte rectangulaire en émail blanc, peinte de fleurs, au couvercle à charnière",
-  "legende":"Petite boîte émaillée, peinte de fleurs","question":"À quoi servait cette petite boîte émaillée ?",
-  "vraie":"à ranger les mouches, ces faux grains de beauté qu'on se collait au visage.",
-  "faux":["à ranger les pastilles contre la toux, à sucer discrètement pendant la messe.","à garder une mèche de cheveux de l'être aimé, à l'abri des regards.","à offrir du tabac à priser aux invités, après le dîner, au salon."]},
- {"id":"p-vendome","mot":"","type":"photo","image":"photos/colonne-vendome.jpg","source":"wikipedia:Colonne Vendôme","cle":"Austerlitz","rubrique":"Particularité",
-  "credit":"Colonne Vendôme, Paris · Chabe01 · CC BY-SA 4.0 (Wikimedia Commons)","alt":"Le sommet d'une colonne de bronze vert-de-gris surmontée de la statue d'un empereur",
-  "legende":"Colonne Vendôme, Paris","question":"Paris, place Vendôme. Avec quoi a-t-on coulé le bronze de cette colonne ?",
-  "vraie":"avec les canons pris à l'ennemi à Austerlitz.",
-  "faux":["avec les cloches fondues des églises de Paris.","avec la vaisselle offerte par les dames de la cour.","avec les grilles arrachées au château des Tuileries."]},
- {"id":"p-strasbourg","mot":"","type":"photo","image":"photos/cathedrale-strasbourg.jpg","source":"wikipedia:Cathédrale Notre-Dame de Strasbourg","cle":"plus haut édifice du monde","rubrique":"Particularité",
-  "credit":"Cathédrale de Strasbourg vue de la rue Mercière · Diliff · CC BY-SA 3.0 (Wikimedia Commons)","alt":"La façade de grès rose d'une cathédrale gothique, à une seule flèche",
-  "legende":"Cathédrale Notre-Dame de Strasbourg","question":"Strasbourg. Quel record cette cathédrale a-t-elle détenu ?",
-  "vraie":"elle fut le plus haut édifice du monde.",
-  "faux":["elle fut bâtie plus vite que toutes les autres.","ses cloches s'entendaient jusqu'à Paris.","elle fut la seule église peinte en blanc."]},
- {"id":"p-garabit","mot":"","type":"photo","image":"photos/garabit.jpg","source":"wikipedia:Viaduc de Garabit","cle":"Eiffel","rubrique":"Particularité",
-  "credit":"Viaduc de Garabit et vallée de la Truyère · Pemberlaid · CC BY-SA 4.0 (Wikimedia Commons)","alt":"Un grand viaduc ferroviaire de métal rouge, à une seule arche, au-dessus d'une vallée",
-  "legende":"Viaduc de Garabit, Cantal","question":"Cantal. Quelle est la particularité de ce viaduc de métal rouge ?",
-  "vraie":"il a été construit par l'entreprise de Gustave Eiffel.",
-  "faux":["il a été démonté en Belgique et remonté ici pièce à pièce.","aucun train n'a jamais osé le traverser à pleine vitesse.","il a été peint en rouge pour effrayer les aigles du Cantal."]},
- {"id":"p-transbordeur","mot":"","type":"photo","image":"photos/transbordeur.jpg","source":"wikipedia:Pont transbordeur du Martrou","cle":"nacelle","rubrique":"Particularité",
-  "credit":"Pont transbordeur de Rochefort · Wolfgang Moroder · CC BY-SA 3.0 (Wikimedia Commons)","alt":"Deux hauts pylônes métalliques reliés par un tablier, au-dessus d'une rivière et de prés",
-  "legende":"Pont transbordeur, Rochefort","question":"Rochefort. Comment ce pont fait-il traverser la Charente ?",
-  "vraie":"une nacelle suspendue glisse d'une rive à l'autre.",
-  "faux":["son tablier pivote comme une porte sur un pilier.","on monte en haut et on redescend par un toboggan.","un bac à voile est guidé par des câbles tendus."]}
-]}
+{
+ "questions": [
+  {
+   "id": "d-montpellier",
+   "mot": "Montpellier",
+   "type": "devise",
+   "email": "azur",
+   "meuble": "etoile",
+   "vraie": "Virgo Mater, natum ora, ut nos juvet omni hora",
+   "source": "wikipedia:Montpellier",
+   "cle": "Virgo Mater",
+   "faux": [
+    "Sub umbra tua, Domine, mercator quiescit sine metu",
+    "Mater benigna, filios tuos serva per omne tempus",
+    "Vigila, Virgo, super urbem et portus eius omni hora"
+   ]
+  },
+  {
+   "id": "d-nancy",
+   "mot": "Nancy",
+   "type": "devise",
+   "email": "or",
+   "meuble": "chene",
+   "vraie": "Non inultus premor",
+   "source": "wikipedia:Nancy",
+   "cle": "Non inultus premor",
+   "faux": [
+    "Spinis cingor et vinco",
+    "Ferro nec igne cedo",
+    "Sub cardo quiesco"
+   ]
+  },
+  {
+   "id": "d-bordeaux",
+   "mot": "Bordeaux",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "nef",
+   "vraie": "Lilia sola regunt lunam undas castra leonem",
+   "source": "wikipedia:Bordeaux",
+   "cle": "Lilia sola regunt",
+   "faux": [
+    "Fluvius me nutrit, turris me defendit, rex me tenet",
+    "Vina dedit tellus, portum dedit unda, fidem rex",
+    "Luna crescit, flumen manet, civitas numquam cedit"
+   ]
+  },
+  {
+   "id": "d-marseille",
+   "mot": "Marseille",
+   "type": "devise",
+   "email": "argent",
+   "meuble": "croix",
+   "vraie": "Actibus immensis urbs fulget Massiliensis",
+   "source": "wikipedia:Marseille",
+   "cle": "Actibus immensis",
+   "faux": [
+    "Portus ubi terra desinit et spes incipit nautis",
+    "Mare nostrum dedit urbem, urbs dedit orbi mercatum",
+    "Ventis aperta, hostibus clausa, numquam domita manet"
+   ]
+  },
+  {
+   "id": "d-toulouse",
+   "mot": "Toulouse",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "croix",
+   "vraie": "Per Tolosa totjorn mai",
+   "source": "wikipedia:Toulouse",
+   "cle": "Per Tolosa totjorn mai",
+   "faux": [
+    "Tolosa, flor del Miegjorn",
+    "Lo pont tien, la crotz ten",
+    "Peiras roges, còr pus ferm"
+   ]
+  },
+  {
+   "id": "d-orleans",
+   "mot": "Orléans",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "lys",
+   "vraie": "Hoc vernant lilia corde",
+   "source": "wikipedia:Orléans",
+   "cle": "Hoc vernant lilia corde",
+   "faux": [
+    "Sub lilio sine metu",
+    "Cor regis, flos Galliae",
+    "Lilia nostra manent"
+   ]
+  },
+  {
+   "id": "d-bayonne",
+   "mot": "Bayonne",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "tour",
+   "vraie": "Nunquam polluta",
+   "source": "wikipedia:Bayonne",
+   "cle": "Nunquam polluta",
+   "faux": [
+    "Semper intacta",
+    "Numquam capta",
+    "Fide servata"
+   ]
+  },
+  {
+   "id": "d-la-rochelle",
+   "mot": "La Rochelle",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "nef",
+   "vraie": "Servabor rectore Deo",
+   "source": "wikipedia:La Rochelle",
+   "cle": "Servabor rectore Deo",
+   "faux": [
+    "Fide mea semper vivo",
+    "Undis numquam cedam",
+    "Portum Dei teneo"
+   ]
+  },
+  {
+   "id": "d-pau",
+   "mot": "Pau",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "tour",
+   "vraie": "Urbis palladium et gentis",
+   "source": "wikipedia:Pau",
+   "cle": "Urbis palladium",
+   "faux": [
+    "Arx montis et populi",
+    "Clavis regni et vallis",
+    "Lumen patriae et domus"
+   ]
+  },
+  {
+   "id": "d-chambery",
+   "mot": "Chambéry",
+   "type": "devise",
+   "email": "gueules",
+   "meuble": "croix",
+   "vraie": "Custodibus istis",
+   "source": "wikipedia:Chambéry",
+   "cle": "Custodibus istis",
+   "faux": [
+    "Montibus istis",
+    "Sub cruce vivo",
+    "Clavibus firmis"
+   ]
+  },
+  {
+   "id": "m-financiere",
+   "mot": "Poularde à la financière",
+   "type": "plat",
+   "vraie": "crêtes et rognons de coq, quenelles, ris d'agneau, champignons, olives et lames de truffe",
+   "source": "Escoffier, Le Guide culinaire, 1903, « Garniture à la Financière »",
+   "faux": [
+    "mousse de foie blond, langues de carpe, morilles et pointes d'asperges au madère",
+    "coulis de homard, laitances de hareng, pistaches vertes et rondelles de citron confit",
+    "billes de pommes de terre, lard fumé, oignons glacés et cœurs d'artichaut poivrés"
+   ]
+  },
+  {
+   "id": "m-royale",
+   "mot": "Lièvre à la royale",
+   "type": "plat",
+   "vraie": "sept heures de cuisson jusqu'à tomber en effiloché, ail et échalote, sauce liée au sang",
+   "source": "wikipedia:Lièvre à la royale",
+   "cle": "sang",
+   "faux": [
+    "rôti rose sur le coffre, flambé à l'armagnac, sauce aux airelles et au genièvre",
+    "désossé et roulé autour d'un boudin de foie gras, cuit en croûte, sauce au porto",
+    "mariné trois jours au vin de Cahors, braisé aux pruneaux, sauce liée à la mie dorée"
+   ]
+  },
+  {
+   "id": "m-tripe",
+   "mot": "Œufs à la tripe",
+   "type": "plat",
+   "vraie": "œufs durs en rondelles et oignons fondus, liés d'une béchamel, sans une once de tripe",
+   "source": "wikipedia:Œufs à la tripe",
+   "cle": "oignon",
+   "faux": [
+    "gras-double blanchi longuement, œufs pochés dessus, le tout gratiné à la chapelure",
+    "œufs brouillés mêlés de tripes de morue, relevés au safran et aux herbes fraîches",
+    "tripes de veau en lanières, montées au beurre, servies sur des œufs mollets tièdes"
+   ]
+  },
+  {
+   "id": "m-demi-deuil",
+   "mot": "Poularde demi-deuil",
+   "type": "plat",
+   "vraie": "lames de truffe noire glissées sous la peau avant de pocher la volaille au bouillon",
+   "source": "wikipedia:Poularde demi-deuil",
+   "cle": "truffe",
+   "faux": [
+    "volaille rôtie à moitié puis noircie au four, servie entre deux sauces, l'une blanche",
+    "poularde cuite dans une vessie, la peau badigeonnée d'encre de seiche avant le service",
+    "chair blanche et chair brune dressées en damier sur le plat, nappées d'un jus réduit"
+   ]
+  },
+  {
+   "id": "m-soubise",
+   "mot": "Sauce Soubise",
+   "type": "plat",
+   "vraie": "oignons étuvés au beurre sans coloration, passés au tamis et liés d'une béchamel",
+   "source": "wikipedia:Sauce Soubise",
+   "cle": "oignon",
+   "faux": [
+    "échalotes grises confites au vin blanc, passées au tamis et montées au beurre froid",
+    "crème réduite parfumée au cerfeuil, liée de jaunes d'œufs, relevée d'un filet de verjus",
+    "fonds de volaille réduit à glace, monté d'une purée d'amandes et d'un peu de muscade"
+   ]
+  },
+  {
+   "id": "m-salmis",
+   "mot": "Salmis de palombes",
+   "type": "plat",
+   "vraie": "gibier rôti à moitié puis découpé, achevé dans une sauce tirée de ses propres carcasses",
+   "source": "wikipedia:Salmis",
+   "cle": "gibier",
+   "faux": [
+    "gibier confit dans sa graisse un mois durant, puis réchauffé au four avec des cèpes",
+    "gibier pilé au mortier avec son foie, monté en pâté et cuit sous une croûte de seigle",
+    "gibier mis au sel trois jours, dessalé puis poché au vin blanc avec un bouquet garni"
+   ]
+  },
+  {
+   "id": "m-hochepot",
+   "mot": "Hochepot de queue de bœuf",
+   "type": "plat",
+   "vraie": "queue de bœuf, oreilles et pieds de cochon, épaule de mouton et légumes d'hiver dans un seul pot",
+   "source": "wikipedia:Hochepot",
+   "cle": "queue de bœuf",
+   "faux": [
+    "poitrine de veau désossée, roulée autour d'un hachis d'herbes, pochée au bouillon de poule",
+    "morçeaux de bœuf saisis au saindoux, mouillés à la bière brune, pain d'épices pour lier la sauce",
+    "jarret de porc demi-sel, pois cassés, navets et poireaux, le tout passé une nuit au four éteint"
+   ]
+  },
+  {
+   "id": "m-chaud-froid",
+   "mot": "Chaud-froid de volaille",
+   "type": "plat",
+   "vraie": "une pièce cuite à chaud puis refroidie, nappée d'une sauce prise en gelée et lustrée au service",
+   "source": "wikipedia:Chaud-froid",
+   "cle": "nappée",
+   "faux": [
+    "une pièce servie moitié brûlante moitié glacée, les deux parts séparées d'un cordon de gelée",
+    "une pièce saisie au four très vif puis plongée dans la glace, pour que la chair reste nacrée",
+    "une pièce cuite la veille, tranchée froide et remise au bain-marie juste avant de la dresser"
+   ]
+  },
+  {
+   "id": "m-nantua",
+   "mot": "Quenelles sauce Nantua",
+   "type": "plat",
+   "vraie": "un beurre d'écrevisses pilées au mortier, monté dans une béchamel crémée, relevé de cognac",
+   "source": "wikipedia:Sauce Nantua",
+   "cle": "écrevisse",
+   "faux": [
+    "un fumet de brochet réduit à glace, lié de jaunes d'œufs, parfumé au vin jaune du Jura",
+    "une purée de tomates confites au four, détendue de crème aigre, relevée de paprika doux",
+    "un coulis de cresson blanchi, monté au beurre noisette, relevé d'un trait de vinaigre de cidre"
+   ]
+  }
+ ]
+}

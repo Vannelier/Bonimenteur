@@ -4569,5 +4569,139 @@
   "question": "En néerlandais, « être assis les mains dans les cheveux » veut dire…",
   "source": "wiktionary-en:met de handen in het haar zitten",
   "vraie": "Être désemparé, à bout d'idées."
+ },
+ "d-montpellier": {
+  "mot": "Montpellier",
+  "type": "devise",
+  "email": "azur",
+  "meuble": "etoile",
+  "vraie": "Virgo Mater, natum ora, ut nos juvet omni hora",
+  "source": "wikipedia:Montpellier"
+ },
+ "d-nancy": {
+  "mot": "Nancy",
+  "type": "devise",
+  "email": "or",
+  "meuble": "chene",
+  "vraie": "Non inultus premor",
+  "source": "wikipedia:Nancy"
+ },
+ "d-bordeaux": {
+  "mot": "Bordeaux",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "nef",
+  "vraie": "Lilia sola regunt lunam undas castra leonem",
+  "source": "wikipedia:Bordeaux"
+ },
+ "d-marseille": {
+  "mot": "Marseille",
+  "type": "devise",
+  "email": "argent",
+  "meuble": "croix",
+  "vraie": "Actibus immensis urbs fulget Massiliensis",
+  "source": "wikipedia:Marseille"
+ },
+ "d-toulouse": {
+  "mot": "Toulouse",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "croix",
+  "vraie": "Per Tolosa totjorn mai",
+  "source": "wikipedia:Toulouse"
+ },
+ "d-orleans": {
+  "mot": "Orléans",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "lys",
+  "vraie": "Hoc vernant lilia corde",
+  "source": "wikipedia:Orléans"
+ },
+ "d-bayonne": {
+  "mot": "Bayonne",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "tour",
+  "vraie": "Nunquam polluta",
+  "source": "wikipedia:Bayonne"
+ },
+ "d-la-rochelle": {
+  "mot": "La Rochelle",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "nef",
+  "vraie": "Servabor rectore Deo",
+  "source": "wikipedia:La Rochelle"
+ },
+ "d-pau": {
+  "mot": "Pau",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "tour",
+  "vraie": "Urbis palladium et gentis",
+  "source": "wikipedia:Pau"
+ },
+ "d-chambery": {
+  "mot": "Chambéry",
+  "type": "devise",
+  "email": "gueules",
+  "meuble": "croix",
+  "vraie": "Custodibus istis",
+  "source": "wikipedia:Chambéry"
+ },
+ "m-financiere": {
+  "mot": "Poularde à la financière",
+  "type": "plat",
+  "vraie": "crêtes et rognons de coq, quenelles, ris d'agneau, champignons, olives et lames de truffe",
+  "source": "Escoffier, Le Guide culinaire, 1903, « Garniture à la Financière »"
+ },
+ "m-royale": {
+  "mot": "Lièvre à la royale",
+  "type": "plat",
+  "vraie": "sept heures de cuisson jusqu'à tomber en effiloché, ail et échalote, sauce liée au sang",
+  "source": "wikipedia:Lièvre à la royale"
+ },
+ "m-tripe": {
+  "mot": "Œufs à la tripe",
+  "type": "plat",
+  "vraie": "œufs durs en rondelles et oignons fondus, liés d'une béchamel, sans une once de tripe",
+  "source": "wikipedia:Œufs à la tripe"
+ },
+ "m-demi-deuil": {
+  "mot": "Poularde demi-deuil",
+  "type": "plat",
+  "vraie": "lames de truffe noire glissées sous la peau avant de pocher la volaille au bouillon",
+  "source": "wikipedia:Poularde demi-deuil"
+ },
+ "m-soubise": {
+  "mot": "Sauce Soubise",
+  "type": "plat",
+  "vraie": "oignons étuvés au beurre sans coloration, passés au tamis et liés d'une béchamel",
+  "source": "wikipedia:Sauce Soubise"
+ },
+ "m-salmis": {
+  "mot": "Salmis de palombes",
+  "type": "plat",
+  "vraie": "gibier rôti à moitié puis découpé, achevé dans une sauce tirée de ses propres carcasses",
+  "source": "wikipedia:Salmis"
+ },
+ "m-hochepot": {
+  "mot": "Hochepot de queue de bœuf",
+  "type": "plat",
+  "vraie": "queue de bœuf, oreilles et pieds de cochon, épaule de mouton et légumes d'hiver dans un seul pot",
+  "source": "wikipedia:Hochepot"
+ },
+ "m-chaud-froid": {
+  "mot": "Chaud-froid de volaille",
+  "type": "plat",
+  "vraie": "une pièce cuite à chaud puis refroidie, nappée d'une sauce prise en gelée et lustrée au service",
+  "source": "wikipedia:Chaud-froid"
+ },
+ "m-nantua": {
+  "mot": "Quenelles sauce Nantua",
+  "type": "plat",
+  "vraie": "un beurre d'écrevisses pilées au mortier, monté dans une béchamel crémée, relevé de cognac",
+  "source": "wikipedia:Sauce Nantua"
  }
 }

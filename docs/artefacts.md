@@ -30,23 +30,27 @@ réclame, un brevet comme un inventeur).
 | `brevet` | brevet d'invention, avec la planche du dessin | après « Objet : » | `brevet` |
 | `carnet` | carnet de voyage : pays en capitales sous une boussole, ville et jour à la main, timbre du pays oblitéré, dos de cuir à filet doré et cote de folio (Kalam) | à la place de `___` dans la phrase | `carnet` |
 | `plaque` | panonceau de gare ancien | le nom de la commune | `objet` |
+| `armorial` | planche d'armorial : écu sous couronne murale, nom de la ville, banderole | la devise, sur la banderole | `armorial` |
+| `menu` | carte d'un restaurant, cadre gravé, plats de décor en gris | la composition, sous le plat en vedette | `menu` |
 | planche gravée | photo dans sa cuvette, « Fig. n. — » (pages `classique`, `filet` du thème photo) | après la rubrique (« Usage : ») | `plancheGravee` |
 
 ## Thèmes et leurs artefacts
 
-Nombre de questions au 25/11/2026 (229 en tout).
+Nombre de questions au 26/11/2026 (650 en tout).
 
 | Thème (`type`) | Questions | Artefacts | Choix |
 |---|---|---|---|
-| définition | 74 | page de dictionnaire (`classique`, `filet`) | au sort |
-| anecdote | 26 | coupure de journal | — |
-| coutume | 12 | carnet de voyage | — |
-| mot étranger (`intraduisible`) | 21 | guide de conversation | — |
-| expression étrangère (`etrangere`) | 19 | guide de conversation | — |
-| commune | 18 | panonceau de gare | — |
-| expression | 16 | fiche de lexicographe | — |
-| photo | 19 | planche gravée (14), brevet d'invention (5) | `ouvrage` : `brevet` pour les objets dont la réponse parle comme un brevet |
-| métier | 24 | livret d'ouvrier (12), carte de visite réclame (12) | `ouvrage` : `carte` pour les réponses en réclame |
+| définition | 173 | page de dictionnaire (`classique`, `filet`) | au sort |
+| commune | 103 | panonceau de gare | — |
+| anecdote | 75 | coupure de journal | — |
+| métier | 74 | livret d'ouvrier (36), carte de visite réclame (38) | `ouvrage` : `carte` pour les réponses en réclame |
+| coutume | 52 | carnet de voyage | — |
+| expression étrangère (`etrangere`) | 46 | guide de conversation | — |
+| mot étranger (`intraduisible`) | 43 | guide de conversation | — |
+| photo | 39 | planche gravée (31), brevet d'invention (8) | `ouvrage` : `brevet` pour les objets dont la réponse parle comme un brevet |
+| expression | 26 | fiche de lexicographe | — |
+| devise | 10 | planche d'armorial | — |
+| plat | 9 | carte de restaurant | — |
 
 ## Ajouter un type d'artefact
 
@@ -96,13 +100,11 @@ Nouveaux objets et thèmes :
   étrangers ne lui semblaient pas le bon). Thème proposé : **les dépêches**, ce
   que disait le télégramme qui annonçait un événement. Majuscules, mots
   comptés, STOP : le faussaire doit écrire télégraphique.
-- **Armorial** — thème proposé : **les devises de villes**. Réponses courtes,
-  sources publiques, et l'écu à banderole ne ressemble à rien d'autre.
 - **Cartel de musée** — voir la retouche 1 : deuxième artefact du thème photo,
   sans nouvelle question à écrire.
-- **Menu de grand restaurant** — thème : la composition d'un plat oublié.
-  À vérifier contre la leçon des remèdes d'apothicaire (la partie cachée doit
-  laisser inventer) : une composition reste ouverte, une maladie non.
+
+Faits le 26/11/2026 : l'**armorial** (thème `devise`) et la **carte de
+restaurant** (thème `plat`), lot 15.
 
 ### Deux exemples par thème (26/11/2026)
 

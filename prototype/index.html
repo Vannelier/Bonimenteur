@@ -806,6 +806,43 @@ header.vers-accueil{cursor:pointer}
   .hn-score{font-size:14px}
 }
 .classement .t-score.sc-experts{color:var(--vert)}
+/* Armorial (devises de villes) : planche de parchemin, écu sous couronne murale, nom de la ville,
+   devise sur la banderole. Rien d'animé ; l'écu est un SVG fixe. */
+.choix .bouton.feuillet[data-style="armorial"],.feuillet.modele[data-style="armorial"]{align-items:center;text-align:center;gap:3px;padding:10px 14px 12px}
+.ar-tete{font:700 9px/1.5 var(--titre);letter-spacing:.18em;text-transform:uppercase;color:var(--doux)}
+/* Couronne murale : un bandeau crénelé d'or terni, posé sur le chef de l'écu. */
+.ar-ecu{position:relative;display:block;width:62px;padding-top:9px;margin-top:1px}
+.ar-ecu::before{content:"";position:absolute;left:-4px;right:-4px;top:0;height:9px;background:
+  linear-gradient(90deg,#c9a227 0 20%,transparent 20% 36%,#c9a227 36% 64%,transparent 64% 80%,#c9a227 80% 100%) 0 0/100% 5px no-repeat,
+  linear-gradient(#d8b451,#a9851c) 0 5px/100% 4px no-repeat}
+.ar-ecu svg{display:block;width:62px;height:71px;filter:drop-shadow(0 3px 3px rgba(0,0,0,.3))}
+.ar-ville{font:700 14px/1.2 var(--titre);letter-spacing:.1em;text-transform:uppercase;color:var(--encre)}
+/* Banderole : les deux pointes repliées, la devise dedans. */
+.ar-band{position:relative;width:100%;padding:5px 22px;background:var(--p1,#efe6cc);
+  clip-path:polygon(0 18%,11px 0,calc(100% - 11px) 0,100% 18%,100% 82%,calc(100% - 11px) 100%,11px 100%,0 82%);
+  box-shadow:inset 0 0 0 1px rgba(60,45,20,.3)}
+.ar-band .rep{font:italic 700 15px/1.35 var(--texte);color:#4a3318}
+@media (max-height:700px){.ar-ecu,.ar-ecu svg{width:52px}.ar-ecu svg{height:60px}.ar-band .rep{font-size:14px;line-height:1.3}
+  .ar-tete{font-size:8.5px}.ar-ville{font-size:13px}.choix .bouton.feuillet[data-style="armorial"]{padding-top:8px;padding-bottom:10px}}
+
+/* Carte de restaurant (plats oubliés) : cadre gravé à double filet, plats de décor en gris,
+   le plat en vedette et sa composition. */
+.choix .bouton.feuillet[data-style="menu"],.feuillet.modele[data-style="menu"]{align-items:center;text-align:center;gap:1px;padding:11px 16px 9px}
+/* Cadre gravé à double filet (un élément : le ::after du feuillet sert à la lampe UV). */
+.me-cadre{position:absolute;inset:5px;pointer-events:none;border:1px solid rgba(60,45,20,.38);
+  box-shadow:inset 0 0 0 3px var(--p1,#f1e5c6),inset 0 0 0 4px rgba(60,45,20,.22)}
+.me-fleur{font:12px/1 var(--texte);letter-spacing:.35em;color:rgba(60,45,20,.5)}
+.me-maison{font:700 11px/1.3 var(--titre);letter-spacing:.18em;text-transform:uppercase;color:var(--encre)}
+.me-date{font:italic 400 10px/1.3 var(--texte);color:var(--doux)}
+.me-filet{display:block;width:calc(100% - 20px);height:1px;margin:4px 0;background:rgba(60,45,20,.3)}
+.me-plat{font:400 12px/1.5 var(--texte);color:rgba(31,42,68,.42)}
+.me-vedette{margin:2px 0 1px;font:700 15px/1.3 var(--texte);color:var(--encre)}
+.me-compo{font:italic 400 13.5px/1.4 var(--texte);color:#1d2a5a}
+.me-bas{display:flex;justify-content:space-between;width:100%;font:400 9px/1.4 var(--texte);color:var(--doux)}
+@media (max-height:700px){.me-plat{font-size:11.5px;line-height:1.35}.me-compo{font-size:13px;line-height:1.35}
+  .me-filet{margin:3px 0}.choix .bouton.feuillet[data-style="menu"]{padding-top:9px;padding-bottom:8px}}
+.feuillet.modele[data-style="menu"] .me-plat{display:none}
+
 /* Carnet de voyage (coutumes) : page lignée jaunie, dos de cuir à filet doré et cote de folio,
    timbre du pays oblitéré, écriture à la main (Kalam ; la signature du faussaire reste en Caveat). */
 .choix .bouton.feuillet[data-style="carnet"],.feuillet.modele[data-style="carnet"]{clip-path:none;border-radius:2px 6px 6px 2px;gap:3px;padding:10px 12px 12px 28px;color:#2a2f4a;
@@ -926,6 +963,9 @@ const IC = {
   metier: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M7 10h10M8.5 13.5h7" stroke-linecap="round"/></svg>',
   // Coutume : une boussole.
   coutume: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>',
+  // Devises de villes : l'écu de l'armorial. Plats oubliés : la cloche du service.
+  devise: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 4h16v8c0 5-5 7-8 8-3-1-8-3-8-8z"/></svg>',
+  plat: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M4.5 18a7.5 7.5 0 0 1 15 0"/><path d="M12 7V5"/></svg>',
   anecdote: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5" stroke-linecap="round"/></svg>',
   expression: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 17.5c0-4.2 1.6-7.5 5-9.5l1 1.6c-1.9 1.4-2.8 3-2.9 4.9H10v3H5zm9 0c0-4.2 1.6-7.5 5-9.5l1 1.6c-1.9 1.4-2.8 3-2.9 4.9H19v3h-5z"/></svg>',
   commune: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-6.5-6.3-6.5-11a6.5 6.5 0 0 1 13 0c0 4.7-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>',
@@ -1137,12 +1177,17 @@ const FAMILLES = {
   etrangere:  { label: "Expression étrangère", consigne: "", piege: "Invente un faux sens.", champ: "Ton faux sens", max: 100, seuil: 0.55 },
   // Métiers disparus : le livret d'ouvrier, la spécialité (« Ouvrage ») à deviner (ajoutée le 23/11/2026).
   metier:     { label: "Métier", consigne: "", piege: "Invente une fausse spécialité.", champ: "Ta fausse spécialité", max: 100, seuil: 0.5 },
+  // Devises de villes : l'armorial (26/11/2026). Réponse lapidaire, souvent latine : le faussaire
+  // imite la langue de la vraie, que les trois faux de Mr Halifax lui montrent.
+  devise:     { label: "Devise", consigne: "", piege: "Invente une devise crédible, mais fausse.", champ: "Ta fausse devise", max: 70, seuil: 0.6 },
+  // Plats oubliés : la carte du restaurant (26/11/2026). Composition énumérée, comme une recette.
+  plat:       { label: "Plat", consigne: "", piege: "Invente une composition crédible, mais fausse.", champ: "Ta fausse composition", max: 120, seuil: 0.6 },
 };
 /* Le faux s'affiche tel que le faussaire l'a écrit : majuscules et ponctuation sont à lui, comme le soin
    qu'il met à imiter la vraie (demande de l'auteur, 24/11/2026). Seuls les espaces en trop sont retirés.
    Les vraies réponses sont écrites dans leur forme d'affichage (docs/questions.md, « Forme des réponses »). */
 const formater = brut => String(brut).replace(/\s+/g, " ").trim();
-const ORDRE = ["definition", "anecdote", "coutume", "expression", "commune", "photo", "metier", "intraduisible", "etrangere"];
+const ORDRE = ["definition", "anecdote", "coutume", "expression", "commune", "photo", "metier", "intraduisible", "etrangere", "devise", "plat"];
 const famille = m => FAMILLES[m.type] ? m.type : "definition";
 function titre(m) {
   const f = famille(m);
@@ -1366,7 +1411,14 @@ const OUVRAGES = {
     { titre: "Manuel de conversation", court: "", an: 1896, style: "guide", teinte: 2 }],
   etrangere: [
     { titre: "Guide du voyageur polyglotte", court: "", an: 1878, style: "guide", teinte: 1 },
-    { titre: "Manuel de conversation", court: "", an: 1894, style: "guide", teinte: 3 }]
+    { titre: "Manuel de conversation", court: "", an: 1894, style: "guide", teinte: 3 }],
+  // Devises de villes : une planche d'armorial (26/11/2026).
+  devise: [{ titre: "Armorial général des villes de France", court: "", an: 1874, style: "armorial", teinte: 1 }],
+  // Plats oubliés : la carte d'un restaurant (maisons fictives, 26/11/2026).
+  plat: [
+    { titre: "Grand Hôtel du Lion d'Or", court: "", an: 1897, style: "menu", teinte: 1 },
+    { titre: "Taverne de l'Ancre", court: "", an: 1889, style: "menu", teinte: 3 },
+    { titre: "Hôtel de la Cloche", court: "", an: 1903, style: "menu", teinte: 0 }]
 };
 // Papier : quatre teintes (crème, ivoire, bis, gris-vert d'archive).
 const TEINTES = [["#f1e5c6", "#dfca9d", "#cdb078"], ["#f4ecd8", "#e4d6b4", "#cfbd92"], ["#eedcbc", "#dcc193", "#c6a26a"], ["#ebe6d2", "#d6d0b2", "#bdb58f"]];
@@ -1384,7 +1436,8 @@ const sansPoint = s => String(s).replace(/[.\s]+$/, "");
 // Consigne au-dessus des pièces, à la place de la pastille de famille (demande de l'auteur, 23/11/2026).
 const OBJETS = { definition: ["la vraie définition", "la définition"], anecdote: ["la vraie anecdote", "l'anecdote"], coutume: ["la vraie coutume", "la coutume"],
   expression: ["la vraie origine", "l'origine"], commune: ["la vraie commune", "la commune"], photo: ["la vraie légende", "la légende"],
-  metier: ["le vrai métier", "le métier"], intraduisible: ["la vraie traduction", "la traduction"], etrangere: ["le vrai sens", "le sens"] };
+  metier: ["le vrai métier", "le métier"], intraduisible: ["la vraie traduction", "la traduction"], etrangere: ["le vrai sens", "le sens"],
+  devise: ["la vraie devise", "la devise"], plat: ["la vraie composition", "la composition"] };
 function lot(m, motId, pose = false) {
   const f = famille(m), [vrai, simple] = OBJETS[f] || OBJETS.definition;
   return `<div class="lot"><span class="consigne">${pose ? `Contrefais ${simple}` : `Trouve ${vrai}`}</span><span class="n-lot">${numero(motId)}</span></div>`;
@@ -1479,6 +1532,53 @@ function carnet(m, motId, texte) {
     <span class="ca-ville">${esc(ville)}${ville ? " · " : ""}${(e % 27) + 1} ${MOIS_COURT[(e >> 4) % 12]}</span>
     <span class="ca-texte">${esc(avant || "")}<span class="rep">${esc(sansPoint(texte))}</span>${esc(apres ?? ".")}</span>`;
 }
+/* Armorial (devises de villes) : la planche de l'armorial — l'écu de la ville sous sa couronne
+   murale, son nom, la devise sur la banderole. Émail du champ et meuble viennent de la question
+   (`email`, `meuble`) : ce sont les armes de la ville, pas un décor tiré au sort. */
+const EMAUX = { azur: "#2f4f8f", gueules: "#9e2e25", sinople: "#2f5d4a", sable: "#30302e", pourpre: "#6b2f55", or: "#c9a227", argent: "#e8e2cf" };
+// Meubles dessinés dans un écu de 40 × 46, en métal sur le champ (règle de contrariété des émaux).
+const MEUBLES = {
+  tour: '<path d="M10.5 11h3.5v3.4h3.5V11h4.5v3.4H25V11h4.5v5L27.5 18v17h-15V18l-2-2z"/><path d="M17 26.5h6V35h-6z" fill="#1d2a44" opacity=".5"/>',
+  nef: '<path d="M18.9 8h2.2v16h-2.2z"/><path d="M21.6 9.5l9 4.4-9 4.4z"/><path d="M18.4 12.5l-7 3.2 7 3.2z"/><path d="M5.5 25.5h29l-4.2 9.5H9.7z"/>',
+  lys: '<g transform="translate(20 22) scale(2.5)"><path d="M0-5c1.6 2.4 3.2 3.4 3.2 5 0 1.2-1.2 2-2.2 1.6V3h1.4v1h-4.8V3H-1V1.6C-2 2-3.2 1.2-3.2 0-3.2-3.4-1.6-2.6 0-5z"/><path d="M-3.4 4.6h6.8v1.3h-6.8z"/></g>',
+  etoile: '<path d="M20 10l3.1 6.6 7.1.9-5.2 4.9 1.3 7.1L20 26.2 13.7 29.5l1.3-7.1-5.2-4.9 7.1-.9z"/>',
+  cle: '<circle cx="20" cy="14" r="5.4"/><circle cx="20" cy="14" r="2.2" fill="#1d2a44" opacity=".55"/><path d="M18.6 19h2.8v15h-2.8z"/><path d="M21.4 24h4v2.4h-4zM21.4 28.5h3v2.4h-3z"/>',
+  chene: '<path d="M18.6 20h2.8v12h-2.8z"/><circle cx="20" cy="13" r="6.4"/><circle cx="13.6" cy="17" r="5"/><circle cx="26.4" cy="17" r="5"/><path d="M13 32.5h14v2.2H13z"/>',
+  croix: '<path d="M17.6 9h4.8v25h-4.8z"/><path d="M9 17.4h22v4.8H9z"/>',
+  ancre: '<circle cx="20" cy="11" r="3.2" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M18.8 14.6h2.4V32h-2.4z"/><path d="M13.5 17.5h13v2.4h-13z"/><path d="M9.5 24c0 5.4 4.6 9.4 10.5 9.4S30.5 29.4 30.5 24h-2.6c0 4-3.6 6.9-7.9 6.9s-7.9-2.9-7.9-6.9z"/>',
+};
+function armorial(m, motId, texte) {
+  const champ = EMAUX[m.email] || EMAUX.azur, metal = (m.email === "or" || m.email === "argent") ? EMAUX.gueules : EMAUX.or;
+  const meuble = MEUBLES[m.meuble] || MEUBLES.tour;
+  return `<span class="ar-tete" aria-hidden="true">Armorial des villes de France</span>
+    <span class="ar-ecu" aria-hidden="true"><svg viewBox="0 0 40 46"><path d="M1.2 1.2h37.6v24c0 10.4-10.6 16.4-18.8 19.4C11.8 41.6 1.2 35.6 1.2 25.2z" fill="${champ}" stroke="#8a6a22" stroke-width="2.4"/><g fill="${metal}" color="${metal}">${meuble}</g></svg></span>
+    <span class="ar-ville">${esc(m.mot || "")}</span>
+    <span class="ar-band"><span class="rep">${esc(sansPoint(texte))}</span></span>`;
+}
+/* Carte de restaurant (plats oubliés) : la maison et la date en tête, le plat en vedette et sa
+   composition dessous (la réponse), deux plats de décor autour — les mêmes sur les deux pièces,
+   tirés de l'empreinte du lot. */
+// Plats de décor, dans l'ordre d'un service : un avant la vedette, un après.
+const PLATS_AVANT = ["Potage Germiny", "Huîtres de Marennes", "Consommé aux profiteroles", "Turbot, sauce mousseline",
+  "Barbue à la Dieppoise", "Filets de sole au chambertin"];
+const PLATS_APRES = ["Salade de saison", "Asperges, sauce divine", "Bombe glacée Nélusko", "Corbeille de fruits",
+  "Soufflé à la vanille", "Poires au vin de Beaune"];
+function menu(m, motId, texte, o) {
+  const e = empreinte(motId);
+  const un = (l, k) => { const d = l.filter(x => x !== m.mot); return d[k % d.length]; };
+  // Le cadre gravé est un élément : le ::after du feuillet sert déjà à la lampe UV.
+  return `<span class="me-cadre" aria-hidden="true"></span>
+    <span class="me-fleur" aria-hidden="true">❧ ❦ ❧</span>
+    <span class="me-maison" aria-hidden="true">${esc(o.titre)}</span>
+    <span class="me-date" aria-hidden="true">Carte du ${(e % 27) + 1} ${MOIS[(e >> 4) % 12]} ${o.an}</span>
+    <span class="me-filet" aria-hidden="true"></span>
+    <span class="me-plat" aria-hidden="true">${esc(un(PLATS_AVANT, e))}</span>
+    <span class="me-vedette">${esc(m.mot || "")}</span>
+    <span class="me-compo rep">${esc(sansPoint(texte))}</span>
+    <span class="me-plat" aria-hidden="true">${esc(un(PLATS_APRES, e >> 3))}</span>
+    <span class="me-filet" aria-hidden="true"></span>
+    <span class="me-bas" aria-hidden="true"><span>Vins compris</span><span>${5 + (e % 6)} fr. ${(e >> 2) % 2 ? "50" : ""}</span></span>`;
+}
 // Brevet d'invention (objets photographiés) : en-tête et numéro, la planche du dessin, le titre de
 // l'invention, « Objet : » puis la réponse.
 function brevet(m, motId, texte) {
@@ -1499,6 +1599,8 @@ function feuillet(m, motId, texte, categorie) {
   if (o.style === "carte") return carteVisite(m, motId, texte);
   if (o.style === "brevet") return brevet(m, motId, texte);
   if (o.style === "carnet") return carnet(m, motId, texte);
+  if (o.style === "armorial") return armorial(m, motId, texte);
+  if (o.style === "menu") return menu(m, motId, texte, o);
   if (o.style === "coupure") return coupure(m, motId, texte, o);
   if (o.style === "guide") return guide(m, texte, o);
   if (f === "photo") return plancheGravee(m, motId, texte);

@@ -20,7 +20,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | `prototype/proches/` | Données de l'arbitre du sens, générées par `tools/proches.py` : `index.json` (mots vides) et 32 paquets `p<k>.json`, chargés par la page à la demande (`listeProches`). Ne pas éditer. |
 | `prototype/communes.txt` | Communes de France (geo.api.gouv.fr, 34 969). |
 | `prototype/photos/` | Images des questions photo (Wikimedia Commons, crédits dans les questions). |
-| `data/questions.json` | Les questions (`docs/questions.md`). |
+| `data/questions.json` | Les questions (`docs/questions.md`). Onze thèmes, dont `devise` (devise d'une ville, sur une planche d'armorial) et `plat` (composition d'un plat oublié, sur une carte de restaurant), ajoutés le 26/11/2026. |
 | `data/faux-de-depart.json` | Trois faux de Mr Halifax (faussaire maison, identifiant `truffe`) par question, impérissables, en complément tant qu'une question a moins de 3 faux de joueurs en vente (`MELANGE`). |
 | `tools/lot.py` | Import de questions par lots (`tools/lots/*.json`) : contrôle (commune réelle, faux inexistants, forme, source, longueur de la vraie face aux faux), fusion, `--arbitre` (faux de Mr Halifax trop proches). `docs/questions.md`. |
 | `tools/artifact.py` | Construit le dossier de l'artifact claude.ai : page sans `serveur.js`, `donnees.json` (questions et faux de Mr Halifax, lus par la page à la place de la base, `PRET_DONNEES`), paquets de l'arbitre. Photos, icônes et communes publiées à part, quand elles changent. |

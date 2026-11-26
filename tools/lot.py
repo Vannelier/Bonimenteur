@@ -37,7 +37,7 @@ AGENT = "bonimenteur-outils/1.0 (jeu de mots ; import de questions)"
 
 # Seuils de l'arbitre par thème (FAMILLES de prototype/index.html, docs/arbitre.md).
 SEUILS = {"definition": 0.5, "anecdote": 0.65, "coutume": 0.65, "expression": 0.65, "photo": 0.65,
-          "intraduisible": 0.55, "etrangere": 0.55, "metier": 0.5}
+          "intraduisible": 0.55, "etrangere": 0.55, "metier": 0.5, "devise": 0.6, "plat": 0.6}
 CATEGORIES = {"n. m.", "n. f.", "n.", "adj.", "v.", "adv."}
 
 # « Quel nom de commune de la Mayenne… » : article de chaque département (code INSEE).
@@ -184,14 +184,21 @@ def controler(lot: dict, questions: dict, faux: list):
             erreurs.append(f"{qid} : vraie réponse déjà en jeu")
         if len(fx) != 3 or len({plat(f) for f in fx} | {plat(q["vraie"])}) != 4:
             erreurs.append(f"{qid} : il faut trois faux distincts, et distincts de la vraie")
-        # Anecdote, coutume, photo : un bout de phrase, sans majuscule (sauf sigle) ; anecdote et
-        # coutume sans point final (test_donnees_coherentes).
-        if fam in ("anecdote", "coutume", "photo"):
+        # Anecdote, coutume, photo, plat : un bout de phrase, sans majuscule (sauf sigle) ; seule
+        # la photo garde son point final (test_donnees_coherentes).
+        if fam in ("anecdote", "coutume", "photo", "plat"):
             for x in [q["vraie"], *fx]:
                 if x[:1].isupper() and not x[1:2].isupper():
                     erreurs.append(f"{qid} : « {x} » : pas de majuscule au début")
                 if fam != "photo" and x.endswith("."):
                     erreurs.append(f"{qid} : « {x} » : pas de point final")
+        # Devise : une formule lapidaire sur la banderole, majuscule au début, pas de point final.
+        if fam == "devise":
+            for x in [q["vraie"], *fx]:
+                if not x[:1].isupper() or x.endswith("."):
+                    erreurs.append(f"{qid} : « {x} » : majuscule au début, pas de point final")
+            if not q.get("mot"):
+                erreurs.append(f"{qid} : pas de ville (`mot`)")
         if fam != "commune" and not q.get("source"):
             erreurs.append(f"{qid} : pas de source")
         if fam == "definition":
