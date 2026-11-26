@@ -82,8 +82,9 @@ blop, une tache d'encre). Plus bas, l'historique parle d'écus pour la clarté.
 
 - On ne contrefait que les pièces authentifiées, c'est-à-dire les lots où l'on a
   trouvé la vraie (24/11/2026) : on les a eues entre les mains. Le
-  joueur floué ne peut pas contrefaire ce lot, ni dans l'atelier ni en direct
-  (bouton −15 grisé) ; le serveur refuse aussi (403). Le 23/11/2026, l'atelier
+  joueur floué ne peut pas contrefaire ce lot : en direct le bouton −15 est grisé,
+  et dans l'atelier le lot n'est plus listé du tout (26/11/2026) ; le serveur
+  refuse aussi (403). Le 23/11/2026, l'atelier
   ne proposait déjà que des lots expertisés : avant, on pouvait faire défiler
   une famille rare (les métiers) et apprendre toutes ses réponses. Un lot neuf
   se contrefait en direct, juste après l'avoir authentifié. Familles vides

@@ -103,9 +103,17 @@ h2{font-family:var(--titre);font-weight:700;font-size:19px;letter-spacing:.08em;
 .bouton{font:700 16px/1.25 var(--texte);min-height:52px;padding:12px 14px;border-radius:4px;border:1.5px solid var(--encre);background:var(--fond);color:var(--encre);cursor:pointer;text-align:center;
   box-shadow:0 3px 0 var(--encre);transition:transform .08s}
 .bouton:active:not(:disabled){transform:translateY(3px);box-shadow:none}
-.bouton:disabled{cursor:default}
 .bouton.plein{font-family:var(--titre);letter-spacing:.08em;background:var(--vert);color:var(--papier);border-color:var(--vert-f);box-shadow:0 3px 0 var(--vert-f)}
 .bouton.piege{font-family:var(--titre);letter-spacing:.06em;background:var(--rouge);color:#fff6ee;border-color:#7a1f19;box-shadow:0 3px 0 #7a1f19}
+/* Hors de portée (écus qui manquent, étal plein) : le bouton se fane, son relief tombe et son prix
+   passe au gris (demande de l'auteur, 26/11/2026 ; avant, seul l'attribut disabled le disait).
+   Après .plein et .piege, de même spécificité : l'ordre décide. Les pièces du duel ne sont jamais
+   disabled (aria-disabled seulement) : leur apparence ne change pas. */
+.bouton:disabled{cursor:default;background:var(--creux);color:var(--doux);border-color:var(--trait);box-shadow:0 3px 0 var(--trait)}
+.bouton:disabled .prix{color:var(--doux);border-color:var(--trait)}
+.bouton:disabled .ic{opacity:.55}
+/* Le prix du bouton « Contrefaire » du duel a sa propre couleur plus bas dans la feuille
+   (.ligne.direct …, même spécificité) : sa règle grisée doit y être aussi. */
 .choix .bouton{position:relative;overflow:hidden;text-align:left;font-weight:400;font-size:16px;display:flex;flex-direction:column;gap:8px;
   border:1.5px solid var(--trait);box-shadow:0 1px 0 var(--trait),0 6px 14px -10px rgba(0,0,0,.5);background:var(--creux)}
 .choix.duel .bouton:not(.feuillet){min-height:88px;justify-content:center}
@@ -257,7 +265,6 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
   background:var(--fond);color:var(--rouge);border:1.5px solid var(--rouge);font:700 12px/1 var(--texte);letter-spacing:0;font-variant-numeric:lining-nums;transform:rotate(5deg)}
 .ligne.direct .bouton.piege .prix .ic{width:1.1em;height:1.1em;color:var(--ecu)}
 .ligne.direct .bouton.piege:disabled .prix{color:var(--doux);border-color:var(--trait)}
-.ligne.direct .bouton.piege:disabled{background:var(--creux);color:var(--doux);border-color:var(--trait);box-shadow:0 3px 0 var(--trait)}
 /* Fin de la ration : sablier et compte à rebours jusqu'à minuit (heure de Paris). */
 .demain{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px;font:700 40px/1 var(--texte);color:var(--vert);font-variant-numeric:lining-nums tabular-nums}
 .demain .sablier .ic{width:40px;height:40px}
@@ -562,8 +569,9 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .chip,.score,.gain,.gros{font-family:var(--texte);font-weight:700;font-variant-numeric:lining-nums tabular-nums}
 @media (max-height:700px){.carte{min-height:0;gap:12px}.choix.duel .bouton{min-height:76px}.mot{margin:2px 0 4px}}
 
-/* Atelier : les lots joués d'une famille, tamponnés « Authentifié » (se contrefait) ou « Floué »
-   (grisé : on n'imite que la pièce qu'on a eue sous les yeux, décision de l'auteur, 24/11/2026). */
+/* Atelier : les lots authentifiés d'une famille, tamponnés « Authentifié ». On n'imite que la pièce
+   qu'on a eue sous les yeux (décision de l'auteur, 24/11/2026) : les lots floués ne sont plus listés
+   du tout (26/11/2026). */
 .retour-famille{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:4px 10px 4px 6px;border:0;background:none;cursor:pointer;
   font:700 12px/1.2 var(--titre);letter-spacing:.12em;text-transform:uppercase;color:var(--vert)}
 .retour-famille .ic{width:20px;height:20px}
@@ -571,14 +579,10 @@ label{font:700 12px/1.4 var(--titre);letter-spacing:.14em;text-transform:upperca
 .lots-atelier{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
 .lot-at{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:8px 10px 8px 12px;text-align:left;cursor:pointer;
   border:1.5px solid var(--trait);border-radius:3px;background:var(--creux);font:600 15px/1.3 var(--texte);color:var(--encre)}
-.lot-at:hover:not(:disabled){border-color:var(--vert)}
-.lot-at:disabled{cursor:default;background:transparent;border-style:dashed}
-.lot-at:disabled .lot-titre{color:var(--doux)}
+.lot-at:hover{border-color:var(--vert)}
 .lot-titre{min-width:0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .estampille{flex:none;font:700 12px/1 var(--tampon);letter-spacing:.12em;text-transform:uppercase;padding:4px 6px 3px;border:2px solid currentColor;border-radius:3px;transform:rotate(-6deg)}
 .estampille.authentifie{color:var(--vert)}
-.estampille.floue{color:var(--rouge);opacity:.8}
-.nb-tuile.zero{opacity:.45}
 
 /* Accueil : même canevas que Discoverium, Snouff et Vocabulium (CLAUDE.md, « Accueil ») :
    décor, titre, sous-titre, explication, bouton, podium de la semaine, jauge des joueurs,
@@ -765,19 +769,42 @@ header.vers-accueil{cursor:pointer}
 .defi-bloc .bouton{width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px}
 .defi-bloc .bouton .chip{background:transparent}
 .lien-defi{width:100%;padding:8px 10px;font:14px var(--texte);border:1.5px dashed var(--vert);border-radius:3px;background:var(--creux);color:var(--encre)}
-/* À l'honneur (accueil) : l'expert et le faussaire de la semaine, deux cartes côte à côte. */
-.honneur{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.hn-carte{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;padding:6px 6px 8px;border-radius:3px;background:var(--papier);color:var(--encre);box-shadow:0 3px 0 var(--sombre)}
-.hn-carte::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;border-radius:3px 3px 0 0}
+/* Podium de l'accueil : deux colonnes de parchemin, experts (filé vert, sceau) et faussaires
+   (filé rouge, plume), trois places chacune. Les places vides gardent leur hauteur : la mise en
+   page ne bouge pas entre l'ouverture et l'arrivée des données (règle commune aux quatre jeux,
+   « Mise en page mobile : vérifier le pire cas »). */
+.honneur{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+.hn-col{position:relative;min-width:0;padding:7px 7px 6px;border-radius:3px;background:var(--papier);color:var(--encre);box-shadow:0 3px 0 var(--sombre)}
+.hn-col::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;border-radius:3px 3px 0 0}
 .hn-expert::before{background:var(--vert)}.hn-faussaire::before{background:var(--rouge)}
-.hn-cat{font:700 11px/1.5 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:var(--doux)}
-.hn-nom{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:700 15px/1.4 var(--texte)}
-.hn-score{display:flex;align-items:center;gap:3px;font:700 16px/1.5 var(--texte);font-variant-numeric:lining-nums tabular-nums}
+.hn-cat{display:flex;align-items:center;justify-content:center;gap:4px;margin:0 0 4px;font:700 11px/1.5 var(--titre);letter-spacing:.1em;text-transform:uppercase;color:var(--doux)}
+.hn-cat .ic{width:13px;height:13px}
+.hn-places{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.hn-place{display:flex;align-items:center;gap:5px;min-width:0;padding:0 3px;margin:0 -3px;border-radius:3px;font:600 14px/1.5 var(--texte)}
+/* Pastille du rang, or, argent et bronze : les mêmes couleurs que le podium de Discoverium. */
+.hn-rang{flex:none;display:flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;font:700 10px/1 var(--titre);color:var(--sombre)}
+.hn-place.r1 .hn-rang{background:#d8b451}.hn-place.r2 .hn-rang{background:#c6c8cb}.hn-place.r3 .hn-rang{background:#cd9166}
+.hn-nom{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left}
+.hn-place.r1 .hn-nom{font-weight:700}
+.hn-score{flex:none;font:700 15px/1.5 var(--texte);font-variant-numeric:lining-nums tabular-nums}
 .hn-score .ic,.pd-champ .ic,.t-score .ic{width:.95em;height:.95em}
 .sc-experts{color:var(--vert)}.sc-faussaires{color:var(--rouge)}
 .pd-champ .sc-experts{color:#9fc4ad}.pd-champ .sc-faussaires{color:#e59a8f}
-.hn-carte.vide .hn-nom{color:var(--trait);font-weight:400}
-.hn-carte.moi{box-shadow:0 3px 0 var(--sombre),inset 0 0 0 2px var(--or)}
+/* Place vide : pastille en pointillé et tiret, la ligne garde sa hauteur. */
+.hn-place.vide .hn-nom{color:var(--trait)}
+.hn-place.r1.vide .hn-nom{font-weight:400}
+.hn-place.vide .hn-rang{background:transparent;color:var(--trait);box-shadow:inset 0 0 0 1.5px var(--trait)}
+.hn-place.moi{background:rgba(184,151,63,.18)}
+.hn-place.moi .hn-nom{font-weight:700}
+/* Écran court (iPhone SE, 375 × 553 utiles) : podiums resserrés, sinon « Nos autres jeux » passait
+   sous le pli (mesuré le 26/11/2026, 559 px pour 553). */
+@media (max-height:700px){
+  .pd-tete{margin-bottom:4px}
+  .hn-col{padding:6px 6px 5px}
+  .hn-cat{margin-bottom:3px}
+  .hn-place{font-size:13px;line-height:1.4}
+  .hn-score{font-size:14px}
+}
 .classement .t-score.sc-experts{color:var(--vert)}
 /* Carnet de voyage (coutumes) : page lignée jaunie, dos de cuir, timbre du pays oblitéré,
    écriture à la main (Kalam ; la signature du faussaire reste en Caveat). */
@@ -815,12 +842,14 @@ header.vers-accueil{cursor:pointer}
     <!-- Deux boutons côte à côte, comme « Jouer » et « Multijoueur » de Snouff et Vocabulium. -->
     <div class="menu-play"><button class="bouton plein" type="button" id="jouer">Expertiser</button><button class="bouton atelier-acc" type="button" id="versAtelierAcc">Atelier</button></div>
     <div class="podium-semaine">
-      <!-- À l'honneur : l'expert et le faussaire de la semaine, un de chaque (demande de l'auteur,
-           25/11/2026) ; les deux classements complets sous « Voir tout ». -->
-      <div class="pd-tete"><span>À l'honneur cette semaine</span><button class="lien" type="button" id="voirTout">Voir tout</button></div>
+      <!-- Les deux podiums de la semaine côte à côte, trois places chacun : experts (sceau vert) et
+           faussaires (cire rouge), les deux catégories à égalité (demande de l'auteur, 26/11/2026) ;
+           les classements complets sous « Voir tout ». majAccueil remplit, les places vides gardent
+           leur hauteur : rien ne bouge quand les données arrivent. -->
+      <div class="pd-tete"><span>Podium de la semaine</span><button class="lien" type="button" id="voirTout">Voir tout</button></div>
       <div class="honneur" id="honneur">
-        <div class="hn-carte hn-expert vide"><span class="hn-cat">Expert</span><span class="hn-nom">—</span><span class="hn-score">&nbsp;</span></div>
-        <div class="hn-carte hn-faussaire vide"><span class="hn-cat">Faussaire</span><span class="hn-nom">—</span><span class="hn-score">&nbsp;</span></div>
+        <div class="hn-col hn-expert"><p class="hn-cat">Experts</p><ol class="hn-places"><li class="hn-place r1 vide"><span class="hn-rang">1</span><span class="hn-nom">—</span><span class="hn-score"></span></li><li class="hn-place r2 vide"><span class="hn-rang">2</span><span class="hn-nom">—</span><span class="hn-score"></span></li><li class="hn-place r3 vide"><span class="hn-rang">3</span><span class="hn-nom">—</span><span class="hn-score"></span></li></ol></div>
+        <div class="hn-col hn-faussaire"><p class="hn-cat">Faussaires</p><ol class="hn-places"><li class="hn-place r1 vide"><span class="hn-rang">1</span><span class="hn-nom">—</span><span class="hn-score"></span></li><li class="hn-place r2 vide"><span class="hn-rang">2</span><span class="hn-nom">—</span><span class="hn-score"></span></li><li class="hn-place r3 vide"><span class="hn-rang">3</span><span class="hn-nom">—</span><span class="hn-score"></span></li></ol></div>
       </div>
       <p class="pd-moi" id="pdMoi" hidden></p>
       <p class="pd-champ" id="pdChamp" hidden></p>
@@ -1545,16 +1574,17 @@ function enteteEcus(s, cout = PRIX_PIEGE) {
 // Réserve d'écus face au prix : une pièce pleine par écu possédé, vide sinon.
 const reserve = (s, cout = PRIX_PIEGE) => `<div class="jauge-ecus" role="img" aria-label="${Math.max(s, 0)} écus sur ${cout}"><span class="barre"><i style="transform:scaleX(${Math.min(Math.max(s, 0) / cout, 1)})"></i></span><span class="chip ecu">${Math.max(s, 0)}/${cout}${IC.ecu}</span></div>`;
 
-/* Lots joués par famille, sauf ceux déjà contrefaits : authentifiés d'abord (le moins de faux en vie
-   en tête), floués ensuite, grisés. */
+/* Lots authentifiés par famille, sauf ceux déjà contrefaits, le moins de faux en vie en tête.
+   Les lots floués restent dehors : on ne les contrefait pas (demande de l'auteur, 26/11/2026 ;
+   leur ligne grisée n'apprenait rien). Une famille sans pièce authentifiée disparaît. */
 function lotsJoues(I) {
   const par = new Map();
   for (const [id, authentifie] of I.jouesMoi) {
-    const m = S.mots.get(id); if (!m || I.motsPiegesMoi.has(id)) continue;
+    const m = S.mots.get(id); if (!m || !authentifie || I.motsPiegesMoi.has(id)) continue;
     const f = famille(m); if (!par.has(f)) par.set(f, []);
-    par.get(f).push({ id, authentifie, vivants: (I.vivants.get(id) || []).length });
+    par.get(f).push({ id, vivants: (I.vivants.get(id) || []).length });
   }
-  for (const l of par.values()) l.sort((a, b) => b.authentifie - a.authentifie || a.vivants - b.vivants);
+  for (const l of par.values()) l.sort((a, b) => a.vivants - b.vivants);
   return par;
 }
 let familleAtelier = null;
@@ -1564,7 +1594,7 @@ function lotsFamille(retour, f) {
   familleAtelier = f;
   $e.innerHTML = `${retour === atelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(solde(I))}
     <button class="retour-famille" type="button" id="familles" aria-label="Toutes les familles"><span aria-hidden="true">‹</span>${IC[f]}${FAMILLES[f].label}</button>
-    <ul class="lots-atelier apparait">${l.map(x => { const t = titre(S.mots.get(x.id)); return `<li><button class="lot-at" type="button" data-id="${esc(x.id)}" ${x.authentifie ? "" : "disabled"} aria-label="${esc(t)} : ${x.authentifie ? "authentifié" : "floué, pas de contrefaçon"}"><span class="lot-titre">${esc(t)}</span><span class="estampille ${x.authentifie ? "authentifie" : "floue"}" aria-hidden="true">${x.authentifie ? "Authentifié" : "Floué"}</span></button></li>`; }).join("")}</ul>`;
+    <ul class="lots-atelier apparait">${l.map(x => { const t = titre(S.mots.get(x.id)); return `<li><button class="lot-at" type="button" data-id="${esc(x.id)}" aria-label="${esc(t)} : authentifié"><span class="lot-titre">${esc(t)}</span><span class="estampille authentifie" aria-hidden="true">Authentifié</span></button></li>`; }).join("")}</ul>`;
   $e.querySelectorAll(".lot-at[data-id]").forEach(b => b.onclick = () => cartePiege(b.dataset.id, retour));
   document.getElementById("familles").onclick = () => { familleAtelier = null; choixFamille(retour); };
   if (retour === atelier) lierSous();
@@ -1590,9 +1620,9 @@ function choixFamille(retour) {
   }
   if (familleAtelier && par.has(familleAtelier)) return lotsFamille(retour, familleAtelier);
   const dansAtelier = retour === atelier;
-  const nb = f => par.get(f).filter(x => x.authentifie).length;
+  const nb = f => par.get(f).length;
   $e.innerHTML = `${dansAtelier ? sousOnglets("fabriquer", I) : ""}${enteteEcus(s)}
-    ${par.size ? "" : `<div class="grosse-ic">${IC.piege}</div><p class="centre">Expertise d'abord des lots : tu contreferas les pièces authentifiées.</p>`}<div class="tuiles apparait">${ORDRE.filter(f => par.has(f)).map(f => `<button class="tuile" type="button" data-f="${f}">${IC[f]}${FAMILLES[f].label}<span class="nb-tuile ${nb(f) ? "" : "zero"}" aria-label="${nb(f)} pièces authentifiées">${nb(f)}</span></button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
+    ${par.size ? "" : `<div class="grosse-ic">${IC.piege}</div><p class="centre">Expertise d'abord des lots : tu contreferas les pièces authentifiées.</p>`}<div class="tuiles apparait">${ORDRE.filter(f => par.has(f)).map(f => `<button class="tuile" type="button" data-f="${f}">${IC[f]}${FAMILLES[f].label}<span class="nb-tuile" aria-label="${nb(f)} pièces authentifiées">${nb(f)}</span></button>`).join("")}${dansAtelier ? "" : `<button class="tuile" type="button" id="retour" aria-label="Retour">${IC.croix}</button>`}</div>`;
   $e.querySelectorAll("[data-f]").forEach(b => b.onclick = () => lotsFamille(retour, b.dataset.f));
   if (dansAtelier) lierSous(); else document.getElementById("retour").onclick = retour;
 }
@@ -2014,18 +2044,24 @@ const nomClasse = id => id === moi ? (monPseudo() || "Toi") : (S.pseudos.get(id)
 // Score d'un classé : pièces authentifiées (sceau vert) ou joueurs dupés (rouge).
 const CATS = { experts: { titre: "Experts", seul: "Expert", ic: () => IC.ok, dit: n => `${n} pièce${n > 1 ? "s" : ""} authentifiée${n > 1 ? "s" : ""}` },
   faussaires: { titre: "Faussaires", seul: "Faussaire", ic: () => IC.joueur, dit: n => `${n} joueur${n > 1 ? "s" : ""} dupé${n > 1 ? "s" : ""}` } };
-const score = (cat, n, cls = "hn-score") => `<span class="${cls} sc-${cat}" aria-label="${CATS[cat].dit(n)}">${n}${CATS[cat].ic()}</span>`;
+const score = (cat, n, cls) => `<span class="${cls} sc-${cat}" aria-label="${CATS[cat].dit(n)}">${n}${CATS[cat].ic()}</span>`;
+const PODIUM = 3;          // places montrées par catégorie sur l'accueil (le classement complet : « Voir tout »)
 async function majAccueil() {
   if (!lance) return;
   const C = classement(), cats = ["experts", "faussaires"];
-  await nommer(cats.flatMap(k => [C[k].semaine[0], C[k].passee].filter(Boolean).map(r => r.id))).catch(() => {});
+  await nommer(cats.flatMap(k => [...C[k].semaine.slice(0, PODIUM), C[k].passee].filter(Boolean).map(r => r.id))).catch(() => {});
   if (vue !== "accueil") return;
-  // Un de chaque à l'honneur : le premier expert et le premier faussaire de la semaine.
-  document.getElementById("honneur").innerHTML = cats.map(k => { const r = C[k].semaine[0], cl = k === "experts" ? "hn-expert" : "hn-faussaire";
-    return r ? `<div class="hn-carte ${cl} ${r.id === moi ? "moi" : ""}"><span class="hn-cat">${CATS[k].seul}</span><span class="hn-nom">${esc(nomClasse(r.id))}</span>${score(k, r.n)}</div>`
-      : `<div class="hn-carte ${cl} vide"><span class="hn-cat">${CATS[k].seul}</span><span class="hn-nom">—</span><span class="hn-score">&nbsp;</span></div>`; }).join("");
-  // Ta place sous les cartes, dans chaque classement où tu figures sans être premier ; classé sans pseudo, de quoi signer.
-  const places = cats.filter(k => C[k].moi && C[k].moi.rang > 1).map(k => `<b>${C[k].moi.rang}<sup>e</sup></b> ${CATS[k].seul.toLowerCase()}`);
+  // Les deux podiums : trois places par catégorie, les vides en pointillé pour garder la hauteur.
+  document.getElementById("honneur").innerHTML = cats.map(k => {
+    const l = C[k].semaine, cl = k === "experts" ? "hn-expert" : "hn-faussaire";
+    const lignes = Array.from({ length: PODIUM }, (_, i) => { const r = l[i];
+      return `<li class="hn-place r${i + 1}${r ? (r.id === moi ? " moi" : "") : " vide"}"><span class="hn-rang">${i + 1}</span><span class="hn-nom">${r ? esc(nomClasse(r.id)) : "—"}</span>`
+        + `<span class="hn-score sc-${k}"${r ? ` aria-label="${CATS[k].dit(r.n)}"` : ""}>${r ? r.n : ""}</span></li>`; }).join("");
+    return `<div class="hn-col ${cl}"><p class="hn-cat"><span class="sc-${k}">${k === "experts" ? IC.ok : IC.piege}</span>${CATS[k].titre}</p><ol class="hn-places">${lignes}</ol></div>`;
+  }).join("");
+  // Ta place sous les podiums, dans chaque classement où tu es hors du podium (dedans, ta ligne y est
+  // déjà en or) ; classé sans pseudo, de quoi signer.
+  const places = cats.filter(k => C[k].moi && C[k].moi.rang > PODIUM).map(k => `<b>${C[k].moi.rang}<sup>e</sup></b> ${CATS[k].seul.toLowerCase()}`);
   const pm = document.getElementById("pdMoi"), sansNom = (C.experts.moi || C.faussaires.moi) && !monPseudo();
   pm.hidden = !places.length && !sansNom;
   if (!pm.hidden) {

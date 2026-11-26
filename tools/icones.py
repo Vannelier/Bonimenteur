@@ -61,19 +61,28 @@ def icone(cuir: bool) -> str:
 
 
 def ico(images: list[Image.Image]) -> bytes:
-    """ICO à frames BMP 32 bits (BITMAPINFOHEADER + masque AND), sans PNG."""
+    """ICO à frames BMP 32 bits (BITMAPINFOHEADER + masque AND), sans PNG.
+
+    Le masque AND porte la même transparence que l'alpha : un masque tout à zéro dit
+    « tout opaque », et les décodeurs qui le suivent plutôt que l'alpha affichaient le
+    pourtour du sceau en noir (carré noir derrière l'icône, signalé le 26/11/2026).
+    Discoverium ne le voyait pas : son icône est un carré plein."""
     entetes, corps = [], []
     decalage = 6 + 16 * len(images)
     for im in images:
         w, h = im.size
         im = im.convert("RGBA")
-        lignes = []
+        lignes, bits = [], []
         for y in range(h - 1, -1, -1):                       # de bas en haut
+            ligne = []
             for x in range(w):
                 r, g, b, a = im.getpixel((x, y))
                 lignes.append(bytes((b, g, r, a)))
+                ligne.append(0 if a >= 128 else 1)            # 1 = pixel transparent
+            ligne += [0] * (-len(ligne) % 32)                # lignes du masque alignées sur 4 octets
+            bits.append(bytes(int("".join(map(str, ligne[i:i + 8])), 2) for i in range(0, len(ligne), 8)))
         pixels = b"".join(lignes)
-        masque = b"\x00" * (((w + 31) // 32) * 4 * h)        # transparence portée par l'alpha
+        masque = b"".join(bits)
         bih = struct.pack("<IiiHHIIiiII", 40, w, h * 2, 1, 32, 0, len(pixels) + len(masque), 0, 0, 0, 0)
         blob = bih + pixels + masque
         entetes.append(struct.pack("<BBBBHHII", w % 256, h % 256, 0, 0, 1, 32, len(blob), decalage))
