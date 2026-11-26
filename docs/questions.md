@@ -188,6 +188,36 @@ répond 429 à urllib).
   commune : remplacé. Béjaune : le premier sens est un jeune oiseau, le faux
   « oiseau des marais » écarté. Bibine et béjaune : mot-clé exigé, le sens
   retenu n'étant pas le premier de la page.
+- Lot 08 : 13 mots étrangers, 12 expressions étrangères (Wiktionnaire
+  anglais, mot-clé ou page vérifiée). Écartés faute de page : gökotta,
+  slampadato, Handschuhschneeballwerfer, « sortir la vache de la glace »,
+  « payer le canard » (portugais). « Prozvonit » raccourci : 560 px à
+  375 × 553, 539 ensuite.
+- Lot 09 : 25 métiers (12 livrets, 13 cartes). Haubergier et calendreur sans
+  page (l'outil bloque désormais une page absente) : remplacés par taillandier
+  et pelletier. Fourbisseur : mot-clé « armes » (premier sens : nettoyage
+  d'une maison). Gagne-denier : commissions, pas portage (Wiktionnaire). Huit
+  faux trop proches pour l'arbitre, réécrits.
+- Lot 10 : 24 anecdotes (marques et leurs débuts, origines de mots, animaux,
+  monuments). Sources reprises en anglais quand la page française ne portait
+  pas le fait (Tour de France 1904, Kaldi). Écartée en cours : aucune.
+  `tools/lot.py` vérifie maintenant la forme des anecdotes, coutumes et photos
+  (pas de majuscule, pas de point) : la Marseillaise commençait par
+  « Strasbourg ». Bas des pièces à 543 px au plus à 375 × 553.
+- Lot 11 : 17 coutumes (Espagne, Japon, Pays-Bas, Bulgarie, Écosse,
+  Angleterre, Catalogne, Belgique, France, Suisse, Pérou, Irlande, Suède,
+  Italie, Allemagne). Sources possibles en allemand, espagnol, italien
+  (`SOURCES`). Écartés faute de page ou de mot-clé : Kantō Matsuri, le requin
+  du Þorrablót. Bas des pièces à 518 px au plus à 375 × 553.
+- Lot 12 : 18 communes, 24 définitions. « Rougé » (pas « Rouge »). Faux de
+  commune réels écartés : Grillon, Vaillant. Bamboche : le premier sens est
+  une marionnette, le faux « marionnette » écarté. Pied-plat : « lâche »
+  (Wiktionnaire), pas « grossier ». Carabin : premier sens, un cavalier ; le
+  faux « garde de la maréchaussée » écarté.
+- Lot 13 : 17 communes, 26 définitions. Faux trop proches du premier sens
+  écartés : aigrefin (un poisson), pioupiou (cri des poussins). Mot-clé
+  exigé quand le sens retenu n'est pas le premier (argousin, baderne,
+  pandore, roquentin, panouille, falot…).
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux

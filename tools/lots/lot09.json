@@ -1,0 +1,321 @@
+{
+ "questions": [
+  {
+   "id": "lormier",
+   "mot": "lormier",
+   "type": "metier",
+   "source": "wiktionary:lormier",
+   "vraie": "Artisan qui fabriquait mors, éperons et boucles de harnais.",
+   "faux": [
+    "Ouvrier qui taillait les lames des faux dans les forges.",
+    "Marchand de lauriers pour les couronnes des vainqueurs.",
+    "Garde chargé de sonner du cor à l'entrée des forêts."
+   ]
+  },
+  {
+   "id": "fourbisseur",
+   "mot": "fourbisseur",
+   "type": "metier",
+   "source": "wiktionary:fourbisseur",
+   "vraie": "Artisan qui polissait et montait les épées.",
+   "faux": [
+    "Escroc qui vendait de faux remèdes en foire.",
+    "Domestique qui cirait les bottes des officiers.",
+    "Ouvrier qui chauffait les fours des verreries."
+   ],
+   "cle": "armes"
+  },
+  {
+   "id": "heaumier",
+   "mot": "heaumier",
+   "type": "metier",
+   "source": "wiktionary:heaumier",
+   "vraie": "Artisan qui forgeait les casques des chevaliers.",
+   "faux": [
+    "Pilote chargé de tenir la barre d'un navire.",
+    "Gardien des hameaux isolés dans la montagne.",
+    "Marchand de baumes et d'onguents parfumés."
+   ]
+  },
+  {
+   "id": "taillandier",
+   "mot": "taillandier",
+   "type": "metier",
+   "source": "wiktionary:taillandier",
+   "vraie": "Artisan qui forgeait des outils tranchants.",
+   "faux": [
+    "Tailleur qui cousait les habits de soldats.",
+    "Sonneur de cloches d'une abbaye normande.",
+    "Marchand de dentelles sur les foires d'été."
+   ]
+  },
+  {
+   "id": "chasublier",
+   "mot": "chasublier",
+   "type": "metier",
+   "source": "wiktionary:chasublier",
+   "vraie": "Artisan qui confectionnait les vêtements des prêtres.",
+   "faux": [
+    "Chasseur qui traquait les loups pour le seigneur.",
+    "Ouvrier qui fabriquait les tonneaux des abbayes.",
+    "Serviteur chargé d'allumer les cierges de l'église."
+   ]
+  },
+  {
+   "id": "gainier",
+   "mot": "gainier",
+   "type": "metier",
+   "source": "wiktionary:gainier",
+   "vraie": "Artisan qui fabriquait des étuis et des fourreaux.",
+   "faux": [
+    "Marchand de graines et de semences au marché.",
+    "Paysan qui menait les bœufs au labour d'hiver.",
+    "Comptable qui calculait les gains des marchands."
+   ]
+  },
+  {
+   "id": "cirier",
+   "mot": "cirier",
+   "type": "metier",
+   "source": "wiktionary:cirier",
+   "vraie": "Artisan qui travaillait la cire et fabriquait les bougies.",
+   "faux": [
+    "Domestique qui cirait les parquets des grandes maisons.",
+    "Ouvrier qui scellait les lettres et les actes officiels.",
+    "Gardien des ruches qui chassait les guêpes des vergers."
+   ]
+  },
+  {
+   "id": "fustier",
+   "mot": "fustier",
+   "type": "metier",
+   "source": "wiktionary:fustier",
+   "vraie": "Charpentier, artisan qui travaillait le bois.",
+   "faux": [
+    "Marchand de fûts et de tonneaux vides.",
+    "Bourreau chargé de fouetter les voleurs.",
+    "Fabricant de flûtes pour les bergers."
+   ]
+  },
+  {
+   "id": "trefileur",
+   "mot": "tréfileur",
+   "type": "metier",
+   "source": "wiktionary:tréfileur",
+   "vraie": "Ouvrier qui étirait le métal pour en faire du fil.",
+   "faux": [
+    "Ouvrier qui cuisait les tuiles des toitures.",
+    "Jardinier qui taillait les trèfles des pelouses.",
+    "Marchand de fromages au porte-à-porte."
+   ]
+  },
+  {
+   "id": "corroyeur",
+   "mot": "corroyeur",
+   "type": "metier",
+   "source": "wiktionary:corroyeur",
+   "vraie": "Ouvrier qui apprêtait le cuir après le tannage.",
+   "faux": [
+    "Messager qui portait le courrier à cheval.",
+    "Prêtre qui menait les processions de mai.",
+    "Ouvrier qui réparait les roues des charrettes."
+   ]
+  },
+  {
+   "id": "foulon",
+   "mot": "foulon",
+   "type": "metier",
+   "source": "wiktionary:foulon",
+   "cle": "drap",
+   "vraie": "Ouvrier qui foulait les draps pour les resserrer.",
+   "faux": [
+    "Bouffon qui amusait la foule sur les places.",
+    "Paysan qui foulait le raisin dans les cuves.",
+    "Gardien chargé de contenir la foule des foires."
+   ]
+  },
+  {
+   "id": "pelletier",
+   "mot": "pelletier",
+   "type": "metier",
+   "source": "wiktionary:pelletier",
+   "vraie": "Artisan qui préparait et vendait les fourrures.",
+   "faux": [
+    "Ouvrier qui fabriquait les pelles des boulangers.",
+    "Paysan qui ramassait les pommes de pin en forêt.",
+    "Marchand de pelotes de laine sur les marchés."
+   ]
+  },
+  {
+   "id": "decrotteur",
+   "mot": "décrotteur",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:décrotteur",
+   "vraie": "Souliers boueux ? Brossés et cirés sur le trottoir, en un clin d'œil !",
+   "faux": [
+    "Fossés bouchés ? Curés et nettoyés avant les grandes pluies d'automne !",
+    "Enfants crottés ? Lavés et peignés pour la messe du dimanche matin !",
+    "Fumier des écuries emporté chaque matin, cours propres garanties !"
+   ]
+  },
+  {
+   "id": "etameur",
+   "mot": "étameur",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:étameur",
+   "vraie": "Casseroles et chaudrons usés ? Je les recouvre d'étain, comme neufs !",
+   "faux": [
+    "Pièces d'étain fondues en cuillères et en gobelets, sur la place !",
+    "Tambours et timbales retendus pour les fanfares de vos villages !",
+    "Miroirs ternis ? Je les polis jusqu'à ce que vous vous y voyiez !"
+   ]
+  },
+  {
+   "id": "matelassier",
+   "mot": "matelassier",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:matelassier",
+   "vraie": "Vos matelas défaits, cardés et recousus dans votre cour !",
+   "faux": [
+    "Volets repeints et vitres changées avant l'hiver !",
+    "Marins et matelots recrutés pour vos navires en partance !",
+    "Tapis de laine battus et brossés devant votre porte !"
+   ]
+  },
+  {
+   "id": "savetier",
+   "mot": "savetier",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:savetier",
+   "vraie": "Vieux souliers ressemelés et rapiécés, pour quelques sous !",
+   "faux": [
+    "Savons parfumés à la lavande, fabriqués dans mon atelier !",
+    "Saveurs d'Orient : épices et thés rapportés des grands ports !",
+    "Vieilles bottes rachetées au poids, payées comptant sur place !"
+   ]
+  },
+  {
+   "id": "boueur",
+   "mot": "boueur",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:boueur",
+   "vraie": "Rues sales ? Je ramasse les boues et les ordures chaque matin !",
+   "faux": [
+    "Chemins défoncés ? Je bouche les ornières avant le passage du roi !",
+    "Bœufs fatigués ? Je les soigne et les remets au labour en trois jours !",
+    "Bouées repeintes et amarrées à l'entrée de votre port, sans délai !"
+   ]
+  },
+  {
+   "id": "gadouard",
+   "mot": "gadouard",
+   "type": "metier",
+   "ouvrage": "carte",
+   "registre": "familier",
+   "source": "wiktionary:gadouard",
+   "vraie": "Fosses d'aisance vidées de nuit, sans gêner le voisinage !",
+   "faux": [
+    "Gadoue des chemins pavée de pierres, plus de bottes perdues !",
+    "Gardes du corps pour vos voyages de nuit sur les routes !",
+    "Galettes de sarrasin cuites à la demande devant l'église !"
+   ]
+  },
+  {
+   "id": "gagne-denier",
+   "mot": "gagne-denier",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:gagne-denier",
+   "vraie": "Commissions et courses en ville, payées à la tâche, à votre service !",
+   "faux": [
+    "Pièces rares et vieux deniers achetés pour vos collections !",
+    "Vos économies placées et doublées en un an, parole d'honneur !",
+    "Paris et jeux d'adresse sur la place : tentez votre chance !"
+   ]
+  },
+  {
+   "id": "limonadier",
+   "mot": "limonadier",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:limonadier",
+   "cle": "café",
+   "vraie": "Café, liqueurs et billard : entrez donc, la salle est chauffée !",
+   "faux": [
+    "Citrons et oranges d'Espagne, arrivés ce matin par la diligence !",
+    "Limes et râpes affûtées pour menuisiers et serruriers du quartier !",
+    "Fontaines publiques réparées, eau claire garantie dans votre rue !"
+   ]
+  },
+  {
+   "id": "etuviste",
+   "mot": "étuviste",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:étuviste",
+   "vraie": "Bains chauds et étuves : décrassage complet, barbe en sus !",
+   "faux": [
+    "Pruneaux et figues séchés au four, conservés tout l'hiver !",
+    "Étuis de cuir pour vos lunettes, plumes et petits couteaux !",
+    "Draps séchés et repassés à la vapeur, livrés le jour même !"
+   ]
+  },
+  {
+   "id": "gargotier",
+   "mot": "gargotier",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:gargotier",
+   "vraie": "Soupe, ragoût et pain pour trois sous, servis à toute heure !",
+   "faux": [
+    "Gargouilles sculptées pour vos toits et vos gouttières neuves !",
+    "Gargarismes souverains contre les maux de gorge de l'hiver !",
+    "Gardes champêtres formés pour surveiller vos vignes la nuit !"
+   ]
+  },
+  {
+   "id": "chaussetier",
+   "mot": "chaussetier",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:chaussetier",
+   "vraie": "Bas et chausses de laine taillés à vos mesures !",
+   "faux": [
+    "Chaussées pavées et refaites avant l'hiver !",
+    "Souliers ferrés pour la marche en montagne !",
+    "Chaussons fourrés pour les longues veillées !"
+   ]
+  },
+  {
+   "id": "vielleux",
+   "mot": "vielleux",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:vielleux",
+   "vraie": "Bourrées et chansons à la vielle, pour vos noces et vos fêtes !",
+   "faux": [
+    "Vieux meubles et vieilles nippes rachetés au meilleur prix !",
+    "Veillées animées de contes et de légendes au coin du feu !",
+    "Chiens de garde dressés à veiller sur vos fermes la nuit !"
+   ]
+  },
+  {
+   "id": "oiselier",
+   "mot": "oiselier",
+   "type": "metier",
+   "ouvrage": "carte",
+   "source": "wiktionary:oiselier",
+   "vraie": "Serins, pinsons et rossignols en cage, chanteurs garantis !",
+   "faux": [
+    "Osier tressé en paniers, hottes et corbeilles sur mesure !",
+    "Oies grasses de Gascogne, plumées et prêtes à rôtir !",
+    "Toupies et bilboquets sculptés pour vos petits enfants !"
+   ]
+  }
+ ]
+}

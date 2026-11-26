@@ -1,0 +1,340 @@
+{
+ "questions": [
+  {
+   "id": "a-stubby",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Sergeant Stubby",
+   "cle": "sergeant",
+   "question": "Pendant la Première Guerre mondiale, Stubby, un chien errant recueilli par des soldats américains, a fini ___.",
+   "vraie": "sergent de l'armée",
+   "faux": [
+    "mascotte d'un cuirassé",
+    "messager du général",
+    "gardien d'un hôpital"
+   ]
+  },
+  {
+   "id": "a-tour1904",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:1904 Tour de France",
+   "cle": "train",
+   "question": "Au Tour de France 1904, plusieurs coureurs ont été disqualifiés pour avoir ___.",
+   "vraie": "pris le train pendant une étape",
+   "faux": [
+    "dormi dans une auberge",
+    "troqué leur vélo en route",
+    "bu du vin à chaque village"
+   ]
+  },
+  {
+   "id": "a-lorz",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Fred Lorz",
+   "cle": "car",
+   "question": "Au marathon olympique de 1904, le premier arrivé, Fred Lorz, avait ___.",
+   "vraie": "fait une partie du trajet en voiture",
+   "faux": [
+    "couru pieds nus sur tout le parcours",
+    "coupé à travers les champs de maïs",
+    "bu du champagne au ravitaillement"
+   ]
+  },
+  {
+   "id": "a-kaldi",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Kaldi",
+   "cle": "goats",
+   "question": "Selon la légende, le café fut découvert par un berger d'Éthiopie qui remarqua ___.",
+   "vraie": "ses chèvres excitées par des baies rouges",
+   "faux": [
+    "une odeur de grillé après un incendie",
+    "des oiseaux qui chantaient toute la nuit",
+    "des moines qui ne dormaient plus jamais"
+   ]
+  },
+  {
+   "id": "a-cherami",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Cher Ami",
+   "cle": "pigeon",
+   "question": "En 1918, Cher Ami, qui sauva près de deux cents soldats américains encerclés, était ___.",
+   "vraie": "un pigeon voyageur",
+   "faux": [
+    "un chien sanitaire",
+    "un cheval de trait",
+    "un âne de montagne"
+   ]
+  },
+  {
+   "id": "a-peugeot",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Peugeot",
+   "cle": "moulin",
+   "question": "Avant les automobiles, la marque Peugeot était connue pour ___.",
+   "vraie": "ses moulins à poivre et à café",
+   "faux": [
+    "ses montres de gousset",
+    "ses bicyclettes de course",
+    "ses fourneaux de cuisine"
+   ]
+  },
+  {
+   "id": "a-lamborghini",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Ferruccio Lamborghini",
+   "cle": "tracteur",
+   "question": "Avant ses voitures de sport, Ferruccio Lamborghini fabriquait ___.",
+   "vraie": "des tracteurs agricoles",
+   "faux": [
+    "des bateaux de course",
+    "des motos de livraison",
+    "des machines à espresso"
+   ]
+  },
+  {
+   "id": "a-nokia",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Nokia",
+   "cle": "papier",
+   "question": "Avant les téléphones, Nokia a commencé en 1865 en fabriquant ___.",
+   "vraie": "du papier",
+   "faux": [
+    "des skis",
+    "des radios",
+    "des montres"
+   ]
+  },
+  {
+   "id": "a-michelin",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Guide Michelin",
+   "cle": "pneu",
+   "question": "Le guide Michelin a été lancé en 1900 pour ___.",
+   "vraie": "donner envie de rouler et d'user ses pneus",
+   "faux": [
+    "récompenser les auberges des bords de route",
+    "aider les cochers à trouver leur chemin",
+    "vendre des cartes routières aux touristes"
+   ]
+  },
+  {
+   "id": "a-cocacola",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Coca-Cola",
+   "cle": "pharmac",
+   "question": "À sa création en 1886, le Coca-Cola était vendu ___.",
+   "vraie": "en pharmacie, comme un remède",
+   "faux": [
+    "dans les saloons, comme alcool",
+    "aux soldats, comme ration",
+    "dans les églises, le dimanche"
+   ]
+  },
+  {
+   "id": "a-lego",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Lego",
+   "cle": "leg godt",
+   "question": "Le nom « Lego » vient du danois et veut dire ___.",
+   "vraie": "« joue bien »",
+   "faux": [
+    "« petite brique »",
+    "« construis vite »",
+    "« boîte à jouets »"
+   ]
+  },
+  {
+   "id": "a-vaccin",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wiktionary:vaccin",
+   "cle": "vache",
+   "question": "Le mot « vaccin » vient du latin et rappelle ___.",
+   "vraie": "la vache",
+   "faux": [
+    "le vide",
+    "la veine",
+    "le vent"
+   ]
+  },
+  {
+   "id": "a-muscle",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wiktionary:muscle",
+   "cle": "souris",
+   "question": "Le mot « muscle » vient d'un mot latin qui veut dire ___.",
+   "vraie": "« petite souris »",
+   "faux": [
+    "« petite corde »",
+    "« force du bras »",
+    "« chair ferme »"
+   ]
+  },
+  {
+   "id": "a-pise",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Tour de Pise",
+   "cle": "construction",
+   "question": "La tour de Pise a commencé à pencher ___.",
+   "vraie": "pendant sa construction",
+   "faux": [
+    "après un tremblement de terre",
+    "lors d'une crue de l'Arno",
+    "quand on y installa les cloches"
+   ]
+  },
+  {
+   "id": "a-cuivre",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Statue de la Liberté",
+   "cle": "cuivre",
+   "question": "À son inauguration en 1886, la statue de la Liberté était ___.",
+   "vraie": "couleur cuivre brillant",
+   "faux": [
+    "peinte en blanc pur",
+    "couverte de feuilles d'or",
+    "grise comme la pierre"
+   ]
+  },
+  {
+   "id": "a-hamster",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Golden hamster",
+   "cle": "1930",
+   "question": "Presque tous les hamsters dorés de compagnie descendent ___.",
+   "vraie": "d'une seule portée capturée en Syrie en 1930",
+   "faux": [
+    "d'un couple offert à la reine Victoria en 1850",
+    "des hamsters élevés au jardin des plantes de Paris",
+    "d'un élevage de fourreurs installé en Russie"
+   ]
+  },
+  {
+   "id": "a-dauphin",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Unihemispheric slow-wave sleep",
+   "cle": "dolphin",
+   "question": "Pour dormir sans se noyer, le dauphin ___.",
+   "vraie": "garde une moitié du cerveau éveillée",
+   "faux": [
+    "se laisse porter par un autre dauphin",
+    "flotte sur le dos à la surface",
+    "s'accroche aux algues avec ses dents"
+   ]
+  },
+  {
+   "id": "a-eiffelradio",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Tour Eiffel",
+   "cle": "radio",
+   "question": "Prévue pour être démontée après vingt ans, la tour Eiffel a été sauvée grâce ___.",
+   "vraie": "à son utilité pour la radio",
+   "faux": [
+    "à une pétition des Parisiens",
+    "au prix trop élevé du démontage",
+    "à la visite du tsar de Russie"
+   ]
+  },
+  {
+   "id": "a-marseillaise",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:La Marseillaise",
+   "cle": "Strasbourg",
+   "question": "La Marseillaise a été composée en 1792 ___.",
+   "vraie": "à Strasbourg, pour l'armée du Rhin",
+   "faux": [
+    "à Marseille, pour un banquet de soldats",
+    "à Versailles, pour le mariage du roi",
+    "à Lyon, pour une fête des canuts"
+   ]
+  },
+  {
+   "id": "a-croissant",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Croissant (viennoiserie)",
+   "cle": "kipferl",
+   "question": "Le croissant est l'héritier ___.",
+   "vraie": "d'une viennoiserie autrichienne, le kipferl",
+   "faux": [
+    "d'un pain des moines de la Champagne",
+    "d'une galette turque au beurre de brebis",
+    "d'une brioche servie à la cour de Versailles"
+   ]
+  },
+  {
+   "id": "a-monopoly",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Monopoly",
+   "cle": "Magie",
+   "question": "L'ancêtre du Monopoly a été inventé en 1903 pour ___.",
+   "vraie": "dénoncer l'avidité des propriétaires",
+   "faux": [
+    "apprendre le calcul aux enfants",
+    "distraire les soldats en caserne",
+    "faire la publicité des chemins de fer"
+   ]
+  },
+  {
+   "id": "a-candidat",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wiktionary:candidat",
+   "cle": "blanc",
+   "question": "À Rome, les candidats doivent leur nom au fait qu'ils portaient ___.",
+   "vraie": "une toge blanchie",
+   "faux": [
+    "une couronne de laurier",
+    "un bâton d'ivoire",
+    "des sandales rouges"
+   ]
+  },
+  {
+   "id": "a-denim",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Denim",
+   "cle": "Nîmes",
+   "question": "Le mot « denim », la toile des jeans, vient ___.",
+   "vraie": "de l'expression « serge de Nîmes »",
+   "faux": [
+    "du nom d'un tailleur de Denver",
+    "d'un mot hollandais pour « bleu »",
+    "de « Dennis », un marin anglais"
+   ]
+  },
+  {
+   "id": "a-guillotin",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Joseph-Ignace Guillotin",
+   "cle": "peine de mort",
+   "question": "Le docteur Guillotin, dont la machine porte le nom, ___.",
+   "vraie": "était opposé à la peine de mort",
+   "faux": [
+    "fut l'un de ses premiers condamnés",
+    "l'avait conçue pour couper le bois",
+    "en tira une immense fortune"
+   ]
+  }
+ ]
+}

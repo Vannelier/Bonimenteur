@@ -31,7 +31,7 @@ RACINE = Path(__file__).resolve().parent.parent
 QUESTIONS = RACINE / "data" / "questions.json"
 FAUX = RACINE / "data" / "faux-de-depart.json"
 COMMUNES = RACINE / "prototype" / "communes.txt"
-PROCHES = RACINE / "prototype" / "proches.json"
+PROCHES = RACINE / "prototype" / "proches"
 CACHE = RACINE / "tools" / "cache"
 AGENT = "bonimenteur-outils/1.0 (jeu de mots ; import de questions)"
 
@@ -122,7 +122,9 @@ def premiere_definition(mot: str) -> str:
 
 
 SOURCES = {"wiktionary": "https://fr.wiktionary.org/w/index.php?", "wiktionary-en": "https://en.wiktionary.org/w/index.php?",
-           "wikipedia": "https://fr.wikipedia.org/w/index.php?", "wikipedia-en": "https://en.wikipedia.org/w/index.php?"}
+           "wikipedia": "https://fr.wikipedia.org/w/index.php?", "wikipedia-en": "https://en.wikipedia.org/w/index.php?",
+           "wikipedia-de": "https://de.wikipedia.org/w/index.php?", "wikipedia-es": "https://es.wikipedia.org/w/index.php?",
+           "wikipedia-it": "https://it.wikipedia.org/w/index.php?"}
 
 
 def source_contient(source: str, cle: str) -> str:
@@ -182,6 +184,14 @@ def controler(lot: dict, questions: dict, faux: list):
             erreurs.append(f"{qid} : vraie réponse déjà en jeu")
         if len(fx) != 3 or len({plat(f) for f in fx} | {plat(q["vraie"])}) != 4:
             erreurs.append(f"{qid} : il faut trois faux distincts, et distincts de la vraie")
+        # Anecdote, coutume, photo : un bout de phrase, sans majuscule (sauf sigle) ; anecdote et
+        # coutume sans point final (test_donnees_coherentes).
+        if fam in ("anecdote", "coutume", "photo"):
+            for x in [q["vraie"], *fx]:
+                if x[:1].isupper() and not x[1:2].isupper():
+                    erreurs.append(f"{qid} : « {x} » : pas de majuscule au début")
+                if fam != "photo" and x.endswith("."):
+                    erreurs.append(f"{qid} : « {x} » : pas de point final")
         if fam != "commune" and not q.get("source"):
             erreurs.append(f"{qid} : pas de source")
         if fam == "definition":
@@ -191,7 +201,10 @@ def controler(lot: dict, questions: dict, faux: list):
                 if not (t[:1].isupper() and t.endswith(".")):
                     erreurs.append(f"{qid} : « {t} » : majuscule et point final")
         if fam in ("definition", "metier") and q.get("source", "").startswith("wiktionary:"):
-            notes.append(f"{qid:22} vraie : {q['vraie']}\n{'':22} wikt. : {premiere_definition(q['source'].split(':', 1)[1]) or 'PAGE ABSENTE'}")
+            definition = premiere_definition(q['source'].split(':', 1)[1])
+            if not definition:
+                erreurs.append(f"{qid} : page {q['source']} absente ou sans section française")
+            notes.append(f"{qid:22} vraie : {q['vraie']}\n{'':22} wikt. : {definition or 'PAGE ABSENTE'}")
         # La vraie ne doit pas se trahir par sa longueur (escarbille, lot 01 : 82 signes contre 40).
         moy = sum(len(f) for f in fx) / max(len(fx), 1)
         if fam != "commune" and moy and not 0.7 <= len(q["vraie"]) / moy <= 1.35:
@@ -207,7 +220,10 @@ def controler(lot: dict, questions: dict, faux: list):
 
 def arbitre():
     """Faux de Mr Halifax que l'arbitre de la page refuserait (memeSens : score ≥ seuil du thème)."""
-    d = json.loads(PROCHES.read_text())
+    d = json.loads((PROCHES / "index.json").read_text())
+    d["mots"] = {}
+    for f in PROCHES.glob("p*.json"):
+        d["mots"].update(json.loads(f.read_text()))
     vides, inconnu = set(d["vides"]), d["inconnu"]
     questions = json.loads(QUESTIONS.read_text())
     n = 0
