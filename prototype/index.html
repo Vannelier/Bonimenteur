@@ -1219,11 +1219,29 @@ function mots(s) {
   return new Set(String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z]+/g, " ").split(" ")
     .filter(w => w.length >= 4 && !VIDES.has(w)).map(w => w.slice(0, 5)));
 }
+/* Presque la même graphie : distance d'édition sur les lettres seules (accents, casse, espaces et
+   ponctuation ôtés ; u/v et i/j confondus, comme en latin). Sans elle, « Numquam polluta » passait
+   face à « Nunquam polluta » : devises latines et occitanes, que les vecteurs français ne
+   connaissent pas (26/11/2026). Seuil : 12 % des lettres de la vraie, au moins 1 (à 20 %,
+   « Peur des ombres », faux honnête, tombait face à « Peur des nombrils »). */
+const lettres = s => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z]/g, "").replace(/v/g, "u").replace(/j/g, "i");
+function memeGraphie(piege, vraie) {
+  const a = lettres(piege), b = lettres(vraie);
+  if (!a || !b || Math.abs(a.length - b.length) > Math.max(1, b.length * 0.12)) return false;
+  let prec = Array.from({length: b.length + 1}, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const cour = [i];
+    for (let j = 1; j <= b.length; j++) cour[j] = Math.min(prec[j] + 1, cour[j - 1] + 1, prec[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    prec = cour;
+  }
+  return prec[b.length] <= Math.max(1, Math.floor(b.length * 0.12));
+}
 function tropProche(piege, vraie, cadre) {
   const C = new Set((cadre || []).map(w => w.normalize("NFD").replace(/[\u0300-\u036f]/g, "").slice(0, 5)));
   // Les régions entre parenthèses (« (Marseille) ») ne comptent pas ; un seul mot commun ne suffit pas,
   // sauf si la vraie définition est entièrement reprise.
   const sans = t => String(t).replace(/\([^)]*\)/g, " ");
+  if (memeGraphie(sans(piege), sans(vraie))) return true;
   const a = new Set([...mots(sans(piege))].filter(w => !C.has(w))), b = new Set([...mots(sans(vraie))].filter(w => !C.has(w))); if (!a.size || !b.size) return false;
   let commun = 0; for (const w of a) if (b.has(w)) commun++;
   if (commun === b.size) return true;

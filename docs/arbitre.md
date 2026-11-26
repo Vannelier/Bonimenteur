@@ -38,3 +38,14 @@ Sans les mots de cadrage, 19 faux honnêtes de phobies et de collections sur
 - Le refus est muet sur la raison : le joueur ne peut pas sonder la vérité
   par essais (une question tentée ne lui est plus posée).
 - Filet : la contestation « Un faux dit vrai » (2 joueurs, retrait).
+
+## Devises et plats (26/11/2026)
+
+Seuil 0,6 pour les deux thèmes. Passés à l'arbitre : les 57 faux de Mr
+Halifax des 19 questions sont sous le seuil. Trois devises (Toulouse, Bayonne,
+Chambéry, en latin ou en occitan) n'ont aucun mot connu des vecteurs : seul le
+contrôle de forme les garde. Il s'y ajoute la distance d'édition sur les
+lettres (`memeGraphie`, u/v et i/j confondus) : un faux à 12 % de lettres près
+de la vraie, au moins 1, est refusé (« Numquam polluta » face à « Nunquam
+polluta »). À 20 %, « Peur des ombres », faux honnête, tombait face à « Peur
+des nombrils » ; à 12 %, aucun des 1 950 faux de Mr Halifax n'est refusé.
