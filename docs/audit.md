@@ -8,7 +8,7 @@ lecture du réseau est acceptée pour l'instant ; le déploiement attendra.
 
 | Point | Gravité | État |
 |---|---|---|
-| La page reçoit les vraies réponses de toutes les questions (`/api/etat`, champ `vraie`) et déclare elle-même si le joueur s'est trompé (`erreur`). Un joueur qui lit le réseau gagne tous ses duels. | haute | ouvert : voir « Le duel côté serveur » |
+| La page reçoit les vraies réponses de toutes les questions (`/api/etat`, champ `vraie`) et déclare elle-même si le joueur s'est trompé (`erreur`). Un joueur qui lit le réseau gagne tous ses duels. | haute | fait sur le site (27/11/2026) : voir « Le duel côté serveur » ; reste ouvert sur l'artifact claude.ai, sans serveur |
 | Deux cookies suffisaient à retirer n'importe quel faux (2 contestations, sans contrôle). | haute | fait : contestation seulement d'un faux de ce lot, eu en duel, pas le sien |
 | Chaque cookie neuf reçoit 20 écus : effacer ses cookies donnait des écus sans limite. | moyenne | fait : 20 identités neuves par heure et par IP (`LIMITES`) |
 | Aucune limite de débit sur les écritures. | moyenne | fait : 60 écritures par minute et par IP |
@@ -66,6 +66,20 @@ lecture du réseau est acceptée pour l'instant ; le déploiement attendra.
   de son côté : un oubli les désynchronise.
 
 ## Le duel côté serveur
+
+Fait le 27/11/2026, sur le site. `/api/etat` ne donne plus la vraie réponse
+ni le texte des faux d'autrui pour une question que le joueur n'a pas jouée
+(`_questions_vues_par`, `_faux_vus_par`). La page choisit toujours le faux à
+opposer (`adverses`, `opposer`) ; `/api/donne` renvoie les deux pièces dans un
+ordre tiré au sort et gardé (table `donnes`) : la redemander rend la même
+donne, on ne peut pas croiser deux paires pour isoler la vraie. `/api/choix`
+reçoit la pièce certifiée (`k`), juge et renvoie le verdict et la vraie ;
+l'ancien format, où la page déclarait `erreur`, est refusé
+(`test_duel_juge_par_le_serveur`). L'arbitre du sens reste dans la page : il
+ne sert qu'à l'écran de pose, sur des questions déjà jouées. Sur l'artifact
+claude.ai, sans serveur, la page juge encore elle-même.
+
+Plan de départ :
 
 La correction de fond du premier point : le serveur tire le lot, mélange les
 deux réponses et ne les envoie qu'en texte, sans dire laquelle est vraie ; il

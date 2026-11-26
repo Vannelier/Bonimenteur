@@ -49,7 +49,8 @@
   }
   const ROUTES = {
     pieges: d => ecrire("POST", "/api/pieges", { mot: d.mot, texte: d.texte, prix: d.prix || 10, ...(d.categorie ? { categorie: d.categorie } : {}) }),
-    choix: d => ecrire("POST", "/api/choix", { mot: d.mot, montres: d.montres || [], ordre: d.ordre || [], erreur: !!d.erreur }),
+    // Le serveur juge le duel d'après sa donne (/api/donne) : la page n'envoie que la pièce certifiée.
+    choix: d => ecrire("POST", "/api/choix", { mot: d.mot, k: d.k }),
     // Prix, base de la réédition et horodatage décidés par le serveur.
     actes: d => ecrire("POST", "/api/actes", { sorte: d.sorte, ...(d.faux ? { faux: d.faux } : {}), ...(d.texte ? { texte: d.texte } : {}), ...(d.categorie ? { categorie: d.categorie } : {}) }),
     signalements: d => ecrire("POST", "/api/signalements", { mot: d.mot, raison: d.raison, pieges: d.pieges || [] }),

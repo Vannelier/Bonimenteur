@@ -1375,9 +1375,19 @@ const VRAI = `<span class="chip bon">D'époque</span>`;
 
 async function question(motId, I, piegeImpose = null) {
   const m = S.mots.get(motId);
-  const piege = piegeImpose || opposer(I, adverses(I, motId));
+  let piege = piegeImpose || opposer(I, adverses(I, motId));
   const f = famille(m);
-  const options = melange([{id: "vrai", texte: formater(m.vraie, f), categorie: m.categorie}, {id: piege.id, texte: formater(piege.texte, f), auteur: piege.auteur, categorie: piege.categorie || m.categorie}]);
+  let options;
+  if (window.__site) {
+    /* Sur le site, le serveur distribue le duel (/api/donne) : deux pièces dans un ordre qu'il
+       garde, sans dire laquelle est vraie ; il juge le choix (repondre). La page ne reçoit plus
+       les vraies réponses des questions non jouées (docs/audit.md, « Le duel côté serveur »). */
+    let r = null;
+    try { r = await fetch("/api/donne", { method: "POST", credentials: "same-origin", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ mot: motId, piege: piege.id }) }).then(x => x.ok ? x.json() : null); } catch (e) { r = null; }
+    if (!r) { vusLocal.add(motId); serie.enCours = null; return suite(); }
+    piege = { ...piege, id: r.piege, auteur: r.auteur };
+    options = r.pieces.map((x, i) => ({ id: "piece" + i, texte: formater(x.texte, f), categorie: x.categorie }));
+  } else options = melange([{id: "vrai", texte: formater(m.vraie, f), categorie: m.categorie}, {id: piege.id, texte: formater(piege.texte, f), auteur: piege.auteur, categorie: piege.categorie || m.categorie}]);
   await nommer([piege.auteur]);
   serie.enCours = { motId, options, piege };
   afficherDuel(motId, options, piege);
@@ -1648,8 +1658,19 @@ function afficherDuel(motId, options, piege) {
   $e.querySelectorAll("[data-k]").forEach(b => b.onclick = () => repondre(motId, options, piege, +b.dataset.k));
 }
 
-function repondre(motId, options, piege, k) {
+async function repondre(motId, options, piege, k) {
   if (serie.repondu === motId) return; serie.repondu = motId;
+  // Sur le site, le verdict vient du serveur : il dit quelle pièce était la vraie, et la donne.
+  let jugeServeur = false, avantServeur = null;
+  if (!options.some(o => o.id === "vrai")) {
+    avantServeur = solde(index());
+    let r;
+    try { r = await db.collection("choix").add({ mot: motId, k, joueur: moi, t: Date.now() }); }
+    catch (e) { serie.repondu = null; return; }
+    options.forEach((o, i) => { if (i === r.vrai) o.id = "vrai"; else { o.id = piege.id; o.auteur = piege.auteur; } });
+    const mq = S.mots.get(motId); if (mq && r.vraie) mq.vraie = r.vraie;
+    jugeServeur = true;
+  }
   const juste = options[k].id === "vrai", I = index();
   const montrer = (btn, html, cls) => { btn.setAttribute("aria-disabled", "true"); btn.classList.add(cls, "joue"); const sm = btn.querySelector("small"); sm.hidden = false; sm.innerHTML = html; };
   const etoile = I.pvqn.has(piege.id) ? `<span style="color:var(--piege)" title="Pièce de maître">${IC.etoile}</span>` : "";
@@ -1674,8 +1695,8 @@ function repondre(motId, options, piege, k) {
   vusLocal.add(motId);
   // Même forme d'enregistrement que la chasse : « ordre » = piège démasqué, « erreur » = piège cru.
   const trace = { mot: motId, montres: [piege.id], ordre: juste ? [piege.id] : [], erreur: !juste, gain, joueur: moi, t: Date.now() };
-  const avant = solde(index());
-  if (db) { choixEnVol.push(trace); db.collection("choix").add(trace).catch(() => { choixEnVol.splice(choixEnVol.indexOf(trace), 1); }); }
+  const avant = jugeServeur ? avantServeur : solde(index());
+  if (db && !jugeServeur) { choixEnVol.push(trace); db.collection("choix").add(trace).catch(() => { choixEnVol.splice(choixEnVol.indexOf(trace), 1); }); }
   serie.num++; serie.traces.push(juste ? 1 : 0);
   const fin = serie.num >= totalSerie();
   document.getElementById("suite").innerHTML = `<div class="verdict">${juste ? sceau(true, "pose") : `<span class="tampon-dupe" aria-hidden="true">Floué</span>`}<p class="dit">${replique(juste ? "juste" : "cru")}</p><span class="gain" style="color:${gain ? "var(--ecu)" : "var(--faux)"}">+${gain}${IC.ecu}</span></div>
@@ -2014,7 +2035,7 @@ async function atelier(sous) {
   // En vente d'abord, puis rangés, épuisés, retirés par contestation.
   const rang = p => I.retire.has(p.id) ? 3 : I.epuise.has(p.id) ? 2 : I.range.has(p.id) ? 1 : 0;
   mes.sort((a, b) => rang(a) - rang(b));
-  const galerie = S.pieges.filter(p => I.pvqn.has(p.id)).sort((a, b) => taux(I, b.id) - taux(I, a.id));
+  const galerie = S.pieges.filter(p => I.pvqn.has(p.id) && p.texte).sort((a, b) => taux(I, b.id) - taux(I, a.id));
   await nommer(galerie.map(p => p.auteur));
   // Planche de l'édition en cours : vendus, saisis, puis exemplaires en stock.
   const planche = p => { const e = I.edition.get(p.id); if (!e) return "";

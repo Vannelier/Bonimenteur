@@ -111,6 +111,8 @@ def _base():
             sorte TEXT NOT NULL, faux TEXT, prix INTEGER NOT NULL, texte TEXT, categorie TEXT,
             base_pris INTEGER, base_dem INTEGER, t INTEGER NOT NULL);
         CREATE INDEX IF NOT EXISTS actes_joueur ON actes (joueur);
+        CREATE TABLE IF NOT EXISTS donnes (joueur TEXT NOT NULL, mot TEXT NOT NULL, piege TEXT NOT NULL,
+            vrai INTEGER NOT NULL, t INTEGER NOT NULL, PRIMARY KEY (joueur, mot));
         CREATE TABLE IF NOT EXISTS stats (faux TEXT PRIMARY KEY, vu INTEGER NOT NULL DEFAULT 0,
             pris INTEGER NOT NULL DEFAULT 0, demasque INTEGER NOT NULL DEFAULT 0);
     """)
@@ -275,16 +277,32 @@ def etat(request: Request, defi: str = ""):
         return _etat(j if IDENTIFIANT.match(j) else "", defi)
 
 
+def _questions_vues_par(j: str, joues: set) -> dict:
+    """Les questions, sans la vraie réponse de celles que le joueur n'a pas jouées : le duel
+    se distribue et se juge ici (/api/donne, /api/choix). Avant le 27/11/2026, la page recevait
+    toutes les vraies réponses et déclarait elle-même le verdict (docs/audit.md)."""
+    return {k: (q if k in joues else {c: v for c, v in q.items() if c not in ("vraie", "source")})
+            for k, q in QUESTIONS.items()}
+
+
+def _faux_vus_par(j: str, joues: set) -> list:
+    """Les faux, sans le texte de ceux d'autrui sur les questions que le joueur n'a pas jouées :
+    sinon la vraie se devinait en retirant les textes connus des deux pièces du duel."""
+    return [f if (f["mot"] in joues or f["auteur"] == j) else {c: v for c, v in f.items() if c not in ("texte", "categorie")}
+            for f in _tous_les_faux()]
+
+
 def _etat(j: str, defi: str = ""):
     lignes = db.execute("SELECT * FROM choix WHERE joueur = ? OR erreur = 1 AND EXISTS (SELECT 1 FROM faux f "
                         "WHERE f.auteur = ? AND instr(choix.montres, '\"' || f.id || '\"') > 0)", (j, j)).fetchall()
     choix = [{**dict(r), "montres": json.loads(r["montres"]), "ordre": json.loads(r["ordre"]),
               "erreur": bool(r["erreur"])} for r in lignes]
     stats = {r["faux"]: [r["vu"], r["pris"], r["demasque"]] for r in db.execute("SELECT * FROM stats")}
+    joues = {r[0] for r in db.execute("SELECT mot FROM choix WHERE joueur = ?", (j,))}
     return {
         "stats": stats,
-        "mots": QUESTIONS,
-        "pieges": _tous_les_faux(),
+        "mots": _questions_vues_par(j, joues),
+        "pieges": _faux_vus_par(j, joues),
         "choix": choix,
         "contestations": [dict(r) for r in db.execute("SELECT piege, joueur, mot, t FROM contestations")],
         # Actes des faussaires (éditions, rangements, places) : la page en tire l'état de chaque faux.
@@ -442,35 +460,70 @@ def agir(a: Acte, request: Request):
     return {}
 
 
+class Donne(BaseModel):
+    mot: str
+    piege: str
+
+
+@app.post("/api/donne")
+def donner(d: Donne, request: Request):
+    """Distribue un duel : la vraie et un faux, mélangés, sans dire lequel est vrai. Le faux est
+    choisi par la page (mêmes règles qu'avant : adverses, opposer) ; la donne est gardée, et la
+    même revient si on la redemande, pour qu'on ne puisse pas croiser deux donnes et trouver
+    la vraie, le texte commun aux deux."""
+    j = _joueur(request)
+    _limiter(request, "ecriture")
+    if d.mot not in QUESTIONS:
+        raise HTTPException(404, "question inconnue")
+    with _verrou:
+        if db.execute("SELECT 1 FROM choix WHERE joueur = ? AND mot = ?", (j, d.mot)).fetchone():
+            raise HTTPException(409, "question déjà jouée")
+        r = db.execute("SELECT piege, vrai FROM donnes WHERE joueur = ? AND mot = ?", (j, d.mot)).fetchone()
+        faux = {f["id"]: f for f in _tous_les_faux() if f["mot"] == d.mot}
+        if r and r["piege"] in faux:
+            piege, vrai = r["piege"], r["vrai"]
+        else:
+            if d.piege not in faux or faux[d.piege]["auteur"] == j:
+                raise HTTPException(422, "faux inconnu")
+            piege, vrai = d.piege, secrets.randbelow(2)
+            db.execute("INSERT OR REPLACE INTO donnes VALUES (?, ?, ?, ?, ?)", (j, d.mot, piege, vrai, _ms()))
+            db.commit()
+    q, f = QUESTIONS[d.mot], faux[piege]
+    pieces = [{"texte": f["texte"], "categorie": f.get("categorie") or q.get("categorie")}]
+    pieces.insert(vrai, {"texte": q["vraie"], "categorie": q.get("categorie")})
+    return {"piege": piege, "auteur": f["auteur"], "pieces": pieces}
+
+
 class Choix(BaseModel):
     mot: str
-    montres: list[str] = Field(min_length=1, max_length=4)
-    ordre: list[str] = Field(max_length=4)
-    erreur: bool
+    k: int = Field(ge=0, le=1)       # la pièce certifiée, dans l'ordre de la donne
 
 
 @app.post("/api/choix")
 def choisir(c: Choix, request: Request):
-    """Un duel joué. Le gain se décide ici : 1 écu pour une bonne réponse."""
+    """Un duel joué, jugé ici d'après la donne : la pièce certifiée est-elle la vraie ? 1 écu si
+    oui. Renvoie le verdict et la vraie réponse, que la page n'avait pas."""
     j = _joueur(request)
     _limiter(request, "ecriture")
     if c.mot not in QUESTIONS:
         raise HTTPException(404, "question inconnue")
-    connus = {f["id"] for f in _tous_les_faux() if f["mot"] == c.mot}
-    if not set(c.montres) <= connus or not set(c.ordre) <= set(c.montres):
-        raise HTTPException(422, "faux inconnu")
     with _verrou:
         if db.execute("SELECT 1 FROM choix WHERE joueur = ? AND mot = ?", (j, c.mot)).fetchone():
             raise HTTPException(409, "question déjà jouée")
+        donne = db.execute("SELECT piege, vrai FROM donnes WHERE joueur = ? AND mot = ?", (j, c.mot)).fetchone()
+        if not donne:
+            raise HTTPException(422, "pas de donne")
         if RATION_ACTIVE and _joues_aujourdhui(j) >= RATION:
             raise HTTPException(429, "ration du jour épuisée")
-        gain = 0 if c.erreur else 1
+        erreur = c.k != donne["vrai"]
+        montres, ordre, gain = [donne["piege"]], ([] if erreur else [donne["piege"]]), 0 if erreur else 1
         db.execute("INSERT INTO choix VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-                   (secrets.token_urlsafe(12), c.mot, json.dumps(c.montres), json.dumps(c.ordre),
-                    int(c.erreur), gain, j, _ms()))
-        _compter(db, c.montres, c.ordre, c.erreur)
+                   (secrets.token_urlsafe(12), c.mot, json.dumps(montres), json.dumps(ordre),
+                    int(erreur), gain, j, _ms()))
+        _compter(db, montres, ordre, erreur)
         db.commit()
-    return {"gain": gain}
+    return {"gain": gain, "erreur": erreur, "vrai": donne["vrai"], "vraie": QUESTIONS[c.mot]["vraie"],
+            "source": QUESTIONS[c.mot].get("source")}
 
 
 class Contestation(BaseModel):

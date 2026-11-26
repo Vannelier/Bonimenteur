@@ -14,7 +14,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 | Fichier | Contenu |
 |---|---|
 | `app/pseudos.py` | Filtre des pseudos, copie exacte de Vocabulium (`tests/test_copies.py`) : ne pas l'éditer ici. Appliqué aussi aux textes des faux. |
-| `app/main.py` | Serveur : page, API (`/api/moi`, `/api/etat` (avec les classements de la semaine, experts `_experts` et faussaires `_piegeurs`, et la jauge des joueurs, `_communaute`), `/api/pieges`, `/api/choix`, `/api/contestations`, `/api/signalements`, `/api/pseudo`, `/api/actes` (gestes du faussaire sur son étal, `_situation`, `_places`), `/api/defis` (défi par lien ; `/api/etat?defi=CODE` ne renvoie que ce défi)), SQLite. Identité par cookie HttpOnly posé par le serveur ; auteur d'un faux, gain d'un duel, prix et solde décidés ici. |
+| `app/main.py` | Serveur : page, API (`/api/moi`, `/api/etat` (avec les classements de la semaine, experts `_experts` et faussaires `_piegeurs`, et la jauge des joueurs, `_communaute`), `/api/pieges`, `/api/donne` (duel distribué, ordre gardé dans `donnes`), `/api/choix` (jugé ici), `/api/contestations`, `/api/signalements`, `/api/pseudo`, `/api/actes` (gestes du faussaire sur son étal, `_situation`, `_places`), `/api/defis` (défi par lien ; `/api/etat?defi=CODE` ne renvoie que ce défi)), SQLite. Identité par cookie HttpOnly posé par le serveur ; auteur d'un faux, gain d'un duel, prix et solde décidés ici. |
 | `prototype/serveur.js` | Interface `window.claude` (collection, doc, user) branchée sur l'API, relue toutes les 20 s et après chaque écriture ; passe à la page les compteurs par faux du serveur (`window.__statsServeur`). |
 | `prototype/index.html` | Le jeu : accueil (canevas des trois autres jeux, les deux podiums de la semaine côte à côte, experts et faussaires, trois places chacun, `majAccueil`, `PODIUM`), classements complets en deux onglets (`ecranClassement`), duels, atelier (Contrefaire : les lots authentifiés seulement, tamponnés « Authentifié » ; Sur le marché : étal, éditions, ranger, rééditer, retoucher, `acte` ; tout bouton d'achat hors de portée est grisé, `.bouton:disabled`), arbitre, bilan. Réglages en tête du script (`TOTAL`, `PRIX_PIEGE`, `PRIX_DIRECT`, `ECUS_DEPART`, `PVQN_VUS`, `CONTEST_MIN`, `EXEMPLAIRES`, `ETAL`, `ETAL_MAX`, `PRIX_REEDITION`, `PRIX_RETOUCHE`, `PRIX_PLACE`, `FAMILLES` et leurs seuils). |
 | `prototype/proches/` | Données de l'arbitre du sens, générées par `tools/proches.py` : `index.json` (mots vides) et 32 paquets `p<k>.json`, chargés par la page à la demande (`listeProches`). Ne pas éditer. |
@@ -33,7 +33,7 @@ branchée sur l'API. Sur claude.ai, `serveur.js` ne fait rien.
 
 ```
 pip install -r requirements-dev.txt
-python -m pytest -q                                    # 23 tests, ~6 s
+python -m pytest -q                                    # 24 tests, ~6 s
 uvicorn app.main:app --reload                          # http://127.0.0.1:8000
 VOCABULIUM_DIR=../Vocabulium python tools/proches.py   # après un ajout de question
 ```
@@ -55,9 +55,10 @@ CI : `.github/workflows/tests.yml` lance `pytest -q` sur chaque PR.
   dire en quoi. Une question tentée ne lui est plus posée.
 - Un faux par joueur et par question ; une question où le joueur a un faux ne
   lui est pas posée.
-- Le score et les écus se calculent sur les choix enregistrés. Limite connue :
-  la page reçoit les vraies réponses et déclare elle-même si le joueur s'est
-  trompé (`erreur`) ; le serveur ne peut pas encore le vérifier (`docs/audit.md`).
+- Sur le site, le serveur distribue et juge le duel (`/api/donne`, `/api/choix` avec `k`) ;
+  la page ne reçoit ni la vraie ni le texte des faux d'autrui d'une question non jouée
+  (`_questions_vues_par`, `_faux_vus_par`). Sur l'artifact claude.ai, sans serveur, la page
+  juge encore elle-même (`docs/audit.md`, « Le duel côté serveur »).
 - Étal (`docs/conception.md`, « Édition et étal ») : un faux neuf, une remise en vente ou une
   réédition exigent une place libre ; le serveur refuse sinon (423). Actes en ajout seul.
 - On ne contrefait que les pièces authentifiées (lot où le joueur a trouvé la vraie) ;
