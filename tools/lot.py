@@ -191,7 +191,10 @@ def controler(lot: dict, questions: dict, faux: list):
                 if not (t[:1].isupper() and t.endswith(".")):
                     erreurs.append(f"{qid} : « {t} » : majuscule et point final")
         if fam in ("definition", "metier") and q.get("source", "").startswith("wiktionary:"):
-            notes.append(f"{qid:22} vraie : {q['vraie']}\n{'':22} wikt. : {premiere_definition(q['source'].split(':', 1)[1]) or 'PAGE ABSENTE'}")
+            definition = premiere_definition(q['source'].split(':', 1)[1])
+            if not definition:
+                erreurs.append(f"{qid} : page {q['source']} absente ou sans section française")
+            notes.append(f"{qid:22} vraie : {q['vraie']}\n{'':22} wikt. : {definition or 'PAGE ABSENTE'}")
         # La vraie ne doit pas se trahir par sa longueur (escarbille, lot 01 : 82 signes contre 40).
         moy = sum(len(f) for f in fx) / max(len(fx), 1)
         if fam != "commune" and moy and not 0.7 <= len(q["vraie"]) / moy <= 1.35:

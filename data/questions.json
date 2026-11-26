@@ -3190,5 +3190,169 @@
   "question": "En italien, « être en jambe » veut dire…",
   "source": "wiktionary-en:in gamba",
   "vraie": "Être doué, capable, débrouillard."
+ },
+ "lormier": {
+  "mot": "lormier",
+  "type": "metier",
+  "source": "wiktionary:lormier",
+  "vraie": "Artisan qui fabriquait mors, éperons et boucles de harnais."
+ },
+ "fourbisseur": {
+  "mot": "fourbisseur",
+  "type": "metier",
+  "source": "wiktionary:fourbisseur",
+  "vraie": "Artisan qui polissait et montait les épées."
+ },
+ "heaumier": {
+  "mot": "heaumier",
+  "type": "metier",
+  "source": "wiktionary:heaumier",
+  "vraie": "Artisan qui forgeait les casques des chevaliers."
+ },
+ "taillandier": {
+  "mot": "taillandier",
+  "type": "metier",
+  "source": "wiktionary:taillandier",
+  "vraie": "Artisan qui forgeait des outils tranchants."
+ },
+ "chasublier": {
+  "mot": "chasublier",
+  "type": "metier",
+  "source": "wiktionary:chasublier",
+  "vraie": "Artisan qui confectionnait les vêtements des prêtres."
+ },
+ "gainier": {
+  "mot": "gainier",
+  "type": "metier",
+  "source": "wiktionary:gainier",
+  "vraie": "Artisan qui fabriquait des étuis et des fourreaux."
+ },
+ "cirier": {
+  "mot": "cirier",
+  "type": "metier",
+  "source": "wiktionary:cirier",
+  "vraie": "Artisan qui travaillait la cire et fabriquait les bougies."
+ },
+ "fustier": {
+  "mot": "fustier",
+  "type": "metier",
+  "source": "wiktionary:fustier",
+  "vraie": "Charpentier, artisan qui travaillait le bois."
+ },
+ "trefileur": {
+  "mot": "tréfileur",
+  "type": "metier",
+  "source": "wiktionary:tréfileur",
+  "vraie": "Ouvrier qui étirait le métal pour en faire du fil."
+ },
+ "corroyeur": {
+  "mot": "corroyeur",
+  "type": "metier",
+  "source": "wiktionary:corroyeur",
+  "vraie": "Ouvrier qui apprêtait le cuir après le tannage."
+ },
+ "foulon": {
+  "mot": "foulon",
+  "type": "metier",
+  "source": "wiktionary:foulon",
+  "vraie": "Ouvrier qui foulait les draps pour les resserrer."
+ },
+ "pelletier": {
+  "mot": "pelletier",
+  "type": "metier",
+  "source": "wiktionary:pelletier",
+  "vraie": "Artisan qui préparait et vendait les fourrures."
+ },
+ "decrotteur": {
+  "mot": "décrotteur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:décrotteur",
+  "vraie": "Souliers boueux ? Brossés et cirés sur le trottoir, en un clin d'œil !"
+ },
+ "etameur": {
+  "mot": "étameur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:étameur",
+  "vraie": "Casseroles et chaudrons usés ? Je les recouvre d'étain, comme neufs !"
+ },
+ "matelassier": {
+  "mot": "matelassier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:matelassier",
+  "vraie": "Vos matelas défaits, cardés et recousus dans votre cour !"
+ },
+ "savetier": {
+  "mot": "savetier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:savetier",
+  "vraie": "Vieux souliers ressemelés et rapiécés, pour quelques sous !"
+ },
+ "boueur": {
+  "mot": "boueur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:boueur",
+  "vraie": "Rues sales ? Je ramasse les boues et les ordures chaque matin !"
+ },
+ "gadouard": {
+  "mot": "gadouard",
+  "type": "metier",
+  "ouvrage": "carte",
+  "registre": "familier",
+  "source": "wiktionary:gadouard",
+  "vraie": "Fosses d'aisance vidées de nuit, sans gêner le voisinage !"
+ },
+ "gagne-denier": {
+  "mot": "gagne-denier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:gagne-denier",
+  "vraie": "Commissions et courses en ville, payées à la tâche, à votre service !"
+ },
+ "limonadier": {
+  "mot": "limonadier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:limonadier",
+  "vraie": "Café, liqueurs et billard : entrez donc, la salle est chauffée !"
+ },
+ "etuviste": {
+  "mot": "étuviste",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:étuviste",
+  "vraie": "Bains chauds et étuves : décrassage complet, barbe en sus !"
+ },
+ "gargotier": {
+  "mot": "gargotier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:gargotier",
+  "vraie": "Soupe, ragoût et pain pour trois sous, servis à toute heure !"
+ },
+ "chaussetier": {
+  "mot": "chaussetier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:chaussetier",
+  "vraie": "Bas et chausses de laine taillés à vos mesures !"
+ },
+ "vielleux": {
+  "mot": "vielleux",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:vielleux",
+  "vraie": "Bourrées et chansons à la vielle, pour vos noces et vos fêtes !"
+ },
+ "oiselier": {
+  "mot": "oiselier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:oiselier",
+  "vraie": "Serins, pinsons et rossignols en cage, chanteurs garantis !"
  }
 }

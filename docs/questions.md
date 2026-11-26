@@ -193,6 +193,11 @@ répond 429 à urllib).
   slampadato, Handschuhschneeballwerfer, « sortir la vache de la glace »,
   « payer le canard » (portugais). « Prozvonit » raccourci : 560 px à
   375 × 553, 539 ensuite.
+- Lot 09 : 25 métiers (12 livrets, 13 cartes). Haubergier et calendreur sans
+  page (l'outil bloque désormais une page absente) : remplacés par taillandier
+  et pelletier. Fourbisseur : mot-clé « armes » (premier sens : nettoyage
+  d'une maison). Gagne-denier : commissions, pas portage (Wiktionnaire). Huit
+  faux trop proches pour l'arbitre, réécrits.
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux
