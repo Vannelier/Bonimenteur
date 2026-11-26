@@ -183,6 +183,11 @@ répond 429 à urllib).
   Thaïlande). Écartée faute de source dans la page : les balais cachés de
   Noël en Norvège. Polterabend : « porcelaine », le mot de la page. Question
   de la tourbière raccourcie (551 px à 375 × 553, 509 ensuite).
+- Lot 07 : 20 communes, 19 définitions. Noms officiels : « Petosse » (sans
+  accent), « Les Cent-Acres ». « Sûre », faux de Sauve, est une vraie
+  commune : remplacé. Béjaune : le premier sens est un jeune oiseau, le faux
+  « oiseau des marais » écarté. Bibine et béjaune : mot-clé exigé, le sens
+  retenu n'étant pas le premier de la page.
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux

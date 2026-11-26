@@ -5788,5 +5788,590 @@
   "id": "t-k-tomatina-3",
   "mot": "k-tomatina",
   "texte": "grimpent à un mât savonné de lard"
+ },
+ {
+  "id": "t-c-petosse-1",
+  "mot": "c-petosse",
+  "texte": "Pétarde"
+ },
+ {
+  "id": "t-c-petosse-2",
+  "mot": "c-petosse",
+  "texte": "Prouteville"
+ },
+ {
+  "id": "t-c-petosse-3",
+  "mot": "c-petosse",
+  "texte": "Ventoux-le-Bas"
+ },
+ {
+  "id": "t-c-laboule-1",
+  "mot": "c-laboule",
+  "texte": "Laquille"
+ },
+ {
+  "id": "t-c-laboule-2",
+  "mot": "c-laboule",
+  "texte": "Labille"
+ },
+ {
+  "id": "t-c-laboule-3",
+  "mot": "c-laboule",
+  "texte": "Lecochonnet"
+ },
+ {
+  "id": "t-c-mamirolle-1",
+  "mot": "c-mamirolle",
+  "texte": "Papirolle"
+ },
+ {
+  "id": "t-c-mamirolle-2",
+  "mot": "c-mamirolle",
+  "texte": "Mamiette"
+ },
+ {
+  "id": "t-c-mamirolle-3",
+  "mot": "c-mamirolle",
+  "texte": "Grand-Mérolle"
+ },
+ {
+  "id": "t-c-quarante-1",
+  "mot": "c-quarante",
+  "texte": "Trente-Deux"
+ },
+ {
+  "id": "t-c-quarante-2",
+  "mot": "c-quarante",
+  "texte": "Cinquante"
+ },
+ {
+  "id": "t-c-quarante-3",
+  "mot": "c-quarante",
+  "texte": "Soixante-Six"
+ },
+ {
+  "id": "t-c-les-cent-acres-1",
+  "mot": "c-les-cent-acres",
+  "texte": "Mille-Arpents"
+ },
+ {
+  "id": "t-c-les-cent-acres-2",
+  "mot": "c-les-cent-acres",
+  "texte": "Vingt-Hectares"
+ },
+ {
+  "id": "t-c-les-cent-acres-3",
+  "mot": "c-les-cent-acres",
+  "texte": "Deux-Cents-Perches"
+ },
+ {
+  "id": "t-c-deux-chaises-1",
+  "mot": "c-deux-chaises",
+  "texte": "Trois-Tabourets"
+ },
+ {
+  "id": "t-c-deux-chaises-2",
+  "mot": "c-deux-chaises",
+  "texte": "Quatre-Bancs"
+ },
+ {
+  "id": "t-c-deux-chaises-3",
+  "mot": "c-deux-chaises",
+  "texte": "Une-Table"
+ },
+ {
+  "id": "t-c-cinq-mars-la-pile-1",
+  "mot": "c-cinq-mars-la-pile",
+  "texte": "Six-Avril-la-Face"
+ },
+ {
+  "id": "t-c-cinq-mars-la-pile-2",
+  "mot": "c-cinq-mars-la-pile",
+  "texte": "Trois-Mai-la-Croix"
+ },
+ {
+  "id": "t-c-cinq-mars-la-pile-3",
+  "mot": "c-cinq-mars-la-pile",
+  "texte": "Sept-Juin-la-Pierre"
+ },
+ {
+  "id": "t-c-trois-puits-1",
+  "mot": "c-trois-puits",
+  "texte": "Quatre-Fontaines"
+ },
+ {
+  "id": "t-c-trois-puits-2",
+  "mot": "c-trois-puits",
+  "texte": "Deux-Sources"
+ },
+ {
+  "id": "t-c-trois-puits-3",
+  "mot": "c-trois-puits",
+  "texte": "Sept-Citernes"
+ },
+ {
+  "id": "t-c-septfonds-1",
+  "mot": "c-septfonds",
+  "texte": "Neuffonds"
+ },
+ {
+  "id": "t-c-septfonds-2",
+  "mot": "c-septfonds",
+  "texte": "Huitpuits"
+ },
+ {
+  "id": "t-c-septfonds-3",
+  "mot": "c-septfonds",
+  "texte": "Sixvallons"
+ },
+ {
+  "id": "t-c-bouzy-1",
+  "mot": "c-bouzy",
+  "texte": "Bulley"
+ },
+ {
+  "id": "t-c-bouzy-2",
+  "mot": "c-bouzy",
+  "texte": "Mousseux"
+ },
+ {
+  "id": "t-c-bouzy-3",
+  "mot": "c-bouzy",
+  "texte": "Pétillac"
+ },
+ {
+  "id": "t-c-saint-pompon-1",
+  "mot": "c-saint-pompon",
+  "texte": "Saint-Grelot"
+ },
+ {
+  "id": "t-c-saint-pompon-2",
+  "mot": "c-saint-pompon",
+  "texte": "Saint-Ruban"
+ },
+ {
+  "id": "t-c-saint-pompon-3",
+  "mot": "c-saint-pompon",
+  "texte": "Saint-Bouton"
+ },
+ {
+  "id": "t-c-champignol-lez-mondeville-1",
+  "mot": "c-champignol-lez-mondeville",
+  "texte": "Morillon-lez-Mondeville"
+ },
+ {
+  "id": "t-c-champignol-lez-mondeville-2",
+  "mot": "c-champignol-lez-mondeville",
+  "texte": "Truffignol-sur-Aube"
+ },
+ {
+  "id": "t-c-champignol-lez-mondeville-3",
+  "mot": "c-champignol-lez-mondeville",
+  "texte": "Cèpeville-lez-Bar"
+ },
+ {
+  "id": "t-c-silly-tillard-1",
+  "mot": "c-silly-tillard",
+  "texte": "Billy-Tirard"
+ },
+ {
+  "id": "t-c-silly-tillard-2",
+  "mot": "c-silly-tillard",
+  "texte": "Sotty-Benêt"
+ },
+ {
+  "id": "t-c-silly-tillard-3",
+  "mot": "c-silly-tillard",
+  "texte": "Niaisy-Bêtard"
+ },
+ {
+  "id": "t-c-lapoutroie-1",
+  "mot": "c-lapoutroie",
+  "texte": "Lapoutrelle"
+ },
+ {
+  "id": "t-c-lapoutroie-2",
+  "mot": "c-lapoutroie",
+  "texte": "Lachevronne"
+ },
+ {
+  "id": "t-c-lapoutroie-3",
+  "mot": "c-lapoutroie",
+  "texte": "Lasolive"
+ },
+ {
+  "id": "t-c-zuydcoote-1",
+  "mot": "c-zuydcoote",
+  "texte": "Noordcoote"
+ },
+ {
+  "id": "t-c-zuydcoote-2",
+  "mot": "c-zuydcoote",
+  "texte": "Zuydkerke"
+ },
+ {
+  "id": "t-c-zuydcoote-3",
+  "mot": "c-zuydcoote",
+  "texte": "Oostcappelle-Plage"
+ },
+ {
+  "id": "t-c-boeschepe-1",
+  "mot": "c-boeschepe",
+  "texte": "Boeskerque"
+ },
+ {
+  "id": "t-c-boeschepe-2",
+  "mot": "c-boeschepe",
+  "texte": "Hondsbrugge"
+ },
+ {
+  "id": "t-c-boeschepe-3",
+  "mot": "c-boeschepe",
+  "texte": "Wormhoutstede"
+ },
+ {
+  "id": "t-c-oye-plage-1",
+  "mot": "c-oye-plage",
+  "texte": "Canard-Plage"
+ },
+ {
+  "id": "t-c-oye-plage-2",
+  "mot": "c-oye-plage",
+  "texte": "Mouette-sur-Mer"
+ },
+ {
+  "id": "t-c-oye-plage-3",
+  "mot": "c-oye-plage",
+  "texte": "Goéland-les-Dunes"
+ },
+ {
+  "id": "t-c-cuisy-1",
+  "mot": "c-cuisy",
+  "texte": "Rôtissy"
+ },
+ {
+  "id": "t-c-cuisy-2",
+  "mot": "c-cuisy",
+  "texte": "Mijotey"
+ },
+ {
+  "id": "t-c-cuisy-3",
+  "mot": "c-cuisy",
+  "texte": "Fricassy"
+ },
+ {
+  "id": "t-c-sauve-1",
+  "mot": "c-sauve",
+  "texte": "Saine"
+ },
+ {
+  "id": "t-c-sauve-2",
+  "mot": "c-sauve",
+  "texte": "Garde"
+ },
+ {
+  "id": "t-c-sauve-3",
+  "mot": "c-sauve",
+  "texte": "Paisible"
+ },
+ {
+  "id": "t-c-seix-1",
+  "mot": "c-seix",
+  "texte": "Sept"
+ },
+ {
+  "id": "t-c-seix-2",
+  "mot": "c-seix",
+  "texte": "Huix"
+ },
+ {
+  "id": "t-c-seix-3",
+  "mot": "c-seix",
+  "texte": "Dix"
+ },
+ {
+  "id": "t-coquebin-1",
+  "mot": "coquebin",
+  "texte": "Petit pot de terre pour cuire l'œuf."
+ },
+ {
+  "id": "t-coquebin-2",
+  "mot": "coquebin",
+  "texte": "Coq nain des basses-cours flamandes."
+ },
+ {
+  "id": "t-coquebin-3",
+  "mot": "coquebin",
+  "texte": "Bonnet de laine des pêcheurs bretons."
+ },
+ {
+  "id": "t-galapiat-1",
+  "mot": "galapiat",
+  "texte": "Plat creux de faïence."
+ },
+ {
+  "id": "t-galapiat-2",
+  "mot": "galapiat",
+  "texte": "Petit galop d'un cheval."
+ },
+ {
+  "id": "t-galapiat-3",
+  "mot": "galapiat",
+  "texte": "Pâté de lièvre en croûte."
+ },
+ {
+  "id": "t-mamamouchi-1",
+  "mot": "mamamouchi",
+  "texte": "Poupée de chiffon que l'on offre aux nourrissons."
+ },
+ {
+  "id": "t-mamamouchi-2",
+  "mot": "mamamouchi",
+  "texte": "Moustique des marais qui pique surtout la nuit."
+ },
+ {
+  "id": "t-mamamouchi-3",
+  "mot": "mamamouchi",
+  "texte": "Pâtisserie turque au miel et aux pistaches."
+ },
+ {
+  "id": "t-mirliflore-1",
+  "mot": "mirliflore",
+  "texte": "Petite fleur sauvage des talus."
+ },
+ {
+  "id": "t-mirliflore-2",
+  "mot": "mirliflore",
+  "texte": "Miroir de poche à manche fleuri."
+ },
+ {
+  "id": "t-mirliflore-3",
+  "mot": "mirliflore",
+  "texte": "Air de flûte joué aux mariages."
+ },
+ {
+  "id": "t-rodomont-1",
+  "mot": "rodomont",
+  "texte": "Rocher arrondi au sommet d'un mont."
+ },
+ {
+  "id": "t-rodomont-2",
+  "mot": "rodomont",
+  "texte": "Rôdeur qui détrousse les voyageurs."
+ },
+ {
+  "id": "t-rodomont-3",
+  "mot": "rodomont",
+  "texte": "Coussin rond d'une chaise de prière."
+ },
+ {
+  "id": "t-fesse-mathieu-1",
+  "mot": "fesse-mathieu",
+  "texte": "Maître d'école qui punit à coups de règle."
+ },
+ {
+  "id": "t-fesse-mathieu-2",
+  "mot": "fesse-mathieu",
+  "texte": "Moine bavard qui récite l'Évangile à voix haute."
+ },
+ {
+  "id": "t-fesse-mathieu-3",
+  "mot": "fesse-mathieu",
+  "texte": "Valet de ferme chargé de mener les cochons."
+ },
+ {
+  "id": "t-pince-maille-1",
+  "mot": "pince-maille",
+  "texte": "Outil de tricoteuse pour rattraper un point."
+ },
+ {
+  "id": "t-pince-maille-2",
+  "mot": "pince-maille",
+  "texte": "Petit crabe des côtes vendéennes."
+ },
+ {
+  "id": "t-pince-maille-3",
+  "mot": "pince-maille",
+  "texte": "Barrette pour retenir les cheveux fins."
+ },
+ {
+  "id": "t-tranche-montagne-1",
+  "mot": "tranche-montagne",
+  "texte": "Grand couteau des bergers pour couper le fromage."
+ },
+ {
+  "id": "t-tranche-montagne-2",
+  "mot": "tranche-montagne",
+  "texte": "Ouvrier qui perçait les tunnels à la poudre."
+ },
+ {
+  "id": "t-tranche-montagne-3",
+  "mot": "tranche-montagne",
+  "texte": "Gâteau de Savoie fourré à la crème de marrons."
+ },
+ {
+  "id": "t-vide-gousset-1",
+  "mot": "vide-gousset",
+  "texte": "Petite pince à écosser les pois."
+ },
+ {
+  "id": "t-vide-gousset-2",
+  "mot": "vide-gousset",
+  "texte": "Usurier qui prête à la semaine."
+ },
+ {
+  "id": "t-vide-gousset-3",
+  "mot": "vide-gousset",
+  "texte": "Domestique qui vide les pots."
+ },
+ {
+  "id": "t-tire-laine-1",
+  "mot": "tire-laine",
+  "texte": "Ouvrier qui cardait la laine des moutons."
+ },
+ {
+  "id": "t-tire-laine-2",
+  "mot": "tire-laine",
+  "texte": "Peigne de fer pour démêler les toisons."
+ },
+ {
+  "id": "t-tire-laine-3",
+  "mot": "tire-laine",
+  "texte": "Marchand de chaussettes sur les foires."
+ },
+ {
+  "id": "t-boit-sans-soif-1",
+  "mot": "boit-sans-soif",
+  "texte": "Plante grasse qui vit sans eau."
+ },
+ {
+  "id": "t-boit-sans-soif-2",
+  "mot": "boit-sans-soif",
+  "texte": "Petit verre à liqueur en étain."
+ },
+ {
+  "id": "t-boit-sans-soif-3",
+  "mot": "boit-sans-soif",
+  "texte": "Cheval qui refuse l'abreuvoir."
+ },
+ {
+  "id": "t-ostrogoth-1",
+  "mot": "ostrogoth",
+  "texte": "Grand coquillage plat de l'Atlantique."
+ },
+ {
+  "id": "t-ostrogoth-2",
+  "mot": "ostrogoth",
+  "texte": "Ancien jeu de dés des soldats suisses."
+ },
+ {
+  "id": "t-ostrogoth-3",
+  "mot": "ostrogoth",
+  "texte": "Cormoran des rochers de la Baltique."
+ },
+ {
+  "id": "t-frichti-1",
+  "mot": "frichti",
+  "texte": "Petit frisson qui vous prend le soir."
+ },
+ {
+  "id": "t-frichti-2",
+  "mot": "frichti",
+  "texte": "Tas de feuilles mortes dans un fossé."
+ },
+ {
+  "id": "t-frichti-3",
+  "mot": "frichti",
+  "texte": "Chiffon pour cirer les chaussures."
+ },
+ {
+  "id": "t-bectance-1",
+  "mot": "bectance",
+  "texte": "Querelle d'oiseaux au nid."
+ },
+ {
+  "id": "t-bectance-2",
+  "mot": "bectance",
+  "texte": "Moquerie lancée en passant."
+ },
+ {
+  "id": "t-bectance-3",
+  "mot": "bectance",
+  "texte": "Visite chez le dentiste."
+ },
+ {
+  "id": "t-bibine-1",
+  "mot": "bibine",
+  "texte": "Petite bibliothèque de chambre d'enfant."
+ },
+ {
+  "id": "t-bibine-2",
+  "mot": "bibine",
+  "texte": "Poupée de chiffon que les fillettes cousent."
+ },
+ {
+  "id": "t-bibine-3",
+  "mot": "bibine",
+  "texte": "Bonnet de nuit en dentelle des grands-mères."
+ },
+ {
+  "id": "t-picrate-1",
+  "mot": "picrate",
+  "texte": "Petit pic de montagne."
+ },
+ {
+  "id": "t-picrate-2",
+  "mot": "picrate",
+  "texte": "Pirate d'eau douce."
+ },
+ {
+  "id": "t-picrate-3",
+  "mot": "picrate",
+  "texte": "Rat des greniers à blé."
+ },
+ {
+  "id": "t-trublion-1",
+  "mot": "trublion",
+  "texte": "Petit pain brioché fourré de pralines."
+ },
+ {
+  "id": "t-trublion-2",
+  "mot": "trublion",
+  "texte": "Trompette de cuivre des fanfares rurales."
+ },
+ {
+  "id": "t-trublion-3",
+  "mot": "trublion",
+  "texte": "Champignon noir qui pousse sous les chênes."
+ },
+ {
+  "id": "t-bejaune-1",
+  "mot": "bejaune",
+  "texte": "Coiffe jaune des dentellières du Puy."
+ },
+ {
+  "id": "t-bejaune-2",
+  "mot": "bejaune",
+  "texte": "Fromage de chèvre roulé au safran."
+ },
+ {
+  "id": "t-bejaune-3",
+  "mot": "bejaune",
+  "texte": "Pièce d'or frappée sous Henri IV."
+ },
+ {
+  "id": "t-rata-1",
+  "mot": "rata",
+  "texte": "Petit rat des champs, tout gris."
+ },
+ {
+  "id": "t-rata-2",
+  "mot": "rata",
+  "texte": "Rangée de vignes au bord du chemin."
+ },
+ {
+  "id": "t-rata-3",
+  "mot": "rata",
+  "texte": "Coup manqué au jeu de quilles."
  }
 ]

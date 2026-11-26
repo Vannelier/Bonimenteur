@@ -2752,5 +2752,268 @@
   "source": "wikipedia:Tomatina",
   "question": "Ici, chaque dernier mercredi d'août, des milliers de gens ___.",
   "vraie": "se lancent des tonnes de tomates mûres"
+ },
+ "c-petosse": {
+  "mot": "",
+  "question": "Quel nom de commune de la Vendée existe réellement ?",
+  "type": "commune",
+  "vraie": "Petosse",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-laboule": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Ardèche existe réellement ?",
+  "type": "commune",
+  "vraie": "Laboule",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-mamirolle": {
+  "mot": "",
+  "question": "Quel nom de commune du Doubs existe réellement ?",
+  "type": "commune",
+  "vraie": "Mamirolle",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-quarante": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Hérault existe réellement ?",
+  "type": "commune",
+  "vraie": "Quarante",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-les-cent-acres": {
+  "mot": "",
+  "question": "Quel nom de commune de la Seine-Maritime existe réellement ?",
+  "type": "commune",
+  "vraie": "Les Cent-Acres",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-deux-chaises": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Allier existe réellement ?",
+  "type": "commune",
+  "vraie": "Deux-Chaises",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cinq-mars-la-pile": {
+  "mot": "",
+  "question": "Quel nom de commune d'Indre-et-Loire existe réellement ?",
+  "type": "commune",
+  "vraie": "Cinq-Mars-la-Pile",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-trois-puits": {
+  "mot": "",
+  "question": "Quel nom de commune de la Marne existe réellement ?",
+  "type": "commune",
+  "vraie": "Trois-Puits",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-septfonds": {
+  "mot": "",
+  "question": "Quel nom de commune de Tarn-et-Garonne existe réellement ?",
+  "type": "commune",
+  "vraie": "Septfonds",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-bouzy": {
+  "mot": "",
+  "question": "Quel nom de commune de la Marne existe réellement ?",
+  "type": "commune",
+  "vraie": "Bouzy",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-saint-pompon": {
+  "mot": "",
+  "question": "Quel nom de commune de la Dordogne existe réellement ?",
+  "type": "commune",
+  "vraie": "Saint-Pompon",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-champignol-lez-mondeville": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Aube existe réellement ?",
+  "type": "commune",
+  "vraie": "Champignol-lez-Mondeville",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-silly-tillard": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Oise existe réellement ?",
+  "type": "commune",
+  "vraie": "Silly-Tillard",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-lapoutroie": {
+  "mot": "",
+  "question": "Quel nom de commune du Haut-Rhin existe réellement ?",
+  "type": "commune",
+  "vraie": "Lapoutroie",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-zuydcoote": {
+  "mot": "",
+  "question": "Quel nom de commune du Nord existe réellement ?",
+  "type": "commune",
+  "vraie": "Zuydcoote",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-boeschepe": {
+  "mot": "",
+  "question": "Quel nom de commune du Nord existe réellement ?",
+  "type": "commune",
+  "vraie": "Boeschepe",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-oye-plage": {
+  "mot": "",
+  "question": "Quel nom de commune du Pas-de-Calais existe réellement ?",
+  "type": "commune",
+  "vraie": "Oye-Plage",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-cuisy": {
+  "mot": "",
+  "question": "Quel nom de commune de Seine-et-Marne existe réellement ?",
+  "type": "commune",
+  "vraie": "Cuisy",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-sauve": {
+  "mot": "",
+  "question": "Quel nom de commune du Gard existe réellement ?",
+  "type": "commune",
+  "vraie": "Sauve",
+  "source": "geo.api.gouv.fr"
+ },
+ "c-seix": {
+  "mot": "",
+  "question": "Quel nom de commune de l'Ariège existe réellement ?",
+  "type": "commune",
+  "vraie": "Seix",
+  "source": "geo.api.gouv.fr"
+ },
+ "coquebin": {
+  "mot": "coquebin",
+  "vraie": "Jeune homme niais, sans expérience.",
+  "categorie": "n. m.",
+  "source": "wiktionary:coquebin"
+ },
+ "galapiat": {
+  "mot": "galapiat",
+  "vraie": "Vaurien, homme sans valeur.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:galapiat"
+ },
+ "mamamouchi": {
+  "mot": "mamamouchi",
+  "vraie": "Dignitaire de pacotille, qui se donne de grands airs.",
+  "categorie": "n. m.",
+  "source": "wiktionary:mamamouchi"
+ },
+ "mirliflore": {
+  "mot": "mirliflore",
+  "vraie": "Jeune élégant, fat et prétentieux.",
+  "categorie": "n. m.",
+  "source": "wiktionary:mirliflore"
+ },
+ "rodomont": {
+  "mot": "rodomont",
+  "vraie": "Fanfaron, vantard qui fait le brave.",
+  "categorie": "n. m.",
+  "source": "wiktionary:rodomont"
+ },
+ "fesse-mathieu": {
+  "mot": "fesse-mathieu",
+  "vraie": "Usurier, avare qui prête à gros intérêts.",
+  "categorie": "n. m.",
+  "source": "wiktionary:fesse-mathieu"
+ },
+ "pince-maille": {
+  "mot": "pince-maille",
+  "vraie": "Avare, qui regarde au moindre sou.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:pince-maille"
+ },
+ "tranche-montagne": {
+  "mot": "tranche-montagne",
+  "vraie": "Fanfaron qui se vante d'exploits imaginaires.",
+  "categorie": "n. m.",
+  "source": "wiktionary:tranche-montagne"
+ },
+ "vide-gousset": {
+  "mot": "vide-gousset",
+  "vraie": "Voleur qui fait les poches.",
+  "categorie": "n. m.",
+  "source": "wiktionary:vide-gousset"
+ },
+ "tire-laine": {
+  "mot": "tire-laine",
+  "vraie": "Voleur qui détroussait les passants la nuit.",
+  "categorie": "n. m.",
+  "source": "wiktionary:tire-laine"
+ },
+ "boit-sans-soif": {
+  "mot": "boit-sans-soif",
+  "vraie": "Ivrogne, qui boit sans arrêt.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:boit-sans-soif"
+ },
+ "ostrogoth": {
+  "mot": "ostrogoth",
+  "vraie": "Homme grossier, qui ignore les usages.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:ostrogoth"
+ },
+ "frichti": {
+  "mot": "frichti",
+  "vraie": "Repas préparé simplement, petit plat.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:frichti"
+ },
+ "bectance": {
+  "mot": "bectance",
+  "vraie": "Nourriture, ce qu'on mange.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:bectance"
+ },
+ "bibine": {
+  "mot": "bibine",
+  "vraie": "Boisson de mauvaise qualité, surtout la bière.",
+  "categorie": "n. f.",
+  "registre": "familier",
+  "source": "wiktionary:bibine"
+ },
+ "picrate": {
+  "mot": "picrate",
+  "vraie": "Vin de mauvaise qualité.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:picrate"
+ },
+ "trublion": {
+  "mot": "trublion",
+  "vraie": "Personne qui sème le désordre, agitateur.",
+  "categorie": "n. m.",
+  "source": "wiktionary:trublion"
+ },
+ "bejaune": {
+  "mot": "béjaune",
+  "vraie": "Jeune homme sot et sans expérience.",
+  "categorie": "n. m.",
+  "source": "wiktionary:béjaune"
+ },
+ "rata": {
+  "mot": "rata",
+  "vraie": "Ragoût grossier, servi à la caserne.",
+  "categorie": "n. m.",
+  "registre": "familier",
+  "source": "wiktionary:rata"
  }
 }
