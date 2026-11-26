@@ -80,8 +80,13 @@ def lire(url: str, fichier: Path) -> str:
     à curl (relevé du 26/11/2026)."""
     if fichier.exists():
         return fichier.read_text()
-    for essai in range(4):
-        r = subprocess.run(["curl", "-s", "-A", AGENT, "-w", "\n%{http_code}", url], capture_output=True, text=True, timeout=30)
+    for essai in range(6):
+        try:   # geo.api.gouv.fr coupe parfois la connexion ou ne répond pas : on relance
+            r = subprocess.run(["curl", "-s", "--max-time", "20", "-A", AGENT, "-w", "\n%{http_code}", url],
+                               capture_output=True, text=True, timeout=30)
+        except subprocess.TimeoutExpired:
+            time.sleep(2 * (essai + 1))
+            continue
         corps, _, code = r.stdout.rpartition("\n")
         if code == "200":
             fichier.parent.mkdir(parents=True, exist_ok=True)
