@@ -198,6 +198,12 @@ répond 429 à urllib).
   et pelletier. Fourbisseur : mot-clé « armes » (premier sens : nettoyage
   d'une maison). Gagne-denier : commissions, pas portage (Wiktionnaire). Huit
   faux trop proches pour l'arbitre, réécrits.
+- Lot 10 : 24 anecdotes (marques et leurs débuts, origines de mots, animaux,
+  monuments). Sources reprises en anglais quand la page française ne portait
+  pas le fait (Tour de France 1904, Kaldi). Écartée en cours : aucune.
+  `tools/lot.py` vérifie maintenant la forme des anecdotes, coutumes et photos
+  (pas de majuscule, pas de point) : la Marseillaise commençait par
+  « Strasbourg ». Bas des pièces à 543 px au plus à 375 × 553.
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux

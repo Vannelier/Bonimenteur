@@ -7123,5 +7123,365 @@
   "id": "t-oiselier-3",
   "mot": "oiselier",
   "texte": "Toupies et bilboquets sculptés pour vos petits enfants !"
+ },
+ {
+  "id": "t-a-stubby-1",
+  "mot": "a-stubby",
+  "texte": "mascotte d'un cuirassé"
+ },
+ {
+  "id": "t-a-stubby-2",
+  "mot": "a-stubby",
+  "texte": "messager du général"
+ },
+ {
+  "id": "t-a-stubby-3",
+  "mot": "a-stubby",
+  "texte": "gardien d'un hôpital"
+ },
+ {
+  "id": "t-a-tour1904-1",
+  "mot": "a-tour1904",
+  "texte": "dormi dans une auberge"
+ },
+ {
+  "id": "t-a-tour1904-2",
+  "mot": "a-tour1904",
+  "texte": "troqué leur vélo en route"
+ },
+ {
+  "id": "t-a-tour1904-3",
+  "mot": "a-tour1904",
+  "texte": "bu du vin à chaque village"
+ },
+ {
+  "id": "t-a-lorz-1",
+  "mot": "a-lorz",
+  "texte": "couru pieds nus sur tout le parcours"
+ },
+ {
+  "id": "t-a-lorz-2",
+  "mot": "a-lorz",
+  "texte": "coupé à travers les champs de maïs"
+ },
+ {
+  "id": "t-a-lorz-3",
+  "mot": "a-lorz",
+  "texte": "bu du champagne au ravitaillement"
+ },
+ {
+  "id": "t-a-kaldi-1",
+  "mot": "a-kaldi",
+  "texte": "une odeur de grillé après un incendie"
+ },
+ {
+  "id": "t-a-kaldi-2",
+  "mot": "a-kaldi",
+  "texte": "des oiseaux qui chantaient toute la nuit"
+ },
+ {
+  "id": "t-a-kaldi-3",
+  "mot": "a-kaldi",
+  "texte": "des moines qui ne dormaient plus jamais"
+ },
+ {
+  "id": "t-a-cherami-1",
+  "mot": "a-cherami",
+  "texte": "un chien sanitaire"
+ },
+ {
+  "id": "t-a-cherami-2",
+  "mot": "a-cherami",
+  "texte": "un cheval de trait"
+ },
+ {
+  "id": "t-a-cherami-3",
+  "mot": "a-cherami",
+  "texte": "un âne de montagne"
+ },
+ {
+  "id": "t-a-peugeot-1",
+  "mot": "a-peugeot",
+  "texte": "ses montres de gousset"
+ },
+ {
+  "id": "t-a-peugeot-2",
+  "mot": "a-peugeot",
+  "texte": "ses bicyclettes de course"
+ },
+ {
+  "id": "t-a-peugeot-3",
+  "mot": "a-peugeot",
+  "texte": "ses fourneaux de cuisine"
+ },
+ {
+  "id": "t-a-lamborghini-1",
+  "mot": "a-lamborghini",
+  "texte": "des bateaux de course"
+ },
+ {
+  "id": "t-a-lamborghini-2",
+  "mot": "a-lamborghini",
+  "texte": "des motos de livraison"
+ },
+ {
+  "id": "t-a-lamborghini-3",
+  "mot": "a-lamborghini",
+  "texte": "des machines à espresso"
+ },
+ {
+  "id": "t-a-nokia-1",
+  "mot": "a-nokia",
+  "texte": "des skis"
+ },
+ {
+  "id": "t-a-nokia-2",
+  "mot": "a-nokia",
+  "texte": "des radios"
+ },
+ {
+  "id": "t-a-nokia-3",
+  "mot": "a-nokia",
+  "texte": "des montres"
+ },
+ {
+  "id": "t-a-michelin-1",
+  "mot": "a-michelin",
+  "texte": "récompenser les auberges des bords de route"
+ },
+ {
+  "id": "t-a-michelin-2",
+  "mot": "a-michelin",
+  "texte": "aider les cochers à trouver leur chemin"
+ },
+ {
+  "id": "t-a-michelin-3",
+  "mot": "a-michelin",
+  "texte": "vendre des cartes routières aux touristes"
+ },
+ {
+  "id": "t-a-cocacola-1",
+  "mot": "a-cocacola",
+  "texte": "dans les saloons, comme alcool"
+ },
+ {
+  "id": "t-a-cocacola-2",
+  "mot": "a-cocacola",
+  "texte": "aux soldats, comme ration"
+ },
+ {
+  "id": "t-a-cocacola-3",
+  "mot": "a-cocacola",
+  "texte": "dans les églises, le dimanche"
+ },
+ {
+  "id": "t-a-lego-1",
+  "mot": "a-lego",
+  "texte": "« petite brique »"
+ },
+ {
+  "id": "t-a-lego-2",
+  "mot": "a-lego",
+  "texte": "« construis vite »"
+ },
+ {
+  "id": "t-a-lego-3",
+  "mot": "a-lego",
+  "texte": "« boîte à jouets »"
+ },
+ {
+  "id": "t-a-vaccin-1",
+  "mot": "a-vaccin",
+  "texte": "le vide"
+ },
+ {
+  "id": "t-a-vaccin-2",
+  "mot": "a-vaccin",
+  "texte": "la veine"
+ },
+ {
+  "id": "t-a-vaccin-3",
+  "mot": "a-vaccin",
+  "texte": "le vent"
+ },
+ {
+  "id": "t-a-muscle-1",
+  "mot": "a-muscle",
+  "texte": "« petite corde »"
+ },
+ {
+  "id": "t-a-muscle-2",
+  "mot": "a-muscle",
+  "texte": "« force du bras »"
+ },
+ {
+  "id": "t-a-muscle-3",
+  "mot": "a-muscle",
+  "texte": "« chair ferme »"
+ },
+ {
+  "id": "t-a-pise-1",
+  "mot": "a-pise",
+  "texte": "après un tremblement de terre"
+ },
+ {
+  "id": "t-a-pise-2",
+  "mot": "a-pise",
+  "texte": "lors d'une crue de l'Arno"
+ },
+ {
+  "id": "t-a-pise-3",
+  "mot": "a-pise",
+  "texte": "quand on y installa les cloches"
+ },
+ {
+  "id": "t-a-cuivre-1",
+  "mot": "a-cuivre",
+  "texte": "peinte en blanc pur"
+ },
+ {
+  "id": "t-a-cuivre-2",
+  "mot": "a-cuivre",
+  "texte": "couverte de feuilles d'or"
+ },
+ {
+  "id": "t-a-cuivre-3",
+  "mot": "a-cuivre",
+  "texte": "grise comme la pierre"
+ },
+ {
+  "id": "t-a-hamster-1",
+  "mot": "a-hamster",
+  "texte": "d'un couple offert à la reine Victoria en 1850"
+ },
+ {
+  "id": "t-a-hamster-2",
+  "mot": "a-hamster",
+  "texte": "des hamsters élevés au jardin des plantes de Paris"
+ },
+ {
+  "id": "t-a-hamster-3",
+  "mot": "a-hamster",
+  "texte": "d'un élevage de fourreurs installé en Russie"
+ },
+ {
+  "id": "t-a-dauphin-1",
+  "mot": "a-dauphin",
+  "texte": "se laisse porter par un autre dauphin"
+ },
+ {
+  "id": "t-a-dauphin-2",
+  "mot": "a-dauphin",
+  "texte": "flotte sur le dos à la surface"
+ },
+ {
+  "id": "t-a-dauphin-3",
+  "mot": "a-dauphin",
+  "texte": "s'accroche aux algues avec ses dents"
+ },
+ {
+  "id": "t-a-eiffelradio-1",
+  "mot": "a-eiffelradio",
+  "texte": "à une pétition des Parisiens"
+ },
+ {
+  "id": "t-a-eiffelradio-2",
+  "mot": "a-eiffelradio",
+  "texte": "au prix trop élevé du démontage"
+ },
+ {
+  "id": "t-a-eiffelradio-3",
+  "mot": "a-eiffelradio",
+  "texte": "à la visite du tsar de Russie"
+ },
+ {
+  "id": "t-a-marseillaise-1",
+  "mot": "a-marseillaise",
+  "texte": "à Marseille, pour un banquet de soldats"
+ },
+ {
+  "id": "t-a-marseillaise-2",
+  "mot": "a-marseillaise",
+  "texte": "à Versailles, pour le mariage du roi"
+ },
+ {
+  "id": "t-a-marseillaise-3",
+  "mot": "a-marseillaise",
+  "texte": "à Lyon, pour une fête des canuts"
+ },
+ {
+  "id": "t-a-croissant-1",
+  "mot": "a-croissant",
+  "texte": "d'un pain des moines de la Champagne"
+ },
+ {
+  "id": "t-a-croissant-2",
+  "mot": "a-croissant",
+  "texte": "d'une galette turque au beurre de brebis"
+ },
+ {
+  "id": "t-a-croissant-3",
+  "mot": "a-croissant",
+  "texte": "d'une brioche servie à la cour de Versailles"
+ },
+ {
+  "id": "t-a-monopoly-1",
+  "mot": "a-monopoly",
+  "texte": "apprendre le calcul aux enfants"
+ },
+ {
+  "id": "t-a-monopoly-2",
+  "mot": "a-monopoly",
+  "texte": "distraire les soldats en caserne"
+ },
+ {
+  "id": "t-a-monopoly-3",
+  "mot": "a-monopoly",
+  "texte": "faire la publicité des chemins de fer"
+ },
+ {
+  "id": "t-a-candidat-1",
+  "mot": "a-candidat",
+  "texte": "une couronne de laurier"
+ },
+ {
+  "id": "t-a-candidat-2",
+  "mot": "a-candidat",
+  "texte": "un bâton d'ivoire"
+ },
+ {
+  "id": "t-a-candidat-3",
+  "mot": "a-candidat",
+  "texte": "des sandales rouges"
+ },
+ {
+  "id": "t-a-denim-1",
+  "mot": "a-denim",
+  "texte": "du nom d'un tailleur de Denver"
+ },
+ {
+  "id": "t-a-denim-2",
+  "mot": "a-denim",
+  "texte": "d'un mot hollandais pour « bleu »"
+ },
+ {
+  "id": "t-a-denim-3",
+  "mot": "a-denim",
+  "texte": "de « Dennis », un marin anglais"
+ },
+ {
+  "id": "t-a-guillotin-1",
+  "mot": "a-guillotin",
+  "texte": "fut l'un de ses premiers condamnés"
+ },
+ {
+  "id": "t-a-guillotin-2",
+  "mot": "a-guillotin",
+  "texte": "l'avait conçue pour couper le bois"
+ },
+ {
+  "id": "t-a-guillotin-3",
+  "mot": "a-guillotin",
+  "texte": "en tira une immense fortune"
  }
 ]

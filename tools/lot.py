@@ -182,6 +182,14 @@ def controler(lot: dict, questions: dict, faux: list):
             erreurs.append(f"{qid} : vraie réponse déjà en jeu")
         if len(fx) != 3 or len({plat(f) for f in fx} | {plat(q["vraie"])}) != 4:
             erreurs.append(f"{qid} : il faut trois faux distincts, et distincts de la vraie")
+        # Anecdote, coutume, photo : un bout de phrase, sans majuscule (sauf sigle) ; anecdote et
+        # coutume sans point final (test_donnees_coherentes).
+        if fam in ("anecdote", "coutume", "photo"):
+            for x in [q["vraie"], *fx]:
+                if x[:1].isupper() and not x[1:2].isupper():
+                    erreurs.append(f"{qid} : « {x} » : pas de majuscule au début")
+                if fam != "photo" and x.endswith("."):
+                    erreurs.append(f"{qid} : « {x} » : pas de point final")
         if fam != "commune" and not q.get("source"):
             erreurs.append(f"{qid} : pas de source")
         if fam == "definition":
