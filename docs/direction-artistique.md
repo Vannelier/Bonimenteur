@@ -124,6 +124,11 @@ sous-main (iOS remplit de noir le transparent). Une seule source, `tools/icones.
 `img/icon-192.png`, `img/icon-512.png`, `img/apple-touch-icon.png` (plein cadre),
 déclarés dans la page et dans `manifest.webmanifest`.
 
+Le masque AND des frames BMP porte la même transparence que l'alpha (26/11/2026).
+Un masque tout à zéro dit « tout opaque » : les décodeurs qui le suivent plutôt que
+l'alpha montraient le pourtour du sceau en noir, soit un carré noir derrière
+l'icône. Discoverium ne le voyait pas : son icône est un carré plein.
+
 ## Mise en vente
 
 Après « Mettre en vente » (25/11/2026, demande de l'auteur), la contrefaçon se
@@ -180,8 +185,11 @@ Même canevas que Discoverium, Snouff et Vocabulium (`CLAUDE.md` de Discoverium,
 « Accueil ») : décor, titre, « L'expert et le faussaire », explication sur deux lignes,
 « Expertiser » et « Atelier » côte à côte (25/11/2026, comme « Jouer » et
 « Multijoueur » de Snouff et Vocabulium ; Atelier en contour or, secondaire),
-« À l'honneur cette semaine » (l'expert et le faussaire de la semaine, une
-carte chacun, 25/11/2026), jauge des joueurs (pour qui
+« Podium de la semaine » (26/11/2026 : deux colonnes de parchemin à égalité,
+experts — filé vert, sceau — et faussaires — filé rouge, plume —, trois places
+chacune, pastille or, argent, bronze comme le podium de Discoverium ; ta ligne
+sur fond d'or ; place vide : pastille en pointillé et tiret, la hauteur ne bouge
+pas), jauge des joueurs (pour qui
 a déjà joué), « Nos autres jeux » en bas du premier écran, « Comment jouer »
 8 px sous le bord. Décor : deux pièces du lot « sapajou », la vraie tamponnée
 « D'époque », le faux « Contrefaçon », rien d'animé ; réduit sous 700 et 600 px
@@ -189,19 +197,27 @@ de haut. Le titre du jeu, en haut des autres écrans, ramène à l'accueil.
 
 Mesuré le 24/11/2026 puis le 25/11/2026 avec « Atelier » (Playwright ; explication
 raccourcie pour tenir en 2 lignes : « Authentifie la pièce d'époque, démasque le
-faux… ») et avec « À l'honneur » (25/11/2026), accueil vide puis plein (les
-deux cartes, ta place dans les deux classements avec « Signe ton nom », les deux
-premiers de la semaine passée sur une ligne, noms abrégés au besoin, jauge) :
-titre et « Expertiser » à la même place dans les deux états ; « Nos autres
-jeux » finit à 638 px sur 664 (390 × 664), 533 sur 553 (375 × 553, plein), 614
-sur 640 (360 × 640) ; pas de défilement horizontal.
+faux… »), et le 26/11/2026 avec les deux podiums, dans trois états : accueil vide,
+accueil plein (ta place hors podium avec « Signe ton nom », les deux premiers de la
+semaine passée sur une ligne, jauge) et pseudos à 16 caractères avec toi sur le
+podium. Titre, « Expertiser » et le bloc du classement à la même place dans les
+trois états ; « Nos autres jeux » finit à 638 px sur 664 (390 × 664), 549 sur 553
+(375 × 553, plein — podiums resserrés sous 700 px de haut), 614 sur 640
+(360 × 640) ; noms abrégés au besoin, pas de défilement horizontal.
 
 ## Atelier : lots tamponnés
 
 Contrefaire : une tuile par famille (nombre de pièces authentifiées), puis la liste
-des lots joués de la famille, tamponnés « Authentifié » (vert, se contrefait) ou
-« Floué » (rouge, grisé, en pointillé). Les lots déjà contrefaits sont sur le
-marché, pas dans la liste.
+des lots authentifiés de la famille, tamponnés « Authentifié » (vert). Les lots
+floués n'y figurent plus (26/11/2026 : leur ligne grisée n'apprenait rien, on ne les
+contrefait pas) ; une famille sans pièce authentifiée disparaît. Les lots déjà
+contrefaits sont sur le marché, pas dans la liste.
+
+Hors de portée : un bouton d'achat que les écus ne couvrent pas (Retoucher −5,
+Rééditer −25, +1 place −20, Contrefaire −10 ou −15) se fane — fond crème, texte
+et prix gris, relief à plat (26/11/2026 ; avant, seul l'attribut `disabled` le
+disait, et le bouton gardait ses couleurs). Les gestes gratuits (Ranger,
+Remettre) gardent les leurs.
 
 ## Animer
 
