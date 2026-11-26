@@ -11,6 +11,10 @@ Deux notions distinctes (clarifiées le 25/11/2026, demande de l'auteur).
   `style` des `OUVRAGES` dans `prototype/index.html`, posé en
   `data-style` sur chaque pièce ; une fonction de rendu par type.
 
+Les deux noms peuvent coïncider quand le thème n'a qu'un objet et que l'objet
+ne sert qu'à lui : `devise` est à la fois le thème et le `style` de sa planche
+(demande de l'auteur, 26/11/2026, par simplicité).
+
 Un thème a un ou plusieurs types d'artefacts. Quand il en a plusieurs, le
 type est tiré au sort par lot (le même pour les deux pièces), sauf si la
 question l'impose (champ `ouvrage`). On l'impose quand la réponse est écrite
@@ -30,7 +34,7 @@ réclame, un brevet comme un inventeur).
 | `brevet` | brevet d'invention, avec la planche du dessin | après « Objet : » | `brevet` |
 | `carnet` | carnet de voyage : pays en capitales sous une boussole, ville et jour à la main, timbre du pays oblitéré, dos de cuir à filet doré et cote de folio (Kalam) | à la place de `___` dans la phrase | `carnet` |
 | `plaque` | panonceau de gare ancien | le nom de la commune | `objet` |
-| `armorial` | planche d'armorial : écu sous couronne murale, nom de la ville, banderole | la devise, sur la banderole | `armorial` |
+| `devise` | planche de devises : écu sous couronne murale, nom de la ville, banderole | la devise, sur la banderole | `devise` |
 | `menu` | carte d'un restaurant, cadre gravé, plats de décor en gris | la composition, sous le plat en vedette | `menu` |
 | planche gravée | photo dans sa cuvette, « Fig. n. — » (pages `classique`, `filet` du thème photo) | après la rubrique (« Usage : ») | `plancheGravee` |
 
@@ -49,7 +53,7 @@ Nombre de questions au 26/11/2026 (650 en tout).
 | mot étranger (`intraduisible`) | 43 | guide de conversation | — |
 | photo | 39 | planche gravée (31), brevet d'invention (8) | `ouvrage` : `brevet` pour les objets dont la réponse parle comme un brevet |
 | expression | 26 | fiche de lexicographe | — |
-| devise | 10 | planche d'armorial | — |
+| devise | 10 | planche de devises | — |
 | plat | 9 | carte de restaurant | — |
 
 ## Ajouter un type d'artefact
@@ -103,8 +107,8 @@ Nouveaux objets et thèmes :
 - **Cartel de musée** — voir la retouche 1 : deuxième artefact du thème photo,
   sans nouvelle question à écrire.
 
-Faits le 26/11/2026 : l'**armorial** (thème `devise`) et la **carte de
-restaurant** (thème `plat`), lot 15.
+Faits le 26/11/2026 : la **planche de devises** (thème `devise`) et la **carte
+de restaurant** (thème `plat`), lot 15.
 
 ### Deux exemples par thème (26/11/2026)
 

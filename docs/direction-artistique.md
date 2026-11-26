@@ -152,11 +152,12 @@ réel, étalés sur 1,1 s ; une image de plus de 50 ms dans 2 essais sur 4 (77 e
 80 ms), contre 1 sur 4 sans animation (56 ms). Des calques posés d'avance
 (`will-change`) ne changeaient rien : retirés.
 
-## Armorial (devises de villes) et carte de restaurant (plats oubliés)
+## Planche de devises et carte de restaurant
 
 Deux objets ajoutés le 26/11/2026 (`docs/artefacts.md`).
 
-**Armorial** : l'écu sous un bandeau crénelé d'or terni (couronne murale), le nom
+**Planche de devises** (`style` : `devise`, comme son thème) : l'écu sous un
+bandeau crénelé d'or terni (couronne murale), le nom
 de la ville en capitales espacées, la devise sur une banderole aux pointes
 repliées (`clip-path`). L'émail du champ et le meuble viennent de la question
 (`email`, `meuble`), dans une bibliothèque de huit meubles dessinés en SVG fixe
@@ -172,7 +173,7 @@ Le cadre est un élément à lui (`.me-cadre`) : le `::after` du feuillet sert d
 
 Mesuré (Playwright) sur la vraie la plus longue de chaque thème (`d-montpellier`,
 46 signes ; `m-hochepot`, 97) à 390 × 664, 375 × 553 et 360 × 640 : pièce de
-216-217 px (armorial) et 219-220 px (menu), contre 210 pour le brevet, le plus
+216-217 px (devise) et 219-220 px (menu), contre 210 pour le brevet, le plus
 haut des artefacts déjà là ; le bouton « Mettre en vente » de l'écran de pose
 finit à 611 px et 623 px sur 640 ; pas de défilement horizontal. Comme pour le
 brevet et le carnet, le duel se fait défiler : deux pièces de cette hauteur ne
