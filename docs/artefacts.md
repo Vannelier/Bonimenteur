@@ -28,7 +28,7 @@ réclame, un brevet comme un inventeur).
 | `livret` | livret d'ouvrier | après « Ouvrage » | `livret` |
 | `carte` | carte de visite réclame | le slogan de l'artisan | `carteVisite` |
 | `brevet` | brevet d'invention, avec la planche du dessin | après « Objet : » | `brevet` |
-| `carnet` | carnet de voyage : lieu, timbre du pays oblitéré, écriture à la main (Kalam) | à la place de `___` dans la phrase | `carnet` |
+| `carnet` | carnet de voyage : pays en capitales sous une boussole, ville et jour à la main, timbre du pays oblitéré, dos de cuir à filet doré et cote de folio (Kalam) | à la place de `___` dans la phrase | `carnet` |
 | `plaque` | panonceau de gare ancien | le nom de la commune | `objet` |
 | planche gravée | photo dans sa cuvette, « Fig. n. — » (pages `classique`, `filet` du thème photo) | après la rubrique (« Usage : ») | `plancheGravee` |
 

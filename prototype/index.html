@@ -806,26 +806,40 @@ header.vers-accueil{cursor:pointer}
   .hn-score{font-size:14px}
 }
 .classement .t-score.sc-experts{color:var(--vert)}
-/* Carnet de voyage (coutumes) : page lignée jaunie, dos de cuir, timbre du pays oblitéré,
-   écriture à la main (Kalam ; la signature du faussaire reste en Caveat). */
-.choix .bouton.feuillet[data-style="carnet"],.feuillet.modele[data-style="carnet"]{clip-path:none;border-radius:2px 6px 6px 2px;gap:4px;padding:10px 12px 12px 28px;color:#2a2f4a;
+/* Carnet de voyage (coutumes) : page lignée jaunie, dos de cuir à filet doré et cote de folio,
+   timbre du pays oblitéré, écriture à la main (Kalam ; la signature du faussaire reste en Caveat). */
+.choix .bouton.feuillet[data-style="carnet"],.feuillet.modele[data-style="carnet"]{clip-path:none;border-radius:2px 6px 6px 2px;gap:3px;padding:10px 12px 12px 28px;color:#2a2f4a;
   background:repeating-linear-gradient(180deg,transparent 0 24px,rgba(60,90,150,.16) 24px 25px) 0 36px/100% calc(100% - 36px) no-repeat,
     radial-gradient(ellipse 46px 34px at 84% 84%,rgba(140,95,40,.15),transparent 70%),var(--grain),linear-gradient(170deg,#f7f0de,#ebe0c3);
-  box-shadow:0 7px 14px -7px rgba(0,0,0,.5),inset 18px 0 0 #3c2a1c,inset 20px 0 0 rgba(0,0,0,.25),inset 0 0 0 1px rgba(60,45,20,.12)}
-.ca-timbre{position:absolute;right:12px;top:7px;z-index:1;width:34px;height:41px;padding:3px;background:#fffaf0;outline:3px dotted #efe5cb;outline-offset:-1px;box-shadow:0 1px 2px rgba(0,0,0,.25);transform:rotate(5deg)}
-.ca-timbre i{display:flex;flex-direction:column;justify-content:space-between;height:100%;padding:3px 2px;background:linear-gradient(160deg,#b3322a,#7f2019);color:#fff;
-  font:700 7px/1 "IM Fell English SC",Georgia,serif;font-style:normal;text-align:center;overflow:hidden}
-.ca-timbre i b{font:700 12px var(--texte)}
-.ca-oblit{position:absolute;right:34px;top:4px;z-index:1;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;
-  border:2px solid rgba(40,50,90,.42);font:8px/1.1 "IM Fell English SC",Georgia,serif;color:rgba(40,50,90,.6);text-align:center;transform:rotate(-14deg)}
-.ca-lieu{position:relative;z-index:1;padding-right:84px;min-height:24px;font:700 15px/1.3 Kalam,cursive;color:#5a3f2a}
+  box-shadow:0 7px 14px -7px rgba(0,0,0,.5),inset 18px 0 0 #3c2a1c,inset 19.5px 0 0 rgba(203,166,88,.7),inset 21px 0 0 rgba(0,0,0,.25),inset 0 0 0 1px rgba(60,45,20,.12)}
+/* Cote du folio, dorée sur le dos de cuir : la pièce vient d'un fonds, elle a un numéro. */
+.ca-dos{position:absolute;left:0;top:10px;z-index:1;width:18px;writing-mode:vertical-rl;text-align:center;
+  font:700 8px/18px "IM Fell English SC",Georgia,serif;letter-spacing:.1em;color:rgba(203,166,88,.85)}
+.ca-timbre{position:absolute;right:10px;top:7px;z-index:1;width:40px;height:44px;padding:3px;background:#fffaf0;outline:3px dotted #efe5cb;outline-offset:-1px;box-shadow:0 1px 2px rgba(0,0,0,.25);transform:rotate(5deg)}
+/* 6 px : « Deutschland », le plus long des 16 pays, tient dans le timbre sans être coupé. */
+.ca-timbre i{display:flex;flex-direction:column;justify-content:space-between;height:100%;padding:3px 1px;background:linear-gradient(160deg,#b3322a,#7f2019);color:#fff;
+  font:700 6px/1 "IM Fell English SC",Georgia,serif;font-style:normal;letter-spacing:-.01em;text-align:center;overflow:hidden}
+.ca-timbre i b{font:700 13px var(--texte)}
+/* Oblitération : le cachet à cheval sur le timbre et sur la page, barres de rebut, sans texte
+   (26/11/2026 ; le jour écrit dedans à 8 px était coupé par le timbre, il est passé à la ligne
+   manuscrite où il se lit). */
+.ca-oblit{position:absolute;left:-17px;top:-5px;z-index:2;width:33px;height:33px;border-radius:50%;
+  border:1.5px solid rgba(40,50,90,.5);transform:rotate(-16deg);
+  background:repeating-linear-gradient(0deg,transparent 0 5px,rgba(40,50,90,.3) 5px 7px)}
+/* Provenance : le pays en capitales sous la boussole, sur un filet qui court jusqu'au timbre ;
+   la ville et le jour à la main dessous. */
+.ca-pays{position:relative;z-index:1;display:flex;align-items:center;gap:5px;padding-right:72px;
+  font:700 12px/1.5 var(--titre);letter-spacing:.14em;text-transform:uppercase;color:#6b4a1f}
+.ca-pays::after{content:"";flex:1;height:1px;background:rgba(107,74,31,.4)}
+.ca-boussole{flex:none;display:flex;color:#8a6428}
+.ca-boussole .ic{width:13px;height:13px}
+.ca-ville{position:relative;z-index:1;padding-right:72px;min-height:21px;font:700 15px/1.4 Kalam,cursive;color:#5a3f2a}
 .ca-texte{position:relative;z-index:1;font:400 17px/25px Kalam,cursive;text-align:left}
 .ca-texte .rep{font-weight:700;color:#1d2a5a}
-/* La première ligne contourne le timbre et son oblitération. */
-.ca-texte::before{content:"";float:right;width:78px;height:22px}
+/* La première ligne contourne ce qui dépasse du timbre sous l'en-tête. */
+.ca-texte::before{content:"";float:right;width:66px;height:8px}
 @media (max-height:700px){.ca-texte{font-size:16px;line-height:23px}}
-@media (max-height:600px){.ca-texte{font-size:15px;line-height:21px}.ca-lieu{font-size:14px;min-height:20px}.choix .bouton.feuillet[data-style="carnet"]{padding-top:8px;padding-bottom:8px}}
-.feuillet.modele .ca-timbre,.feuillet.modele .ca-oblit,.feuillet.modele .feuillet.modele .ca-lieu{padding-right:0;min-height:0}
+@media (max-height:600px){.ca-texte{font-size:15px;line-height:21px}.ca-pays{font-size:11px}.ca-ville{font-size:14px;min-height:19px}.choix .bouton.feuillet[data-style="carnet"]{padding-top:8px;padding-bottom:8px}}
 .feuillet.modele .ca-texte::before{content:none}
 </style>
 
@@ -1440,13 +1454,20 @@ function plancheGravee(m, motId, texte) {
     <span class="pg-leg" aria-hidden="true">Fig. ${n}. — ${esc(m.legende || "")}</span>
     <span class="pg-rep"><span class="rubrique">${esc(m.rubrique || "Légende")} :</span> <span class="rep">${esc(texte)}</span></span>`;
 }
-// Carnet de voyage (coutumes) : le lieu et le jour, le timbre du pays oblitéré, la coutume notée sur
-// place, la réponse à la place de « ___ ». Pas d'année : certaines coutumes sont récentes.
+const MOIS_COURT = ["janv.", "févr.", "mars", "avril", "mai", "juin", "juill.", "août", "sept.", "oct.", "nov.", "déc."];
+/* Carnet de voyage (coutumes) : l'en-tête de provenance (boussole, pays en capitales sur un filet,
+   ville et jour à la main), le timbre du pays oblitéré, la coutume notée sur place, la réponse à la
+   place de « ___ ». Pas d'année : certaines coutumes sont récentes. Le pays, qui se perdait dans
+   l'écriture manuscrite, se lit d'un coup d'œil (demande de l'auteur, 26/11/2026). */
 function carnet(m, motId, texte) {
   const e = empreinte(motId), [avant, apres] = String(m.question || "").split("___");
-  return `<span class="ca-timbre" aria-hidden="true"><i>${esc(m.timbre || "")}<b>${[5, 10, 15, 20, 25][e % 5]}</b></i></span>
-    <span class="ca-oblit" aria-hidden="true">${(e % 27) + 1}<br>${MOIS[(e >> 4) % 12]}</span>
-    <span class="ca-lieu">${esc(m.lieu || "")}</span>
+  // « Ville, Pays » : le pays fait l'en-tête, la ville la ligne manuscrite (la virgule peut manquer).
+  const lieu = String(m.lieu || ""), v = lieu.lastIndexOf(",");
+  const pays = (v < 0 ? lieu : lieu.slice(v + 1)).trim(), ville = v < 0 ? "" : lieu.slice(0, v).trim();
+  return `<span class="ca-dos" aria-hidden="true">f<sup>o</sup> ${(e % 180) + 1}</span>
+    <span class="ca-timbre" aria-hidden="true"><i>${esc(m.timbre || "")}<b>${[5, 10, 15, 20, 25][e % 5]}</b></i><span class="ca-oblit"></span></span>
+    <span class="ca-pays"><span class="ca-boussole" aria-hidden="true">${IC.coutume}</span>${esc(pays)}</span>
+    <span class="ca-ville">${esc(ville)}${ville ? " · " : ""}${(e % 27) + 1} ${MOIS_COURT[(e >> 4) % 12]}</span>
     <span class="ca-texte">${esc(avant || "")}<span class="rep">${esc(sansPoint(texte))}</span>${esc(apres ?? ".")}</span>`;
 }
 // Brevet d'invention (objets photographiés) : en-tête et numéro, la planche du dessin, le titre de

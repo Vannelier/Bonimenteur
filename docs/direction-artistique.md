@@ -152,6 +152,46 @@ réel, étalés sur 1,1 s ; une image de plus de 50 ms dans 2 essais sur 4 (77 e
 80 ms), contre 1 sur 4 sans animation (56 ms). Des calques posés d'avance
 (`will-change`) ne changeaient rien : retirés.
 
+## Carnet de voyage (coutumes)
+
+Provenance lisible d'un coup d'œil (26/11/2026) : le pays en capitales
+espacées (Cinzel 12 px, sépia #6b4a1f) derrière la boussole de la famille, sur
+un filet qui court jusqu'au timbre ; la ville et le jour en dessous, à la main
+(Kalam 15 px). Avant, « Ville, Pays » tenait sur une seule ligne manuscrite qui
+passait à la ligne sous 390 px et se perdait dans le texte de la coutume.
+
+Marques de valeur : filet doré le long du dos de cuir, cote de folio
+(« fº 167 ») dorée et verticale sur le dos — la pièce vient d'un fonds, elle
+porte un numéro. L'oblitération est devenue un vrai cachet à cheval sur le
+timbre et la page (barres de rebut, sans texte) : le jour écrit dedans à 8 px
+était coupé par le timbre. Timbre élargi à 40 px et nom du pays à 6 px :
+« Deutschland », le plus long des 16, tient sans être coupé (33 px pour 34).
+
+Mesuré (Playwright, 390 × 664, 375 × 553, 360 × 640) sur les pires cas — timbre
+le plus long (`k-treppe`, Deutschland), lieu le plus long (`k-tourbiere`,
+Llanwrtyd Wells, pays de Galles), texte le plus long (`k-blackening`) : la
+pièce ne grandit pas (207 → 200 px pour `k-blackening`, 176 → 177 pour
+`k-tourbiere`, à 360 px de large).
+
+### Pistes pour la rendre plus précieuse (non faites)
+
+- **Ex-libris du cabinet** : cachet rond à sec, gaufré, très pâle dans un coin.
+- **Ruban signet** : une langue de soie qui dépasse du dos, 6 px, teinte par
+  famille d'ouvrage.
+- **Monogramme du voyageur** : initiales à la plume au bas de la page, les
+  mêmes pour tout le carnet (le carnet a un auteur, pas seulement un lieu).
+- **Visa de douane** : second cachet rectangulaire, seulement sur une pièce sur
+  trois (tiré de l'empreinte) — une marque rare se remarque.
+- **Encre passée** : plus la cote de folio est basse, plus l'encre tire vers le
+  brun ; les premières pages ont voyagé plus longtemps.
+- **Coin corné** : la page a été manipulée (triangle CSS en bas à droite, sous
+  la tache de thé déjà présente).
+- **Tranche dorée** : filet dégradé sur le bord droit de la page.
+
+À n'en garder qu'une ou deux : la pièce doit rester lisible en duel, et la
+vraie ne doit jamais se distinguer du faux par sa décoration (un détail tiré de
+l'empreinte du lot, jamais du texte de la réponse).
+
 ## Mise en page
 
 Écran de duel (23/11/2026) : au-dessus des pièces, une seule ligne de consigne
