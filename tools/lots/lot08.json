@@ -1,0 +1,354 @@
+{
+ "questions": [
+  {
+   "id": "i-kuidaore",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En japonais, « kuidaore » désigne…",
+   "source": "wiktionary-en:食い倒れ",
+   "cle": "food",
+   "vraie": "Le fait de se ruiner à force de bien manger.",
+   "faux": [
+    "Une sieste prise juste après un gros repas.",
+    "Un banquet où chacun apporte un plat.",
+    "Le dernier bol de riz qu'on laisse par politesse."
+   ]
+  },
+  {
+   "id": "i-sitzfleisch",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En allemand, « Sitzfleisch » désigne…",
+   "source": "wiktionary-en:Sitzfleisch",
+   "cle": "",
+   "vraie": "La patience de rester assis longtemps sur un travail.",
+   "faux": [
+    "Un rôti de porc qu'on sert le dimanche midi.",
+    "Les fesses engourdies après un long voyage.",
+    "Un coussin rembourré pour les bancs d'église."
+   ]
+  },
+  {
+   "id": "i-fingerspitzengefuhl",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En allemand, « Fingerspitzengefühl » désigne…",
+   "source": "wiktionary-en:Fingerspitzengefühl",
+   "cle": "",
+   "vraie": "Le doigté, le sens instinctif de ce qu'il faut faire.",
+   "faux": [
+    "Le picotement des doigts gelés qui se réchauffent.",
+    "L'habitude de compter sur ses doigts en parlant.",
+    "La peur de toucher les objets dans un musée."
+   ]
+  },
+  {
+   "id": "i-warmduscher",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En allemand, « Warmduscher » désigne…",
+   "source": "wiktionary-en:Warmduscher",
+   "cle": "",
+   "vraie": "Une mauviette, quelqu'un qui fuit le moindre inconfort.",
+   "faux": [
+    "Un hôtelier qui loue des chambres avec salle de bains.",
+    "Un chanteur qui ne répète que sous la douche chaude.",
+    "Un sauna installé au fond du jardin d'une maison."
+   ]
+  },
+  {
+   "id": "i-fika",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En suédois, « fika » désigne…",
+   "source": "wiktionary-en:fika",
+   "cle": "coffee",
+   "vraie": "Une pause café avec une pâtisserie, entre amis ou collègues.",
+   "faux": [
+    "Une promenade en forêt pour cueillir des myrtilles en août.",
+    "Un bain de lac glacé pris à la sortie du sauna en hiver.",
+    "Une soirée de jeux de société au coin du feu en famille."
+   ]
+  },
+  {
+   "id": "i-gluggavedur",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En islandais, « gluggaveður » désigne…",
+   "source": "wiktionary-en:gluggaveður",
+   "cle": "",
+   "vraie": "Un temps beau à regarder par la fenêtre, mais glacial dehors.",
+   "faux": [
+    "La buée qui couvre les vitres quand l'hiver arrive enfin.",
+    "Une tempête si forte qu'on doit clouer les volets la nuit.",
+    "Le premier rayon de soleil qui traverse la fenêtre en mars."
+   ]
+  },
+  {
+   "id": "i-friolero",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En espagnol, « friolero » désigne…",
+   "source": "wiktionary-en:friolero",
+   "cle": "cold",
+   "vraie": "Une personne particulièrement sensible au froid.",
+   "faux": [
+    "Un marchand de glaces qui sillonne les plages.",
+    "Un plat de fruits de mer qu'on mange froid.",
+    "Un vent glacial qui descend des montagnes."
+   ]
+  },
+  {
+   "id": "i-desenrascanco",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En portugais, « desenrascanço » désigne…",
+   "source": "wiktionary-en:desenrascanço",
+   "cle": "",
+   "vraie": "L'art de se tirer d'affaire au dernier moment avec trois fois rien.",
+   "faux": [
+    "La manie de démêler les nœuds de tous les fils qu'on trouve.",
+    "Le soulagement qu'on ressent quand les invités sont enfin partis.",
+    "La politesse de laisser la dernière part du gâteau aux autres."
+   ]
+  },
+  {
+   "id": "i-nekojita",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En japonais, « nekojita » désigne…",
+   "source": "wiktionary-en:猫舌",
+   "cle": "",
+   "vraie": "Le fait de ne pas supporter les boissons ou plats trop chauds.",
+   "faux": [
+    "Le fait de toujours laper la soupe directement dans le bol.",
+    "Une langue râpeuse qu'on attrape après avoir trop parlé.",
+    "L'habitude de dormir roulé en boule près du poêle."
+   ]
+  },
+  {
+   "id": "i-prozvonit",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En tchèque, « prozvonit » veut dire…",
+   "source": "wiktionary-en:prozvonit",
+   "cle": "",
+   "vraie": "Appeler et raccrocher aussitôt, pour se faire rappeler.",
+   "faux": [
+    "Sonner les cloches pour annoncer une naissance.",
+    "Frapper à toutes les portes pour vendre un journal.",
+    "Faire tinter son verre pour réclamer le silence."
+   ]
+  },
+  {
+   "id": "i-cwtch",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En gallois, « cwtch » désigne…",
+   "source": "wiktionary-en:cwtch",
+   "cle": "",
+   "vraie": "Un câlin réconfortant, ou un petit coin douillet.",
+   "faux": [
+    "Une pluie fine qui ne mouille presque pas.",
+    "Un chapeau de laine porté par les mineurs.",
+    "Un gâteau aux raisins servi chaud le dimanche."
+   ]
+  },
+  {
+   "id": "i-kabelsalat",
+   "mot": "",
+   "type": "intraduisible",
+   "question": "En allemand, « Kabelsalat » désigne…",
+   "source": "wiktionary-en:Kabelsalat",
+   "cle": "",
+   "vraie": "Un enchevêtrement de fils électriques emmêlés.",
+   "faux": [
+    "Un plat de chou râpé servi à la cantine.",
+    "Une panne de courant dans tout le quartier.",
+    "Un bricoleur qui répare tout avec du scotch."
+   ]
+  },
+  {
+   "id": "x-hals",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En allemand, « cou et jambe cassés ! » se dit pour…",
+   "source": "wiktionary-en:Hals- und Beinbruch",
+   "cle": "break a leg",
+   "vraie": "Souhaiter bonne chance à quelqu'un.",
+   "faux": [
+    "Prévenir quelqu'un d'un danger.",
+    "Se moquer d'un maladroit qui tombe.",
+    "Annoncer une très mauvaise nouvelle."
+   ]
+  },
+  {
+   "id": "x-daumen",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En allemand, « presser les pouces à quelqu'un » veut dire…",
+   "source": "wiktionary-en:Daumen drücken",
+   "cle": "",
+   "vraie": "Lui souhaiter de réussir, croiser les doigts pour lui.",
+   "faux": [
+    "Le forcer à avouer une faute qu'il a commise.",
+    "Le presser de rendre l'argent qu'il doit.",
+    "Lui serrer la main un peu trop fort pour l'impressionner."
+   ]
+  },
+  {
+   "id": "x-holzweg",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En allemand, « être sur le chemin de bois » veut dire…",
+   "source": "wiktionary-en:auf dem Holzweg sein",
+   "cle": "",
+   "vraie": "Se tromper complètement.",
+   "faux": [
+    "Être sur le point de réussir.",
+    "Avancer très lentement.",
+    "Rentrer chez soi épuisé."
+   ]
+  },
+  {
+   "id": "x-coda",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En italien, « avoir la queue de paille » veut dire…",
+   "source": "wiktionary-en:coda di paglia",
+   "cle": "guilty",
+   "vraie": "Se sentir coupable et se trahir en se défendant trop vite.",
+   "faux": [
+    "Être très fier de soi au point de se pavaner partout.",
+    "Être pauvre au point de dormir dans les granges des autres.",
+    "Arriver toujours le dernier et passer pour un paresseux."
+   ]
+  },
+  {
+   "id": "x-cabra",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En espagnol, « être comme une chèvre » veut dire…",
+   "source": "wiktionary-en:como una cabra",
+   "cle": "mad",
+   "vraie": "Être complètement fou.",
+   "faux": [
+    "Être très têtu, buté.",
+    "Manger de tout, sans trier.",
+    "Grimper partout sans peur."
+   ]
+  },
+  {
+   "id": "x-calabazas",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En espagnol, « donner des citrouilles à quelqu'un » veut dire…",
+   "source": "wiktionary-en:dar calabazas",
+   "cle": "",
+   "vraie": "Repousser ses avances, ou le recaler à un examen.",
+   "faux": [
+    "L'inviter à un grand repas de fête à la campagne.",
+    "Le remercier d'un service rendu avec trop d'emphase.",
+    "Lui faire une farce le soir de la fête des morts."
+   ]
+  },
+  {
+   "id": "x-una",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En espagnol, « être ongle et chair » veut dire…",
+   "source": "wiktionary-en:ser uña y carne",
+   "cle": "",
+   "vraie": "Être inséparables, amis très proches.",
+   "faux": [
+    "Être toujours en train de se disputer.",
+    "Avoir peur de la moindre égratignure.",
+    "Travailler dur de ses propres mains."
+   ]
+  },
+  {
+   "id": "x-chip",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En anglais, « avoir un copeau sur l'épaule » veut dire…",
+   "source": "wiktionary-en:chip on one's shoulder",
+   "cle": "",
+   "vraie": "Garder une rancune et se vexer d'un rien.",
+   "faux": [
+    "Être couvert de sciure après le travail.",
+    "Avoir une petite blessure qui ne guérit pas.",
+    "Porter tout le travail sur son seul dos."
+   ]
+  },
+  {
+   "id": "x-weather",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En anglais, « être sous le temps » veut dire…",
+   "source": "wiktionary-en:under the weather",
+   "cle": "",
+   "vraie": "Être un peu malade, patraque.",
+   "faux": [
+    "Être en retard sur tout.",
+    "Vivre dans un pays pluvieux.",
+    "Ne pas avoir de parapluie."
+   ]
+  },
+  {
+   "id": "x-elephant",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En anglais, « un éléphant blanc » désigne…",
+   "source": "wiktionary-en:white elephant",
+   "cle": "",
+   "vraie": "Un bien coûteux et encombrant dont on ne sait que faire.",
+   "faux": [
+    "Un mensonge énorme que tout le monde fait semblant de croire.",
+    "Un invité très riche qu'on reçoit avec de grands honneurs.",
+    "Une idée si brillante qu'elle paraît presque impossible."
+   ]
+  },
+  {
+   "id": "x-cheval",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En japonais, « une prière à l'oreille d'un cheval » veut dire…",
+   "source": "wiktionary-en:馬の耳に念仏",
+   "cle": "",
+   "vraie": "Des conseils donnés en pure perte.",
+   "faux": [
+    "Une demande faite avec trop d'insistance.",
+    "Un secret confié à la mauvaise personne.",
+    "Une promesse qu'on ne tiendra jamais."
+   ]
+  },
+  {
+   "id": "x-vache",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En chinois, « jouer du luth pour une vache » veut dire…",
+   "source": "wiktionary-en:對牛彈琴",
+   "cle": "",
+   "vraie": "Parler à quelqu'un qui ne peut pas comprendre.",
+   "faux": [
+    "Faire de la musique pour se calmer les nerfs.",
+    "Travailler dur pour un salaire de misère.",
+    "Charmer quelqu'un par des paroles très douces."
+   ]
+  },
+  {
+   "id": "x-gamba",
+   "mot": "",
+   "type": "etrangere",
+   "question": "En italien, « être en jambe » veut dire…",
+   "source": "wiktionary-en:in gamba",
+   "cle": "",
+   "vraie": "Être doué, capable, débrouillard.",
+   "faux": [
+    "Être pressé de partir en vacances.",
+    "Avoir trop bu au repas de famille.",
+    "Marcher très vite sans s'arrêter."
+   ]
+  }
+ ]
+}

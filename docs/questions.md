@@ -188,6 +188,11 @@ répond 429 à urllib).
   commune : remplacé. Béjaune : le premier sens est un jeune oiseau, le faux
   « oiseau des marais » écarté. Bibine et béjaune : mot-clé exigé, le sens
   retenu n'étant pas le premier de la page.
+- Lot 08 : 13 mots étrangers, 12 expressions étrangères (Wiktionnaire
+  anglais, mot-clé ou page vérifiée). Écartés faute de page : gökotta,
+  slampadato, Handschuhschneeballwerfer, « sortir la vache de la glace »,
+  « payer le canard » (portugais). « Prozvonit » raccourci : 560 px à
+  375 × 553, 539 ensuite.
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux

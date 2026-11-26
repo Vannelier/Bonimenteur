@@ -3015,5 +3015,180 @@
   "categorie": "n. m.",
   "registre": "familier",
   "source": "wiktionary:rata"
+ },
+ "i-kuidaore": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En japonais, « kuidaore » désigne…",
+  "source": "wiktionary-en:食い倒れ",
+  "vraie": "Le fait de se ruiner à force de bien manger."
+ },
+ "i-sitzfleisch": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En allemand, « Sitzfleisch » désigne…",
+  "source": "wiktionary-en:Sitzfleisch",
+  "vraie": "La patience de rester assis longtemps sur un travail."
+ },
+ "i-fingerspitzengefuhl": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En allemand, « Fingerspitzengefühl » désigne…",
+  "source": "wiktionary-en:Fingerspitzengefühl",
+  "vraie": "Le doigté, le sens instinctif de ce qu'il faut faire."
+ },
+ "i-warmduscher": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En allemand, « Warmduscher » désigne…",
+  "source": "wiktionary-en:Warmduscher",
+  "vraie": "Une mauviette, quelqu'un qui fuit le moindre inconfort."
+ },
+ "i-fika": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En suédois, « fika » désigne…",
+  "source": "wiktionary-en:fika",
+  "vraie": "Une pause café avec une pâtisserie, entre amis ou collègues."
+ },
+ "i-gluggavedur": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En islandais, « gluggaveður » désigne…",
+  "source": "wiktionary-en:gluggaveður",
+  "vraie": "Un temps beau à regarder par la fenêtre, mais glacial dehors."
+ },
+ "i-friolero": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En espagnol, « friolero » désigne…",
+  "source": "wiktionary-en:friolero",
+  "vraie": "Une personne particulièrement sensible au froid."
+ },
+ "i-desenrascanco": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En portugais, « desenrascanço » désigne…",
+  "source": "wiktionary-en:desenrascanço",
+  "vraie": "L'art de se tirer d'affaire au dernier moment avec trois fois rien."
+ },
+ "i-nekojita": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En japonais, « nekojita » désigne…",
+  "source": "wiktionary-en:猫舌",
+  "vraie": "Le fait de ne pas supporter les boissons ou plats trop chauds."
+ },
+ "i-prozvonit": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En tchèque, « prozvonit » veut dire…",
+  "source": "wiktionary-en:prozvonit",
+  "vraie": "Appeler et raccrocher aussitôt, pour se faire rappeler."
+ },
+ "i-cwtch": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En gallois, « cwtch » désigne…",
+  "source": "wiktionary-en:cwtch",
+  "vraie": "Un câlin réconfortant, ou un petit coin douillet."
+ },
+ "i-kabelsalat": {
+  "mot": "",
+  "type": "intraduisible",
+  "question": "En allemand, « Kabelsalat » désigne…",
+  "source": "wiktionary-en:Kabelsalat",
+  "vraie": "Un enchevêtrement de fils électriques emmêlés."
+ },
+ "x-hals": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En allemand, « cou et jambe cassés ! » se dit pour…",
+  "source": "wiktionary-en:Hals- und Beinbruch",
+  "vraie": "Souhaiter bonne chance à quelqu'un."
+ },
+ "x-daumen": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En allemand, « presser les pouces à quelqu'un » veut dire…",
+  "source": "wiktionary-en:Daumen drücken",
+  "vraie": "Lui souhaiter de réussir, croiser les doigts pour lui."
+ },
+ "x-holzweg": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En allemand, « être sur le chemin de bois » veut dire…",
+  "source": "wiktionary-en:auf dem Holzweg sein",
+  "vraie": "Se tromper complètement."
+ },
+ "x-coda": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En italien, « avoir la queue de paille » veut dire…",
+  "source": "wiktionary-en:coda di paglia",
+  "vraie": "Se sentir coupable et se trahir en se défendant trop vite."
+ },
+ "x-cabra": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En espagnol, « être comme une chèvre » veut dire…",
+  "source": "wiktionary-en:como una cabra",
+  "vraie": "Être complètement fou."
+ },
+ "x-calabazas": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En espagnol, « donner des citrouilles à quelqu'un » veut dire…",
+  "source": "wiktionary-en:dar calabazas",
+  "vraie": "Repousser ses avances, ou le recaler à un examen."
+ },
+ "x-una": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En espagnol, « être ongle et chair » veut dire…",
+  "source": "wiktionary-en:ser uña y carne",
+  "vraie": "Être inséparables, amis très proches."
+ },
+ "x-chip": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En anglais, « avoir un copeau sur l'épaule » veut dire…",
+  "source": "wiktionary-en:chip on one's shoulder",
+  "vraie": "Garder une rancune et se vexer d'un rien."
+ },
+ "x-weather": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En anglais, « être sous le temps » veut dire…",
+  "source": "wiktionary-en:under the weather",
+  "vraie": "Être un peu malade, patraque."
+ },
+ "x-elephant": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En anglais, « un éléphant blanc » désigne…",
+  "source": "wiktionary-en:white elephant",
+  "vraie": "Un bien coûteux et encombrant dont on ne sait que faire."
+ },
+ "x-cheval": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En japonais, « une prière à l'oreille d'un cheval » veut dire…",
+  "source": "wiktionary-en:馬の耳に念仏",
+  "vraie": "Des conseils donnés en pure perte."
+ },
+ "x-vache": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En chinois, « jouer du luth pour une vache » veut dire…",
+  "source": "wiktionary-en:對牛彈琴",
+  "vraie": "Parler à quelqu'un qui ne peut pas comprendre."
+ },
+ "x-gamba": {
+  "mot": "",
+  "type": "etrangere",
+  "question": "En italien, « être en jambe » veut dire…",
+  "source": "wiktionary-en:in gamba",
+  "vraie": "Être doué, capable, débrouillard."
  }
 }

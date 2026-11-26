@@ -6373,5 +6373,380 @@
   "id": "t-rata-3",
   "mot": "rata",
   "texte": "Coup manqué au jeu de quilles."
+ },
+ {
+  "id": "t-i-kuidaore-1",
+  "mot": "i-kuidaore",
+  "texte": "Une sieste prise juste après un gros repas."
+ },
+ {
+  "id": "t-i-kuidaore-2",
+  "mot": "i-kuidaore",
+  "texte": "Un banquet où chacun apporte un plat."
+ },
+ {
+  "id": "t-i-kuidaore-3",
+  "mot": "i-kuidaore",
+  "texte": "Le dernier bol de riz qu'on laisse par politesse."
+ },
+ {
+  "id": "t-i-sitzfleisch-1",
+  "mot": "i-sitzfleisch",
+  "texte": "Un rôti de porc qu'on sert le dimanche midi."
+ },
+ {
+  "id": "t-i-sitzfleisch-2",
+  "mot": "i-sitzfleisch",
+  "texte": "Les fesses engourdies après un long voyage."
+ },
+ {
+  "id": "t-i-sitzfleisch-3",
+  "mot": "i-sitzfleisch",
+  "texte": "Un coussin rembourré pour les bancs d'église."
+ },
+ {
+  "id": "t-i-fingerspitzengefuhl-1",
+  "mot": "i-fingerspitzengefuhl",
+  "texte": "Le picotement des doigts gelés qui se réchauffent."
+ },
+ {
+  "id": "t-i-fingerspitzengefuhl-2",
+  "mot": "i-fingerspitzengefuhl",
+  "texte": "L'habitude de compter sur ses doigts en parlant."
+ },
+ {
+  "id": "t-i-fingerspitzengefuhl-3",
+  "mot": "i-fingerspitzengefuhl",
+  "texte": "La peur de toucher les objets dans un musée."
+ },
+ {
+  "id": "t-i-warmduscher-1",
+  "mot": "i-warmduscher",
+  "texte": "Un hôtelier qui loue des chambres avec salle de bains."
+ },
+ {
+  "id": "t-i-warmduscher-2",
+  "mot": "i-warmduscher",
+  "texte": "Un chanteur qui ne répète que sous la douche chaude."
+ },
+ {
+  "id": "t-i-warmduscher-3",
+  "mot": "i-warmduscher",
+  "texte": "Un sauna installé au fond du jardin d'une maison."
+ },
+ {
+  "id": "t-i-fika-1",
+  "mot": "i-fika",
+  "texte": "Une promenade en forêt pour cueillir des myrtilles en août."
+ },
+ {
+  "id": "t-i-fika-2",
+  "mot": "i-fika",
+  "texte": "Un bain de lac glacé pris à la sortie du sauna en hiver."
+ },
+ {
+  "id": "t-i-fika-3",
+  "mot": "i-fika",
+  "texte": "Une soirée de jeux de société au coin du feu en famille."
+ },
+ {
+  "id": "t-i-gluggavedur-1",
+  "mot": "i-gluggavedur",
+  "texte": "La buée qui couvre les vitres quand l'hiver arrive enfin."
+ },
+ {
+  "id": "t-i-gluggavedur-2",
+  "mot": "i-gluggavedur",
+  "texte": "Une tempête si forte qu'on doit clouer les volets la nuit."
+ },
+ {
+  "id": "t-i-gluggavedur-3",
+  "mot": "i-gluggavedur",
+  "texte": "Le premier rayon de soleil qui traverse la fenêtre en mars."
+ },
+ {
+  "id": "t-i-friolero-1",
+  "mot": "i-friolero",
+  "texte": "Un marchand de glaces qui sillonne les plages."
+ },
+ {
+  "id": "t-i-friolero-2",
+  "mot": "i-friolero",
+  "texte": "Un plat de fruits de mer qu'on mange froid."
+ },
+ {
+  "id": "t-i-friolero-3",
+  "mot": "i-friolero",
+  "texte": "Un vent glacial qui descend des montagnes."
+ },
+ {
+  "id": "t-i-desenrascanco-1",
+  "mot": "i-desenrascanco",
+  "texte": "La manie de démêler les nœuds de tous les fils qu'on trouve."
+ },
+ {
+  "id": "t-i-desenrascanco-2",
+  "mot": "i-desenrascanco",
+  "texte": "Le soulagement qu'on ressent quand les invités sont enfin partis."
+ },
+ {
+  "id": "t-i-desenrascanco-3",
+  "mot": "i-desenrascanco",
+  "texte": "La politesse de laisser la dernière part du gâteau aux autres."
+ },
+ {
+  "id": "t-i-nekojita-1",
+  "mot": "i-nekojita",
+  "texte": "Le fait de toujours laper la soupe directement dans le bol."
+ },
+ {
+  "id": "t-i-nekojita-2",
+  "mot": "i-nekojita",
+  "texte": "Une langue râpeuse qu'on attrape après avoir trop parlé."
+ },
+ {
+  "id": "t-i-nekojita-3",
+  "mot": "i-nekojita",
+  "texte": "L'habitude de dormir roulé en boule près du poêle."
+ },
+ {
+  "id": "t-i-prozvonit-1",
+  "mot": "i-prozvonit",
+  "texte": "Sonner les cloches pour annoncer une naissance."
+ },
+ {
+  "id": "t-i-prozvonit-2",
+  "mot": "i-prozvonit",
+  "texte": "Frapper à toutes les portes pour vendre un journal."
+ },
+ {
+  "id": "t-i-prozvonit-3",
+  "mot": "i-prozvonit",
+  "texte": "Faire tinter son verre pour réclamer le silence."
+ },
+ {
+  "id": "t-i-cwtch-1",
+  "mot": "i-cwtch",
+  "texte": "Une pluie fine qui ne mouille presque pas."
+ },
+ {
+  "id": "t-i-cwtch-2",
+  "mot": "i-cwtch",
+  "texte": "Un chapeau de laine porté par les mineurs."
+ },
+ {
+  "id": "t-i-cwtch-3",
+  "mot": "i-cwtch",
+  "texte": "Un gâteau aux raisins servi chaud le dimanche."
+ },
+ {
+  "id": "t-i-kabelsalat-1",
+  "mot": "i-kabelsalat",
+  "texte": "Un plat de chou râpé servi à la cantine."
+ },
+ {
+  "id": "t-i-kabelsalat-2",
+  "mot": "i-kabelsalat",
+  "texte": "Une panne de courant dans tout le quartier."
+ },
+ {
+  "id": "t-i-kabelsalat-3",
+  "mot": "i-kabelsalat",
+  "texte": "Un bricoleur qui répare tout avec du scotch."
+ },
+ {
+  "id": "t-x-hals-1",
+  "mot": "x-hals",
+  "texte": "Prévenir quelqu'un d'un danger."
+ },
+ {
+  "id": "t-x-hals-2",
+  "mot": "x-hals",
+  "texte": "Se moquer d'un maladroit qui tombe."
+ },
+ {
+  "id": "t-x-hals-3",
+  "mot": "x-hals",
+  "texte": "Annoncer une très mauvaise nouvelle."
+ },
+ {
+  "id": "t-x-daumen-1",
+  "mot": "x-daumen",
+  "texte": "Le forcer à avouer une faute qu'il a commise."
+ },
+ {
+  "id": "t-x-daumen-2",
+  "mot": "x-daumen",
+  "texte": "Le presser de rendre l'argent qu'il doit."
+ },
+ {
+  "id": "t-x-daumen-3",
+  "mot": "x-daumen",
+  "texte": "Lui serrer la main un peu trop fort pour l'impressionner."
+ },
+ {
+  "id": "t-x-holzweg-1",
+  "mot": "x-holzweg",
+  "texte": "Être sur le point de réussir."
+ },
+ {
+  "id": "t-x-holzweg-2",
+  "mot": "x-holzweg",
+  "texte": "Avancer très lentement."
+ },
+ {
+  "id": "t-x-holzweg-3",
+  "mot": "x-holzweg",
+  "texte": "Rentrer chez soi épuisé."
+ },
+ {
+  "id": "t-x-coda-1",
+  "mot": "x-coda",
+  "texte": "Être très fier de soi au point de se pavaner partout."
+ },
+ {
+  "id": "t-x-coda-2",
+  "mot": "x-coda",
+  "texte": "Être pauvre au point de dormir dans les granges des autres."
+ },
+ {
+  "id": "t-x-coda-3",
+  "mot": "x-coda",
+  "texte": "Arriver toujours le dernier et passer pour un paresseux."
+ },
+ {
+  "id": "t-x-cabra-1",
+  "mot": "x-cabra",
+  "texte": "Être très têtu, buté."
+ },
+ {
+  "id": "t-x-cabra-2",
+  "mot": "x-cabra",
+  "texte": "Manger de tout, sans trier."
+ },
+ {
+  "id": "t-x-cabra-3",
+  "mot": "x-cabra",
+  "texte": "Grimper partout sans peur."
+ },
+ {
+  "id": "t-x-calabazas-1",
+  "mot": "x-calabazas",
+  "texte": "L'inviter à un grand repas de fête à la campagne."
+ },
+ {
+  "id": "t-x-calabazas-2",
+  "mot": "x-calabazas",
+  "texte": "Le remercier d'un service rendu avec trop d'emphase."
+ },
+ {
+  "id": "t-x-calabazas-3",
+  "mot": "x-calabazas",
+  "texte": "Lui faire une farce le soir de la fête des morts."
+ },
+ {
+  "id": "t-x-una-1",
+  "mot": "x-una",
+  "texte": "Être toujours en train de se disputer."
+ },
+ {
+  "id": "t-x-una-2",
+  "mot": "x-una",
+  "texte": "Avoir peur de la moindre égratignure."
+ },
+ {
+  "id": "t-x-una-3",
+  "mot": "x-una",
+  "texte": "Travailler dur de ses propres mains."
+ },
+ {
+  "id": "t-x-chip-1",
+  "mot": "x-chip",
+  "texte": "Être couvert de sciure après le travail."
+ },
+ {
+  "id": "t-x-chip-2",
+  "mot": "x-chip",
+  "texte": "Avoir une petite blessure qui ne guérit pas."
+ },
+ {
+  "id": "t-x-chip-3",
+  "mot": "x-chip",
+  "texte": "Porter tout le travail sur son seul dos."
+ },
+ {
+  "id": "t-x-weather-1",
+  "mot": "x-weather",
+  "texte": "Être en retard sur tout."
+ },
+ {
+  "id": "t-x-weather-2",
+  "mot": "x-weather",
+  "texte": "Vivre dans un pays pluvieux."
+ },
+ {
+  "id": "t-x-weather-3",
+  "mot": "x-weather",
+  "texte": "Ne pas avoir de parapluie."
+ },
+ {
+  "id": "t-x-elephant-1",
+  "mot": "x-elephant",
+  "texte": "Un mensonge énorme que tout le monde fait semblant de croire."
+ },
+ {
+  "id": "t-x-elephant-2",
+  "mot": "x-elephant",
+  "texte": "Un invité très riche qu'on reçoit avec de grands honneurs."
+ },
+ {
+  "id": "t-x-elephant-3",
+  "mot": "x-elephant",
+  "texte": "Une idée si brillante qu'elle paraît presque impossible."
+ },
+ {
+  "id": "t-x-cheval-1",
+  "mot": "x-cheval",
+  "texte": "Une demande faite avec trop d'insistance."
+ },
+ {
+  "id": "t-x-cheval-2",
+  "mot": "x-cheval",
+  "texte": "Un secret confié à la mauvaise personne."
+ },
+ {
+  "id": "t-x-cheval-3",
+  "mot": "x-cheval",
+  "texte": "Une promesse qu'on ne tiendra jamais."
+ },
+ {
+  "id": "t-x-vache-1",
+  "mot": "x-vache",
+  "texte": "Faire de la musique pour se calmer les nerfs."
+ },
+ {
+  "id": "t-x-vache-2",
+  "mot": "x-vache",
+  "texte": "Travailler dur pour un salaire de misère."
+ },
+ {
+  "id": "t-x-vache-3",
+  "mot": "x-vache",
+  "texte": "Charmer quelqu'un par des paroles très douces."
+ },
+ {
+  "id": "t-x-gamba-1",
+  "mot": "x-gamba",
+  "texte": "Être pressé de partir en vacances."
+ },
+ {
+  "id": "t-x-gamba-2",
+  "mot": "x-gamba",
+  "texte": "Avoir trop bu au repas de famille."
+ },
+ {
+  "id": "t-x-gamba-3",
+  "mot": "x-gamba",
+  "texte": "Marcher très vite sans s'arrêter."
  }
 ]
