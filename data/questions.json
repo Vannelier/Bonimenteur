@@ -2251,5 +2251,169 @@
   "type": "etrangere",
   "source": "wiktionary-en:spill the beans",
   "vraie": "Révéler un secret."
+ },
+ "dinandier": {
+  "mot": "dinandier",
+  "type": "metier",
+  "source": "wiktionary:dinandier",
+  "vraie": "Artisan qui fabriquait des objets en cuivre jaune."
+ },
+ "gabelou": {
+  "mot": "gabelou",
+  "type": "metier",
+  "source": "wiktionary:gabelou",
+  "vraie": "Commis chargé de percevoir l'impôt sur le sel."
+ },
+ "passementier": {
+  "mot": "passementier",
+  "type": "metier",
+  "source": "wiktionary:passementier",
+  "vraie": "Artisan qui fabriquait galons, franges et cordons."
+ },
+ "ciergier": {
+  "mot": "ciergier",
+  "type": "metier",
+  "source": "wiktionary:ciergier",
+  "vraie": "Fabricant ou marchand de cierges."
+ },
+ "boisselier": {
+  "mot": "boisselier",
+  "type": "metier",
+  "source": "wiktionary:boisselier",
+  "vraie": "Artisan qui fabriquait boisseaux et ustensiles de bois."
+ },
+ "chaufournier": {
+  "mot": "chaufournier",
+  "type": "metier",
+  "source": "wiktionary:chaufournier",
+  "vraie": "Ouvrier qui cuisait la pierre calcaire dans un four à chaux."
+ },
+ "saulnier": {
+  "mot": "saulnier",
+  "type": "metier",
+  "source": "wiktionary:saulnier",
+  "vraie": "Ouvrier qui récoltait ou vendait le sel."
+ },
+ "goemonier": {
+  "mot": "goémonier",
+  "type": "metier",
+  "source": "wiktionary:goémonier",
+  "vraie": "Récolteur d'algues sur les côtes bretonnes."
+ },
+ "chamoiseur": {
+  "mot": "chamoiseur",
+  "type": "metier",
+  "source": "wiktionary:chamoiseur",
+  "vraie": "Ouvrier qui préparait les peaux à la façon du chamois."
+ },
+ "toucheur": {
+  "mot": "toucheur",
+  "type": "metier",
+  "source": "wiktionary:toucheur",
+  "vraie": "Conducteur de bestiaux, qui menait les bêtes aux foires."
+ },
+ "nautonier": {
+  "mot": "nautonier",
+  "type": "metier",
+  "source": "wiktionary:nautonier",
+  "vraie": "Celui qui conduisait une barque ou un navire."
+ },
+ "eventailliste": {
+  "mot": "éventailliste",
+  "type": "metier",
+  "source": "wiktionary:éventailliste",
+  "vraie": "Artisan qui fabriquait ou peignait des éventails."
+ },
+ "ecailler": {
+  "mot": "écailler",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:écailler",
+  "vraie": "Huîtres ouvertes devant vous, d'un seul coup de couteau !"
+ },
+ "falotier": {
+  "mot": "falotier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:falotier",
+  "vraie": "Rues obscures ? Je porte et je place vos lanternes chaque soir !"
+ },
+ "taupier": {
+  "mot": "taupier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:taupier",
+  "vraie": "Taupes capturées dans vos prés et vos jardins, payé à la pièce !"
+ },
+ "merlan": {
+  "mot": "merlan",
+  "type": "metier",
+  "ouvrage": "carte",
+  "registre": "familier",
+  "source": "wiktionary:merlan",
+  "vraie": "Perruques poudrées et barbes rasées de près, à domicile !"
+ },
+ "poissarde": {
+  "mot": "poissarde",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:poissarde",
+  "vraie": "Harengs et maquereaux tout frais des Halles, à la criée !"
+ },
+ "claqueur": {
+  "mot": "claqueur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:claqueur",
+  "vraie": "Votre pièce mérite un triomphe : j'applaudis pour vous, chaque soir !"
+ },
+ "pleureuse": {
+  "mot": "pleureuse",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:pleureuse",
+  "vraie": "Funérailles dignes : larmes et sanglots fournis au cortège !"
+ },
+ "reveilleur": {
+  "mot": "réveilleur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wikipedia-en:Knocker-up",
+  "vraie": "Plus de retard à l'usine : je frappe à votre fenêtre avant l'aube !"
+ },
+ "moucheur": {
+  "mot": "moucheur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:moucheur",
+  "vraie": "Chandelles de la scène mouchées pendant la pièce, sans fumée !"
+ },
+ "ratier": {
+  "mot": "ratier",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:ratier",
+  "vraie": "Greniers infestés ? Mes chiens et moi chassons vos rats !"
+ },
+ "souffleur": {
+  "mot": "souffleur",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:souffleur",
+  "vraie": "Trou de mémoire sur scène ? Je vous chuchote votre texte !"
+ },
+ "lampiste": {
+  "mot": "lampiste",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:lampiste",
+  "vraie": "Lampes de la gare nettoyées, remplies et allumées chaque soir !"
+ },
+ "rebouteux": {
+  "mot": "rebouteux",
+  "type": "metier",
+  "ouvrage": "carte",
+  "source": "wiktionary:rebouteux",
+  "vraie": "Entorses et os démis remis en place, sans passer par le médecin !"
  }
 }

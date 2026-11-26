@@ -4768,5 +4768,380 @@
   "id": "t-x-beans-3",
   "mot": "x-beans",
   "texte": "Perdre son argent."
+ },
+ {
+  "id": "t-dinandier-1",
+  "mot": "dinandier",
+  "texte": "Cuisinier chargé du dîner des moines."
+ },
+ {
+  "id": "t-dinandier-2",
+  "mot": "dinandier",
+  "texte": "Marchand de dindes sur les foires d'hiver."
+ },
+ {
+  "id": "t-dinandier-3",
+  "mot": "dinandier",
+  "texte": "Valet qui servait à table chez les nobles."
+ },
+ {
+  "id": "t-gabelou-1",
+  "mot": "gabelou",
+  "texte": "Ouvrier qui taillait les gabarits des charpentes."
+ },
+ {
+  "id": "t-gabelou-2",
+  "mot": "gabelou",
+  "texte": "Marin qui halait les gabares sur la Garonne."
+ },
+ {
+  "id": "t-gabelou-3",
+  "mot": "gabelou",
+  "texte": "Bouffon qui amusait la foule par ses gabegies."
+ },
+ {
+  "id": "t-passementier-1",
+  "mot": "passementier",
+  "texte": "Passeur qui faisait traverser le fleuve en barque."
+ },
+ {
+  "id": "t-passementier-2",
+  "mot": "passementier",
+  "texte": "Garde chargé des laissez-passer aux portes d'une ville."
+ },
+ {
+  "id": "t-passementier-3",
+  "mot": "passementier",
+  "texte": "Brodeur qui ornait les vêtements des prêtres."
+ },
+ {
+  "id": "t-ciergier-1",
+  "mot": "ciergier",
+  "texte": "Gardien des grilles d'un cimetière."
+ },
+ {
+  "id": "t-ciergier-2",
+  "mot": "ciergier",
+  "texte": "Scieur de long dans les forêts."
+ },
+ {
+  "id": "t-ciergier-3",
+  "mot": "ciergier",
+  "texte": "Sacristain chargé des cloches."
+ },
+ {
+  "id": "t-boisselier-1",
+  "mot": "boisselier",
+  "texte": "Garde forestier chargé de marquer les arbres à abattre."
+ },
+ {
+  "id": "t-boisselier-2",
+  "mot": "boisselier",
+  "texte": "Marchand de boissons fraîches sur les champs de foire."
+ },
+ {
+  "id": "t-boisselier-3",
+  "mot": "boisselier",
+  "texte": "Paysan qui vendait le grain au poids sur les marchés."
+ },
+ {
+  "id": "t-chaufournier-1",
+  "mot": "chaufournier",
+  "texte": "Garçon d'écurie qui ferrait les chevaux de la poste."
+ },
+ {
+  "id": "t-chaufournier-2",
+  "mot": "chaufournier",
+  "texte": "Ouvrier qui taillait les ardoises au fond de la carrière."
+ },
+ {
+  "id": "t-chaufournier-3",
+  "mot": "chaufournier",
+  "texte": "Domestique qui chauffait les lits avec une bassinoire."
+ },
+ {
+  "id": "t-saulnier-1",
+  "mot": "saulnier",
+  "texte": "Vannier qui tressait l'osier des saules."
+ },
+ {
+  "id": "t-saulnier-2",
+  "mot": "saulnier",
+  "texte": "Sonneur de cloches d'une paroisse de campagne."
+ },
+ {
+  "id": "t-saulnier-3",
+  "mot": "saulnier",
+  "texte": "Garde chargé des digues des marais."
+ },
+ {
+  "id": "t-goemonier-1",
+  "mot": "goemonier",
+  "texte": "Tisserand de filets pour la pêche au homard."
+ },
+ {
+  "id": "t-goemonier-2",
+  "mot": "goemonier",
+  "texte": "Guetteur qui annonçait les tempêtes au port."
+ },
+ {
+  "id": "t-goemonier-3",
+  "mot": "goemonier",
+  "texte": "Sculpteur de figures de proue pour les navires."
+ },
+ {
+  "id": "t-chamoiseur-1",
+  "mot": "chamoiseur",
+  "texte": "Guide qui menait les chasseurs de chamois en montagne."
+ },
+ {
+  "id": "t-chamoiseur-2",
+  "mot": "chamoiseur",
+  "texte": "Berger qui gardait les chèvres sur les alpages d'été."
+ },
+ {
+  "id": "t-chamoiseur-3",
+  "mot": "chamoiseur",
+  "texte": "Marchand de chemises de toile sur les foires du Midi."
+ },
+ {
+  "id": "t-toucheur-1",
+  "mot": "toucheur",
+  "texte": "Guérisseur qui soignait les verrues en les effleurant."
+ },
+ {
+  "id": "t-toucheur-2",
+  "mot": "toucheur",
+  "texte": "Musicien qui accordait les claviers des églises."
+ },
+ {
+  "id": "t-toucheur-3",
+  "mot": "toucheur",
+  "texte": "Employé qui encaissait les loyers d'une seigneurie."
+ },
+ {
+  "id": "t-nautonier-1",
+  "mot": "nautonier",
+  "texte": "Marchand de noix et de noisettes sur les quais."
+ },
+ {
+  "id": "t-nautonier-2",
+  "mot": "nautonier",
+  "texte": "Fabricant de lanternes pour les processions."
+ },
+ {
+  "id": "t-nautonier-3",
+  "mot": "nautonier",
+  "texte": "Astronome qui dressait les cartes du ciel."
+ },
+ {
+  "id": "t-eventailliste-1",
+  "mot": "eventailliste",
+  "texte": "Domestique qui éventait les dames pendant le bal."
+ },
+ {
+  "id": "t-eventailliste-2",
+  "mot": "eventailliste",
+  "texte": "Marchand de soufflets pour attiser le feu."
+ },
+ {
+  "id": "t-eventailliste-3",
+  "mot": "eventailliste",
+  "texte": "Employé qui aérait les salles des théâtres."
+ },
+ {
+  "id": "t-ecailler-1",
+  "mot": "ecailler",
+  "texte": "Poissons écaillés et vidés sur le quai, prêts à cuire !"
+ },
+ {
+  "id": "t-ecailler-2",
+  "mot": "ecailler",
+  "texte": "Chaises cannées et rempaillées sur le trottoir !"
+ },
+ {
+  "id": "t-ecailler-3",
+  "mot": "ecailler",
+  "texte": "Toitures d'ardoise réparées avant les grandes pluies !"
+ },
+ {
+  "id": "t-falotier-1",
+  "mot": "falotier",
+  "texte": "Fêtes tristes ? Farces et pitreries pour égayer vos noces et banquets !"
+ },
+ {
+  "id": "t-falotier-2",
+  "mot": "falotier",
+  "texte": "Barques à quai ? Je rame pour vous jusqu'à l'autre rive, nuit et jour !"
+ },
+ {
+  "id": "t-falotier-3",
+  "mot": "falotier",
+  "texte": "Chapeaux défraîchis ? Je les remets en forme à la vapeur, sur le pas de la porte !"
+ },
+ {
+  "id": "t-taupier-1",
+  "mot": "taupier",
+  "texte": "Toiles de tente réparées pour les foires et les cirques ambulants !"
+ },
+ {
+  "id": "t-taupier-2",
+  "mot": "taupier",
+  "texte": "Tapis battus et dépoussiérés au grand air, livrés le jour même !"
+ },
+ {
+  "id": "t-taupier-3",
+  "mot": "taupier",
+  "texte": "Tonneaux cerclés et remis à neuf avant les prochaines vendanges !"
+ },
+ {
+  "id": "t-merlan-1",
+  "mot": "merlan",
+  "texte": "Poissons frais de la marée du matin, livrés à domicile !"
+ },
+ {
+  "id": "t-merlan-2",
+  "mot": "merlan",
+  "texte": "Merles et pinsons en cage, siffleurs garantis sur facture !"
+ },
+ {
+  "id": "t-merlan-3",
+  "mot": "merlan",
+  "texte": "Lettres d'amour écrites à la plume, cachetées de cire rouge !"
+ },
+ {
+  "id": "t-poissarde-1",
+  "mot": "poissarde",
+  "texte": "Pois cassés et lentilles au détail, pesés devant vous !"
+ },
+ {
+  "id": "t-poissarde-2",
+  "mot": "poissarde",
+  "texte": "Poix et goudron pour calfater vos barques avant l'été !"
+ },
+ {
+  "id": "t-poissarde-3",
+  "mot": "poissarde",
+  "texte": "Poisons à rats et à cafards, efficaces dès la première nuit !"
+ },
+ {
+  "id": "t-claqueur-1",
+  "mot": "claqueur",
+  "texte": "Fouets de cocher claquants, tressés en cuir de Hongrie, à prix d'ami !"
+ },
+ {
+  "id": "t-claqueur-2",
+  "mot": "claqueur",
+  "texte": "Volets et portes qui claquent ? Je les cale pour de bon, sans bruit !"
+ },
+ {
+  "id": "t-claqueur-3",
+  "mot": "claqueur",
+  "texte": "Sabots de bois ferrés pour danser la bourrée jusqu'au petit matin !"
+ },
+ {
+  "id": "t-pleureuse-1",
+  "mot": "pleureuse",
+  "texte": "Oignons épluchés et hachés pour vos cuisines, sans une larme !"
+ },
+ {
+  "id": "t-pleureuse-2",
+  "mot": "pleureuse",
+  "texte": "Saules taillés et entretenus au bord de vos étangs et bassins !"
+ },
+ {
+  "id": "t-pleureuse-3",
+  "mot": "pleureuse",
+  "texte": "Bébés bercés et consolés toute la nuit, sommeil garanti aux parents !"
+ },
+ {
+  "id": "t-reveilleur-1",
+  "mot": "reveilleur",
+  "texte": "Pendules et réveils réparés en un jour, avec sonnerie garantie !"
+ },
+ {
+  "id": "t-reveilleur-2",
+  "mot": "reveilleur",
+  "texte": "Coqs de basse-cour dressés à chanter à l'heure que vous voulez !"
+ },
+ {
+  "id": "t-reveilleur-3",
+  "mot": "reveilleur",
+  "texte": "Rêves expliqués et mauvais songes chassés, consultation au réveil !"
+ },
+ {
+  "id": "t-moucheur-1",
+  "mot": "moucheur",
+  "texte": "Cheminées ramonées avant l'hiver, suie emportée avec soin !"
+ },
+ {
+  "id": "t-moucheur-2",
+  "mot": "moucheur",
+  "texte": "Mouchoirs brodés à vos initiales, livrés pour le jour de la noce !"
+ },
+ {
+  "id": "t-moucheur-3",
+  "mot": "moucheur",
+  "texte": "Nez de clowns et faux nez de carnaval, fabriqués en carton peint !"
+ },
+ {
+  "id": "t-ratier-1",
+  "mot": "ratier",
+  "texte": "Râteaux et fourches réparés avant la saison des foins !"
+ },
+ {
+  "id": "t-ratier-2",
+  "mot": "ratier",
+  "texte": "Ratures effacées sur vos actes, sans laisser de trace !"
+ },
+ {
+  "id": "t-ratier-3",
+  "mot": "ratier",
+  "texte": "Rations de soupe servies chaudes aux ouvriers du port !"
+ },
+ {
+  "id": "t-souffleur-1",
+  "mot": "souffleur",
+  "texte": "Bougies d'anniversaire éteintes d'un seul souffle, garanti !"
+ },
+ {
+  "id": "t-souffleur-2",
+  "mot": "souffleur",
+  "texte": "Feu de cheminée ranimé au soufflet en un rien de temps !"
+ },
+ {
+  "id": "t-souffleur-3",
+  "mot": "souffleur",
+  "texte": "Bulles de savon géantes pour vos fêtes d'enfants !"
+ },
+ {
+  "id": "t-lampiste-1",
+  "mot": "lampiste",
+  "texte": "Lampions de papier pour vos bals du 14 Juillet, à la douzaine !"
+ },
+ {
+  "id": "t-lampiste-2",
+  "mot": "lampiste",
+  "texte": "Lames de rasoir affûtées au cuir, rendues le lendemain matin !"
+ },
+ {
+  "id": "t-lampiste-3",
+  "mot": "lampiste",
+  "texte": "Lampadaires de salon dorés à la feuille, comme au château !"
+ },
+ {
+  "id": "t-rebouteux-1",
+  "mot": "rebouteux",
+  "texte": "Bouteilles rebouchées à la cire, vin gardé dix ans sans tourner !"
+ },
+ {
+  "id": "t-rebouteux-2",
+  "mot": "rebouteux",
+  "texte": "Bouts de chandelle refondus en cierges neufs, à moitié prix !"
+ },
+ {
+  "id": "t-rebouteux-3",
+  "mot": "rebouteux",
+  "texte": "Boutons recousus sur vos habits du dimanche, pendant que vous attendez !"
  }
 ]

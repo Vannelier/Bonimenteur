@@ -167,6 +167,11 @@ répond 429 à urllib).
   le mot-clé). Cordon-bleu sourcé par « cordon bleu », qui porte l'ordre du
   Saint-Esprit. Écartée faute de page : « montrer où les écrevisses passent
   l'hiver » (russe).
+- Lot 04 : 25 métiers, 12 en livret d'ouvrier, 13 en carte de visite réclame.
+  Quand le métier n'est pas le premier sens de la page (merlan, souffleur,
+  moucheur, lampiste…), mot-clé exigé dans la page (« coiffeur »,
+  « théâtre »…). Six faux réécrits, trop proches pour l'arbitre. Bas des
+  pièces à 491 px au plus à 375 × 553.
 - Biais relevé le 26/11/2026 : 99 questions sur 236 (hors communes) avaient
   une vraie hors de 0,7 à 1,35 fois la moyenne de leurs faux (huchier : 76
   signes contre 33). Corrigé le jour même (`tools/lots/longueurs.json`) : faux
