@@ -5143,5 +5143,380 @@
   "id": "t-rebouteux-3",
   "mot": "rebouteux",
   "texte": "Boutons recousus sur vos habits du dimanche, pendant que vous attendez !"
+ },
+ {
+  "id": "t-a-chaines-1",
+  "mot": "a-chaines",
+  "texte": "gardés par des oies"
+ },
+ {
+  "id": "t-a-chaines-2",
+  "mot": "a-chaines",
+  "texte": "cousus dans du cuir"
+ },
+ {
+  "id": "t-a-chaines-3",
+  "mot": "a-chaines",
+  "texte": "rangés sous l'autel"
+ },
+ {
+  "id": "t-a-mike-1",
+  "mot": "a-mike",
+  "texte": "sans plumes"
+ },
+ {
+  "id": "t-a-mike-2",
+  "mot": "a-mike",
+  "texte": "sur un toit"
+ },
+ {
+  "id": "t-a-mike-3",
+  "mot": "a-mike",
+  "texte": "sans boire"
+ },
+ {
+  "id": "t-a-tulipe-1",
+  "mot": "a-tulipe",
+  "texte": "un tonneau de bière"
+ },
+ {
+  "id": "t-a-tulipe-2",
+  "mot": "a-tulipe",
+  "texte": "un navire marchand"
+ },
+ {
+  "id": "t-a-tulipe-3",
+  "mot": "a-tulipe",
+  "texte": "son poids en sel fin"
+ },
+ {
+  "id": "t-a-byron-1",
+  "mot": "a-byron",
+  "texte": "un renard roux"
+ },
+ {
+  "id": "t-a-byron-2",
+  "mot": "a-byron",
+  "texte": "une chèvre naine"
+ },
+ {
+  "id": "t-a-byron-3",
+  "mot": "a-byron",
+  "texte": "un aigle royal"
+ },
+ {
+  "id": "t-a-coolidge-1",
+  "mot": "a-coolidge",
+  "texte": "finit au zoo de Washington"
+ },
+ {
+  "id": "t-a-coolidge-2",
+  "mot": "a-coolidge",
+  "texte": "s'enfuit dans les jardins"
+ },
+ {
+  "id": "t-a-coolidge-3",
+  "mot": "a-coolidge",
+  "texte": "fut naturalisé pour le salon"
+ },
+ {
+  "id": "t-a-liberte-1",
+  "mot": "a-liberte",
+  "texte": "le port de Marseille"
+ },
+ {
+  "id": "t-a-liberte-2",
+  "mot": "a-liberte",
+  "texte": "la baie de Rio de Janeiro"
+ },
+ {
+  "id": "t-a-liberte-3",
+  "mot": "a-liberte",
+  "texte": "le sommet du mont Blanc"
+ },
+ {
+  "id": "t-a-nobel-1",
+  "mot": "a-nobel",
+  "texte": "une lettre d'insultes de Victor Hugo"
+ },
+ {
+  "id": "t-a-nobel-2",
+  "mot": "a-nobel",
+  "texte": "le testament de son grand-père"
+ },
+ {
+  "id": "t-a-nobel-3",
+  "mot": "a-nobel",
+  "texte": "un roman de Jules Verne sur la dynamite"
+ },
+ {
+  "id": "t-a-ok-1",
+  "mot": "a-ok",
+  "texte": "« zero killed » à l'envers"
+ },
+ {
+  "id": "t-a-ok-2",
+  "mot": "a-ok",
+  "texte": "« Old Kinderhook » par erreur"
+ },
+ {
+  "id": "t-a-ok-3",
+  "mot": "a-ok",
+  "texte": "« okay » en code télégraphe"
+ },
+ {
+  "id": "t-a-bug-1",
+  "mot": "a-bug",
+  "texte": "une souris dans les câbles"
+ },
+ {
+  "id": "t-a-bug-2",
+  "mot": "a-bug",
+  "texte": "un trombone tombé dedans"
+ },
+ {
+  "id": "t-a-bug-3",
+  "mot": "a-bug",
+  "texte": "une goutte de café renversé"
+ },
+ {
+  "id": "t-a-sandwich-1",
+  "mot": "a-sandwich",
+  "texte": "mangeait à cheval pendant la chasse"
+ },
+ {
+  "id": "t-a-sandwich-2",
+  "mot": "a-sandwich",
+  "texte": "n'avait plus de dents pour mâcher"
+ },
+ {
+  "id": "t-a-sandwich-3",
+  "mot": "a-sandwich",
+  "texte": "détestait salir ses gants de soie"
+ },
+ {
+  "id": "t-a-corbeaux-1",
+  "mot": "a-corbeaux",
+  "texte": "la Tamise débordera"
+ },
+ {
+  "id": "t-a-corbeaux-2",
+  "mot": "a-corbeaux",
+  "texte": "la reine perdra sa couronne"
+ },
+ {
+  "id": "t-a-corbeaux-3",
+  "mot": "a-corbeaux",
+  "texte": "l'horloge de Big Ben s'arrêtera"
+ },
+ {
+  "id": "t-a-crayon-1",
+  "mot": "a-crayon",
+  "texte": "du plomb mêlé d'argile"
+ },
+ {
+  "id": "t-a-crayon-2",
+  "mot": "a-crayon",
+  "texte": "de l'étain et du charbon"
+ },
+ {
+  "id": "t-a-crayon-3",
+  "mot": "a-crayon",
+  "texte": "de la cendre d'os"
+ },
+ {
+  "id": "t-a-paresseux-1",
+  "mot": "a-paresseux",
+  "texte": "boire à la rivière la plus proche"
+ },
+ {
+  "id": "t-a-paresseux-2",
+  "mot": "a-paresseux",
+  "texte": "changer d'arbre sans se faire voir"
+ },
+ {
+  "id": "t-a-paresseux-3",
+  "mot": "a-paresseux",
+  "texte": "frotter son pelage contre la terre"
+ },
+ {
+  "id": "t-a-axolotl-1",
+  "mot": "a-axolotl",
+  "texte": "respirer sous la glace des mois"
+ },
+ {
+  "id": "t-a-axolotl-2",
+  "mot": "a-axolotl",
+  "texte": "changer de couleur en un instant"
+ },
+ {
+  "id": "t-a-axolotl-3",
+  "mot": "a-axolotl",
+  "texte": "vivre des années sans manger"
+ },
+ {
+  "id": "t-a-narval-1",
+  "mot": "a-narval",
+  "texte": "un os de son crâne, très allongé"
+ },
+ {
+  "id": "t-a-narval-2",
+  "mot": "a-narval",
+  "texte": "une nageoire durcie au fil des ans"
+ },
+ {
+  "id": "t-a-narval-3",
+  "mot": "a-narval",
+  "texte": "un poil géant fait de corne pure"
+ },
+ {
+  "id": "t-a-caligula-1",
+  "mot": "a-caligula",
+  "texte": "son chien de garde"
+ },
+ {
+  "id": "t-a-caligula-2",
+  "mot": "a-caligula",
+  "texte": "son esclave cuisinier"
+ },
+ {
+  "id": "t-a-caligula-3",
+  "mot": "a-caligula",
+  "texte": "un gladiateur gaulois"
+ },
+ {
+  "id": "t-a-lune-1",
+  "mot": "a-lune",
+  "texte": "une forêt de cristal bleu"
+ },
+ {
+  "id": "t-a-lune-2",
+  "mot": "a-lune",
+  "texte": "des chevaux à six pattes"
+ },
+ {
+  "id": "t-a-lune-3",
+  "mot": "a-lune",
+  "texte": "une ville de marbre abandonnée"
+ },
+ {
+  "id": "t-a-hans-1",
+  "mot": "a-hans",
+  "texte": "suivait le rythme d'un sifflet caché dans la foule"
+ },
+ {
+  "id": "t-a-hans-2",
+  "mot": "a-hans",
+  "texte": "comptait les coups de sabot du cheval d'à côté"
+ },
+ {
+  "id": "t-a-hans-3",
+  "mot": "a-hans",
+  "texte": "obéissait aux clins d'œil de son palefrenier"
+ },
+ {
+  "id": "t-a-spaghetti-1",
+  "mot": "a-spaghetti",
+  "texte": "du fromage dans les grottes"
+ },
+ {
+  "id": "t-a-spaghetti-2",
+  "mot": "a-spaghetti",
+  "texte": "des œufs de Pâques au jardin"
+ },
+ {
+  "id": "t-a-spaghetti-3",
+  "mot": "a-spaghetti",
+  "texte": "du chocolat dans la rivière"
+ },
+ {
+  "id": "t-a-mozart-1",
+  "mot": "a-mozart",
+  "texte": "lui composa une messe pour orchestre et chœur"
+ },
+ {
+  "id": "t-a-mozart-2",
+  "mot": "a-mozart",
+  "texte": "refusa de jouer en public pendant tout un mois"
+ },
+ {
+  "id": "t-a-mozart-3",
+  "mot": "a-mozart",
+  "texte": "le fit empailler et le posa sur son clavecin"
+ },
+ {
+  "id": "t-a-okunoshima-1",
+  "mot": "a-okunoshima",
+  "texte": "des milliers de chats errants"
+ },
+ {
+  "id": "t-a-okunoshima-2",
+  "mot": "a-okunoshima",
+  "texte": "des cerfs qui saluent les touristes"
+ },
+ {
+  "id": "t-a-okunoshima-3",
+  "mot": "a-okunoshima",
+  "texte": "des singes qui se baignent l'hiver"
+ },
+ {
+  "id": "t-a-bigben-1",
+  "mot": "a-bigben",
+  "texte": "d'un gros horloger du XIXe siècle"
+ },
+ {
+  "id": "t-a-bigben-2",
+  "mot": "a-bigben",
+  "texte": "du cadran nord, le plus grand"
+ },
+ {
+  "id": "t-a-bigben-3",
+  "mot": "a-bigben",
+  "texte": "d'un boxeur qui posa la première pierre"
+ },
+ {
+  "id": "t-a-sourcils-1",
+  "mot": "a-sourcils",
+  "texte": "de mains"
+ },
+ {
+  "id": "t-a-sourcils-2",
+  "mot": "a-sourcils",
+  "texte": "de collier"
+ },
+ {
+  "id": "t-a-sourcils-3",
+  "mot": "a-sourcils",
+  "texte": "d'ombre"
+ },
+ {
+  "id": "t-a-pringles-1",
+  "mot": "a-pringles",
+  "texte": "avec une boîte de chips dans chaque main"
+ },
+ {
+  "id": "t-a-pringles-2",
+  "mot": "a-pringles",
+  "texte": "dans un cercueil en forme de tuile"
+ },
+ {
+  "id": "t-a-pringles-3",
+  "mot": "a-pringles",
+  "texte": "sous une pierre gravée d'une chips"
+ },
+ {
+  "id": "t-a-tomate-1",
+  "mot": "a-tomate",
+  "texte": "pour teindre les étoffes"
+ },
+ {
+  "id": "t-a-tomate-2",
+  "mot": "a-tomate",
+  "texte": "comme remède aux fièvres"
+ },
+ {
+  "id": "t-a-tomate-3",
+  "mot": "a-tomate",
+  "texte": "pour nourrir les cochons"
  }
 ]

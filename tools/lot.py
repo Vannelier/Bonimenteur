@@ -129,8 +129,11 @@ def source_contient(source: str, cle: str) -> str:
     texte = lire(url, CACHE / site / (urllib.parse.quote(titre, safe="") + ".txt"))
     if not texte:
         return f"source {source} : page absente"
-    if texte.lstrip().upper().startswith("#REDIRECT"):
-        return f"source {source} : redirection, citer la page d'arrivée"
+    if texte.lstrip().upper().startswith(("#REDIRECT", "#REDIRECTION")):
+        cible = re.search(r"\[\[([^\]|#]+)", texte)
+        if not cible or source.count(">") >= 2:
+            return f"source {source} : redirection"
+        return source_contient(f"{site}:{cible.group(1)}", cle)
     if cle.lower() not in texte.lower():
         return f"source {source} : « {cle} » introuvable"
     return ""

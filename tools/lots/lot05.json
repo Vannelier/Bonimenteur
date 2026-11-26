@@ -1,0 +1,354 @@
+{
+ "questions": [
+  {
+   "id": "a-chaines",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Chained library",
+   "cle": "chain",
+   "question": "Dans les bibliothèques du Moyen Âge, pour éviter les vols, les livres étaient ___.",
+   "vraie": "enchaînés aux pupitres",
+   "faux": [
+    "gardés par des oies",
+    "cousus dans du cuir",
+    "rangés sous l'autel"
+   ]
+  },
+  {
+   "id": "a-mike",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Mike the Headless Chicken",
+   "cle": "18 months",
+   "question": "En 1945, au Colorado, le poulet Mike a vécu dix-huit mois ___.",
+   "vraie": "sans tête",
+   "faux": [
+    "sans plumes",
+    "sur un toit",
+    "sans boire"
+   ]
+  },
+  {
+   "id": "a-tulipe",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Tulipomanie",
+   "cle": "maison",
+   "question": "En 1637, aux Pays-Bas, un seul bulbe de tulipe rare pouvait valoir ___.",
+   "vraie": "une demeure bourgeoise",
+   "faux": [
+    "un tonneau de bière",
+    "un navire marchand",
+    "son poids en sel fin"
+   ]
+  },
+  {
+   "id": "a-byron",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Lord Byron",
+   "cle": "bear",
+   "question": "Étudiant à Cambridge, où les chiens étaient interdits, Lord Byron garda dans sa chambre ___.",
+   "vraie": "un ours apprivoisé",
+   "faux": [
+    "un renard roux",
+    "une chèvre naine",
+    "un aigle royal"
+   ]
+  },
+  {
+   "id": "a-coolidge",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Rebecca (raccoon)",
+   "cle": "Thanksgiving",
+   "question": "Le raton laveur offert au président Coolidge pour son repas de Thanksgiving ___.",
+   "vraie": "devint son animal de compagnie",
+   "faux": [
+    "finit au zoo de Washington",
+    "s'enfuit dans les jardins",
+    "fut naturalisé pour le salon"
+   ]
+  },
+  {
+   "id": "a-liberte",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Statue de la Liberté",
+   "cle": "Suez",
+   "question": "Avant la statue de la Liberté, Bartholdi avait imaginé une statue géante semblable pour ___.",
+   "vraie": "l'entrée du canal de Suez",
+   "faux": [
+    "le port de Marseille",
+    "la baie de Rio de Janeiro",
+    "le sommet du mont Blanc"
+   ]
+  },
+  {
+   "id": "a-nobel",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Alfred Nobel",
+   "cle": "nécrologie",
+   "question": "Alfred Nobel aurait décidé de créer ses prix après avoir lu ___.",
+   "vraie": "sa propre nécrologie, publiée par erreur",
+   "faux": [
+    "une lettre d'insultes de Victor Hugo",
+    "le testament de son grand-père",
+    "un roman de Jules Verne sur la dynamite"
+   ]
+  },
+  {
+   "id": "a-ok",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:OK",
+   "cle": "oll korrect",
+   "question": "Le sigle « OK » viendrait d'une blague de journalistes de Boston, qui écrivaient ___.",
+   "vraie": "« oll korrect » pour « all correct »",
+   "faux": [
+    "« zero killed » à l'envers",
+    "« Old Kinderhook » par erreur",
+    "« okay » en code télégraphe"
+   ]
+  },
+  {
+   "id": "a-bug",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Software bug",
+   "cle": "moth",
+   "question": "En 1947, le premier « bug » informatique consigné dans un cahier de bord était ___.",
+   "vraie": "une mite coincée dans un relais",
+   "faux": [
+    "une souris dans les câbles",
+    "un trombone tombé dedans",
+    "une goutte de café renversé"
+   ]
+  },
+  {
+   "id": "a-sandwich",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Sandwich",
+   "cle": "jeu",
+   "question": "Le sandwich doit son nom à un comte anglais qui ___.",
+   "vraie": "ne voulait pas quitter sa table de jeu",
+   "faux": [
+    "mangeait à cheval pendant la chasse",
+    "n'avait plus de dents pour mâcher",
+    "détestait salir ses gants de soie"
+   ]
+  },
+  {
+   "id": "a-corbeaux",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Tour de Londres",
+   "cle": "corbeaux",
+   "question": "Selon la légende, si les corbeaux quittent la tour de Londres, ___.",
+   "vraie": "le royaume tombera",
+   "faux": [
+    "la Tamise débordera",
+    "la reine perdra sa couronne",
+    "l'horloge de Big Ben s'arrêtera"
+   ]
+  },
+  {
+   "id": "a-crayon",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Crayon à papier",
+   "cle": "graphite",
+   "question": "La « mine de plomb » d'un crayon à papier contient ___.",
+   "vraie": "du graphite, sans plomb",
+   "faux": [
+    "du plomb mêlé d'argile",
+    "de l'étain et du charbon",
+    "de la cendre d'os"
+   ]
+  },
+  {
+   "id": "a-paresseux",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Sloth",
+   "cle": "once a week",
+   "question": "Le paresseux ne descend de son arbre qu'environ une fois par semaine, pour ___.",
+   "vraie": "faire ses besoins au pied du tronc",
+   "faux": [
+    "boire à la rivière la plus proche",
+    "changer d'arbre sans se faire voir",
+    "frotter son pelage contre la terre"
+   ]
+  },
+  {
+   "id": "a-axolotl",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Axolotl",
+   "cle": "régénér",
+   "question": "L'axolotl, une salamandre du Mexique, est capable de ___.",
+   "vraie": "faire repousser ses pattes coupées",
+   "faux": [
+    "respirer sous la glace des mois",
+    "changer de couleur en un instant",
+    "vivre des années sans manger"
+   ]
+  },
+  {
+   "id": "a-narval",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Narval",
+   "cle": "dent",
+   "question": "La longue corne torsadée du narval est en réalité ___.",
+   "vraie": "une dent qui lui traverse la lèvre",
+   "faux": [
+    "un os de son crâne, très allongé",
+    "une nageoire durcie au fil des ans",
+    "un poil géant fait de corne pure"
+   ]
+  },
+  {
+   "id": "a-caligula",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Incitatus",
+   "cle": "consul",
+   "question": "Selon Suétone, l'empereur Caligula aurait voulu nommer consul ___.",
+   "vraie": "son cheval Incitatus",
+   "faux": [
+    "son chien de garde",
+    "son esclave cuisinier",
+    "un gladiateur gaulois"
+   ]
+  },
+  {
+   "id": "a-lune",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Great Moon Hoax",
+   "cle": "bat",
+   "question": "En 1835, un journal de New York annonça qu'un astronome avait vu sur la Lune ___.",
+   "vraie": "des hommes à ailes de chauve-souris",
+   "faux": [
+    "une forêt de cristal bleu",
+    "des chevaux à six pattes",
+    "une ville de marbre abandonnée"
+   ]
+  },
+  {
+   "id": "a-hans",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Hans le Malin",
+   "cle": "Pfungst",
+   "question": "Vers 1904, le cheval Hans le Malin semblait savoir compter ; en fait, il ___.",
+   "vraie": "lisait les réactions de ceux qui le regardaient",
+   "faux": [
+    "suivait le rythme d'un sifflet caché dans la foule",
+    "comptait les coups de sabot du cheval d'à côté",
+    "obéissait aux clins d'œil de son palefrenier"
+   ]
+  },
+  {
+   "id": "a-spaghetti",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Spaghetti-tree hoax",
+   "cle": "Switzerland",
+   "question": "Le 1er avril 1957, la BBC montra des paysans suisses en train de récolter ___.",
+   "vraie": "des spaghettis sur les arbres",
+   "faux": [
+    "du fromage dans les grottes",
+    "des œufs de Pâques au jardin",
+    "du chocolat dans la rivière"
+   ]
+  },
+  {
+   "id": "a-mozart",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Mozart's starling",
+   "cle": "funeral",
+   "question": "À la mort de son étourneau apprivoisé, Mozart ___.",
+   "vraie": "lui organisa des funérailles et écrivit un poème",
+   "faux": [
+    "lui composa une messe pour orchestre et chœur",
+    "refusa de jouer en public pendant tout un mois",
+    "le fit empailler et le posa sur son clavecin"
+   ]
+  },
+  {
+   "id": "a-okunoshima",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Ōkunoshima",
+   "cle": "rabbit",
+   "question": "Sur l'île japonaise d'Ōkunoshima vivent aujourd'hui ___.",
+   "vraie": "des centaines de lapins en liberté",
+   "faux": [
+    "des milliers de chats errants",
+    "des cerfs qui saluent les touristes",
+    "des singes qui se baignent l'hiver"
+   ]
+  },
+  {
+   "id": "a-bigben",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Big Ben",
+   "cle": "cloche",
+   "question": "À Londres, « Big Ben » est à l'origine le surnom ___.",
+   "vraie": "de la grosse cloche, pas de la tour",
+   "faux": [
+    "d'un gros horloger du XIXe siècle",
+    "du cadran nord, le plus grand",
+    "d'un boxeur qui posa la première pierre"
+   ]
+  },
+  {
+   "id": "a-sourcils",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:La Joconde",
+   "cle": "sourcils",
+   "question": "Quand on la regarde de près, la Joconde n'a pas ___.",
+   "vraie": "de sourcils",
+   "faux": [
+    "de mains",
+    "de collier",
+    "d'ombre"
+   ]
+  },
+  {
+   "id": "a-pringles",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia-en:Fredric Baur",
+   "cle": "Pringles",
+   "question": "À sa mort, en 2008, l'inventeur de la boîte des chips Pringles a été enterré ___.",
+   "vraie": "en partie dans une boîte de Pringles",
+   "faux": [
+    "avec une boîte de chips dans chaque main",
+    "dans un cercueil en forme de tuile",
+    "sous une pierre gravée d'une chips"
+   ]
+  },
+  {
+   "id": "a-tomate",
+   "mot": "",
+   "type": "anecdote",
+   "source": "wikipedia:Tomate",
+   "cle": "ornement",
+   "question": "Arrivée d'Amérique au XVIe siècle, la tomate fut d'abord cultivée en Europe ___.",
+   "vraie": "comme plante d'ornement",
+   "faux": [
+    "pour teindre les étoffes",
+    "comme remède aux fièvres",
+    "pour nourrir les cochons"
+   ]
+  }
+ ]
+}
