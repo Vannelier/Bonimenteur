@@ -1288,10 +1288,10 @@ const JOUR = new Intl.DateTimeFormat("fr-CA", { timeZone: "Europe/Paris" });
 const jourDe = t => JOUR.format(new Date(t));          // AAAA-MM-JJ
 const aujourdhui = () => jourDe(Date.now());
 const duJour = () => { const j = aujourdhui(); return S.choix.filter(c => c.joueur === moi && jourDe(c.t || 0) === j).sort((a, b) => (a.t || 0) - (b.t || 0)); };
-/* Limite du jour coupée pour les essais (demande de l'auteur, 23/11/2026) : les 15 duels sont
-   une simple tournée, suivie d'un bilan et d'« Encore ». RATION_ACTIVE = true la rétablit
-   (et RATION_ACTIVE dans app/main.py côté serveur). */
-const RATION_ACTIVE = false;
+/* Ration du jour : coupée pour les essais (23/11/2026), rallumée pour le lancement (27/11/2026).
+   À false, les 15 duels sont une simple tournée suivie d'un bilan et d'« Encore » (et
+   RATION_ACTIVE dans app/main.py côté serveur). */
+const RATION_ACTIVE = true;   // rallumée pour le lancement (27/11/2026), comme app/main.py
 function nouvelleSerie() {
   const faits = RATION_ACTIVE ? duJour() : [], auteurs = new Map(S.pieges.map(p => [p.id, p.auteur]));
   serie = { jour: aujourdhui(), num: faits.length, points: faits.reduce((t, c) => t + (c.gain || 0), 0), serie: 0, meilleure: 0,

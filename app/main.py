@@ -42,8 +42,10 @@ DONNEES = Path(os.environ.get("BONIMENTEUR_DATA_DIR")
 ECUS_DEPART = 20          # de quoi poser un faux en direct (15) dès la première partie
 # Ration du jour : 15 duels par jour, heure de Paris (TOTAL dans la page ; docs/conception.md).
 RATION = 15
-# Coupée pour les essais (demande de l'auteur, 23/11/2026) ; True la rétablit, avec RATION_ACTIVE de la page.
-RATION_ACTIVE = False
+# Coupée pour les essais (23/11/2026), rallumée pour le lancement (décision de l'auteur, 27/11/2026) :
+# sans elle, un joueur épuise en quelques soirées les 650 questions, jouées une fois pour toutes.
+# Même réglage dans la page (RATION_ACTIVE).
+RATION_ACTIVE = True
 PARIS = ZoneInfo("Europe/Paris")
 PRIX = {10, 15}            # atelier, direct (PRIX_PIEGE, PRIX_DIRECT)
 # Édition et étal (décision de l'auteur, 25/11/2026 ; mêmes constantes dans la page ; docs/conception.md,

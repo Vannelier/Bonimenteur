@@ -37,10 +37,11 @@ Seul le vocabulaire a changé : aucune règle, aucun prix.
 
 ## La ration du jour
 
-Coupée pour les essais (demande de l'auteur, 23/11/2026) : `RATION_ACTIVE =
-false` dans la page et dans `app/main.py`. Les 15 duels sont alors une
-tournée suivie d'un bilan et d'« Encore », sans limite. Ce qui suit décrit
-la ration active.
+Active (`RATION_ACTIVE = true` dans la page et dans `app/main.py`). Coupée
+pour les essais le 23/11/2026, rallumée pour le lancement le 27/11/2026
+(décision de l'auteur) : sans elle, un joueur assidu épuise en quelques
+soirées les 650 questions, jouées une fois pour toutes, et les écus perdent
+leur poids face aux prix de l'atelier.
 
 - 15 duels par jour, heure de Paris (`TOTAL`, `RATION` côté serveur ; décision
   de l'auteur, 23/11/2026). Il n'y a plus de partie avec un score à battre : on
